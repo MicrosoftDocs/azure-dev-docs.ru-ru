@@ -1,0 +1,29 @@
+- name: Набор средств Azure для Eclipse
+  href: azure-toolkit-for-eclipse.md
+  items:
+    - name: Начало работы
+      href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
+    - name: Учебники
+      items:
+        - name: Развертывание контейнеров в виртуальных машинах Azure
+          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
+        - name: Публикация приложения Spring Boot в виде контейнера Docker
+          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
+    - name: Инструкции
+      items:
+        - name: Установка набора средств
+          href: azure-toolkit-for-eclipse-installation.md
+        - name: Вход в учетную запись Azure
+          href: azure-toolkit-for-eclipse-sign-in-instructions.md
+        - name: Управление ресурсами Azure
+          items:
+            - name: Виртуальные машины
+              href: azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md
+            - name: Учетные записи хранения
+              href: azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md
+            - name: кэш Azure Redis
+              href: azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md
+    - name: Заметки о выпуске
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://marketplace.eclipse.org/content/azure-toolkit-eclipse'

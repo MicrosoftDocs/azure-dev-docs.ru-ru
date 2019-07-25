@@ -1,0 +1,92 @@
+- name: Spring в документации по Azure
+  href: ./index.yml
+  expanded: true
+  items:
+    - name: Руководства по началу работы
+      expanded: true
+      items:
+        - name: Spring Boot
+          href: spring-boot-starters-for-azure.md
+          items:
+            - name: Хранилище Azure
+              href: configure-spring-boot-starter-java-app-with-azure-storage.md
+            - name: Azure Key Vault
+              href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+            - name: Azure App Insights
+              href: configure-spring-boot-java-applicationinsights.md
+        - name: Spring Data
+          items:
+            - name: Azure Cosmos DB Starter
+              href: configure-spring-boot-starter-java-app-with-cosmos-db.md
+            - name: Azure Cosmos DB со Службой приложений в Linux
+              href: configure-spring-app-with-cosmos-db-on-app-service-linux.md
+            - name: "API Apache Cassandra в Azure Cosmos\_DB"
+              href: configure-spring-data-apache-cassandra-with-cosmos-db.md
+            - name: API Gremlin для Azure Cosmos DB
+              href: configure-spring-data-gremlin-java-app-with-cosmos-db.md
+            - name: 'Azure Cosmos DB: API MongoDB'
+              href: configure-spring-data-mongodb-with-cosmos-db.md
+            - name: JDBC с Azure MySQL
+              href: configure-spring-data-jdbc-with-azure-mysql.md
+            - name: JDBC с Azure PostgreSQL
+              href: configure-spring-data-jdbc-with-azure-postgresql.md
+            - name: JDBC с Azure SQL Server
+              href: configure-spring-data-jdbc-with-azure-sql-server.md
+            - name: JPA с Azure MySQL
+              href: configure-spring-data-jpa-with-azure-mysql.md
+            - name: JPA с Azure PostgreSQL
+              href: configure-spring-data-jpa-with-azure-postgresql.md
+            - name: JPA с Azure SQL Server
+              href: configure-spring-data-jpa-with-azure-sql-server.md
+        - name: Spring Security
+          items:
+            - name: Azure Active Directory
+              href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+            - name: Azure Active Directory B2C
+              href: configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc.md
+        - name: Spring Cloud
+          items:
+            - name: концентратору событий Azure
+              href: configure-spring-cloud-stream-binder-java-app-azure-event-hub.md
+            - name: API Kafka Концентратора событий Azure
+              href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
+            - name: Функции Azure
+              href: getting-started-with-spring-cloud-function-in-azure.md
+    - name: Учебники
+      items:
+        - name: Развертывание в службу приложений с помощью Maven
+          href: deploy-spring-boot-java-app-with-maven-plugin.md
+        - name: Развертывание в Kubernetes
+          href: deploy-spring-boot-java-app-on-kubernetes.md
+        - name: Развертывание в решение "Веб-приложение для контейнеров"
+          href: deploy-spring-boot-java-app-on-linux.md
+        - name: кэш Azure Redis
+          href: configure-spring-boot-initializer-java-app-with-redis-cache.md
+        - name: Развертывание в Kubernetes с помощью Fabric8
+          href: deploy-spring-boot-java-app-using-fabric8-maven-plugin.md
+        - name: Развертывание контейнера Docker с помощью Maven
+          href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
+        - name: Развертывание из Реестра контейнеров Azure
+          href: deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md
+    - name: Примеры
+      items:
+        - name: Использование списка дел с Cosmos DB
+          href: 'https://github.com/Microsoft/todo-app-java-on-azure/'
+        - name: Использование списка дел с MySQL
+          href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
+        - name: Использование службы хранилища Azure с пакетом SDK для Java
+          href: configure-spring-boot-starter-java-app-with-azure-storage-api.md
+        - name: Spring Initializr
+          href: 'https://start.spring.io/'
+    - name: Справочные материалы
+      items:
+        - name: Spring Framework
+          href: 'https://spring.io/'
+        - name: Дополнительные сведения о Spring
+          href: 'https://spring.io/docs'
+        - name: Spring Boot
+          href: 'https://projects.spring.io/spring-boot/'
+        - name: Справочные материалы по проектам Spring
+          href: 'https://spring.io/docs/reference'
+        - name: Начальные приложения Spring Boot для Azure
+          href: 'https://github.com/Microsoft/azure-spring-boot/'

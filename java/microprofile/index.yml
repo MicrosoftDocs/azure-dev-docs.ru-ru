@@ -1,0 +1,57 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Eclipse MicroProfile в Azure
+metadata:
+  document_id: null
+  title: Eclipse MicroProfile в Azure
+  description: Начало разработки приложений в Azure с помощью Eclipse MicroProfile.
+  keywords: 'Azure, Java, Maven, MicroProfile, Jakarta EE, Java EE, Eclipse'
+  author: brborges
+  ms.author: brborges
+  manager: brborges
+  ms.date: 02/01/2018
+  ms.topic: landing-page
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: |
+          [MicroProfile](https://microprofile.io/) — это проект Eclipse Foundation, который предназначен для использования и развития технологий Enterprise Java, таких как Java EE, в направлении архитектуры распределенных микрослужб, внедрения инноваций в нескольких реализациях и совместной работы в общей сфере интересов с целью стандартизации.
+  - title: Руководства по началу работы
+    items:
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ContainerInstances.svg'
+            text: Развертывание в службу "Экземпляры контейнеров Azure"
+            href: deploy-microprofile-to-container-instances.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/AppService.svg'
+            text: Развертывание с помощью функции Azure "Веб-приложения"
+            href: deploy-microprofile-to-web-app-for-containers.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/keyvault.svg'
+            text: Источник конфигурации для Azure Key Vault
+            href: configure-microprofile-with-keyvault.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopssuite.png'
+            text: CI/CD для приложений MicroProfile с использованием Azure DevOps
+            href: cicd-microprofile-vsts.md
+  - title: Примеры для Azure
+    items:
+      - type: list
+        style: unordered
+        className: spaced noBullet
+        items:
+          - html: '<a href="https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue">Примеры MicroProfile для Azure</a>'
+  - title: Справочные материалы
+    items:
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Проекты MicroProfile
+            html: '<p><a href="https://microprofile.io/">MicroProfile.io</a></p><p><a href="https://microprofile.io/project/eclipse/microprofile-samples">Примеры на сайте MicroProfile.io</a></p>'

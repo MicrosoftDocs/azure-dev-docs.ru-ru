@@ -1,0 +1,83 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Spring в Azure
+metadata:
+  document_id: null
+  title: Spring в Azure
+  description: Использование Spring для разработки приложений в Azure.
+  keywords: 'Azure, Java, Maven, Spring, Boot'
+  author: bmitchell287
+  ms.author: brendm
+  manager: douge
+  ms.date: 02/01/2018
+  ms.topic: landing-page
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: markdown
+        text: "[Spring](https://spring.io/)\_— это платформа приложений с открытым исходным кодом, разработанная компанией [Pivotal](https://pivotal.io). Эта платформа предусматривает упрощенный модульный подход к созданию приложений Java.  В серии наших руководств описано, как создавать приложения Spring и развертывать их в облаке.\n"
+  - title: Руководство по началу работы
+    items:
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            text: Начальные приложения Spring Boot для Azure
+            href: spring-boot-starters-for-azure.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/storage.svg'
+            text: Хранилище Azure
+            href: configure-spring-boot-starter-java-app-with-azure-storage.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ActiveDirectory.svg'
+            text: Azure Active Directory
+            href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/KeyVault.svg'
+            text: Key Vault
+            href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/EventHubs.svg'
+            text: Kafka и Центры событий
+            href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/ApplicationInsights.svg'
+            text: Application Insights
+            href: configure-spring-boot-java-applicationinsights.md
+  - title: Пошаговые инструкции
+    items:
+      - type: markdown
+        text: Сведения об интеграции приложений Spring Boot и служб Azure.
+      - type: list
+        style: unordered
+        className: spaced noBullet
+        items:
+          - html: <a href="configure-spring-boot-initializer-java-app-with-redis-cache.md">Настройка приложения Spring Initializr для использования кэша Redis</a>
+          - html: <a href="configure-spring-boot-starter-java-app-with-cosmos-db.md">Использование начального приложения Spring Boot с API SQL Azure Cosmos DB</a>
+          - html: <a href="deploy-spring-boot-java-app-with-maven-plugin.md">Развертывание приложения Spring Boot в Azure с помощью подключаемого модуля Maven для веб-приложений Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-on-kubernetes.md">Развертывание приложения Spring Boot в Kubernetes в Службе контейнеров Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-on-linux.md">Развертывание веб-приложения Spring Boot в Linux в Службе контейнеров Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-using-fabric8-maven-plugin.md">Развертывание приложения Spring Boot с помощью подключаемого модуля Maven Fabric8</a>
+          - html: <a href="deploy-containerized-spring-boot-java-app-with-maven-plugin.md">Развертывание приложения Spring Boot в Azure с помощью подключаемого модуля Maven для веб-приложений Azure</a>
+          - html: <a href="deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md">Развертывание приложения Spring Boot в реестре контейнеров Azure в службе приложений Azure с помощью подключаемого модуля Maven для веб-приложений Azure</a>
+  - title: Примеры
+    items:
+      - type: list
+        style: unordered
+        className: spaced noBullet
+        items:
+          - html: '<a href="https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples">Примеры Spring Boot для Azure</a>'
+          - html: '<a href="https://github.com/spring-guides/">Руководства по Spring</a>'
+  - title: Справочные материалы
+    items:
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: Spring Framework
+            html: '<p><a href="https://spring.io/">Spring Framework</a></p><p><a href="https://spring.io/docs">Дополнительные сведения о Spring</a></p><p><a href="https://spring.io/docs/reference">Справочная документация</a></p>'
+          - title: Spring Boot
+            html: '<p><a href="https://projects.spring.io/spring-boot/">Spring Boot</a></p><p><a href="https://start.spring.io/">Spring Initializr</a></p>'
