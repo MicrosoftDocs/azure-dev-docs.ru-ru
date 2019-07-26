@@ -1,0 +1,165 @@
+- name: Azure для разработчиков Java
+  href: index.yml
+  items:
+    - name: Начало работы
+      href: java-sdk-azure-get-started.md
+    - name: Краткие руководства
+      items:
+        - name: Развертывание веб-приложений
+          items:
+            - name: Windows и Eclipse
+              href: /azure/app-service-web/app-service-web-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Linux и Tomcat
+              href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Linux и Java SE
+              href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Мониторинг веб-приложений
+          href: /azure/application-insights/app-insights-java-quick-start?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure DevOps Projects
+          href: /azure/devops-project/azure-devops-project-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Бессерверная функция
+          href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Базы данных
+          items:
+            - name: База данных SQL
+              href: /azure/sql-database/sql-database-connect-query-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: MySQL
+              href: /azure/mysql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Cosmos DB
+              items:
+                - name: API SQL
+                  href: /azure/cosmos-db/create-sql-api-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: API таблиц
+                  href: /azure/cosmos-db/create-table-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: API Graph
+                  href: /azure/cosmos-db/create-graph-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: API Cassandra
+                  href: /azure/cosmos-db/create-cassandra-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: API MongoDB
+                  href: /azure/cosmos-db/create-mongodb-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Большие двоичные объекты хранилища
+          href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: кэш Redis;
+          href: /azure/redis-cache/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Service Fabric
+          items:
+            - name: Развертывание приложения Spring Boot
+              href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Развертывание приложения Reliable Services
+              href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Приложения для обмена сообщениями
+          items:
+            - name: Обмен сообщениями через Служебную шину
+              items:
+                - name: Использование очередей
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-queues?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Использование разделов и подписок
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-topics-subscriptions?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: JMS и AMQP
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Центры событий
+              items:
+                - name: Отправка событий
+                  href: /azure/event-hubs/event-hubs-java-get-started-send?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Получение событий
+                  href: /azure/event-hubs/event-hubs-java-get-started-receive-eph?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Центр Интернета вещей
+          items:
+            - name: Отправка данных телеметрии
+              href: /azure/iot-hub/quickstart-send-telemetry-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Управление устройством
+              href: /azure/iot-hub/quickstart-control-device-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Поиск Azure
+          href: /azure/search/search-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Cognitive Services
+          items:
+            - name: API Компьютерного зрения
+              href: /azure/cognitive-services/Computer-vision/Quickstarts/java-analyze?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Анализ текста
+              href: /azure/cognitive-services/Text-Analytics/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: API Поиска в Интернете Bing
+              href: /azure/cognitive-services/bing-web-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: API Поиска изображений Bing
+              href: /azure/cognitive-services/bing-image-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - name: Платформы
+      expanded: true
+      items:
+        - name: Spring Framework и Spring Boot
+          href: /azure/java/spring-framework/index
+        - name: Eclipse MicroProfile
+          href: /azure/java/microprofile/index
+    - name: Средства для разработчиков
+      expanded: true
+      items:
+        - name: Обзор
+          href: java-azure-tools.md
+        - name: Долгосрочная поддержка Java
+          href: jdk/index.md
+          items:
+            - name: Установка пакета JDK Java
+              href: jdk/java-jdk-install.md
+            - name: Образы Docker в Java для Azure
+              href: jdk/java-jdk-docker-images.md
+            - name: Инструмент Java Flight Recorder и сборка Mission Control
+              href: jdk/java-jdk-flight-recorder-and-mission-control.md
+        - name: Visual Studio Code
+          href: 'https://code.visualstudio.com/docs/languages/java'
+        - name: IntelliJ IDEA
+          href: intellij/azure-toolkit-for-intellij.md
+        - name: Eclipse
+          href: eclipse/azure-toolkit-for-eclipse.md
+        - name: Подключаемые модули Maven
+          href: /java/api/overview/azure/maven/README.md
+          items:
+            - name: Веб-приложения службы приложений Azure
+              href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/README.md
+            - name: Функции Azure
+              href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README.md
+        - name: Непрерывная интеграция и развертывание Jenkins
+          href: /azure/jenkins/
+        - name: Azure Pipelines
+          href: /azure/devops/java/
+    - name: Основные понятия
+      items:
+        - name: Шаблоны и рекомендации
+          href: java-sdk-azure-concepts.md
+    - name: Учебники
+      items:
+        - name: Развертывание микрослужб в Service Fabric
+          href: /azure/service-fabric/service-fabric-tutorial-create-java-app?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Использование Spring Boot в Службе приложений с MySQL
+          href: /azure/app-service-web/app-service-web-tutorial-java-mysql?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Непрерывная интеграция и развертывание Jenkins в службу приложений
+          href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Развертывание в службу приложений с помощью Maven
+          href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Развертывание контейнеров в службу приложений
+          href: spring-framework/deploy-containerized-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Развертывание в службу приложений из реестра контейнеров Azure
+          href: spring-framework/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - name: Статьи с инструкциями
+      items:
+        - name: Добавление корневого сертификата
+          href: java-sdk-add-certificate-ca-store.md
+        - name: Проверка подлинности
+          href: java-sdk-azure-authenticate.md
+    - name: Примеры кода
+      items:
+        - name: Service Fabric
+          href: 'https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/'
+        - name: Виртуальные машины
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: Веб-приложения
+          href: java-sdk-azure-web-apps-samples.md
+        - name: База данных SQL
+          href: java-sdk-azure-sql-database-samples.md
+        - name: Безопасность
+          href: java-sdk-azure-security-samples.md
+        - name: Контейнеры
+          href: java-sdk-azure-containers-samples.md
+        - name: Все примеры для Java
+          href: 'https://azure.microsoft.com/resources/samples/?platform=java'
+    - name: Справочные материалы
+      href: /java/api/?view=azure-java

@@ -1,0 +1,14 @@
+- name: Azure
+  tocHref: /azure
+  topicHref: /azure/index
+  items:
+    - name: Java в Azure
+      tocHref: /azure/java
+      topicHref: /azure/java/index
+      items:
+        - name: Spring в Azure
+          tocHref: /azure/java/spring-framework
+          topicHref: /azure/java/spring-framework/index
+        - name: Eclipse MicroProfile
+          tocHref: /azure/java/microprofile
+          topicHref: /azure/java/microprofile/index
