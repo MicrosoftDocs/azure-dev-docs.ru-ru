@@ -111,12 +111,12 @@
         - name: Eclipse
           href: eclipse/azure-toolkit-for-eclipse.md
         - name: Подключаемые модули Maven
-          href: /java/api/overview/azure/maven/README.md
+          href: /java/api/overview/azure/maven/README
           items:
             - name: Веб-приложения службы приложений Azure
-              href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/README.md
+              href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/README
             - name: Функции Azure
-              href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README.md
+              href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README
         - name: Непрерывная интеграция и развертывание Jenkins
           href: /azure/jenkins/
         - name: Azure Pipelines
