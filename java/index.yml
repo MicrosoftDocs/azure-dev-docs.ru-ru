@@ -23,27 +23,27 @@ sections:
           - href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             html: <p>Развертывание веб-приложения в Azure</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+              src: /media/common/i_get-started.svg
             title: Начало работы
-          - href: 'https://docs.microsoft.com/java/azure/spring-framework/'
+          - href: /azure/java/spring-framework/
             html: <p>Службы Azure с приложениями Spring Boot</p>
             image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+              src: /java/media/spring.svg
             title: Spring в Azure
           - href: java-azure-tools.md
             html: <p>Средства и интегрированные среды разработки</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+              src: /media/common/i_download-install.svg
             title: 'Подключаемые модули IntelliJ, Maven, Eclipse и VS Code'
           - href: jdk/index.md
             html: <p>Поддерживаемые пакеты JDK</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+              src: /media/common/i_download-install.svg
             title: Поддерживаемые пакеты JDK
           - href: /java/api/?view=azure-java
             html: <p>Справочник по API</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              src: /media/common/i_api-reference.svg
             title: Пакеты SDK Azure для Java
   - title: Руководство по началу работы
     items:
@@ -53,29 +53,29 @@ sections:
         columns: 3
         items:
           - image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+              src: /java/media/spring.svg
             title: Развертывание приложений Spring Boot с помощью Maven
-            href: 'https://docs.microsoft.com/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin'
+            href: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/storage.svg'
+              src: /azure/media/index/storage.svg
             title: Загрузка и скачивание больших двоичных объектов из хранилища
             href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/azurefunctions.svg'
+              src: /azure/media/index/azurefunctions.svg
             title: Создание независимой от сервера функции Java
             href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/javascript/azure/media/k8s_logo.svg'
+              src: /javascript/azure/media/k8s_logo.svg
             title: Развертывание в Kubernetes
-            href: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-kubernetes?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            href: /azure/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/fabric.svg'
+              src: /azure/media/index/fabric.svg
             title: Микрослужбы в Service Fabric
             href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+              src: /java/media/jenkins_logo.svg
             title: Непрерывная интеграция и развертывание в службу приложений с помощью Jenkins®
-            href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service&bc=/azure/java/breadcrumb/toc.json
   - title: Примеры
     items:
       - type: list

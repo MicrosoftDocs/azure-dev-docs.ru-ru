@@ -5,17 +5,17 @@ author: rloutlaw
 manager: douge
 ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
 ms.topic: article
-ms.service: Azure
+ms.service: azure
 ms.devlang: java
-ms.technology: Azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: d1321574c602439a2bd91021f7996561e2f58a59
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: f88d72c2ae15c999c43ce08a9717a67edf47644b
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284325"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691857"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Управление базами данных SQL Azure в эластичных пулах с помощью приложений Java
 

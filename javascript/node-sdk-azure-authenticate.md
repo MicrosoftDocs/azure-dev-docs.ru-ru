@@ -1,7 +1,7 @@
 ---
 title: Аутентификация с использованием модулей управления Azure для Node.js
 description: Аутентификация с помощью субъекта-службы в модулях управления Azure для Node.js
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.author: karler
 ms.date: 06/17/2017
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 8c334b0eed240790e555d40156837b051fdfc47d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 74b357568082a101d26f0472dbb5f508246ac137
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284905"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690773"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Аутентификация с использованием модулей Azure для Node.js 
 

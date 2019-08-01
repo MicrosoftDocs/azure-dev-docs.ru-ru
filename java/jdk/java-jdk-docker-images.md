@@ -7,13 +7,13 @@ ms.author: brendm
 ms.date: 04/09/2019
 ms.devlang: java
 ms.topic: conceptual
-ms.service: Azure
-ms.openlocfilehash: 5de2866f1f303deccf40158ac7451dbd35de92f1
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.openlocfilehash: aeda2d210e2e5d78de53b3f88a469b9a93bb8739
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430961"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691740"
 ---
 # <a name="use-docker-with-a-jdk-for-azure"></a>Использование Docker с JDK для среды Azure 
 

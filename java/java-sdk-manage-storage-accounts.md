@@ -6,16 +6,16 @@ manager: douge
 ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.devlang: java
 ms.topic: article
-ms.service: Azure
-ms.technology: Azure
+ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: 187190f34572cf048eb6e5c37f2531a3a634390f
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: 58668e501b67f9454326823564263983cb52585d
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284315"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691839"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Управление учетными записями хранения Azure из приложений Java
 

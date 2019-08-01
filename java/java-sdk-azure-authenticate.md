@@ -7,16 +7,15 @@ ms.author: brendm
 manager: douge
 ms.date: 04/16/2017
 ms.topic: article
-ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 513011b556e79338686788f88e8712fba48853c9
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 80281765b53951aad39e0c5be94011411520e282
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431086"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691951"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Проверка подлинности с использованием библиотек Azure для Java 
 

@@ -1,19 +1,19 @@
 ---
 title: Примеры кода для работы со службой хранилища Azure с помощью Node.js
 description: Пример кода, в котором показано, как работать со службой хранилища Azure с помощью Node.js.
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
 ms.author: karler
-ms.openlocfilehash: 8dfb0d12e0e4ccd06427f52f468ad74c9c659386
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 77a67464c729d873fc13b2de4903b31cc6352a40
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284945"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690886"
 ---
 # <a name="azure-storage-with-nodejs-code-samples"></a>Примеры кода для работы со службой хранилища Azure с помощью Node.js
 

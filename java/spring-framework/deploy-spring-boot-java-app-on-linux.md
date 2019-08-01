@@ -10,17 +10,17 @@ ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
-ms.service: azure app service
+ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: ace06118983e3b4fc7e7fc9fc58caefe376f9040
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 93c67221748f354f2bf772a5f67903512a241063
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281525"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691179"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Развертывание приложения Spring Boot в Службе приложений Azure для контейнеров
 

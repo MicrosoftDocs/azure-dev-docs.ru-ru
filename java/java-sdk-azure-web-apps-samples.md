@@ -7,16 +7,15 @@ ms.author: brendm
 manager: douge
 ms.date: 04/16/2017
 ms.topic: article
-ms.technology: azure
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.openlocfilehash: 86d9e122f07397f3d01f01eb2ce322db21db6d9d
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 4b846561a19d5979fe132f052418b0e1f88523a5
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430979"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691843"
 ---
 # <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Библиотеки управления Azure для примеров веб-приложений Java
 

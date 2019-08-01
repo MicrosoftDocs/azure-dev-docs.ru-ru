@@ -6,16 +6,16 @@ manager: douge
 ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.devlang: java
 ms.topic: article
-ms.service: Azure
-ms.technology: Azure
+ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: 9e76664f65afa3d6e52b80088974915c77510482
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: baad3cd87096e12f7d3c14108436efb138e879d9
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284255"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691818"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Создание виртуальных сетей Azure и управление ими с помощью приложений Java
 

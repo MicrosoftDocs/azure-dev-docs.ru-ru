@@ -1,7 +1,7 @@
 ---
 title: Начало работы с модулями Azure для Node.js
 description: 'Начало работы с модулями Azure для Node.js: аутентификация и управление ресурсами'
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.author: karler
 ms.date: 06/17/2017
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: 23823a5a5d4f99ce7f77e5ec226c8057c698e1f6
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 3ba92eae7d6d287cec668dbd1bfcac8e52b04017
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433124"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690841"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Начало работы с модулями Azure для Node.js
 

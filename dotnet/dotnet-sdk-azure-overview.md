@@ -2,12 +2,13 @@
 title: API Azure .NET
 description: Общие сведения об API Azure для .NET
 ms.date: 10/19/2017
-ms.openlocfilehash: 6eff2733ba4c0ebce54bd0cbecb4406445bffe19
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 7b7a3dacec2a6ee706baa545621b4d6609a43ebf
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280665"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691394"
 ---
 # <a name="azure-net-apis"></a>API Azure .NET
 

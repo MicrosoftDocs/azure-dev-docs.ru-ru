@@ -7,13 +7,13 @@ ms.author: brendm
 ms.date: 04/19/2019
 ms.devlang: java
 ms.topic: conceptual
-ms.service: Azure
-ms.openlocfilehash: ed3bf2e0fa41a31b5d35e34828d5c78ed36b7ea7
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.openlocfilehash: 58fb77c44c290ad86f64a6f71b1e750e364363a6
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430971"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691726"
 ---
 # <a name="install-the-jdk-for-azure-and-azure-stack"></a>Установка JDK для Azure и Azure Stack
 

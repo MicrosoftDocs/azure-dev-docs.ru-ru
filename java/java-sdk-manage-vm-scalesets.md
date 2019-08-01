@@ -6,16 +6,16 @@ manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
 ms.devlang: java
 ms.topic: article
-ms.service: Azure
-ms.technology: Azure
+ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: 0fd0613b03ec1bf95fdc06042ebc9cb83e5c3b4e
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: af56ef8975d0ec74ef32cf6deadea0e4c562e0c4
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284665"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691804"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Управление масштабируемыми наборами виртуальных машин Azure из приложений Java
 

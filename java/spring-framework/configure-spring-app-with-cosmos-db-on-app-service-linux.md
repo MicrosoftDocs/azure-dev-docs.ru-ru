@@ -3,17 +3,18 @@ title: Использование Spring и Cosmos DB со Службой при
 description: В этой статье описан процесс сборки, настройки, развертывания, устранения неполадок и масштабирования веб-приложений Java в Службе приложений Azure в Linux.
 documentationcenter: java
 author: bmitchell287
-ms.author: brendm; joshuapa
+ms.author: brendm
+ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.devlang: java
 ms.service: app-service, cosmos-db
 ms.topic: article
-ms.openlocfilehash: 16cbcfa99400d56692679d2ccd0ad6b962af7fb9
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: e7360067deaa9d038440978892f093dfb28db499
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284815"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691158"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
 
@@ -37,7 +38,7 @@ ms.locfileid: "68284815"
 - [Maven 3](http://maven.apache.org/)
 
 ## <a name="clone-the-sample-java-web-app-repository"></a>Клонирование примера репозитория для веб-приложения Java
-В этом упражнении вы будете использовать приложение Spring Todo, которое представляет собой приложение Java, созданное с помощью [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data для Cosmos DB](https://docs.microsoft.com/azure/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db?view=azure-java-stable) и [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction).
+В этом упражнении вы будете использовать приложение Spring Todo, которое представляет собой приложение Java, созданное с помощью [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data для Cosmos DB](https://docs.microsoft.com/azure/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db) и [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction).
 1. Клонируйте приложение Spring Todo и скопируйте содержимое папки **.prep** для инициализации проекта:
 
     Для Bash:

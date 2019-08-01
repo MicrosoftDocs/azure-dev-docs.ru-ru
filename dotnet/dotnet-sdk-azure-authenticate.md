@@ -2,12 +2,13 @@
 title: Аутентификация с использованием библиотек Azure для .NET
 description: Аутентификация в библиотеках Azure для .NET
 ms.date: 08/22/2018
-ms.openlocfilehash: 1bf46c83d4c3199170db327e7080bd3a90923e3d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 219cae86a48344c83c3dd3efb4b7dfa018c88ac7
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280755"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691316"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>Аутентификация с использованием библиотек Azure для .NET
 

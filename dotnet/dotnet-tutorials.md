@@ -2,12 +2,13 @@
 title: Руководства по созданию приложений .NET и .NET Core в Azure
 description: Руководства по созданию мобильных и веб-приложений и добавлению в них функций с помощью Azure, .NET, .NET Core, ASP.NET и ASP.NET Core.
 ms.date: 07/17/2018
-ms.openlocfilehash: 734f52779b7a1763a44534b0dc9d173e04df0f63
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 5dffb29792fd38fbf7a6983d885156ca241d0d05
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280565"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691298"
 ---
 # <a name="tutorials-for-building-net-and-net-core-apps-in-azure"></a>Руководства по созданию приложений .NET и .NET Core в Azure
 

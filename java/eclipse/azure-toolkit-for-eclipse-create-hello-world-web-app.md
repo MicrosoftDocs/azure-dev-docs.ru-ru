@@ -8,19 +8,20 @@ author: selvasingh
 manager: douge
 editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
-ms.author: brendm;asirveda
+ms.author: brendm
+ms.reviewer: asirveda
 ms.date: 02/01/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 1decb99b0637f2ddaa58219d7835497a5f89535d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 3d673abe4f4efd7330307999c7a945cd5cb37179
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429952"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691741"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью Eclipse
 

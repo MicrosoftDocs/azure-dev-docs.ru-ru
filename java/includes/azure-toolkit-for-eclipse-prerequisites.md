@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8633b360752010291089a8dad4b13797ffb032e7
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429616"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68700801"
 ---
 ## <a name="prerequisites"></a>Предварительные требования
 

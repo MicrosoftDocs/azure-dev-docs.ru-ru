@@ -6,16 +6,16 @@ manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
 ms.devlang: java
 ms.topic: article
-ms.service: Azure
-ms.technology: Azure
+ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: c45348aa51a871e1053e0b5e74218b6c901d97f4
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: 4cba24f92d5caaf244127536d231a5f942cb3913
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284305"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691828"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Управление виртуальными машинами Azure из приложений Java
 

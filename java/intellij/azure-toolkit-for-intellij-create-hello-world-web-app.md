@@ -8,19 +8,20 @@ author: selvasingh
 manager: douge
 editor: ''
 ms.assetid: 75ce7b36-e3ae-491d-8305-4b42ce37db4e
-ms.author: brendm;asirveda
+ms.author: brendm
+ms.reviewer: asirveda
 ms.date: 02/01/2018
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 04a48ffcdb74d5c33f2f33d50fd6bff205eefcc2
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 695622ee4de0f0e9b99255ac814bb3b5403957b8
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68279435"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691593"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью IntelliJ
 

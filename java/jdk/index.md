@@ -7,13 +7,13 @@ ms.devlang: java
 ms.topic: conceptual
 ms.date: 04/09/2019
 ms.author: brendm
-ms.service: Azure
-ms.openlocfilehash: 4cf52e1ef39052935bbde7eb8cc420c4eeadd5dc
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.openlocfilehash: 83dbef306087f63670c2567231eca1c4b9e5dd7f
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431078"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691810"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Долгосрочная поддержка Java для Azure и Azure Stack
 
