@@ -8,13 +8,13 @@
         - name: Развертывание веб-приложений
           items:
             - name: Windows и Eclipse
-              href: /azure/app-service-web/app-service-web-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+              href: /azure/app-service/app-service-web-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             - name: Linux и Tomcat
               href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             - name: Linux и Java SE
               href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Мониторинг веб-приложений
-          href: /azure/application-insights/app-insights-java-quick-start?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          href: /azure/azure-monitor/learn/java-quick-start?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Azure DevOps Projects
           href: /azure/devops-project/azure-devops-project-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Бессерверная функция
@@ -42,7 +42,7 @@
         - name: Большие двоичные объекты хранилища
           href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: кэш Redis;
-          href: /azure/redis-cache/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          href: /azure/azure-cache-for-redis/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Service Fabric
           items:
             - name: Развертывание приложения Spring Boot
@@ -60,11 +60,7 @@
                 - name: JMS и AMQP
                   href: /azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             - name: Центры событий
-              items:
-                - name: Отправка событий
-                  href: /azure/event-hubs/event-hubs-java-get-started-send?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-                - name: Получение событий
-                  href: /azure/event-hubs/event-hubs-java-get-started-receive-eph?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+              href: /azure/event-hubs/event-hubs-java-get-started-send?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Центр Интернета вещей
           items:
             - name: Отправка данных телеметрии
@@ -119,7 +115,7 @@
               href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README
         - name: Непрерывная интеграция и развертывание Jenkins
           href: /azure/jenkins/
-        - name: Azure Pipelines
+        - name: Azure DevOps
           href: /azure/devops/java/
     - name: Основные понятия
       items:
@@ -129,10 +125,10 @@
       items:
         - name: Развертывание микрослужб в Service Fabric
           href: /azure/service-fabric/service-fabric-tutorial-create-java-app?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-        - name: Использование Spring Boot в Службе приложений с MySQL
-          href: /azure/app-service-web/app-service-web-tutorial-java-mysql?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Использование Spring Boot в Службе приложений с Cosmos DB
+          href: /azure/app-service/containers/tutorial-java-spring-cosmosdb?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Непрерывная интеграция и развертывание Jenkins в службу приложений
-          href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Развертывание в службу приложений с помощью Maven
           href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Развертывание контейнеров в службу приложений
