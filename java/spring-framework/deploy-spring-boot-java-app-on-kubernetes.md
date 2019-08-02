@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: f7bb539e59b8d9d6afcf736560348748d311b49a
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 3363e1a4600328e012b99bd940cf88bb47e2ee57
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430937"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691716"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot в кластере Kubernetes в Службе Azure Kubernetes
 
@@ -253,7 +253,7 @@ ms.locfileid: "68430937"
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
 
-1. Когда в браузере откроется веб-сайт конфигурации Kubernetes, щелкните ссылку, чтобы **развернуть контейнерное приложение**:
+1. Когда в браузере откроется веб-сайт для настройки Kubernetes, щелкните ссылку, чтобы **развернуть контейнерное приложение**:
 
    ![Веб-сайт конфигурации Kubernetes][KB01]
 
@@ -272,7 +272,7 @@ ms.locfileid: "68430937"
    ![Веб-сайт конфигурации Kubernetes][KB02]
 
 
-1. Нажмите кнопку **Развернуть**, чтобы развернуть контейнер.
+1. Нажмите кнопку **Deploy** (Развернуть), чтобы развернуть контейнер.
 
    ![Развертывание Kubernetes][KB05]
 

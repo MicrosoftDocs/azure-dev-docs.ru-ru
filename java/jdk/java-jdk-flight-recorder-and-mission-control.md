@@ -1,5 +1,5 @@
 ---
-title: Инструмент Java Flight Recorder и сборка Mission Control
+title: Просмотр данных с помощью Java Flight Recorder и Mission Control
 description: Руководство по использованию инструмента Java Flight Recorder и сборки Mission Control для сбора и просмотра данных приложения.
 author: bmitchell287
 manager: douge
@@ -7,13 +7,14 @@ ms.author: brendm
 ms.date: 04/09/2019
 ms.devlang: java
 ms.topic: conceptual
-ms.service: Azure
-ms.openlocfilehash: 29f144a17a1a45dc535961f97a4b0acdffd43d77
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.custom: seo-java-july2019
+ms.openlocfilehash: 4e0ae7b66d625ea6aeeb5a7e40b9015e9ce59429
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431072"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691772"
 ---
 # <a name="using-java-flight-recorder-jfr-and-mission-control"></a>Использование инструмента Java Flight Recorder (JFR) и сборки Mission Control
 
@@ -94,7 +95,7 @@ Zulu Mission Control — это полностью проверенная сб�
         * Во второй строке напишите путь к установке JDK. (Например, `C:\Program Files\Java\jdk1.8.0_212\bin\javaw.exe`).
 
 7.  Найдите JVM, на которой запущено приложение.
-    1.  В верхней левой панели окна Zulu Mission Control щелкните вкладку **JVM Browser** (Браузер JVM).
+    1.  На верхней левой панели окна Zulu Mission Control щелкните вкладку **JVM Browser** (Браузер JVM).
     2.  Выберите и разверните элемент списка в левом верхнем углу для экземпляра JVM, на котором запущено приложение.
 
     > [!div class="mx-imgBorder"]
