@@ -41,6 +41,9 @@
       "breadcrumb_path": "/azure-dotnet/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None",
+      "ms.topic": "conceptual",
+      "ms.devlang": "csharp",
+      "ms.date": "09/20/2018",
       "_op_documentIdPathDepotMapping": {
         "./": {
           "depot_name": "Azure.azuredotnet",
