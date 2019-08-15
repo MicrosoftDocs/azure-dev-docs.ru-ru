@@ -17,10 +17,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 3d673abe4f4efd7330307999c7a945cd5cb37179
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68691741"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью Eclipse

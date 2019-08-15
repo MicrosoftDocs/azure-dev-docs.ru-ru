@@ -15,10 +15,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: 7c2cec950c8a8bd51a7e1c6f9e5de390e1799c15
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68278865"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a>Инструкции по входу для набора средств Azure для IntelliJ
