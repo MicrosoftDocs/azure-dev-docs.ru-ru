@@ -13,12 +13,12 @@ metadata:
   displayType: two-column
   interactive: azurecli
   ms.date: 11/30/2017
-  ms.openlocfilehash: c813fb7a20f39d818c49b11ef0a835bf402d1239
-  ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+  ms.openlocfilehash: 39dc282c9d0a2cebb0f540a446767e3a60fc1428
+  ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/15/2019
-  ms.locfileid: "68285765"
+  ms.lasthandoff: 08/20/2019
+  ms.locfileid: "69635093"
 items:
 - durationInMinutes: 1
   content: "В этом руководстве объясняется, как использовать различные библиотеки Azure для Python.  \n"
@@ -130,7 +130,7 @@ items:
 
     ```azurecli-interactive
 
-    az network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6
+    az network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv4
 
     ```
 

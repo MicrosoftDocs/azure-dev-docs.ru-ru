@@ -2,13 +2,15 @@
 title: Начало работы с Azure и .NET
 description: Необходимые основные сведения об Azure и .NET.
 ms.date: 09/19/2018
+author: CamSoper
+ms.author: casoper
 ms.topic: conceptual
-ms.openlocfilehash: 70c3dbecbd184ed8952ad343e33686bdf8ae1fd5
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 9b0c9b23fa8b75975b0412804ce8b9a1ecb41b46
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691384"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633124"
 ---
 # <a name="get-started-with-azure-and-net"></a>Начало работы с Azure и .NET
 

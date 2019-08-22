@@ -2,14 +2,16 @@
 title: Перенос веб-приложения или службы .NET в Службу приложений Azure
 description: Узнайте, как перенести веб-приложение или службу .NET из локальной среды в Службу приложений Azure.
 ms.date: 08/11/2018
+author: CamSoper
+ms.author: casoper
 ms.service: app-service
 ms.topic: conceptual
-ms.openlocfilehash: d9ab2e536f7b0cd1f069d71911f24f1632cd156e
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 3fa28df0d7c10514a48eacf06a0df4f211dd5f63
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691146"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633176"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>Перенос веб-приложения или службы .NET в Службу приложений Azure 
 

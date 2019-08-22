@@ -75,7 +75,7 @@ sections:
           - image:
               src: /java/media/jenkins_logo.svg
             title: Непрерывная интеграция и развертывание в службу приложений с помощью Jenkins®
-            href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service&bc=/azure/java/breadcrumb/toc.json
+            href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
   - title: Примеры
     items:
       - type: list

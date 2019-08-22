@@ -3,12 +3,14 @@ title: Примеры кода C# с .NET и .NET Core для Azure
 description: Примеры кода C# для Azure, в которых используется .NET, .NET Core, ASP.NET или ASP.NET Core.
 layout: LandingPage
 ms.date: 07/17/2018
-ms.openlocfilehash: 8e0712d0ac451ab3a908fbef04cc55b860542996
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+author: CamSoper
+ms.author: casoper
+ms.openlocfilehash: c18928590661528786599174d99aaab792e8a653
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280785"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633103"
 ---
 # <a name="azure-c-code-samples-for-net-and-net-core"></a>Примеры кода C# с .NET и .NET Core для Azure
 

@@ -1,19 +1,19 @@
 ---
 title: Руководства по использованию службы хранилища Azure с Node.js
 description: Руководства по подключению к службе хранилища Azure и ее использованию с Node.js.
-author: karlerickson
-manager: douge
+author: kraigb
+manager: barbkess
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
-ms.author: karler
-ms.openlocfilehash: 15b691d5d84db1e3b37bb23cc3f308e34ce5dbd8
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.author: kraigb
+ms.openlocfilehash: f000b42e3b496599a37341833c6129d5297bd8f6
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690762"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889874"
 ---
 # <a name="azure-storage-with-nodejs-tutorials"></a>Руководства по использованию службы хранилища Azure с Node.js
 
