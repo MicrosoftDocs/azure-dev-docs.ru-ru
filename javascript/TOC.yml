@@ -88,8 +88,22 @@
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: Руководства
       items:
-        - name: Развертывание с помощью Visual Studio Code
+        - name: Сквозной Node. js с VS Code
           href: node-howto-e2e.md
+        - name: Развертывание веб-приложения
+          href: node-howto-deploy-web-app.md
+        - name: Развертывание контейнеров
+          href: node-howto-deploy-containers.md
+        - name: Развертывание путем непрерывной поставки
+          href: /azure/devops/pipelines/languages/javascript?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Интеграция с базами данных
+          href: node-howto-integrate-databases.md
+        - name: Написание бессерверного кода
+          href: node-howto-write-serverless-code.md
+        - name: Создание статического сайта (JAMstack)
+          href: node-howto-create-static-site-jamstack.md
+        - name: Автоматизация мониторинга
+          href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
         - name: Создание REST API
           href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: Примеры
