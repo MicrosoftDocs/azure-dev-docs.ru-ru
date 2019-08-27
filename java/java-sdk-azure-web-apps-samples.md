@@ -10,14 +10,15 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.openlocfilehash: 4b846561a19d5979fe132f052418b0e1f88523a5
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-august2019
+ms.openlocfilehash: 1a21ca6e11cf66a603509bd5414d1b5caf9e8a30
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691843"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889848"
 ---
-# <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Библиотеки управления Azure для примеров веб-приложений Java
+# <a name="azure-management-libraries-for-java---web-app-samples"></a>Библиотеки управления Azure для Java — примеры веб-приложений 
 
 | **Создание приложения** ||
 |---|---|

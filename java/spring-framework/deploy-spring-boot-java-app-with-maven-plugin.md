@@ -11,15 +11,15 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.custom: seo-java-july2019
-ms.openlocfilehash: e4aec4beb141025d49afbe200a090a40e327a12c
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-august2019
+ms.openlocfilehash: 05d9fb7817eafea56e095667c260075c5e02c6da
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691099"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889813"
 ---
-# <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Развертывание веб-приложения Spring Boot в виде файла JAR в Службе приложений Azure на платформе Linux
+# <a name="deploy-a-spring-boot-web-app-to-azure-app-service-on-linux"></a>Развертывание веб-приложения Spring Boot в Службе приложений Azure на платформе Linux
 
 В этой статье показано, как использовать [подключаемый модуль Maven для веб-приложений службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme), чтобы развернуть приложение Spring Boot, упакованное в виде файла JAR Java SE, в [Службе приложений Azure на платформе Linux](/azure/app-service/containers/). Развертывание Java SE является предпочтительным по сравнению с [Tomcat и файлами WAR](/azure/app-service/containers/quickstart-java) в тех случаях, когда нужно объединить зависимости, среду выполнения и файлы конфигурации приложения в единый артефакт, пригодный для развертывания.
 
