@@ -31,13 +31,11 @@
             - name: Использование Log Analytics с Azure Monitor
               href: /azure/azure-monitor/learn/quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: Действия GitHub
-              href: 'https://css-tricks.com/introducing-github-actions/'
+              href: 'https://azure.microsoft.com/resources/videos/azure-friday-deploy-to-azure-using-github-actions'
         - name: Отладка и диагностика
           items:
             - name: Удаленная отладка для Службы приложений Azure
               href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
-            - name: Использование точек ведения журнала в VS Code для Службы приложений Azure
-              href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
             - name: Отладка локального приложения Node.js в VS Code
               href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
         - name: Средства и расширения
