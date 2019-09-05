@@ -8,12 +8,12 @@ ms.date: 08/21/2019
 ms.devlang: java
 ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: f41486c7063a6b0fa26ca4055d5f10e625676e8a
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 58d8dd00deeb90b1a1b8935bcbbab471255328d4
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892378"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181988"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Использование Spring Boot Starter для служебных шин Azure JMS
 
@@ -24,9 +24,6 @@ Azure предоставляет платформу асинхронного о�
 Spring Boot Starter для служебной шины Azure JMS обеспечивает интеграцию Spring со служебной шиной.
 
 В этой статье показано, как использовать Spring Boot Starter для служебной шины Azure JMS для отправки сообщений в служебную шину Azure и получения сообщений из нее `queues` и `topics`.
-
-> [!NOTE]
-> В настоящее время в этой статье используется Starter версии `SNAPSHOT`.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -66,28 +63,11 @@ Spring Boot Starter для служебной шины Azure JMS обеспеч�
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
-        <version>2.1.7-SNAPSHOT</version>
+        <version>2.1.7</version>
     </dependency>
     ```
 
-    ![Добавьте раздел зависимостей в файл pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section.png)
-
-1. Добавьте конфигурацию [репозиториев Maven](https://maven.apache.org/settings.html#Repositories) для использования версии моментального снимка:
-
-    ```xml
-    <repositories>
-        <repository>
-            <id>nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    ```
-
-    ![Добавить раздел репозиториев в файл pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-repository-section.png)
+    ![Добавьте раздел зависимостей в файл pom.xml.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section-new.png)
 
 1. Сохраните и закройте файл *pom.xml*.
 
@@ -121,7 +101,7 @@ Spring Boot Starter для служебной шины Azure JMS обеспеч�
     | `spring.jms.servicebus.connection-string` | Укажите строку подключения, полученную из пространства имен служебной шины на портале Azure. |
     | `spring.jms.servicebus.idle-timeout`      | Укажите время ожидания перед переходом в режим простоя в миллисекундах. Рекомендуемое в этом руководстве значение — 1800000.   |
 
-3. Сохраните и закройте файл *application.properties*.
+1. Сохраните и закройте файл *application.properties*.
 
 ### <a name="use-service-bus-topic"></a>Использование раздела служебной шины
 
@@ -353,7 +333,7 @@ Spring Boot Starter для служебной шины Azure JMS обеспеч�
     mvn clean spring-boot:run
     ```
 
-3. После запуска приложения вы можете использовать средство *curl*, чтобы протестировать приложение:
+1. После запуска приложения вы можете использовать средство *curl*, чтобы протестировать приложение:
 
     ```shell
     curl -X POST localhost:8080/messages?message=hello
