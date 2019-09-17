@@ -10,18 +10,19 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 80281765b53951aad39e0c5be94011411520e282
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-september2019
+ms.openlocfilehash: 1c147b4b478898fe0610abd09998b2972724f086
+ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691951"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904914"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Проверка подлинности с использованием библиотек Azure для Java 
 
 ## <a name="connect-to-services-with-connection-strings"></a>Подключение к службам с помощью строк подключения
 
-Большинство библиотек служб Azure используют строку подключения или ключ безопасности для проверки подлинности. Например, база данных SQL содержит имя пользователя и пароль в строке подключения JDBC:
+Узнайте, как выполнять проверку подлинности с использованием библиотек Azure для Java. Большинство библиотек служб Azure используют строку подключения или ключ безопасности для проверки подлинности. Например, база данных SQL содержит имя пользователя и пароль в строке подключения JDBC:
 
 ```java
 String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" + 

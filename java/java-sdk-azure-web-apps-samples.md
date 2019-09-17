@@ -10,15 +10,17 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.custom: seo-java-august2019
-ms.openlocfilehash: 1a21ca6e11cf66a603509bd5414d1b5caf9e8a30
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.custom: seo-java-august2019, seo-java-september2019
+ms.openlocfilehash: 555f73acb629220afe85558983b765fc737d6375
+ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69889848"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904835"
 ---
 # <a name="azure-management-libraries-for-java---web-app-samples"></a>Библиотеки управления Azure для Java — примеры веб-приложений 
+
+В следующей таблице представлены ссылки на исходный код Java, который можно использовать для создания и настройки веб-приложений.
 
 | **Создание приложения** ||
 |---|---|

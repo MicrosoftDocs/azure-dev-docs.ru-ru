@@ -9,16 +9,16 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.devlang: java
 ms.service: multiple
-ms.custom: seo-java-july2019
-ms.openlocfilehash: 87bfa673926b6349ec3ffdb066a60556179e4065
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-september2019
+ms.openlocfilehash: a3580c528660d941f9addff71fa0d9b5fc232f3a
+ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691923"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904920"
 ---
 # <a name="java-samples-for-azure-container-service"></a>Примеры Java для решения "Служба контейнеров Azure"
 
-В следующей таблице представлены ссылки на источник Java, который можно использовать для создания и настройки приложений, выполняющихся в контейнерах.
+В следующей таблице представлены ссылки на источник Java, который можно использовать для создания и настройки приложений, выполняющихся в Службе контейнеров Azure.
 
 [!INCLUDE [java-container-samples](includes/java-container-samples.md)]
