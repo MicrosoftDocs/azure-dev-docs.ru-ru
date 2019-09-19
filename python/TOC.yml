@@ -60,6 +60,54 @@
           href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: Хранилище очередей
           href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+- name: Учебники
+  items:
+    - name: Развертывание в Службе приложений с помощью VS Code
+      items:
+        - name: Введение и предварительные требования
+          href: tutorial-deploy-app-service-on-linux-01.md
+        - name: Подготовка приложения
+          href: tutorial-deploy-app-service-on-linux-02.md
+        - name: Создание экземпляра Службы приложений
+          href: tutorial-deploy-app-service-on-linux-03.md
+        - name: Настройка файла запуска
+          href: tutorial-deploy-app-service-on-linux-04.md
+        - name: Развертывание приложения
+          href: tutorial-deploy-app-service-on-linux-05.md
+        - name: Журналы потоковой передачи
+          href: tutorial-deploy-app-service-on-linux-06.md
+        - name: Очистка ресурсов
+          href: tutorial-deploy-app-service-on-linux-07.md
+    - name: Развертывание контейнеров с помощью VS Code
+      items:
+        - name: Введение и предварительные требования
+          href: tutorial-deploy-containers-01.md
+        - name: Развертывание образа контейнера
+          href: tutorial-deploy-containers-02.md
+        - name: Внесение изменений и повторное развертывание
+          href: tutorial-deploy-containers-03.md
+        - name: Журналы потоковой передачи
+          href: tutorial-deploy-containers-04.md
+        - name: Очистка ресурсов
+          href: tutorial-deploy-containers-05.md
+    - name: Развертывание Функций Azure с помощью VS Code
+      items:
+        - name: Введение и предварительные требования
+          href: tutorial-vs-code-serverless-python-01.md
+        - name: Создание функции Python
+          href: tutorial-vs-code-serverless-python-02.md
+        - name: Проверка файлов кода
+          href: tutorial-vs-code-serverless-python-03.md
+        - name: Отладка в локальной среде
+          href: tutorial-vs-code-serverless-python-04.md
+        - name: Развертывание в Azure
+          href: tutorial-vs-code-serverless-python-05.md
+        - name: Добавление второй функции
+          href: tutorial-vs-code-serverless-python-06.md
+        - name: Добавление привязки к хранилищу
+          href: tutorial-vs-code-serverless-python-07.md
+        - name: Очистка ресурсов
+          href: tutorial-vs-code-serverless-python-08.md
 - name: Руководства
   items:
     - name: Установка пакета SDK
