@@ -1,254 +1,88 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Azure для разработчиков облачных решений JavaScript и Node.js
+### YamlMime:Landing
+title: Документация по пакету SDK для JavaScript
+summary: >
+  Из этой статьи вы узнаете о пакете Azure SDK для JavaScript и Node.js, о том, как начать работу с ним, и о том, что разработчики могут делать с его помощью. Начните работу с такими возможностями Azure, как размещение приложений, задачи DevOps, постоянное хранилище и базы данных, а также использование устройств Интернета вещей.
 metadata:
   title: 'Azure для разработчиков JavaScript и Node.js: руководства, инструменты и справочник по пакету SDK'
-  description: 'Начните разрабатывать приложения для Azure с помощью руководств, модулей и инструментов, созданных для разработчиков JavaScript и Node.js.'
-  keywords: 'Azure, JavaScript, Node.js, SDK, API, NPM'
-  author: kraigb
-  ms.author: kraigb
-  manager: douge
-  ms.date: 07/01/2019
+  description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js.
+  author: sptramer
+  ms.author: sttramer
+  ms.date: 09/15/2019
   ms.topic: landing-page
-  featureFlags:
-    - clicktale
-  ms.technology: azure
-  ms.devlang: nodejs
-  ms.service: multiple
-sections:
-  - items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: 'https://aka.ms/try-azure-node'
-            html: <p>Разверните свое первое приложение в бесплатной среде-песочнице в Службе приложений Azure</p>
-            image:
-              src: /media/common/i_get-started.svg
-            title: Развертывание первого примера приложения Node.js
-  - title: Выбор подходящего масштабируемого размещения для приложения
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - title: 'Статические веб-приложения, одностраничные приложения и прогрессивные веб-приложения'
-            html: '<p>Развертывание статического приложения, созданного с помощью таких платформ, как React, Angular и Vue, в службе хранилища Azure</p>'
-            href: 'https://code.visualstudio.com/tutorials/static-website/getting-started'
-            image:
-              src: /media/logos/logo_React.svg
-          - title: Полностековые веб-приложения и API на основе Node.js
-            html: '<p>Развертывание полностековых веб-приложений и API на основе Node.js, созданных с помощью таких платформ, как Express, в Службе приложений Azure</p>'
-            href: 'https://code.visualstudio.com/tutorials/app-service-extension/getting-started'
-            image:
-              src: /media/logos/logo_vs-code.svg
-          - title: Использование контейнерных приложений и микрослужб с Docker
-            html: <p>Развертывание контейнерных приложений и микрослужб с помощью контейнеров Docker в Службе приложений Azure</p>
-            href: 'https://code.visualstudio.com/tutorials/docker-extension/getting-started'
-            image:
-              src: /azure/docker/media/docker.png
-          - title: Бессерверные приложения и API
-            href: 'https://code.visualstudio.com/tutorials/functions-extension/getting-started'
-            html: '<p>Развертывание бессерверных приложений и API, написанных на языке JavaScript, в Функциях Azure</p>'
-            image:
-              src: /azure/media/index/azurefunctions.svg
-  - title: Пакет Azure SDK для Node.js
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /javascript/api/overview/azure/
-            html: <p>Полная справочная документация по пакету SDK Azure.</p>
-            image:
-              src: /media/common/i_api-reference.svg
-            title: Справочные материалы
-          - href: 'https://azure.microsoft.com/en-us/resources/samples/?sort=0&platform=nodejs'
-            html: <p>Репозитории GitHub с примерами для пакета SDK Azure.</p>
-            image:
-              src: /media/common/i_code-samples.svg
-            title: Примеры для пакета SDK
-  - title: Непрерывное развертывание и DevOps
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - title: Azure DevOps Projects
-            href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Сборка и развертывание приложений из проекта Azure DevOps</p>
-            image:
-              src: /media/logos/logo_vs-team-services.svg
-          - title: Действия GitHub
-            href: 'https://azure.microsoft.com/resources/videos/azure-friday-deploy-to-azure-using-github-actions'
-            html: <p>Создание и развертывание приложений в Azure с помощью действий GitHub</p>
-            image:
-              src: /media/logos/logo_octokitty.svg
-          - title: Непрерывная интеграция
-            href: /vsts/build-release/apps/cd/azure/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: '<p>Добавление служб Jenkins, CircleCI или Travis для управления сборкой.</p>'
-            image:
-              src: /media/common/i_scrum.svg
-  - title: Поиск и устранение ошибок с помощью средств отладки и диагностики
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - title: Удаленная отладка для Службы приложений Azure
-            href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
-            html: <p>Присоединение отладчика к тестовым или рабочим приложениям в Службе приложений Azure</p>
-            image:
-              src: /media/common/i_debug.svg
-          - title: Использование точек ведения журнала в VS Code для Службы приложений Azure
-            href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
-            html: <p>Добавление выписок из журналов в приложения Службы приложений Azure без их повторного развертывания из VS Code</p>
-            image:
-              src: /media/common/i_tools.svg
-          - title: Отладка локального приложения Node.js в VS Code
-            href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
-            html: <p>Автоматическое присоединение отладчика к выполняющимся процессам</p>
-            image:
-              src: /media/logos/logo_vs-code.svg
-  - title: Средства и расширения
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: 'https://code.visualstudio.com/docs/azure/extensions'
-            html: <p>Использование Azure непосредственно из Visual Studio Code с помощью расширений.</p>
-            image:
-              src: /media/logos/logo_vs-code.svg
-            title: Visual Studio Code
-          - href: /cli/azure
-            html: <p>Управление ресурсами Azure из командной строки.</p>
-            image:
-              src: /azure/media/index/azure_dev-7.svg
-            title: "Azure CLI\_2.0"
-  - title: Хранение данных в файлах и базах данных и управление ими
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - image:
-              src: /azure/media/index/Storage.svg
-            title: Хранилище файлов
-            html: <p>Безопасное хранение файлов в облачном хранилище</p>
-            href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-          - href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            title: MongoDB
-            html: <p>Использование MongoDB и Cosmos DB в приложениях</p>
-            image:
-              src: /azure/media/index/cosmosdb.svg
-          - image:
-              src: /azure/media/index/RedisCache.svg
-            title: кэш Redis;
-            html: <p>Использование хранилища Redis в памяти для чтения и записи данных.</p>
-            href: /azure/redis-cache/cache-nodejs-get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-          - image:
-              src: /azure/media/index/PostgreSQL.svg
-            title: PostgreSQL
-            html: <p>Создание и администрирование облачной базы данных PostgreSQL.</p>
-            href: /azure/postgresql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-          - image:
-              src: /azure/media/index/MySQL.SVG
-            title: MySQL
-            html: <p>Создание и администрирование облачной базы данных MySQL.</p>
-            href: /azure/mysql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-          - image:
-              src: /azure/media/index/SQLDatabase.svg
-            title: База данных SQL Azure
-            html: <p>Создание и администрирование облачной базы данных SQL.</p>
-            href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-  - title: Защита приложений и ресурсов с помощью аутентификации и авторизации
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /azure/active-directory/develop/quickstart-v1-nodejs-webapi?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Аутентификация пользователей с использованием стратегий Passport.</p>
-            image:
-              src: /azure/media/index/ActiveDirectory.svg
-            title: Active Directory
-          - href: /azure/key-vault/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Безопасное хранение ключей и секретов API для приложений.</p>
-            image:
-              src: /azure/media/index/KeyVault.svg
-            title: Key Vault
-          - href: /azure/active-directory-b2c/active-directory-b2c-tutorials-spa?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: '<p>Использование Passport и Azure AD для добавления процедуры входа с помощью Facebook, Twitter или GitHub в веб-приложение.</p>'
-            image:
-              src: /azure/media/index/ActiveDirectory.svg
-            title: Active Directory B2C
-  - title: Мониторинг работоспособности ресурсов и обнаружение проблем с приложениями
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Мониторинг запросов и обнаружение ошибок в приложениях.</p>
-            image:
-              src: /azure/media/index/ApplicationInsights.svg
-            title: Application Insights
-          - href: /azure/azure-monitor/learn/quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Проверка данных о среде в одном расположении.</p>
-            image:
-              src: /azure/media/index/operationsmanagementsuite.svg
-            title: Log Analytics
-          - href: /azure/azure-monitor/?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Получение подробных сведений о производительности и использовании ресурсов.</p>
-            image:
-              src: /azure/media/index/AzureMonitoring.svg
-            title: Azure Monitor
-  - title: Подключение и администрирование устройств и приложений с возможностями обмена сообщениями
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /azure/event-grid/custom-event-quickstart?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Использование доставки событий на основе протокола HTTP для устранения периодических опросов</p>
-            image:
-              src: /azure/media/index/azure_event_grid.svg
-            title: Сетка событий Azure
-          - href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Надежный обмен сообщениями между службами</p>
-            image:
-              src: /azure/media/index/IOT_edge_50.svg
-            title: Служебная шина
-          - href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Использование очередей для высокомасштабируемого обмена сообщениями</p>
-            image:
-              src: /media/common/i_sharepoint-list.svg
-            title: Хранилище очередей
-  - title: Интернет вещей
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: /azure/iot-hub/quickstart-control-device-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Управление тысячами устройств с помощью Центра Интернета вещей.</p>
-            image:
-              src: /azure/media/index/IOT_edge_50.svg
-            title: Подключение устройств IoT и управление ими
-          - href: /azure/iot-hub/quickstart-send-telemetry-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
-            html: <p>Использование концентратора событий для сбора данных с миллиардов точек.</p>
-            image:
-              src: /azure/media/index/EventHubs.svg
-            title: Потоковая передача больших данных
+  ms.openlocfilehash: 0133931c0d9ac6e1dfc9e3faa1f14933f885e0af
+  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71094811"
+landingContent:
+- title: Начало работы с пакетом Azure SDK для JavaScript
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Быстрое развертывание примера Node.js в Службе приложений Azure
+      url: https://aka.ms/try-azure-node
+    - text: Обзор всех доступных примеров пакета Azure SDK для JavaScript
+      url: /resources/samples/?sort=0&platform=nodejs
+- title: Размещение приложений в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о Службе приложений Azure
+      url: /azure/app-service/overview
+  - linkListType: architecture
+    links:
+    - text: Выбор подходящего варианта размещения
+      url: /azure/architecture/guide/technology-choices/compute-decision-tree
+  - linkListType: quickstart
+    links:
+    - text: Развертывание статических веб-приложений из Visual Studio Code
+      url: https://code.visualstudio.com/tutorials/static-website/getting-started
+    - text: Развертывание комплексных приложений Node.js из Visual Studio Code
+      url: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
+    - text: Развертывание контейнерных приложений из Visual Studio Code
+      url: https://code.visualstudio.com/tutorials/docker-extension/getting-started
+    - text: Развертывание бессерверных приложений с помощью Функций Azure из Visual Studio Code
+      url: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+- title: Создание, развертывание и мониторинг приложений с помощью Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения об Azure Monitor
+      url: /azure/azure-monitor/overview?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
+  - linkListType: quickstart
+    links:
+    - text: Настройка CI/CD для приложений Node.js в Azure Pipelines
+      url: /azure/devops-project/azure-devops-project-nodejs?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
+    - text: Мониторинг развернутых приложений с помощью Azure Monitor
+      url: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+- title: Подключение приложений и устройств с помощью служб обмена сообщениями
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Отправка сообщений с помощью очередей служебной шины Azure
+      url: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - text: Отправка сообщений с помощью очередей службы хранилища Azure
+      url: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+- title: Решения для хранения и баз данных в Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Работа с большими двоичными объектами в службе хранилища Azure
+      url: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - text: Перенос приложений MongoDB для использования Cosmos DB в Azure
+      url: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+- title: Работа с устройствами Интернета вещей
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Управление устройствами с помощью Центра Интернета вещей Azure
+      url: /azure/iot-hub/quickstart-control-device-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - text: Обработка данных, поступающих с устройств, с помощью концентратора событий Azure
+      url: /azure/iot-hub/quickstart-send-telemetry-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+- title: Справочник по пакету Azure SDK для JavaScript
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Справочник по пакету Azure SDK для API JavaScript
+      url: /javascript/api/overview/azure/

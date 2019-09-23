@@ -1,7 +1,7 @@
 ### YamlMime:Landing
-title: Azure SDK для Go
+title: Документация по пакету Azure SDK для Go
 summary: >
-  Узнайте о том, как использовать пакет Azure SDK для Go, а также о его функциях и средствах разработки, которые упрощают работу с Azure.
+  Из этой статьи вы узнаете, как использовать пакет Azure SDK для Go, а также о его функциях и средствах разработки, которые упрощают работу с Go в Azure.
 metadata:
   title: Azure для разработчиков Go
   description: Приступите к разработке с помощью пакета Azure SDK для Go, используя приведенные ниже ресурсы для разработчиков.
@@ -11,12 +11,12 @@ metadata:
   ms.topic: landing-page
   ms.collection: collection
   ms.devlang: golang
-  ms.openlocfilehash: 68af188ce8193241127b418df00352481151ce4e
-  ms.sourcegitcommit: e1204a575c95672b6ba369d12bc7d86d4e2acc52
+  ms.openlocfilehash: f6f32557f7ee54e42882bf270e93e5d37019a2db
+  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70864371"
+  ms.lasthandoff: 09/18/2019
+  ms.locfileid: "71094800"
 landingContent:
 - title: Начало работы с Azure SDK для Go
   linkLists:

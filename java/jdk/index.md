@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.date: 04/09/2019
 ms.author: brendm
 ms.service: azure
-ms.openlocfilehash: 83dbef306087f63670c2567231eca1c4b9e5dd7f
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 6c28a599180301ac19f114f467868b5f0e46cbd1
+ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691810"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094891"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Долгосрочная поддержка Java для Azure и Azure Stack
 
-В Azure и Azure Stack разработчики Java могут собирать и запускать производственные приложения на Java с помощью коллекции сборок [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/), не неся при этом дополнительных затрат на поддержку. В Azure можно задействовать любые среды выполнения Java, но при использовании Zulu вы получаете бесплатное обслуживание и можете направлять запросы в службу поддержки Майкрософт.
+В Azure и Azure Stack разработчики Java могут создавать и запускать производственные приложения Java с помощью сборок JDK [корпоративного выпуска Azul Zulu для Azure](https://www.azul.com/downloads/azure-only/zulu/) без дополнительных затрат на поддержку. В Azure можно задействовать любые среды выполнения Java, но при использовании Zulu вы получаете бесплатное обслуживание и можете направлять запросы в службу поддержки Майкрософт.
 
 > [!div class="nextstepaction"]
 > [Скачать и установить Java](java-jdk-install.md)
@@ -34,7 +34,7 @@ ms.locfileid: "68691810"
 
 ## <a name="what-is-the-zulu-openjdk-for-azure"></a>Что такое Zulu OpenJDK для Azure?
 
-Сборка OpenJDK типа Azul Zulu Enterprise — это бесплатный мультиплатформенный, готовый дистрибутив OpenJDK для Azure и Azure Stack, который поддерживается корпорацией Майкрософт и Azul Systems. Эти дистрибутивы:
+Корпоративные выпуски сборок типа Azul Zulu для Azure — это бесплатный мультиплатформенный готовый к использованию дистрибутив OpenJDK для Azure и Azure Stack, который поддерживается корпорацией Майкрософт и Azul Systems. Эти дистрибутивы:
 
 * Являются сборками OpenJDK с полностью открытым кодом, которые упакованы в виде комплектов Java Development Kit (JDK), сред выполнения Java (JRE) и автономных сред JRE. Эти двоичные файлы являются полностью совместимыми коммерческими сборками Java Standard Edition (SE), которые можно использовать с приложениями или компонентами Java в Azure и Azure Stack.
 * Предоставляются с долгосрочной поддержкой, включающей исправления ошибок, улучшения производительности и исправления системы безопасности.
@@ -52,7 +52,7 @@ ms.locfileid: "68691810"
 
 ## <a name="supported-java-versions-and-update-schedule"></a>Поддерживаемые версии Java и график поддержки
 
-Azul Systems предоставляет коллекцию полностью поддерживаемых [сборок OpenJDK под названием Zulu Enterprise для Microsoft Azure](https://www.azul.com/downloads/azure-only/zulu/) для всех версий Java с долгосрочной поддержкой, начиная с Java SE 7, 8 и 11. Дополнительные сведения см. в [пресс-релизе Azul](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).
+Azul Systems предоставляет полностью поддерживаемые сборки [корпоративного выпуска Azul Zulu для Azure](https://www.azul.com/downloads/azure-only/zulu/) для всех версий Java с долгосрочной поддержкой, начиная с Java SE 7, 8 и 11. Дополнительные сведения см. в [пресс-релизе Azul](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack).
 
 |Долгосрочная поддержка Java SE  |Поддержка до  |
 |---------|----------|
@@ -67,7 +67,7 @@ Azul Systems предоставляет коллекцию полностью п
 
 ## <a name="benefits-for-developers"></a>Преимущества для разработчиков
 
-Выпуски Azul Zulu JDK:
+Версии JDK корпоративного выпуска Azul Zulu для Azure:
 
 1. Поддерживаются корпорацией Майкрософт и Azul Systems.
 
