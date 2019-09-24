@@ -8,16 +8,16 @@ ms.date: 04/19/2019
 ms.devlang: java
 ms.topic: conceptual
 ms.service: azure
-ms.openlocfilehash: 58fb77c44c290ad86f64a6f71b1e750e364363a6
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 7d3d2af845ba2d8d1ba16b6dcd34b21c0853633f
+ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691726"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094876"
 ---
 # <a name="install-the-jdk-for-azure-and-azure-stack"></a>Установка JDK для Azure и Azure Stack
 
-Сборка OpenJDK типа Azul Zulu Enterprise — это бесплатный мультиплатформенный, готовый дистрибутив OpenJDK для Azure и Azure Stack, который поддерживается корпорацией Майкрософт и Azul Systems. Они содержат все компоненты для сборки и запуска приложений Java SE.
+Сборки JDK корпоративного выпуска Azul Zulu для Azure — это бесплатный мультиплатформенный готовый к использованию дистрибутив OpenJDK для Azure и Azure Stack, который поддерживается корпорацией Майкрософт и Azul Systems. Они содержат все компоненты для сборки и запуска приложений Java SE.
 
 Существует [несколько типов пакетов для скачивания, поддерживаемых для каждой клиентской ОС](https://www.azul.com/downloads/azure-only/zulu/). Вы также можете получить образ виртуальной машины из коллекции Azure Marketplace для следующих платформ:
 
@@ -33,13 +33,13 @@ ms.locfileid: "68691726"
 >
 >  Пакеты Java 11 также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).
 
-## <a name="download-and-install-the-azul-zulu-jdks-for-windows"></a>Скачивание и установка пакетов Azul Zulu JDK для Windows 
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-windows"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Windows 
 
 1. [Скачайте 64-разрядный пакет Azul Zulu JDK 8 как MSI-файл](https://repos.azul.com/azure-only/zulu/packages/zulu-11/11.0.3/zulu-11-azure-jdk_11.31.11-11.0.3-win_x64.msi) в расположение на клиенте, например `C:\Users\<your_login>\Downloads`. (Пакеты ZIP также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
 
 2. Перейдите в каталог и дважды щелкните скачанный MSI-файл, чтобы начать установку.
 
-## <a name="download-and-install-the-azul-zulu-jdks-for-mac"></a>Скачивание и установка пакетов Azul Zulu JDK для Mac 
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-mac"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Mac OS 
 
 По приведенной ниже ссылке можно скачать ZIP-файл на компьютер Mac. Доступна также версия DMG.
 
@@ -51,7 +51,7 @@ ms.locfileid: "68691726"
 unzip <name_of_zulu_package>.zip
 ```
 
-## <a name="download-and-install-the-azul-zulu-jdks-for-alpine-linux"></a>Скачивание и установка пакетов Azul Zulu JDK для Alpine Linux
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-alpine-linux"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Alpine Linux
 
 1. [Скачайте 64-разрядный пакет Azul Zulu JDK 8 как TAR-файл](https://repos.azul.com/azure-only/zulu/packages/zulu-11/11.0.3/zulu-11-azure-jdk_11.31.11-11.0.3-linux_x64.tar.gz) в расположение на клиенте, например `/usr/lib/jvm`. (Пакеты RPM и DEB также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
 
@@ -76,7 +76,7 @@ OpenJDK 64-Bit Server VM (Zulu 8.38.0.13-macosx)-Microsoft-Azure-restricted (bui
 
 ```
 
-## <a name="download-and-install-the-azul-zulu-jdks-from-a-yum-repository"></a>Скачивание и установка пакетов Azul Zulu JDK из репозитория Yum
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdks-from-a-yum-repository"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure из репозитория Yum
 
 Azul размещает пакеты Azul Zulu JDK в [репозитории Yum](https://repos.azul.com/azure-only/zulu-azure.repo).
 

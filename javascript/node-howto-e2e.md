@@ -1,5 +1,5 @@
 ---
-title: Разработка приложений Node.js с помощью Visual Studio Code и Azure
+title: Развертывание контейнерного приложения Node.js с помощью VS Code и Azure
 description: Выполните инструкции из этого руководства, в котором объясняется, как создать приложение Node.js, поместить его в образ Docker и развернуть в Azure
 services: multiple
 author: karlerickson
@@ -10,12 +10,13 @@ ms.devlang: nodejs
 ms.topic: article
 ms.date: 06/25/2017
 ms.author: karler
-ms.openlocfilehash: 45a908e17db9099ae73e9b681f277a1da0b3e5ef
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-javascript-september2019
+ms.openlocfilehash: da1436106b681508ef226ad33ccfc10160485d42
+ms.sourcegitcommit: d3349f1a2a8a7eab1ffe2fcb1d05f22cac91dffb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691303"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923120"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Разработка приложений Node.js с помощью Visual Studio Code и Azure
 
