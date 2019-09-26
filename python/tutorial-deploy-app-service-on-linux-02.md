@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: a398b5483f9cbe11768752551e11be430a3b3467
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: ab1609d6d0940172d61a61a31f4dbfabc868c023
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020002"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186136"
 ---
 # <a name="prepare-your-app"></a>Подготовка приложения
 
@@ -44,7 +44,7 @@ ms.locfileid: "71020002"
     Flask==1.1.1
     ```
 
-1. Следуйте инструкциям в [учебнике по созданию среды проекта для Flask](/docs/python/tutorial-flask.md#create-a-project-environment-for-flask), чтобы создать виртуальную среду с установленной платформой Flask, которая позволит локально запускать приложения.
+1. Следуйте инструкциям в [учебнике по созданию среды проекта для Flask](https://code.visualstudio.com/docs/python/tutorial-flask#create-a-project-environment-for-flask), чтобы создать виртуальную среду с установленной платформой Flask, которая позволит локально запускать приложения.
 
 1. Запустите приложение с помощью одной из следующих команд (в зависимости от операционной системы). Переменная среды FLASK_APP сообщает Flask, где найти объект приложения.
 
@@ -62,11 +62,11 @@ ms.locfileid: "71020002"
 
 ## <a name="vs-code-flask-tutorial-sample"></a>Пример из учебника по работе с Flask в VS Code
 
-Скачайте или скопируйте пример [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial), который является результатом выполнения [руководства по Flask](/docs/python/tutorial-flask.md).
+Скачайте или скопируйте пример [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial), который является результатом выполнения [руководства по Flask](https://code.visualstudio.com/docs/python/tutorial-flask).
 
 ## <a name="vs-code-django-tutorial-sample"></a>Пример из учебника по работе с Django в VS Code
 
-Скачайте или скопируйте пример [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial), который является результатом выполнения [руководства по Django](/docs/python/tutorial-django.md).
+Скачайте или скопируйте пример [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial), который является результатом выполнения [руководства по Django](https://code.visualstudio.com/docs/python/tutorial-django).
 
 Если приложение Django использует локальную базу данных SQLite, как в этом примере, следует добавить в репозиторий предварительно инициализированную и заполненную копию файла *db.sqlite3*. Это связано с тем, что в настоящее время Служба приложений для Linux не позволяет выполнить при развертывании команду Django `migrate`, а значит вам придется развернуть предварительно подготовленную базу данных. Даже в этом случае база данных по сути доступна только для чтения, ведь попытка записи в нее приводит к ошибкам.
 

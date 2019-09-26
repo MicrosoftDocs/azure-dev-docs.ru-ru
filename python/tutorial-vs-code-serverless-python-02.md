@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4427137000e7fca7706b782a73a45db03782872f
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 9af09298c479f7584ffaece422c135e75138f0fc
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019562"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186167"
 ---
 # <a name="create-the-python-function"></a>Создание функций на Python
 
@@ -29,7 +29,7 @@ ms.locfileid: "71019562"
     | --- | --- | --- |
     | Укажите каталог для проекта. | Текущая открытая папка | Папка, в которой будет создаваться проект. Возможно, вы захотите создать проект во вложенной папке. |
     | Select a language for your function app project (Выберите язык для проекта приложения-функции) | **Python** | Язык, используемый для функции, от которого зависит шаблон для кода. |
-    | Select a template for your project's first function (Выберите шаблон для первой функции вашего проекта) | **триггером HTTP** | Функция, которая использует триггер HTTP, выполняется при каждом получении HTTP-запроса к конечной точке функции. (Для Функций Azure существует много других триггеров. Подробнее см. статью [Что можно сделать с помощью Функций](/azure/azure-functions/functions-overview.md#what-can-i-do-with-functions).) |
+    | Select a template for your project's first function (Выберите шаблон для первой функции вашего проекта) | **триггером HTTP** | Функция, которая использует триггер HTTP, выполняется при каждом получении HTTP-запроса к конечной точке функции. (Для Функций Azure существует много других триггеров. Подробнее см. статью [Что можно сделать с помощью Функций](/azure/azure-functions/functions-overview#what-can-i-do-with-functions).) |
     | Provide a function name (Укажите имя функции) | HttpExample | Имя применяется к вложенной папке, которая содержит код функции и данные конфигурации, а также определяет имя конечной точки HTTP. Укажите имя "HttpExample" вместо предложенного по умолчанию "HTTPTrigger", чтобы отличать функцию от триггера. |
     | Уровень авторизации | **Анонимный** | Анонимная авторизация делает функцию общедоступной для всех. |
     | Select how you would like to open your project (Выберите, как вы хотели бы открыть свой проект) | **Открыть в текущем окне** | Открывает проект в текущем окне Visual Studio Code. |

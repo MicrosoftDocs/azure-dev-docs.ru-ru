@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 9c0b3b8b4a21975a849531d5c6560a291ed4b7f2
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 6996121fc8ecba4489e2ec920de35574f6d1c5d8
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019892"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186177"
 ---
 # <a name="clean-up-resources"></a>Очистка ресурсов
 
@@ -29,7 +29,7 @@ ms.locfileid: "71019892"
 
 Как мыуже упоминали, вы можете получить дополнительные сведения о расширении Функций в репозитории GitHub [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions). Мы будем рады любым предложениям и сообщениям о проблемах.
 
-Изучите [обзор Функций Azure](/azure/azure-functions/functions-overview.md), чтобы ознакомиться с доступными для использования триггерами.
+Изучите [обзор Функций Azure](/azure/azure-functions/functions-overview), чтобы ознакомиться с доступными для использования триггерами.
 
 См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/azure/python/?view=azure-python).
 

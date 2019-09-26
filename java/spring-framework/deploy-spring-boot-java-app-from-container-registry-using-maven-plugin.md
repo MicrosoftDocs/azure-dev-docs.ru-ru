@@ -14,13 +14,13 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.custom: seo-java-july2019, seo-java-august2019
-ms.openlocfilehash: a281a33958f33b37f205dc9642f1bce714725923
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
+ms.openlocfilehash: 4b5e0ad06822351f92ec66d862e9608e6c499c21
+ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70182006"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71225251"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Развертывание приложения Spring Boot в Реестре контейнеров Azure в Службе приложений Azure с помощью Maven для веб-приложений Azure
 
@@ -428,8 +428,8 @@ Maven выполнит развертывание веб-приложения в
 
 <!-- IMG List -->
 
-[SB01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/SB01.png
-[CR01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/CR01.png
-[AP01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/AP01.png
-[AP02]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/AP02.png
-[TL01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/TL01.png
+[SB01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/browse-sample-spring-boot-app.png
+[CR01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/browse-azure-portal-docker-container.png
+[AP01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/web-app-listed-azure-portal.png
+[AP02]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/determine-web-app-url.png
+[TL01]: ./media/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin/expose-docker-daemon-tcp-port.png

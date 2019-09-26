@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 2007be8b9799df1b15cff76b3ef4aa1ad96cae44
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 1b1e3d7fa1daa408584e4caf22c553d7f47bccea
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019882"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186195"
 ---
 # <a name="deploy-to-azure-app-service-on-linux"></a>Развертывание в Службу приложений Azure в Linux
 
@@ -39,7 +39,7 @@ ms.locfileid: "71019882"
 Установите следующее программное обеспечение:
 
 - [Visual Studio Code](https://code.visualstudio.com/).
-- Python и [расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительные требования](https://code.visualstudio.com/docs/python/python-tutorial.md) руководства по работе с Python в VS Code.
+- Python и [расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительные требования](https://code.visualstudio.com/docs/python/python-tutorial) руководства по работе с Python в VS Code.
 - [Расширение Службы приложений Azure](vscode:extension/ms-azuretools.vscode-azureappservice), которое организует взаимодействие со Службой приложений Azure из VS Code. Для получения общих сведений ознакомьтесь с [руководством](https://code.visualstudio.com/tutorials/app-service-extension/getting-started) по расширению Службы приложений и посетите репозиторий [vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice) на сайте GitHub.
 
 ## <a name="sign-in-to-azure"></a>Вход в Azure

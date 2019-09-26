@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 84971f6befb7210052ee3b144533715d0c6d1fb3
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: efa55b4c2cc916f5bbebcc795ed70d920d395362
+ms.sourcegitcommit: 4188b92d8de367cf82f22dba5d9ccb2cb6dd2899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020082"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71126850"
 ---
 # <a name="deploy-python-to-azure-functions-with-visual-studio-code"></a>Развертывание Python в Функциях Azure с помощью Visual Studio Code
 
@@ -42,7 +42,7 @@ ms.locfileid: "71020082"
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local.md#v2) для вашей операционной системы. Сами средства написаны на языке .NET Core, а пакет основных средств лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит вам пока придется устанавливать .NET Core и Node.js даже для кода на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
+Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) для вашей операционной системы. Сами средства написаны на языке .NET Core, а пакет основных средств лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит вам пока придется устанавливать .NET Core и Node.js даже для кода на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
 
 ### <a name="sign-in-to-azure"></a>Вход в Azure
 
