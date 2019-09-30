@@ -12,12 +12,12 @@ ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 9adb83a74c569fd17b9ce1435064ed745487d39b
-ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
+ms.openlocfilehash: 0993634d87dd321f7322cbdbebd57ec880abcbff
+ms.sourcegitcommit: 76d0783395cbcf6ec1784b5aed368cab7058f8b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70904928"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71270023"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Развертывание приложения Spring Boot в виде файла JAR в Службе приложений Azure с помощью Maven и Azure на платформе Linux
 
@@ -198,7 +198,7 @@ Maven развернет веб-приложение в Azure. Если веб-�
 
 * URL-адрес веб-приложения будет указан в разделе **Обзор** для вашего веб-приложения:
 
-   ![Определение URL-адреса для веб-приложения][AP02]
+   ![Найдите URL-адрес своего веб-приложения в разделе "Службы приложений" на портале Azure][AP02]
 
 Убедитесь, что развертывание прошло успешно, воспользовавшись описанной выше командой cURL. При этом вместо `localhost` введите URL-адрес веб-приложения, указанный на портале. Должно появиться следующее сообщение: **Greetings from Spring Boot!** 
 
@@ -249,5 +249,6 @@ Maven развернет веб-приложение в Azure. Если веб-�
 
 <!-- IMG List -->
 
-[AP01]: ./media/deploy-spring-boot-java-app-with-maven-plugin/AP01.png
-[AP02]: ./media/deploy-spring-boot-java-app-with-maven-plugin/AP02.png
+
+[AP01]: ./media/deploy-spring-boot-java-app-with-maven-plugin/web-app-listed-azure-portal.png
+[AP02]: ./media/deploy-spring-boot-java-app-with-maven-plugin/determine-web-app-url.png
