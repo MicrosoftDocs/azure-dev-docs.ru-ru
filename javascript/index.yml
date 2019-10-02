@@ -9,12 +9,12 @@ metadata:
   ms.author: sttramer
   ms.date: 09/15/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 0133931c0d9ac6e1dfc9e3faa1f14933f885e0af
-  ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
+  ms.openlocfilehash: 2e6009ffbd8769044780356f412f09b960d3275a
+  ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/18/2019
-  ms.locfileid: "71094811"
+  ms.lasthandoff: 10/01/2019
+  ms.locfileid: "71710245"
 landingContent:
 - title: Начало работы с пакетом Azure SDK для JavaScript
   linkLists:
@@ -37,13 +37,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Развертывание статических веб-приложений из Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/static-website/getting-started
-    - text: Развертывание комплексных приложений Node.js из Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/app-service-extension/getting-started
-    - text: Развертывание контейнерных приложений из Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/docker-extension/getting-started
+      url: tutorial-vscode-static-website-node-01.md
     - text: Развертывание бессерверных приложений с помощью Функций Azure из Visual Studio Code
-      url: https://code.visualstudio.com/tutorials/functions-extension/getting-started
+      url: tutorial-vscode-serverless-node-01.md
+    - text: Развертывание комплексных приложений Node.js из Visual Studio Code
+      url: tutorial-vscode-azure-app-service-node-01.md
+    - text: Развертывание контейнерных приложений из Visual Studio Code
+      url: tutorial-vscode-docker-node-01.md
 - title: Создание, развертывание и мониторинг приложений с помощью Azure
   linkLists:
   - linkListType: overview
