@@ -84,6 +84,78 @@
               href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: Распознавание речи
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: Учебники
+      items:
+        - name: Развертывание Функций Azure с помощью VS Code
+          items:
+            - name: Введение и предварительные требования
+              href: tutorial-vscode-serverless-node-01.md
+            - name: Создание приложения в службе "Функции"
+              href: tutorial-vscode-serverless-node-02.md
+            - name: Локальное тестирование функции
+              href: tutorial-vscode-serverless-node-03.md
+            - name: Развертывание приложения в службе "Функции"
+              href: tutorial-vscode-serverless-node-04.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-serverless-node-05.md
+        - name: Развертывание в Службе приложений с помощью VS Code
+          items:
+            - name: Введение и предварительные требования
+              href: tutorial-vscode-azure-app-service-node-01.md
+            - name: Создание приложения
+              href: tutorial-vscode-azure-app-service-node-02.md
+            - name: Развертывание веб-сайта
+              href: tutorial-vscode-azure-app-service-node-03.md
+            - name: Журналы потоковой передачи
+              href: tutorial-vscode-azure-app-service-node-04.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-azure-app-service-node-05.md
+        - name: Развертывание контейнеров с помощью VS Code
+          items:
+            - name: Введение и предварительные требования
+              href: tutorial-vscode-docker-node-01.md
+            - name: Использование Реестра контейнеров
+              href: tutorial-vscode-docker-node-02.md
+            - name: Создание образа приложения
+              href: tutorial-vscode-docker-node-03.md
+            - name: Развертывание образа приложения
+              href: tutorial-vscode-docker-node-04.md
+            - name: Внесение изменений и повторное развертывание
+              href: tutorial-vscode-docker-node-05.md
+            - name: Журналы потоковой передачи
+              href: tutorial-vscode-docker-node-06.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-docker-node-07.md
+        - name: "Развертывание в Службе приложений с помощью Azure\_CLI"
+          items:
+            - name: Введение и предварительные требования
+              href: tutorial-vscode-azure-cli-node-01.md
+            - name: Создание приложения
+              href: tutorial-vscode-azure-cli-node-02.md
+            - name: Создание службы приложений
+              href: tutorial-vscode-azure-cli-node-03.md
+            - name: Развертывание приложения
+              href: tutorial-vscode-azure-cli-node-04.md
+            - name: Журналы потоковой передачи
+              href: tutorial-vscode-azure-cli-node-05.md
+            - name: Внесение изменений и повторное развертывание
+              href: tutorial-vscode-azure-cli-node-06.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-azure-cli-node-07.md
+        - name: Создание статического веб-сайта с использованием VS Code
+          items:
+            - name: Введение и предварительные требования
+              href: tutorial-vscode-static-website-node-01.md
+            - name: Создание кода приложения
+              href: tutorial-vscode-static-website-node-02.md
+            - name: Создание учетной записи хранения
+              href: tutorial-vscode-static-website-node-03.md
+            - name: Развертывание в службе хранилища Azure
+              href: tutorial-vscode-static-website-node-04.md
+            - name: Внесение изменений и повторное развертывание
+              href: tutorial-vscode-static-website-node-05.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-static-website-node-06.md
     - name: Руководства
       items:
         - name: Сквозной Node. js с VS Code
