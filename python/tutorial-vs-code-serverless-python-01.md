@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: efa55b4c2cc916f5bbebcc795ed70d920d395362
-ms.sourcegitcommit: 4188b92d8de367cf82f22dba5d9ccb2cb6dd2899
+ms.openlocfilehash: bf6dd180d5fabc04c8fe3bf09c8277bb7b22ea47
+ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71126850"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710197"
 ---
 # <a name="deploy-python-to-azure-functions-with-visual-studio-code"></a>Развертывание Python в Функциях Azure с помощью Visual Studio Code
 
@@ -39,6 +39,9 @@ ms.locfileid: "71126850"
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительных требований](https://code.visualstudio.com/docs/python/python-tutorial) учебника по Python в VS Code.
 - [Расширение "Функции Azure"](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Общие сведения см. в репозитории [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions) на сайте GitHub.
+
+> [!NOTE]
+> Расширение "Функции Azure" входит в состав [пакета расширений Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 

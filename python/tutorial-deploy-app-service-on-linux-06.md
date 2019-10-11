@@ -1,5 +1,5 @@
 ---
-title: Потоковая передача журналов из Службы приложений Azure в VS Code
+title: Руководство по Потоковая передача журналов из Службы приложений Azure в VS Code
 description: 'Шаг 6 руководства: потоковая передача журналов приложения в Visual Studio Code'
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 39ae534580e5057b1ddcf93588be94ad67f2a9b4
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f4aac132e9c01a0c428e243e06e811357defc2aa
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020172"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172230"
 ---
-# <a name="stream-logs-from-the-running-app"></a>Потоковая передача журналов из выполняющегося приложения
+# <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>Руководство по Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
 
 [Предыдущий шаг: развертывание приложения](tutorial-deploy-app-service-on-linux-05.md)
 

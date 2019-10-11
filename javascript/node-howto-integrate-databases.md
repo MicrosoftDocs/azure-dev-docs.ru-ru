@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
-ms.openlocfilehash: 736797aa4287909646b7dcaca430fc5b7c9f3b66
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 1861b5df8cc9a54379762fac001c5cecc2f89b1f
+ms.sourcegitcommit: 60c41faa59dbb59406eb7c1715f5708b5ed892c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892358"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036079"
 ---
 # <a name="how-to-integrate-azure-databases-in-nodejs-apps"></a>Интеграция базы данных Azure в приложения Node.js
 
@@ -25,7 +25,7 @@ ms.locfileid: "69892358"
 | **MongoDB** | [Разработка веб-приложения на основе Node.js и MongoDB в Azure](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [Примеры](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&term=Mongo%20DB) |
 | **Кэш Redis** | [Использование кэша Redis для Azure с Node.js](/azure/redis-cache/cache-nodejs-get-started) | |
 | **База данных SQL Azure** | [Использование Node.js для создания запросов и базы данных SQL Azure](/azure/sql-database/sql-database-connect-query-nodejs) | [Примеры](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-sql-database) | |
-| **MySQL** | [Подключение и обращение к данным с помощью Node.js](/azure/mysql/connect-nodejs.md) | |
+| **MySQL** | [Подключение и обращение к данным с помощью Node.js](/azure/mysql/connect-nodejs) | |
 | **PostgreSQL** | [Подключение и обращение к данным с помощью Node.js](/azure/postgresql/connect-nodejs) | |
 
 Службу хранилища Azure также можно использовать для хранения файлов (BLOB), таблиц и очередей (сообщений):

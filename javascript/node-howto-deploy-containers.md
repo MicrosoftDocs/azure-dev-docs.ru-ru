@@ -8,18 +8,19 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
-ms.openlocfilehash: aeef72d2e8b74cb7e6e30b95ed1cd12a1929ac31
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.custom: seo-javascript-september2019
+ms.openlocfilehash: b35ee6c921fa9b5c01b5c89f7fa546a110bb21c2
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892508"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813762"
 ---
-# <a name="how-to-deploy-nodejs-containers-to-azure"></a>Как развертывать контейнеры Node.js в Azure
+# <a name="use-azure-to-deploy-scale-and-manage-nodejs-containers"></a>Использование Azure для развертывания, масштабирования и администрирования контейнеров Node.js
 
 Azure предоставляет надежную службу контейнеров, позволяющую легко развертывать, масштабировать приложения Node.js, основанные на контейнере, а также управлять ими.
 
-Чтобы приступить к работе, выполните простое пошаговое руководство [Deploy to Azure using Docker and Visual Studio Code](https://code.visualstudio.com/tutorials/docker-extension/getting-started) (Развертывание в Azure с помощью Docker и Visual Studio Code). Использование Visual Studio Code упрощает отправку изображений в реестр контейнеров (например, Реестр контейнеров Azure), а затем развертывание этого контейнера в Службе приложений Azure.
+Чтобы приступить к работе, выполните простое пошаговое руководство [Deploy to Azure using Docker and Visual Studio Code](tutorial-vscode-docker-node-01.md) (Развертывание в Azure с помощью Docker и Visual Studio Code). Использование Visual Studio Code упрощает отправку изображений в реестр контейнеров (например, Реестр контейнеров Azure), а затем развертывание этого контейнера в Службе приложений Azure.
 
 Вы также можете выполнить следующие модули Microsoft Learn:
 

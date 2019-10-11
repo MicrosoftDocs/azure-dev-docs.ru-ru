@@ -9,14 +9,14 @@ ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: dc1d376be0f57d7d79a7a67d43dca49c30163c90
-ms.sourcegitcommit: 52fa18873a6a8dc7f28c063cca0175bae2720b2a
+ms.openlocfilehash: 5fae0fb9e7d76d33e39ec85a27c46c339b4b38f4
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808462"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813711"
 ---
-# <a name="how-to-build-jamstack-static-site-web-apps-with-azure"></a>Как создавать веб-приложения JAMstack (статический сайт) с помощью Azure
+# <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Создание веб-приложений JAMstack (статический сайт) в Azure с помощью Node.js
 
 Хорошие веб-приложения могут быть построены и поддерживаться с помощью комбинации внешнего интерфейса *JavaScript*, *API* (сторонних или пользовательских API, созданных в виде бессерверного кода) и шаблонной *разметки* (HTML и CSS), которые служат статическими страницами. С помощью этой комбинации, также известной как JAMstack, можно избежать написания сложного кода серверной части для обслуживания веб-страниц. Вместо этого система обслуживает только статические страницы (HTML, CSS и JavaScript), где эти страницы вызывают интерфейсы API для работы на стороне сервера. Поскольку вы можете писать эти API с автоматическим масштабированием бессерверных технологий, вы полностью избегаете проблем использования типичных постоянно работающих серверов или веб-хостов, связанных с затратами и безопасностью. (Дополнительные сведения см. в разделе [jamstack.org](https://jamstack.org/).)
 
@@ -31,7 +31,7 @@ ms.locfileid: "70808462"
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/B19-BRK3021?latestplayer=true]
 
-Пошаговое руководство можно найти на странице [Развертывание статического веб-сайта в Azure](https://code.visualstudio.com/tutorials/static-website/getting-started) в документации Visual Studio Code.
+Пошаговое руководство можно найти на странице [Развертывание статического веб-сайта в Azure](tutorial-vscode-static-website-node-01.md).
 
 В следующих статьях также описаны дополнительные сведения:
 
@@ -39,7 +39,7 @@ ms.locfileid: "70808462"
   
 - **Бессерверные API**:
 
-  - Начните с [Создание функции в Azure, используя Visual Studio Code](/azure/azure-functions/functions-create-first-function-vs-code), где вы ознакомитесь с Функциями Azure в контексте Visual Studio Code, что упрощает многие детали.
+  - Начните с [создания функции в Azure с помощью Visual Studio Code](tutorial-vscode-serverless-node-01.md), где вы ознакомитесь с Функциями Azure в контексте Visual Studio Code, что упрощает многие детали.
   - По завершении работы с этой статьей вы получите проект Функций Azure (папка), который содержит подпапку, с именем для функции, которое совпадает с конечной точкой HTTP. Эта папка функции содержит файл *index.js* с кодом.
   - Эту функцию можно изменить по мере необходимости, добавить в проект дополнительные функции, а затем повторно развернуть их в Azure, где они являются общедоступными.
   - Дополнительные ресурсы по разработке бессерверных приложений см. в статье [Как записывать бессерверный код Node.js в Azure](node-howto-write-serverless-code.md)
