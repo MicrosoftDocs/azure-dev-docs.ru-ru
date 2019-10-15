@@ -1,5 +1,5 @@
 ---
-title: Локальная отладка кода Python в Функциях Azure с помощью Visual Studio Code
+title: Руководство по Локальная отладка кода Python в Функциях Azure с помощью Visual Studio Code
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 28df4c9a8a8b3a6ab6308449e9ae2e1ebd2cc6e4
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 324a67e5eebfce8fde7a2cf88d40f15864817df5
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186139"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172439"
 ---
-# <a name="debug-the-function-code-locally"></a>Локальная отладка кода функций
+# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство по Локальная отладка кода Python в решении "Функции Azure"
 
 [Предыдущий шаг: изучение файлов кода](tutorial-vs-code-serverless-python-03.md)
 

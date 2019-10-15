@@ -1,5 +1,5 @@
 ---
-title: Многооблачные решения
+title: Подключение ко всем регионам. Пакет Azure SDK для многооблачных решений Python
 description: Использование Azure во всех регионах
 author: sptramer
 ms.author: sttramer
@@ -7,14 +7,15 @@ manager: carmonm
 ms.date: 02/22/2018
 ms.topic: conceptual
 ms.devlang: python
-ms.openlocfilehash: dd063ca7aa4e6620832aa59961f98c0ecca4dd49
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 03c2a42463332cbeaffdcc7373c04967018af804
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285745"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172505"
 ---
-# <a name="multi-cloud---use-azure-on-all-regions"></a>Многооблачные решения. Использование Azure во всех регионах
+# <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Многооблачные решения. Подключение ко всем регионам с помощью пакета Azure SDK для Python
 
 Пакет Azure SDK для Python можно использовать для подключения ко всем регионам с [доступом](https://azure.microsoft.com/regions/services) к Azure.
 

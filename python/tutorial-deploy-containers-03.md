@@ -1,5 +1,5 @@
 ---
-title: Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
+title: Руководство по Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
 description: 'Шаг руководства 3: простой процесс повторного создания и развертывания образа контейнера.'
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 30b0d0863900c36232b69c23db0eae1c70a34396
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 0c57729fd3ab1f671b2533f3e15056aec99cb6c9
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019502"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172451"
 ---
-# <a name="make-changes-and-redeploy"></a>Внесение изменений и повторное развертывание
+# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Руководство по Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 
 [Предыдущий шаг. Развертывание образа в Службе приложений Azure](tutorial-deploy-containers-02.md)
 

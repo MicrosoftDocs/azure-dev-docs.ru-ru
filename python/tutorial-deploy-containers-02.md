@@ -1,5 +1,5 @@
 ---
-title: Развертывание образа контейнера в Службе приложений Azure с помощью Visual Studio Code
+title: Руководство по Развертывание образа контейнера в Службе приложений Azure с помощью Visual Studio Code
 description: Шаг руководства 2. Развертывание реального образа Docker в Службе приложений Azure из реестра контейнеров
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 27cc6e68892821170c1e438378f8635bd320afe5
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: a099e25134615fc05508cde3c0f128a3be813402
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020092"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172274"
 ---
-# <a name="deploy-the-image-to-azure"></a>Развертывание образа в Azure
+# <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>Руководство по Развертывание образа контейнера в Службе приложений Azure
 
 [Предыдущий шаг: предварительные требования](tutorial-deploy-containers-01.md)
 

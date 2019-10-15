@@ -1,5 +1,5 @@
 ---
-title: Добавление привязки к хранилищу в Функциях Azure с помощью Python в Visual Studio Code
+title: Руководство по Добавление привязки к хранилищу в Функциях Azure с помощью Python в Visual Studio Code
 description: Шаг руководства 7. Добавление в Python привязки для сохранения сообщений в службе хранилища Azure
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4595b6a60aa83d3818b41ddd1e4f06a44bb1eec1
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: e9f23e138dc9ddc0022199296320ff5c04e6c3d6
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186120"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172125"
 ---
-# <a name="add-a-binding-to-write-messages-to-azure-storage"></a>Добавление привязки для сохранения сообщений в службе хранилища Azure
+# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Руководство по Добавление привязки к хранилищу для решения "Функции Azure" на Python
 
 [Предыдущий шаг: развертывание второй функции](tutorial-vs-code-serverless-python-06.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Подготовка приложения к развертыванию в Службе приложений Azure в Linux с помощью Visual Studio Code
+title: Руководство по Подготовка приложения к развертыванию в Службе приложений Azure в Linux с помощью Visual Studio Code
 description: 'Руководство, шаг 2: настройка приложения'
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: ab1609d6d0940172d61a61a31f4dbfabc868c023
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: b284dd6b5a5d1a09f1be48fb2ab7e6a8f95a4708
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186136"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172361"
 ---
-# <a name="prepare-your-app"></a>Подготовка приложения
+# <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>Руководство по Подготовка приложения к развертыванию в Службе приложений Azure
 
 [Предыдущий шаг: предварительные требования](tutorial-deploy-app-service-on-linux-01.md)
 

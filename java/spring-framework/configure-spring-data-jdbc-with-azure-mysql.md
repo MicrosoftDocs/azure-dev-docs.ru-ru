@@ -1,30 +1,26 @@
 ---
-title: Как использовать JDBC Spring Data с базой данных Azure MySQL
-description: Узнайте, как использовать JDBC Spring Data с базой данных Azure MySQL.
-services: mysql
+title: Как использовать JDBC Spring Data с Базой данных Azure для MySQL
+description: Узнайте, как использовать JDBC Spring Data с Базой данных Azure для MySQL.
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: mysql
 ms.tgt_pltfrm: multiple
-ms.topic: article
-ms.openlocfilehash: 5e9947e3717fda66bab01a3e3d1dd658f1f1c649
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 0fd650caba9ecd1746a18d8696cccc50aca64d82
+ms.sourcegitcommit: 2610f3992cb6d21a3657032074acb981d130fdad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282375"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960789"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Как использовать JDBC Spring Data с базой данных Azure MySQL
 
 ## <a name="overview"></a>Обзор
 
-В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации в базу данных Azure [MySQL](https://www.mysql.com/) с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
+В этой статье показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -37,9 +33,9 @@ ms.locfileid: "68282375"
 * Служебная программа командной строки [mysql](https://dev.mysql.com/downloads/).
 * Клиент [Git](https://git-scm.com/downloads).
 
-## <a name="create-a-mysql-database-for-azure"></a>Создание базы данных MySQL в Azure
+## <a name="create-an-azure-database-for-mysql"></a>создание базы данных Azure для MySQL; 
 
-### <a name="create-a-mysql-database-server-using-the-azure-portal"></a>Создание сервера базы данных MySQL с помощью портала Azure
+### <a name="create-a-server-using-the-azure-portal"></a>Создание сервера с помощью портала Azure
 
 > [!NOTE]
 > 
@@ -67,11 +63,11 @@ ms.locfileid: "68282375"
 
 1. После ввода всех этих данных нажмите кнопку **Создать**.
 
-### <a name="configure-a-firewall-rule-for-your-mysql-database-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера базы данных MySQL с помощью портала Azure
+### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных MySQL.
+1. Щелкните **Все ресурсы**, а затем выберите только что созданные ресурсы Базы данных Azure для MySQL.
 
    ![Выбор базы данных MySQL][MYSQL03]
 
@@ -79,11 +75,11 @@ ms.locfileid: "68282375"
 
    ![Настройка безопасности подключения][MYSQL04]
 
-### <a name="retrieve-the-connection-string-for-your-mysql-server-using-the-azure-portal"></a>Получение строки подключения для сервера MySQL на портале Azure
+### <a name="retrieve-the-connection-string-for-your-server-using-the-azure-portal"></a>Получение строки подключения для сервера с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных MySQL.
+1. Щелкните **Все ресурсы**, а затем выберите только что созданный ресурс Базы данных Azure для MySQL.
 
    ![Выбор базы данных MySQL][MYSQL03]
 
@@ -91,7 +87,7 @@ ms.locfileid: "68282375"
 
    ![Получение строки подключения JDBC][MYSQL05]
 
-### <a name="create-mysql-database-using-the-mysql-command-line-utility"></a>Создание базы данных MySQL с помощью служебной программы командной строки `mysql`
+### <a name="create-a-database-using-the-mysql-command-line-utility"></a>Создание базы данных с помощью служебной программы командной строки `mysql`
 
 1. Откройте командную оболочку и подключитесь к серверу MySQL, введя команду `mysql`, как в следующем примере:
 
@@ -229,7 +225,7 @@ ms.locfileid: "68282375"
 
 ## <a name="summary"></a>Сводка
 
-С помощью этого руководства вы создали пример приложения Java, использующий Spring Data для хранения и извлечения информации в базу данных Azure MySQL с помощью JDBC.
+В рамках этого руководства вы создали пример приложения Java для хранения информации в Базе данных Azure для MySQL с помощью Spring Data и извлечения информации из базы данных с помощью JDBC.
 
 ## <a name="next-steps"></a>Дополнительная информация
 

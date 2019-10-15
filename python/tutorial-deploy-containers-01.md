@@ -1,5 +1,5 @@
 ---
-title: Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
+title: Руководство по Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 services: app-service
 author: kraigb
@@ -8,16 +8,17 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 0135761f8294b3fbbb8fe821540b46126c107109
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f6cdd345fddf0123cb26549ddbc498f156737799
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186179"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172300"
 ---
-# <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
+# <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Руководство по Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
 
-В этом руководстве описано, как с помощью Visual Studio Code развернуть образа контейнера из реестра контейнеров в [Службе приложений Azure](https://azure.microsoft.com/services/app-service/containers/).
+В этой статье описано, как в [Службе приложений Azure](https://azure.microsoft.com/services/app-service/containers/) развернуть образ контейнера из реестра контейнеров с помощью Visual Studio Code.
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте ссылку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
 

@@ -1,30 +1,26 @@
 ---
 title: Как использовать JPA Spring Data с базой данных Azure PostgreSQL
-description: Узнайте, как использовать JPA Spring Data с базой данных Azure PostgreSQL.
-services: postgresql
+description: Узнайте, как настроить JPA Spring Data и использовать этот API с Базой данных Azure для PostgreSQL.
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
-ms.topic: article
-ms.openlocfilehash: dca92f4cac26ba3e4f96f3591c3b4dfe997fbfba
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: da8feb20e4163d9280256b51f64d3148b077f7ce
+ms.sourcegitcommit: 2610f3992cb6d21a3657032074acb981d130fdad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281925"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960770"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Как использовать JPA Spring Data с базой данных Azure PostgreSQL
 
 ## <a name="overview"></a>Обзор
 
-В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации в базу данных Azure [PostgreSQL]https://www.postgresql.org/ с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
+В этой статье объясняется, как создать пример приложения для хранения информации в [базе данных Azure для PostgreSQL](/azure/postgresql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -79,7 +75,7 @@ ms.locfileid: "68281925"
 
    ![Настройка безопасности подключения][POSTGRESQL04]
 
-### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Получение строки подключения для сервера PostgreSQL на портале Azure
+### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Получение строки подключения для сервера PostgreSQL с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
