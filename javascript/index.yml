@@ -9,12 +9,12 @@ metadata:
   ms.author: sttramer
   ms.date: 09/15/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 2e6009ffbd8769044780356f412f09b960d3275a
-  ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
+  ms.openlocfilehash: 8c3399baa263f6ec393d88c2b4698e39e76b976e
+  ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/01/2019
-  ms.locfileid: "71710245"
+  ms.lasthandoff: 10/15/2019
+  ms.locfileid: "72348033"
 landingContent:
 - title: Начало работы с пакетом Azure SDK для JavaScript
   linkLists:
@@ -23,7 +23,7 @@ landingContent:
     - text: Быстрое развертывание примера Node.js в Службе приложений Azure
       url: https://aka.ms/try-azure-node
     - text: Обзор всех доступных примеров пакета Azure SDK для JavaScript
-      url: /resources/samples/?sort=0&platform=nodejs
+      url: /samples/browse/?languages=javascript,nodejs
 - title: Размещение приложений в Azure
   linkLists:
   - linkListType: overview
