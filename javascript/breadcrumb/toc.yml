@@ -2,6 +2,6 @@
   tocHref: /azure
   topicHref: /azure/index
   items:
-    - name: Node в Azure
+    - name: Azure для разработчиков JavaScript и Node.js
       tocHref: /azure/javascript
       topicHref: /azure/javascript/index
