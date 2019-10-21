@@ -1,6 +1,6 @@
 ---
 title: Средства Azure для разработчиков JavaScript
-description: Установка отдельных средств для разработки приложений JavaScript в Azure
+description: Установка отдельных средств для разработки приложений Node.js и JavaScript в Azure
 services: multiple
 author: karlerickson
 manager: douge
@@ -11,12 +11,12 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.author: karler
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 462dca51a703c33f327a7a3c85a87edbce929e07
-ms.sourcegitcommit: d3349f1a2a8a7eab1ffe2fcb1d05f22cac91dffb
+ms.openlocfilehash: 801e621b361a87223a9d2b948ce2afa8c2b1a138
+ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923111"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348042"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.

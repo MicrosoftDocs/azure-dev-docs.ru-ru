@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f7db7b93c3d8b2a130844ff91e1a4e294a0668f4
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: b87271573f21dfc696c4f68b234780feb724ddd1
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172493"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278983"
 ---
 # <a name="tutorial-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>Руководство по Развертывание веб-приложения Python в Службе приложений Azure в Linux
 
 [Предыдущий шаг: настройка пользовательского файла запуска](tutorial-deploy-app-service-on-linux-04.md)
 
+Используйте эту процедуру для развертывания приложения Python в Службе приложений Azure.
+
 1. Откройте в Visual Studio Code обозреватель **Azure: Служба приложений** и щелкните синюю стрелку вверх.
 
-   ![Команда развертывания в виде веб-приложения](media/deploy-azure/deploy-to-web-app-command.png)
+   ![Развертывание веб-приложения в Службе приложений в обозревателе Службы приложений](media/deploy-azure/deploy-web-app-to-app-service-in-app-service-explorer.png)
 
     Можно также щелкнуть правой кнопкой мыши имя службы приложений и выбрать команду **Deploy to Web App** (Развернуть в веб-приложение).
 
@@ -33,17 +35,17 @@ ms.locfileid: "72172493"
 
 1. Вы можете следить за ходом развертывания в окне **Вывод** VS Code.
 
-    ![Ход развертывания в окне вывода VS Code](media/deploy-azure/deployment-progress.png)
+    ![Ход развертывания в окне вывода VS Code](media/deploy-azure/view-deployment-progress-in-visual-studio-code-output.png)
 
 1. Через несколько минут, когда развертывание завершится (длительность зависит от количества устанавливаемых зависимостей), появится следующее сообщение. Нажмите кнопку **Обзор веб-сайта**, чтобы просмотреть работающий сайт.
 
-    ![Сообщение о завершении развертывания](media/deploy-azure/deployment-complete.png)
+    ![Завершенное развертывание с использованием кнопки "Обзор веб-сайта"](media/deploy-azure/web-app-deployment-complete-with-browse-website-button.png)
 
-    ![Приложение успешно запущено в Службе приложений](media/deploy-azure/running-app.png)
+    ![Приложение успешно запущено в Службе приложений](media/deploy-azure/web-app-running-successfully-on-app-service.png)
 
 1. Чтобы проверить развертывание файлов, разверните службу приложений в обозревателе **Azure: Служба приложений**, а затем откройте узел **Файлы**.
 
-    ![Проверка файлов развертывания с помощью обозревателя Службы приложений](media/deploy-azure/expand-files-node.png)
+    ![Проверка файлов развертывания с помощью обозревателя Службы приложений](media/deploy-azure/expand-files-node-to-check-deployment-of-web-app-files.png)
 
     Служба приложений создает виртуальную среду с указанными зависимостями в папке *antenv*. Развернув этот узел, вы сможете убедиться, что указанные в файле *requirements.txt* пакеты успешно установлены в папку *antenv/lib/python3.7/site-packages*.
 

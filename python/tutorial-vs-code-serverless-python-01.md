@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 792c9962d738a8e70f29d5df78c44b6303a63b77
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 81121490f435c7ff2e2fe8ab397fa18bab7113a3
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172291"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278810"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
-В этой статье объясняется, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как подключить (создать привязку) к хранилищу. Функции Azure выполняют код в бессерверной среде без необходимости создавать виртуальную машину или публиковать веб-приложение. Расширение "Функции Azure" для Visual Studio Code значительно упрощает процесс использования функций, автоматически обрабатывая многие вопросы конфигурации.
+В этой статье объясняется, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как подключить (создать привязку) к хранилищу.
+
+Функции Azure выполняют код в бессерверной среде без необходимости создавать виртуальную машину или публиковать веб-приложение. Расширение "Функции Azure" для Visual Studio Code значительно упрощает процесс использования функций, автоматически обрабатывая многие вопросы конфигурации.
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
 
@@ -56,7 +58,7 @@ ms.locfileid: "72172291"
 
 Чтобы убедиться, что набор средств Azure Functions Core Tools установлен, откройте палитру команд Visual Studio Code (клавишей **F1**) и выберите команду **Терминал: Создание нового интегрированного терминала**. Когда откроется терминал, выполните команду `func`.
 
-![Проверка предварительных требований для Azure Functions Core Tools.](media/tutorial-vs-code-serverless-python/check-prereqs.png)
+![Проверка предварительных требований для Azure Functions Core Tools](media/tutorial-vs-code-serverless-python/check-azure-functions-tools-prerequisites-in-visual-studio-code.png)
 
 Выходные данные, которые начинаются с логотипа Функций Azure (чтобы его увидеть, прокрутите выходные данные вверх), указывают на наличие Azure Functions Core Tools.
 

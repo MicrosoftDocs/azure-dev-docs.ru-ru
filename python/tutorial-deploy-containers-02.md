@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a099e25134615fc05508cde3c0f128a3be813402
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: bb1797ef86d9a98661412ef555b4eb78a9282ad9
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172274"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278888"
 ---
 # <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>Руководство по Развертывание образа контейнера в Службе приложений Azure
 
@@ -24,15 +24,15 @@ ms.locfileid: "72172274"
 
 1. В обозревателе **Docker** разверните раздел **Registries** (Реестры), затем узел нужного реестра (например, **Azure**) и в нем узел с именем образа, где вы найдете образ с тегом `:latest`.
 
-    ![Поиск образа в обозревателе Docker](media/deploy-containers/deploy-find-image.png)
+    ![Поиск образа в обозревателе Docker](media/deploy-containers/find-image-to-deploy-in-docker-explorer.png)
 
 1. Щелкните тег правой кнопкой мыши и выберите **Deploy Image to Azure App Service** (Развернуть образ в Службе приложений Azure).
 
-    ![Выбор команды развертывания в меню](media/deploy-containers/deploy-menu.png)
+    ![Пункт меню "Развернуть образ в Службе приложений Azure"](media/deploy-containers/deploy-image-to-azure-app-service-with-docker-explorer.png)
 
 1. Следуйте инструкциям на экране, чтобы выбрать подписку Azure, выбрать или указать группу ресурсов, указать регион, настроить план службы приложений (самый бюджетный из них — B1) и указать имя сайта. Этот процесс демонстрируется в следующей анимации.
 
-    ![Анимация: создание и развертывание](media/deploy-containers/deploy-to-app-service.gif)
+    ![Создание и развертывание образа в Службе приложений Azure](media/deploy-containers/deploy-image-to-azure-app-service.gif)
 
     **Группа ресурсов** — это именованная коллекция разных ресурсов, которые составляют приложение. Включив все ресурсы приложения в одну группу, вы сможете легко управлять этими ресурсами как единым целым. (См. сведения об [Azure Resource Manager](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview) в документации по Azure.)
 
@@ -44,7 +44,7 @@ ms.locfileid: "72172274"
 
 1. По завершении **необходимо** добавить в Службу приложений параметр с именем `WEBSITES_PORT`, который будет обозначать прослушиваемый контейнером порт. (Например, если вы используете образ из [руководства по созданию контейнера Python в VS Code](https://code.visualstudio.com/docs/python/tutorial-create-container), это будет порт 5000 для Flask и 8000 для Django.) Чтобы настроить `WEBSITES_PORT`, переключитесь в обозреватель **Azure: Служба приложений**, разверните узел новой Службы приложений (если он еще не появился, обновите отображение), щелкните правой кнопкой мыши **Параметры приложения** и выберите **Добавить новый параметр**. Когда будет предложено, введите имя ключа `WEBSITES_PORT` и значение, соответствующее номеру порта.
 
-    ![Команда для добавления нового параметра в контекстном меню Службы приложений](media/deploy-containers/add-app-service-setting.png)
+    ![Добавление нового параметра в Службу приложений для определения порта](media/deploy-containers/add-new-setting-in-app-service-settings-explorer.png)
 
 1. Служба приложений автоматически перезапускается при изменении параметров. Можно также в любое время щелкнуть Службу приложений правой кнопкой мыши и выбрать действие **Перезапустить**.
 

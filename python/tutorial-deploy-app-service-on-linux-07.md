@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 4ffadce6a6895041efe6737b271d7ab11c830095
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 1eeb8f66040a757809aad9df374f3d6a5f9390d2
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172470"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278899"
 ---
 # <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
 [Предыдущий шаг: потоковая передача журналов](tutorial-deploy-app-service-on-linux-06.md)
 
-Созданная Служба приложений включает резервный план службы приложений, за использование которого может взиматься плата. Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши Службу приложений в обозревателе **Azure: Служба приложений** и выберите **Удалить**.
+Созданная Служба приложений Azure включает резервный план службы приложений, за использование которого может взиматься плата. Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши Службу приложений в обозревателе **Azure: Служба приложений** и выберите **Удалить**.
 
 Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
 
@@ -34,7 +34,7 @@ ms.locfileid: "72172470"
 
 Для VS Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
-![Расширения Azure для VS Code](media/deploy-containers/azure-extensions.png)
+![Расширения Azure для Visual Studio Code](media/deploy-containers/azure-extensions-for-visual-studio-code.png)
 
 Некоторые популярные расширения:
 

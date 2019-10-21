@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b284dd6b5a5d1a09f1be48fb2ab7e6a8f95a4708
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 96e3a653567d146e1ce10fe0ae7950d35b9ed9e3
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172361"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279074"
 ---
 # <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>Руководство по Подготовка приложения к развертыванию в Службе приложений Azure
 
 [Предыдущий шаг: предварительные требования](tutorial-deploy-app-service-on-linux-01.md)
+
+В этой статье описано, как подготовить приложение для развертывания в Службе приложений Azure. Вы можете использовать существующее приложение, а также создать или скачать новое.
 
 Если у вас уже есть приложение, с которым вы хотите работать, проверьте наличие файла *requirements.txt*, который описывает все зависимости, включая платформы Flask или Django.
 

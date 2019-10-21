@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: fdd3248e50020bb90cdde8a3e9c30c2895dccdae
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 7c3c863ed333528c675cda939f52b86f53bc8380
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172200"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278944"
 ---
 # <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>Руководство по Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
 
-[Предыдущий шаг: создание Службы приложений](tutorial-deploy-app-service-on-linux-02.md)
+[Предыдущий шаг: создание Службы приложений](tutorial-deploy-app-service-on-linux-03.md)
+
+В этой статье описано, как настроить пользовательский файл запуска для приложения Python в Службе приложений Azure.
 
 В зависимости от структуры приложения вам может потребоваться пользовательский файл с командой запуска (см. руководстве по [настройке приложений Python для Службы приложений в Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python) в документации Azure).
 
@@ -37,11 +39,11 @@ ms.locfileid: "72172200"
 
 1. В области **Azure: Служба приложений** разверните Службу приложений, щелкните правой кнопкой мыши **Параметры приложения** и выберите **Открыть на портале**:
 
-    ![Команда "Открыть параметры на портале" в обозревателе Службы приложений](media/deploy-azure/open-settings-in-portal-command.png)
+    ![Пункт "Открыть параметры приложения на портале" в обозревателе Службы приложений](media/deploy-azure/open-application-settings-in-portal-for-app-service.png)
 
 1. На портале Azure выполните вход, если потребуется, затем на странице **Конфигурация** выберите **Общие параметры**, введите имя файла запуска (например, *startup.txt*) из раздела **Параметры стека** > **Команда запуска** и щелкните **Сохранить**.
 
-    ![Настройка имени для файла запуска на портале Azure](media/deploy-azure/azure-portal-startup-file.png)
+    ![Настройка имени для файла с командой запуска на портале Azure](media/deploy-azure/enter-startup-file-for-app-service-in-the-azure-portal.png)
 
     > [!NOTE]
     > Вместо файла с командой запуска вы можете указать команду запуска непосредственно в поле **Команда запуска** на портале Azure. Но обычно лучше использовать файл, так как он позволяет сохранить этот элемент конфигурации в репозитории, чтобы вы могли при необходимости отслеживать изменения и развертывать его в других экземплярах службы приложений.

@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 324a67e5eebfce8fde7a2cf88d40f15864817df5
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: cafa10a4ddc9ccc365f9054d009b58b3c9c615bf
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172439"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278603"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство по Локальная отладка кода Python в решении "Функции Azure"
 
 [Предыдущий шаг: изучение файлов кода](tutorial-vs-code-serverless-python-03.md)
 
+Вы можете выполнять отладку кода Python для Функций Azure локально в Visual Studio Code.
+
 1. Когда вы создаете проект Функций, расширение Visual Studio Code дополнительно создает в `.vscode/launch.json` одну конфигурацию запуска с именем **Attach to Python functions** (Вложение к функциям на Python). Наличие этой конфигурации означает, что осталось лишь нажать клавишу F5 или открыть обозреватель отладки, чтобы запустить проект.
 
-    ![Обозреватель отладки с конфигурацией запуска функций](media/tutorial-vs-code-serverless-python/launch-configuration.png)
+    ![Настройка обозревателя отладки для запуска проекта Python](media/tutorial-vs-code-serverless-python/configuration-to-start-a-python-project-for-debugging.png)
 
 1. При запуске отладчика откроется окно терминала с результатами работы Функций Azure, включая список доступных конечных точек. URL-адрес может отличаться, если вы не использовали имя HttpExample:
 

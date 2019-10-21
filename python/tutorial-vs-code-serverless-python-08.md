@@ -9,18 +9,20 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: aac220a57c83b274c46886f4548e41b41ec8327e
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 8c3110b14d70c787f81a18aa5d0b5bb3bde41ec1
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172422"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278441"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>Руководство по Очистка ресурсов Azure для Функций Azure
 
 [Предыдущий шаг: добавление привязки к хранилищу](tutorial-vs-code-serverless-python-07.md)
 
-Приложение-функция, которое вы создали, содержит ресурсы с минимальной стоимостью (см.[цены на Функции](https://azure.microsoft.com/pricing/details/functions/)). Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши приложение-функцию в обозревателе **Azure: Функции** и выберите действие **Delete Function App** (Удалить приложение-функцию).
+В этой статье показано, как удалить ресурсы Azure, созданные при работе с этим руководством. Приложение-функция Azure, созданная с помощью Visual Studio Code, включает ресурсы, за использование которых может взиматься минимальная плата.
+
+Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши приложение-функцию в обозревателе **Azure: Функции** и выберите действие **Delete Function App** (Удалить приложение-функцию). Дополнительные сведения см. на [странице с ценами на Функции](https://azure.microsoft.com/pricing/details/functions/).
 
 Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
 
@@ -36,7 +38,7 @@ ms.locfileid: "72172422"
 
 Для Visual Studio Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
-![Расширения Azure для Visual Studio Code](media/tutorial-vs-code-serverless-python/azure-extensions.png)
+![Расширения Azure для Visual Studio Code](media/tutorial-vs-code-serverless-python/azure-extensions-for-visual-studio-code.png)
 
 Некоторые популярные расширения:
 

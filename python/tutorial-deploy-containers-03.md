@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c57729fd3ab1f671b2533f3e15056aec99cb6c9
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a8ce5de518ef4eeec2140ec82ef560f3b487783e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172451"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278694"
 ---
 # <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Руководство по Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 
 [Предыдущий шаг. Развертывание образа в Службе приложений Azure](tutorial-deploy-containers-02.md)
+
+В этой статье описано, как повторно развернуть контейнер в Службе приложений Azure с помощью Visual Studio Code после внесения изменений.
 
 Рано или поздно вы обязательно внесете в приложение какие-либо изменения, а значит потребуется заново создать и развернуть контейнер. К счастью, этот процесс очень прост.
 

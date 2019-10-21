@@ -8,14 +8,16 @@ ms.date: 06/05/2017
 ms.topic: conceptual
 ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a0e979ec58cb659873a1bbe85bda4579363a9777
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 6b131a9a59fdf332abce426b8cbe776341b5b36a
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172342"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279095"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Установка пакета Azure SDK для Python
+
+Эта статья поможет вам установить пакет Azure SDK для Python. С помощью параметров инициализации программы можно установить более старую версию, проверить установку и удалить пакет Azure SDK для Python.
 
 ## <a name="which-python-and-which-version-to-use"></a>Какой вариант и какую версию Python использовать
 

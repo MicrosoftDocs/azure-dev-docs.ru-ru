@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: c09323e35c20a0b9fb5162c08f7fa223969d83fe
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 4a8ef594b461df406846f16ad71e595b64ffee5e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172109"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278784"
 ---
 # <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>Руководство по Изучение файлов кода на Python в Visual Studio Code
 
 [Предыдущий шаг: создание функции](tutorial-vs-code-serverless-python-02.md)
+
+Найдите файлы Python в папке с функциями с помощью Visual Studio Code.
 
 Во вложенной папке, которая создана для функции, находятся три файла: *\_\_init.\_\_py* содержит код функции, *function.json* содержит описание функции для Функций Azure, а *sample.dat* — это пример файла данных. Вы можете спокойно удалить *sample.dat*, так как он лишь напоминает о возможности добавлять другие файлы в эту вложенную папку.
 

@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f4aac132e9c01a0c428e243e06e811357defc2aa
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a60c8fd0202e935960f14a9ab5570f86a78fab6e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172230"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278915"
 ---
 # <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>Руководство по Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
 
 [Предыдущий шаг: развертывание приложения](tutorial-deploy-app-service-on-linux-05.md)
 
+Используйте эту процедуру для потоковой передачи журналов из Службы приложений Azure в Visual Studio Code.
+
 1. Откройте в Visual Studio Code обозреватель **Azure: Служба приложений**, щелкните Службу приложений правой кнопкой мыши и выберите действие **Start streaming logs** (Начать потоковую передачу журналов).
 
-   ![Команда запуска потоковой передачи журналов](media/deploy-azure/start-streaming-logs-command.png)
+   ![Запуск потоковой передачи журналов из обозревателя Службы приложений](media/deploy-azure/start-streaming-logs-in-visual-studio-code.png)
 
 1. Выберите ответ **Да** в запросе на подтверждение включения журнала и перезапуска приложения. В процессе презапуска приложения в **окне вывода** VS Code отображается ход выполнения. Включение ведения журнала выполняется один раз.
 
