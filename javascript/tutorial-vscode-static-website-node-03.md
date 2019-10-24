@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: kraigb
-ms.openlocfilehash: 44e6479379fff3ddf1012cdb61cf73440cad346e
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: ad207007e1c5a781f8cc02a2d20e0a68c77892e7
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685969"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587642"
 ---
 # <a name="create-an-azure-storage-account"></a>Создание учетной записи хранения Azure
 
@@ -21,7 +21,7 @@ ms.locfileid: "71685969"
 
 На этом этапе вы создадите учетную запись хранения Azure, которая выполняет роль простого хранилища файлов (или CDN) со встроенным веб-сервером. Этот встроенный сервер делает хранилище Azure отличным вариантом для быстрого размещения статических сайтов.
 
-1. Запустите Visual Studio Code из папки `my-react-app`, которую вы создали на предыдущем шаге, чтобы эта папка открылась автоматически:
+1. Запустите Visual Studio Code из папки `my-static-app`, которую вы создали на предыдущем шаге, чтобы эта папка открылась автоматически:
 
     ```bash
     code .
