@@ -4,19 +4,19 @@ description: Установка отдельных средств для раз�
 services: multiple
 author: karlerickson
 manager: douge
-ms.service: azure-nodejs
+ms.service: app-service
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 11/07/2017
 ms.author: karler
-ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 801e621b361a87223a9d2b948ce2afa8c2b1a138
-ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
+ms.custom: seo-javascript-september2019, seo-javascript-october2019
+ms.openlocfilehash: d943325cae970b69629fbc71ff4d86b6c0fa0491
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72348042"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587302"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.
@@ -24,7 +24,7 @@ ms.locfileid: "72348042"
 ## <a name="azure-cli"></a>Инфраструктура CLI Azure
 Azure CLI оптимизирован для управления ресурсами Azure из командной строки.
 
-![CLI](media/node-azure-tools/cli.png)
+![Интерфейс командной строки Azure для управления ресурсами Azure](media/node-azure-tools/azure-cli.png)
  
 > [!div class="nextstepaction"]
 > [Установите Azure CLI 2.0](/cli/azure/install-az-cli2)
@@ -32,7 +32,7 @@ Azure CLI оптимизирован для управления ресурса�
 ## <a name="visual-studio-code"></a>Visual Studio Code
 Изменение и отладка приложений JavaScript в любой ОС.
 
-![Visual Studio Code](media/node-azure-tools/vs-code.png)
+![Редактирование JavaScript с помощью Visual Studio Code](media/node-azure-tools/visual-studio-code-debug-javascript.png)
 
 > [!div class="nextstepaction"]
 > [Скачать Visual Studio Code](https://code.visualstudio.com)

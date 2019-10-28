@@ -8,16 +8,16 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.author: kraigb
-ms.openlocfilehash: 45dfb1f32d98385b2cb944340b4601de804e133f
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 0e5a7e12d234b56899e3c814cb577002125ea052
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685906"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587134"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Развертывание статического веб-сайта в Azure из Visual Studio Code
 
-При работе с этим руководством вы создадите и развернете статический веб-сайт в Azure с помощью [службы хранилища Azure](https://docs.microsoft.com/azure/storage). Статический веб-сайт состоит из файлов HTML, CSS, JavaScript и некоторых других, таких как файлы изображений или шрифтов. Обычно статический сайт — это одностраничное приложение ([SPA](https://en.wikipedia.org/wiki/Single-page_application)). Он создается с помощью Angular или React. Независимо от метода разработки, файлы размещаются и обслуживаются непосредственно в *хранилище* (без специального веб-сервера). Размещение в хранилище проще и дешевле, чем обслуживание веб-сервера.
+При работе с этим руководством вы создадите и развернете статический веб-сайт в Azure с помощью [службы хранилища Azure](https://docs.microsoft.com/azure/storage). Статический веб-сайт состоит из файлов HTML, CSS, JavaScript и некоторых других, таких как файлы изображений или шрифтов. Обычно статический сайт — это одностраничное приложение ([SPA](https://en.wikipedia.org/wiki/Single-page_application)). Он создается с помощью Angular, React или Vue. Независимо от метода разработки, файлы размещаются и обслуживаются непосредственно в _хранилище_ (без специального веб-сервера). Размещение в хранилище проще и дешевле, чем обслуживание веб-сервера.
 
 > [!NOTE]
 > Если у вас есть собственный серверный код, например приложение Node.js/Express, вместо этого руководства перейдите к [руководству по Службе приложений](tutorial-vscode-azure-app-service-node-01.md).
