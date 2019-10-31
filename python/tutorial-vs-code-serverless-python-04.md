@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: cafa10a4ddc9ccc365f9054d009b58b3c9c615bf
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: e866d95acdd5d9e3a36b1a94efe624379e715dbe
+ms.sourcegitcommit: 6cc225a6cec98bd51ef3c7bca05eeab210f2bbae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142666"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство по Локальная отладка кода Python в решении "Функции Azure"
 
@@ -43,7 +43,7 @@ ms.locfileid: "72278603"
     ```bash
     # Mac OS/Linux: modify the URL if you're using a different function name
     curl --header "Content-Type: application/json" --request POST \
-        --data {"name":"Visual Studio Code"} http://localhost:7071/api/HttpExample
+        --data '{"name":"Visual Studio Code"}' http://localhost:7071/api/HttpExample
     ```
 
     ```ps

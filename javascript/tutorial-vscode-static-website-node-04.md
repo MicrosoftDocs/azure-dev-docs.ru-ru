@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 705256291709c6715f90f19c220a7e3e127f923f
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 671e600471402dbd6ca71d385a238caeee889497
+ms.sourcegitcommit: 66cc8d1839dbd7cc01b33030f188e15bf5f24dae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587163"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916678"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Развертывание веб-сайта в Службе хранилища Azure
 
@@ -26,10 +26,6 @@ ms.locfileid: "72587163"
 1. В Visual Studio Code перейдите к обозревателю **службы хранилища Azure**, а затем поочередно разверните узел подписки, узел ранее созданной учетной записи хранения Azure и узел **Контейнеры BLOB-объектов**. Код приложения развертывается в контейнере `$web`.
 
    ![Узлы службы хранилища Azure в обозревателе хранилищ Azure](media/static-website/storage-nodes.png)
-
-1. Выберите обозреватель **Файлы**, щелкните правой кнопкой мыши папку _dist/my-static-app_ и выберите пункт **Deploy to Static Website** (Развернуть статический веб-сайт):
-
-    ![Команда развертывания статического веб-сайта](media/static-website/deploy-build-angular.png)
 
 1. Выберите обозреватель **Файлы**, щелкните правой кнопкой мыши папку _dist/my-static-app_ и выберите пункт **Deploy to Static Website** (Развернуть статический веб-сайт):
 
@@ -48,10 +44,6 @@ ms.locfileid: "72587163"
 1. В Visual Studio Code перейдите к обозревателю **службы хранилища Azure**, а затем поочередно разверните узел подписки, узел ранее созданной учетной записи хранения Azure и узел **Контейнеры BLOB-объектов**. Код приложения развертывается в контейнере `$web`.
 
    ![Узлы службы хранилища Azure в обозревателе хранилищ Azure](media/static-website/storage-nodes.png)
-
-1. Выберите обозреватель **Файлы**, щелкните правой кнопкой мыши папку _build_ и выберите пункт **Deploy to Static Website** (Развернуть статический веб-сайт):
-
-    ![Команда развертывания статического веб-сайта](media/static-website/deploy-build-react.png)
 
 1. Выберите обозреватель **Файлы**, щелкните правой кнопкой мыши папку _build_ и выберите пункт **Deploy to Static Website** (Развернуть статический веб-сайт):
 
