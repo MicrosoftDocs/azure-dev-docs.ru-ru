@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 title: Azure для разработчиков Python
 summary: >
-  Узнайте о предложениях Azure для разработчиков Python. Начните работу с такими возможностями Azure, как размещение приложений, поддержка баз данных с открытым кодом, включая MySQL и PostgreSQL, а также использование больших данных для машинного обучения и других приложений.
+  Azure предоставляет такие службы для разработчиков Python, как решения для размещения приложений, хранилище, базы данных с открытым исходным кодом (например, mySQL и PostgreSQL), а также средства обработки и анализа данных, машинного обучения и ИИ. Пакет Azure SDK для Python помогает разработчикам эффективно работать с этими службами.
 metadata:
   title: Azure для разработчиков Python
   description: Начните разработку с помощью Python и Azure для Python.
@@ -10,12 +10,12 @@ metadata:
   ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: a6008ed6b2a07db2853521922a29f1bd51a909d3
-  ms.sourcegitcommit: e081f71211e8f33420e92635c9a61eaa2f34c5e6
+  ms.openlocfilehash: b6c33142880eb289cfe1c87b54341341f98ef939
+  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/14/2019
-  ms.locfileid: "72306309"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73568170"
 landingContent:
 - title: Начало работы с Azure SDK для Python
   linkLists:
