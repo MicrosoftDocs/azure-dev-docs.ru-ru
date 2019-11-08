@@ -3,18 +3,18 @@ title: Документация по пакету SDK для JavaScript
 summary: >
   Из этой статьи вы узнаете о пакете Azure SDK для JavaScript и Node.js, о том, как начать работу с ним, и о том, что разработчики могут делать с его помощью. Начните работу с такими возможностями Azure, как размещение приложений, задачи DevOps, постоянное хранилище и базы данных, а также использование устройств Интернета вещей.
 metadata:
-  title: 'Azure для разработчиков JavaScript и Node.js: руководства, инструменты и справочник по пакету SDK'
-  description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js.
+  title: Azure для разработчиков JavaScript и Node.js
+  description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js, используя наши руководства, средства и справочник по пакету SDK.
   author: sptramer
   ms.author: sttramer
   ms.date: 09/15/2019
   ms.topic: landing-page
-  ms.openlocfilehash: 8c3399baa263f6ec393d88c2b4698e39e76b976e
-  ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
+  ms.openlocfilehash: a24d3f9451d39b5d143060e12b92a9d703bdf49f
+  ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/15/2019
-  ms.locfileid: "72348033"
+  ms.lasthandoff: 11/06/2019
+  ms.locfileid: "73661276"
 landingContent:
 - title: Начало работы с пакетом Azure SDK для JavaScript
   linkLists:
