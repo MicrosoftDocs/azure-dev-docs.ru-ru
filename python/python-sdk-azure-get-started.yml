@@ -3,49 +3,42 @@ title: Начало работы с разработкой в облаке с п
 metadata:
   title: Начало работы с библиотеками Azure для Python
   description: Сведения о создании, подключении и использовании облачных ресурсов Azure в приложениях Python.
-  author: sptramer
-  ms.author: sttramer
-  manager: carmonm
+  author: kraigb
+  ms.author: kraigb
+  manager: barbkess
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
   nextTutorialTitle: Справочник по пакету SDK для Python
   displayType: two-column
   interactive: azurecli
-  ms.date: 11/30/2017
-  ms.openlocfilehash: 39dc282c9d0a2cebb0f540a446767e3a60fc1428
-  ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
+  ms.date: 10/18/2019
+  ms.openlocfilehash: 32cfda14e307d0293c9ffec8b24685375cc929d0
+  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/20/2019
-  ms.locfileid: "69635093"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73568200"
 items:
 - durationInMinutes: 1
-  content: "В этом руководстве объясняется, как использовать различные библиотеки Azure для Python.  \n"
+  content: "В этом руководстве представлены сведения об использовании различных библиотек Azure SDK для Python.  \n"
 - title: Предварительные требования
   durationInMinutes: 5
   content: >
     - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 
-    - [Python](https://www.python.org/downloads/)
+    - [Последний интерпретатор Python 3.x](https://www.python.org/downloads/)
 
-    - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) или [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
+    - [Azure CLI 2.0](/azure/install-az-cli2) для работы в локальной среде или [Azure Cloud Shell](/azure/cloud-shell/quickstart) для работы только в облаке.
 - title: Настройка проверки подлинности
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > Эти инструкции следует применять в качестве краткого руководства по разработке. В рабочей среде используйте [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) или свою систему учетных данных.
-
-    > Любые изменения конфигурации CLI повлияют на выполнение пакета SDK.
+    Пакет SDK позволяет создать клиент, используя активную подписку CLI. Однако, в рабочей среде используйте [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) или собственную систему учетных данных.
 
 
-    Пакет SDK позволяет создать клиент, используя активную подписку CLI.
+    Чтобы указать активные учетные данные, используйте команду [az login](/azure/authenticate-azure-cli).
 
-
-    Чтобы указать активные учетные данные, используйте команду [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
-
-    По умолчанию используется существующий идентификатор подписки, но вы также можете указать его с помощью команды [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).
+    По умолчанию используется существующий идентификатор подписки, но вы также можете указать его с помощью команды [az account](/azure/manage-azure-subscriptions-azure-cli).
 
 
     ```python
@@ -61,9 +54,7 @@ items:
 - title: Создание виртуальной среды
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > Создавать виртуальную среду не обязательно, но мы настоятельно рекомендуем сделать это.
+    Виртуальная среда хранит библиотеки пакета SDK в изолированном расположении для проекта, что упрощает удаление пакета SDK при необходимости путем удаления папки среды.
 
 
     Создайте виртуальную среду в Bash ([Bash для Windows](https://msdn.microsoft.com/commandline/wsl/about) или Linux):
