@@ -11,12 +11,12 @@ ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
-ms.openlocfilehash: 1c147b4b478898fe0610abd09998b2972724f086
-ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
+ms.openlocfilehash: 373a662f8dc500ca188aba5fdde97437c3eb7d74
+ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70904914"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842220"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Проверка подлинности с использованием библиотек Azure для Java 
 
@@ -124,7 +124,7 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 Создайте точку входа объекта `Azure`, чтобы приступить к работе с библиотеками. Найдите расположение файла свойств с помощью переменной среды.
 
 ```java
-// pull in the location of the authenticaiton properties file from the environment 
+// pull in the location of the authentication properties file from the environment 
 final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
 
 Azure azure = Azure

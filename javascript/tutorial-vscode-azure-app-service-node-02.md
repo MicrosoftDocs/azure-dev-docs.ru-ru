@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.author: kraigb
-ms.openlocfilehash: 769ca61ef7716eaa08d45e109a9bf50e5801721c
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 0ee7b185532b3febe8aab720e40ff10cf4b079b7
+ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686185"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842205"
 ---
 # <a name="create-your-nodejs-application"></a>Создание приложения Node.js
 
@@ -26,7 +26,7 @@ ms.locfileid: "71686185"
 1. В окне терминала или командной строке выполните приведенную ниже команду, чтобы запустить генератор Express и сформировать шаблон нового приложения Express с именем myExpressApp. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
 
     ```bash
-    npx express-generator myExpressApp --view pug –git
+    npx express-generator myExpressApp --view pug -–git
     ```
 
 1. Установите зависимости приложения, выполнив `npm install` в папке приложения:

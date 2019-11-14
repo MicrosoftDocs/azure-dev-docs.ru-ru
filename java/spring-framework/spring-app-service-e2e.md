@@ -4,16 +4,16 @@ description: Полное руководство по использованию
 author: KarlErickson
 manager: barbkess
 ms.author: karler
-ms.date: 08/38/2019
+ms.date: 11/12/2019
 ms.service: app-service
 ms.devlang: java
 ms.topic: article
-ms.openlocfilehash: 0a35692d44b4c0a3d587c11e8781f3a9a3d141c9
-ms.sourcegitcommit: 8d9b68a214a4b92b722df9e71afca5bc6827ce9b
+ms.openlocfilehash: 2f5fc593733ea1f90d87ef9fbf98d6656410fa66
+ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383839"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74040541"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "70383839"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Интерфейс командной строки Azure](http://docs.microsoft.com/cli/azure/overview)
+* [Интерфейс командной строки Azure](https://docs.microsoft.com/cli/azure/overview)
 * [Java 8](http://java.oracle.com/);
 * [Maven 3](http://maven.apache.org/)
 * [Git](https://github.com/)
@@ -123,13 +123,18 @@ Maven будет использовать эти значения для соз�
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.7.0</version>
+    <version>1.8.0</version>
     <configuration>
+        <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
         <appServicePlanName>${WEBAPP_PLAN_NAME}</appServicePlanName>
         <appName>${WEBAPP_NAME}</appName>
         <region>${REGION}</region>
-        <linuxRuntime>tomcat 8.5-jre8</linuxRuntime>
+        <runtime>
+            <os>linux</os>
+            <javaVersion>jre8</javaVersion>            
+            <webContainer>TOMCAT 8.5</webContainer>
+        </runtime>
     </configuration>
 </plugin>
 ```

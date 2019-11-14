@@ -8,19 +8,19 @@ manager: douge
 editor: ''
 ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 11/12/2019
 ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: 3363e1a4600328e012b99bd940cf88bb47e2ee57
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: d4bf20fab52963596298eb125b71e6c6abfe8b85
+ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74040500"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot в кластере Kubernetes в Службе Azure Kubernetes
 
@@ -123,7 +123,7 @@ ms.locfileid: "68691716"
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
