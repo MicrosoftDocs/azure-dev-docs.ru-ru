@@ -12,12 +12,12 @@ ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: c4af364cf6c47b23415a47974fd7eb909a371efb
-ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
+ms.openlocfilehash: f093e7f23a15420a60b6725e0f13d8457478ab5c
+ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661316"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842224"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Развертывание приложения Spring Boot в виде файла JAR в Службе приложений Azure с помощью Maven и Azure на платформе Linux
 
@@ -57,7 +57,7 @@ ms.locfileid: "73661316"
    ```
    -- или --
    ```shell
-   md ~/SpringBoot
+   mkdir ~/SpringBoot
    cd ~/SpringBoot
    ```
 
@@ -104,9 +104,13 @@ ms.locfileid: "73661316"
    </plugin>
    ```
 
-3. Затем можно настроить развертывание, выполнить в командной строке команду Maven `mvn azure-webapp:config` и с помощью **number** выбрать параметры в командной строке:
+3. Затем можно настроить развертывание, выполнить в командной строке приведенную нижу команду Maven и с помощью **number** выбрать параметры в командной строке.
     * **OS**: linux;  
     * **JavaVersion**: Java 8    
+    
+```cmd
+mvn azure-webapp:config
+```
 
 Если вы получите запрос **Confirm (Y/N)** , нажмите клавишу **y** для подтверждения. Настройка завершена.
 
@@ -118,7 +122,7 @@ ms.locfileid: "73661316"
 [INFO] Building gs-spring-boot 0.1.0
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+[INFO] --- azure-webapp-maven-plugin:1.8.0:config (default-cli) @ gs-spring-boot ---
 [WARNING] The plugin may not work if you change the os of an existing webapp.
 Define value for OS(Default: Linux):
 1. linux [*]
@@ -166,7 +170,16 @@ Confirm (Y/N)? : Y
              </property>
           </appSettings>
           <!-- End of App Settings  -->
-          ...
+          <deployment>
+            <resources>
+              <resource>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.jar</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
          </configuration>
    </plugin>
    ```
