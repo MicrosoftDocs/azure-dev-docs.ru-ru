@@ -93,9 +93,10 @@
       items:
         - name: Обзор
           href: java-azure-tools.md
-        - name: Долгосрочная поддержка Java
-          href: jdk/index.md
+        - name: Поддержка Java
           items:
+            - name: Долгосрочная поддержка Java
+              href: jdk/index.md
             - name: Установка пакета JDK Java
               href: jdk/java-jdk-install.md
             - name: Образы Docker в Java для Azure
