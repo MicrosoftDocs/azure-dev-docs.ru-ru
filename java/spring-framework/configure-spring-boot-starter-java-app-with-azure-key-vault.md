@@ -4,26 +4,21 @@ description: Сведения о настройке приложения Spring 
 services: key-vault
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 10/29/2019
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1c04bab67c7fc6a409893416d27de7ed18018cd9
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7841386ba89f2f14e4ef6e5c279d62293940f4af
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283225"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118022"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Как использовать начальное приложение Spring Boot Starter с Azure Key Vault
-
-## <a name="overview"></a>Обзор
 
 В этой статье описано, как создать с помощью **[Spring Initializr]** начальное приложение Spring Boot для Azure Key Vault для получения строки подключения, которая хранится в виде секрета в хранилище ключей.
 
@@ -37,23 +32,25 @@ ms.locfileid: "68283225"
 
 ## <a name="create-an-app-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
 
+Следующая процедура создает приложение с помощью Spring Initializr.
+
 1. Перейдите по адресу <https://start.spring.io/>.
 
-1. Укажите, что необходимо создать проект **Maven** с помощью **Java**, введите имя **группы** и **артефакта** вашего приложения, а затем щелкните ссылку, чтобы **перейти к полной версии** Spring Initializr.
+1. Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.  
 
-   ![Указание имен группы и артефакта][secrets-01]
+1. Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
 
-1. Прокрутите вниз до раздела **Azure** статьи и установите флажок рядом с пунктом **Azure Key Vault**.
+1. В разделе **Dependencies** (Зависимости) введите **Azure Key Vault**.
 
-   ![Выбор начального приложения Azure Key Vault][secrets-02]
+1. Прокрутите до нижней части страницы и щелкните **Generate** (Создать).
 
-1. Прокрутите страницу вниз и нажмите кнопку, чтобы **создать проект**.
-
-   ![Создание проекта Spring Boot][secrets-03]
+   ![Создание проекта Spring Boot][secrets-01]
 
 1. При появлении запроса скачайте проект на локальный компьютер.
 
 ## <a name="sign-into-azure"></a>Вход в Azure
+
+Следующая процедура выполняет проверку подлинности пользователя в Azure CLI.
 
 1. Откройте окно командной строки.
 
@@ -62,13 +59,15 @@ ms.locfileid: "68283225"
    ```azurecli
    az login
    ```
-   Для завершения процесса входа следуйте инструкциям.
+
+Для завершения процесса входа следуйте инструкциям.
 
 1. Отобразите список подписок:
 
    ```azurecli
    az account list
    ```
+
    Azure отобразит список подписок, и вам нужно будет скопировать идентификатор GUID для подписки, которая будет использоваться, например:
 
    ```json
@@ -96,10 +95,14 @@ ms.locfileid: "68283225"
 
 ## <a name="create-a-new-azure-key-vault"></a>Создание нового хранилища Azure Key Vault
 
+Следующая процедура создает и инициализирует хранилище ключей.
+
 1. Создайте группу ресурсов Azure, которые будут использоваться для хранилища ключей, например:
+
    ```azurecli
-   az group create --name wingtiptoysresources --location westus
+   az group create --name vged-rg2 --location westus
    ```
+
    Описание
 
    | Параметр | ОПИСАНИЕ |
@@ -111,10 +114,10 @@ ms.locfileid: "68283225"
 
    ```json
    {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/wingtiptoysresources",
+     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/vged-rg2",
      "location": "westus",
      "managedBy": null,
-     "name": "wingtiptoysresources",
+     "name": "vged-rg2",
      "properties": {
        "provisioningState": "Succeeded"
      },
@@ -124,7 +127,7 @@ ms.locfileid: "68283225"
 
 2. Создайте субъект-службу Azure, связанный с зарегистрированным приложением, например:
    ```shell
-   az ad sp create-for-rbac --name "wingtiptoysuser"
+   az ad sp create-for-rbac --name "vgeduser"
    ```
    Описание
 
@@ -137,17 +140,19 @@ ms.locfileid: "68283225"
    ```json
    {
      "appId": "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii",
-     "displayName": "wingtiptoysuser",
-     "name": "http://wingtiptoysuser",
+     "displayName": "vgeduser",
+     "name": "http://vgeduser",
      "password": "pppppppp-pppp-pppp-pppp-pppppppppppp",
      "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
    }
    ```
 
 3. Создайте хранилище ключей в группе ресурсов, например:
+
    ```azurecli
-   az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
+   az keyvault create --name vgedkeyvault --resource-group vged-rg2 --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
+
    Описание
 
    | Параметр | ОПИСАНИЕ |
@@ -162,14 +167,17 @@ ms.locfileid: "68283225"
 
    Azure CLI отобразит этот URI для хранилища ключей для дальнейшего использования, например:  
 
-   ```
-   "https://wingtiptoyskeyvault.vault.azure.net"
+   ```azurecli
+   "https://vgedkeyvault.vault.azure.net"
+
    ```
 
 4. Настройте политику доступа для ранее созданного субъекта-службы Azure, например:
+
    ```azurecli
-   az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
+   az keyvault set-policy --name vgedkeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
+
    Описание
 
    | Параметр | ОПИСАНИЕ |
@@ -184,22 +192,24 @@ ms.locfileid: "68283225"
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
      "location": "westus",
-     "name": "wingtiptoyskeyvault",
+     "name": "vgedkeyvault",
      "properties": {
        ...
        ... (A long list of values will be displayed here.)
        ...
      },
-     "resourceGroup": "wingtiptoysresources",
+     "resourceGroup": "vged-rg2",
      "tags": {},
      "type": "Microsoft.KeyVault/vaults"
    }
    ```
 
 5. Сохраните секрет в новом хранилище ключей, например:
+
    ```azurecli
-   az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
+   az keyvault secret set --vault-name "vgedkeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
+
    Описание
 
    | Параметр | ОПИСАНИЕ |
@@ -221,28 +231,32 @@ ms.locfileid: "68283225"
        "updated": "2017-12-01T09:00:16+00:00"
      },
      "contentType": null,
-     "id": "https://wingtiptoyskeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
+     "id": "https://vgedkeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
      "kid": null,
      "managed": null,
      "tags": {
        "file-encoding": "utf-8"
      },
-     "value": "jdbc:sqlserver://wingtiptoys.database.windows.net:1433;database=DATABASE;"
+     "value": "jdbc:sqlserver://.database.windows.net:1433;database=DATABASE;"
    }
    ```
 
 ## <a name="configure-and-compile-your-app"></a>Настройка и компиляция приложения
+
+Используйте следующую процедуру для настройки и компиляции приложения.
 
 1. Распакуйте архив с файлами проекта Spring Boot, которые вы скачали в каталог.
 
 2. В папке *main/src/ресурсы* проекта откройте файл *application.properties* в текстовом редакторе.
 
 3. Добавьте значения для хранилища ключей, используя ранее выполненные действия, например:
+
    ```yaml
-   azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
+   azure.keyvault.uri=https://vgedkeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
+
    Описание
 
    |          Параметр          |                                 ОПИСАНИЕ                                 |
@@ -252,12 +266,12 @@ ms.locfileid: "68283225"
    | `azure.keyvault.client-key` | Указывает GUID *password*, полученный при создании субъекта-службы. |
 
 
-4. Перейдите к файлу с основным кодом проекта, например: */src/main/java/com/wingtiptoys/secrets*.
+4. Перейдите к файлу с основным кодом проекта, например: */src/main/java/com/vged/secrets*.
 
 5. Откройте в текстовом редакторе основной Java-файл приложения, например *SecretsApplication.java*, и добавьте следующие строки в файл.
 
    ```java
-   package com.wingtiptoys.secrets;
+   package com.vged.secrets;
 
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -284,6 +298,8 @@ ms.locfileid: "68283225"
 6. Сохраните и закройте файл Java.
 
 ## <a name="build-and-test-your-app"></a>Создание и тестирование приложения
+
+Используйте следующую процедуру для тестирования приложения.
 
 1. Перейдите в каталог с файлом *pom.xml* приложения Spring Boot:
 

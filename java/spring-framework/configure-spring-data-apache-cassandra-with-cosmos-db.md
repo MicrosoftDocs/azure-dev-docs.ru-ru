@@ -13,16 +13,14 @@ ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 46084a5bc1d98f5e8343fc20446dc0516057ce83
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 93dff9e1f12a17660b367060dd9d404127285df2
+ms.sourcegitcommit: 8be617e100ae3d3e90d56c672b1c7c110b7a588f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282495"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160693"
 ---
 # <a name="how-to-use-spring-data-apache-cassandra-api-with-azure-cosmos-db"></a>Как использовать API Apache Cassandra Spring Data с Azure Cosmos DB
-
-## <a name="overview"></a>Обзор
 
 В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации с помощью [API Cassandra для Azure Cosmos DB](/azure/cosmos-db/cassandra-introduction).
 
@@ -37,6 +35,8 @@ ms.locfileid: "68282495"
 * Клиент [Git](https://git-scm.com/downloads).
 
 ## <a name="create-an-azure-cosmos-db-account"></a>создание учетной записи Azure Cosmos DB;
+
+Следующая процедура создает и настраивает учетную запись Cosmos на портале Azure.
 
 ### <a name="create-a-cosmos-db-account-using-the-azure-portal"></a>Создание учетной записи Cosmos DB с помощью портала Azure
 
@@ -66,13 +66,13 @@ ms.locfileid: "68282495"
 
    ![Проверка параметров учетной записи Cosmos DB][COSMOSDB03]
 
+Развертывание базы данных занимает несколько минут.
+
 ### <a name="add-a-keyspace-to-your-azure-cosmos-db-account"></a>Добавление пространства ключей к учетной записи Azure Cosmos DB
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную учетную запись Azure Cosmos DB.
-
-   ![Выбор учетной записи Azure Cosmos DB][COSMOSDB04]
 
 1. Щелкните **Обозреватель данных**, а затем выберите **New Keyspace** (Новое пространство ключей). Введите уникальный идентификатор в поле **Keyspace id** (Идентификатор пространства ключей), а затем нажмите кнопку **ОК**.
 
@@ -84,13 +84,13 @@ ms.locfileid: "68282495"
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную учетную запись Azure Cosmos DB.
 
-   ![Выбор учетной записи Azure Cosmos DB][COSMOSDB04]
-
 1. Нажмите кнопку **Строки подключения** и скопируйте соответствующие значения для полей **Точка контакта**, **Порт**, **Имя пользователя** и **Основной пароль**. Позже эти значения будут использоваться для настройки приложения.
 
-   ![Получение параметров подключения к Cosmos DB][COSMOSDB05]
+   ![Получение параметров подключения к Cosmos DB][COSMOSDB06]
 
 ## <a name="configure-the-sample-application"></a>Настройка примера приложения
+
+Следующая процедура настраивает тестовое приложение.
 
 1. Откройте командную строку и клонируйте пример проекта с помощью команды Git, как в следующем примере:
 
@@ -121,6 +121,8 @@ ms.locfileid: "68282495"
 
 ## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
 
+Перейдите в каталог, содержащий файл .pom, чтобы создать и протестировать приложение.
+
 1. Создайте пример приложения с помощью Maven, например:
 
    ```shell
@@ -136,9 +138,9 @@ ms.locfileid: "68282495"
 1. Из командной строки создайте записи с помощью `curl`, как в следующем примере:
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    Приложение должно возвращать значения следующим образом:
@@ -154,7 +156,7 @@ ms.locfileid: "68282495"
    ```shell
    curl -s http://localhost:8080/pets
    ```
-    
+
    Приложение должно возвращать значения следующим образом:
 
    ```json
@@ -194,3 +196,4 @@ ms.locfileid: "68282495"
 [COSMOSDB03]: media/configure-spring-data-apache-cassandra-with-cosmos-db/create-cosmos-db-03.png
 [COSMOSDB04]: media/configure-spring-data-apache-cassandra-with-cosmos-db/create-cosmos-db-04.png
 [COSMOSDB05]: media/configure-spring-data-apache-cassandra-with-cosmos-db/create-cosmos-db-05.png
+[COSMOSDB06]: media/configure-spring-data-apache-cassandra-with-cosmos-db/create-cosmos-db-06.png

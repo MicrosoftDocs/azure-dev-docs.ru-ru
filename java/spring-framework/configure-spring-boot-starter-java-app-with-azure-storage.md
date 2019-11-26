@@ -4,26 +4,20 @@ description: Сведения о настройке приложения Spring 
 services: storage
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: storage
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: c4cc70cb97ec5e2199b41d768dbfd6313b19edcb
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: fe6f2869d775961cf69e7f109fe788d3dfad8b28
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282975"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118052"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Как использовать Spring Boot Starter со службой хранилища Azure
-
-## <a name="overview"></a>Обзор
 
 В статье описано, как создать пользовательское приложение с помощью **Spring Initializr** и добавить к нему начальное приложение службы хранилища Azure, а затем отправить большой двоичный объект в учетную запись хранения Azure с помощью этого приложения.
 
@@ -32,7 +26,7 @@ ms.locfileid: "68282975"
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
 * Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure](https://azure.microsoft.com/pricing/free-trial/).
-* [Интерфейс командной строки Azure (CLI)](http://docs.microsoft.com/cli/azure/overview).
+* [Интерфейс командной строки Azure (CLI)](https://docs.microsoft.com/cli/azure/index).
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 и выше.
 
@@ -43,43 +37,42 @@ ms.locfileid: "68282975"
 
 ## <a name="create-an-azure-storage-account-and-blob-container-for-your-application"></a>Создание учетной записи хранения Azure и контейнера BLOB-объектов для приложения
 
+Следующая процедура создает учетную запись хранения и контейнер.
+
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Щелкните **+Создать ресурс**, **Служба хранилища**, **Учетная запись хранения**.
 
    ![Создание учетной записи хранения Azure][IMG01]
 
-1. На странице **Создание пространства имен** введите такую информацию:
+1. На странице **Создание учетной записи хранения** введите следующие сведения:
 
-   * Уникальное **имя**, которое станет частью URI для учетной записи хранения. Например, если вы зададите **wingtiptoysstorage** в качестве **имени**, URI примет вид *wingtiptoysstorage.core.windows.net*.
-   * Выберите **Хранилище BLOB-объектов** в поле **Тип учетной записи**.
+   * Выберите **Подписка**.
+   * Выберите **группу ресурсов** или создайте новую.
+   * Введите уникальное **имя учетной записи хранения**, которое станет частью URI для этой учетной записи хранения. Например, если вы зададите **wingtiptoysstorage** в качестве **имени**, URI примет вид *wingtiptoysstorage.core.windows.net*.
    * Укажите **расположение** для учетной записи хранения.
-   * Выберите **подписку**, которую нужно использовать для учетной записи хранения.
-   * Укажите, следует ли создать новую **группу ресурсов** для учетной записи хранения или использовать существующую.
+1. Указав эти параметры, щелкните **Просмотр и создание**. 
+1. Проверьте спецификацию и щелкните **Создать**, чтобы создать учетную запись хранения.
+1. Когда развертывание будет завершено, выберите **Перейти к ресурсу**.
+1. Щелкните **Контейнеры**.
+1. Щелкните **+ Container** (+ Контейнер).
+   * Присвойте контейнеру имя,
+   * Выберите *Большой двоичный объект* в раскрывающемся списке.
 
-   ![Создание учетной записи хранения Azure][IMG02]
-
-1. Указав эти параметры, щелкните **Создать**, чтобы создать учетную запись хранения.
-
-1. После создания учетной записи хранения на портале Azure щелкните **Большие двоичные объекты** и **+Контейнер**.
-
-   ![Создание контейнера больших двоичных объектов][IMG03]
-
-1. Введите **имя** для контейнера BLOB-объектов и щелкните **ОК**.
-
-   ![Настройка параметров контейнера BLOB-объектов][IMG04]
+   ![Создание контейнера больших двоичных объектов][IMG02]
 
 1. Созданный контейнер BLOB-объектов отобразится в соответствующем списке на портале Azure.
 
-   ![Список контейнеров BLOB-объектов][IMG05]
-
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
+
+Следующая процедура создает приложение Spring Boot.
 
 1. Перейдите по адресу <https://start.spring.io/>.
 
 1. Задайте такие параметры:
 
-   * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.
+   * Создайте проект **Maven**.
+   * Укажите **Java**.
    * Выберите версию **Spring Boot** не ниже версии 2.0.
    * Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
    * Добавьте зависимость **Web** (Веб).
@@ -91,15 +84,15 @@ ms.locfileid: "68282975"
    > Spring Initializr использует имена **Group** (Группы) и **Artifact** (Артефакта) для создания имени пакета, как например *com.wingtiptoys.storage*.
    >
 
-1. Указав эти параметры, щелкните **Generate Project** (Создать проект).
+1. Указав описанные выше параметры, щелкните **Создать**.
 
 1. При появлении запроса скачайте проект на локальный компьютер.
-
-   ![Скачивание проекта Spring][SI02]
 
 1. После извлечения файлов в локальной системе простое приложение Spring Boot можно будет редактировать.
 
 ## <a name="configure-your-spring-boot-app-to-use-the-azure-storage-starter"></a>Настройка приложения Spring Boot для использования начального приложения службы хранилища Azure
+
+Следующая процедура настраивает хранилище Azure для приложения Spring Boot.
 
 1. Найдите файл *pom.xml* в корневой папке приложения, например так:
 
@@ -124,6 +117,8 @@ ms.locfileid: "68282975"
 1. Сохраните и закройте файл *pom.xml*.
 
 ## <a name="create-an-azure-credential-file"></a>Создание файла учетных данных Azure
+
+Следующая процедура создает файл учетных данных Azure.
 
 1. Откройте окно командной строки.
 
@@ -200,6 +195,8 @@ ms.locfileid: "68282975"
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-storage-account"></a>Настройка приложения Spring Boot для использования учетной записи хранения Azure
 
+Следующая процедура настраивает учетную запись хранения Azure для приложения Spring Boot.
+
 1. Найдите файл *application.properties* в каталоге *resources* приложения, например так:
 
    `C:\SpringBoot\storage\src\main\resources\application.properties`
@@ -242,7 +239,7 @@ ms.locfileid: "68282975"
 
    `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/StorageApplication.java`
 
-1. Откройте файл основного приложения Java в текстовом редакторе и добавьте в него следующие строки:
+1. Откройте файл основного приложения Java в текстовом редакторе и добавьте в него следующие строки. Замените wingtiptoys реальными значениями:
 
    ```java
    package com.wingtiptoys.storage;
@@ -270,7 +267,7 @@ ms.locfileid: "68282975"
 
    `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/WebController.java`
 
-1. Откройте файл Java веб-контроллера в текстовом редакторе и добавьте следующие строки:
+1. Откройте файл Java веб-контроллера в текстовом редакторе и добавьте следующие строки.  Вместо *wingtiptoys* укажите реальную группу ресурсов, а вместо *storage* — реальное имя артефакта.
 
    ```java
    package com.wingtiptoys.storage;
@@ -357,7 +354,7 @@ ms.locfileid: "68282975"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/java/spring-framework)
+> [Spring в Azure](https://docs.microsoft.com/java/azure/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault?view=azure-java-stable)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 

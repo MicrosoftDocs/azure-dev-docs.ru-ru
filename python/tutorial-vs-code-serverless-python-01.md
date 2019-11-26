@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 81121490f435c7ff2e2fe8ab397fa18bab7113a3
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 0aa353d741906c887723a012bb6d4abfc719a049
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278810"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118216"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -38,7 +38,7 @@ ms.locfileid: "72278810"
 
 Установите следующее программное обеспечение:
 
-- Python 3.6.x, который требуется для работы с Функциями Azure. Последняя версия 3.6.x — это [Python 3.6.8](https://www.python.org/downloads/release/python-368/).
+- Python 3.7 или Python 3.6 для работы с Функциями Azure. [Python 3.7.5](https://www.python.org/downloads/release/python-375/) и [Python 3.6.8](https://www.python.org/downloads/release/python-368/) — это новейшие совместимые версии.
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительных требований](https://code.visualstudio.com/docs/python/python-tutorial) учебника по Python в VS Code.
 - [Расширение "Функции Azure"](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Общие сведения см. в репозитории [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions) на сайте GitHub.

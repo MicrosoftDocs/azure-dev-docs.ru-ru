@@ -12,12 +12,12 @@ ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: f093e7f23a15420a60b6725e0f13d8457478ab5c
-ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
+ms.openlocfilehash: 274287a6e29bd75721758805d508ebebfcc7586a
+ms.sourcegitcommit: 8be617e100ae3d3e90d56c672b1c7c110b7a588f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842224"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160743"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Развертывание приложения Spring Boot в виде файла JAR в Службе приложений Azure с помощью Maven и Azure на платформе Linux
 
@@ -108,45 +108,45 @@ ms.locfileid: "73842224"
     * **OS**: linux;  
     * **JavaVersion**: Java 8    
     
-```cmd
-mvn azure-webapp:config
-```
+   ```cmd
+   mvn azure-webapp:config
+   ```
 
-Если вы получите запрос **Confirm (Y/N)** , нажмите клавишу **y** для подтверждения. Настройка завершена.
+   Если вы получите запрос **Confirm (Y/N)** , нажмите клавишу **y** для подтверждения. Настройка завершена.
 
-```cmd
-~@Azure:~/gs-spring-boot/complete$ mvn azure-webapp:config
-[INFO] Scanning for projects...
-[INFO]
-[INFO] -----------------< org.springframework:gs-spring-boot >-----------------
-[INFO] Building gs-spring-boot 0.1.0
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO]
-[INFO] --- azure-webapp-maven-plugin:1.8.0:config (default-cli) @ gs-spring-boot ---
-[WARNING] The plugin may not work if you change the os of an existing webapp.
-Define value for OS(Default: Linux):
-1. linux [*]
-2. windows
-3. docker
-Enter index to use:
-Define value for javaVersion(Default: Java 8):
-1. Java 11
-2. Java 8 [*]
-Enter index to use:
-Please confirm webapp properties
-AppName : gs-spring-boot-1559091271202
-ResourceGroup : gs-spring-boot-1559091271202-rg
-Region : westeurope
-PricingTier : Premium_P1V2
-OS : Linux
-RuntimeStack : JAVA 8-jre8
-Deploy to slot : false
-Confirm (Y/N)? : Y
-```
+   ```cmd
+   ~@Azure:~/gs-spring-boot/complete$ mvn azure-webapp:config
+   [INFO] Scanning for projects...
+   [INFO]
+   [INFO] -----------------< org.springframework:gs-spring-boot >-----------------
+   [INFO] Building gs-spring-boot 0.1.0
+   [INFO] --------------------------------[ jar ]---------------------------------
+   [INFO]
+   [INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+   [WARNING] The plugin may not work if you change the os of an existing webapp.
+   Define value for OS(Default: Linux):
+   1. linux [*]
+   2. windows
+   3. docker
+   Enter index to use:
+   Define value for javaVersion(Default: Java 8):
+   1. Java 11
+   2. Java 8 [*]
+   Enter index to use:
+   Please confirm webapp properties
+   AppName : gs-spring-boot-1559091271202
+   ResourceGroup : gs-spring-boot-1559091271202-rg
+   Region : westeurope
+   PricingTier : Premium_P1V2
+   OS : Linux
+   RuntimeStack : JAVA 8-jre8
+   Deploy to slot : false
+   Confirm (Y/N)? : Y
+   ```
 
 4. Добавьте раздел `<appSettings>` в раздел `<configuration>` в `<azure-webapp-maven-plugin>` для прослушивания порта *80*.
 
-    ```xml
+   ```xml
    <plugin>
        <groupId>com.microsoft.azure</groupId>
        <artifactId>azure-webapp-maven-plugin</artifactId>
@@ -166,7 +166,7 @@ Confirm (Y/N)? : Y
           <appSettings>
              <property>
                    <name>JAVA_OPTS</name>
-                   <value>-Dserver.port=80</value>
+                   <value>-D server.port=80</value>
              </property>
           </appSettings>
           <!-- End of App Settings  -->
@@ -198,7 +198,7 @@ Confirm (Y/N)? : Y
    mvn azure-webapp:deploy
    ```
 
-Maven развернет веб-приложение в Azure. Если веб-приложение или план службы приложений отсутствуют, они будут созданы.
+Maven развернет веб-приложение в Azure. Если веб-приложение или план службы приложений отсутствуют, они будут созданы. Отображение веб-приложения по URL-адресу, указанному в выходных данных, может занять несколько минут. В веб-браузере перейдите по URL-адресу.  Должно отобразиться следующее сообщение: Greetings from Spring Boot!
 
 После развертывания веб-приложения вы сможете управлять им с помощью [портал Azure].
 
@@ -227,7 +227,7 @@ Maven развернет веб-приложение в Azure. Если веб-�
 > [!div class="nextstepaction"]
 > [Spring в Azure](/azure/java/spring-framework)
 
-### <a name="additional-resources"></a>Дополнительные ресурсы
+### <a name="additional-esources"></a>Дополнительные ресурсы
 
 Дополнительные сведения о различных технологиях, рассматриваемых в данной статье, см. в следующих статьях.
 

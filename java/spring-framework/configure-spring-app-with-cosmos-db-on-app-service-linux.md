@@ -7,18 +7,16 @@ ms.author: brendm
 ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.devlang: java
-ms.service: app-service, cosmos-db
+ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: e7360067deaa9d038440978892f093dfb28db499
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 7fcd23ad45a591614516fec97e312c71773ce657
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691158"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118046"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
-
-## <a name="overview"></a>Обзор
 
 В этой статье описан процесс сборки, настройки, развертывания, устранения неполадок и масштабирования веб-приложений Java в Службе приложений Azure в Linux.
 
@@ -38,6 +36,7 @@ ms.locfileid: "68691158"
 - [Maven 3](http://maven.apache.org/)
 
 ## <a name="clone-the-sample-java-web-app-repository"></a>Клонирование примера репозитория для веб-приложения Java
+
 В этом упражнении вы будете использовать приложение Spring Todo, которое представляет собой приложение Java, созданное с помощью [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data для Cosmos DB](https://docs.microsoft.com/azure/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db) и [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-introduction).
 1. Клонируйте приложение Spring Todo и скопируйте содержимое папки **.prep** для инициализации проекта:
 
@@ -58,8 +57,11 @@ ms.locfileid: "68691158"
 
    ```bash
    cd initial\spring-todo-app
-   ``` 
+   ```
+
 ## <a name="create-an-azure-cosmos-db-from-azure-cli"></a>Создание Azure Cosmos DB с помощью Azure CLI
+
+Следующая процедура создает базу данных Azure Cosmos с помощью CLI.
 
 1. Войдите в Azure CLI, а затем задайте идентификатор подписки.
 
@@ -68,6 +70,7 @@ ms.locfileid: "68691158"
     ```
 
 2. При необходимости задайте идентификатор подписки.
+
     ```bash
     az account set -s <your-subscription-id>
     ```
@@ -88,13 +91,15 @@ ms.locfileid: "68691158"
         -n <your-azure-COSMOS-DB-name-in-lower-case-letters>
      ```
 
-4. Получите ключи Azure Cosmos DB и запишите значение `primaryMasterKey` для дальнейшего использования.
+5. Получите ключи Azure Cosmos DB и запишите значение `primaryMasterKey` для дальнейшего использования.
 
     ```bash
-    az cosmosdb list-keys -g <your-azure-group-name> -n <your-azure-COSMOSDB-name>
+    az cosmosdb keys list -g <your-azure-group-name> -n <your-azure-COSMOSDB-name>
     ```
 
 ## <a name="build-and-run-the-app-locally"></a>Создание и запуск приложения локально
+
+Следующая процедура запускает приложение на компьютере разработчика.
 
 1. В предпочитаемой консоли настройте переменные среды, показанные в следующих разделах кода, используя сведения о подключении Azure и Cosmos DB, собранные ранее в этой статье. Необходимо указать уникальное имя для **WEBAPP_NAME** и значение для переменных **REGION**.
 
@@ -139,6 +144,8 @@ set REGION=<put-your-REGION-here>
  ![Приложение Spring, запущенное локально][SCDB01]
 
 ## <a name="deploy-to-app-service-linux"></a>Развертывание в Службу приложений (Linux)
+
+Следующая процедура развертывает приложение в Linux в Azure.
 
 1. Откройте файл pom.xml, скопированный ранее в каталог **initial/spring-todo-app** репозитория. Убедитесь, что [модуль Maven для Службы приложений Azure](https://github.com/Microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md) включен, как показано в файле pom.xml ниже. Если не задана версия **1.6.0**, обновите значение.
 
@@ -231,6 +238,8 @@ bash-3.2$ mvn azure-webapp:deploy
 
 ## <a name="troubleshoot-spring-todo-app-on-azure-by-viewing-logs"></a>Устранение неполадок приложения Spring Todo в Azure путем просмотра журналов
 
+Следующая процедура открывает файлы журналов в Azure.
+
 1. Настройте журналы для развернутого веб-приложения Java в Службе приложений Azure в Linux:
 
     ```bash
@@ -282,6 +291,8 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
 
 
 ## <a name="scale-out-the-spring-todo-app"></a>Масштабирование приложения Spring Todo
+
+Используйте следующую процедуру для масштабирования приложения.
 
 1. Выполните масштабирование веб-приложения Java с помощью Azure CLI:
 

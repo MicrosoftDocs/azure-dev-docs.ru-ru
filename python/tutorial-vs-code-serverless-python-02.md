@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b87ca4bdefafbfa3e23c9538d6c77357dc9ba99b
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 4c4fab3227194884e1b9a77439efbe87099a6812
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278731"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118090"
 ---
 # <a name="tutorial-create-a-python-function-for-azure-functions"></a>Руководство по Создание функции на Python в решении "Функции Azure"
 
@@ -36,6 +36,9 @@ ms.locfileid: "72278731"
     | Provide a function name (Укажите имя функции) | HttpExample | Имя применяется к вложенной папке, которая содержит код функции и данные конфигурации, а также определяет имя конечной точки HTTP. Укажите имя "HttpExample" вместо предложенного по умолчанию "HTTPTrigger", чтобы отличать функцию от триггера. |
     | Уровень авторизации | **Анонимный** | Анонимная авторизация делает функцию общедоступной для всех. |
     | Select how you would like to open your project (Выберите, как вы хотели бы открыть свой проект) | **Открыть в текущем окне** | Открывает проект в текущем окне Visual Studio Code. |
+
+    > [!NOTE]
+    > Если у вас установлены версии Python 3.6 и 3.7, Visual Studio Code по умолчанию будет использовать Python 3.6 для проекта Функций Azure. Чтобы использовать Python 3.7, сначала создайте и активируйте среду Python 3.7, а затем используйте команду `func init` в терминале. После этого перезапустите Visual Studio Code из этой папки с помощью команды `code .`.
 
 1. Через некоторое время появится сообщение о том, что был создан новый проект. В **обозревателе** есть вложенная папка, созданная для функции, а Visual Studio Code открывает файл *\_\_init\_\_.py* со стандартным кодом функции:
 

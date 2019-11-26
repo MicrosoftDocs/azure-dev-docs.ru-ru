@@ -4,26 +4,20 @@ description: Как настроить приложение, созданное 
 services: event-hubs
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: event-hubs
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 074c7bb28907b3c71c981f261ae69d5477c21028
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5d1f1d40eba0f4b4a6aa2718f09124b765a06a82
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282625"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118329"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
-
-## <a name="overview"></a>Обзор
 
 В статье показано, как настроить приложение Spring Cloud Stream Binder на основе Java, созданное с помощью Spring Boot Initializr для использования [Apache Kafka] в Центрах событий Azure.
 
@@ -46,18 +40,21 @@ ms.locfileid: "68282625"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
-1. Выберите **+Создать ресурс**, **Интернет вещей** и **Центры событий**.
+1. Щелкните **+Создать ресурс**, **Интернет вещей** и выполните поиск по запросу *Центры событий**.
+
+1. Нажмите кнопку **Создать**.
 
    ![Создание пространства имен концентратора событий Azure][IMG01]
 
 1. На странице **Создание пространства имен** введите такую информацию:
 
    * Уникальное **имя**, которое станет частью URI для пространства имен концентратора событий. Например, если вы зададите **wingtiptoys** в качестве **имени**, URI примет вид *wingtiptoys.servicebus.windows.net*.
-   * Выберите **ценовую категорию** для пространства имен концентратора событий.
+   * Ценовая категория.
    * Отметьте **Включить Kafka** для пространства имен.
    * Выберите **подписку** для пространства имен.
    * Укажите, следует ли создать новую **группу ресурсов** для пространства имен или использовать существующую.
    * Укажите **расположение** для пространства имен Центров событий.
+   * Можно также указать **единицы пропускной способности** для пространства имен.
 
    ![Создание пространства имен для концентратора событий Azure][IMG02]
 
@@ -65,23 +62,17 @@ ms.locfileid: "68282625"
 
 ### <a name="create-an-azure-event-hub-in-your-namespace"></a>Создание концентратора событий Azure в пространстве имен
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/>.
+Развернув пространство имен, можно создать в нем концентратор событий.
 
-1. Щелкните **Все ресурсы** и выберите созданное пространство имен.
+1. Перейдите к пространству имен, созданному на предыдущем шаге.
 
-   ![Выбор пространства имен концентратора событий Azure][IMG03]
+1. Щелкните **+Концентратор событий** в строке меню сверху.
 
-1. Щелкните **Центры событий**, а затем **+Концентратор событий**.
+1. Присвойте имя концентратору событий.
 
-   ![Добавление нового концентратора событий][IMG04]
+1. Нажмите кнопку **Создать**.
 
-1. В области **Создание концентратора событий** введите уникальное **имя** для концентратора событий и щелкните **Создать**.
-
-   ![Создание концентратора событий Azure][IMG05]
-
-1. Созданный концентратор событий появится в списке на странице **Центры событий**.
-
-   ![Создание концентратора событий Azure][IMG06]
+   ![Создание концентратора событий][IMG05]
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
 
@@ -104,8 +95,6 @@ ms.locfileid: "68282625"
 1. Указав эти параметры, щелкните **Generate Project** (Создать проект).
 
 1. При появлении запроса скачайте проект на локальный компьютер.
-
-   ![Скачивание проекта Spring][SI02]
 
 1. После извлечения файлов в локальной системе простое приложение Spring Boot можно будет редактировать.
 
@@ -229,7 +218,7 @@ ms.locfileid: "68282625"
    spring.cloud.azure.credential-file-path=my.azureauth
    spring.cloud.azure.resource-group=wingtiptoysresources
    spring.cloud.azure.region=West US
-   spring.cloud.azure.eventhub.namespace=wingtiptoysnamespace
+   spring.cloud.azure.eventhub.namespace=wingtiptoys
 
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default

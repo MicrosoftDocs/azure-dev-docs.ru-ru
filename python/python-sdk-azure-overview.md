@@ -8,12 +8,12 @@ ms.service: multiple
 ms.date: 10/30/2019
 ms.topic: conceptual
 ms.devlang: python
-ms.openlocfilehash: 28787b4ca08b593239274bfce62a02895d7f6b6a
-ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+ms.openlocfilehash: dda3044bcf80ff45d4a39c9186c6ad44a153218e
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568207"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118012"
 ---
 # <a name="azure-sdk-for-python"></a>SDK Azure для Python
 
@@ -21,7 +21,7 @@ ms.locfileid: "73568207"
 
 Пакет SDK устанавливается путем установки отдельных библиотек компонентов с помощью `pip install <library>`. Список библиотек см. в [Azure SDK for Python package index](https://github.com/Azure/azure-sdk-for-python/blob/master/packages.md) (Azure SDK для индекса пакета Python)
 
-Дополнительные сведения об установке библиотек и их импорте в проекты см. в статье [Установка пакета SDK](python-sdk-azure-install.md). Затем см. [Начало работы с разработкой в облаке с помощью библиотек Azure для Python](python-sdk-azure-get-started.yml), чтобы настроить аутентификацию и запустить пример кода в своей подписке Azure.
+См. сведения об установке библиотек и их импорте в проекты в руководстве по [установке пакета SDK](python-sdk-azure-install.md). Затем см. [Начало работы с разработкой в облаке с помощью библиотек Azure для Python](python-sdk-azure-get-started.yml), чтобы настроить аутентификацию и запустить пример кода в своей подписке Azure.
 
 > [!TIP]
 > Сведения об изменениях в пакете SDK см. в [заметках о выпуске SDK](https://azure.github.io/azure-sdk/).
