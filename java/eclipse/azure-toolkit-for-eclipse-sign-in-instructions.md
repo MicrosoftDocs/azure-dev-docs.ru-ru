@@ -1,25 +1,17 @@
 ---
 title: Инструкции по входу для набора средств Azure в Eclipse
 description: Узнайте, как войти в Microsoft Azure с помощью набора средств Azure для Eclipse.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 239907aa110c5d23d0ffd3a9a0115e962fb3184d
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: fef2dde02547004e6abd28d2a9355bfd59d4dbc9
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68430598"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811815"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Инструкции по входу для набора средств Azure в Eclipse
 

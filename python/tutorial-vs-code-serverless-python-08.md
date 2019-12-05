@@ -1,20 +1,15 @@
 ---
 title: Руководство по Очистка ресурсов Azure. Функции Azure на Python
 description: 'Шаг руководства 8: очистка ресурсов Azure, позволяющая избежать постоянных расходов.'
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8c3110b14d70c787f81a18aa5d0b5bb3bde41ec1
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: ddc2ab44d3d8865c89cb6cdf8368461b6e4f666a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278441"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465945"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>Руководство по Очистка ресурсов Azure для Функций Azure
 

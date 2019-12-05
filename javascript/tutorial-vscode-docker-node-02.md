@@ -1,19 +1,14 @@
 ---
 title: Использование реестра контейнера в Visual Studio Code
 description: Руководство, часть 2. Использование реестра контейнеров
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 790267333cadc1208b6a750e487f0e459e87185d
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 7d51e8011824ec19e9530f9bc94bcb2ce07f2851
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686249"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466633"
 ---
 # <a name="use-a-container-registry"></a>Использование Реестра контейнеров
 
@@ -21,7 +16,7 @@ ms.locfileid: "71686249"
 
 На этом этапе вы настроите подходящий реестр контейнеров для образа приложения. Службы размещения с поддержкой контейнеров, например Служба приложений Azure, извлекают образы из реестра.
 
-В рамках этого руководства мы используем службу [Реестр контейнеров Azure](https://azure.microsoft.com/en-us/services/container-registry/) (ACR), которая предоставляет частный, защищенный и размещенный реестр для образов. Но представленные здесь процессы подходят и для других реестров, например [Docker Hub](https://hub.docker.com/).
+В рамках этого руководства мы используем службу [Реестр контейнеров Azure](https://azure.microsoft.com/services/container-registry/) (ACR), которая предоставляет частный, защищенный и размещенный реестр для образов. Но представленные здесь процессы подходят и для других реестров, например [Docker Hub](https://hub.docker.com/).
 
 ## <a name="create-an-azure-container-registry"></a>Создание реестра контейнеров Azure
 

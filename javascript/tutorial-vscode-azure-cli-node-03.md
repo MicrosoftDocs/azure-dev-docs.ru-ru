@@ -1,19 +1,14 @@
 ---
 title: Создание Службы приложений Azure для размещения приложений с помощью Azure CLI
 description: Руководство, часть 3. Создание Службы приложений
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.author: kraigb
-ms.openlocfilehash: f8349d352d275abcc8126bb9dd1794d408045b29
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: afac5aa2f610384b537c1f235b99cd29e6ff86d0
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686137"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466768"
 ---
 # <a name="create-the-app-service"></a>Создание службы приложений
 

@@ -3,23 +3,17 @@ title: Использование начального приложения Spri
 description: Сведения о настройке приложения Spring Boot Initializer с помощью API службы хранилища Azure.
 services: storage
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 5524b131d1019128ef9deb8a2ebf8f68f7e7b629
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5f61f3eb721c475b0941b2215a0a180ef00ea3d3
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283085"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812108"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Использование начального приложения Spring Boot с API службы хранилища Azure
 
@@ -32,7 +26,7 @@ ms.locfileid: "68283085"
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
 * Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure](https://azure.microsoft.com/pricing/free-trial/).
-* [Интерфейс командной строки Azure (CLI)](http://docs.microsoft.com/cli/azure/overview).
+* [Интерфейс командной строки Azure (CLI)](/cli/azure/overview).
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 и выше.
 

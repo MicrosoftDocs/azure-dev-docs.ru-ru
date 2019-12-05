@@ -1,24 +1,20 @@
 ---
 title: Azure Monitor
 description: Проверка и настройка отчетов о метриках из Azure Monitor.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.author: sttramer
-ms.openlocfilehash: ef46e316979c5a86e94c840ec52206400da7500c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 6b92cd130988773107a51ce4055ea196801fb4a8
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285475"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466289"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
 Этот пример кода получает метрики ресурсов Azure (виртуальных машин и т. д.).
 
-Полный список доступных ключевых слов для фильтров см. [здесь](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx).
+Полный список доступных ключевых слов для фильтров см. [здесь](https://msdn.microsoft.com/library/azure/mt743622.aspx).
 
 ```python
 import datetime

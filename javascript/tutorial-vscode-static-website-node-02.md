@@ -1,19 +1,15 @@
 ---
 title: Создание статического приложения Node.js с помощью Visual Studio Code
 description: Руководство, часть 2. Создание примера приложения
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: b57789ca26851c27a3a68c9d095f327ea64164cf
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: bc930b7c6a3454ca335fec5a955113a45fa2f0f2
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587237"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466551"
 ---
 # <a name="create-the-app"></a>Создание приложения
 

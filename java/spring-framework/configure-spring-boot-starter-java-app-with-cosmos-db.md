@@ -4,20 +4,18 @@ description: Сведения о настройке приложения, соз
 services: cosmos-db
 documentationcenter: java
 author: KarlErickson
-manager: barbkess
 ms.author: karler
 ms.date: 10/02/2019
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 192550b74a35eb24620c58e86e6a55e86e5e90ab
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: 33e590106a5686eafa89924e22aeef05aa4f6df7
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118159"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812087"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 

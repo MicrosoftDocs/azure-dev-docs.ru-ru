@@ -1,19 +1,15 @@
 ---
 title: Развертывание файлов статического приложения Node.js в службе хранилища Azure из Visual Studio Code
 description: Руководство, часть 4. Развертывание файлов в службе хранилища Azure
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 671e600471402dbd6ca71d385a238caeee889497
-ms.sourcegitcommit: 66cc8d1839dbd7cc01b33030f188e15bf5f24dae
+ms.openlocfilehash: 2683de33fd8ddc7148991d85e3d67f1eb93a5f44
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916678"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466656"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Развертывание веб-сайта в Службе хранилища Azure
 

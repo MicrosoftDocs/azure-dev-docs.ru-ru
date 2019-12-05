@@ -5,21 +5,18 @@ services: active-directory-b2c
 documentationcenter: java
 author: panli
 manager: kevinzha
-editor: panli
-ms.assetid: ''
 ms.author: panli
 ms.date: 02/28/2019
-ms.devlang: java
 ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: c0c7ec20c4e4a9472b8653fd3940740238a7420c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7996e4f2947e08fc7a802a741b958988e58829e8
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283475"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812160"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 

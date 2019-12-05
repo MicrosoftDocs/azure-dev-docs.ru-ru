@@ -1,25 +1,18 @@
 ---
 title: Установка набора средств Azure для IntelliJ
 description: Узнайте, как установить набор средств Azure для подключаемого модуля IntelliJ, чтобы создавать и развертывать облачные приложения в Azure.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: ca606ca6b45c679f363983964640c802c9d4cf9d
-ms.sourcegitcommit: 2147617c746bc9be7b6ee66e0250bd16cf9febab
+ms.openlocfilehash: 5b5cb3663b2dbb6c699635d1d58b077d851b2657
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68280175"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810921"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Установка набора средств Azure для IntelliJ
 
@@ -51,7 +44,7 @@ Azure Toolkit for IntelliJ требует наличия следующих пр
 > 
 > If you are using the Azure Toolkit for IntelliJ on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
-> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
+> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](https://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is only required on Windows.

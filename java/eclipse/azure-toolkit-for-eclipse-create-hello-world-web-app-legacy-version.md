@@ -3,23 +3,17 @@ title: Создание веб-приложения Hello World для Azure с 
 description: В этом руководстве показано, как с помощью набора средств Azure для Eclipse версии 3.0.6 (или более ранней) создать веб-приложение Hello World для Azure.
 services: app-service
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 11/13/2018
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 1284988d452832d8f8ed7faf692f56dc667c9118
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.openlocfilehash: 920cefeabaccf53021c8e8e898a5b91af66c50e2
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181015"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811101"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-eclipse"></a>Создание веб-приложения Hello World для Azure с помощью набора средств для Eclipse предыдущих версий
 

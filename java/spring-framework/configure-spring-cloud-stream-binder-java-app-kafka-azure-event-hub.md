@@ -3,19 +3,15 @@ title: Использование начального приложения Spri
 description: Как настроить приложение, созданное с помощью Spring Boot Initializer, для использования Apache Kafka в Центрах событий Azure.
 services: event-hubs
 documentationcenter: java
-author: bmitchell287
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: event-hubs
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 5d1f1d40eba0f4b4a6aa2718f09124b765a06a82
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: 6e6bee70c07538d06859254543886685308a0302
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118329"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812057"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
 

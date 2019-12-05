@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e528dc9d4c7bae6342af5927e4d70929aaad1048
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: 23b80554d19f0ce48d12b1bb0721b62579ef08cf
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68278805"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811156"
 ---
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -24,7 +24,7 @@ ms.locfileid: "68278805"
 > 
 > If you are using the Azure Toolkit for IntelliJ on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
-> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
+> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](https://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is only required on Windows.

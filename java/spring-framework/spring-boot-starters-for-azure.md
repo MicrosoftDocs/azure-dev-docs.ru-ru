@@ -1,25 +1,17 @@
 ---
 title: Начальные приложения Spring Boot для Azure
 description: В этой статье описаны разные начальные приложения Spring Boot Starter, доступные для Azure.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 2e9d2ecd22d6f276629cb8b0e519959837346693
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 624aaff3022bd40068ce0e0032ab676bd85b200b
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285315"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811841"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Spring Boot Starter для Azure
 

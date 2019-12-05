@@ -1,19 +1,14 @@
 ---
 title: Локальное выполнение приложения Функций Azure в Visual Studio Code
 description: Руководство, часть 3. Локальный запуск приложения для тестирования.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 0a2b74d754e8a55afb88f6ef628c5da466e7b2df
-ms.sourcegitcommit: 38fc0daead4f6ef0cf16d9f4762ad24f4dc4c3e9
+ms.openlocfilehash: 2a7cb5e5c433c90d74cd3b7771ce90529f617fcb
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "71686033"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466570"
 ---
 # <a name="test-the-function-locally"></a>Локальное тестирование функции
 

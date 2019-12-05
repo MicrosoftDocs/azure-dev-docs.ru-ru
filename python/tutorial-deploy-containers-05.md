@@ -1,20 +1,15 @@
 ---
 title: Руководство по Очистка ресурсов Azure
 description: Шаг руководства 5. Очистка ресурсов Azure, позволяющая избежать постоянных расходов
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0a3e04759573769d1ed00e59a294caddfc4ef0cc
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 0c6688dcfb1d3c8adbf4ba2e0eb2603ce85de43c
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278712"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466058"
 ---
 # <a name="tutorial-clean-up-azure-resources"></a>Руководство по Очистка ресурсов Azure
 

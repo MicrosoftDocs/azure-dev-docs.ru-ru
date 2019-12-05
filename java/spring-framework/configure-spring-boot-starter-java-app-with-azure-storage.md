@@ -3,19 +3,16 @@ title: Как использовать Spring Boot Starter со службой �
 description: Сведения о настройке приложения Spring Initializr с помощью начального приложения службы хранилища Azure.
 services: storage
 documentationcenter: java
-author: bmitchell287
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: storage
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: fe6f2869d775961cf69e7f109fe788d3dfad8b28
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: 64e7c948a7e70291e0a4f89461d9c00f72e61482
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118052"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812079"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Как использовать Spring Boot Starter со службой хранилища Azure
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8633b360752010291089a8dad4b13797ffb032e7
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: 321f5cff77febbaa82e6020545e9e191053f6e30
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68700801"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811073"
 ---
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -25,7 +25,7 @@ ms.locfileid: "68700801"
 > 
 > If you are using the Azure Toolkit for Eclipse on Windows, the toolkit requires installing the Azure SDK 2.9.6 or later in order to use the Azure emulator. You have two options for installing the Azure SDK:
 > 
-> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](http://go.microsoft.com/fwlink/?LinkID=252838).
+> * You can download and install the Azure SDK by using the [Web Platform Installer (WebPI)](https://go.microsoft.com/fwlink/?LinkID=252838).
 > * If you do not have the Azure SDK installed when you create your first Azure deployment project, you will be prompted to automatically download install the requisite version of the Azure SDK.
 > 
 > Note that the Azure SDK is required on Windows only.

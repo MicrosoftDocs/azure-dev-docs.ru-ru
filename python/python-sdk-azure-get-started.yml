@@ -3,9 +3,6 @@ title: Начало работы с разработкой в облаке с п
 metadata:
   title: Начало работы с библиотеками Azure для Python
   description: Сведения о создании, подключении и использовании облачных ресурсов Azure в приложениях Python.
-  author: kraigb
-  ms.author: kraigb
-  manager: barbkess
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
@@ -13,12 +10,12 @@ metadata:
   displayType: two-column
   interactive: azurecli
   ms.date: 10/18/2019
-  ms.openlocfilehash: 32cfda14e307d0293c9ffec8b24685375cc929d0
-  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+  ms.openlocfilehash: 9719806929d1d9ef8fd7988d1fc9277aedcf8fe1
+  ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73568200"
+  ms.lasthandoff: 11/25/2019
+  ms.locfileid: "74467065"
 items:
 - durationInMinutes: 1
   content: "В этом руководстве представлены сведения об использовании различных библиотек Azure SDK для Python.  \n"

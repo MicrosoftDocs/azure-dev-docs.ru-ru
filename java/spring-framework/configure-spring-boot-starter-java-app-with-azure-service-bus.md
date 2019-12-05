@@ -3,17 +3,15 @@ title: Использование Spring Boot Starter для служебных 
 description: В этой статье показано, как использовать приложение Spring JMS Starter для отправки сообщений в служебную шину Azure и получения сообщений из нее.
 author: seanli1988
 manager: kyliel
-ms.author: Sean.Li
+ms.author: seal
 ms.date: 08/21/2019
-ms.devlang: java
-ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: 58d8dd00deeb90b1a1b8935bcbbab471255328d4
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.openlocfilehash: b64095bc2971bf9d9a7308bebdb91617538796c4
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181988"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812124"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Использование Spring Boot Starter для служебных шин Azure JMS
 
@@ -348,7 +346,7 @@ Spring Boot Starter для служебной шины Azure JMS обеспеч�
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если они больше не нужны, используйте [портал Azure](http://ms.portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
+Если они больше не нужны, используйте [портал Azure](https://portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
 
 ## <a name="next-steps"></a>Дополнительная информация
 

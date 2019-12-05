@@ -1,18 +1,14 @@
 ---
 title: Вывод списка образов
 description: Просмотр всех доступных образов для создания виртуальных машин.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.author: sttramer
-ms.openlocfilehash: 738f47b973492c3458f0d8ced0f4fdcfa57d5399
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5ce7525ffe87af544c6b8bb4b74dc9a3a0c035cb
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285735"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467032"
 ---
 # <a name="list-images"></a>Вывод списка образов
 

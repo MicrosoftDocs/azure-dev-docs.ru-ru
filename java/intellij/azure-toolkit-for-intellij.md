@@ -1,25 +1,18 @@
 ---
 title: Набор средств Azure для IntelliJ
 description: Узнайте о наборе средств Azure для IntelliJ.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: 115a095d-1b70-41d6-adb4-78f24b2a4451
-ms.author: brendm
 ms.date: 12/12/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 57f70aa9bdf170cb80cca23f23ddfeba1b2f038d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: f4cc6576a8211d1f7317b53e4dd5bb83ab9422d0
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281435"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812471"
 ---
 # <a name="azure-toolkit-for-intellij"></a>Набор средств Azure для IntelliJ
 

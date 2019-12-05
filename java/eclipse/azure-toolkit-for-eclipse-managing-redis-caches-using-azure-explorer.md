@@ -1,25 +1,17 @@
 ---
 title: Управление кэшами Redis с помощью Azure Explorer для Eclipse
 description: Узнайте, как управлять кэшами Redis для Azure с помощью Azure Explorer для Eclipse.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 338ca0a132220e618cdb9eec78ded26cee6a00f2
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: e1c7ac18067cd11a0d878da5d3e464ddd2ad6079
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68430165"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811656"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Управление кэшами Redis с помощью Azure Explorer для Eclipse
 

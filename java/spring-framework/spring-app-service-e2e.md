@@ -2,18 +2,16 @@
 title: Развертывание приложения Spring/Tomcat в Службе приложений с использованием Базы данных Azure для MySQL
 description: Полное руководство по использованию Службы приложений Java с MySQL
 author: KarlErickson
-manager: barbkess
 ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
-ms.devlang: java
 ms.topic: article
-ms.openlocfilehash: 2f5fc593733ea1f90d87ef9fbf98d6656410fa66
-ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
+ms.openlocfilehash: aa26952b320392beb553f327920fe5bd905a0b85
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74040541"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811824"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 

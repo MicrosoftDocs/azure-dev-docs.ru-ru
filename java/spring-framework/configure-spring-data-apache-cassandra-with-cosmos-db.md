@@ -3,22 +3,16 @@ title: Как использовать API Apache Cassandra Spring Data с Azure
 description: Узнайте, как использовать API Apache Cassandra Spring Data с Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 93dff9e1f12a17660b367060dd9d404127285df2
-ms.sourcegitcommit: 8be617e100ae3d3e90d56c672b1c7c110b7a588f
+ms.openlocfilehash: dee7a5b21c1b0273f82ead32a3f18a609a36730c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74160693"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812032"
 ---
 # <a name="how-to-use-spring-data-apache-cassandra-api-with-azure-cosmos-db"></a>Как использовать API Apache Cassandra Spring Data с Azure Cosmos DB
 

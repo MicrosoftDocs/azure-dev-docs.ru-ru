@@ -5,21 +5,17 @@ services: devops
 documentationcenter: MicroProfile
 author: ruyakubu
 manager: brunoborges
-editor: ruyakubu
-ms.assetid: ''
 ms.author: ruyakubu
 ms.date: 07/31/2019
-ms.devlang: Java
-ms.service: Azure DevOps
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: f75a4f32c56b949f7ea4f5e87863a83cbdf4b5d8
-ms.sourcegitcommit: bf64ca31b2d4aea3f5c9b36d7c5ed7bde266584a
+ms.openlocfilehash: cdd704626b51105f93c19378511f4a267cb56649
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68755914"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812239"
 ---
 # <a name="cicd-for-microprofile-apps-using-azure-pipelines"></a>Реализация CI/CD для приложений MicroProfile с помощью Azure Pipelines
 

@@ -1,19 +1,14 @@
 ---
 title: Развертывание приложений Node.js в Службе приложений Azure с помощью Azure CLI
 description: Руководство, часть 1. Общие сведения и предварительные требования.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.author: kraigb
-ms.openlocfilehash: 2c566e43bce15672d4ae73310f96c91f4a6f137a
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: b249084e6c22491bd05dbb3df2544f8570dadad0
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686176"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466789"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 
@@ -32,7 +27,7 @@ ms.locfileid: "71686176"
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 
-Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-node-git&mktingSource=vscode-tutorial-node-git) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
+Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-node-git&mktingSource=vscode-tutorial-node-git) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
 
 ### <a name="sign-in-to-the-azure-cli"></a>Вход в Azure CLI
 

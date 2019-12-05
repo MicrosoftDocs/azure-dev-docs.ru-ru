@@ -2,24 +2,18 @@
 title: Как использовать JPA Spring Data с Базой данных Azure для MySQL
 description: Узнайте, как настроить JPA Spring Data и использовать этот API с Базой данных Azure для MySQL.
 documentationcenter: java
-author: bmitchell287
-manager: douge
-ms.author: brendm
-ms.date: 12/19/2018
-ms.devlang: java
+ms.date: 11/27/2019
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 842dc7785f8c7c84d6e9ba464c96d65db75dc9fd
-ms.sourcegitcommit: 2610f3992cb6d21a3657032074acb981d130fdad
+ms.openlocfilehash: 83883ffd06353854a3c69c9abdc946a035dda6b1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960773"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811961"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Как использовать JPA Spring Data с Базой данных Azure для MySQL
-
-## <a name="overview"></a>Обзор
 
 В этой статье объясняется, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
@@ -50,27 +44,24 @@ ms.locfileid: "71960773"
 
 1. Введите следующие сведения:
 
-   - **Имя сервера**. Для сервера Базы данных Azure для MySQL выберите уникальное имя. Оно будет использоваться для создания полного доменного имени, например *wingtiptoysmysql.mysql.database.azure.com*.
    - **Подписка**: Укажите подписку Azure, которую нужно использовать.
    - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
+   - **Имя сервера**. Для сервера MySQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoysmysql.mysql.database.azure.com*.
    - **Выберите источник**. В рамках данного руководства выберите `Blank`, чтобы создать базу данных.
    - **Учетные данные администратора сервера для входа**. Укажите имя администратора базы данных.
    - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
    - **Расположение.** Укажите ближайший географический регион для базы данных.
    - **Версия.** Укажите самую последнюю версию базы данных.
-   - **Ценовая категория**. В рамках этого руководства укажите самую низкую ценовую категорию.
 
    ![Создание свойств базы данных MySQL][MYSQL02]
 
-1. После ввода всех этих данных нажмите кнопку **Создать**.
+1. После ввода всех этих данных нажмите кнопку **Отзыв и создание**.
 
 ### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных MySQL.
-
-   ![Выбор базы данных MySQL][MYSQL03]
 
 1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**.
 
@@ -81,8 +72,6 @@ ms.locfileid: "71960773"
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Щелкните **Все ресурсы**, а затем выберите только что созданный ресурс Базы данных Azure для MySQL.
-
-   ![Выбор базы данных MySQL][MYSQL03]
 
 1. Нажмите кнопку **Строки подключения** и скопируйте значение в текстовое поле **JDBC**.
 
@@ -257,6 +246,5 @@ ms.locfileid: "71960773"
 
 [MYSQL01]: media/configure-spring-data-jpa-with-azure-mysql/create-mysql-01.png
 [MYSQL02]: media/configure-spring-data-jpa-with-azure-mysql/create-mysql-02.png
-[MYSQL03]: media/configure-spring-data-jpa-with-azure-mysql/create-mysql-03.png
 [MYSQL04]: media/configure-spring-data-jpa-with-azure-mysql/create-mysql-04.png
 [MYSQL05]: media/configure-spring-data-jpa-with-azure-mysql/create-mysql-05.png

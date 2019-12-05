@@ -1,18 +1,14 @@
 ---
 title: Создание рабочего процесса приложения логики
 description: Создание рабочего процесса приложения логики
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.author: sttramer
-ms.openlocfilehash: 865da8128810904838eb4e517a2e38fe3eec3a82
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: e561d57427b4a8e52f1d13bf3a0ff36fc0ed047c
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285465"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466322"
 ---
 # <a name="create-a-logic-app-workflow"></a>Создание рабочего процесса приложения логики
 

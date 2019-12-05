@@ -1,19 +1,14 @@
 ---
 title: Развертывание приложения Функций Azure в Visual Studio Code
 description: Руководство, часть 4. Развертывание приложения Функций в облаке.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 53d0dd11567084d42de71a0f737cf8b9f5fc5249
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 690477392fffda4cd94d7271b061c195ccceb42b
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685932"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467099"
 ---
 # <a name="deploy-the-functions-app"></a>Развертывание приложения в решении "Функции"
 
@@ -29,7 +24,7 @@ ms.locfileid: "71685932"
 
 1. По следующему запросу введите глобальное уникальное имя для приложения-функции и нажмите клавишу **ВВОД**. Допустимые символы для имени приложения-функции: "a–z", "0–9" и "-".
 
-1. По следующему запросу выберите [регион](https://azure.microsoft.com/en-us/regions/) Azure, который расположен рядом с вашим местонахождением.
+1. По следующему запросу выберите [регион](https://azure.microsoft.com/regions/) Azure, который расположен рядом с вашим местонахождением.
 
 1. Сведения о ходе выполнения отображаются на панели **Выходные данные** в VS Code в разделе **Функции Azure**:
 

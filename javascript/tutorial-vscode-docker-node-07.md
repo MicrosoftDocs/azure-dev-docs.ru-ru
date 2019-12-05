@@ -1,19 +1,14 @@
 ---
 title: Очистка ресурсов после развертывания контейнерного приложения Node.js с помощью Visual Studio Code
 description: Руководство, часть 6. Очистка ресурсов.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 53fbfc2c3dc04ed30e940a680eb4c65de6591504
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 7c235cff8b5685880fc63d7e50587980502c7e8d
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686011"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467123"
 ---
 # <a name="clean-up-resources"></a>Очистка ресурсов
 

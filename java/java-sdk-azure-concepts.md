@@ -3,20 +3,17 @@ title: Разработка с использованием библиотеки
 description: Шаблоны и способы использования библиотек управления Java для управления облачными ресурсами в Azure с помощью Java.
 keywords: Azure, Java, SDK, API, Maven, Gradle, authentication, active directory, service principal
 author: rloutlaw
-ms.author: brendm
-manager: douge
 ms.date: 04/16/2017
 ms.topic: article
-ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
 ms.custom: seo-java-july2019, seo-java-september2019
-ms.openlocfilehash: dfa3681cd1e6ac193a48d7e60ce8507af49c4776
-ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
+ms.openlocfilehash: 2bf2630c5fef6c399e2642e1ae153630f48874a9
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71225278"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812421"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Шаблоны и рекомендации по разработке с помощью библиотек Azure для Java 
 

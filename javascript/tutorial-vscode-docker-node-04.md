@@ -1,25 +1,20 @@
 ---
 title: Развертывание образа контейнера для приложения Node.js в Visual Studio Code
 description: Руководство, часть 4. Развертывание образа в Службе приложений Azure
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 60eb5be0b3d4049c7955195f3bb6bc85dd2b2498
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: b43f93ba97950c84302db2e18f69b506e44dc84e
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686019"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466539"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Развертывание образа в Службе приложений Azure
 
 [Предыдущий шаг. Создание образа приложения](tutorial-vscode-docker-node-03.md)
 
-На этом этапе вы развернете в [Службе приложений Azure](https://azure.microsoft.com/en-us/services/app-service/) образ, который ранее отправили в реестр, непосредственно из Visual Studio Code.
+На этом этапе вы развернете в [Службе приложений Azure](https://azure.microsoft.com/services/app-service/) образ, который ранее отправили в реестр, непосредственно из Visual Studio Code.
 
 1. В обозревателе **DOCKER** разверните узлы вашего образа в разделе **Реестры**, щелкните правой кнопкой мыши `:latest` и выберите пункт **Deploy Image to Azure App Service** (Развернуть образ в Службе приложений Azure).
 

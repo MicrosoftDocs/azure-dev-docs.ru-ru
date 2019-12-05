@@ -4,22 +4,18 @@ description: Узнайте, как развернуть приложение Mi
 services: container-instances;container-retistry
 documentationcenter: java
 author: brunoborges
-manager: douge
-editor: brunoborges
-ms.assetid: ''
 ms.author: brborges
 ms.date: 11/21/2018
-ms.devlang: java
 ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 407fd201998342174ac874e8027ae8350cdb54e0
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 17630393b5c4a86e23c914dc38b0c6e1a6606ab1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284585"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812196"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Развертывание приложения MicroProfile в облаке с помощью Docker и Azure
 

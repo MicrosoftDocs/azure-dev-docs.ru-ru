@@ -6,16 +6,15 @@ documentationcenter: java
 author: dhaval24
 ms.author: dhdoshi
 ms.date: 11/29/2019
-ms.devlang: java
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 25a036e129d6a8853059d61da7ff8565ab0ddd72
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: 083abdf87d2298c99b9898db3b17e1c0e5e64bd8
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118256"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812149"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 

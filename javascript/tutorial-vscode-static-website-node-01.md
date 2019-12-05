@@ -1,19 +1,14 @@
 ---
 title: Развертывание статического веб-сайта Node.js в Azure из Visual Studio Code
 description: Руководство, часть 1. Общие сведения и предварительные требования.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 0e5a7e12d234b56899e3c814cb577002125ea052
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 8b19b32933c2405082e2d1e2aa46c7a06af1f9d1
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587134"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467088"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Развертывание статического веб-сайта в Azure из Visual Studio Code
 
@@ -33,7 +28,7 @@ ms.locfileid: "72587134"
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 
-Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-static-website&mktingSource=vscode-tutorial-static-website) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
+Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-static-website&mktingSource=vscode-tutorial-static-website) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
 
 ## <a name="sign-in-to-azure"></a>Вход в Azure
 

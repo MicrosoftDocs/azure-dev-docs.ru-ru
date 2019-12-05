@@ -2,27 +2,23 @@
 title: Параллельное создание виртуальных машин в разных регионах | Документация Майкрософт
 description: Пример кода для параллельного создания виртуальных машин в разных регионах Azure с помощью пакета Azure SDK для Java
 author: rloutlaw
-manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
-ms.author: brendm
 ms.reviewer: asirveda
-ms.openlocfilehash: 8aacf198657da96218ef48b4714c26c6199724fc
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 2d4cca2552e4a85ebc231531d7e55ffda6d1909f
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691791"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812284"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Создание виртуальных машин в нескольких регионах из приложений Java
 
 [В этом примере](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel) виртуальные машины создаются параллельно в разных регионах Azure с помощью [библиотек управления Azure для Java](https://github.com/Azure/azure-sdk-for-java).
 
 > [!IMPORTANT]
-> В этом примере в четырех регионах создается 48 виртуальных машин [размером STANDARD_DS3_V2](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes) под управлением LTS Ubuntu 16.04. Этот пример кода удаляет виртуальные машины перед завершением работы. Обязательно [проверьте квоты и ограничения службы](http://docs.microsoft.com/azure/azure-subscription-service-limits), прежде чем выполнять этот пример с определенным по умолчанию числом виртуальных машин.
+> В этом примере в четырех регионах создается 48 виртуальных машин [размером STANDARD_DS3_V2](/azure/virtual-machines/virtual-machines-windows-sizes) под управлением LTS Ubuntu 16.04. Этот пример кода удаляет виртуальные машины перед завершением работы. Обязательно [проверьте квоты и ограничения службы](/azure/azure-subscription-service-limits), прежде чем выполнять этот пример с определенным по умолчанию числом виртуальных машин.
 
 ## <a name="run-the-sample"></a>Запуск примера
 

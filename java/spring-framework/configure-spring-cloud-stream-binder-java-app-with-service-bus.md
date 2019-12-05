@@ -3,17 +3,15 @@ title: Использование Spring Cloud Azure Stream Binder для слу
 description: В этой статье показано, как использовать приложение Spring Cloud Azure Stream Binder для отправки сообщений в служебную шину Azure и получения сообщений из нее.
 author: seanli1988
 manager: kyliel
-ms.author: Sean.Li
+ms.author: seal
 ms.date: 08/21/2019
-ms.devlang: java
-ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: 48bb5ee53c88910528ad2ed7f06c626e0a431275
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 2d888d225a8bcf5c957da11e18ea86d09ec8e897
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892388"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812051"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Использование Spring Cloud Azure Stream Binder для служебной шины Azure
 
@@ -268,7 +266,7 @@ Azure предоставляет платформу асинхронного о�
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Если они больше не нужны, используйте [портал Azure](http://ms.portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
+Если они больше не нужны, используйте [портал Azure](https://portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
 
 ## <a name="next-steps"></a>Дополнительная информация
 
