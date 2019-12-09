@@ -1,19 +1,15 @@
 ---
 title: Проверка подлинности с помощью библиотек управления Azure для Python
 description: Проверка подлинности с помощью субъекта-службы в библиотеках управления Azure для Python
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 04/11/2019
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: afeaafb4289544b92324154d5c45d3410cbb3b02
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 93d41e76bc8fb58d70a3590e2ea3658014a8673a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279102"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466439"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Проверка подлинности с помощью библиотек управления Azure для Python
 
@@ -215,9 +211,9 @@ client = get_client_from_cli_profile(ComputeManagementClient)
 
 ## <a name="mgmt-auth-legacy"></a>Проверка подлинности с использованием учетных данных токена (для прежних версий)
 
-В предыдущей версии пакета SDK библиотека ADAL не была доступна, и мы указывали класс `UserPassCredentials`. Такая проверка подлинности считается устаревшей, и мы не рекомендуем ее применять.
+В предыдущей версии пакета SDK библиотека ADAL не была доступна, и мы указывали класс `UserPassCredentials`. Использование этого класса считается устаревшим методом, и мы не рекомендуем его применять.
 
-В примере ниже показан сценарий с использованием имени пользователя и пароля. Такой сценарий не поддерживает двухфакторную проверку подлинности.
+В этом примере показан сценарий "пользователь/пароль", который не поддерживает 2FA.
 
 ```python
 from azure.common.credentials import UserPassCredentials

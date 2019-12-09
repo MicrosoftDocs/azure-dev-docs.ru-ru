@@ -1,24 +1,20 @@
 ---
 title: Средства для разработчиков Python в Azure | Документация Майкрософт
 description: Средства интеграции IDE и интерфейсы командной строки для разработчиков Python, работающих со службами Azure.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 06/21/2017
-ms.author: sttramer
-ms.openlocfilehash: 19f314347296c2ecaf7e41da2332ff6a018a5a06
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: c1ca9752b63baa783f078d7d26a2576fdee74e6a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285775"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467073"
 ---
 # <a name="azure-tools-for-python-developers"></a>Средства для разработчиков Python в Azure
 
 ## <a name="azure-cli-20"></a>Azure CLI 2.0
 
-Azure CLI 2.0 предоставляет интерфейс командной строки для создания и настройки ресурсов Azure в подписках. Azure CLI 2.0 работает на разных платформах и содержит функции фильтрации и создания запросов, что позволяет передавать выходные данные непосредственно в привычные для вас программы командной строки. 
+Azure CLI 2.0 предоставляет интерфейс командной строки для создания и настройки ресурсов Azure в подписках. Azure CLI 2.0 работает на разных платформах и содержит функции фильтрации и создания запросов, что позволяет передавать выходные данные непосредственно в привычные для вас программы командной строки.
 
 [Установите Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli)
 

@@ -3,22 +3,16 @@ title: Как использовать JDBC Spring Data с Базой данны
 description: Узнайте, как использовать JDBC Spring Data с базой данных SQL Azure.
 services: sql-database
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 86851ca66b55a59d788aee7bcde5d50a522442bd
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 76fe515c6f315a340d5c306edfef31cdf736ceed
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282165"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811987"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Как использовать JDBC Spring Data с Базой данных SQL Azure
 
@@ -38,7 +32,7 @@ ms.locfileid: "68282165"
 
 ## <a name="create-an-azure-sql-satabase"></a>Создание Базы данных Azure SQL
 
-### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Создание сервера Базы данных SQL с помощью портала Azure
+### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Создание сервера базы данных SQL с помощью портала Azure
 
 > [!NOTE]
 > 
@@ -74,7 +68,7 @@ ms.locfileid: "68282165"
 
    ![Создание Базы данных SQL][SQL04]
 
-### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Настройка правила брандмауэра для SQL сервера с помощью портала Azure
+### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Настройка правила брандмауэра для SQL-сервера с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
@@ -90,7 +84,7 @@ ms.locfileid: "68282165"
 
    ![Настройка параметров брандмауэра][SQL07]
 
-### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Получение строки подключения для SQL сервера на портале Azure
+### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Получение строки подключения для SQL-сервера на портале Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 

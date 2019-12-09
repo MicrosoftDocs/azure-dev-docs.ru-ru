@@ -3,22 +3,16 @@ title: Как использовать API MongoDB Spring Data с Azure Cosmos D
 description: Узнайте, как использовать API MongoDB Spring Data с Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 77851933366e09a7d5b0d1ae87816c563bf35e6b
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 0284f89f6a37497709947649fba3b1284416a95c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281905"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811935"
 ---
 # <a name="how-to-use-spring-data-mongodb-api-with-azure-cosmos-db"></a>Как использовать API MongoDB Spring Data с Azure Cosmos DB
 
@@ -71,8 +65,6 @@ ms.locfileid: "68281905"
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную учетную запись Azure Cosmos DB.
 
-   ![Выбор учетной записи Azure Cosmos DB][COSMOSDB04]
-
 1. Нажмите кнопку **Строки подключения** и скопируйте значение для поля **Основная строка подключения**. Позже это значение будет использоваться для настройки приложения.
 
    ![Получение строк подключения к Cosmos DB][COSMOSDB06]
@@ -102,7 +94,9 @@ ms.locfileid: "68281905"
 
 1. Сохраните и закройте файл *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
+## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения
+
+Чтобы создать приложение, перейдите в каталог */gs-accessing-data-mongodb/complete*, в котором содержится файл pom.xml.
 
 1. Создайте пример приложения с помощью Maven, а затем настройте Maven на пропуск тестов, например:
 
@@ -113,7 +107,7 @@ ms.locfileid: "68281905"
 1. Запустите пример приложения, например:
 
    ```shell
-   java -jar target/gs-accessing-data-mongodb-0.1.0.jar
+   java -jar target/accessing-data-mongodb-0.0.1-SNAPSHOT.jar
    ```
     
    Приложение должно возвращать значения следующим образом:

@@ -1,19 +1,14 @@
 ---
 title: Создание образа контейнера для приложения Node.js из Visual Studio Code
 description: Руководство, часть 3. Создание образа приложения Node.js
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 1b79f84bd69853578796b4485ca669be98f41006
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: c3662c7d21359008bdc0cc5c3050fb2fdc7d6241
+ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686099"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540519"
 ---
 # <a name="create-your-nodejs-application-image"></a>Создание образа приложения Node.js
 

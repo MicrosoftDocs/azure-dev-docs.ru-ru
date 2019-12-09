@@ -1,24 +1,19 @@
 ---
-title: Развертывание веб-приложения Hello World, выполняющегося в контейнере Linux, в облаке с помощью Azure Toolkit for Eclipse
+title: Развертывание приложения Hello World в облачном контейнере Linux
+titleSuffix: Azure Toolkit for Eclipse
 description: Запустите базовое веб-приложение Hello World в контейнере Linux и разверните его в облаке с помощью Azure Toolkit for Eclipse.
 services: app-service\web
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/20/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 471deaa03b282bb3a901e52592988d9d72712b86
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5ad0949fb415b5bf04e47b8cf6605fe77dbcb0e7
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429712"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811873"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-eclipse"></a>Развертывание веб-приложения Hello World в контейнере Linux в облаке с помощью Azure Toolkit for Eclipse
 

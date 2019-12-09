@@ -1,25 +1,19 @@
 ---
-title: Отображение в Eclipse содержимого Javadoc для пакета библиотек Azure для Java
+title: Отображение содержимого Javadoc в Eclipse
+titleSuffix: Azure Libraries for Java
 description: Узнайте, как отобразить содержимое Javadoc для библиотек Azure в Eclipse.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: b25feaeae2a38bbf6cbbbeef94ee40718956b85a
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: ecd491031522fdf2a9e06ff4104f7191f4efc59e
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429379"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811559"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Отображение в Eclipse содержимого Javadoc для пакета библиотек Azure для Java
 
@@ -37,7 +31,7 @@ ms.locfileid: "68429379"
 
 1. Вы можете указать **Javadoc URL** (URL-адрес Javadoc) или **Javadoc in archive** (Javadoc в архиве) в соответствующих полях.
 
-   * Если вам требуется указать **URL-адрес Javadoc**, используйте URL-адреса в следующем формате: **http://dl.windowsazure.com/javadoc** или **http://dl.windowsazure.com/storage/javadoc** .
+   * Если вам требуется указать **URL-адрес Javadoc**, используйте URL-адреса в следующем формате: **https://dl.windowsazure.com/javadoc** или **https://dl.windowsazure.com/storage/javadoc** .
 
    * Если вы решите использовать **Javadoc in archive**(Javadoc в архиве), можете указать внешний файл или файл рабочей области.
 

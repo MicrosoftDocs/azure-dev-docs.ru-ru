@@ -1,24 +1,19 @@
 ---
-title: Развертывание веб-приложения Hello World, выполняющегося в контейнере Linux, в облаке с помощью набора средств Azure для IntelliJ
+title: Развертывание веб-приложения Hello World в контейнер Linux
+titleSuffix: Azure Toolkit for IntelliJ
 description: Запуск веб-приложения Hello World в контейнере Linux и его развертывание в облаке с помощью набора средств Azure для IntelliJ.
 services: app-service\web
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/20/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 08e318de1a802d2b1d27db2f3a7bcc37c7ec8535
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 3e36123086486e8f1d98ca135d4360962d0d23a8
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281025"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810995"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Развертывание веб-приложения Hello World в контейнере Linux в облаке с помощью набора средств Azure для IntelliJ
 

@@ -1,18 +1,14 @@
 ---
 title: Управляемые диски
 description: Создание, изменение размера и обновление управляемого диска.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.author: sttramer
-ms.openlocfilehash: ab80a4aebd5f43d10f0cb6d939afbdf7ea9fb1b5
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: c65e07dc4a56ef0376785df4f55d3a9fc9f129ac
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285725"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467022"
 ---
 # <a name="managed-disks"></a>Управляемые диски
 
@@ -124,7 +120,7 @@ storage_profile = azure.mgmt.compute.models.StorageProfile(
 )
 ```
 
-Указанный выше параметр ``storage_profile`` теперь считается допустимым. Полный пример создания виртуальной машины на Python (включая сеть и т. п.) см. в полном [руководстве по виртуальным машинам на Python](https://github.com/Azure-Samples/virtual-machines-python-manage).
+Указанный выше параметр ``storage_profile`` теперь считается допустимым. Полный пример создания виртуальной машины на Python (включая сеть и т. п.) см. в полном [учебнике по виртуальным машинам на Python](https://github.com/Azure-Samples/virtual-machines-python-manage).
 
 Можно также создать ``storage_profile`` с помощью собственного образа.
 
@@ -162,7 +158,7 @@ async_update = compute_client.virtual_machines.create_or_update(
 async_update.wait()
 ```
 
-## <a name="virtual-machine-scale-sets-with-managed-disks"></a>Масштабируемые наборы виртуальных машин с управляемыми дисками
+## <a name="virtual-machine-scale-sets-with-managed-disks"></a>Масштабируемые наборы виртуальных машин с Управляемыми дисками
 
 До выпуска службы "Управляемые диски" вам нужно было вручную создавать учетную запись хранения для всех необходимых виртуальных машин в масштабируемом наборе, а затем в REST API этого набора указывать параметр списка ``vhd_containers``, чтобы предоставить всем виртуальным машинам имя учетной записи хранения. Официальное руководство по переходу содержится в этой статье: `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`.
 
