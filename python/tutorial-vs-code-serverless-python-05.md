@@ -1,15 +1,15 @@
 ---
-title: Руководство по Развертывание Функций Azure с помощью Python в Visual Studio Code
+title: Руководство по Развертывание Функций Azure на Python с помощью VS Code
 description: Шаг руководства 5. Развертывание кода функции Python в Azure и выполнение потоковой передачи журналов и синхронизации параметров между локальным проектом и Azure.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c917ac707c33963187fc1a3000be9e52b21deeb
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 07af40c402104f07844c2cbe0d84c38c86f2fca2
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467002"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992510"
 ---
 # <a name="tutorial-deploy-azure-functions-in-python"></a>Руководство по Развертывание решения "Функции Azure" на Python
 

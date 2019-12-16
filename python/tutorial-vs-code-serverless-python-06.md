@@ -1,15 +1,15 @@
 ---
-title: Руководство по Добавление второй функции на Python в Функциях Azure с помощью Visual Studio Code
+title: Руководство по Добавление второй функции Python в Функциях Azure с помощью VS Code
 description: 'Шаг руководства 6: расширение проекта Функций Azure путем добавления второй функции.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 84130e3bc4d5a85046e21b66338ccc07bba8cad1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 12cd3625d3eec63a2ba3de4d55dbd957fbf0fb34
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465916"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992425"
 ---
 # <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>Руководство по Добавление второй функции на Python в решении "Функции Azure"
 

@@ -4,12 +4,12 @@ description: Руководство по использованию функци
 ms.topic: article
 ms.date: 08/19/2019
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: e8caa6d540d7f3be815b05e627b82745ccf9c14f
-ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
+ms.openlocfilehash: d1b17e33b5ae4aa51a84ceae8005a5385c162967
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540501"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992469"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Использование Функций Azure для написания бессерверного кода Node.js в Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "74540501"
 
 Сначала перейдите в раздел:
 
-- [Создание первой функции с помощью Visual Studio Code](/azure/azure-functions/functions-create-first-function-vs-code). В этой статье рассказывается о Функциях Azure в контексте Visual Studio Code, что упрощает многие детали.
+- [Создание первой функции с помощью Visual Studio Code](/azure/azure-functions/functions-create-first-function-vs-code). В этой статье описано использование Функций Azure в контексте Visual Studio Code, чтобы упростить многие детали.
 
 Затем расширьте свои знания о возможностях Функций Azure, просмотрев следующие статьи:
 

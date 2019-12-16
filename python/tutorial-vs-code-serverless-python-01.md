@@ -1,15 +1,15 @@
 ---
-title: Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
+title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e6076bf9760a2f5b5e38622693b9a23561d3c964
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 388c49767e08d4f86ad02439ece58610b7c2cf09
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467012"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992536"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -43,7 +43,9 @@ ms.locfileid: "74467012"
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) для вашей операционной системы. Сами средства написаны на языке .NET Core, а пакет основных средств лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит вам пока придется устанавливать .NET Core и Node.js даже для кода на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
+Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) для вашей операционной системы.
+
+Сами средства написаны на .NET Core, а пакет основных средств лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит, вам пока нужно устанавливать .NET Core и Node.js даже для работы с Функциями Azure на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
 
 ### <a name="sign-in-to-azure"></a>Вход в Azure
 
@@ -57,7 +59,9 @@ ms.locfileid: "74467012"
 
 Выходные данные, которые начинаются с логотипа Функций Azure (чтобы его увидеть, прокрутите выходные данные вверх), указывают на наличие Azure Functions Core Tools.
 
-Если команда `func` не распознается, убедитесь, что папка, в которую вы установили Azure Functions Core Tools, включена в переменную среды PATH.
+Если команда `func` не распознана, снова выполните `npm install -g azure-functions-core-tools` и убедитесь, что установка завершена. Также с командой установки следует использовать параметр `-g`. В противном случае npm устанавливает пакет только в текущей папке.
+
+Команда `func` работает с файлом *func.cmd*, установленным в глобальной папке Node.js. Чтобы просмотреть расположение этой папки, выполните `npm -l` и проверьте расположение в конце выходных данных.
 
 > [!div class="nextstepaction"]
 > [Вход в Azure выполнен](tutorial-vs-code-serverless-python-02.md)
