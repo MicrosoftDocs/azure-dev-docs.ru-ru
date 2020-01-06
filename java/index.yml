@@ -21,10 +21,15 @@ sections:
         columns: 2
         items:
           - href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-            html: <p>Развертывание веб-приложения в Azure</p>
+            html: <p>Развертывание веб-приложения в Службе приложений</p>
             image:
               src: /media/common/i_get-started.svg
-            title: Начало работы
+            title: Веб-приложение Azure
+          - href: 'https://docs.microsoft.com/en-us/azure/spring-cloud/'
+            html: <p>Управляемая служба для Spring Cloud</p>
+            image:
+              src: /java/media/spring.svg
+            title: Azure Spring Cloud
           - href: /azure/java/spring-framework/
             html: <p>Службы Azure с приложениями Spring Boot</p>
             image:
@@ -45,11 +50,6 @@ sections:
             image:
               src: /media/common/i_api-reference.svg
             title: Пакеты SDK Azure для Java
-          - href: 'https://docs.microsoft.com/en-us/azure/spring-cloud/'
-            html: <p>Azure Spring Cloud</p>
-            image:
-              src: /java/media/spring.svg
-            title: Облачные службы Spring
   - title: Руководство по началу работы
     items:
       - type: list
@@ -62,6 +62,10 @@ sections:
             title: Развертывание приложений Spring Boot с помощью Maven
             href: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
           - image:
+              src: /azure/media/index/spring.svg
+            title: Использование микрослужб с Azure Spring Cloud
+            href: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+          - image:
               src: /azure/media/index/storage.svg
             title: Загрузка и скачивание больших двоичных объектов из хранилища
             href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
@@ -73,10 +77,6 @@ sections:
               src: /javascript/azure/media/k8s_logo.svg
             title: Развертывание в Kubernetes
             href: /azure/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
-          - image:
-              src: /azure/media/index/fabric.svg
-            title: Микрослужбы в Service Fabric
-            href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
               src: /java/media/jenkins_logo.svg
             title: Непрерывная интеграция и развертывание в службу приложений с помощью Jenkins®

@@ -1,18 +1,18 @@
 ---
-title: Настройка приложения Spring Boot Initializr для использования кэша Redis для Azure
+title: Создание приложения Spring Boot Initializer с использованием Кэша Azure для Redis
 description: Настройка приложения Spring Boot, созданного с помощью Spring Initializr, для использования в облаке кэша Redis для Azure.
 services: redis-cache
 documentationcenter: java
 ms.date: 12/19/2018
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
-ms.topic: article
-ms.openlocfilehash: 06fbeb24ca237124210a2ffe0e37755645a446dd
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.topic: conceptual
+ms.openlocfilehash: e70b5f9b8427bebd9c5ca3761a664464ad3b0909
+ms.sourcegitcommit: 670874dfe49e6ffa5bee88555851878f0da93042
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812181"
+ms.lasthandoff: 12/16/2019
+ms.locfileid: "75034041"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Настройка приложения Spring Boot Initializr для использования в облаке кэша Redis для Azure
 

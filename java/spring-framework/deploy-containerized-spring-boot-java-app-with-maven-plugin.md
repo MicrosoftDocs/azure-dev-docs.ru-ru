@@ -1,5 +1,5 @@
 ---
-title: Развертывание приложения Spring Boot в виде файла JAR в облаке с помощью Maven и Azure
+title: Развертывание приложения Spring Boot в Azure с помощью Maven
 description: Сведения о развертываний приложения Spring Boot в Azure с помощью подключаемого модуля Maven для веб-приложений Azure.
 services: app-service
 documentationcenter: java
@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019
-ms.openlocfilehash: 8ea9007dbc929ccbe2718b16c1381e1d09ec3b3a
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5468016954c562258245958cf7b95d2200dcc5f0
+ms.sourcegitcommit: db803eba96ffa73b21b94fcb41439cb9b7a0e3c8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811907"
+ms.lasthandoff: 12/13/2019
+ms.locfileid: "75031685"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Развертывание контейнерного приложения Spring Boot в Azure с помощью Maven для веб-приложений Azure
 
@@ -224,7 +224,7 @@ ms.locfileid: "74811907"
 
 | Элемент | ОПИСАНИЕ |
 |---|---|
-| `<version>` | Версия [Подключаемый модуль Maven для веб-приложений Azure]. Обратитесь к списку версий в [центральном репозитории Maven](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22), чтобы убедиться, что вы используете актуальную версию. |
+| `<version>` | Версия [Подключаемый модуль Maven для веб-приложений Azure]. См. список версий в [центральном репозитории Maven](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22), чтобы убедиться, что вы используете актуальную версию. |
 | `<authentication>` | Сведения для проверки подлинности для Azure, в которых в данном примере содержится элемент `<serverId>`, который, в свою очередь, содержит `azure-auth`; Maven использует это значение для поиска значений субъекта-службы Azure в файле Maven *settings.xml*, который вы определили в предыдущем разделе этой статьи. |
 | `<resourceGroup>` | Целевая группа ресурсов, которой в этом примере является `maven-plugin`. Если эта группа ресурсов не существует, она будет создана во время развертывания. |
 | `<appName>` | Целевое имя веб-приложения. В этом примере целевое имя — `maven-linux-app-${maven.build.timestamp}`, к которому в этом примере добавлен суффикс `${maven.build.timestamp}`, чтобы избежать конфликтов. (Метку времени добавлять необязательно; можно указать любую уникальную строку для имени приложения.) |
