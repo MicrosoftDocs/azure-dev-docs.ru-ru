@@ -62,7 +62,7 @@ sections:
             title: Развертывание приложений Spring Boot с помощью Maven
             href: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
           - image:
-              src: /azure/media/index/spring.svg
+              src: /java/media/spring.svg
             title: Использование микрослужб с Azure Spring Cloud
             href: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
           - image:
