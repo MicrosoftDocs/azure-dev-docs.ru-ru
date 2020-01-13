@@ -1,5 +1,5 @@
 ---
-title: Как использовать начальное приложение Spring Boot с Azure Active Directory B2C
+title: Использование начального приложения Spring Boot с Azure Active Directory B2C
 description: Сведения о настройке приложения Spring Boot Initializer с помощью начального приложения Azure Active Directory B2C.
 services: active-directory-b2c
 documentationcenter: java
@@ -11,20 +11,20 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 7996e4f2947e08fc7a802a741b958988e58829e8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 87134da87f47b1c808648a8b6e2f77650c9141bf
+ms.sourcegitcommit: a1f7e0f0cfd5c9d0806a7d44acdf2a54d578d8fe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812160"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319681"
 ---
-# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство. защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
 ## <a name="overview"></a>Обзор
 
 В этой статье описывается, как с помощью [Spring Initializr](https://start.spring.io/) создать начальное приложение Java Spring Boot для Azure Active Directory (Azure AD).
 
-Из этого руководства вы узнаете, как выполнять следующие задачи:
+В этом руководстве описано следующее.
 
 > [!div class="checklist"]
 > * создание приложения Java с помощью Spring Initializr;
@@ -34,7 +34,7 @@ ms.locfileid: "74812160"
 
 Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись Azure](https://azure.microsoft.com/free/?WT.mc_id=A261C142F), прежде чем начинать работу.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -142,9 +142,9 @@ ms.locfileid: "74812160"
            profile-edit: ${your-profile-edit-user-flow}     # optional
            password-reset: ${your-password-reset-user-flow} # optional
    ```
-   Описание
+   Где:
 
-   | Параметр | ОПИСАНИЕ |
+   | Параметр | Description |
    |---|---|
    | `azure.activedirectory.b2c.tenant` | Содержит имя `${your-tenant-name` AD B2C, указанное ранее. |
    | `azure.activedirectory.b2c.client-id` | Содержит `${your-client-id}` из приложения, указанный ранее. |
@@ -274,7 +274,7 @@ ms.locfileid: "74812160"
 
 В этом учебнике вы создали веб-приложение Java с использованием начального приложения Spring Boot для Azure Active Directory B2C, настроили клиент Azure AD B2C, зарегистрировали в нем созданное приложение, а затем настроили это приложение для использования аннотаций и классов Spring с целью защиты веб-приложения.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 

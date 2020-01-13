@@ -3,12 +3,12 @@ title: Использование реестра контейнера в Visual 
 description: Руководство, часть 2. Использование реестра контейнеров
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 7d51e8011824ec19e9530f9bc94bcb2ce07f2851
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: c5e9ff3cd803ef4d57408199682c71e4b57f2d77
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466633"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191036"
 ---
 # <a name="use-a-container-registry"></a>Использование Реестра контейнеров
 
@@ -20,9 +20,13 @@ ms.locfileid: "74466633"
 
 ## <a name="create-an-azure-container-registry"></a>Создание реестра контейнеров Azure
 
-1. Войдите на [портал Azure](https://portal.azure.com), затем выберите **Создать ресурс** > **Контейнеры** > **Реестр контейнеров**.
+1. Войдите на [портал Azure](https://portal.azure.com) и выберите **Создать ресурс**.
 
-    ![Создание реестра контейнеров на портале Azure](media/deploy-containers/portal-01.png)
+    ![Создание ресурса на портале Azure](media/deploy-containers/portal-01a.png)
+
+1. На следующей странице выберите **Контейнеры** > **Реестр контейнеров**.
+
+    ![Создание реестра контейнеров на портале Azure](media/deploy-containers/portal-01b.png)
 
 1. В появившейся форме **Создать реестр контейнеров** введите соответствующие значения.
 
@@ -50,6 +54,8 @@ ms.locfileid: "74466633"
     ```bash
     docker login <registry_name>.azurecr.io -u <username> -p <password>
     ```
+
+    Чтобы повысить уровень безопасности, используйте `--password-stdin` вместо `-p <password>`, а затем вставьте пароль при появлении соответствующего запроса.
 
 1. В Visual Studio Code откройте обозреватель **Docker** и убедитесь, что в разделе **Реестры** отображается только что настроенная конечная точка реестра.
 

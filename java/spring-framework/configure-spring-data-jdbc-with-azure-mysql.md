@@ -2,16 +2,16 @@
 title: Как использовать JDBC Spring Data с Базой данных Azure для MySQL
 description: Узнайте, как использовать JDBC Spring Data с Базой данных Azure для MySQL.
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 01/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 323613fa8508f4e52c602763b40f15c4d2ffbc54
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: a36484cb6858422f4d9b0e6a5c72a793f3686514
+ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812007"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755653"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Как использовать JDBC Spring Data с базой данных Azure MySQL
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812007"
 
 В этой статье показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -46,27 +46,26 @@ ms.locfileid: "74812007"
 
 1. Введите следующие сведения:
 
-   - **Имя сервера**. Для сервера MySQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoysmysql.mysql.database.azure.com*.
    - **Подписка**: Укажите подписку Azure, которую нужно использовать.
    - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Выберите источник**. В рамках данного руководства выберите `Blank`, чтобы создать базу данных.
-   - **Учетные данные администратора сервера для входа**. Укажите имя администратора базы данных.
+   - **Имя сервера**: Для сервера MySQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoysmysql.mysql.database.azure.com*.
+   - **Источник данных**: В рамках данного руководства выберите `Blank`, чтобы создать базу данных.
+   - **Имя пользователя администратора.** Укажите имя администратора базы данных.
    - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
    - **Расположение.** Укажите ближайший географический регион для базы данных.
    - **Версия.** Укажите самую последнюю версию базы данных.
-   - **Ценовая категория**. В рамках этого руководства укажите самую низкую ценовую категорию.
 
    ![Создание свойств базы данных MySQL][MYSQL02]
 
-1. После ввода всех этих данных нажмите кнопку **Создать**.
+1. После ввода всех этих данных нажмите кнопку **Отзыв и создание**.
+
+1. Проверьте спецификацию и щелкните **Создать**.
 
 ### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Щелкните **Все ресурсы**, а затем выберите только что созданные ресурсы Базы данных Azure для MySQL.
-
-   ![Выбор базы данных MySQL][MYSQL03]
 
 1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**.
 
@@ -77,8 +76,6 @@ ms.locfileid: "74812007"
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Щелкните **Все ресурсы**, а затем выберите только что созданный ресурс Базы данных Azure для MySQL.
-
-   ![Выбор базы данных MySQL][MYSQL03]
 
 1. Нажмите кнопку **Строки подключения** и скопируйте значение в текстовое поле **JDBC**.
 
@@ -91,9 +88,9 @@ ms.locfileid: "74812007"
    ```shell
    mysql --host wingtiptoysmysql.mysql.database.azure.com --user wingtiptoysuser@wingtiptoysmysql -p
    ```
-   Описание
+   Где:
 
-   | Параметр | ОПИСАНИЕ |
+   | Параметр | Description |
    |---|---|
    | `host` | Указывается полное доменное имя сервера MySQL, описанное ранее в этой статье. |
    | `user` | Указываются администратор MySQL и сокращенное имя сервера, описанные ранее в этой статье. |
@@ -168,9 +165,9 @@ ms.locfileid: "74812007"
    spring.datasource.username=wingtiptoysuser@wingtiptoysmysql
    spring.datasource.password=********
     ```
-   Описание
+   Где:
 
-   | Параметр | ОПИСАНИЕ |
+   | Параметр | Description |
    |---|---|
    | `spring.datasource.url` | Указываются строки MySQL JDBC, описанные ранее в этой статье, с добавлением часового пояса. |
    | `spring.datasource.username` | Указывается администратор MySQL, описанный ранее в этой статье, вместе с сокращенным именем сервера. |
@@ -224,7 +221,7 @@ ms.locfileid: "74812007"
 
 В рамках этого руководства вы создали пример приложения Java для хранения информации в Базе данных Azure для MySQL с помощью Spring Data и извлечения информации из базы данных с помощью JDBC.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
@@ -250,6 +247,5 @@ ms.locfileid: "74812007"
 
 [MYSQL01]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png
 [MYSQL02]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png
-[MYSQL03]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-03.png
 [MYSQL04]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-04.png
 [MYSQL05]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-05.png

@@ -1,17 +1,17 @@
 ---
-title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
+title: Руководство. Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 388c49767e08d4f86ad02439ece58610b7c2cf09
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: a380a447150f29653a1f94a3fe1f6464dd495a81
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992536"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191001"
 ---
-# <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
+# <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство. Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
 В этой статье объясняется, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как подключить (создать привязку) к хранилищу.
 
@@ -19,33 +19,36 @@ ms.locfileid: "74992536"
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Подписка Azure](#azure-subscription).
-- [Visual Studio Code с расширением "Функции Azure"](#visual-studio-code-python-and-the-azure-functions-extension).
 - [Основные инструменты службы "Функции Azure"](#azure-functions-core-tools).
+- [Visual Studio Code с расширением "Функции Azure"](#visual-studio-code-python-and-the-azure-functions-extension).
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 
 Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension) и получите 30-дневную бесплатную учетную запись с деньгами на счете Azure в размере 200 долл. США, которые позволят проверить любое сочетание служб.
 
+### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
+
+Установите Azure Functions Core Tools, следуя [соответствующим инструкциям](/azure/azure-functions/functions-run-local#v2) для своей операционной системы. Игнорируйте комментарии в статье о диспетчере пакетов Chocolately. Они не нужны для работы с этим руководством.
+
+При установке Node.js используйте параметры по умолчанию и *не* выбирайте параметр для автоматической установки необходимых средств.  Кроме того, обязательно используйте параметр `-g` с командами `npm install`, чтобы средства Core Tools были доступны для последующих команд.
+
+    > [!TIP]
+    > The Core Tools are written in .NET Core, and the Core Tools package is best installed using the Node.js package manager, npm, which is why you need to install .NET Core and Node.js at present, even for working with Azure Functions in Python. You can, however bypass the .NET Core requirement using "extension bundles" as described in the aforementioned documentation. Whatever the case, you need install these components only once, after which Visual Studio Code automatically prompts you to install any updates.
+
 ### <a name="visual-studio-code-python-and-the-azure-functions-extension"></a>Visual Studio Code, Python и расширение "Функции Azure"
 
 Установите следующее программное обеспечение:
 
-- Python 3.7 или Python 3.6 для работы с Функциями Azure. [Python 3.7.5](https://www.python.org/downloads/release/python-375/) и [Python 3.6.8](https://www.python.org/downloads/release/python-368/) — это новейшие совместимые версии.
+- Python 3.7 или Python 3.6 для работы с Функциями Azure. [Python 3.7.5](https://www.python.org/downloads/release/python-375/) и [Python 3.6.8](https://www.python.org/downloads/release/python-368/) — это новейшие совместимые версии. Прокрутите страницы вниз, чтобы найти установщики. При установке выберите **Add Python 3.x to PATH** (Добавить в путь Python 3.x). Используйте параметры по умолчанию, выбрав **Установить сейчас**. В Windows также выберите **Disable Path length limit** (Отключить ограничение длины пути) в конце процесса.
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительных требований](https://code.visualstudio.com/docs/python/python-tutorial) учебника по Python в VS Code.
 - [Расширение "Функции Azure"](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Общие сведения см. в репозитории [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions) на сайте GitHub.
 
-> [!NOTE]
-> Расширение "Функции Azure" входит в состав [пакета расширений Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
-
-### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
-
-Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) для вашей операционной системы.
-
-Сами средства написаны на .NET Core, а пакет основных средств лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит, вам пока нужно устанавливать .NET Core и Node.js даже для работы с Функциями Azure на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
+    > [!NOTE]
+    > Расширение "Функции Azure" входит в состав [пакета расширений Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
 
 ### <a name="sign-in-to-azure"></a>Вход в Azure
 
@@ -59,9 +62,9 @@ ms.locfileid: "74992536"
 
 Выходные данные, которые начинаются с логотипа Функций Azure (чтобы его увидеть, прокрутите выходные данные вверх), указывают на наличие Azure Functions Core Tools.
 
-Если команда `func` не распознана, снова выполните `npm install -g azure-functions-core-tools` и убедитесь, что установка завершена. Также с командой установки следует использовать параметр `-g`. В противном случае npm устанавливает пакет только в текущей папке.
+Если команда `func` не распознана, снова выполните команду `npm install -g azure-functions-core-tools` и убедитесь, что установка прошла успешно. Кроме того, обязательно используйте параметр `-g` с командой install, иначе npm установит пакет только в текущей папке.
 
-Команда `func` работает с файлом *func.cmd*, установленным в глобальной папке Node.js. Чтобы просмотреть расположение этой папки, выполните `npm -l` и проверьте расположение в конце выходных данных.
+Команда `func` работает с файлом *func. cmd*, установленным в глобальной папке Node.js. Чтобы узнать расположение этой папки, выполните команду `npm -l` и просмотрите соответствующие сведения в конце выходных данных.
 
 > [!div class="nextstepaction"]
 > [Вход в Azure выполнен](tutorial-vs-code-serverless-python-02.md)

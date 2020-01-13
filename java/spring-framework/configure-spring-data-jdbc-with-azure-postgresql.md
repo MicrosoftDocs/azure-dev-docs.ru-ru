@@ -3,24 +3,22 @@ title: Как использовать JDBC Spring Data с базой данны
 description: Узнайте, как использовать JDBC Spring Data с базой данных Azure PostgreSQL.
 services: postgresql
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 12/26/2019
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: d7f4ddeab5c46f6070145e5aab0b273156ed38a0
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: b5abc7479a52aa84cd3f05ffb56e5c7f31d0c533
+ms.sourcegitcommit: 94ca8c28d8d3e954cf118f1f46ac905c3a470b38
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812001"
+ms.lasthandoff: 12/27/2019
+ms.locfileid: "75502386"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Как использовать JDBC Spring Data с базой данных Azure PostgreSQL
 
-## <a name="overview"></a>Обзор
-
 В этой статье показано, как создать пример приложения, использующего [Spring Data] для хранения и извлечения информации в базу данных Azure [PostgreSQL](https://www.postgresql.org/) с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -47,19 +45,20 @@ ms.locfileid: "74812001"
 
 1. Введите следующие сведения:
 
-   - **Имя сервера**. Для сервера PostgreSQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoyspostgresql.postgres.database.azure.com*.
-   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
    - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Выберите источник**. В рамках данного руководства выберите `Blank`, чтобы создать базу данных.
-   - **Учетные данные администратора сервера для входа**. Укажите имя администратора базы данных.
+   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
+   - **Имя сервера**: Для сервера PostgreSQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoyspostgresql.postgres.database.azure.com*.
+   - **Выберите источник**. В рамках данного руководства выберите `None`, чтобы создать базу данных.
+   - **Имя для входа администратора сервера**. Укажите имя администратора базы данных.
    - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
    - **Расположение.** Укажите ближайший географический регион для базы данных.
    - **Версия.** Укажите самую последнюю версию базы данных.
-   - **Ценовая категория**. В рамках этого руководства укажите самую низкую ценовую категорию.
 
    ![Создание свойств базы данных PostgreSQL][POSTGRESQL02]
 
-1. После ввода всех этих данных нажмите кнопку **Создать**.
+1. После ввода всех этих данных нажмите кнопку **Проверка и создание**.
+
+1. Проверьте спецификации и щелкните **Создать**.
 
 ### <a name="configure-a-firewall-rule-for-your-postgresql-database-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера базы данных PostgreSQL с помощью портала Azure
 
@@ -67,19 +66,15 @@ ms.locfileid: "74812001"
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных PostgreSQL.
 
-   ![Выбор базы данных PostgreSQL][POSTGRESQL03]
-
 1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**.
 
-   ![Настройка безопасности подключения][POSTGRESQL04]
+   ![Настройка безопасности подключения][POSTGRESQL03]
 
 ### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Получение строки подключения для сервера PostgreSQL с помощью портала Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
 1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных PostgreSQL.
-
-   ![Выбор базы данных PostgreSQL][POSTGRESQL03]
 
 1. Нажмите кнопку **Строки подключения** и скопируйте значение в текстовое поле **JDBC**.
 
@@ -92,9 +87,9 @@ ms.locfileid: "74812001"
    ```shell
    psql --host=wingtiptoyspostgresql.postgres.database.azure.com --port=5432 --username=wingtiptoysuser@wingtiptoyspostgresql --dbname=postgres
    ```
-   Описание
+   Где:
 
-   | Параметр | ОПИСАНИЕ |
+   | Параметр | Description |
    |---|---|
    | `host` | Указывается полное доменное имя сервера PostgreSQL, описанное ранее в этой статье. |
    | `host` | Указывается порт сервера PostgreSQL, то есть по умолчанию — `5432`. |
@@ -157,9 +152,9 @@ ms.locfileid: "74812001"
    spring.datasource.username=wingtiptoysuser@wingtiptoyspostgresql
    spring.datasource.password=********
     ```
-   Описание
+   Где:
 
-   | Параметр | ОПИСАНИЕ |
+   | Параметр | Description |
    |---|---|
    | `spring.datasource.url` | Указываются строки PostgreSQL JDBC, описанные ранее в этой статье. |
    | `spring.datasource.username` | Указывается администратор PostgreSQL, описанный ранее в этой статье, вместе с сокращенным именем сервера. |
@@ -213,7 +208,7 @@ ms.locfileid: "74812001"
 
 С помощью этого руководства вы создали пример приложения Java, использующий Spring Data для хранения и извлечения информации в базу данных Azure PostgreSQL с помощью JDBC.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
