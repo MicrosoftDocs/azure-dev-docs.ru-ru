@@ -10,12 +10,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 33e590106a5686eafa89924e22aeef05aa4f6df7
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 887925fd652194c38db99c30e1db505ecfcee918
+ms.sourcegitcommit: 8c84b6db37d0f78d66779fb6489cc8fe063055b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812087"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913981"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 
@@ -23,7 +23,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 В этой статье описано, как создать Azure Cosmos DB на портале Azure и пользовательское приложение Spring Boot с помощью **[Spring Initializr]** , а затем добавить [Начальное приложение Spring Boot CosmosDB для Azure] в пользовательское приложение для хранения и получения данных в Azure Cosmos DB с помощью Spring Data и API SQL Cosmos DB.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -91,12 +91,6 @@ Azure Cosmos DB — это глобально распределенная сл�
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-cosmosdb-spring-boot-starter</artifactId>
     </dependency>
-
-    <dependency>
-        <groupId>io.projectreactor.netty</groupId>
-        <artifactId>reactor-netty</artifactId>
-        <version>0.8.3.RELEASE</version>
-    </dependency>
     ```
 
 1. Убедитесь, что в элементе *properties* указаны требуемые версии Java и Azure:
@@ -104,7 +98,7 @@ Azure Cosmos DB — это глобально распределенная сл�
     ```xml
     <properties>
        <java.version>1.8</java.version>
-       <azure.version>2.2.0.M1</azure.version>
+       <azure.version>2.2.0</azure.version>
     </properties>
     ```
 
@@ -405,7 +399,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 Если вы не собираетесь использовать это приложение, обязательно удалите созданную ранее группу ресурсов, содержащую Cosmos DB. Это можно сделать на портале Azure.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
