@@ -3,17 +3,17 @@ title: Использование начального приложения Spri
 description: Сведения о настройке приложения, созданного с помощью Spring Boot Initializer в API Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 01/10/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: b5e6b3866b9b1e6a326547c053c628a282d9aaf3
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 61bf7d78edf2fcdc755d90588fe1c839d319f823
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812097"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946775"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Data Gremlin с API SQL Azure Cosmos DB
 
@@ -23,7 +23,7 @@ ms.locfileid: "74812097"
 
 В этой статье демонстрируется создание базы данных Azure Cosmos DB на портале Azure для использования с API Gremlin, создание пользовательского приложения Java с помощью **[Spring Initializr]** , а затем добавление в это приложение функций начального приложения Spring Data Gremlin для хранения данных в Azure Cosmos DB и получения этих данных с помощью языка запросов Gremlin.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -42,29 +42,27 @@ ms.locfileid: "74812097"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните **+Создать ресурс**.
 
-   ![Создание ресурса][AZ01]
-
 1. Щелкните **Базы данных** и **Azure Cosmos DB**.
 
    ![Создание Azure Cosmos DB][AZ02]
 
 1. На странице **Azure Cosmos DB** введите следующие сведения.
 
-   * Введите уникальный **ИД**, который будет использоваться как элемент универсального кода ресурса (URI) Gremlin создаваемой базы данных. Например, если указать в качестве **ИД** **wingtiptoysdata**, URI Gremlin будет *wingtiptoysdata.gremlin.cosmosdb.azure.com*.
+   * Выберите **подписку** для использования с базой данных.
+   * Укажите, нужно ли создать **группу ресурсов** для базы данных, или выберите существующую группу ресурсов.
+   * Введите уникальное **имя учетной записи**, которое будет использоваться как элемент универсального кода ресурса (URI) Gremlin для вашей базы данных. Например, если указать **wingtiptoysdata** в качестве **имени учетной записи**, URI Gremlin будет *wingtiptoysdata.gremlin.cosmosdb.azure.com*.
    * В поле "API" выберите **Gremlin (Graph)** .
-   * Выберите **подписку**, которую нужно использовать для базы данных.
-   * Укажите, следует ли создать **группу ресурсов** для базы данных, или выберите имеющуюся группу ресурсов.
    * Укажите **расположение** для базы данных.
    
-   Указав эти параметры, щелкните **Создать**, чтобы создать базу данных.
+Указав эти параметры, щелкните **Просмотр и создание**.
 
    ![Указание параметров Azure Cosmos DB][AZ03]
 
-1. При создании база данных указывается на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB**. Вы можете выбрать свою базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
+Проверьте спецификацию и щелкните **Создать**, чтобы создать базу данных.
 
-   ![Все ресурсы][AZ04]
+1. Создав базу данных, щелкните **Перейти к ресурсу**. База данных отобразится на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB**. Вы можете выбрать свою базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
 
-1. Когда откроется страница свойств базы данных, щелкните **Ключи доступа** и скопируйте URI и ключи доступа для базы данных. Эти значения будут использоваться в приложении Spring Boot.
+1. Когда откроется страница свойств базы данных, щелкните **Ключи** и скопируйте URI и ключи доступа для базы данных. Эти значения будут использоваться в приложении Spring Boot.
 
    ![Ключи доступа][AZ05]
 
@@ -77,9 +75,10 @@ ms.locfileid: "74812097"
 1. В окне **Добавление графа** добавьте следующие сведения:
 
    * Укажите уникальное значение в поле **Идентификатор базы данных**.
-   * Укажите уникальное значение в поле **Идентификатор графа**.
    * Можно указать свое значение в поле **Емкость хранилища** или оставить значение по умолчанию.
-   * Укажите значение в поле **Пропускная способность**. В этом примере можно выбрать 400 единиц запросов (ЕЗ).
+   * Укажите уникальное значение в поле **Идентификатор графа**.
+   * Укажите **Ключ секции**. См. сведения в руководстве по [использованию секционированного графа в Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/graph-partitioning).
+Нажмите кнопку **ОК**.
    
    Указав эти параметры, щелкните **ОК**, чтобы создать граф.
 
@@ -104,8 +103,6 @@ ms.locfileid: "74812097"
 
 1. При появлении запроса скачайте проект на локальный компьютер.
 
-   ![Скачивание пользовательского проекта Spring Boot][SI02]
-
 1. После извлечения файлов в локальной системе простое приложение Spring Boot можно будет редактировать.
 
    ![Пользовательские файлы проекта Spring Boot][SI03]
@@ -119,8 +116,6 @@ ms.locfileid: "74812097"
    -или-
 
    `/users/example/home/wingtiptoysdata/pom.xml`
-
-   ![Поиск файла pom.xml][PM01]
 
 1. Откройте файл *pom.xml* в текстовом редакторе и добавьте начальное приложение Spring Data Gremlin в список `<dependencies>`:
 
@@ -138,7 +133,7 @@ ms.locfileid: "74812097"
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Настройка приложения Spring Boot для использования Azure Cosmos DB
 
-1. Найдите каталог *resources* своего приложения и создайте файл с именем *application.yml*. Например:
+1. Найдите каталог *resources* своего приложения и создайте файл с именем *application.yml*. Пример:
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.yml`
 
@@ -159,9 +154,9 @@ ms.locfileid: "74812097"
       telemetryAllowed: false
    ```
    
-   Описание
+   Где:
    
-   | Поле | ОПИСАНИЕ |
+   | Поле | Description |
    |---|---|
    | `endpoint` | Указывает URI Gremlin, который создается на основе уникального **ИД**, введенного при создании базы данных Azure Cosmos DB ранее в этом руководстве. |
    | `port` | Указывает порт TCP/IP, который для протокола HTTPS должен иметь значение **443**. |
@@ -503,7 +498,7 @@ ms.locfileid: "74812097"
 
    ![Просмотр данных с помощью обозревателя документов][JV03]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
@@ -558,23 +553,19 @@ ms.locfileid: "74812097"
 
 <!-- IMG List -->
 
-[AZ01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ01.png
 [AZ02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ02.png
 [AZ03]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ03.png
-[AZ04]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ04.png
 [AZ05]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ05.png
 [AZ06]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ06.png
 [AZ07]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ07.png
 [AZ08]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ08.png
 
 [SI01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI01.png
-[SI02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI02.png
 [SI03]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI03.png
 
 [RE01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/RE01.png
 [RE02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/RE02.png
 
-[PM01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/PM01.png
 [PM02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/PM02.png
 
 [JV01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/JV01.png

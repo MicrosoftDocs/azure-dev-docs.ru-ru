@@ -1,17 +1,17 @@
 ---
-title: Руководство по Локальная отладка кода Python в Функциях Azure с помощью VS Code
+title: Руководство. Локальная отладка кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7dafd432289ad96664ca7c8a319b3368368adcbd
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992448"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946687"
 ---
-# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство по Локальная отладка кода Python в решении "Функции Azure"
+# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство. Локальная отладка кода Python в решении "Функции Azure"
 
 [Предыдущий шаг: изучение файлов кода](tutorial-vs-code-serverless-python-03.md)
 
@@ -47,6 +47,10 @@ ms.locfileid: "74992448"
     curl --header "Content-Type: application/json" --request POST \
         --data {"""name""":"""Visual Studio Code"""} http://localhost:7071/api/HttpExample
     ```
+
+    В PowerShell также можно использовать командлет [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+
+    ---
 
     Также вы можете создать файл, например *data.json*, который содержит `{"name":"Visual Studio Code"}`, и выполнить команду `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample`.
 

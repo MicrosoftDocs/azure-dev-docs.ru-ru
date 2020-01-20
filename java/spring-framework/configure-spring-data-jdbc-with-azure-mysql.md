@@ -6,12 +6,12 @@ ms.date: 01/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: a36484cb6858422f4d9b0e6a5c72a793f3686514
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: 7a6550be633b29d97d55b8db2f50b2c57d0ba30d
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755653"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022082"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Как использовать JDBC Spring Data с базой данных Azure MySQL
 
@@ -67,7 +67,7 @@ ms.locfileid: "75755653"
 
 1. Щелкните **Все ресурсы**, а затем выберите только что созданные ресурсы Базы данных Azure для MySQL.
 
-1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**.
+1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**. (В этом упражнении мы используем IP-адрес компьютера разработки, который является клиентом.  Его можно использовать в качестве **начального** и **конечного** IP-адресов.
 
    ![Настройка безопасности подключения][MYSQL04]
 
@@ -113,6 +113,7 @@ ms.locfileid: "75755653"
    
    mysql>
    ```
+   > Примечание. Если вы получили сообщение о том, что сервер не распознает этот IP-адрес, в сообщении об ошибке будет отображаться IP-адрес, который используется клиентом.  Назначьте его, как описано выше. *Настройка правила брандмауэра для сервера с помощью портала Azure*
 
 1. Создайте базу данных с именем *mysqldb*, введя команду `mysql`, как в следующем примере:
 
@@ -192,9 +193,9 @@ ms.locfileid: "75755653"
 1. Из командной строки создайте записи с помощью `curl`, как в следующем примере:
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    Приложение должно возвращать значения следующим образом:
