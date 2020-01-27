@@ -1,7 +1,7 @@
 - name: Azure для разработчиков Java
   href: index.yml
   items:
-    - name: Начало работы
+    - name: Приступая к работе
       href: java-sdk-azure-get-started.md
     - name: Краткие руководства
       items:
@@ -103,7 +103,7 @@
               href: jdk/java-jdk-docker-images.md
             - name: Инструмент Java Flight Recorder и сборка Mission Control
               href: jdk/java-jdk-flight-recorder-and-mission-control.md
-            - name: Преимущества перехода на Java 11
+            - name: "Преимущества перехода на Java\_11"
               href: jdk/reasons-to-move-to-java-11.md
         - name: Visual Studio Code
           href: 'https://code.visualstudio.com/docs/languages/java'
@@ -152,8 +152,16 @@
       items:
         - name: Добавление корневого сертификата
           href: java-sdk-add-certificate-ca-store.md
-        - name: Проверка подлинности
+        - name: Authenticate
           href: java-sdk-azure-authenticate.md
+        - name: Перенос Java в Azure
+          items:
+            - name: Обзор
+              href: migration-overview.md
+            - name: Перенос Tomcat в Службу приложений Azure
+              href: migrate-tomcat-to-tomcat-app-service.md
+            - name: Перенос Tomcat в контейнеры в AKS
+              href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
     - name: Примеры кода
       items:
         - name: Service Fabric
@@ -164,11 +172,11 @@
           href: java-sdk-azure-web-apps-samples.md
         - name: База данных SQL
           href: java-sdk-azure-sql-database-samples.md
-        - name: Безопасность
+        - name: безопасность
           href: java-sdk-azure-security-samples.md
         - name: Контейнеры
           href: java-sdk-azure-containers-samples.md
         - name: Все примеры для Java
           href: 'https://azure.microsoft.com/resources/samples/?platform=java'
-    - name: Справочные материалы
+    - name: Справочник
       href: /java/api/?view=azure-java
