@@ -1,25 +1,25 @@
 ---
-title: Руководство по Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
+title: Руководство. Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 description: Шаг руководства 7. Очистка ресурсов Azure
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 5a890ae2db4f9aa9bd3ca09364467adb022beed8
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8145b33ae52427d55c9b3de9fcf6fb20467b7ba9
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466053"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125267"
 ---
-# <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
+# <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство. Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
 [Предыдущий шаг: потоковая передача журналов](tutorial-deploy-app-service-on-linux-06.md)
 
-Созданная Служба приложений Azure включает резервный план службы приложений, за использование которого может взиматься плата. Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши Службу приложений в обозревателе **Azure: Служба приложений** и выберите **Удалить**.
+Созданная Служба приложений Azure включает резервный план службы приложений, за использование которого может взиматься плата. Чтобы избежать затрат, удалите группу ресурсов, содержащую все эти ресурсы.
 
-Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Поздравляем с завершением пошагового руководства по развертыванию кода Python в Службе приложений Azure в Linux.
 

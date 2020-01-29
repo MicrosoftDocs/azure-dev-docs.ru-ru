@@ -1,25 +1,25 @@
 ---
-title: Руководство по Очистка ресурсов Azure
+title: Руководство. Очистка ресурсов Azure
 description: Шаг руководства 5. Очистка ресурсов Azure, позволяющая избежать постоянных расходов
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c6688dcfb1d3c8adbf4ba2e0eb2603ce85de43c
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: bbafb323c49b9dd6879bf69924d8e8bcf62093a3
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466058"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125246"
 ---
-# <a name="tutorial-clean-up-azure-resources"></a>Руководство по Очистка ресурсов Azure
+# <a name="tutorial-clean-up-azure-resources"></a>Руководство. Очистка ресурсов Azure
 
 [Предыдущий шаг: потоковая передача журналов](tutorial-deploy-containers-04.md)
 
-В этой статье описано, как удалить ресурсы Azure, созданные при развертывании приложения в Службе приложений Azure с помощью Visual Studio Code.
+За использование ресурсов Azure, созданных с помощью этого руководства, может взиматься дополнительная плата. Чтобы избежать затрат, удалите группу ресурсов, содержащую все эти ресурсы.
 
-За использование разных ресурсов Azure, созданных с помощью этого руководства, может взиматься дополнительная плата. Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 См. сведения о расширениях Docker и Службы приложений в соответствующих репозиториях на сайте GitHub: [vscode-docker](https://github.com/Microsoft/vscode-docker) и [vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice). Мы будем рады любым предложениям и сообщениям о проблемах.
 

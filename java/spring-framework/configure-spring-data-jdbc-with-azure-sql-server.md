@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: d5e7ff3a31f8fb66b4231770c86094244752b439
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: b75db0f3cff02b5f7ead90265a170fc63405dbb6
+ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022119"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76283337"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Как использовать JDBC Spring Data с Базой данных SQL Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "76022119"
 
 В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации в [базу данных SQL Azure](https://azure.microsoft.com/services/sql-database/) с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -46,10 +46,10 @@ ms.locfileid: "76022119"
 
 1. Укажите следующие сведения:
 
-   - **Имя базы данных**. Выберите уникальное имя Базы данных SQL. Позже оно будет использоваться при создании сервера SQL.
-   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
-   - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Выберите источник**. В рамках данного руководства выберите `Blank database`, чтобы создать базу данных.
+   * **Имя базы данных**. Выберите уникальное имя Базы данных SQL. Позже оно будет использоваться при создании сервера SQL.
+   * **Подписка**: Укажите подписку Azure, которую нужно использовать.
+   * **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
+   * **Выберите источник**. В рамках данного руководства выберите `Blank database`, чтобы создать базу данных.
 
    ![Укажите свойства Базы данных SQL][SQL02]
    
@@ -91,6 +91,19 @@ ms.locfileid: "76022119"
 
    ![Получение строки подключения JDBC][SQL09]
 
+### <a name="create-test-table-in-database"></a>Создание тестовой таблицы в базе данных
+Чтобы запустить клиентское приложение для этой базы данных, используйте следующую команду SQL для создания новой таблицы.
+
+``` SQL
+IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE NAME='pet' and XTYPE='U')
+  CREATE TABLE pet (
+    id      INT           IDENTITY  PRIMARY KEY,
+    name    VARCHAR(255),
+    species VARCHAR(255)
+  );
+
+```
+
 ## <a name="configure-the-sample-application"></a>Настройка примера приложения
 
 1. Откройте командную строку и клонируйте пример проекта с помощью команды Git, как в следующем примере:
@@ -99,18 +112,28 @@ ms.locfileid: "76022119"
    git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
    ```
 
+1. Измените POM-файл, включив в него следующую зависимость.
+
+```
+ <dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+ </dependency>
+```
 1. Найдите файл *application.properties* в каталоге *resources* примера приложения или создайте его, если он еще не существует.
 
 1. Откройте файл *application.properties* в текстовом редакторе, добавьте или настройте указанные ниже строки в файл и замените примеры значений на соответствующие полученные ранее значения:
 
    ```yaml
+   spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
    spring.datasource.url=jdbc:sqlserver://wingtiptoyssql.database.windows.net:1433;database=wingtiptoys;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
    spring.datasource.username=wingtiptoysuser@wingtiptoyssql
    spring.datasource.password=********
     ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `spring.datasource.url` | Указывается измененная версия строки SQL JDBC, описанная ранее в этой статье. |
    | `spring.datasource.username` | Указывается администратор SQL, описанный ранее в этой статье вместе с сокращенным именем сервера. |
@@ -136,8 +159,12 @@ ms.locfileid: "76022119"
 
    ```shell
    curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   ```
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   или:
+
+``` shell
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    Приложение должно возвращать значения следующим образом:
