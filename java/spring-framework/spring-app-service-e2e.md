@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: aa26952b320392beb553f327920fe5bd905a0b85
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811824"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872139"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -21,10 +21,10 @@ ms.locfileid: "74811824"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Интерфейс командной строки Azure](https://docs.microsoft.com/cli/azure/overview)
+* [Azure CLI](https://docs.microsoft.com/cli/azure/overview)
 * [Java 8](http://java.oracle.com/);
 * [Maven 3](http://maven.apache.org/)
-* [Git](https://github.com/)
+* [Git](https://github.com/);
 * [Tomcat](https://tomcat.apache.org/download-80.cgi)
 * [CLI MySQL](http://dev.mysql.com/downloads/mysql/)
 
@@ -121,7 +121,7 @@ Maven будет использовать эти значения для соз�
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -320,7 +320,7 @@ az appservice plan update --number-of-workers 2 \
 az group delete --name ${RESOURCEGROUP_NAME}
 ```
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Ознакомьтесь с другими вариантами конфигурации и вариантами CI/CD, доступными для Java в Службе приложений.
 

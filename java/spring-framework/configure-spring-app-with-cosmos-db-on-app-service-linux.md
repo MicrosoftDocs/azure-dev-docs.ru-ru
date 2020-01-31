@@ -6,12 +6,12 @@ ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: ab49d2c05477d6f2674cd410cf3b9fbeda357bf8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 53bc7d9ebd03fb122d58dd52145876e698dc751f
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812167"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872169"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
 
@@ -27,7 +27,7 @@ ms.locfileid: "74812167"
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
-- Чтобы развернуть веб-приложение Java в облаке, требуется подписка Azure. Если у вас нет подписки Azure, вы можете активировать [преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure]((https://azure.microsoft.com/pricing/free-trial/)).
+- Чтобы развернуть веб-приложение Java в облаке, требуется подписка Azure. Если у вас нет подписки Azure, вы можете активировать [преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure](https://azure.microsoft.com/pricing/free-trial/).
 - [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
 - [JDK Java 8](https://docs.microsoft.com/azure/java/jdk/java-jdk-install)
 - [Maven 3](http://maven.apache.org/)
@@ -299,7 +299,7 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
       --resource-group ${RESOURCEGROUP_NAME}
     ```
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Руководство разработчика для Java для службы приложений в Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-java).
 - [Azure для разработчиков Java](https://docs.microsoft.com/azure/java/). Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.

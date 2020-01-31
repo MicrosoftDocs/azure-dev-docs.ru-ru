@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: d30148a3f4d1fc63585b6ca4141566ba2cac4146
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: eefd56cf6fc2c290d585dfe4274b7395a6d77be3
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811922"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872179"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot в кластере Kubernetes в Службе Azure Kubernetes
 
@@ -24,7 +24,7 @@ ms.locfileid: "74811922"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* Подписка Azure. Если у вас ее еще нет, вы можете активировать [преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
+* Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
 * [Интерфейс командной строки Azure (CLI)].
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * Средство сборки [Maven] (версия 3) от Apache.
@@ -36,7 +36,7 @@ ms.locfileid: "74811922"
 > С учетом требований виртуализации для этого руководства изложенные здесь инструкции нельзя выполнять на виртуальной машине. Необходимо использовать физический компьютер с включенными функциями виртуализации.
 >
 
-## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Создание веб-приложения Spring Boot on Docker Getting Started
+## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Создание веб-приложения Spring Boot в Docker
 
 Ниже представлены инструкции по созданию веб-приложения Spring Boot и его локальному тестированию.
 
@@ -78,7 +78,7 @@ ms.locfileid: "74811922"
 
 ## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Создание реестра контейнеров Azure с помощью Azure CLI
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 1. Войдите в свою учетную запись Azure.
    ```azurecli
@@ -117,7 +117,7 @@ ms.locfileid: "74811922"
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.8.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -202,9 +202,9 @@ ms.locfileid: "74811922"
 
 ### <a name="deploy-with-kubectl"></a>Развертывание с помощью kubectl
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
-1. Запустите контейнер в кластере Kubernetes с помощью команды `kubectl run`. Присвойте приложению имя службы в Kubernetes и полное имя образа. Например:
+1. Запустите контейнер в кластере Kubernetes с помощью команды `kubectl run`. Присвойте приложению имя службы в Kubernetes и полное имя образа. Пример:
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -214,7 +214,7 @@ ms.locfileid: "74811922"
 
    * Параметр `--image` указывает объединенное имя сервера входа и образа как `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`.
 
-1. Предоставьте кластер Kubernetes извне с помощью команды `kubectl expose`. Укажите имя службы, общедоступный TCP-порт, используемый для доступа к приложению, и внутренний целевой порт, прослушиваемый приложением. Например:
+1. Предоставьте кластер Kubernetes извне с помощью команды `kubectl expose`. Укажите имя службы, общедоступный TCP-порт, используемый для доступа к приложению, и внутренний целевой порт, прослушиваемый приложением. Пример:
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```
@@ -240,7 +240,7 @@ ms.locfileid: "74811922"
 
 ### <a name="deploy-with-the-kubernetes-web-interface"></a>Развертывание с помощью веб-интерфейса Kubernetes
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 1. Откройте веб-сайт конфигурации кластера Kubernetes в браузере по умолчанию:
    ```
@@ -253,7 +253,7 @@ ms.locfileid: "74811922"
 
 1. Когда отобразится страница **Resource Creation** (Создание ресурса), укажите следующие параметры:
 
-   a. Выберите **Create an App** (Создать приложение).
+   а. Выберите **Create an App** (Создать приложение).
 
    b. Укажите имя приложения Spring Boot в поле **Имя приложения** (например, *gs-spring-boot-docker*).
 
@@ -261,7 +261,7 @@ ms.locfileid: "74811922"
 
    d. Для параметра **Служба** выберите значение **Внешняя**.
 
-   д. Укажите внешний и внутренний порты в текстовых полях **Порт** и **Целевой порт**.
+   д) Укажите внешний и внутренний порты в текстовых полях **Порт** и **Целевой порт**.
 
    ![Веб-сайт конфигурации Kubernetes][KB02]
 
@@ -280,7 +280,7 @@ ms.locfileid: "74811922"
 
    ![Просмотр примера приложения в Azure][SB02]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
@@ -312,7 +312,7 @@ ms.locfileid: "74811922"
 На сайте Kubernetes содержится несколько статей, посвященных использованию образов в частных реестрах:
 
 * [Configure Service Accounts for Pods] (Настройка учетных записей службы для модулей Pod)
-* [Namespaces] (Пространства имен)
+* [Пространства имен]
 * [Pull an Image from a Private Registry] (Извлечение образа из частного реестра)
 
 Дополнительные примеры использования пользовательских образов Docker в Azure см. в разделе [Применение пользовательского образа Docker для веб-приложения Azure на платформе Linux].
@@ -329,7 +329,7 @@ ms.locfileid: "74811922"
 [Применение пользовательского образа Docker для веб-приложения Azure на платформе Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Git]: https://github.com/
+[Git]: https://github.com/;
 [Working with Azure DevOps and Java]: /azure/devops/java/ (Работа с Azure DevOps и Java)
 [Kubernetes]: https://kubernetes.io/
 [Kubernetes Command-Line Interface (kubectl)]: https://kubernetes.io/docs/user-guide/kubectl-overview/
@@ -339,7 +339,7 @@ ms.locfileid: "74811922"
 [Spring Boot on Docker Getting Started]: https://github.com/spring-guides/gs-spring-boot-docker
 [Spring Framework]: https://spring.io/
 [Configure Service Accounts for Pods]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ (Настройка учетных записей службы для модулей Pod)
-[Namespaces]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ (Пространства имен)
+[Пространства имен]: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
 [Pull an Image from a Private Registry]: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/ (Извлечение образа из частного реестра)
 
 [Java Development Kit (JDK)]: https://aka.ms/azure-jdks

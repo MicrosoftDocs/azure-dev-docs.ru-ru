@@ -1,18 +1,14 @@
 ---
 title: Пакет Azure SDK для примеров Go для вычислений и сетевого взаимодействия
 description: Выбранные примеры для работы с такими вычислительными ресурсами, как виртуальные машины и виртуальные сети, с помощью пакета Azure SDK для Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: sample
-ms.devlang: go
-ms.openlocfilehash: f04ba1af468e8f7f5e52847883f1f51948b94ff6
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 9cb8af3ea5ceb24147006d8b57d7231c2c7e9ad9
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68292012"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871864"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>Пакет Azure SDK для примеров Go для вычислений и сетевого взаимодействия
 
@@ -20,7 +16,7 @@ ms.locfileid: "68292012"
 
 Все примеры для пакета Azure SDK для Go доступны в репозитории [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
-| ИМЯ | ОПИСАНИЕ |
+| Имя | Описание |
 |------|-------------|
 | [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network.go) | Создание, обновление и удаление сетевых ресурсов, включая виртуальные сети, подсети и группы безопасности сети, а также выполнение запросов к ним. |
 | [compute/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | Создание, присоединение, отсоединение, обновление и шифрование дисков данных для виртуальной машины. |

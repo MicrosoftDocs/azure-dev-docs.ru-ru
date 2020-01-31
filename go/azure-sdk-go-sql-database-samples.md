@@ -1,18 +1,14 @@
 ---
 title: Пакеты Azure SDK для Go для Базы данных SQL Azure
 description: Выбранные примеры для работы с Базой данных SQL с помощью пакета Azure SDK для Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: sample
-ms.devlang: go
-ms.openlocfilehash: 727d529a646ddc31cc524422a1bbb7758010cdb3
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 49afc78c54c44aeb055b58405498cffb78b626b5
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291893"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871935"
 ---
 # <a name="azure-sdk-for-go-samples-for-azure-sql-database"></a>Пакеты Azure SDK для Go для Базы данных SQL Azure
 
@@ -20,6 +16,6 @@ ms.locfileid: "68291893"
 
 Все примеры для пакета Azure SDK для Go доступны в репозитории [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
-| ИМЯ | ОПИСАНИЕ |
+| Имя | Описание |
 |------|-------------|
 | [sql/sql](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/sql/sql.go) | Создание и администрирование новых серверов SQL и их использование с базами данных. |

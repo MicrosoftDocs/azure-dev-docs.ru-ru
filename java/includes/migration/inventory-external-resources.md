@@ -1,14 +1,13 @@
 ---
 author: yevster
 ms.author: yebronsh
-ms.topic: include
 ms.date: 1/20/2020
-ms.openlocfilehash: 8c2ada1a8a11e1f0ae108e4356434825a2cf0b76
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: affabacec95b8f1c4c7ea654ff9a765056220c76
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288563"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825834"
 ---
 ### <a name="inventory-external-resources"></a>Проверка внешних ресурсов
 

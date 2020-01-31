@@ -1,9 +1,16 @@
 ---
-ms.openlocfilehash: 75c32078e69e7aee0f117f785e3ec8e61df11ead
-ms.sourcegitcommit: 9b60ed7968943969f29efde4a7860305ad827e17
+title: индекс
+author: barbkess
+ms.author: barbkess
+manager: carmonm
+ms.service: azure
+ms.topic: article
+ms.date: 01/28/2020
+ms.openlocfilehash: 7489828739da5dc52f41d39d4452a2ea40fd8f4c
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73917023"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871984"
 ---
 # <a name="welcome-to-azure-dev-docs"></a>Добро пожаловать в azure-dev-docs!

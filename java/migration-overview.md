@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fbf1faabbefcb987cf398a45005eb480ec16b27d
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288593"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825798"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -129,9 +129,9 @@ ms.locfileid: "76288593"
 
 |Место назначения&nbsp;→<br><br>Тип&nbsp;приложения&nbsp;↓|Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Приложение<br>Служба<br>WildFly|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| Приложения<br>Spring Boot (JAR) | Планируется | Планируется        | Планируется | Планируется | Планируется        | Планируется |
-| Spring Cloud<br>(микрослужбы)   | Недоступно     | Недоступно            | Недоступно     | Планируется | Планируется        | Планируется |
-| Веб-приложения<br>в Tomcat     | Недоступно     | [Доступно][2] | Недоступно     | Недоступно     | [Доступно][3] | Планируется |
+| Приложения<br>Spring Boot (JAR) | [Доступно][5] | Планируется        | Планируется | Планируется | Планируется        | Планируется |
+| Spring Cloud<br>(микрослужбы)   | Недоступно            | Недоступно            | Недоступно     | Планируется | Планируется        | Планируется |
+| Веб-приложения<br>в Tomcat     | Недоступно            | [Доступно][2] | Недоступно     | Недоступно     | [Доступно][3] | Планируется |
 
 **Приложения Java EE**
 
@@ -139,12 +139,14 @@ ms.locfileid: "76288593"
 
 |Место назначения&nbsp;→<br><br>Сервер приложений&nbsp;↓|Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Приложение<br>Служба<br>WildFly|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | Недоступно | Недоступно | Планируется | Недоступно | Планируется | Планируется |
-| WebLogic              | Недоступно | Недоступно | Планируется | Недоступно | Планируется | Планируется |
-| WebSphere             | Недоступно | Недоступно | Планируется | Недоступно | Планируется | Планируется |
-| JBoss EAP             | Недоступно | Недоступно | Планируется | Недоступно | Недоступно     | Планируется |
+| WildFly /<br>JBoss AS | Недоступно | Недоступно | Планируется | Недоступно | Планируется | Планируется        |
+| WebLogic              | Недоступно | Недоступно | Планируется | Недоступно | Планируется | [Доступно][4] |
+| WebSphere             | Недоступно | Недоступно | Планируется | Недоступно | Планируется | Планируется        |
+| JBoss EAP             | Недоступно | Недоступно | Планируется | Недоступно | Недоступно     | Планируется        |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
 [2]: migrate-tomcat-to-tomcat-app-service.md
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+[4]: migrate-weblogic-to-virtual-machines.md
+[5]: migrate-java-se-to-java-se-app-service.md

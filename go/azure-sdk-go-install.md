@@ -1,18 +1,14 @@
 ---
 title: Установка пакета Azure SDK для Go
 description: Сведения о том, как выполнить установку, вендоринг и настройку пакета Azure SDK для Go.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 03/14/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: e7a4449ed29239e7cb08902cee299d74102a72bf
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: daf725a59042038e682c852a50080972d33a497e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291944"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871894"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Установка пакета Azure SDK для Go
 
@@ -24,7 +20,7 @@ ms.locfileid: "68291944"
 
 Некоторые службы Azure содержат собственные пакеты SDK Go, которые не включены в основной пакет Azure SDK для Go. В следующей таблице перечислены службы, содержащие собственные пакеты SDK, с указанием имен пакетов. Все эти пакеты доступны в режиме предварительной версии.
 
-| Service | Package |
+| Служба | Пакет |
 |---------|---------|
 | Хранилище BLOB-объектов | [github.com/Azure/azure-storage-blob-go](https://github.com/Azure/azure-storage-blob-go) |
 | Хранилище файлов | [github.com/Azure/azure-storage-file-go](https://github.com/Azure/azure-storage-file-go) |
@@ -47,7 +43,7 @@ version = "14.0.0"
 Чтобы использовать службы Azure из кода Go, импортируйте все службы, с которыми вы взаимодействуете, и необходимые модули `autorest`.
 Получить полный список доступных модулей для [доступных служб](https://godoc.org/github.com/Azure/azure-sdk-for-go) и [пакетов AutoRest](https://godoc.org/github.com/Azure/go-autorest) можно на сайте GoDoc. Ниже приводятся наиболее распространенные пакеты, которые нужно скачать в репозитории `go-autorest`:
 
-| Package | ОПИСАНИЕ |
+| Пакет | Описание |
 |---------|-------------|
 | [github.com/Azure/go-autorest/autorest][autorest] | Объекты для обработки аутентификации клиента службы |
 | [github.com/Azure/go-autorest/autorest/azure][autorest/azure] | Константы для взаимодействия со службами Azure |
@@ -77,7 +73,7 @@ import "github.com/Azure/azure-sdk-for-go/profiles/2017-03-09/resources/mgmt/res
 > [!WARNING]
 > Существуют также профили `preview` и `latest`. Мы не рекомендуем использовать их. Это профили промежуточных версий, и поведение службы может измениться в любое время.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Чтобы начать работу с пакетом Azure SDK для Go, используйте код быстрого запуска.
 

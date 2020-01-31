@@ -1,20 +1,14 @@
 ---
 title: Модули Azure для JavaScript
 description: Обзор модулей служб и управления Azure для JavaScript
-author: karlerickson
-ms.author: karler
-manager: douge
 ms.date: 06/17/2017
 ms.topic: article
-ms.prod: azure
-ms.devlang: nodejs
-ms.service: azure-nodejs
-ms.openlocfilehash: 36a12c760e34949a6978e2a431a03f15a4ad4b6b
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 54405e8406dffec7333ef22d5f837de0db9037b5
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690796"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872119"
 ---
 # <a name="azure-modules-for-javascript"></a>Модули Azure для JavaScript
 
