@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: ce1c54f0f4b28c5c0a2e11f4afc53f1dd59899c5
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288603"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825898"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
@@ -21,36 +21,17 @@ ms.locfileid: "76288603"
 Если вы не можете выполнить какие-либо требования для подготовки к миграции, ознакомьтесь со следующими дополнительными руководствами по переносу:
 
 * [Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Migrate Tomcat Applications to Azure Virtual Machines (Перенос приложений Tomcat на виртуальные машины Azure) (ожидается)
+* Миграция приложений Tomcat в Виртуальные машины Azure (планируется)
 
 ## <a name="pre-migration-steps"></a>Шаги по подготовке к миграции
 
-* [Переход на поддерживаемую платформу](#switch-to-a-supported-platform)
-* [Проверка внешних ресурсов](#inventory-external-resources)
-* [Проверка секретов](#inventory-secrets)
-* [Проверка использования сохраняемости](#inventory-persistence-usage)
-* [Особые случаи](#special-cases)
-
 ### <a name="switch-to-a-supported-platform"></a>Переход на поддерживаемую платформу
 
-В Службе приложений доступны некоторые версии Tomcat на основе определенных версий Java. Чтобы обеспечить совместимость, перенесите приложение в одну из поддерживаемых версий Tomcat и Java в текущей среде, прежде чем переходить к остальным действиям. Обязательно полностью протестируйте готовую конфигурацию. В таких тестах в качестве операционной системы используйте [Red Hat Enterprise Linux 8](https://portal.azure.com/#create/RedHat.RedHatEnterpriseLinux80-ARM).
+В Службе приложений доступны некоторые версии Tomcat на основе определенных версий Java. Чтобы обеспечить совместимость, перенесите приложение в одну из поддерживаемых версий Tomcat и Java в текущей среде, прежде чем переходить к остальным действиям. Обязательно полностью протестируйте готовую конфигурацию. Используйте в этих тестах последний стабильный выпуск дистрибутива Linux.
 
-#### <a name="java"></a>Java
+[!INCLUDE [note-obtain-your-current-java-version](includes/migration/note-obtain-your-current-java-version.md)]
 
-> [!NOTE]
-> Эта проверка особенно важна, если на текущем сервере используется неподдерживаемая версия JDK (например, Oracle JDK или IBM OpenJ9).
-
-Чтобы получить текущую версию Java, войдите на сервер в рабочей среде и выполните следующую команду:
-
-```bash
-java -version
-```
-
-Чтобы получить текущую версию, используемую в Службе приложений Azure, скачайте [Zulu 8](https://www.azul.com/downloads/zulu-community/?&version=java-8-lts&os=&os=linux&architecture=x86-64-bit&package=jdk), если вы планируете использовать среду выполнения Java 8, или [Zulu 11](https://www.azul.com/downloads/zulu-community/?&version=java-11-lts&os=&os=linux&architecture=x86-64-bit&package=jdk), если вы планируете использовать среду выполнения Java 11.
-
-#### <a name="tomcat"></a>Tomcat
-
-Чтобы узнать текущую версию Tomcat, войдите на сервер в рабочей среде и выполните следующую команду:
+Чтобы получить текущую версию Tomcat, войдите на рабочий сервер и выполните следующую команду:
 
 ```bash
 ${CATALINA_HOME}/bin/version.sh
@@ -61,6 +42,8 @@ ${CATALINA_HOME}/bin/version.sh
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
 [!INCLUDE [inventory-secrets](includes/migration/inventory-secrets.md)]
+
+[!INCLUDE [inventory-certificates](includes/migration/inventory-certificates.md)]
 
 [!INCLUDE [inventory-persistence-usage](includes/migration/inventory-persistence-usage.md)]
 
@@ -73,7 +56,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 Чтобы узнать, какой используется диспетчер сохраняемости сеансов, изучите файлы *context.xml* в приложении и конфигурации Tomcat. Найдите элемент `<Manager>` и запишите значение атрибута `className`.
 
-Встроенные реализации Tomcat [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
+Встроенные реализации [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
 
 Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например Pivotal Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -123,7 +106,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 ## <a name="migration"></a>Миграция
 
-### <a name="parametrize-the-configuration"></a>Параметризация конфигурации
+### <a name="parameterize-the-configuration"></a>Параметризация конфигурации
 
 В ходе предварительной миграции будут определены секреты и внешние зависимости, такие как источники данных, в файлах *server.xml* и *context.xml*. Для каждого определенного элемента измените имя пользователя, пароль, строку подключения или URL-адрес на переменную среды.
 
@@ -164,7 +147,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 ### <a name="create-and-deploy-web-apps"></a>Создание и развертывание веб-приложений
 
-Для каждого WAR-файла, развернутого на сервере Tomcat, необходимо создать веб-приложение в плане службы приложений.
+Для каждого WAR-файла, развернутого на сервере Tomcat, необходимо создать веб-приложение в плане службы приложений, выбрав версию Tomcat в качестве стека времени выполнения.
 
 > [!NOTE]
 > Вы можете развернуть несколько WAR-файлов в одном веб-приложении, но это крайне нежелательно. Если развернуть несколько WAR-файлов в одном веб-приложении, приложения не смогут масштабироваться в соответствии с требованиями к их использованию. Кроме того, это усложнит выполнение последующих конвейеров развертывания. Если несколько приложений должны быть доступны по одному URL-адресу, попробуйте использовать решение для маршрутизации, например [Шлюз приложений Azure](/azure/application-gateway/).
@@ -191,11 +174,9 @@ ${CATALINA_HOME}/bin/version.sh
 
 Чтобы сохранить все секреты, относящиеся к вашему приложению, используйте параметры приложения. Либо используйте [Azure Key Vault](/azure/app-service/containers/configure-language-java#use-keyvault-references), если вы планируете применять одни и те же секреты в нескольких приложениях или реализовать политики для точного управления доступом и возможности аудита.
 
-### <a name="configure-custom-domain-and-ssl"></a>Настройка личного домена и SSL
+[!INCLUDE [configure-custom-domain-and-ssl](includes/migration/configure-custom-domain-and-ssl.md)]
 
-Если приложение будет отображаться в личном домене, вам нужно будет [сопоставить с ним веб-приложение](/azure/app-service/app-service-web-tutorial-custom-domain).
-
-После этого потребуется [привязать SSL-сертификат для этого домена к веб-приложению в Службе приложений](/azure/app-service/app-service-web-tutorial-custom-ssl).
+[!INCLUDE [import-backend-certificates](includes/migration/import-backend-certificates.md)]
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>Перенос источников данных, библиотек и ресурсов JNDI
 
@@ -214,14 +195,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 Завершите перенос, скопировав все дополнительные конфигурации (например, [realms](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html) и [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html)).
 
-### <a name="migrate-scheduled-jobs"></a>Перенос запланированных заданий
-
-Для выполнения запланированных заданий в Azure рекомендуется использовать [Функции Azure с триггером таймера](/azure/azure-functions/functions-bindings-timer). Переносить сам код задания в функцию не нужно. Функция может просто вызвать URL-адрес в приложении, чтобы активировать задание.
-
-Либо создайте [приложение логики](/azure/logic-apps/logic-apps-overview) с [триггером повторения](/azure/logic-apps/tutorial-build-schedule-recurring-logic-app-workflow#add-the-recurrence-trigger) для вызова URL-адреса без необходимости писать код за пределами приложения.
-
-> [!NOTE]
-> Чтобы предотвратить вредоносное использование, необходимо убедиться, что конечная точка вызова задания запрашивает ввод учетных данных. В этом случае функция для триггеров должна предоставить учетные данные.
+[!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 
 ### <a name="restart-and-smoke-test"></a>Перезапуск и тест состояния
 

@@ -4,14 +4,14 @@ description: Руководство, часть 2. Создание приме�
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: bc930b7c6a3454ca335fec5a955113a45fa2f0f2
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b236f64f04be0c0b8faa74eb67ce22f96ec595aa
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466551"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825848"
 ---
-# <a name="create-the-app"></a>Создание приложения
+# <a name="create-the-app"></a>Создайте приложение
 
 [Предыдущий шаг. Общие сведения и предварительные требования](tutorial-vscode-static-website-node-01.md)
 
@@ -42,7 +42,7 @@ ms.locfileid: "74466551"
     npm start
     ```
 
-1. Откройте в браузере страницу по адресу [http://localhost:3000](http://localhost:3000), чтобы проверить работу приложения:
+1. Откройте в браузере страницу по адресу [http://localhost:4200](http://localhost:4200), чтобы проверить работу приложения:
 
     ![Работающий пример приложения Angular](media/static-website/local-app-angular.png)
 

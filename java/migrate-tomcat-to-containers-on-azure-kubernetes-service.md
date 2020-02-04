@@ -5,24 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: da516609aaf976db929664bf0402a48f378034d3
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288613"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825833"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes
 
 Узнайте, что следует учитывать при переносе существующего приложения Tomcat для запуска в контейнере Службы Azure Kubernetes (AKS).
 
 ## <a name="pre-migration-steps"></a>Шаги по подготовке к миграции
-
-* [Проверка внешних ресурсов](#inventory-external-resources)
-* [Проверка секретов](#inventory-secrets)
-* [Проверка использования сохраняемости](#inventory-persistence-usage)
-* [Особые случаи](#special-cases)
-* [Тестирование на месте](#in-place-testing)
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -75,7 +69,7 @@ ms.locfileid: "76288613"
 
 Прежде чем создавать образы контейнеров, перенесите приложение в JDK и Tomcat для использования в AKS. Тщательно протестируйте приложение, чтобы обеспечить совместимость и высокую производительность.
 
-### <a name="parametrize-the-configuration"></a>Параметризация конфигурации
+### <a name="parameterize-the-configuration"></a>Параметризация конфигурации
 
 В ходе предварительной миграции будут определены секреты и внешние зависимости, такие как источники данных, в файлах *server.xml* и *context.xml*. Для каждого определенного элемента измените имя пользователя, пароль, строку подключения или URL-адрес на переменную среды.
 
@@ -107,7 +101,7 @@ ms.locfileid: "76288613"
 
 ## <a name="migration"></a>Миграция
 
-Мы рекомендуем выполнить следующие действия для каждого приложения (WAR-файл), которое вы хотите перенести, за исключением первого шага (подготовка реестра контейнеров и AKS).
+Мы рекомендуем выполнить следующие действия для каждого приложения (WAR-файл), которое вы хотите перенести, за исключением первого шага — подготовки реестра контейнеров и AKS.
 
 > [!NOTE]
 > Некоторые развертывания Tomcat могут иметь несколько приложений, работающих на одном сервере Tomcat. Если это справедливо для вашего развертывания, мы настоятельно рекомендуем запускать каждое приложение в отдельной группе pod. Это позволяет оптимизировать использование ресурсов для каждого приложения, уменьшая сложность и сокращая степень взаимозависимости.
@@ -128,7 +122,7 @@ az aks create -g $resourceGroup -n $aksName --attach-acr $acrName --network-plug
 
 #### <a name="open-ports-for-clustering-if-needed"></a>Открытие портов для кластеризации (при необходимости)
 
-Если вы планируете использовать [кластеризацию Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) в AKS, убедитесь, что в Dockerfile открыты необходимые диапазоны портов. Чтобы указать IP-адрес сервера в `server.xml`, используйте значение переменной, инициализированной при запуске контейнера, в качестве IP-адреса группы pod.
+Если вы планируете использовать [кластеризацию Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) в AKS, убедитесь, что в Dockerfile открыты необходимые диапазоны портов. Чтобы указать IP-адрес сервера в файле *server.xml*, используйте значение переменной, инициализированной при запуске контейнера, в качестве IP-адреса группы pod.
 
 Кроме того, состояние сеанса можно [хранить в альтернативном расположении](#identify-session-persistence-mechanism), чтобы оно было доступным в репликах.
 
@@ -218,7 +212,7 @@ echo "Your public IP address is ${publicIp}."
 
 Если для работы приложения требуется энергонезависимое хранилище, настройте один или несколько [постоянных томов](/azure/aks/azure-disks-dynamic-pv).
 
-Чтобы хранить журналы централизованно, вы можете [создать постоянный том с помощью службы "Файлы Azure"](/azure/aks/azure-files-dynamic-pv), подключенной к каталогу журналов Tomcat ( */tomcat_logs*).
+Чтобы хранить журналы централизованно, вы можете создать постоянный том с помощью службы "Файлы Azure", подключенной к каталогу журналов Tomcat ( */tomcat_logs*). См. сведения о [динамическом создании и использовании постоянного тома с Файлами Azure в Службе Azure Kubernetes (AKS)](/azure/aks/azure-files-dynamic-pv).
 
 ### <a name="configure-keyvault-flexvolume"></a>Настройка хранилища ключей FlexVolume
 
