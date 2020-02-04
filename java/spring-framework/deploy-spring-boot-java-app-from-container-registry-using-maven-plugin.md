@@ -10,12 +10,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 1c5254c041c57e1fc04ce9553d6902047eec878a
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 729efd44b5b2489462c55c29f669d7bbbde8740c
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811911"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967249"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Развертывание приложения Spring Boot в Реестре контейнеров Azure в Службе приложений Azure с помощью Maven для веб-приложений Azure
 
@@ -61,7 +61,7 @@ ms.locfileid: "74811911"
 
 1. Клонируйте образец проекта [Spring Boot on Docker Getting Started] (Запуск Spring Boot в Docker) в созданный каталог, например:
    ```shell
-   git clone -b https://github.com/spring-guides/gs-spring-boot-docker
+   https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
 1. Перейдите в каталог готового проекта, например:
@@ -98,7 +98,7 @@ ms.locfileid: "74811911"
 
 В этом разделе представлен порядок создания субъекта-службы Azure, которого подключаемый модуль Maven использует при развертывании контейнера в Azure.
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 2. Войдите в учетную запись Azure с помощью интерфейса командной строки Azure.
    ```azurecli
@@ -108,15 +108,9 @@ ms.locfileid: "74811911"
 
 3. Создайте субъект-службу Azure.
    ```azurecli
-   az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
+   az ad sp create-for-rbac --name <ServicePrincipalName>
    ```
-   Описание
-
-   | Параметр  |                    ОПИСАНИЕ                     |
-   |------------|----------------------------------------------------|
-   | `uuuuuuuu` | Определяет имя пользователя для субъекта-службы. |
-   | `pppppppp` | Определяет пароль для субъекта-службы.  |
-
+Если параметры аутентификации не указаны, используется аутентификация на основе пароля, который генерируется случайным образом.
 
 4. В ответ Azure предоставит код JSON, аналогичный приведенному ниже.
    ```json
@@ -137,7 +131,7 @@ ms.locfileid: "74811911"
 
 ## <a name="create-an-azure-container-registry-using-the-azure-cli"></a>Создание реестра контейнеров Azure с помощью Azure CLI
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 1. Войдите в свою учетную запись Azure.
    ```azurecli
@@ -186,9 +180,9 @@ ms.locfileid: "74811911"
       </server>
    </servers>
    ```
-   Описание
+   Где:
 
-   |   Элемент    |                                 ОПИСАНИЕ                                  |
+   |   Элемент    |                                 Описание                                  |
    |--------------|------------------------------------------------------------------------------|
    |    `<id>`    |         Содержит имя закрытого реестра контейнеров Azure.          |
    | `<username>` |         Содержит имя закрытого реестра контейнеров Azure.          |
@@ -210,9 +204,9 @@ ms.locfileid: "74811911"
       </server>
    </servers>
    ```
-   Описание
+   Где:
 
-   |     Элемент     |                                                                                   ОПИСАНИЕ                                                                                   |
+   |     Элемент     |                                                                                   Описание                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `<id>`      |                                Задает уникальное имя, которое Maven использует для поиска параметров безопасности при развертывании веб-приложения в Azure.                                |
    |   `<client>`    |                                                             Содержит значение `appId` из субъекта-службы.                                                             |
@@ -237,15 +231,15 @@ ms.locfileid: "74811911"
       <maven.build.timestamp.format>yyyyMMddHHmmssSSS</maven.build.timestamp.format>
    </properties>
    ```
-   Описание
+   Где:
 
-   |           Элемент           |                                                                       ОПИСАНИЕ                                                                       |
+   |           Элемент           |                                                                       Описание                                                                       |
    |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
    | `<azure.containerRegistry>` |                                              Задает имя закрытого реестра контейнеров Azure.                                               |
    |   `<docker.image.prefix>`   | Задает URL-адрес закрытого реестра контейнеров Azure, который сформирован путем добавления ".azurecr.io" к имени закрытого реестра контейнеров. |
 
 
-3. Убедитесь, что в элементе `<plugin>` для подключаемого модуля Docker в файле *pom.xml* содержатся необходимые свойства для адреса сервера входа и имя реестра из предыдущего шага в этом руководстве. Например:
+3. Убедитесь, что в элементе `<plugin>` для подключаемого модуля Docker в файле *pom.xml* содержатся необходимые свойства для адреса сервера входа и имя реестра из предыдущего шага в этом руководстве. Пример:
 
    ```xml
    <plugin>
@@ -267,9 +261,9 @@ ms.locfileid: "74811911"
       </configuration>
    </plugin>
    ```
-   Описание
+   Где:
 
-   |     Элемент     |                                       ОПИСАНИЕ                                       |
+   |     Элемент     |                                       Описание                                       |
    |-----------------|-----------------------------------------------------------------------------------------|
    |  `<serverId>`   |  Задает свойство, которое содержит имя закрытого реестра контейнеров Azure.   |
    | `<registryUrl>` | Задает свойство, которое содержит URL-адрес закрытого реестра контейнеров Azure. |
@@ -318,7 +312,7 @@ ms.locfileid: "74811911"
 
 Существует несколько значений, которые можно изменить для подключаемого модуля Maven. Подробное описание каждого из этих элементов см. в документации по [Подключаемый модуль Maven для веб-приложений Azure]. Существует ряд значений, на которые следует обратить внимание в этой статье.
 
-| Элемент | ОПИСАНИЕ |
+| Элемент | Описание |
 |---|---|
 | `<version>` | Версия [Подключаемый модуль Maven для веб-приложений Azure]. Обратитесь к списку версий в [центральном репозитории Maven](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22), чтобы убедиться, что вы используете актуальную версию. |
 | `<authentication>` | Сведения для проверки подлинности для Azure, в которых в данном примере содержится элемент `<serverId>`, который, в свою очередь, содержит `azure-auth`; Maven использует это значение для поиска значений субъекта-службы Azure в файле Maven *settings.xml*, который вы определили в предыдущем разделе этой статьи. |
@@ -365,7 +359,7 @@ Maven выполнит развертывание веб-приложения в
 >
 >
 
-После развертывания веб-приложения вы сможете управлять им с помощью [портал Azure].
+После развертывания веб-приложения вы сможете управлять им с помощью [Портал Azure].
 
 * Веб-приложение будет указано в разделе **Службы приложений**:
 
@@ -375,7 +369,7 @@ Maven выполнит развертывание веб-приложения в
 
    ![Определение URL-адреса для веб-приложения][AP02]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
@@ -403,14 +397,14 @@ Maven выполнит развертывание веб-приложения в
 [Интерфейс командной строки Azure (CLI)]: /cli/azure/overview
 [Azure Container Service (AKS)]: https://azure.microsoft.com/services/container-service/
 [Azure для разработчиков Java]: /azure/java/
-[портал Azure]: https://portal.azure.com/
+[Портал Azure]: https://portal.azure.com/
 [Подключаемый модуль Maven для веб-приложений Azure]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 [Create a private Docker container registry using the Azure portal]: /azure/container-registry/container-registry-get-started-portal
 [Using a custom Docker image for Azure Web App on Linux]: /azure/app-service/containers/tutorial-custom-docker-image
 [Docker]: https://www.docker.com/
 [Подключаемый модуль Docker для Maven]: https://github.com/spotify/docker-maven-plugin
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Git]: https://github.com/
+[Git]: https://github.com/;
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Maven]: https://maven.apache.org/
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
