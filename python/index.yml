@@ -10,12 +10,12 @@ metadata:
   ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: b6c33142880eb289cfe1c87b54341341f98ef939
-  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+  ms.openlocfilehash: 39ea83a1e5795b6eec19ef960b188b156525329b
+  ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73568170"
+  ms.lasthandoff: 02/04/2020
+  ms.locfileid: "77002183"
 landingContent:
 - title: Начало работы с Azure SDK для Python
   linkLists:
@@ -72,7 +72,7 @@ landingContent:
     - text: Расширения Azure для Visual Studio Code
       url: https://code.visualstudio.com/docs/azure/extensions
     - text: Установка Azure CLI
-      url: /azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /cli/azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Непосредственное выполнение приложений Linux в Windows 10 с использованием разных дистрибутивов
       url: /windows/wsl/install-win10?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
 - title: Службы для обработки и анализа данных, ИИ и машинного обучения
@@ -98,7 +98,7 @@ landingContent:
   - linkListType: overview
     links:
     - text: Сведения о решениях хранилища в Azure
-      url: /storage/common/storage-introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/storage/common/storage-introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Использование масштабируемых решений NoSQL с Azure CosmosDB
       url: /azure/cosmos-db/introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Обмен сообщениями между приложениями с помощью Служебной шины Azure
