@@ -6,12 +6,12 @@ ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: a4ea556fa9fa43575d56d041e0d177ed834555cb
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: c1b8145fd2e7085f524329f958c43797df6c6b1a
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812311"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002418"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Управление виртуальными машинами Azure из приложений Java
 
@@ -152,13 +152,13 @@ azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 
 | Класс, используемый в примере | Примечания
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | Запрос свойств и управление состоянием виртуальных машин. Извлекается в виде списка с помощью `azure.virtualMachines().list()` или по имени либо идентификатору `azure.virtualMachines().getByResourceGroup()`
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | Класс со статическими значениями, сопоставленными с [параметрами размера виртуальной машины](https://azure.microsoft.com/pricing/details/virtual-machines/linux/), используемыми в методе `withSize()` для определения ресурсов, выделенных для виртуальной машины.
-| [Диск](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | Создание диска для хранения данных с помощью `withData()` или образа операционной системы с помощью соответствующего метода `withLinux` либо `withWindows` при определении диска. Подключение дисков к виртуальным машинам во время создания (`using withNewDataDisk` или `withExistingDataDisk`) или после создания с помощью `update()..apply()` в объекте VirtualMachine.
-| [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk_sku_types) | Класс статических значений для определения диска с помощью тарифного плана хранилища уровня "Стандартный" или ["Премиум"](https://docs.microsoft.com/azure/storage/storage-premium-storage).
-| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | Класс с набором параметров виртуальной машины Linux, используемых с методом `withPopularLinuxImage()` при определении виртуальной машины.
-| [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | Класс с набором параметров виртуальной машины Windows, используемых с методом `withPopularWindowsImage()` при определении виртуальной машины.
+| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachine) | Запрос свойств и управление состоянием виртуальных машин. Извлекается в виде списка с помощью `azure.virtualMachines().list()` или по имени либо идентификатору `azure.virtualMachines().getByResourceGroup()`
+| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinesizetypes) | Класс со статическими значениями, сопоставленными с [параметрами размера виртуальной машины](https://azure.microsoft.com/pricing/details/virtual-machines/linux/), используемыми в методе `withSize()` для определения ресурсов, выделенных для виртуальной машины.
+| [Диск](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.disk) | Создание диска для хранения данных с помощью `withData()` или образа операционной системы с помощью соответствующего метода `withLinux` либо `withWindows` при определении диска. Подключение дисков к виртуальным машинам во время создания (`using withNewDataDisk` или `withExistingDataDisk`) или после создания с помощью `update()..apply()` в объекте VirtualMachine.
+| [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.diskskutypes) | Класс статических значений для определения диска с помощью тарифного плана хранилища уровня "Стандартный" или ["Премиум"](https://docs.microsoft.com/azure/storage/storage-premium-storage).
+| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.knownlinuxvirtualmachineimage) | Класс с набором параметров виртуальной машины Linux, используемых с методом `withPopularLinuxImage()` при определении виртуальной машины.
+| [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.knownwindowsvirtualmachineimage) | Класс с набором параметров виртуальной машины Windows, используемых с методом `withPopularWindowsImage()` при определении виртуальной машины.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

@@ -6,12 +6,12 @@ ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: b1eeaa139e7642220524a76869fd8713044f9df5
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 88298088099ed61c97eb6cb4a900c2ce55f5c3f0
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812324"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002435"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Управление учетными записями хранения Azure из приложений Java
 
@@ -43,7 +43,7 @@ StorageAccount storageAccount = azure.storageAccounts().define(storageAccountNam
                     .create();
 ```
 
-Указанное имя хранилища должно быть уникальным в Azure и содержать только строчные буквы и цифры. Для этой учетной записи по умолчанию используется профиль производительности и репликации [Standard_GRS](https://docs.microsoft.com/azure/storage/storage-redundancy#geo-redundant-storage).
+Указанное имя хранилища должно быть уникальным в Azure и содержать только строчные буквы и цифры. Для этой учетной записи по умолчанию используется профиль производительности и репликации [Standard_GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs).
 
 ## <a name="list-keys-in-a-storage-account"></a>Получение списка ключей в учетной записи хранения
 ```java
@@ -75,7 +75,7 @@ for (StorageAccount sa : accounts) {
 }
 ```
 
-На странице [com.microsoft.azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account) доступен набор полезных методов для проверки настроек учетной записи хранения.
+На странице [com.microsoft.azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount) доступен набор полезных методов для проверки настроек учетной записи хранения.
 
 ## <a name="delete-a-storage-account"></a>Удаление учетной записи хранения
 ```java
@@ -100,9 +100,9 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 
 | Класс, используемый в примере | Примечания
 |-------|-------|
-| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Представляет учетную запись хранения Azure. Чтобы получить сведения об учетной записи хранения, используйте методы в классе.
-| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()` возвращает ключи учетной записи хранения. Используйте методы `regenerateKey` в `StorageAccount`, чтобы обновить ключи.
+| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount)  | Представляет учетную запись хранения Azure. Чтобы получить сведения об учетной записи хранения, используйте методы в классе.
+| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccountkey) | `StorageAccount.getKeys()` возвращает ключи учетной записи хранения. Используйте методы `regenerateKey` в `StorageAccount`, чтобы обновить ключи.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

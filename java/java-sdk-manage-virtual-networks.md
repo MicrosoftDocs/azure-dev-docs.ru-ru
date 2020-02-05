@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9f66434c67cabd08304faecb56e51107a2aeb8ee
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 3c537d7d7030ea46bdbc7d6873819ea8e12f03b3
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812300"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002364"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Создание виртуальных сетей Azure и управление ими с помощью приложений Java
 
@@ -173,10 +173,10 @@ azure.networks().deleteByResourceGroup(rgName,vnetName1);
 
 | Класс, используемый в примере | Примечания
 |-------|-------|
-| [Сеть](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | Представление локального объекта виртуальной сети, созданной с помощью `azure.networks().define()...create()`. Используйте текучую цепочку `update()...apply()` для обновления существующей виртуальной сети.
-| [Подсеть](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | Создание подсетей в виртуальной сети при определении или обновлении сети с помощью `withSubnet()`. Получение представлений объекта подсети с помощью `Network.subnets().get()` или `Network.subnets().entrySet()`. Эти объекты содержат методы для запроса свойств подсети.
-| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network_security_group) | Создан с помощью текучей цепочки `azure.networkSecurityGroups().define()...create()`. Применяется к подсетям при обновлении или создании подсетей в виртуальной сети. 
+| [Network](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.network) | Представление локального объекта виртуальной сети, созданной с помощью `azure.networks().define()...create()`. Используйте текучую цепочку `update()...apply()` для обновления существующей виртуальной сети.
+| [Подсеть](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.subnet) | Создание подсетей в виртуальной сети при определении или обновлении сети с помощью `withSubnet()`. Получение представлений объекта подсети с помощью `Network.subnets().get()` или `Network.subnets().entrySet()`. Эти объекты содержат методы для запроса свойств подсети.
+| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.networksecuritygroup) | Создан с помощью текучей цепочки `azure.networkSecurityGroups().define()...create()`. Применяется к подсетям при обновлении или создании подсетей в виртуальной сети. 
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

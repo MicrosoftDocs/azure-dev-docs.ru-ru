@@ -6,12 +6,12 @@ ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: bd956502c6cd5910f6c22844840aeec6cb1ec8aa
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 092bb328c4d7e68da9c75a43eaa9c31173d79864
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812290"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002540"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Управление масштабируемыми наборами виртуальных машин Azure из приложений Java
 
@@ -226,12 +226,12 @@ virtualMachineScaleSet.update()
    
 | Класс, используемый в примере | Примечания
 |-------|-------|
-| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | Запуск, остановка, обновление и удаление всех виртуальных машин в масштабируемом наборе, а также выполнение запросов к ним.
-| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | Класс получен из `virtualMachineScaleSet.virtualMachines().get()` или `list()`. Он позволяет запускать, останавливать, настраивать и удалять виртуальные машины в масштабируемом наборе, а также выполнять запросы к ним.
-| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | Класс возвращен из `virtualMachineScaleSet.listNetworkInterfaces()`. Представление только для чтения сетевого интерфейса на виртуальной машине в масштабируемом наборе.
-| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | Класс статических полей, используемый для задания [уровня масштабируемого набора виртуальных машин](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/). Этот уровень определяет количество ресурсов, которые могут использовать элементы масштабируемого набора.
-| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | Используется для запроса IP-конфигурации, связанной с сетевым интерфейсом в масштабируемом наборе виртуальных машин.
+| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescaleset) | Запуск, остановка, обновление и удаление всех виртуальных машин в масштабируемом наборе, а также выполнение запросов к ним.
+| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetvm) | Класс получен из `virtualMachineScaleSet.virtualMachines().get()` или `list()`. Он позволяет запускать, останавливать, настраивать и удалять виртуальные машины в масштабируемом наборе, а также выполнять запросы к ним.
+| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnetworkinterface) | Класс возвращен из `virtualMachineScaleSet.listNetworkInterfaces()`. Представление только для чтения сетевого интерфейса на виртуальной машине в масштабируемом наборе.
+| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetskutypes) | Класс статических полей, используемый для задания [уровня масштабируемого набора виртуальных машин](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/). Этот уровень определяет количество ресурсов, которые могут использовать элементы масштабируемого набора.
+| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnicipconfiguration) | Используется для запроса IP-конфигурации, связанной с сетевым интерфейсом в масштабируемом наборе виртуальных машин.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]

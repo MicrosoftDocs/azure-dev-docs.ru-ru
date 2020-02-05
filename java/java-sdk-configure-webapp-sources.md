@@ -5,12 +5,12 @@ author: rloutlaw
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
 ms.topic: article
 ms.date: 03/30/2017
-ms.openlocfilehash: 8ed90b7fff9c973481af1603e14fdb5858d5b9e0
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: e8cda5ca26b57e7c64d577fb5542295c930f5623
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812341"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002469"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Настройка источников развертывания в службе приложений Azure из приложений Java
 
@@ -153,13 +153,13 @@ WebApp app4 = azure.webApps()
 
 | Класс, используемый в примере | Примечания
 |-------|-------|
-| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | Создается из текучей цепочки `azure.webApps().define()....create()`. Создает веб-приложение службы приложений и любые ресурсы, требующиеся для приложения. Большинство методов обращаются к объекту, чтобы получить сведения о конфигурации. Но методы команд, например `restart()`, изменяют состояние веб-приложения.
-| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | Класс со статическими общедоступными полями, которые используются в качестве параметров для `withWebContainer()` при определении WebApp для выполнения в веб-контейнере Java. Содержит варианты для версий Tomcat и Jetty.
-| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._publishing_profile) | Класс, получаемый с помощью объекта WebApp с использованием метода `getPublishingProfile()`. Содержит сведения о развертывании FTP и Git, включая имя пользователя и пароль для развертывания (отличные от данных учетной записи Azure или учетных данных субъекта-службы).
-| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_plan) | Класс, возвращаемый `azure.appServices().appServicePlans().getByResourceGroup()`. Доступны методы для проверки производительности, уровня и числа веб-приложений, выполняющихся в плане.
-| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_pricing_tier) | Класс со статическими общедоступными полями, которые представляют уровни службы приложений. Используется для определения встроенного уровня плана при создании приложения с использованием `withPricingTier()` или непосредственно при определении плана с помощью `azure.appServices().appServicePlans().define()`.
-| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._java_version) | Класс со статическими общедоступными полями, которые представляют версии Java, поддерживаемые службой приложений. Используется с `withJavaVersion()` во время выполнения цепочки `define()...create()` при создании нового веб-приложения.
+| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webapp) | Создается из текучей цепочки `azure.webApps().define()....create()`. Создает веб-приложение службы приложений и любые ресурсы, требующиеся для приложения. Большинство методов обращаются к объекту, чтобы получить сведения о конфигурации. Но методы команд, например `restart()`, изменяют состояние веб-приложения.
+| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webcontainer) | Класс со статическими общедоступными полями, которые используются в качестве параметров для `withWebContainer()` при определении WebApp для выполнения в веб-контейнере Java. Содержит варианты для версий Tomcat и Jetty.
+| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.publishingprofile) | Класс, получаемый с помощью объекта WebApp с использованием метода `getPublishingProfile()`. Содержит сведения о развертывании FTP и Git, включая имя пользователя и пароль для развертывания (отличные от данных учетной записи Azure или учетных данных субъекта-службы).
+| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.appserviceplan) | Класс, возвращаемый `azure.appServices().appServicePlans().getByResourceGroup()`. Доступны методы для проверки производительности, уровня и числа веб-приложений, выполняющихся в плане.
+| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.PricingTier) | Класс со статическими общедоступными полями, которые представляют уровни службы приложений. Используется для определения встроенного уровня плана при создании приложения с использованием `withPricingTier()` или непосредственно при определении плана с помощью `azure.appServices().appServicePlans().define()`.
+| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.javaversion) | Класс со статическими общедоступными полями, которые представляют версии Java, поддерживаемые службой приложений. Используется с `withJavaVersion()` во время выполнения цепочки `define()...create()` при создании нового веб-приложения.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [next-steps](includes/java-next-steps.md)]
