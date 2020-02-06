@@ -1,17 +1,17 @@
 ---
-title: Руководство по Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
+title: Руководство. Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
 description: 'Шаг руководства 3: простой процесс повторного создания и развертывания образа контейнера.'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7f6c8f742029533fa54bad2c4492397a0fe17d70
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 88c5b608316f7dec601625fbf5962b9b888a4662
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466047"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002305"
 ---
-# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Руководство по Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
+# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Руководство. Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 
 [Предыдущий шаг. Развертывание образа в Службе приложений Azure](tutorial-deploy-containers-02.md)
 
@@ -19,7 +19,7 @@ ms.locfileid: "74466047"
 
 Рано или поздно вы обязательно внесете в приложение какие-либо изменения, а значит потребуется заново создать и развернуть контейнер. К счастью, этот процесс очень прост.
 
-1. Внесите нужные изменения в приложение и протестируйте их локально. (Этот шаг и два следующих подробно описаны в учебнике [по созданию контейнера Python в VS Code](https://code.visualstudio.com/docs/python/tutorial-create-container).)
+1. Внесите нужные изменения в приложение и протестируйте их локально. (Этот шаг и два следующих подробно описаны в учебнике [по созданию контейнера Python в VS Code](https://code.visualstudio.com/docs/python/tutorial-create-containers).)
 
 1. Повторно соберите образ Docker. Если вы измените только код приложения, сборка займет всего несколько секунд.
 

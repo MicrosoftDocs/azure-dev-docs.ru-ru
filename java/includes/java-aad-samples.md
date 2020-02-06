@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 44ff7390ea788d188c90b438717c3c3ce31eb875
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 7efca5bce2ffeaaa9930bb91d0787b8643391f4a
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431020"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013761"
 ---
 |  |  |
 |---------|---------|
@@ -15,7 +15,7 @@ ms.locfileid: "68431020"
 | [Управление субъектами-службами][5] | Создавайте субъекты-службы для приложений, назначайте им роли и используйте их для доступа к ресурсам в подписке. | 
 
 [1]: https://azure.microsoft.com/resources/samples/active-directory-java-webapp-openidconnect/
-[2]: https://azure.microsoft.com/resources/samples/active-directory-java-graphapi-web/
+[2]: https://github.com/Azure-Samples/active-directory-java-graphapi-web/
 [3]: https://azure.microsoft.com/resources/samples/active-directory-java-native-headless/
-[4]: https://azure.microsoft.com/resources/samples/aad-java-manage-users-groups-and-roles/
-[5]: https://azure.microsoft.com/resources/samples/aad-java-manage-service-principals/
+[4]: https://github.com/Azure-Samples/aad-java-manage-users-groups-and-roles/
+[5]: https://github.com/Azure-Samples/aad-java-manage-service-principals/

@@ -20,6 +20,8 @@
         - name: Spring Data
           expanded: true
           items:
+            - name: Руководство для разработчиков Azure Cosmos DB
+              href: how-to-guides-spring-data-cosmosdb.md
             - name: Azure Cosmos DB Starter
               href: configure-spring-boot-starter-java-app-with-cosmos-db.md
             - name: Azure Cosmos DB со Службой приложений в Linux
@@ -88,7 +90,7 @@
           href: configure-spring-boot-starter-java-app-with-azure-storage-api.md
         - name: Spring Initializr
           href: 'https://start.spring.io/'
-    - name: Справочные материалы
+    - name: Справочник
       items:
         - name: Spring Framework
           href: 'https://spring.io/'
