@@ -1,17 +1,17 @@
 ---
-title: Руководство по Добавление привязки к хранилищу для Функций Azure на Python с помощью VS Code
+title: Руководство. Добавление привязки к хранилищу для Функций Azure на Python с помощью VS Code
 description: Шаг руководства 7. Добавление в Python привязки для сохранения сообщений в службе хранилища Azure
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 9547912dc8f952e60d97efb2617f65f9fad67678
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 34ee80b2fac2f66e37e67fd45ca366b97d3f52dd
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992483"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002082"
 ---
-# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Руководство по Добавление привязки к хранилищу для решения "Функции Azure" на Python
+# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Руководство. Добавление привязки к хранилищу для решения "Функции Azure" на Python
 
 [Предыдущий шаг: развертывание второй функции](tutorial-vs-code-serverless-python-06.md)
 
@@ -92,7 +92,7 @@ ms.locfileid: "74992483"
 
     1. Изучите содержимое очереди с помощью Обозревателя службы хранилища Azure, который интегрируется с Visual Studio, как описано в руководстве по [подключению Функций к Службе хранилища Azure с помощью Visual Studio Code](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code), в частности в разделе о [проверке очереди вывода](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code#examine-the-output-queue).
 
-    1. С помощью Azure CLI создайте запрос к очереди хранилища, как описано в [этом разделе](/azure/azure-functions/functions-add-output-binding-storage-queue-python#query-the-storage-queue).
+    1. С помощью Azure CLI создайте запрос к очереди хранилища, как описано в [этом разделе](/azure/azure-functions/functions-add-output-binding-storage-queue-python).
 
 1. Чтобы протестировать новый код в облаке, повторно разверните проект, используя команду **Развернуть в приложении-функции** в обозревателе **Azure: Функции**. Выберите созданное ранее приложение-функцию, если появится соответствующий запрос. По завершении развертывания (этот процесс займет несколько минут) в **окне вывода** снова отобразятся общедоступные конечные точки, с помощью которых вы сможете повторить тесты.
 

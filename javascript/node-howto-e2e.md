@@ -4,12 +4,12 @@ description: Выполните инструкции из этого руков�
 ms.topic: article
 ms.date: 06/25/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: 98b154a78702fa5c5a0808170c8227ce7910459b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b8841e5259a49b45db1f526330e0238d1bd0d050
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467381"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002525"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Разработка и развертывание контейнерного приложения Node.js с помощью Visual Studio Code и Azure
 
@@ -354,7 +354,7 @@ FROM mhart
     ```
 
     > [!NOTE]
-    > Если вместо пользовательского контейнера вы предпочитаете развертывание Git, см. статью о [создании веб-приложения Node.js в Azure](/azure/app-service-web/app-service-web-get-started-nodejs#configure-to-use-nodejs).
+    > Если вместо пользовательского контейнера вы предпочитаете развертывание Git, см. статью о [создании веб-приложения Node.js в Azure](/azure/app-service-web/app-service-web-get-started-nodejs).
 
 1. Назначьте веб-приложение веб-экземпляром по умолчанию:
 

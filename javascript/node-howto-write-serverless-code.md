@@ -4,12 +4,12 @@ description: Руководство по использованию функци
 ms.topic: article
 ms.date: 08/19/2019
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: d1b17e33b5ae4aa51a84ceae8005a5385c162967
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: ae6a4cebef39976af4d9a30534d394d37d86a0c8
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992469"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002498"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Использование Функций Azure для написания бессерверного кода Node.js в Azure
 
@@ -39,13 +39,13 @@ ms.locfileid: "74992469"
   - [Выполнение кода при отправке или обновлении файлов в хранилище BLOB-объектов Azure](/azure/storage/blobs/storage-upload-process-images?tabs=nodejsv10)
   - [Выполнение кода при записи сообщения в Хранилище очередей Azure](/azure/azure-functions/functions-create-storage-queue-triggered-function)
 
-- [Хранение неструктурированных данных с помощью функций Azure и Azure Cosmos DB](/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb.md?tabs=javascript). Сведения о других базах данных см. в статьях [Интеграция баз данных Azure в код Node.js](node-howto-integrate-databases.md)
+- [Хранение неструктурированных данных с помощью функций Azure и Azure Cosmos DB](/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb?tabs=javascript). Сведения о других базах данных см. в статьях [Интеграция баз данных Azure в код Node.js](node-howto-integrate-databases.md)
 
 - [Как программировать и тестировать функции Azure в локальной среде](/azure/azure-functions/functions-develop-local)
 
 - [Методика тестирования кода с помощью Функций Azure](/azure/azure-functions/functions-test-a-function) и [обработка ошибок](/azure/azure-functions/functions-bindings-error-pages)
 
-- [Настройка проверки подлинности в Azure Active Directory](/azure/app-service/configure-authentication-provider-aad.md?toc=%2fazure%2fazure-functions%2ftoc.json)
+- [Настройка проверки подлинности в Azure Active Directory](/azure/app-service/configure-authentication-provider-aad?toc=%2fazure%2fazure-functions%2ftoc.json)
 
 - [Настройка непрерывного развертывания в Azure Pipelines](/azure/azure-functions/functions-how-to-azure-devops)
 
