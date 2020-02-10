@@ -3,12 +3,12 @@ title: Локальное выполнение приложения Функци
 description: Руководство, часть 3. Локальный запуск приложения для тестирования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 2a7cb5e5c433c90d74cd3b7771ce90529f617fcb
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466570"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967232"
 ---
 # <a name="test-the-function-locally"></a>Локальное тестирование функции
 
@@ -20,7 +20,7 @@ ms.locfileid: "74466570"
 
 1. В Visual Studio Code нажмите клавишу **F5** (или откройте команду меню **Отладка** > **Начать отладку**), чтобы запустить отладчик и подключиться к узлу Функций Azure (эта команда автоматически использует единую конфигурацию отладки, созданную в Функциях Azure).
 
-1. Выходные данные базовых средств Функций отображаются на панели **Терминал** в VS Code. После запуска узла вы можете щелкнуть локальный URL-адрес, представленный в выходных данных, удерживая нажатой клавишу **CTRL**, чтобы открыть браузер и запустить функцию:
+1. Выходные данные базовых средств Функций отображаются на панели **Терминал** в VS Code. После запуска узла вы можете щелкнуть локальный URL-адрес, представленный в выходных данных, удерживая нажатой клавишу **ALT**, чтобы открыть браузер и запустить функцию:
 
     ![Выходные данные на панели терминала VS Code при локальной отладке](media/functions-extension/local-test-output.png)
 
@@ -33,4 +33,4 @@ ms.locfileid: "74466570"
     ![VS Code останавливается по точке останова](media/functions-extension/debugging-breakpoint.png)
 
 > [!div class="nextstepaction"]
-> [Приложение-функция запущена локально](tutorial-vscode-serverless-node-04.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)
+> [Приложение-функция запущена локально](tutorial-vscode-serverless-node-04.md)[Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

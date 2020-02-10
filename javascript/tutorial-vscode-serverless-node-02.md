@@ -3,18 +3,18 @@ title: Создание приложения Функций Azure в Visual Stud
 description: Руководство, часть 2. Создание приложения Функций Azure
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 5b2e46cde8740020cc2ad7a1b50ac9b4687d17d3
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467127"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967238"
 ---
 # <a name="create-the-local-functions-app"></a>Создание локального приложения в службе "Функции"
 
 [Предыдущий шаг. Общие сведения и предварительные требования](tutorial-vscode-serverless-node-01.md)
 
-На этом этапе вы создадите в службе "Функции Azure" локальное приложение, которое содержит функцию с триггером HTTP. Приложение Функций Azure может содержать несколько функций с разными триггерами. В частности, HTTP-триггер обрабатывает входящий трафик HTTP.
+На этом этапе вы создадите в Функциях Azure локальное приложение, которое содержит функцию с [триггером HTTP](https://docs.microsoft.com/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Приложение Функций Azure может содержать несколько функций с [разными триггерами](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings). В частности, HTTP-триггер обрабатывает входящий трафик HTTP.
 
 1. В окне терминала или командной строки запустите Visual Studio Code из соответствующей папки проекта:
 
@@ -45,7 +45,7 @@ ms.locfileid: "74467127"
 
 1. Через несколько секунд в VS Code завершится создание проекта. Теперь у вас есть папка с именем, совпадающим с именем функции (*HttpExample*) и тремя файлами.
 
-    | Имя файла | ОПИСАНИЕ |
+    | Имя файла | Описание |
     | --- | --- |
     | *index.js* |  Исходный код, который обрабатывает входящий HTTP-запрос. |
     | *functions.json* | [Конфигурация привязки](/azure/azure-functions/functions-triggers-bindings) для триггера HTTP. |
@@ -54,4 +54,4 @@ ms.locfileid: "74467127"
     ![Результат создания приложения-функции](media/functions-extension/create-function-app-results.png)
 
 > [!div class="nextstepaction"]
-> [Приложение Функций создано](tutorial-vscode-serverless-node-03.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=create-app)
+> [Приложение Функций создано](tutorial-vscode-serverless-node-03.md)[Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=create-app)
