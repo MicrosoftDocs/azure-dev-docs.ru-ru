@@ -3,16 +3,16 @@ title: Создание приложения Spring Boot Initializer с испо
 description: Настройка приложения Spring Boot, созданного с помощью Spring Initializr, для использования в облаке кэша Redis для Azure.
 services: redis-cache
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: e70b5f9b8427bebd9c5ca3761a664464ad3b0909
-ms.sourcegitcommit: 670874dfe49e6ffa5bee88555851878f0da93042
+ms.openlocfilehash: 8287cf923acb5770a5ba5eb88fe60896e6cd3a4d
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034041"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075355"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Настройка приложения Spring Boot Initializr для использования в облаке кэша Redis для Azure
 
@@ -30,7 +30,10 @@ ms.locfileid: "75034041"
 
 1. Перейдите по адресу <https://start.spring.io/>.
 
-1. Укажите, что необходимо создать проект **Maven** с помощью **Java**, введите имя **группы** и **артефакта** вашего приложения, а затем щелкните ссылку, чтобы **перейти к полной версии** Spring Initializr.
+1. Укажите, что требуется создать проект **Maven** на **Java**, введите имя **группы** и **артефакта** для приложения.
+
+1. Добавьте зависимости в разделе **Spring Web** и установите флажок **Web** (Веб), затем прокрутите вниз до раздела **NoSQL** и установите флажок **Spring Data Reactive Redis**. 
+1. Прокрутите страницу вниз и нажмите соответствующую кнопку, чтобы **создать проект**.
 
    ![Основные параметры Spring Initializr][SI01]
 
@@ -38,10 +41,6 @@ ms.locfileid: "75034041"
    >
    > Spring Initializr будет использовать имена **группы** и **артефакта** для создания имени пакета, например *com.contoso.myazuredemo*.
    >
-
-1. Прокрутите вниз к разделу **Web** (Веб) и установите флажок для параметра **Web** (Веб). Затем прокрутите вниз к разделу **NoSQL** и установите флажок для параметра **Redis**, затем перейдите к нижней части страницы и нажмите кнопку **Generate Project** (Создать проект).
-
-   ![Все параметры Spring Initializr][SI02]
 
 1. При появлении запроса скачайте проект на локальный компьютер.
 
@@ -54,8 +53,6 @@ ms.locfileid: "75034041"
 ## <a name="create-a-redis-cache-on-azure"></a>Создание кэша Redis в Azure
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните **+Создать**.
-
-   ![Портал Azure][AZ01]
 
 1. Выберите **База данных**, а затем — **Кэш Redis**.
 
@@ -107,7 +104,7 @@ ms.locfileid: "75034041"
 
    > [!NOTE] 
    > 
-   > Если вы используете другой клиент Redis, позволяющий использовать SSL, например Jedis, следует указать порт 6380 в файле *application.properties*. Например:
+   > Если вы используете другой клиент Redis, позволяющий использовать SSL, например Jedis, следует указать порт 6380 в файле *application.properties*. Пример:
    > 
    > ```yaml
    > # Specify the DNS URI of your Redis cache.
@@ -189,7 +186,7 @@ ms.locfileid: "75034041"
 
    В примере контроллера должно отобразиться сообщение "Hello World!", которое динамически извлекается из кэша Redis.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 

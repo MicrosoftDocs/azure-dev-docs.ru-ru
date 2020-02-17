@@ -3,12 +3,12 @@ title: Локальное выполнение приложения Функци
 description: Руководство, часть 3. Локальный запуск приложения для тестирования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fd2255fa3a085f979e5893d6178063ee8686ea08
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967232"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144049"
 ---
 # <a name="test-the-function-locally"></a>Локальное тестирование функции
 
@@ -31,6 +31,10 @@ ms.locfileid: "76967232"
 1. Когда функция выполняется локально, вы можете установить точки останова в разных частях кода (дополнительные сведения о точках останова и отладке в VS Code см. [здесь](https://code.visualstudio.com/docs/editor/debugging)). Откройте файл *index.js*, затем щелкните в окне редактора поле слева от строки 11. Там появится маленькая красная точка, которая обозначает точку останова. Теперь удалите аргумент `?name=` из URL-адреса в браузере. Когда браузер выполнит этот запрос, VS Code остановит выполнение кода функции в указанной точке останова:
 
     ![VS Code останавливается по точке останова](media/functions-extension/debugging-breakpoint.png)
+
+> [!Note]
+>
+> Если при выполнении этого процесса возникла ошибка с политикой, попробуйте удалить `azure-functions-core-tools@3` с npm, а затем повторно установите пакет, используя Chocolatey в терминале с повышенными привилегиями.
 
 > [!div class="nextstepaction"]
 > [Приложение-функция запущена локально](tutorial-vscode-serverless-node-04.md)[Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

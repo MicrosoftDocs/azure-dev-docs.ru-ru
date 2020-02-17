@@ -3,12 +3,12 @@ title: Развертывание приложения Функций Azure в V
 description: Руководство, часть 4. Развертывание приложения Функций в облаке.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 690477392fffda4cd94d7271b061c195ccceb42b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: e287f24429fc5939bcd64ba753b36eb0f387d8f3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467099"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144069"
 ---
 # <a name="deploy-the-functions-app"></a>Развертывание приложения в решении "Функции"
 
@@ -23,6 +23,10 @@ ms.locfileid: "74467099"
 1. По запросу **Select Function App in Azure** (Выберите приложение-функцию в Azure) выберите вариант **Create new Function app in Azure** (Создать новое приложение-функцию в Azure).
 
 1. По следующему запросу введите глобальное уникальное имя для приложения-функции и нажмите клавишу **ВВОД**. Допустимые символы для имени приложения-функции: "a–z", "0–9" и "-".
+
+1. Выберите версию (среду выполнения) Node.js. 
+
+    ![Панель вывода VS Code, на которой отображается версия (среда выполнения) Node.js.](media/functions-extension/nodejs-runtime-version.png)
 
 1. По следующему запросу выберите [регион](https://azure.microsoft.com/regions/) Azure, который расположен рядом с вашим местонахождением.
 

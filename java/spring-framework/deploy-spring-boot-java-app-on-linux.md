@@ -9,18 +9,18 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: a98575021be229ed067ce424cd101721c98f9ea4
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: b6c8e138c9d738b56d237180e618268cb71284e3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755704"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144076"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Развертывание приложения Spring Boot в Службе приложений Azure для контейнеров
 
 Из этого руководства вы узнаете, как с помощью [Docker] включить приложение [Spring Boot] в контейнер и развернуть образ Docker в узле Linux в [Службе приложений Azure](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим руководством требуется следующее.
 
@@ -223,7 +223,7 @@ ms.locfileid: "75755704"
 >
 > 4. В области навигации слева щелкните **Конфигурация**.
 >
-> 5. В разделе **Параметры приложения** добавьте новый параметр с именем **PORT** и введите номер пользовательского порта в качестве значения.
+> 5. В разделе **Параметры приложения** добавьте новый параметр с именем **WEBSITES_PORT** и введите номер пользовательского порта в качестве значения.
 >
 > 6. Нажмите кнопку **ОК**. Затем нажмите кнопку **Сохранить**.
 >
@@ -285,7 +285,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Применение пользовательского образа Docker для веб-приложения Azure на платформе Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
 [Docker]: https://www.docker.com/
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Git]: https://github.com/
+[Git]: https://github.com/;
 [Working with Azure DevOps and Java]: /azure/devops/java/ (Работа с Azure DevOps и Java)
 [Maven]: http://maven.apache.org/
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
