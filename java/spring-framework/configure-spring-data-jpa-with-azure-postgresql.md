@@ -6,25 +6,25 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 5748f3e51132ff003e41d61f9c10dff61b95e364
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022101"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422548"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Как использовать JPA Spring Data с базой данных Azure PostgreSQL
 
 В этой статье объясняется, как создать пример приложения для хранения информации в [базе данных Azure для PostgreSQL](/azure/postgresql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
 * Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
-* [Curl](https://curl.haxx.se/) или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности. или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности.
+* [Curl](https://curl.haxx.se/) или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности.
 * Служебная программа командной строки [psql](https://www.postgresql.org/docs/current/app-psql.html).
 * Клиент [Git](https://git-scm.com/downloads).
 
@@ -90,7 +90,7 @@ ms.locfileid: "76022101"
    ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `host` | Указывается полное доменное имя сервера PostgreSQL, описанное ранее в этой статье. |
    | `host` | Указывается порт сервера PostgreSQL, то есть по умолчанию — `5432`. |
@@ -156,7 +156,7 @@ ms.locfileid: "76022101"
     ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `spring.datasource.url` | Указываются строки PostgreSQL JDBC, описанные ранее в этой статье. |
    | `spring.datasource.username` | Указывается администратор PostgreSQL, описанный ранее в этой статье, вместе с сокращенным именем сервера. |
