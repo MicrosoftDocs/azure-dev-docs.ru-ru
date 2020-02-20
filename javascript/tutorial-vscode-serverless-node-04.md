@@ -3,12 +3,12 @@ title: Развертывание приложения Функций Azure в V
 description: Руководство, часть 4. Развертывание приложения Функций в облаке.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: e287f24429fc5939bcd64ba753b36eb0f387d8f3
-ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
+ms.openlocfilehash: 8cb80b25e224d6f4552ec165779cda35f990ad6a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144069"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422534"
 ---
 # <a name="deploy-the-functions-app"></a>Развертывание приложения в решении "Функции"
 
@@ -24,7 +24,7 @@ ms.locfileid: "77144069"
 
 1. По следующему запросу введите глобальное уникальное имя для приложения-функции и нажмите клавишу **ВВОД**. Допустимые символы для имени приложения-функции: "a–z", "0–9" и "-".
 
-1. Выберите версию (среду выполнения) Node.js. 
+1. Выберите версию (среду выполнения) Node.js.
 
     ![Панель вывода VS Code, на которой отображается версия (среда выполнения) Node.js.](media/functions-extension/nodejs-runtime-version.png)
 
