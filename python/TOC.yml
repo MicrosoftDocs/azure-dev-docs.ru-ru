@@ -4,62 +4,92 @@
   items:
     - name: Сведения о пакете SDK для Python
       href: python-sdk-azure-overview.md
+    - name: Средства для разработчиков
+      href: python-azure-tools.md
 - name: Краткие руководства
   items:
     - name: Пакет SDK для Python
       href: python-sdk-azure-get-started.yml
-    - name: Средства для разработчиков
-      href: python-azure-tools.md
     - name: Размещение приложений
       items:
-        - name: Служба приложений
+        - name: "Развертывание бессерверных функций (VS\_Code)"
+          href: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Развертывание бессерверных функций (CLI)
+          href: /azure/azure-functions/functions-create-first-function-python?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Развертывание в службу приложений
           href: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Kubernetes
+        - name: Развертывание кластера Kubernetes
           href: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Виртуальные машины Linux
-          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Экземпляры контейнеров
+        - name: Развертывание экземпляра контейнера в Azure
           href: /azure/container-instances/container-instances-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Пакетная служба Azure
+        - name: Выполнение задания пакетной службы Azure
           href: /azure/batch/quick-run-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Создание виртуальной машины Linux
+          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: Решения для работы с данными
       items:
-        - name: Хранилище BLOB-объектов
-          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Хранилище таблиц
-          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Cosmos DB
-          href: /azure/cosmos-db/sql-api-python-application?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: кэш Redis;
-          href: /azure/redis-cache/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: База данных SQL
-          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: PostgreSQL
-          href: /azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: MySQL
+        - name: Использование PostgreSQL с Django
+          href: /azure/app-service/containers/tutorial-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Использование базы данных MySQL
           href: /azure/mysql/connect-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Фабрика данных
+        - name: Использование базы данных SQL
+          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Управление хранилищем BLOB-объектов
+          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Использование хранилища таблиц
+          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Использование API SQL для Azure Cosmos DB
+          href: /azure/cosmos-db/create-sql-api-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Использование Кэша Azure для Redis
+          href: /azure/azure-cache-for-redis/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Создание фабрики данных Azure
           href: /azure/data-factory/quickstart-create-data-factory-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-    - name: ИИ и машинное обучение
+    - name: Машинное обучение
       items:
-        - name: Служба машинного обучения
-          href: /azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Batch AI
-          href: /azure/batch-ai/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Создание эксперимента машинного обучения
+          href: /azure/machine-learning/tutorial-1st-experiment-sdk-setup?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Обучение моделей классификации
+          href: /azure/machine-learning/tutorial-train-models-with-aml?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - name: Azure Cognitive Services
+      items:
+        - name: Пакет SDK Cognitive Services для Python
+          href: /python/api/overview/azure/cognitive-services?view=azure-python
         - name: API Компьютерного зрения
           href: /azure/cognitive-services/Computer-vision/Quickstarts/python-analyze?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Custom Vision
+          href: /azure/cognitive-services/custom-vision-service/python-tutorial?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Распознавание лиц
+          href: /azure/cognitive-services/face/quickstarts/python-sdk?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Распознавание речи
+          href: /azure/cognitive-services/luis/sdk-authoring?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: Анализ текста
-          href: /azure/cognitive-services/Text-Analytics/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Записные книжки Azure
-          href: 'https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb'
+          href: '/azure/cognitive-services/text-analytics/quickstarts/text-analytics-sdk?pivots=programming-language-python#sentiment-analysis&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json'
+        - name: Автозаполнение
+          href: /azure/cognitive-services/bing-autosuggest/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Content Moderator
+          href: /azure/cognitive-services/content-moderator/python-sdk-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Главная страница службы "Речь"
+          href: /azure/cognitive-services/speech-service/index
+        - name: Главная страница службы "Поиск"
+          href: /azure/cognitive-services/bing-web-search/index
+    - name: Обмен сообщениями
+      items:
+        - name: Использование Хранилища очередей Azure
+          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Использование очередей Служебной шины Azure
+          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Прием данных в реальном времени с помощью Центров событий
+          href: /azure/event-hubs/event-hubs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Перенаправление пользовательских событий с помощью службы "Сетка событий"
+          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: Безопасность и интеграция
       items:
-        - name: Служебная шина
-          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Сетка событий Azure
-          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Хранилище очередей
-          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Аутентификация с использованием Active Directory
+          href: python-sdk-azure-authenticate.md
+        - name: Хранение секретов в Key Vault
+          href: /azure/key-vault/quick-create-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Вход в веб-приложение с использованием Active Directory
+          href: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
 - name: Учебники
   items:
     - name: Развертывание в Службе приложений с помощью VS Code
@@ -128,7 +158,7 @@
       items:
         - name: Хранилище Azure
           href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-storage'
-        - name: Кэш Redis
+        - name: кэш Redis;
           href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-redis-cache'
     - name: Идентификация и безопасность
       href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-active-directory%2Cazure-key-vault'
