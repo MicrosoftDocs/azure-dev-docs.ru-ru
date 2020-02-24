@@ -1,17 +1,17 @@
 ---
-title: Руководство. Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
+title: Шаг 7. Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 description: Шаг руководства 7. Очистка ресурсов Azure
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8145b33ae52427d55c9b3de9fcf6fb20467b7ba9
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 001e5d58311267221c5fafb3de89aff3859f4197
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125267"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422436"
 ---
-# <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство. Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
+# <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
 [Предыдущий шаг: потоковая передача журналов](tutorial-deploy-app-service-on-linux-06.md)
 

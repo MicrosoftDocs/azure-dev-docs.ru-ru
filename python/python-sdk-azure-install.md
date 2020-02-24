@@ -4,12 +4,12 @@ description: Сведения об установке пакета Azure SDK д�
 ms.date: 10/31/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d3d162bc14f27a9b2bc3fb033dab36dcd1dfeb89
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: de36effc1787c83d137f84f8e0d670c97c71cdcf
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992486"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422506"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Установка пакета Azure SDK для Python
 
@@ -30,6 +30,9 @@ ms.locfileid: "74992486"
 ```bash
 pip install azure-storage-blob==12.0.0
 ```
+
+> [!NOTE]
+> В системах Linux пакет SDK не поддерживает установку библиотеки с помощью `sudo pip install` для всех пользователей. Каждому пользователю следует использовать `pip install` отдельно. 
 
 ### <a name="install-preview-packages"></a>Установка пакетов в предварительной версии
 
@@ -61,7 +64,7 @@ pip show azure-storage-blob
 
 Чтобы удалить отдельную библиотеку, используйте `pip uninstall <library>`.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Подробнее об использовании пакета SDK](python-sdk-azure-get-started.yml)

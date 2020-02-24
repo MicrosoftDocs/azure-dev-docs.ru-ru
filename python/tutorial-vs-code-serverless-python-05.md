@@ -1,17 +1,17 @@
 ---
-title: Руководство по Развертывание Функций Azure на Python с помощью VS Code
+title: Шаг 5. Развертывание Функций Azure на Python с помощью VS Code
 description: Шаг руководства 5. Развертывание кода функции Python в Azure и выполнение потоковой передачи журналов и синхронизации параметров между локальным проектом и Azure.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 07af40c402104f07844c2cbe0d84c38c86f2fca2
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992510"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422203"
 ---
-# <a name="tutorial-deploy-azure-functions-in-python"></a>Руководство по Развертывание решения "Функции Azure" на Python
+# <a name="5-deploy-azure-functions-in-python"></a>5: Развертывание решения "Функции Azure" на Python
 
 [Предыдущий шаг: локальная отладка](tutorial-vs-code-serverless-python-04.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "74992510"
 
     Сведения о **потоковой передаче журналов** и **отправке параметров** см. в разделах ниже. Действие **Просмотр выходных данные** описано в шаге 5.
 
-1. По завершении развертывания в **окне вывода** также появится общедоступная конечная точка в Azure:
+1. После развертывания в окне **Выходные данные** также отображается общедоступная конечная точка в Azure (URL-адрес конкретной конечной точки будет соответствовать имени, указанному вами для приложения-функции):
 
     ```output
     HTTP Trigger Urls:
@@ -70,6 +70,6 @@ func azure functionapp logstream <app_name> --browser
 Чтобы сохранить изменения, которые вы внесли на портале или в **обозревателе Azure** в файл *local.settings.json*, щелкните правой кнопкой мыши узел **Параметры приложения** и выберите **Скачать удаленные параметры**. Вы также можете использовать палитру команд, выбрав на ней команду **Функции Azure: скачать удаленные параметры**.
 
 > [!div class="nextstepaction"]
-> [Функции развернуты](tutorial-vs-code-serverless-python-06.md)
+> [Функции развернуты — перейти к шагу 6 >>>](tutorial-vs-code-serverless-python-06.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=05-deploy)

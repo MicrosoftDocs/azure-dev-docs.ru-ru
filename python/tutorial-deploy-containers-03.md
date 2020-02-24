@@ -1,17 +1,17 @@
 ---
-title: Руководство. Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
+title: Шаг 3. Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
 description: 'Шаг руководства 3: простой процесс повторного создания и развертывания образа контейнера.'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 88c5b608316f7dec601625fbf5962b9b888a4662
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: f0e6eb808e25f3bb48eb2c849310747945e0d7f9
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002305"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422399"
 ---
-# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>Руководство. Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
+# <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 
 [Предыдущий шаг. Развертывание образа в Службе приложений Azure](tutorial-deploy-containers-02.md)
 
@@ -30,6 +30,6 @@ ms.locfileid: "77002305"
 1. Примерно через 15-20 секунд снова откройте URL-адрес Службы приложений, чтобы проверить обновления.
 
 > [!div class="nextstepaction"]
-> [Я внес изменения и повторно развернул приложение](tutorial-deploy-containers-04.md)
+> [Изменения внесены, повторное развертывание выполнено — перейти к шагу 4 >>>](tutorial-deploy-containers-04.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=03-make-changes-redeploy)

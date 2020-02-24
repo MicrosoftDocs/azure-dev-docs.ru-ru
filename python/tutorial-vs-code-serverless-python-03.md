@@ -1,17 +1,17 @@
 ---
-title: Руководство по Изучение файлов кода Python в Функциях Azure с помощью VS Code
+title: Шаг 3. Изучение файлов кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 3: основные сведения о шаблоне кода Python, который предоставляется в Функциях Azure.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 253bc4384f896c9114f2f1113cdf0ee2f290819d
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 77dc4cb44158ded1dd5c6d1e19afb48272177a12
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992498"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422216"
 ---
-# <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>Руководство по Изучение файлов кода на Python в Visual Studio Code
+# <a name="3-examine-the-python-code-files-in-visual-studio-code"></a>3: Изучение файлов кода на Python в Visual Studio Code
 
 [Предыдущий шаг: создание функции](tutorial-vs-code-serverless-python-02.md)
 
@@ -91,6 +91,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 - Если имя найдено, код возвращает строку "Hello" с найденным именем; в противном случае возвращается сообщение об ошибке.
 
 > [!div class="nextstepaction"]
-> [Я завершил изучение файлов кода](tutorial-vs-code-serverless-python-04.md)
+> [Файлы кода изучены — перейти к шагу 4 >>>](tutorial-vs-code-serverless-python-04.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=03-examine-code-files)

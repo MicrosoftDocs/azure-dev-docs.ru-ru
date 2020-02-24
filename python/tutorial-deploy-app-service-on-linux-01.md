@@ -4,12 +4,12 @@ description: 'Шаг руководства 1: введение, предвар�
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d5eed3d2b1aeea92b3681ada006b3723e67f70c4
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8995c31203b2cbd096820832beb3d6a7d165f132
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466276"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422495"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Развертывание приложений Python в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -43,6 +43,6 @@ ms.locfileid: "74466276"
 [!INCLUDE [azure-sign-in](includes/azure-sign-in.md)]
 
 > [!div class="nextstepaction"]
-> [Вход в Azure выполнен](tutorial-deploy-app-service-on-linux-02.md)
+> [Вход в Azure выполнен — перейти к шагу 2 >>>](tutorial-deploy-app-service-on-linux-02.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=01-verify-prerequisites)

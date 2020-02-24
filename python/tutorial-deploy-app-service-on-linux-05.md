@@ -1,17 +1,17 @@
 ---
-title: Руководство по Развертывание веб-приложения Python в Службе приложений Azure в Linux с помощью VS Code
+title: Шаг 5. Развертывание веб-приложения Python в Службе приложений Azure в Linux с помощью VS Code
 description: 'Шаг руководства 5: развертывание кода веб-приложения'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 02d906611ac5f2a56ba85202d89c7c39058b3bc1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 3f17fe3190857d1cc4faca84c9319e1c514cea4c
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466089"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422447"
 ---
-# <a name="tutorial-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>Руководство по Развертывание веб-приложения Python в Службе приложений Azure в Linux
+# <a name="5-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>5: Развертывание веб-приложения Python в Службе приложений Azure в Linux
 
 [Предыдущий шаг: настройка пользовательского файла запуска](tutorial-deploy-app-service-on-linux-04.md)
 
@@ -45,6 +45,6 @@ ms.locfileid: "74466089"
     Служба приложений создает виртуальную среду с указанными зависимостями в папке *antenv*. Развернув этот узел, вы сможете убедиться, что указанные в файле *requirements.txt* пакеты успешно установлены в папку *antenv/lib/python3.7/site-packages*.
 
 > [!div class="nextstepaction"]
-> [Я уже развернул приложение](tutorial-deploy-app-service-on-linux-06.md)
+> [Приложение развернуто — перейти к шагу 6 >>>](tutorial-deploy-app-service-on-linux-06.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=05-deploy-app)

@@ -1,17 +1,17 @@
 ---
-title: Руководство. Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
+title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a380a447150f29653a1f94a3fe1f6464dd495a81
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 3056ccaa6d0cc8e5f2e15c6b7511172f59644936
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75191001"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422189"
 ---
-# <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство. Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
+# <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
 В этой статье объясняется, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как подключить (создать привязку) к хранилищу.
 
@@ -19,7 +19,7 @@ ms.locfileid: "75191001"
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - [Подписка Azure](#azure-subscription).
 - [Основные инструменты службы "Функции Azure"](#azure-functions-core-tools).
@@ -67,6 +67,6 @@ ms.locfileid: "75191001"
 Команда `func` работает с файлом *func. cmd*, установленным в глобальной папке Node.js. Чтобы узнать расположение этой папки, выполните команду `npm -l` и просмотрите соответствующие сведения в конце выходных данных.
 
 > [!div class="nextstepaction"]
-> [Вход в Azure выполнен](tutorial-vs-code-serverless-python-02.md)
+> [Вход в Azure выполнен — перейти к шагу 2 >>>](tutorial-vs-code-serverless-python-02.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=01-verify-prerequisites)

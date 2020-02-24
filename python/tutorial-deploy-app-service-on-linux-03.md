@@ -1,17 +1,17 @@
 ---
-title: Руководство по Создание службы приложений в Visual Studio Code
+title: Шаг 3. Создание службы приложений в Visual Studio Code
 description: 'Руководство, шаг 3: создание службы приложений с помощью расширения VS Code.'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b64adc1604698de74f4f318b805dd8c289c8fff8
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: dea4ace359c8d072af8ab9ed33451bc8077249b7
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466219"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422464"
 ---
-# <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>Руководство по Создание службы приложений в Visual Studio Code
+# <a name="3-create-the-app-service-from-visual-studio-code"></a>3: Создание службы приложений в Visual Studio Code
 
 [Предыдущий шаг: подготовка приложения](tutorial-deploy-app-service-on-linux-02.md)
 
@@ -53,6 +53,6 @@ ms.locfileid: "74466219"
 1. Если вы создали параметры непосредственно на портал Azure, их можно сохранить в файл определений, щелкнув правой кнопкой мыши узел **Параметры приложения** и выбрав команду **Скачать удаленные параметры**. Такой процесс позволяет сохранить параметры не только на портале, но и в репозитории.
 
 > [!div class="nextstepaction"]
-> [Я уже создал службу приложений](tutorial-deploy-app-service-on-linux-04.md)
+> [Служба приложений создана — перейти к шагу 4 >>>](tutorial-deploy-app-service-on-linux-04.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=03-create-app-service)

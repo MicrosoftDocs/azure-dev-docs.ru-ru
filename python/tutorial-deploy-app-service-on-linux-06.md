@@ -1,17 +1,17 @@
 ---
-title: Руководство по Потоковая передача журналов из Службы приложений Azure в VS Code
+title: Шаг 6. Потоковая передача журналов из Службы приложений Azure в VS Code
 description: 'Шаг 6 руководства: потоковая передача журналов приложения в Visual Studio Code'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 56cbd468771af8d60fce20d88b8c984f95d4b9b9
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: f2e19a52b673ddcef927165191d610776e06a32f
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466069"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422421"
 ---
-# <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>Руководство по Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
+# <a name="6-stream-logs-from-azure-app-service-into-visual-studio-code"></a>6\. Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
 
 [Предыдущий шаг: развертывание приложения](tutorial-deploy-app-service-on-linux-05.md)
 
@@ -28,6 +28,6 @@ ms.locfileid: "74466069"
 1. Чтобы отключить потоковую передачу журналов (не отключая ведение журнала), щелкните правой кнопкой мыши приложение в обозревателе **Azure: Служба приложений** и щелкните **Stop streaming logs** (Остановить потоковую передачу журналов).
 
 > [!div class="nextstepaction"]
-> [Журналы отображаются](tutorial-deploy-app-service-on-linux-07.md)
+> [Журналы отображаются — перейти к шагу 7 >>>](tutorial-deploy-app-service-on-linux-07.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=06-stream-logs)

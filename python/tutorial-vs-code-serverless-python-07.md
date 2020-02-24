@@ -1,17 +1,17 @@
 ---
-title: Руководство. Добавление привязки к хранилищу для Функций Azure на Python с помощью VS Code
+title: Шаг 7. Добавление привязки к хранилищу для Функций Azure на Python с помощью VS Code
 description: Шаг руководства 7. Добавление в Python привязки для сохранения сообщений в службе хранилища Azure
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 34ee80b2fac2f66e37e67fd45ca366b97d3f52dd
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 2203104d53387254284e75e322367f2e7142bfad
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002082"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422178"
 ---
-# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>Руководство. Добавление привязки к хранилищу для решения "Функции Azure" на Python
+# <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Добавление привязки к хранилищу для решения "Функции Azure" на Python
 
 [Предыдущий шаг: развертывание второй функции](tutorial-vs-code-serverless-python-06.md)
 
@@ -97,6 +97,6 @@ ms.locfileid: "77002082"
 1. Чтобы протестировать новый код в облаке, повторно разверните проект, используя команду **Развернуть в приложении-функции** в обозревателе **Azure: Функции**. Выберите созданное ранее приложение-функцию, если появится соответствующий запрос. По завершении развертывания (этот процесс займет несколько минут) в **окне вывода** снова отобразятся общедоступные конечные точки, с помощью которых вы сможете повторить тесты.
 
 > [!div class="nextstepaction"]
-> [Привязку добавлена к хранилищу](tutorial-vs-code-serverless-python-08.md)
+> [Привязка хранилища добавлена — перейти к шагу 8 >>>](tutorial-vs-code-serverless-python-08.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=python-functions-extension&step=07-storage-binding)

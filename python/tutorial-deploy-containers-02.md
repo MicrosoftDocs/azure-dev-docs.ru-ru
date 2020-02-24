@@ -1,17 +1,17 @@
 ---
-title: Руководство. Развертывание образа контейнера в Службе приложений Azure с помощью Visual Studio Code
+title: Шаг 2. Развертывание образа контейнера в Службе приложений Azure с помощью Visual Studio Code
 description: Шаг руководства 2. Развертывание реального образа Docker в Службе приложений Azure из реестра контейнеров
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 446653a4de98954ae75caa38c9cb2ae04ec071c4
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 8005ba428d99051d9b5b86ed4f5222c1cd9ba673
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002376"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422411"
 ---
-# <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>Руководство. Развертывание образа контейнера в Службе приложений Azure
+# <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Развертывание образа контейнера в Службе приложений Azure
 
 [Предыдущий шаг: предварительные требования](tutorial-deploy-containers-01.md)
 
@@ -46,6 +46,6 @@ ms.locfileid: "77002376"
 1. После перезапуска службы откройте в браузере адрес `http://<name>.azurewebsites.net`. Можно также щелкнуть URL-адрес на панели вывода левой кнопкой мыши при нажатой клавише **CTRL** (**CMD** в macOS) или щелкнуть правой кнопкой мыши Службу приложений в обозревателе **Azure: Служба приложений** и выбрать команду **Просмотреть веб-сайт**.
 
 > [!div class="nextstepaction"]
-> [Образ развернут](tutorial-deploy-containers-03.md)
+> [Образ развернут — перейти к шагу 3 >>>](tutorial-deploy-containers-03.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=02-deploy-container)

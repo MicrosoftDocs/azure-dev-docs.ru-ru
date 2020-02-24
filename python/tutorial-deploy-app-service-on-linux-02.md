@@ -1,17 +1,17 @@
 ---
-title: Руководство. Подготовка приложения к развертыванию в Службе приложений Azure в Linux с помощью Visual Studio Code
+title: Шаг 2. Подготовка приложения к развертыванию в Службе приложений Azure в Linux с помощью Visual Studio Code
 description: 'Руководство, шаг 2: настройка приложения'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d77da775a112185f7ccb81805272c5c70a2aecb3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 78a8bc92e05d0e13874345ab86907cfa4c29764b
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825778"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422471"
 ---
-# <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>Руководство. Подготовка приложения к развертыванию в Службе приложений Azure
+# <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Подготовка приложения к развертыванию в Службе приложений Azure
 
 [Предыдущий шаг: предварительные требования](tutorial-deploy-app-service-on-linux-01.md)
 
@@ -75,6 +75,6 @@ ms.locfileid: "76825778"
 В любом случае лучше всего использовать отдельную базу данных, которая разворачивается и инициализируется независимо от кода приложения.
 
 > [!div class="nextstepaction"]
-> [Мое приложение готово](tutorial-deploy-app-service-on-linux-03.md)
+> [Мое приложение готово — перейти к шагу 3 >>>](tutorial-deploy-app-service-on-linux-03.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=02-prepare-app)

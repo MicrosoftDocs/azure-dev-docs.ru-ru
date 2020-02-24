@@ -1,17 +1,17 @@
 ---
-title: Руководство по Добавление второй функции Python в Функциях Azure с помощью VS Code
+title: Шаг 6. Добавление второй функции Python в Функциях Azure с помощью VS Code
 description: 'Шаг руководства 6: расширение проекта Функций Azure путем добавления второй функции.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 12cd3625d3eec63a2ba3de4d55dbd957fbf0fb34
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992425"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422152"
 ---
-# <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>Руководство по Добавление второй функции на Python в решении "Функции Azure"
+# <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 
 [Предыдущий шаг: развертывание в Azure](tutorial-vs-code-serverless-python-05.md)
 
@@ -119,6 +119,6 @@ ms.locfileid: "74992425"
 1. По завершении развертывания (этот процесс займет несколько минут) в **окне вывода** отобразятся общедоступные конечные точки, с которыми вы теперь можете повторить тесты.
 
 > [!div class="nextstepaction"]
-> [Я добавил вторую функцию](tutorial-vs-code-serverless-python-07.md)
+> [Вторая функция добавлена — перейти к шагу 7 >>>](tutorial-vs-code-serverless-python-07.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=06-second-function)

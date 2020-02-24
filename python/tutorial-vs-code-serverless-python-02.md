@@ -1,17 +1,17 @@
 ---
-title: Руководство по Создание функции Python в Функциях Azure с помощью VS Code
+title: Шаг 2. Создание функции Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 2: использование расширения "Функции Azure" для VS Code.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 49ab6b150f14268b6d52ac48524f66e6e520e547
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 3d33213d00c2b20d3a712c5cf9ca6888d25ebb8a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992516"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422161"
 ---
-# <a name="tutorial-create-a-python-function-for-azure-functions"></a>Руководство по Создание функции на Python в решении "Функции Azure"
+# <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"
 
 [Предыдущий шаг: предварительные требования](tutorial-vs-code-serverless-python-01.md)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74992516"
 
 1. Выполните следующее в предложенных запросах:
 
-    | prompt | Значение | ОПИСАНИЕ |
+    | prompt | Значение | Описание |
     | --- | --- | --- |
     | Укажите каталог для проекта. | Текущая открытая папка | Папка, в которой будет создаваться проект. Возможно, вы захотите создать проект во вложенной папке. |
     | Select a language for your function app project (Выберите язык для проекта приложения-функции) | **Python** | Язык, используемый для функции, от которого зависит шаблон для кода. |
@@ -50,6 +50,6 @@ ms.locfileid: "74992516"
 > ![Создание функций с помощью соответствующей функции в обозревателе Функций Azure](media/tutorial-vs-code-serverless-python/create-new-functions-in-azure-functions-explorer.png)
 
 > [!div class="nextstepaction"]
-> [Я создал функцию](tutorial-vs-code-serverless-python-03.md)
+> [Функция создана —перейти к шагу 3 >>>](tutorial-vs-code-serverless-python-03.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=02-create-function)

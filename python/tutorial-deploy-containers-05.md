@@ -1,17 +1,17 @@
 ---
-title: Руководство. Очистка ресурсов Azure
+title: Шаг 5. Очистка ресурсов Azure
 description: Шаг руководства 5. Очистка ресурсов Azure, позволяющая избежать постоянных расходов
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: bbafb323c49b9dd6879bf69924d8e8bcf62093a3
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: df785e68de26fe4414430289800fdabfa8757eef
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125246"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422235"
 ---
-# <a name="tutorial-clean-up-azure-resources"></a>Руководство. Очистка ресурсов Azure
+# <a name="5-clean-up-azure-resources"></a>5: Очистка ресурсов Azure
 
 [Предыдущий шаг: потоковая передача журналов](tutorial-deploy-containers-04.md)
 

@@ -1,17 +1,17 @@
 ---
-title: Руководство по Потоковая передача журналов из Службы приложений Azure для контейнера в Visual Studio Code
+title: Шаг 4. Потоковая передача журналов из Службы приложений Azure для контейнера в Visual Studio Code
 description: Шаг руководства 4. Просмотр журналов из Службы приложений Azure для отслеживания их поведения
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e9b54e53763b729f5042cfb0d8df438650fd362f
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 4f448945c0e1d1eda7870eb633d644535da7be0e
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466989"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422228"
 ---
-# <a name="tutorial-stream-logs-from-azure-app-service-for-a-container"></a>Руководство по Потоковая передача журналов из Службы приложений Azure для контейнера
+# <a name="4-stream-logs-from-azure-app-service-for-a-container"></a>4: Потоковая передача журналов из Службы приложений Azure для контейнера
 
 [Предыдущий шаг: внесение изменений и повторное развертывание](tutorial-deploy-containers-03.md)
 
@@ -39,6 +39,6 @@ ms.locfileid: "74466989"
 1. Перейдите в приложение, чтобы просмотреть дополнительные выходные данные для разных HTTP-запросов.
 
 > [!div class="nextstepaction"]
-> [Журналы отображаются](tutorial-deploy-containers-05.md)
+> [Журналы отображаются — перейти к шагу 5 >>>](tutorial-deploy-containers-05.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=04-stream-logs)

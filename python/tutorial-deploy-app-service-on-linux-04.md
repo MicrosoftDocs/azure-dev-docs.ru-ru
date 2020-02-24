@@ -1,17 +1,17 @@
 ---
-title: Руководство по Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure в Linux
+title: Шаг 4. Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure в Linux
 description: Шаг руководства 4. Настройка режима запуска веб-приложения в Службе приложений
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e18d58a5caf18103063fabfa3101988399bbb722
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d744b4a270c89b7feb826353366ba021345eac85
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467050"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422477"
 ---
-# <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>Руководство по Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
+# <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
 
 [Предыдущий шаг: создание Службы приложений](tutorial-deploy-app-service-on-linux-03.md)
 
@@ -88,6 +88,6 @@ gunicorn --bind=0.0.0.0 --timeout 600 <module>.wsgi
     ```
 
 > [!div class="nextstepaction"]
-> [Файл запуска уже настроен](tutorial-deploy-app-service-on-linux-05.md)
+> [Файл запуска настроен — перейти к шагу 5 >>>](tutorial-deploy-app-service-on-linux-05.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=04-startup-command)

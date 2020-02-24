@@ -1,17 +1,17 @@
 ---
-title: Руководство. Очистка ресурсов, используемых с кодом Python, в Функциях Azure
+title: Шаг 8. Очистка ресурсов, используемых с кодом Python, в Функциях Azure
 description: 'Шаг руководства 8: очистка ресурсов Azure, позволяющая избежать постоянных расходов.'
 ms.topic: conceptual
 ms.date: 01/15/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 264c09a8d84c7115bb0a56d0455d576187695db0
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125257"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422195"
 ---
-# <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>Руководство. Очистка ресурсов Azure для Функций Azure
+# <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Очистка ресурсов Azure для Функций Azure
 
 [Предыдущий шаг: добавление привязки к хранилищу](tutorial-vs-code-serverless-python-07.md)
 

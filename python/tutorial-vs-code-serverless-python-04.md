@@ -1,17 +1,17 @@
 ---
-title: Руководство. Локальная отладка кода Python в Функциях Azure с помощью VS Code
+title: Шаг 4. Локальная отладка кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
-ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
+ms.openlocfilehash: ddb6cd0b1c1cac308e7e7e8da5b658cda277586a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946687"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422143"
 ---
-# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>Руководство. Локальная отладка кода Python в решении "Функции Azure"
+# <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 
 [Предыдущий шаг: изучение файлов кода](tutorial-vs-code-serverless-python-03.md)
 
@@ -59,6 +59,6 @@ ms.locfileid: "75946687"
 1. Когда вы будете полностью удовлетворены результатами локального тестирования функции, закройте отладчик (с помощью команды меню **Отладка** > **Остановить отладку** или команды **Отключить** на панели инструментов отладки).
 
 > [!div class="nextstepaction"]
-> [Я завершил локальную работу с отладчиком](tutorial-vs-code-serverless-python-05.md)
+> [Локальная работа с отладчиком завершена — перейти к шагу 5 >>>](tutorial-vs-code-serverless-python-05.md)
 
 [У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=04-test-debug)

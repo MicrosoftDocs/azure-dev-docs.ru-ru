@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825798"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440859"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -48,7 +48,7 @@ ms.locfileid: "76825798"
 
 ### <a name="java-ee-applications"></a>Приложения Java EE
 
-Приложения Java EE (другое название — приложения J2EE, с недавнего времени — приложения JakartaEE) могут содержать некоторые или все элементы веб-приложений либо не содержать их вообще. Они также могут содержать и использовать множество дополнительных компонентов, как указано в спецификации [Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
+Приложения Java EE (другое название — приложения J2EE, с недавнего времени — приложения Jakarta EE) могут содержать некоторые или все элементы веб-приложений либо не содержать их вообще. Они также могут содержать и использовать множество дополнительных компонентов, как указано в спецификации [Java EE](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition).
 
 Приложения Java EE могут упаковываться в архивы с расширением *.ear* (EAR-файлы) или *.war* (WAR-файлы).
 
