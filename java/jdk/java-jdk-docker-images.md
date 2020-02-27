@@ -4,14 +4,14 @@ description: Узнайте, как использовать образы Docker
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: d7647757f371baa0b6fd21bd51d6629c6e1e0e10
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: b3a046563fa51efae32fd45e6154901539a8f4c8
+ms.sourcegitcommit: 6ffa53b933da524e09911b164bba8515722bfa91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812264"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629374"
 ---
-# <a name="use-docker-with-a-java-development-kit-jdk-for-azure"></a>Использование Docker с JDK (Java Development Kit) в Azure 
+# <a name="use-docker-with-a-java-development-kit-jdk-for-azure"></a>Использование Docker с JDK (Java Development Kit) в Azure
 
 Узнайте, как использовать Docker с пакетом SDK для Java (JDK) в Azure. Готовые образы Docker для Java 7, 8 и 11 доступны через [Docker Hub](https://hub.docker.com/_/microsoft-java-se).
 
@@ -26,7 +26,7 @@ ms.locfileid: "74812264"
 Образы Docker можно запускать с помощью синтаксиса `$ docker run mcr.microsoft.com/java/jdk:tag java`, как показано в примере ниже.
 
 ```cli
-docker run mcr.microsoft.com/java/jdk:8u212-zulu-alpine java -version 
+docker run mcr.microsoft.com/java/jdk:8-zulu-alpine java -version
 ```
 
 ## <a name="creating-a-docker-image"></a>Создание образа Docker
@@ -36,7 +36,7 @@ docker run mcr.microsoft.com/java/jdk:8u212-zulu-alpine java -version
 ### <a name="create-a-docker-file"></a>Создание файла Docker
 
 ```cli
-FROM mcr.microsoft.com/java/jdk:8u212-zulu-alpine 
+FROM mcr.microsoft.com/java/jdk:8-zulu-alpine
   
 RUN echo $' \
   
