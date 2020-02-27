@@ -4,12 +4,12 @@ description: Файлы для скачивания и заявление о п�
 ms.topic: conceptual
 ms.date: 04/09/2019
 ms.custom: seo-java-september2019
-ms.openlocfilehash: 3e0bb0e457d79f337c36b0c5649f471061a2a162
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5a54b81e1df649eea6716682059744a28ecff200
+ms.sourcegitcommit: 6ffa53b933da524e09911b164bba8515722bfa91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812266"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629421"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Долгосрочная поддержка Java для Azure и Azure Stack
 
@@ -20,13 +20,13 @@ ms.locfileid: "74812266"
 
 ## <a name="long-term-support-lts"></a>Долгосрочная поддержка (LTS):
 
-* [Java 11](https://www.azul.com/downloads/azure-only/zulu/#java11)
-* [Java 8](https://www.azul.com/downloads/azure-only/zulu/#java8);
-* [Java 7](https://www.azul.com/downloads/azure-only/zulu/#java7)
+* [Java 11](https://www.azul.com/downloads/azure-only/zulu/?&version=java-11-lts)
+* [Java 8](https://www.azul.com/downloads/azure-only/zulu/?&version=java-8-lts);
+* [Java 7](https://www.azul.com/downloads/azure-only/zulu/?&version=java-7-lts)
 
 ## <a name="technical-preview"></a>Техническая предварительная версия
 
-* [Java 12](https://www.azul.com/downloads/azure-only/zulu/#java12)
+* [Java 13](https://www.azul.com/downloads/azure-only/zulu/?&version=java-13)
 
 ## <a name="what-is-the-zulu-openjdk-for-azure"></a>Что такое Zulu OpenJDK для Azure?
 
@@ -39,7 +39,7 @@ ms.locfileid: "74812266"
 * Используются Microsoft Azure для работы со многими службами Azure, такими как:
   * Служба приложений (Windows);
   * Служба приложений для Linux;
-  * Функции Azure
+  * Функции
   * Service Fabric
   * HDInsight
   * Поиск
@@ -52,10 +52,10 @@ Azul Systems предоставляет полностью поддержива�
 
 |Долгосрочная поддержка Java SE  |Поддержка до  |
 |---------|----------|
-|[![Поддерживаемая версия Java — Java 7](../media/jdk/supported-java-versions-java-7.png)](https://www.azul.com/downloads/azure-only/zulu/#java7) |Июль 2023 г. |
-|[![Поддерживаемая версия Java — Java 8](../media/jdk/supported-java-versions-java-8.png)](https://www.azul.com/downloads/azure-only/zulu/#java8) |Март 2025 г.|
-|[![Поддерживаемая версия Java — Java 11](../media/jdk/supported-java-versions-java-11.png)](https://www.azul.com/downloads/azure-only/zulu/#java11) |Сентябрь 2026 г.|
-|[![Поддерживаемая версия Java — Java 12](../media/jdk/supported-java-versions-java-12.png)]() |**Предварительная версия**|
+|[![Поддерживаемая версия Java — Java 7](../media/jdk/supported-java-versions-java-7.png)](https://www.azul.com/downloads/azure-only/zulu/?&version=java-7-lts) |Июль 2023 г. |
+|[![Поддерживаемая версия Java — Java 8](../media/jdk/supported-java-versions-java-8.png)](https://www.azul.com/downloads/azure-only/zulu/?&version=java-8-lts) |Март 2025 г.|
+|[![Поддерживаемая версия Java — Java 11](../media/jdk/supported-java-versions-java-11.png)](https://www.azul.com/downloads/azure-only/zulu/?&version=java-11-lts) |Сентябрь 2026 г.|
+|[![Поддерживаемая версия Java — Java 13](../media/jdk/supported-java-versions-java-13.png)](https://www.azul.com/downloads/azure-only/zulu/?&version=java-13) |**Предварительная версия**|
 
 Для этих выпусков JDK выходят ежеквартальные обновления для системы безопасности и исправления ошибок, а также критические внеплановые обновления и исправления при необходимости.  Поддержка включает в себя обратное портирование обновлений для системы безопасности и исправлений ошибок для Java 7 и 8, обнаруженных в более новых версиях Java, например Java 11, что гарантирует стабильную работу и безопасность приложений на старых версиях Java.  Пользователи Azure могут получить эти обновления для системы безопасности и исправления ошибок платформы, не неся при этом незапланированных расходов на подписку на Java SE.
 
@@ -127,7 +127,7 @@ Azul Systems предоставляет полностью поддержива�
 
 Как всегда, разработчики Java могут перенести в Azure свои собственные среды выполнения Java, включая Oracle JDK и Red Hat JDK, и использовать защищенную инфраструктуру и многофункциональные службы. Выпуск Oracle Java SE для рабочей среды также доступен для разработчиков Java, выполняющих рабочие нагрузки Java на виртуальных машинах Azure (Windows или Linux).
 
-## <a name="use-for-local-development"></a>Использование в локальной разработке 
+## <a name="use-for-local-development"></a>Использование в локальной разработке
 
 Пакеты Java JDK для Azure и Azure Stack доступны для [скачивания](https://www.azul.com/downloads/azure-only/zulu/) разработчикам для использования в локальных средах разработки. Файлы для скачивания доступны для Windows, Linux и macOS. Разработчики, работающие на платформе Linux, могут также получить пакеты с помощью диспетчеров пакетов [yum](https://www.azul.com/downloads/azure-only/zulu/#yum-repo) и [apt](https://www.azul.com/downloads/azure-only/zulu/#apt-repo).
 
