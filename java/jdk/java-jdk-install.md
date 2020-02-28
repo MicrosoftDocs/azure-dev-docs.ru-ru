@@ -3,12 +3,12 @@ title: Установка Azul Zulu JDK для Azure и Azure Stack
 description: Установка пакетов средств разработки Azul Zulu Java (JDK) для разработки в Azure на платформах Windows, Linux и Mac
 ms.date: 04/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: d0d9c1263234baf515ce81ede49b0ac82e8491ab
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: dad5665285b15650212ab2410c3965c9f38b727d
+ms.sourcegitcommit: 6ffa53b933da524e09911b164bba8515722bfa91
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812230"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629391"
 ---
 # <a name="install-the-jdk-for-azure-and-azure-stack"></a>Установка JDK для Azure и Azure Stack
 
@@ -16,39 +16,52 @@ ms.locfileid: "74812230"
 
 Существует [несколько типов пакетов для скачивания, поддерживаемых для каждой клиентской ОС](https://www.azul.com/downloads/azure-only/zulu/). Вы также можете получить образ виртуальной машины из коллекции Azure Marketplace для следующих платформ:
 
-  * [Azul Zulu: Java 8 на Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804)
-  * [Azul Zulu: Java 8 на Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-windows-2019)
-  
-  * [Azul Zulu: Java 11 на Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-ubuntu-1804)
-  * [Azul Zulu: Java 11 на Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-windows-2019)
-
+* [Azul Zulu: Java 8 на Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804)
+* [Azul Zulu: Java 8 на Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-windows-2019)
+* [Azul Zulu: Java 11 на Ubuntu 18.04](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-ubuntu-1804)
+* [Azul Zulu: Java 11 на Windows Server 2019](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-windows-2019)
 
 > [!NOTE]
 > Эти инструкции предназначены для 64-разрядной версии Java 8 JDK. Azul также предоставляет среду выполнения Java (JRE) в виде автономной установки. JRE входит в состав установки JDK.
 >
->  Пакеты Java 11 также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).
+> Пакеты Java 11 также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).
 
-## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-windows"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Windows 
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-windows"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Windows
 
-1. [Скачайте 64-разрядный пакет Azul Zulu JDK 8 как MSI-файл](https://repos.azul.com/azure-only/zulu/packages/zulu-11/11.0.3/zulu-11-azure-jdk_11.31.11-11.0.3-win_x64.msi) в расположение на клиенте, например `C:\Users\<your_login>\Downloads`. (Пакеты ZIP также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
+1. Скачайте 64-разрядный пакет Azul Zulu JDK 8 в виде MSI-файла:
+
+   * [zulu-8-azure-jdk_8.44.0.11-8.0.242-win_x64.msi](http://repos.azul.com/azure-only/zulu/packages/zulu-8/8u242/zulu-8-azure-jdk_8.44.0.11-8.0.242-win_x64.msi)
+   * Или проверьте наличие [более поздней версии Zulu 8](http://repos.azul.com/azure-only/zulu/packages/zulu-8) для файла *MSI*.
+
+   Сохраните пакет на клиенте, например `C:\Users\<your_login>\Downloads`. (Пакеты ZIP также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
 
 2. Перейдите в каталог и дважды щелкните скачанный MSI-файл, чтобы начать установку.
 
-## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-mac"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Mac OS 
+## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-mac"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Mac OS
 
 По приведенной ниже ссылке можно скачать ZIP-файл на компьютер Mac. Доступна также версия DMG.
 
-1. [Скачайте 64-разрядный пакет Azul Zulu JDK 8 как ZIP-файл](https://repos.azul.com/azure-only/zulu/packages/zulu-11/11.0.3/zulu-11-azure-jdk_11.31.11-11.0.3-macosx_x64.zip) в расположение на клиенте, например `/Library/Java/JavaVirtualMachines/`. (Пакеты DMG также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
+1. Скачайте 64-разрядный пакет Azul Zulu JDK 8 в виде ZIP-файла:
+
+   * [zulu-8-azure-jdk_8.44.0.11-8.0.242-macosx_x64.zip](http://repos.azul.com/azure-only/zulu/packages/zulu-8/8u242/zulu-8-azure-jdk_8.44.0.11-8.0.242-macosx_x64.zip)
+   * Или проверьте наличие [более поздней версии Zulu 8](http://repos.azul.com/azure-only/zulu/packages/zulu-8) для *ZIP-файла*.
+
+   Сохраните пакет на клиенте, например `/Library/Java/JavaVirtualMachines/`. (Пакеты DMG также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
 
 2. Запустите Finder, перейдите в каталог скачивания и дважды щелкните ZIP-файл. Кроме того, вы можете запустить окно команды терминала, перейти в каталог и запустить:
 
-```cli
-unzip <name_of_zulu_package>.zip
-```
+    ```cli
+    unzip <name_of_zulu_package>.zip
+    ```
 
 ## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdk-builds-for-alpine-linux"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure для Alpine Linux
 
-1. [Скачайте 64-разрядный пакет Azul Zulu JDK 8 как TAR-файл](https://repos.azul.com/azure-only/zulu/packages/zulu-11/11.0.3/zulu-11-azure-jdk_11.31.11-11.0.3-linux_x64.tar.gz) в расположение на клиенте, например `/usr/lib/jvm`. (Пакеты RPM и DEB также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
+1. Скачайте 64-разрядный пакет Azul Zulu JDK 8 в виде TAR-файла:
+
+   * [zulu-8-azure-jdk_8.44.0.11-8.0.242-linux_x64.tar.gz](http://repos.azul.com/azure-only/zulu/packages/zulu-8/8u242/zulu-8-azure-jdk_8.44.0.11-8.0.242-linux_x64.tar.gz)
+   * Или проверьте наличие [более поздней версии Zulu 8](https://repos.azul.com/azure-only/zulu/packages/zulu-8) для файла с расширением *.tar.gz*.
+
+   Сохраните пакет на клиенте, например `/usr/lib/jvm`. (Пакеты RPM и DEB также предоставляются на [странице загрузки Azure на сайте Azul](https://www.azul.com/downloads/azure-only/zulu/).)
 
 2. Перейдите в каталог и запустите следующую команду, чтобы распаковать и развернуть файл:
 
@@ -60,15 +73,14 @@ unzip <name_of_zulu_package>.zip
 
 Чтобы подтвердить установку, перейдите в командную строку и запустите команду `java -version`.
 
-Результат выполнения команды должен выглядеть следующим образом:
+Выходные данные этой команды должны быть приблизительно такие, как в следующем примере:
 
 ```cli
 $ java -version
 
-openjdk version "1.8.0_212"
-OpenJDK Runtime Environment (Zulu 8.38.0.13-macosx)-Microsoft-Azure-restricted (build 1.8.0_212-b04)
-OpenJDK 64-Bit Server VM (Zulu 8.38.0.13-macosx)-Microsoft-Azure-restricted (build 25.212-b04, mixed mode)
-
+openjdk version "1.8.0_242"
+OpenJDK Runtime Environment (Zulu 8.44.0.11-linux64)-Microsoft-Azure-restricted (build 1.8.0_242-b20)
+OpenJDK 64-Bit Server VM (Zulu 8.44.0.11-linux64)-Microsoft-Azure-restricted (build 25.242-b20, mixed mode)
 ```
 
 ## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdks-from-a-yum-repository"></a>Скачивание и установка сборок JDK корпоративного выпуска Azul Zulu для Azure из репозитория Yum
@@ -93,13 +105,13 @@ sudo yum -q -y update
 sudo yum -q -y install zulu-11-azure-jdk
 ```
 
-Для Java 12 (предварительная версия) запустите:
+Для Java 13 (предварительная версия) выполните такие команды:
 
 ```cli
 sudo rpm --import http://repos.azul.com/azul-repo.key
 sudo curl http://repos.azul.com/azure-only/zulu-azure.repo -o /etc/yum.repos.d/zulu-azure.repo
 sudo yum -q -y update
-sudo yum -q -y install zulu-12-azure-jdk
+sudo yum -q -y install zulu-13-azure-jdk
 ```
 
 **Чтобы обновить пакет Zulu JDK 8 из репозитория Yum:**
@@ -108,14 +120,15 @@ sudo yum -q -y install zulu-12-azure-jdk
 sudo yum -q -y install zulu-8-azure-jdk
 ```
 
-(Измените номер версии в приведенной выше команде, если вы используете версии 11 или 12.)
+(Измените номер версии в приведенной выше команде, если вы используете другую версию.)
 
 **Чтобы удалить пакет Zulu JDK 8 из репозитория Yum:**
 
 ```cli
 sudo yum -y erase zulu-8-azure-jdk
 ```
-(Измените номер версии в приведенной выше команде, если вы используете версии 11 или 12.)
+
+(Измените номер версии в приведенной выше команде, если вы используете другую версию.)
 
 ## <a name="download-and-install-the-azul-zulu-jdks-from-an-apt-get-repository"></a>Скачивание и установка пакетов Azul Zulu JDK из репозитория apt-get
 
@@ -139,13 +152,13 @@ sudo apt-get -q update
 sudo apt-get -y install zulu-11-azure-jdk
 ```
 
-Для Java 12 (предварительная версия) запустите:
+Для Java 13 (предварительная версия) выполните такие команды:
 
 ```cli
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0xB1998361219BD9C9
 sudo apt-add-repository "deb http://repos.azul.com/azure-only/zulu/apt stable main"
 sudo apt-get -q update
-sudo apt-get -y install zulu-12-azure-jdk
+sudo apt-get -y install zulu-13-azure-jdk
 ```
 
 **Чтобы обновить пакет Zulu JDK 8 из репозитория apt-get:**
@@ -156,7 +169,7 @@ sudo apt-get -y install zulu-8-azure-jdk
 ```
 
 Предыдущий выпуск будет автоматически удален.
-(Измените номер версии в приведенной выше команде, если вы используете версии 11 или 12.)
+(Измените номер версии в приведенной выше команде, если вы используете другую версию.)
 
 **Чтобы удалить пакет Zulu JDK 8 из репозитория apt-get:**
 
@@ -164,7 +177,6 @@ sudo apt-get -y install zulu-8-azure-jdk
 sudo apt-get -y purge zulu-8-azure-jdk
 ```
 
-(Измените номер версии в приведенной выше команде, если вы используете версии 11 или 12.)
+(Измените номер версии в приведенной выше команде, если вы используете другую версию.)
 
 Дополнительные сведения о подготовке, установке пакетов Azul Zulu JDK для разработки в Azure и об управлении ими см. в [официальных документах Zulu](https://docs.azul.com/zulu/zuludocs/index.htm).
-
