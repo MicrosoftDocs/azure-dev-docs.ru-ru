@@ -10,12 +10,12 @@ metadata:
   displayType: two-column
   interactive: azurecli
   ms.date: 10/18/2019
-  ms.openlocfilehash: 9719806929d1d9ef8fd7988d1fc9277aedcf8fe1
-  ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+  ms.openlocfilehash: 5afbcedcd338747ed5e2f15bd44e1f2460ebc997
+  ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/25/2019
-  ms.locfileid: "74467065"
+  ms.lasthandoff: 02/27/2020
+  ms.locfileid: "77709781"
 items:
 - durationInMinutes: 1
   content: "В этом руководстве представлены сведения об использовании различных библиотек Azure SDK для Python.  \n"
@@ -90,7 +90,7 @@ items:
 
     Выполните проверку подлинности:
 
-    ```azcli
+    ```azurecli
 
     az login
 
@@ -98,7 +98,7 @@ items:
 
     Создайте группу ресурсов:
 
-    ```azurecli-interactive
+    ```azurecli
 
     az group create -l eastus --n sampleVmResourceGroup
 
@@ -107,7 +107,7 @@ items:
 
     Создайте виртуальную сеть и подсеть:
 
-    ```azurecli-interactive
+    ```azurecli
 
     az network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24
 
@@ -116,7 +116,7 @@ items:
 
     Создайте общедоступный IP-адрес:
 
-    ```azurecli-interactive
+    ```azurecli
 
     az network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv4
 
@@ -124,7 +124,7 @@ items:
 
     Создайте клиент сетевого интерфейса:
 
-    ```azurecli-interactive
+    ```azurecli
 
     az network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip
 
@@ -243,7 +243,7 @@ items:
     Когда программа завершит работу, проверьте виртуальную машину в подписке с помощью Azure CLI 2.0:
 
 
-    ```azurecli-interactive
+    ```azurecli
 
     az vm list --resource-group sampleVmResourceGroup
 
@@ -253,21 +253,21 @@ items:
     Проверив, что код работает, используйте CLI, чтобы удалить виртуальную машину и ее ресурсы.
 
 
-    ```azurecli-interactive
+    ```azurecli
 
     az group delete --name sampleVmResourceGroup
 
     ```
 - title: Развертывание веб-приложения из репозитория GitHub
   durationInMinutes: 5
-  content: "Код в примере развертывает веб-приложение Flask из ветви `master` в репозитории GitHub в новое [веб-приложение службы приложений Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) уровня \"Бесплатный\". \n\nПеред началом работы Создайте вилку для https://github.com/Azure-Samples/python-docs-hello-world.\n\nВыполните проверку подлинности:\n```azcli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli-interactive\naz group create -l eastus -n sampleWebResourceGroup\n```\n\nСоздайте план службы приложений уровня \"Бесплатный\".\n```azurecli-interactive\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\nОткройте браузер и укажите приложение в CLI:\n```azurecli-interactive\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\nПроверив развертывание, удалите веб-приложение и план из подписки. \n```azurecli-interactive\naz group delete --name sampleWebResourceGroup\n```\n"
+  content: "Код в примере развертывает веб-приложение Flask из ветви `master` в репозитории GitHub в новое [веб-приложение службы приложений Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) уровня \"Бесплатный\". \n\nПеред началом работы Создайте вилку для https://github.com/Azure-Samples/python-docs-hello-world.\n\nВыполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n sampleWebResourceGroup\n```\n\nСоздайте план службы приложений уровня \"Бесплатный\".\n```azurecli\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\nОткройте браузер и укажите приложение в CLI:\n```azurecli\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\nПроверив развертывание, удалите веб-приложение и план из подписки. \n```azurecli\naz group delete --name sampleWebResourceGroup\n```\n"
 - title: Подключение к базе данных SQL
   durationInMinutes: 5
-  content: "Код в примере создает базу данных SQL с правилом брандмауэра, разрешающим удаленный доступ, и подключается к ней с помощью драйвера Microsoft ODBC. Модуль pyodbc использует драйвер Microsoft ODBC в Linux для подключения к базам данных SQL. \n\nВыполните проверку подлинности:\n```azcli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli-interactive\naz group create -l eastus -n azure-sample-group\n```\n\nСоздайте сервер SQL Server:\n```azurecli-interactive\naz sql server create --admin-password HusH_Sec4et --admin-user mysecretname -l eastus -n samplesqlserver123 -g azure-sample-group\n```\n\nДобавьте правило брандмауэра:\n```azurecli-interactive\naz sql server firewall-rule create --end-ip-address 167.220.0.235 --name firewall_rule_name_123.123.123.123 --resource-group azure-sample-group --server samplesqlserver123 --start-ip-address 123.123.123.123\n```\n\nСоздайте базу данных SQL:\n```azurecli-interactive\naz sql db create --name sample-db --resource-group azure-sample-group --server samplesqlserver123\n```\n\n```python\nfrom azure.mgmt.sql import SqlManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\nimport pyodbc\n\nLOCATION = 'eastus'\nGROUP_NAME = 'azure-sample-group'\nSERVER_NAME = 'samplesqlserver123'\nDATABASE_NAME = 'sample-db'\nUSER_NAME ='mysecretname'\nPASSWORD='HusH_Sec4et'\n\n# authenticate\nsql_client = get_client_from_cli_profile(SqlManagementClient)\n\n\ndef run_example():\n# Get SQL database\nprint('Get SQL database')\ndatabase = sql_client.databases.get(\n    GROUP_NAME,\n    SERVER_NAME,\n    DATABASE_NAME\n)\nprint(database)\nprint(\"\\n\\n\")\n\n\ndef create_and_insert():\nserver = SERVER_NAME+'.database.windows.net'\ndatabase = DATABASE_NAME\nusername = USER_NAME\npassword = PASSWORD\ndriver = '{ODBC Driver 13 for SQL Server}'\ncnxn = pyodbc.connect(\n    'DRIVER=' + driver + ';PORT=1433;SERVER=' + server + ';PORT=1443;DATABASE=' + database + ';UID=' + username + ';PWD=' + password)\ncursor = cnxn.cursor()\ntsql = \"CREATE TABLE CLOUD (name varchar(255), code int);\"\ntsqlInsert = \"INSERT INTO CLOUD (name, code) VALUES ('Azure', 1); \"\nselectValues = \"SELECT * FROM CLOUD\"\nwith cursor.execute(tsql):\n    print('Successfully created table!')\nwith cursor.execute(tsqlInsert):\n    print('Successfully inserted data into table')\ncursor.execute(selectValues)\nrow = cursor.fetchone()\nwhile row:\n    print(str(row[0]) + \" \" + str(row[1]))\n    row = cursor.fetchone()\ncnxn.commit()\n\nif __name__ == \"__main__\":\nrun_example()\ncreate_and_insert()\n```\n\nУбедившись, что код работает, удалите базу данных SQL и ее ресурсы с помощью CLI.\n\n```azurecli-interactive\naz group delete --name azure-sample-group\n```\n"
+  content: "Код в примере создает базу данных SQL с правилом брандмауэра, разрешающим удаленный доступ, и подключается к ней с помощью драйвера Microsoft ODBC. Модуль pyodbc использует драйвер Microsoft ODBC в Linux для подключения к базам данных SQL. \n\nВыполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n azure-sample-group\n```\n\nСоздайте сервер SQL Server:\n```azurecli\naz sql server create --admin-password HusH_Sec4et --admin-user mysecretname -l eastus -n samplesqlserver123 -g azure-sample-group\n```\n\nДобавьте правило брандмауэра:\n```azurecli\naz sql server firewall-rule create --end-ip-address 167.220.0.235 --name firewall_rule_name_123.123.123.123 --resource-group azure-sample-group --server samplesqlserver123 --start-ip-address 123.123.123.123\n```\n\nСоздайте базу данных SQL:\n```azurecli\naz sql db create --name sample-db --resource-group azure-sample-group --server samplesqlserver123\n```\n\n```python\nfrom azure.mgmt.sql import SqlManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\nimport pyodbc\n\nLOCATION = 'eastus'\nGROUP_NAME = 'azure-sample-group'\nSERVER_NAME = 'samplesqlserver123'\nDATABASE_NAME = 'sample-db'\nUSER_NAME ='mysecretname'\nPASSWORD='HusH_Sec4et'\n\n# authenticate\nsql_client = get_client_from_cli_profile(SqlManagementClient)\n\n\ndef run_example():\n# Get SQL database\nprint('Get SQL database')\ndatabase = sql_client.databases.get(\n    GROUP_NAME,\n    SERVER_NAME,\n    DATABASE_NAME\n)\nprint(database)\nprint(\"\\n\\n\")\n\n\ndef create_and_insert():\nserver = SERVER_NAME+'.database.windows.net'\ndatabase = DATABASE_NAME\nusername = USER_NAME\npassword = PASSWORD\ndriver = '{ODBC Driver 13 for SQL Server}'\ncnxn = pyodbc.connect(\n    'DRIVER=' + driver + ';PORT=1433;SERVER=' + server + ';PORT=1443;DATABASE=' + database + ';UID=' + username + ';PWD=' + password)\ncursor = cnxn.cursor()\ntsql = \"CREATE TABLE CLOUD (name varchar(255), code int);\"\ntsqlInsert = \"INSERT INTO CLOUD (name, code) VALUES ('Azure', 1); \"\nselectValues = \"SELECT * FROM CLOUD\"\nwith cursor.execute(tsql):\n    print('Successfully created table!')\nwith cursor.execute(tsqlInsert):\n    print('Successfully inserted data into table')\ncursor.execute(selectValues)\nrow = cursor.fetchone()\nwhile row:\n    print(str(row[0]) + \" \" + str(row[1]))\n    row = cursor.fetchone()\ncnxn.commit()\n\nif __name__ == \"__main__\":\nrun_example()\ncreate_and_insert()\n```\n\nУбедившись, что код работает, удалите базу данных SQL и ее ресурсы с помощью CLI.\n\n```azurecli\naz group delete --name azure-sample-group\n```\n"
 - title: Запись большого двоичного объекта в новую учетную запись хранения
   durationInMinutes: 5
-  content: "Выполните проверку подлинности:\n```azcli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli-interactive\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nСоздайте учетную запись хранения:\n```azurecli-interactive\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nЭтот код создает [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/storage-introduction), а затем использует библиотеки службы хранилища Azure для Python, чтобы создать HTML-файл в облаке. \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nЧтобы проверить, успешно ли отправлено содержимое, перейдите по выведенному URL-адресу. \n\nУдалите учетную запись хранилища с помощью CLI:\n```azurecli-interactive\naz group delete --name sampleStorageResourceGroup\n```\n"
-- title: Дальнейшие действия
+  content: "Выполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nСоздайте учетную запись хранения:\n```azurecli\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nЭтот код создает [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/storage-introduction), а затем использует библиотеки службы хранилища Azure для Python, чтобы создать HTML-файл в облаке. \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nЧтобы проверить, успешно ли отправлено содержимое, перейдите по выведенному URL-адресу. \n\nУдалите учетную запись хранилища с помощью CLI:\n```azurecli\naz group delete --name sampleStorageResourceGroup\n```\n"
+- title: Next Steps
   content: >-
     Вы завершили вводный курс по использованию библиотек Azure для Python.
 

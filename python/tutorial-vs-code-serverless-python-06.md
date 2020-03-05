@@ -4,12 +4,12 @@ description: 'Шаг руководства 6: расширение проект
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 0f28ef3b6d57abe75c286839001078875787b849
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422152"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709661"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 
@@ -104,13 +104,11 @@ ms.locfileid: "77422152"
 
 1. Запустите отладчик, нажав клавишу F5 или выбрав команду меню **Отладка** > **Начать отладку**. В **окне вывода** должны отобразиться обе конечные точки проекта.
 
-    ```output
+    <pre>
     Http Functions:
-
             DigitsOfPi: [GET] http://localhost:7071/api/DigitsOfPi
-
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
-    ```
+    </pre>
 
 1. В браузере или с помощью средства curl создайте запрос к адресу `http://localhost:7071/api/DigitsOfPi?digits=125` и просмотрите выходные данные. (Вы можете заметить неточности в алгоритме этого кода и самостоятельно усовершенствовать его.) Завершив работу, остановите отладчик.
 

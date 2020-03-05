@@ -3,12 +3,12 @@ title: Начало работы с модулями Azure для Node.js
 description: 'Начало работы с модулями Azure для Node.js: аутентификация и управление ресурсами'
 ms.date: 06/17/2017
 ms.topic: conceptual
-ms.openlocfilehash: ecd256b28e666368d3b15a97a198aacc82a0f823
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 600c10c052a3aa95eb4dc04de0166a6974ede060
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002278"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709901"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Начало работы с модулями Azure для Node.js
 
@@ -38,7 +38,7 @@ npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure
 
 [Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо `MY_SECURE_PASSWORD` нужно указать в аргументе пароля [безопасный пароль](/azure/active-directory/active-directory-passwords-policy).
 
-```azurecli-interactive
+```azurecli
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
 ```
 
@@ -62,7 +62,7 @@ export AZURE_TENANT XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 Выберите идентификатор подписки с помощью команды [az account show](/cli/azure/account#az-account-show).
 
-```azurecli-interactive
+```azurecli
 az account show
 ```
 
@@ -181,7 +181,7 @@ node createVM.js
 
 Когда код будет выполнен, получите IP-адрес новой виртуальной машины и выполните вход с использованием SSH и значения `adminPass` из кода.
 
-```azurecli-interactive
+```azurecli
 az vm list-ip-addresses --name newLinuxVM
 ```
 
@@ -248,7 +248,7 @@ node uploadFile.js
 
 Удалите группу ресурсов, чтобы удалить ресурсы, созданные во время работы с этим руководством.
 
-```azurecli-interactive
+```azurecli
 az group delete --name myResourceGroup
 ```
 
