@@ -3,12 +3,12 @@ title: Развертывание контейнеров Docker в Службе 
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 2d6721060281fb73d31576caa47f316f2d078d29
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 98ebb6bd857216cb395eb8cc62faa3d6ee30e3eb
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467150"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709840"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
 
@@ -45,9 +45,9 @@ docker --version
 
 Выходные данные должны быть примерно следующими:
 
-```output
+<pre>
 Docker Version 17.12.0-ce, build c97c6d6
-```
+</pre>
 
 > [!div class="nextstepaction"]
 > [Расширение Docker установлено](tutorial-vscode-docker-node-02.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=getting-started)

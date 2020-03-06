@@ -4,12 +4,12 @@ description: Шаг руководства 5. Развертывание код
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 425fb745cec74672cfabc6c3c5eab96821a43224
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422203"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709761"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Развертывание решения "Функции Azure" на Python
 
@@ -43,10 +43,11 @@ ms.locfileid: "77422203"
 
 1. После развертывания в окне **Выходные данные** также отображается общедоступная конечная точка в Azure (URL-адрес конкретной конечной точки будет соответствовать имени, указанному вами для приложения-функции):
 
-    ```output
+    <pre>
     HTTP Trigger Urls:
-      HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
-    ```
+
+          HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
+    </pre>
 
     Вы можете выполнить с помощью этой конечной точкой такие же тесты, какие выполняются локально, используя параметры URL-адреса и (или) запросы с данными JSON в тексте запроса. Результаты, возвращаемые общедоступной конечной точкой, должны совпадать с результатами локальной конечной точки, которую вы тестировали ранее в [части 4](tutorial-vs-code-serverless-python-04.md).
 
@@ -56,7 +57,7 @@ ms.locfileid: "77422203"
 
 Но пока эти команды не работают. Потоковая передача журнала доступна в браузере после выполнения следующей команды, в которой следует заменить значение `<app_name>` именем конкретного приложения-функции в Azure:
 
-```bash
+```
 # Replace <app_name> with the name of your Functions app on Azure
 func azure functionapp logstream <app_name> --browser
 ```

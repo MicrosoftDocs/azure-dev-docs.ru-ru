@@ -3,12 +3,12 @@ title: Потоковая передача журналов из Службы п
 description: Руководство, часть 4. Просмотр журнала или вывод его последнего фрагмента
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: cc140d7751f9b014f1a16065fd4c65b481c7d1ae
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 4048fd1d5d288d88cadf0a865c2c5b0ddd517daf
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466816"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709811"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Потоковая передача журналов из Службы приложений Azure
 
@@ -26,11 +26,11 @@ ms.locfileid: "74466816"
 
 1. После перезапуска приложения откроется окно **Вывод** в VS Code с подключением к потоку журнала для вывода данных.
 
-    ```bash
+    <pre>
     Connecting to log-streaming service...
     2019-09-20 17:33:51.428 INFO  - Container msdocs-vscode-node_2 for site msdocs-vscode-node initialized successfully.
     2019-09-20 17:33:56.500 INFO  - Container logs
-    ```
+    </pre>
 
 1. Несколько раз обновите веб-страницу в браузере и убедитесь, что отображаются дополнительные выходные данные журнала.
 

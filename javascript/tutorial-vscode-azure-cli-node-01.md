@@ -3,12 +3,12 @@ title: Развертывание приложений Node.js в Службе �
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: b249084e6c22491bd05dbb3df2544f8570dadad0
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 7abe3bf3d59072acf8b448b66e68908b5d824a8c
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466789"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709875"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 
@@ -33,7 +33,7 @@ ms.locfileid: "74466789"
 
 После установки Azure CLI выполните следующую команду в окне терминала или командной строки:
 
-```bash
+```azurecli
 az login
 ```
 

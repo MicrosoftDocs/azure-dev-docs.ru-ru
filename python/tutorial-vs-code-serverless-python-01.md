@@ -4,12 +4,12 @@ description: 'Руководство, шаг 1: общие сведения и �
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 3056ccaa6d0cc8e5f2e15c6b7511172f59644936
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: b9aecefc05db95aa121e496c9c993a5bba373ef7
+ms.sourcegitcommit: a9ec05f964009409fe6e54b95c9d548f805a518e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422189"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215341"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -35,8 +35,8 @@ ms.locfileid: "77422189"
 
 При установке Node.js используйте параметры по умолчанию и *не* выбирайте параметр для автоматической установки необходимых средств.  Кроме того, обязательно используйте параметр `-g` с командами `npm install`, чтобы средства Core Tools были доступны для последующих команд.
 
-    > [!TIP]
-    > The Core Tools are written in .NET Core, and the Core Tools package is best installed using the Node.js package manager, npm, which is why you need to install .NET Core and Node.js at present, even for working with Azure Functions in Python. You can, however bypass the .NET Core requirement using "extension bundles" as described in the aforementioned documentation. Whatever the case, you need install these components only once, after which Visual Studio Code automatically prompts you to install any updates.
+> [!TIP]
+> Средства Core Tools написаны на .NET Core, а пакет Core Tools лучше всего устанавливать с помощью диспетчера пакетов npm из набора Node.js, а значит, вам пока нужно устанавливать .NET Core и Node.js даже для работы с Функциями Azure на Python. Но вы можете обойтись без .NET Core, используя "пакеты расширений", как описано в упомянутой выше документации. В любом случае все эти компоненты нужно устанавливать только один раз, после чего Visual Studio Code будет автоматически предлагать вам все нужные обновления.
 
 ### <a name="visual-studio-code-python-and-the-azure-functions-extension"></a>Visual Studio Code, Python и расширение "Функции Azure"
 

@@ -3,12 +3,12 @@ title: Потоковая передача журналов из Службы п
 description: Руководство, часть 5. Просмотр журналов
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 8a173bbb7f53de2189e0ecb99b851d77704ff92d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: f96deb992af0d446876265e1b8214879ddff45e6
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466766"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709881"
 ---
 # <a name="stream-logs-from-app-service"></a>Потоковая передача журналов из Службы приложений
 
@@ -18,23 +18,23 @@ ms.locfileid: "74466766"
 
 1. Выполните следующую команду, чтобы начать ведение журнала, заменив `<your_app_name>` именем Службы приложений:
 
-    ```bash
+    ```azurecli
     az webapp log tail --name <your_app_name>
     ```
 
-1. Через несколько секунд должно появиться сообщение о том, что вы подключены к службе потоковой передачи журналов.
+1. Через несколько секунд в окне выходных данных должно появиться сообщение о том, что вы подключились к службе потоковой передачи журналов.
 
-    ```bash
+    <pre>
     2019-09-25T13:39:23  Welcome, you are now connected to log-streaming service. The default timeout is 2 hours. Change the timeout with the App Setting SCM_LOGSTREAM_TIMEOUT (in seconds).
-    ```
+    </pre>
 
 1. Несколько раз обновите страницу в браузере, чтобы создать дополнительные выходные данные.
 
-    ```bash
+    <pre>
     GET / 304 2.327 ms - -
     GET / 304 0.957 ms - -
     GET / 304 2.435 ms - -
-    ```
+    </pre>
 
 1. Нажмите клавиши **CTRL**+**C**, чтобы завершить сеанс ведения журнала.
 
