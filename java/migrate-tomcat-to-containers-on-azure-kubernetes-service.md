@@ -5,18 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825833"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893746"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes
 
 Узнайте, что следует учитывать при переносе существующего приложения Tomcat для запуска в контейнере Службы Azure Kubernetes (AKS).
 
-## <a name="pre-migration-steps"></a>Шаги по подготовке к миграции
+## <a name="pre-migration"></a>Подготовка к миграции
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -224,26 +224,26 @@ echo "Your public IP address is ${publicIp}."
 
 Чтобы выполнить запланированные задания в кластере AKS, определите требуемые [задания Cron](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/).
 
-## <a name="post-migration-steps"></a>Действия после переноса данных
+## <a name="post-migration"></a>Действия после миграции
 
 После переноса приложения в AKS нужно убедиться, что оно работает правильно. Затем вы можете применить некоторые рекомендации, которые помогут сделать ваше приложение более удобным для использования в облаке.
 
-1. Мы рекомендуем [добавить DNS-имя](/azure/aks/ingress-static-ip#configure-a-dns-name) к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения.
+* Мы рекомендуем [добавить DNS-имя](/azure/aks/ingress-static-ip#configure-a-dns-name) к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения.
 
-1. Вы также можете [добавить чарты Helm для приложения](https://helm.sh/docs/topics/charts/). Чарты Helm позволяют параметризировать развертывание приложения для использования и настройки различными клиентами.
+* Вы также можете [добавить чарты Helm для приложения](https://helm.sh/docs/topics/charts/). Чарты Helm позволяют параметризировать развертывание приложения для использования и настройки различными клиентами.
 
-1. Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/aks-template).
+* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/kubernetes/aks-template).
 
-1. Включите [мониторинг Azure для кластера](/azure/azure-monitor/insights/container-insights-enable-existing-clusters), чтобы разрешить сбор журналов контейнеров, отслеживание использования и т. д.
+* Включите [мониторинг Azure для кластера](/azure/azure-monitor/insights/container-insights-enable-existing-clusters), чтобы разрешить сбор журналов контейнеров, отслеживание использования и т. д.
 
-1. Вы можете предоставить метрики конкретного приложения через Prometheus. Prometheus — это платформа метрик с открытым кодом, широко используемая в сообществе Kubernetes. Вы можете настроить [метрики Prometheus в Azure Monitor](/azure/azure-monitor/insights/container-insights-prometheus-integration), чтобы не размещать собственный сервер Prometheus. Так вы включите агрегирование метрик из приложений и автоматическое реагирование или эскалацию при возникновении аномальных условий.
+* Вы можете предоставить метрики конкретного приложения через Prometheus. Prometheus — это платформа метрик с открытым кодом, широко используемая в сообществе Kubernetes. Вы можете настроить [метрики Prometheus в Azure Monitor](/azure/azure-monitor/insights/container-insights-prometheus-integration), чтобы не размещать собственный сервер Prometheus. Так вы включите агрегирование метрик из приложений и автоматическое реагирование или эскалацию при возникновении аномальных условий.
 
-1. Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/aks/operator-best-practices-multi-region).
+* Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/aks/operator-best-practices-multi-region).
 
-1. Ознакомьтесь с [политикой поддержки версий Kubernetes](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy). Вы должны [обновлять кластер AKS](/azure/aks/upgrade-cluster) самостоятельно, чтобы обеспечить его выполнение под управлением поддерживаемой версии.
+* Ознакомьтесь с [политикой поддержки версий Kubernetes](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy). Вы должны [обновлять кластер AKS](/azure/aks/upgrade-cluster) самостоятельно, чтобы обеспечить его выполнение под управлением поддерживаемой версии.
 
-1. Предоставьте всем участникам группы, отвечающей за администрирование кластера и разработку приложений, доступ к соответствующим [рекомендациям по работе с AKS](/azure/aks/best-practices).
+* Предоставьте всем участникам группы, отвечающей за администрирование кластера и разработку приложений, доступ к соответствующим [рекомендациям по работе с AKS](/azure/aks/best-practices).
 
-1. Просмотрите элементы в файле *logging.properties*. Чтобы повысить производительность, вы можете удалить или сократить некоторые выходные данные журнала.
+* Просмотрите элементы в файле *logging.properties*. Чтобы повысить производительность, вы можете удалить или сократить некоторые выходные данные журнала.
 
-1. Для дальнейшей оптимизации производительности вы можете [отслеживать размер кэша кода](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm) и добавить параметры `-XX:InitialCodeCacheSize` и `-XX:ReservedCodeCacheSize` в переменную `JAVA_OPTS` в Dockerfile.
+* Для дальнейшей оптимизации производительности вы можете [отслеживать размер кэша кода](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm) и добавить параметры `-XX:InitialCodeCacheSize` и `-XX:ReservedCodeCacheSize` в переменную `JAVA_OPTS` в Dockerfile.

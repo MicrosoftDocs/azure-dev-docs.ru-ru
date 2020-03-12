@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 5a9f6838e516b6168be40c83ea1ff4329676e6e3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830712"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894205"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Миграция веб-приложений на базе исполняемых JAR-файлов в Java SE в Службе приложений Azure
 
@@ -23,7 +23,7 @@ ms.locfileid: "76830712"
 * Миграция приложений на базе исполняемых JAR-файлов в контейнеры в Службе Azure Kubernetes (планируется)
 * Миграция приложений на базе исполняемых JAR-файлов в Виртуальные машины Azure (планируется)
 
-## <a name="pre-migration-steps"></a>Шаги по подготовке к миграции
+## <a name="pre-migration"></a>Подготовка к миграции
 
 ### <a name="switch-to-a-supported-platform"></a>Переход на поддерживаемую платформу
 
@@ -209,7 +209,7 @@ spring.jms.servicebus.idle-timeout=10000
 
 Наконец, перезапустите веб-приложение, чтобы применить все изменения конфигурации. После завершения перезагрузки убедитесь, что приложение работает правильно.
 
-## <a name="post-migration-steps"></a>Действия после переноса данных
+## <a name="post-migration"></a>Действия после миграции
 
 После переноса приложения в Службу приложений Azure нужно убедиться, что оно работает правильно. Затем вы можете применить некоторые рекомендации, которые помогут сделать ваше приложение более удобным для использования в облаке.
 

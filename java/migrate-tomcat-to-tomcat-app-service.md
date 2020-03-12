@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825898"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893759"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
@@ -23,7 +23,7 @@ ms.locfileid: "76825898"
 * [Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Миграция приложений Tomcat в Виртуальные машины Azure (планируется)
 
-## <a name="pre-migration-steps"></a>Шаги по подготовке к миграции
+## <a name="pre-migration"></a>Подготовка к миграции
 
 ### <a name="switch-to-a-supported-platform"></a>Переход на поддерживаемую платформу
 
@@ -201,18 +201,18 @@ ${CATALINA_HOME}/bin/version.sh
 
 Наконец, перезапустите веб-приложение, чтобы применить все изменения конфигурации. После завершения перезагрузки убедитесь, что приложение работает правильно.
 
-## <a name="post-migration-steps"></a>Действия после переноса данных
+## <a name="post-migration"></a>Действия после миграции
 
 После переноса приложения в Службу приложений Azure нужно убедиться, что оно работает правильно. Затем вы можете применить некоторые рекомендации, которые помогут сделать ваше приложение более удобным для использования в облаке.
 
 ### <a name="recommendations"></a>Рекомендации
 
-1. Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/containers/how-to-serve-content-from-azure-storage) службой хранилища Azure.
+* Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/containers/how-to-serve-content-from-azure-storage) службой хранилища Azure.
 
-1. При наличии в каталоге */home* конфигурации, содержащей строки подключения, ключи SSL и другие секретные сведения, по возможности используйте [Azure Key Vault](/azure/app-service/app-service-key-vault-references) в сочетании с [внедрением параметров с помощью параметров приложения](/azure/app-service/configure-common#configure-app-settings) или без него.
+* При наличии в каталоге */home* конфигурации, содержащей строки подключения, ключи SSL и другие секретные сведения, по возможности используйте [Azure Key Vault](/azure/app-service/app-service-key-vault-references) в сочетании с [внедрением параметров с помощью параметров приложения](/azure/app-service/configure-common#configure-app-settings) или без него.
 
-1. Для предоставления надежных развертываний с нулевым временем простоя вы можете [использовать слоты развертывания](/azure/app-service/deploy-staging-slots).
+* Для предоставления надежных развертываний с нулевым временем простоя вы можете [использовать слоты развертывания](/azure/app-service/deploy-staging-slots).
 
-1. Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
+* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
 
-1. Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/architecture/reference-architectures/app-service-web-app/multi-region).
+* Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 528b111e945bb68bd18c849847522a070259c0f3
+ms.sourcegitcommit: f1e3c72c38376b15f5313d4bfe5fefdbfc022dc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504549"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022304"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Переход с Java 8 на Java 11
 
@@ -246,7 +246,7 @@ $ java --add-opens=java.base/jdk.internal.loader=UNNAMED-MODULE example.Main
 
 ##### <a name="noclassdeffounderror-caused-by-using-java-ee-or-corba-modules"></a>Ошибка NoClassDefFoundError, вызванная использованием модулей Java EE или CORBA
 
-Если приложение работает на Java 8, но вызывает `java.lang.NoClassDefFoundError` или `java.lang.ClassNotFoundError`, то вполне вероятно, что приложение использует пакет из модулей Java EE или CORBA. Эти модули признаны нерекомендуемыми на Java 9 и [удалены на Java 11](https://openjdk.java.net/jeps/320). 
+Если приложение работает на Java 8, но вызывает `java.lang.NoClassDefFoundError` или `java.lang.ClassNotFoundException`, то вполне вероятно, что приложение использует пакет из модулей Java EE или CORBA. Эти модули признаны нерекомендуемыми на Java 9 и [удалены на Java 11](https://openjdk.java.net/jeps/320). 
 
 Чтобы решить проблему, добавьте в проект зависимость среды выполнения.
 
