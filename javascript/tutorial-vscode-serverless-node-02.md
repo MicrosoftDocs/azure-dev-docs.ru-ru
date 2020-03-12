@@ -3,12 +3,12 @@ title: Создание приложения Функций Azure в Visual Stud
 description: Руководство, часть 2. Создание приложения Функций Azure
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fb7b5f3bab0dbde0a04671126ad7aa8e5be16ba0
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967238"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089958"
 ---
 # <a name="create-the-local-functions-app"></a>Создание локального приложения в службе "Функции"
 
@@ -48,7 +48,7 @@ ms.locfileid: "76967238"
     | Имя файла | Описание |
     | --- | --- |
     | *index.js* |  Исходный код, который обрабатывает входящий HTTP-запрос. |
-    | *functions.json* | [Конфигурация привязки](/azure/azure-functions/functions-triggers-bindings) для триггера HTTP. |
+    | *function.json* | [Конфигурация привязки](/azure/azure-functions/functions-triggers-bindings) для триггера HTTP. |
     | *sample.dat* | Пример файла данных, который демонстрирует возможность создавать другие файлы в этой папке. Вы можете спокойно удалить этот файл, так как он не используется в рамках нашего руководства. |
 
     ![Результат создания приложения-функции](media/functions-extension/create-function-app-results.png)
