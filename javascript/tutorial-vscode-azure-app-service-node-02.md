@@ -1,37 +1,42 @@
 ---
 title: Создание экземпляра Службы приложений Azure с помощью Visual Studio Code
-description: Руководство, часть 2. Создание приложения Node.js
+description: Руководство, часть 2. Создание приложения Node.js и его запуск в локальной среде
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: 96c786b7cc8112c36c0aff06761417a97e30bf44
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.date: 03/04/2020
+ms.openlocfilehash: b2935554fb337d5f5db1a71e016638869f9d1dc4
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466799"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893643"
 ---
-# <a name="create-your-nodejs-application"></a>Создание приложения Node.js
+# <a name="create-and-run-a-local-nodejs-app"></a>Создание и запуск локального приложения Node.js
 
 [Предыдущий шаг. Общие сведения и предварительные требования](tutorial-vscode-azure-app-service-node-01.md)
 
-На этом этапе вы создадите простое приложение Node.js с помощью генератора приложений Express, которое затем сможете развернуть в Azure.
+На этом этапе вы создадите простое приложение Node.js с помощью генератора приложений Express. Затем вы запустите приложение локально.
 
-Вы также можете использовать приложение, описанное в [руководстве по работе с Node.js в Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial). В таком случае можно сразу перейти к статье о [развертывании приложения](tutorial-vscode-azure-app-service-node-03.md).
+1. В окне терминала или командной строки перейдите в расположение, в котором нужно создать папку приложения.
 
-1. В окне терминала или командной строке выполните приведенную ниже команду, чтобы запустить генератор Express и сформировать шаблон нового приложения Express с именем myExpressApp. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
+1. Выполните приведенную ниже команду, чтобы с помощью генератора Express создать приложение Express с именем *expressApp1*. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
 
     ```bash
-    npx express-generator myExpressApp --view pug -–git
+    npx express-generator expressApp1 --view pug -–git
     ```
 
-1. Установите зависимости приложения, выполнив `npm install` в папке приложения:
+1. Перейдите в папку приложения:
 
     ```bash
-    cd myExpressApp
+    cd expressApp1
+    ```
+
+1. Установите зависимости приложения:
+
+    ```bash
     npm install
     ```
 
-1. Запустите сервер, выполнив команду `npm start`.
+1. Запустите сервер:
 
     ```bash
     npm start
@@ -40,6 +45,8 @@ ms.locfileid: "74466799"
 1. Протестируйте приложение, перейдя по ссылке [http://localhost:3000](http://localhost:3000) в браузере. Сайт должен выглядеть следующим образом:
 
     ![Выполнение приложения Express](media/deploy-azure/express.png)
+
+1. Нажмите клавиши **CTRL**+**C** в терминале, чтобы остановить работу сервера.
 
 > [!div class="nextstepaction"]
 > [Приложение Node.js создано](tutorial-vscode-azure-app-service-node-03.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azureappservice&step=create-app)

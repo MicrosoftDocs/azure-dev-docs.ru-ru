@@ -4,12 +4,12 @@ description: 'Руководство, шаг 1: общие сведения и �
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b9aecefc05db95aa121e496c9c993a5bba373ef7
+ms.openlocfilehash: 509e62b5bb8b23365dc30781b6f658a39894d56d
 ms.sourcegitcommit: a9ec05f964009409fe6e54b95c9d548f805a518e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215341"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875811"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 

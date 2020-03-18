@@ -2,30 +2,26 @@
 title: Развертывание приложений Node.js в Службе приложений Azure с помощью Visual Studio Code
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: a02cb282722447516b034869fa8b614ddb45dc5f
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.date: 03/04/2020
+ms.openlocfilehash: 12436e88786b26ed3a87dcb7ac7cb4b9e30c3fb2
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467211"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894312"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Развертывание в Службе приложений Azure с помощью Visual Studio Code
 
-В этом руководстве объясняется, как развернуть приложение Node.js в Службе приложений Azure в Linux с помощью расширения [Службы приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
+В этом руководстве объясняется, как развернуть приложение Node.js в Службе приложений Azure (в Linux или Windows) с помощью [расширения Службы приложений](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Подписка Azure](#azure-subscription).
+- Учетная запись Azure с активной подпиской. [Создайте бесплатно](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-extension&mktingSource=vscode-tutorial-appservice-extension).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- [Расширение Службы приложений Azure](vscode:extension/ms-azuretools.vscode-azureappservice).
+- [Расширение Службы приложений Azure](vscode:extension/ms-azuretools.vscode-azureappservice) для VS Code (установленное в VS Code).
 - [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 
 > <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Установка расширения Службы приложений Azure</a>
-
-### <a name="azure-subscription"></a>Подписка Azure.
-
-Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-extension&mktingSource=vscode-tutorial-appservice-extension) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
 
 ## <a name="sign-in-to-azure"></a>Вход в Azure
 

@@ -5,12 +5,12 @@ author: edburns
 ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
-ms.openlocfilehash: 4abc2383d0ff2e14cf550d96b87c75bfa6fab72e
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 86d1afd365c0c1f9126792d57fbeda3817500735
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830702"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894160"
 ---
 # <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Миграция приложений WebLogic в Виртуальные машины Azure
 
@@ -120,7 +120,7 @@ Oracle и Майкрософт совместно работают над соз
 
 ### <a name="connect-the-databases"></a>Подключение баз данных
 
-Перенеся домены, вы можете подключить базы данных согласно [этой документации](https://wls-eng.github.io/arm-oraclelinux-wls/#connecting-a-database-to-a-cluster). Эти инструкции предусматривают использование всех соответствующих секретов и строк доступа для баз данных.
+Перенеся домены, вы можете подключить базы данных по инструкциям из [этой документации](https://wls-eng.github.io/arm-oraclelinux-wls/#connecting-a-database-to-a-cluster). Эти инструкции предусматривают использование всех соответствующих секретов и строк доступа для баз данных.
 
 ### <a name="account-for-keystores"></a>Учет хранилищ ключей
 

@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504450"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893702"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Развертывание приложения Spring Boot в Службе приложений Azure для контейнеров
 
@@ -215,7 +215,7 @@ ms.locfileid: "77504450"
 
 > [!NOTE]
 >
-> Azure будет автоматически сопоставлять интернет-запросы со встроенным сервером Tomcat, который использует стандартный порт 80 или 8080. Однако, если вы настроили свой встроенный сервер Tomcat так, чтобы он работал с пользовательским портом, в веб-приложение необходимо добавить переменную среды, которая определяет порт для вашего встроенного сервера Tomcat. Для этого выполните следующие действия.
+> В Azure интернет-запросы будут автоматически сопоставляться со встроенным сервером Tomcat, который использует порт 80. Если вы настроили встроенный сервер Tomcat так, чтобы он работал с портом 8080 или пользовательским портом, в веб-приложение необходимо добавить переменную среды, которая определяет порт для вашего встроенного сервера Tomcat. Для этого выполните следующие действия.
 >
 > 1. Перейдите на [портал Azure] и выполните вход.
 > 
