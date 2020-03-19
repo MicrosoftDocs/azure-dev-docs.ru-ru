@@ -6,18 +6,18 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 4daf41e1cf13d57a42230cd8ed6af4a2258e5e01
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76872139"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139306"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
 Из этого руководства вы узнаете, как создавать, настраивать, развертывать и масштабировать веб-приложения Java, а также устранять неполадки с ними в Службе приложений в Linux.
 
-Это руководство основано на популярном примере приложения PetClinic. В рамках этого раздела вы локально проверите версию приложения, которая использует HSQLDB, а затем развернете ее в [Службе приложений Azure](/azure/app-service/containers). После этого вы настроите и развернете версию, которая использует [Базу данных Azure для MySQL](/azure/mysql). Наконец, вы узнаете, как получить доступ к журналам приложения и выполнить масштабирование, увеличив число рабочих ролей, в которых выполняется приложение.
+Это руководство основано на популярном примере приложения PetClinic. В рамках этого раздела вы локально проверите версию приложения, которая использует HSQLDB, а затем развернете ее в [Службе приложений Azure](/azure/app-service/containers). После этого вы настроите и развернете версию, которая использует [Базу данных Azure для MySQL](/azure/mysql). Наконец, вы узнаете, как получить доступ к журналам приложения и выполнить горизонтальное увеличение масштаба, увеличив число рабочих ролей, в которых выполняется приложение.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -115,7 +115,7 @@ export REGION=<region>
 
 Maven будет использовать эти значения для создания ресурсов Azure с предоставленными вами именами. С помощью переменных среды можно хранить секреты учетной записи отдельно от файлов проекта.
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.7.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.9.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
@@ -230,13 +230,13 @@ cd ../../initial-mysql/spring-framework-petclinic
 </profile>
 ```
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.7.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.9.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.7.0</version>
+    <version>1.9.0</version>
     <configuration>
 
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -300,9 +300,9 @@ az webapp log tail --name ${WEBAPP_NAME} \
 
 Этот поток журналов также доступен по адресу `https://<app-name>.scm.azurewebsites.net/api/logstream`.
 
-## <a name="scale-out"></a>Масштабирование
+## <a name="scale-out"></a>Горизонтальное увеличение масштаба
 
-Чтобы вы могли увеличить трафик в приложении, выполните масштабирование до нескольких экземпляров с помощью следующей команды.
+Чтобы вы могли увеличить трафик в приложении, выполните горизонтальное увеличение масштаба до нескольких экземпляров с помощью следующей команды.
 
 ```azurecli
 az appservice plan update --number-of-workers 2 \

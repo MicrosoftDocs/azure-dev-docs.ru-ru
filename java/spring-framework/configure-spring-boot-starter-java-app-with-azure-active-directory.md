@@ -3,17 +3,17 @@ title: Как использовать приложение Spring Boot Starter 
 description: Сведения о настройке приложения Spring Initializr с помощью начального приложения Azure Active Directory.
 services: active-directory
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 03/05/2020
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: c3dc7dd1df14ef7d12667c603fbaab588667ac22
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 9b2915f6f754a62d53ecebb9251778c76fccce9a
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893990"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139561"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 

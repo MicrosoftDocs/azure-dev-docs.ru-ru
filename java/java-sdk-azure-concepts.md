@@ -9,11 +9,11 @@ ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
 ms.custom: seo-java-july2019, seo-java-september2019
 ms.openlocfilehash: 2bf2630c5fef6c399e2642e1ae153630f48874a9
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812421"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318173"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Шаблоны и рекомендации по разработке с помощью библиотек Azure для Java 
 
@@ -85,7 +85,7 @@ for (VirtualMachine vm : vms) {
 | get    | `VirtualMachine vm  = azure.virtualMachines().getByResourceGroup(group, vmName)` |
 
 >[!NOTE]
-> `define()`и `update()` являются командами, но они не блокируют выполнение, если не сопровождаются `create()` или `apply()`.
+> `define()` и `update()` являются командами, но они не блокируют выполнение, если не сопровождаются `create()` или `apply()`.
  
 Есть асинхронные версии некоторых из этих методов с суффиксом `Async`, которые используют [реактивные расширения](https://github.com/ReactiveX/RxJava). 
 
