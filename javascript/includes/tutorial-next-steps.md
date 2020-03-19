@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7480d66235eec092a7a2cb7c43187ab92f2cdd90
-ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
+ms.openlocfilehash: 39238e72cf9f7048fb6000c3203a170dbe9567ea
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710212"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79129074"
 ---
 Поздравляем, вы успешно завершили работу с этим пошаговым руководством! Теперь можете ознакомиться с другими расширениями Azure.
 
@@ -16,4 +16,11 @@ ms.locfileid: "71710212"
 
 Вы можете установить все расширения Azure вместе с помощью [пакета расширений Node для Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack).
 
-Дополнительные сведения о работе с Azure с использованием Node.js см. статью [Документация по пакету SDK для JavaScript](https://docs.microsoft.com/azure/javascript).
+См. сведения о работе с Azure и Node.js:
+
+* [Центр разработчика Node.js для Azure](https://docs.microsoft.com/azure/javascript)
+* [Привязки Azure Cosmos DB для Функций Azure версии 2.х](https://docs.microsoft.com/azure/azure-functions/functions-bindings-cosmosdb-v2?tabs=javascript)
+* [Руководство разработчика JavaScript для Функций Azure](https://docs.microsoft.com/azure/azure-functions/functions-reference-node)
+* [Запись блога: создание приложения CRUD с помощью Функций Azure и MongoDB (Dev.to)](https://dev.to/azure/ezra-s-potluck-day-4-of-25daysofserverless-challenge-4pd6)
+* [Видео: Перенос API в бессерверную среду с помощью Функций Azure (YouTube)](https://youtu.be/89WXgaY-NqY)
+* [Официальный канал YouTube (Функции Azure)](https://www.youtube.com/channel/UCtUYj6As_XFkOooUFnsJbYg)
