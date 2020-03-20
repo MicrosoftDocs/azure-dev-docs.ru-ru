@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
+ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893702"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510617"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Развертывание приложения Spring Boot в Службе приложений Azure для контейнеров
 
@@ -124,11 +124,11 @@ ms.locfileid: "78893702"
 
 1. Добавьте [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) в коллекцию `<plugins>` в файле *pom.xml*.  В этом примере используется версия 1.8.0. 
 
-Укажите базовый образ в `<from>/<image>` (здесь это `openjdk:8-jre-alpine`). Укажите имя окончательного образа, который будет создан на основе базового в `<to>/<image>`.  
+   Укажите базовый образ в `<from>/<image>` (здесь это `mcr.microsoft.com/java/jre:8-zulu-alpine`). Укажите имя окончательного образа, который будет создан на основе базового в `<to>/<image>`.  
 
-`{docker.image.prefix}` проверки подлинности — это значение **сервера входа** на странице реестра, показанной выше. `{project.artifactId}` — это имя и номер версии JAR-файла из первой сборки проекта Maven.
+   `{docker.image.prefix}` проверки подлинности — это значение **сервера входа** на странице реестра, показанной выше. `{project.artifactId}` — это имя и номер версии JAR-файла из первой сборки проекта Maven.
 
-Укажите имя пользователя и пароль в области реестра в узле `<to>/<auth>`. Пример:
+   Укажите имя пользователя и пароль в области реестра в узле `<to>/<auth>`. Пример:
 
    ```xml
    <plugin>
@@ -137,7 +137,7 @@ ms.locfileid: "78893702"
      <version>1.8.0</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
@@ -165,7 +165,7 @@ ms.locfileid: "78893702"
 
 1. Перейдите на [портал Azure] и выполните вход.
 
-2. Щелкните значок меню **+ Создать ресурс**, затем последовательно выберите **Веб** и **Веб-приложение для контейнеров**.
+2. Щелкните значок меню **+ Создать ресурс**, затем последовательно выберите **Вычисления** и **Веб-приложение для контейнеров**.
    
    ![Создание веб-приложения на портале Azure][LX01]
 

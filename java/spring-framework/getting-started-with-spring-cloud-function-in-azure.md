@@ -9,12 +9,12 @@ ms.date: 07/17/2019
 ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 12ca26bae42c17395c70448ffc5bf3f01dde9b8e
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 621fa4c79511149ef18a60fd4143490773e49271
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76872149"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79313267"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Начало работы с функцией Spring Cloud в Azure
 
@@ -64,7 +64,7 @@ ms.locfileid: "76872149"
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <azure.functions.maven.plugin.version>1.4.0</azure.functions.maven.plugin.version>
+    <azure.functions.maven.plugin.version>1.4.1</azure.functions.maven.plugin.version>
     <azure.functions.java.library.version>1.3.0</azure.functions.java.library.version>
     <functionAppName>my-spring-function</functionAppName>
     <functionAppRegion>westus</functionAppRegion>
@@ -326,6 +326,10 @@ curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"
 ## <a name="deploy-the-function-to-azure-functions"></a>Развертывание Функции в Функциях Azure
 
 На этом этапе вы опубликуете Функцию Azure в рабочей среде. Помните, что для настройки функции будут использоваться свойства `<functionAppName>`, `<functionAppRegion>` и `<functionResourceGroup>`, которые определенны в файле *pom.xml*.
+
+> [!NOTE]
+> Подключаемый модуль Maven должен пройти проверку подлинности в Azure. Если у вас установлен Azure CLI, выполните команду `az login`, прежде чем продолжить.
+> Сведения о других вариантах проверки подлинности см. [здесь](https://github.com/microsoft/azure-maven-plugins/wiki/Authentication).
 
 Запустите Maven, чтобы автоматически развернуть функцию:
 
