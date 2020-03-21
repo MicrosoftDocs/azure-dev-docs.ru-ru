@@ -1,16 +1,12 @@
 - name: Набор средств Azure для IntelliJ
   href: azure-toolkit-for-intellij.md
   items:
-    - name: Начало работы
+    - name: Приступая к работе
       href: azure-toolkit-for-intellij-create-hello-world-web-app.md
     - name: Учебники
       items:
         - name: Развертывание веб-приложения в контейнере Linux
           href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
-        - name: Публикация веб-приложения в виде контейнера Docker
-          href: azure-toolkit-for-intellij-publish-as-docker-container.md
-        - name: Публикация приложения Spring Boot в виде контейнера Docker
-          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
     - name: Инструкции
       items:
         - name: Вход в учетную запись Azure
