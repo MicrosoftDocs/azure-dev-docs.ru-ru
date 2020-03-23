@@ -1,92 +1,94 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Azure для разработчиков облачных решений Java
+### YamlMime:Landing
+title: Документация по Azure для разработчиков облачных решений Java
 metadata:
-  title: 'Azure для разработчиков Java: руководства и справочник по API'
-  description: 'Начните разрабатывать приложения для облачной среды, используя эти превосходные руководства и средства для разработчиков Java.'
-  keywords: 'Azure, Java, SDK, API, Maven, Spring'
-  author: rloutlaw
+  title: Документация по Azure для разработчиков облачных решений Java
+  ms.service: azure-java
+  author: bmitchell287
   ms.author: brendm
-  manager: douge
-  ms.date: 11/02/2017
-  ms.topic: article
-  ms.technology: azure
-  ms.devlang: java
-  ms.service: multiple
-sections:
-  - items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-            html: <p>Развертывание веб-приложения в Службе приложений</p>
-            image:
-              src: /media/common/i_get-started.svg
-            title: Веб-приложение Azure
-          - href: 'https://docs.microsoft.com/en-us/azure/spring-cloud/'
-            html: <p>Управляемая служба для Spring Cloud</p>
-            image:
-              src: /java/media/spring.svg
-            title: Azure Spring Cloud
-          - href: /azure/java/spring-framework/
-            html: <p>Службы Azure с приложениями Spring Boot</p>
-            image:
-              src: /java/media/spring.svg
-            title: Spring в Azure
-          - href: java-azure-tools.md
-            html: <p>Средства и интегрированные среды разработки</p>
-            image:
-              src: /media/common/i_download-install.svg
-            title: 'Подключаемые модули IntelliJ, Maven, Eclipse и VS Code'
-          - href: jdk/index.md
-            html: <p>Поддерживаемые пакеты JDK</p>
-            image:
-              src: /media/common/i_download-install.svg
-            title: Поддерживаемые пакеты JDK
-          - href: /java/api/?view=azure-java
-            html: <p>Справочник по API</p>
-            image:
-              src: /media/common/i_api-reference.svg
-            title: Пакеты SDK Azure для Java
-  - title: Руководство по началу работы
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - image:
-              src: /java/media/spring.svg
-            title: Развертывание приложений Spring Boot с помощью Maven
-            href: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
-          - image:
-              src: /java/media/spring.svg
-            title: Использование микрослужб с Azure Spring Cloud
-            href: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
-          - image:
-              src: /azure/media/index/storage.svg
-            title: Загрузка и скачивание больших двоичных объектов из хранилища
-            href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-          - image:
-              src: /azure/media/index/azurefunctions.svg
-            title: Создание независимой от сервера функции Java
-            href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-          - image:
-              src: /javascript/azure/media/k8s_logo.svg
-            title: Развертывание в Kubernetes
-            href: /azure/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
-          - image:
-              src: /java/media/jenkins_logo.svg
-            title: Непрерывная интеграция и развертывание в службу приложений с помощью Jenkins®
-            href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-  - title: Примеры
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2">Создание приложения Spring Boot в Linux с помощью Cosmos DB</a>'
-          - html: '<a href="https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart">Использование хранилища больших двоичных объектов с помощью Java</a>'
-          - html: '<a href="https://github.com/Azure-Samples/azure-cosmos-db-sql-api-async-java-getting-started">Подключение к Cosmos DB с помощью API SQL</a>'
-          - html: '<a href="https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/">Микрослужбы Java в Service Fabric</a>'
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 470233f8da8e7e0802e89eac7efc0f8594306802
+  ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/21/2020
+  ms.locfileid: "79990461"
+landingContent:
+- title: Служба приложений Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Развертывание веб-приложения в Azure
+      url: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+- title: Функции Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание и публикация функции в Azure
+      url: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+- title: Миграция в Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Обзор
+      url: migration-overview.md
+- title: Azure Spring Cloud
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Управляемая служба для Spring Cloud
+      url: /azure/spring-cloud
+- title: Интеграция Spring в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Службы Azure с приложениями Spring Boot
+      url: /azure/java/spring-framework
+- title: Средства и интегрированные среды разработки
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: IntelliJ, Maven, Eclipse и VS Code
+      url: /azure/java/java-azure-tools
+- title: Поддерживаемые пакеты JDK
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Java для Azure и Azure Stack
+      url: /azure/java/jdk/
+- title: Пакеты SDK Azure для Java
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Обозреватель API
+      url: /java/api/?view=azure-java
+- title: Руководство по началу работы
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Развертывание приложений Spring Boot с помощью Maven
+      url: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
+    - text: Использование микрослужб с Azure Spring Cloud
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - text: Управление большими двоичными объектами службы хранилища Azure
+      url: /azure/storage/blobs/storage-quickstart-blobs-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - text: Создание независимой от сервера функции Java
+      url: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - text: Развертывание в Kubernetes
+      url: /azure/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
+    - text: Непрерывная интеграция и развертывание в службу приложений с помощью Jenkins®
+      url: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+- title: Примеры кода
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Создание приложения Spring Framework в Linux
+      url: /azure/java/spring-framework/spring-app-service-e2e
+    - text: Создание приложения Spring Boot в Linux
+      url: https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2
+    - text: Экспорт сеансов в Redis Cache
+      url: https://github.com/azure-samples/scaling-stateful-java-web-app-on-azure
+    - text: Хранилище Azure
+      url: /samples/browse/?products=azure-storage&languages=java
+    - text: Использование Cosmos DB с API SQL
+      url: /samples/browse/?products=azure-cosmos-db%2Cazure-sql-database&languages=java
