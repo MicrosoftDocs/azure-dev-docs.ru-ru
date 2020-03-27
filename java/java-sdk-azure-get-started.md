@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 910401236cb8435624470013878154fc46566941
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.openlocfilehash: 306a56ad4d74a316eefbb4b9f24cc14fbc5b9644
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "75010571"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990440"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
@@ -37,8 +37,7 @@ ms.locfileid: "75010571"
 * наличие строчных букв;
 * наличие прописных букв;
 * наличие цифр;
-* наличие одного из следующих символов: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ‘ , . ? / ` ~ “ ( ) ;
-
+* наличие одного из следующих символов: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ' , . ? / ` ~ " ( ) ;
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
@@ -91,7 +90,7 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="tooling"></a>Инструментарий
+## <a name="tooling"></a>Инструменты
 
 ### <a name="create-a-new-maven-project"></a>Создание нового проекта Maven
 
@@ -205,12 +204,12 @@ public class AzureApp {
 
             // use the properties file with the service principal information to authenticate
             // change the name of the environment variable if you used a different name in the previous step
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));    
+            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
             Azure azure = Azure.configure()
                     .withLogLevel(LogLevel.BASIC)
                     .authenticate(credFile)
                     .withDefaultSubscription();
-           
+
             // create a Ubuntu virtual machine in a new resource group 
             VirtualMachine linuxVM = azure.virtualMachines().define("testLinuxVM")
                     .withRegion(Region.US_EAST)
@@ -223,7 +222,7 @@ public class AzureApp {
                     .withSsh(sshKey)
                     .withUnmanagedDisks()
                     .withSize(VirtualMachineSizeTypes.STANDARD_D3_V2)
-                    .create();   
+                    .create();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -309,7 +308,6 @@ az group delete --name sampleWebResourceGroup
 Этот код создает новую базу данных SQL с правилом брандмауэра, разрешающим удаленный доступ, и подключается к ней с помощью драйвера JBDC базы данных SQL. 
 
 ```java
-
     public static void main(String args[])
     {
         // create the db using the management libraries
@@ -369,6 +367,7 @@ az group delete --name sampleWebResourceGroup
         }
     }
 ```
+
 Запустите пример из командной строки:
 
 ```shell
@@ -456,7 +455,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="reference-and-release-notes"></a>Ссылки и заметки о выпуске
 
-[Ссылки](https://docs.microsoft.com/java/api) доступны для всех пакетов.
+[Справочник](https://docs.microsoft.com/java/api) по всем пакетам.
 
 ## <a name="get-help-and-give-feedback"></a>Справка и отзывы
 

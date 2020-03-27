@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: b554af8f375d3b054a4391a35c0b457944b4bad1
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139340"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990502"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -84,15 +84,15 @@ ms.locfileid: "79139340"
 
    ![Регистрация приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
 
-2. Укажите **имя** приложения, введите `http://localhost:8080/home` в поле **URL-адрес ответа**, запишите значение параметра **Идентификатор приложения** как `${your-client-id}`, а затем щелкните **Сохранить**.
+2. Укажите **имя** приложения, добавьте `http://localhost:8080/home` для **URI перенаправления**. Выберите команду **Сохранить**.  Затем запишите значение **идентификатора приложения** в качестве `${your-client-id}`.  
 
-   ![Добавление URL-адреса ответа приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
+   ![Добавление URI перенаправления приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-3. В приложении выберите **Ключи**, щелкните **Создать ключ**, чтобы создать `${your-client-secret}`, а затем выберите **Сохранить**.
-
-4. Слева выберите **Потоки пользователей**, а затем щелкните **Создать поток пользователя**.
+3. В приложении выберите **Сертификаты и секреты**, щелкните **Создать ключ**, чтобы создать `${your-client-secret}`, а затем выберите **Сохранить**.
 
    ![Создание потока пользователя](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
+
+4. Слева выберите **Потоки пользователей**, а затем щелкните **Создать поток пользователя**.
 
 5. Выберите **Sign up or in** (Регистрация или вход), **Profile editing** (Изменение профиля) и **Сброс пароля**, чтобы создать соответствующие потоки пользователей. Укажите **имя** потока пользователя, а также **атрибуты пользователя и утверждения** и щелкните **Создать**.
 
@@ -135,7 +135,7 @@ ms.locfileid: "79139340"
          tenant: ${your-tenant-name}
          client-id: ${your-client-id}
          client-secret: ${your-client-secret}
-         reply-url: ${your-reply-url-from-aad} # should be absolute url.
+         reply-url: ${your-redirect-uri-from-aad} # should be absolute url.
          logout-success-url: ${you-logout-success-url}
          user-flows:
            sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}
@@ -149,7 +149,7 @@ ms.locfileid: "79139340"
    | `azure.activedirectory.b2c.tenant` | Содержит имя `${your-tenant-name` AD B2C, указанное ранее. |
    | `azure.activedirectory.b2c.client-id` | Содержит `${your-client-id}` из приложения, указанный ранее. |
    | `azure.activedirectory.b2c.client-secret` | Содержит `${your-client-secret}` из приложения, указанный ранее. |
-   | `azure.activedirectory.b2c.reply-url` | Содержит один из **URL-адресов ответа** из приложения, указанных ранее. |
+   | `azure.activedirectory.b2c.reply-url` | Содержит один из **URI перенаправления** из приложения, указанных ранее. |
    | `azure.activedirectory.b2c.logout-success-url` | Указывает URL-адрес после успешного выхода из приложения. |
    | `azure.activedirectory.b2c.user-flows` | Содержит имена потоков пользователей, созданных ранее.
 
