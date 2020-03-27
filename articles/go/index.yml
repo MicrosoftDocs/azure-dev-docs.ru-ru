@@ -1,0 +1,54 @@
+### YamlMime:Landing
+title: Документация по пакету Azure SDK для Go
+summary: >
+  Из этой статьи вы узнаете, как использовать пакет Azure SDK для Go, а также о его функциях и средствах разработки, которые упрощают работу с Go в Azure.
+metadata:
+  title: Azure для разработчиков Go
+  description: Приступите к разработке с помощью пакета Azure SDK для Go, используя приведенные ниже ресурсы для разработчиков.
+  author: sptramer
+  ms.author: sttramer
+  ms.date: 09/09/2019
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.devlang: golang
+  ms.openlocfilehash: b5e01d5f172a842d6b85355c568c170949236be8
+  ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/26/2020
+  ms.locfileid: "80319861"
+landingContent:
+- title: Начало работы с Azure SDK для Go
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Установка пакета Azure SDK для Go
+      url: azure-sdk-install.md
+    - text: Инструменты для разработчиков
+      url: azure-sdk-tools.md
+  - linkListType: how-to-guide
+    links:
+    - text: Аутентификация приложения
+      url: azure-sdk-authorization.md
+- title: Примеры Azure SDK для Go
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Развертывание виртуальной машины на основе шаблона
+      url: azure-sdk-qs-vm.md
+    - text: Использование хранилища BLOB-объектов с Go
+      url: /azure/storage/blobs/storage-quickstart-blobs-go?toc=/azure/develoer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+    - text: Подключение к Базе данных Azure для PostgreSQL
+      url: /azure/postgresql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/develpoer/breadcrumb/toc.json
+    - text: Подключение к Базе данных Azure для MySQL
+      url: /azure/mysql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+    - text: Обращение к Базе данных SQL Azure
+      url: /azure/sql-database/sql-database-connect-query-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+- title: Справочник по Azure SDK для Go
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Примеры кода Azure SDK для Go
+      url: https://github.com/azure-samples/azure-sdk-for-go-samples
+    - text: Справочник по API Azure SDK для Go
+      url: https://godoc.org/github.com/Azure/azure-sdk-for-go

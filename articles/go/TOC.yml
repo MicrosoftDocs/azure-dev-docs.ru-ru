@@ -1,0 +1,37 @@
+items:
+  - name: Azure SDK для Go
+    href: index.yml
+  - name: Обзор
+    items:
+      - name: Установка
+        href: azure-sdk-install.md
+      - name: Инструменты
+        href: azure-sdk-tools.md
+      - name: Аутентификация
+        href: azure-sdk-authorization.md
+  - name: Краткие руководства
+    items:
+      - name: Виртуальные машины и шаблоны ресурсов
+        href: azure-sdk-qs-vm.md
+      - name: хранилище BLOB-объектов Azure
+        href: /azure/storage/blobs/storage-quickstart-blobs-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: База данных Azure для PostgreSQL
+        href: /azure/postgresql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: База данных Azure для MySQL
+        href: /azure/mysql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: База данных SQL Azure
+        href: /azure/sql-database/sql-database-connect-query-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+  - name: Примеры
+    items:
+      - name: Аутентификация и Active Directory
+        href: azure-sdk-auth-aad-samples.md
+      - name: Контейнеры
+        href: azure-sdk-containers-samples.md
+      - name: Вычисления и сетевое взаимодействие
+        href: azure-sdk-compute-networking-samples.md
+      - name: База данных SQL Azure
+        href: azure-sdk-sql-database-samples.md
+      - name: Все примеры Go
+        href: 'http://github.com/azure-samples/azure-sdk-for-go-samples'
+  - name: Справочник
+    href: 'https://godoc.org/github.com/Azure/azure-sdk-for-go'

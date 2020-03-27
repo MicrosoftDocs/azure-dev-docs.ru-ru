@@ -3,13 +3,13 @@
 - name: Обзор
   items:
     - name: Сведения о пакете SDK для Python
-      href: python-sdk-azure-overview.md
+      href: azure-sdk-overview.md
     - name: Средства для разработчиков
-      href: python-azure-tools.md
+      href: azure-tools.md
 - name: Краткие руководства
   items:
     - name: Пакет SDK для Python
-      href: python-sdk-azure-get-started.yml
+      href: azure-sdk-get-started.yml
     - name: Размещение приложений
       href: quickstarts-app-hosting.md
     - name: Решения для работы с данными
@@ -73,13 +73,13 @@
 - name: Практические руководства
   items:
     - name: Установка пакета SDK
-      href: python-sdk-azure-install.md
+      href: azure-sdk-install.md
     - name: Аутентификация
-      href: python-sdk-azure-authenticate.md
+      href: azure-sdk-authenticate.md
     - name: Конфигурация операций
-      href: python-sdk-azure-operation-config.md
+      href: azure-sdk-operation-config.md
     - name: Разработка многооблачных решений
-      href: python-sdk-azure-multi-cloud.md
+      href: azure-sdk-multi-cloud.md
 - name: Примеры
   items:
     - name: Веб-приложения и бессерверные приложения
