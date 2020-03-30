@@ -38,6 +38,8 @@
               href: configure-spring-data-jdbc-with-azure-postgresql.md
             - name: JDBC с Azure SQL Server
               href: configure-spring-data-jdbc-with-azure-sql-server.md
+            - name: R2DBC с Azure MySQL
+              href: configure-spring-data-r2dbc-with-azure-mysql.md
             - name: JPA с Azure MySQL
               href: configure-spring-data-jpa-with-azure-mysql.md
             - name: JPA с Azure PostgreSQL
