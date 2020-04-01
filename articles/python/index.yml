@@ -1,0 +1,144 @@
+### YamlMime:Landing
+title: Azure для разработчиков Python
+summary: >
+  Azure предоставляет такие службы для разработчиков Python, как решения для размещения приложений, хранилище, базы данных с открытым исходным кодом (например, mySQL и PostgreSQL), а также средства обработки и анализа данных, машинного обучения и ИИ. Пакет Azure SDK для Python помогает разработчикам эффективно работать с этими службами.
+metadata:
+  title: Azure для разработчиков Python
+  description: Начните разработку с помощью Python и Azure для Python.
+  author: kraigb
+  ms.author: kraigb
+  ms.date: 10/11/2019
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.devlang: python
+  ms.openlocfilehash: d874f84249ed67a6597574d7ccc6c8e02d3066f0
+  ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 03/31/2020
+  ms.locfileid: "80442229"
+landingContent:
+- title: Начало работы с Azure SDK для Python
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о пакете Azure SDK для Python
+      url: azure-sdk-overview.md
+  - linkListType: download
+    links:
+    - text: Установка пакета SDK
+      url: azure-sdk-install.md
+  - linkListType: how-to-guide
+    links:
+    - text: Аутентификация приложения
+      url: azure-sdk-authenticate.md
+  - linkListType: reference
+    links:
+    - text: Справочник по пакету SDK Azure для API Python
+      url: /python/api?view=azure-python
+- title: Размещение приложений в Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание бессерверной функции для HTTP-запросов с помощью Visual Studio Code
+      url: tutorial-vs-code-serverless-python-01.md
+    - text: Создание бессерверной функции для HTTP-запросов с помощью Azure CLI
+      url: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
+    - text: Создание приложения Python в Службе приложений Azure в Linux
+      url: /azure/app-service/containers/quickstart-python
+    - text: Развертывание контейнерных приложений в Службе Azure Kubernetes
+      url: /azure/aks/kubernetes-walkthrough
+    - text: Развертывание экземпляра контейнера в Azure с помощью Azure CLI
+      url: /azure/container-instances/container-instances-quickstart
+    - text: Создание и развертывание приложения Python с помощью Azure Pipelines
+      url: /azure/devops/pipelines/languages/python-webapp
+    - text: Добавление возможности входа в веб-приложение Python с помощью учетной записи Майкрософт
+      url: /azure/active-directory/develop/quickstart-v2-python-webapp
+  - linkListType: overview
+    links:
+    - text: Вводные сведения о службе приложений Azure на платформе Linux
+      url: /azure/app-service/containers/app-service-linux-intro
+- title: Начало работы со средствами разработчика
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Использование Python в Visual Studio Code
+      url: https://code.visualstudio.com/docs/languages/python
+  - linkListType: tutorial
+    links:
+    - text: Создание бессерверного приложения Python в Функциях Azure с помощью Visual Studio Code
+      url: tutorial-vs-code-serverless-python-01.md
+    - text: Создание и развертывание веб-приложений в Azure с помощью Visual Studio Code
+      url: tutorial-deploy-app-service-on-linux-01.md
+    - text: Создание и развертывание контейнеров в Azure с помощью Visual Studio Code
+      url: tutorial-deploy-containers-01.md
+  - linkListType: download
+    links:
+    - text: Расширения Azure для Visual Studio Code
+      url: https://code.visualstudio.com/docs/azure/extensions
+    - text: Установка Azure CLI
+      url: /cli/azure/install-azure-cli?view=azure-cli-latest
+    - text: Непосредственное выполнение приложений Linux в Windows 10 с использованием разных дистрибутивов
+      url: /windows/wsl/install-win10
+- title: Службы для обработки и анализа данных, ИИ и машинного обучения
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о службах Машинного обучения Azure
+      url: /azure/machine-learning/service
+    - text: Сведения об Azure Cognitive Services
+      url: /azure/cognitive-services
+  - linkListType: quickstart
+    links:
+    - text: Использование средств Машинного обучения Azure в записной книжке Jupyter
+      url: /azure/notebooks/use-machine-learning-services-jupyter-notebooks
+    - text: Использование управляемого кластера Azure HDInsight для обработки данных
+      url: /azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal
+    - text: Создание виртуальной машины Azure для задач обработки и анализа данных
+      url: /azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro
+    - text: Использование записных книжек Jupyter в Записных книжках Azure
+      url: https://notebooks.azure.com/
+- title: Решения для хранения и баз данных в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о решениях хранилища в Azure
+      url: /azure/storage/common/storage-introduction
+    - text: Использование масштабируемых решений NoSQL с Azure Cosmos DB
+      url: /azure/cosmos-db/introduction
+  - linkListType: quickstart
+    links:
+    - text: Управление большими двоичными объектами в службе хранилища Azure с помощью Python
+      url: /azure/storage/blobs/storage-quickstart-blobs-python
+    - text: Создание экземпляра PostgreSQL в Azure и подключение к нему с помощью Python
+      url: /azure/postgresql/quickstart-create-server-database-portal
+    - text: Создавайте экземпляры MySQL в Azure и подключайтесь к ним с использованием Python.
+      url: /azure/mysql/quickstart-create-mysql-server-database-using-azure-portal
+    - text: Использование запросов SQL в учетной записи Azure Cosmos DB с помощью Python
+      url: /azure/cosmos-db/create-sql-api-python
+    - text: Настройка управляемого экземпляра SQL Server в Azure
+      url: /azure/sql-database/sql-database-connect-query-python
+- title: Обмен сообщениями в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Хранение сообщений с использованием очередей Azure
+      url: /azure/storage/queues/storage-queues-introduction
+    - text: Обмен сообщениями между приложениями с помощью Служебной шины Azure
+      url: /azure/service-bus-messaging
+    - text: Потоковая передача больших данных с помощью Центров событий
+      url: /azure/event-hubs/event-hubs-about
+    - text: Создание приложений на основе событий с помощью Сетки событий
+      url: /azure/event-grid/overview
+  - linkListType: quickstart
+    links:
+    - text: Использование Хранилища очередей Azure
+      url: /azure/storage/queues/storage-python-how-to-use-queue-storage
+    - text: Использование очередей Служебной шины Azure
+      url: /azure/service-bus-messaging/service-bus-python-how-to-use-queues
+    - text: Прием данных в режиме реального времени через Центры событий Azure
+      url: /azure/event-hubs/event-hubs-python
+    - text: Перенаправление пользовательских событий с помощью службы "Сетка событий"
+      url: /azure/event-grid/custom-event-quickstart
