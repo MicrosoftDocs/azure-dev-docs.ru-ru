@@ -3,12 +3,12 @@ title: Создание образа контейнера для приложе�
 description: Руководство, часть 3. Создание образа приложения Node.js
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: ae39d6604f3ffe49915f6b311953cd6829ed9369
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 47e9440852f8a3443147e3d03b5c833d8da0c36b
+ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75191075"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362786"
 ---
 # <a name="create-your-nodejs-application-image"></a>Создание образа приложения Node.js
 
@@ -16,7 +16,7 @@ ms.locfileid: "75191075"
 
 На этом этапе с помощью расширения DOCKER в Visual Studio Code вы добавите необходимые файлы для создания образа приложения, создадите образ и отправите его в реестр.
 
-Если у вас еще нет приложения для этого пошагового руководства, используйте приложение из [руководства по Node.js в Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial).
+Если у вас еще нет приложения для этого пошагового руководства, используйте приложение из [руководства по Node.js в Visual Studio Code](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial#_an-express-application).
 
 ## <a name="add-docker-files"></a>Добавление файлов Docker
 
