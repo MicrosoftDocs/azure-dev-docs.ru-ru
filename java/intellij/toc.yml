@@ -1,8 +1,10 @@
 - name: Набор средств Azure для IntelliJ
   href: azure-toolkit-for-intellij.md
   items:
-    - name: Приступая к работе
+    - name: Начало работы. Веб-приложение
       href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+    - name: Начало работы. Функции
+      href: azure-toolkit-for-intellij-quickstart-functions.md
     - name: Учебники
       items:
         - name: Развертывание веб-приложения в контейнере Linux
