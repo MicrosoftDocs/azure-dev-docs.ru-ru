@@ -1,5 +1,5 @@
 ---
-title: Развертывание приложения Spring Boot в Kubernetes
+title: Развертывание приложения Spring Boot Application в Службе Azure Kubernetes
 titleSuffix: Azure Kubernetes Service
 description: В этом руководстве содержатся пошаговые инструкции по развертыванию приложения Spring Boot в кластере Kubernetes в Microsoft Azure.
 services: container-service
@@ -9,14 +9,14 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: 3e845f9d8a4069225f0f2d949f8a8de492b21771
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: dedd7a8c30e71b1197781838c1006745884eb67d
+ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139255"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80306786"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot в кластере Kubernetes в Службе Azure Kubernetes
+# <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot Application в Службе Azure Kubernetes
 
 **[Kubernetes]** и **[Docker]** — это решения с открытым кодом, которые помогают разработчикам автоматизировать развертывание и масштабирование выполняемых в контейнерах приложений, а также управление ими.
 
@@ -30,6 +30,7 @@ ms.locfileid: "79139255"
 * Средство сборки [Maven] (версия 3) от Apache.
 * Клиент [Git].
 * Клиент [Docker].
+* [Вспомогательное приложение для учетных данных ACR Docker](https://github.com/Azure/acr-docker-credential-helper).
 
 > [!NOTE]
 >
@@ -121,8 +122,7 @@ ms.locfileid: "79139255"
       <java.version>1.8</java.version>
    </properties>
    ```
-
-1. Обновите коллекцию `<plugins>` в файле *pom.xml* таким образом, чтобы в `<plugin>` содержался подключаемый модуль `jib-maven-plugin`.
+1. Обновите коллекцию `<plugins>` в файле *pom.xml*, чтобы элемент `<plugin>` содержал запись `jib-maven-plugin`, как показано в следующем примере. Обратите внимание, что мы используем базовый образ из Реестра контейнеров Майкрософт (MCR): `mcr.microsoft.com/java/jdk:8-zulu-alpine`, который содержит официально поддерживаемый пакет JDK для Azure. Другие базовые образы MCR с официально поддерживаемыми пакетами JDK см. в статьях [Java SE JDK](https://hub.docker.com/_/microsoft-java-jdk), [Java SE JRE](https://hub.docker.com/_/microsoft-java-jre), [Java SE Headless JRE](https://hub.docker.com/_/microsoft-java-jre-headless) и [Java SE JDK и Maven](https://hub.docker.com/_/microsoft-java-maven).
 
    ```xml
    <plugin>
@@ -131,7 +131,7 @@ ms.locfileid: "79139255"
      <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jdk:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>

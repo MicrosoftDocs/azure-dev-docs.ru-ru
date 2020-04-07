@@ -6,18 +6,18 @@ ms.date: 11/27/2019
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 927cc72a526651be71a7983a298ca2c6718f4546
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: 58863eb3d6193833e0d8506b90abe7223b87d661
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022090"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537222"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Как использовать JPA Spring Data с Базой данных Azure для MySQL
 
 В этой статье объясняется, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -86,7 +86,7 @@ ms.locfileid: "76022090"
    ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `host` | Указывается полное доменное имя сервера MySQL, описанное ранее в этой статье. |
    | `user` | Указываются администратор MySQL и сокращенное имя сервера, описанные ранее в этой статье. |
@@ -166,7 +166,7 @@ ms.locfileid: "76022090"
     ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `spring.jpa.database-platform` | Указывается платформа баз данных JPA. |
    | `spring.datasource.url` | Указываются строки MySQL JDBC, описанные ранее в этой статье. |
@@ -175,7 +175,11 @@ ms.locfileid: "76022090"
 
 1. Сохраните и закройте файл *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
+> [!NOTE]
+> Первое свойство файла *application.properties* — `spring.jpa.hibernate.ddl-auto=create`. Это есть свойство гибернации, которое автоматически удаляет и повторно создает схему базы данных при запуске приложения.
+> Эта конфигурация полезна во время разработки и тестирования, но ее не следует использовать в рабочей среде.
+
+## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения
 
 1. Создайте пример приложения с помощью Maven, например:
 

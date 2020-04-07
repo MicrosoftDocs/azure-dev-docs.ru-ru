@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 162e99db4f079c3e6e3c7a63591632ec9922231d
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422548"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537190"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Как использовать JPA Spring Data с базой данных Azure PostgreSQL
 
@@ -164,7 +164,11 @@ ms.locfileid: "77422548"
 
 1. Сохраните и закройте файл *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
+> [!NOTE]
+> Первое свойство файла *application.properties* — `spring.jpa.hibernate.ddl-auto=create`. Это есть свойство гибернации, которое автоматически удаляет и повторно создает схему базы данных при запуске приложения.
+> Эта конфигурация полезна во время разработки и тестирования, но ее не следует использовать в рабочей среде.
+
+## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения
 
 1. Создайте пример приложения с помощью Maven, например:
 

@@ -3,12 +3,12 @@ title: Развертывание приложения Функций Azure в V
 description: Руководство, часть 4. Развертывание приложения Функций в облаке.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 8cb80b25e224d6f4552ec165779cda35f990ad6a
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 78f6f044397cc29f22949525e4e7e860d5c101f9
+ms.sourcegitcommit: 56be0c2bf65c699a0ef3f15f240856219b5d299b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422534"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80329930"
 ---
 # <a name="deploy-the-functions-app"></a>Развертывание приложения в решении "Функции"
 
@@ -45,7 +45,7 @@ ms.locfileid: "77422534"
 1. При желании вы можете внести изменения в код функции в файле *index.js* или добавить дополнительные функции с другими триггерами. После локального тестирования повторно разверните код, как в описании предыдущих шагов, чтобы проверить применение этих изменений в облаке.
 
     > [!TIP]
-    > При развертывании полностью передается все приложение-функция, то есть все изменения отдельных функций будут развернуты одновременно.
+    > При развертывании передается все приложение-функция, то есть все изменения отдельных функций будут развернуты одновременно.
 
 > [!div class="nextstepaction"]
 > [Приложение-функция развернуто](tutorial-vscode-serverless-node-05.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=deploy-app)

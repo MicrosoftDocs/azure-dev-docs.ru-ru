@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: a57fbc5dc8be0848f0b68fd1a45a1478de52b419
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: 180eac30a5aaeb10abe09904c578463bfe5a71da
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022125"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537198"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Как использовать JPA Spring Data с Базой данных SQL Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "76022125"
 
 В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации в [базу данных SQL Azure](https://azure.microsoft.com/services/sql-database/) с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
 
@@ -114,7 +114,7 @@ ms.locfileid: "76022125"
     ```
    Где:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |---|---|
    | `spring.datasource.url` | Указывается измененная версия строки SQL JDBC, описанная ранее в этой статье. |
    | `spring.datasource.username` | Указывается администратор SQL, описанный ранее в этой статье вместе с сокращенным именем сервера. |
@@ -122,7 +122,11 @@ ms.locfileid: "76022125"
 
 1. Сохраните и закройте файл *application.properties*.
 
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
+> [!NOTE]
+> Первое свойство файла *application.properties* — `spring.jpa.hibernate.ddl-auto=create`. Это есть свойство гибернации, которое автоматически удаляет и повторно создает схему базы данных при запуске приложения.
+> Эта конфигурация полезна во время разработки и тестирования, но ее не следует использовать в рабочей среде.
+
+## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения
 
 1. Создайте пример приложения с помощью Maven, например:
 
