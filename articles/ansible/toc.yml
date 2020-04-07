@@ -1,0 +1,117 @@
+- name: Документация по Ansible в Azure
+  href: ./index.yml
+- name: Обзор
+  items:
+    - name: Общие сведения об Ansible в Azure
+      href: overview.md
+- name: Краткие руководства
+  expanded: true
+  items:
+    - name: Развертывание шаблона решения Ansible в CentOS
+      href: solution-template-deploy.md
+    - name: Установка Ansible на виртуальные машины Linux
+      href: install-on-linux-vm.md
+      maintainContext: true
+    - name: Запуск модулей playbook в Cloud Shell
+      href: cloudshell-run-playbook.md
+    - name: Работа с Виртуальными машинами Linux
+      expanded: true
+      items:
+        - name: Настройка виртуальных машин Linux
+          href: vm-configure.md
+          maintainContext: true
+        - name: Управление виртуальными машинами Linux
+          href: vm-manage.md
+          maintainContext: true
+- name: Учебники
+  items:
+    - name: Шлюз приложений Azure
+      items:
+        - name: Управление веб-трафиком
+          href: application-gateway-configure.md
+    - name: Служба приложений Azure
+      items:
+        - name: Настройка приложений
+          href: azure-web-apps-configure.md
+        - name: Масштабирование приложений
+          href: azure-web-apps-scale.md
+    - name: Azure DevTest Labs
+      items:
+        - name: Настройка лабораторий
+          href: devtest-labs-configure.md
+    - name: Служба Azure Kubernetes (AKS)
+      items:
+        - name: Настройка кластеров AKS
+          href: aks-configure-clusters.md
+        - name: Настройка сети Azure CNI
+          href: aks-configure-cni-networking.md
+        - name: Настройка сети kubenet
+          href: aks-configure-kubenet-networking.md
+        - name: Настройка ролей RBAC в кластере AKS
+          href: aks-configure-rbac.md
+    - name: Azure HDInsight
+      items:
+        - name: Настройка кластеров
+          href: hdinsight-configure.md
+    - name: Служебная шина Azure
+      items:
+        - name: Настройка очередей
+          href: service-bus-queue-configure.md
+        - name: Настройка разделов
+          href: service-bus-topic-configure.md
+    - name: База данных
+      items:
+        - name: Настройка Базы данных Azure для MySQL
+          href: mysql-configure.md
+        - name: "Настройка учетных записей Azure Cosmos\_DB"
+          href: cosmos-configure.md
+        - name: Настройка кэша Redis для Azure
+          href: cache-for-redis-configure.md
+    - name: Динамический список
+      items:
+        - name: Управление ресурсами Azure
+          href: dynamic-inventory-configure.md
+    - name: Виртуальные машины
+      items:
+        - name: Создание Общей коллекции образов
+          href: vm-configure-from-azure-shared-image-gallery.md
+    - name: Масштабируемые наборы виртуальных машин
+      items:
+        - name: Configure
+          href: vm-scale-set-configure.md
+        - name: Развертывание
+          href: vm-scale-set-deploy-app.md
+        - name: Автомасштабирование
+          href: vm-scale-set-auto-scale.md
+        - name: Обновление пользовательского образа
+          href: vm-scale-set-update-image.md
+        - name: Создание Общей коллекции образов
+          href: vm-configure-from-azure-shared-image-gallery.md
+    - name: Виртуальная сеть
+      items:
+        - name: Настройка пиринга
+          href: virtual-network-peering-configure.md
+        - name: Настройка таблиц маршрутов
+          href: route-table-configure.md
+- name: Примеры
+  items:
+    - name: Тестовая служба Ansible для Azure
+      href: 'https://github.com/microsoft/ansiblelabs'
+    - name: Примеры для сборника схем Ansible для Azure
+      href: 'https://github.com/Azure-Samples/ansible-playbooks'
+- name: Справочник
+  items:
+    - name: Роли в сборнике схем
+      items:
+        - name: azure_module
+          href: 'https://galaxy.ansible.com/Azure/azure_modules/'
+        - name: azure_preview_module
+          href: 'https://galaxy.ansible.com/Azure/azure_preview_modules'
+    - name: Выпуски и компоненты
+      href: module-version-matrix.md
+    - name: Все модули для Azure
+      href: 'https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules#azure'
+- name: Ресурсы
+  items:
+    - name: Расширение Visual Studio Code для Ansible
+      href: 'https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible'

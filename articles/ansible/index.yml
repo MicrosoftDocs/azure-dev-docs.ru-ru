@@ -1,0 +1,93 @@
+### YamlMime:Landing
+title: Документация по Ansible в Azure
+summary: Узнайте, как использовать Ansible для автоматизированной подготовки облачных решений, управления конфигурацией и развертывания приложений.
+metadata:
+  title: Документация по Ansible в Azure
+  description: Узнайте, как использовать Ansible для автоматизированной подготовки облачных решений, управления конфигурацией и развертывания приложений.
+  services: azure
+  ms.service: ansible
+  ms.topic: landing-page
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.date: 04/03/2020
+  ms.openlocfilehash: d0880d656bede1b8ad9da64694ee2b8bd4a25588
+  ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/06/2020
+  ms.locfileid: "80741862"
+landingContent:
+- title: Общие сведения об Ansible в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения об Ansible в Azure
+      url: overview.md
+  - linkListType: reference
+    links:
+    - text: Выпуски и компоненты
+      url: module-version-matrix.md
+    - text: Все модули для Azure
+      url: https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules#azure
+- title: Установка и настройка Ansible
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Развертывание шаблона решения Ansible в CentOS
+      url: solution-template-deploy.md
+    - text: Установка Ansible на виртуальные машины Linux
+      url: install-on-linux-vm.md
+    - text: Запуск модулей playbook в Cloud Shell
+      url: cloudshell-run-playbook.md
+  - linkListType: tutorial
+    links:
+    - text: Настройка динамического списка
+      url: dynamic-inventory-configure.md
+  - linkListType: download
+    links:
+    - text: Расширение Visual Studio Code для Ansible
+      url: https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible
+- title: Управление Виртуальными машинами
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Настройка виртуальных машин Linux
+      url: vm-configure.md
+    - text: Управление виртуальными машинами Linux
+      url: vm-manage.md
+    - text: Создание с помощью Общей коллекции образов
+      url: vm-configure-from-azure-shared-image-gallery.md
+- title: Управление Масштабируемыми наборами виртуальных машин
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Настройка масштабируемых наборов виртуальных машин
+      url: vm-scale-set-configure.md
+    - text: Развертывание приложений в масштабируемых наборах виртуальных машин
+      url: vm-scale-set-deploy-app.md
+    - text: Автоматическое масштабирование в масштабируемых наборах виртуальных машин
+      url: vm-scale-set-auto-scale.md
+    - text: Обновление пользовательского образа
+      url: vm-scale-set-update-image.md
+    - text: Создание с помощью Общей коллекции образов
+      url: vm-configure-from-azure-shared-image-gallery.md
+- title: Управление виртуальными сетями
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Настройка пиринга
+      url: virtual-network-peering-configure.md
+    - text: Настройка таблиц маршрутов
+      url: route-table-configure.md
+- title: Управление AKS
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Настройка кластеров AKS
+      url: aks-configure-clusters.md
+    - text: Настройка сети Azure CNI
+      url: aks-configure-cni-networking.md
+    - text: Настройка сети kubenet
+      url: aks-configure-kubenet-networking.md
+    - text: Настройка ролей RBAC в кластере AKS
+      url: aks-configure-rbac.md
