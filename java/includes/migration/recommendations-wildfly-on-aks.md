@@ -2,16 +2,16 @@
 author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: e76f43988c408bfd1d2400ef3d28363e7827d0f9
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: ab1cd8d8671b12c44a06ae01268364741f7138f6
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78897663"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80813717"
 ---
 ### <a name="recommendations"></a>Рекомендации
 
-* Мы рекомендуем добавить DNS-имя к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения. Дополнительные сведения см. в разделе [Настройка DNS-имени](/azure/aks/ingress-static-ip#configure-a-dns-name) статьи [Создание контроллера входящего трафика со статическим общедоступным IP-адресом в Службе Azure Kubernetes (AKS)](/azure/aks/ingress-static-ip).
+* Мы рекомендуем добавить DNS-имя к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения. Дополнительные сведения см. в разделе [Настройка DNS-имени](/azure/aks/ingress-static-ip#create-an-ingress-controller) статьи [Создание контроллера входящего трафика со статическим общедоступным IP-адресом в Службе Azure Kubernetes (AKS)](/azure/aks/ingress-static-ip).
 
 * Вы также можете [добавить диаграммы Helm для приложения](https://helm.sh/docs/topics/charts/). Чарты Helm позволяют параметризировать развертывание приложения для использования и настройки различными клиентами.
 

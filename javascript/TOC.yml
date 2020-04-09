@@ -94,7 +94,7 @@
               href: tutorial-vscode-serverless-node-02.md
             - name: Локальное тестирование функции
               href: tutorial-vscode-serverless-node-03.md
-            - name: Развертывание приложения в службе "Функции"
+            - name: Развертывание приложения в решении "Функции"
               href: tutorial-vscode-serverless-node-04.md
             - name: Очистка ресурсов
               href: tutorial-vscode-serverless-node-05.md
@@ -102,7 +102,7 @@
           items:
             - name: Введение и предварительные требования
               href: tutorial-vscode-azure-app-service-node-01.md
-            - name: Создание приложения
+            - name: Создайте приложение
               href: tutorial-vscode-azure-app-service-node-02.md
             - name: Развертывание веб-сайта
               href: tutorial-vscode-azure-app-service-node-03.md
@@ -116,21 +116,23 @@
               href: tutorial-vscode-docker-node-01.md
             - name: Использование Реестра контейнеров
               href: tutorial-vscode-docker-node-02.md
-            - name: Создание образа приложения
+            - name: Создание локального приложения Node.js
               href: tutorial-vscode-docker-node-03.md
-            - name: Развертывание образа приложения
+            - name: Создание образа приложения
               href: tutorial-vscode-docker-node-04.md
-            - name: Внесение изменений и повторное развертывание
+            - name: Развертывание образа приложения
               href: tutorial-vscode-docker-node-05.md
-            - name: Журналы потоковой передачи
+            - name: Внесение изменений и повторное развертывание
               href: tutorial-vscode-docker-node-06.md
-            - name: Очистка ресурсов
+            - name: Журналы потоковой передачи
               href: tutorial-vscode-docker-node-07.md
+            - name: Очистка ресурсов
+              href: tutorial-vscode-docker-node-08.md
         - name: "Развертывание в Службе приложений с помощью Azure\_CLI"
           items:
             - name: Введение и предварительные требования
               href: tutorial-vscode-azure-cli-node-01.md
-            - name: Создание приложения
+            - name: Создайте приложение
               href: tutorial-vscode-azure-cli-node-02.md
             - name: Создание службы приложений
               href: tutorial-vscode-azure-cli-node-03.md
@@ -188,7 +190,7 @@
               href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-sql-database'
             - name: MongoDB
               href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&term=Mongo%20DB'
-        - name: Хранилище
+        - name: Память
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-storage'
         - name: Идентификация и безопасность
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-active-directory%2Cazure-key-vault'
@@ -202,5 +204,5 @@
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-search'
         - name: Все примеры
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs'
-    - name: Справочные материалы
+    - name: Справочник
       href: /javascript/api/?view=azure-node-latest

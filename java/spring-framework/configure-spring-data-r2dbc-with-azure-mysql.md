@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.author: judubois
-ms.openlocfilehash: f5c9f3d0cccad7f6e1a8b5ab199f841925f416cc
-ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
+ms.openlocfilehash: 32008e4ddbf2663050dd1241e1d028e66ffb7dab
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80366757"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611909"
 ---
 # <a name="how-to-use-spring-data-r2dbc-with-azure-mysql"></a>Как использовать R2DBC Spring Data с базой данных Azure MySQL
 
@@ -45,7 +45,7 @@ AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 - `<YOUR_DATABASE_NAME>`: имя экземпляра сервера MySQL. Оно должно быть уникальным в Azure.
 - `<YOUR_AZURE_REGION>`: регион Azure, который вы будете использовать. Вы можете использовать `eastus` по умолчанию, но рекомендуется настроить регион, расположенный ближе к месту проживания. Полный список доступных регионов можно получить, введя `az account list-locations`.
 - `<YOUR_MYSQL_PASSWORD>`: пароль вашего сервера базы данных MySQL. Этот пароль должен содержать не менее восьми символов из таких трех категорий: латинские прописные и строчные буквы, цифры (0–9) и другие символы (!, $, #, % и т. д.).
-- `<YOUR_LOCAL_IP_ADDRESS>`: IP-адрес локального компьютера, с которого будет запускаться приложение Spring Boot. Одним из удобных способов его поиска является указание обозревателю [http://ipv4.icanhazip.com](http://ipv4.icanhazip.com).
+- `<YOUR_LOCAL_IP_ADDRESS>`: IP-адрес локального компьютера, с которого будет запускаться приложение Spring Boot. Одним из удобных способов его поиска является указание обозревателю [http://whatismyip.akamai.com/](http://whatismyip.akamai.com/).
 
 Затем создайте группу ресурсов.
 

@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: a27c009fd656ea925f7709908178738eeea8ac0a
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893746"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809208"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes
 
@@ -33,7 +33,7 @@ ms.locfileid: "78893746"
 
 Чтобы узнать, какой используется диспетчер сохраняемости сеансов, изучите файлы *context.xml* в приложении и конфигурации Tomcat. Найдите элемент `<Manager>` и запишите значение атрибута `className`.
 
-Встроенные реализации Tomcat [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Kubernetes. AKS может распределять нагрузку между несколькими группами pod и прозрачно перезапускать любую группу в любое время, поэтому не рекомендуется сохранять изменяющееся состояние в файловой системе.
+Встроенные реализации Tomcat [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Kubernetes. AKS может распределять нагрузку между несколькими группами pod и прозрачно перезапускать любую группу в любое время, поэтому не рекомендуется сохранять изменяющееся состояние в файловой системе.
 
 Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например Pivotal Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -162,6 +162,8 @@ az aks create -g $resourceGroup -n $aksName --attach-acr $acrName --network-plug
 </GlobalNamingResources>
 ```
 
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
+
 ### <a name="build-and-push-the-image"></a>Сборка и отправка образа
 
 Самый простой способ создать и передать образ в Реестр контейнеров Azure (ACR) для использования в AKS — с помощью команды `az acr build`. Для выполнения этой команды устанавливать Docker на компьютере не нужно. Например, если у вас есть соответствующий файл Dockerfile и пакет приложения *petclinic.war* в текущем каталоге, вы можете создать образ контейнера в ACR, выполнив один шаг.
@@ -228,7 +230,7 @@ echo "Your public IP address is ${publicIp}."
 
 После переноса приложения в AKS нужно убедиться, что оно работает правильно. Затем вы можете применить некоторые рекомендации, которые помогут сделать ваше приложение более удобным для использования в облаке.
 
-* Мы рекомендуем [добавить DNS-имя](/azure/aks/ingress-static-ip#configure-a-dns-name) к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения.
+* Мы рекомендуем [добавить DNS-имя](/azure/aks/ingress-static-ip#create-an-ingress-controller) к IP-адресу, выделенному для контроллера входящего трафика или балансировщика нагрузки приложения.
 
 * Вы также можете [добавить чарты Helm для приложения](https://helm.sh/docs/topics/charts/). Чарты Helm позволяют параметризировать развертывание приложения для использования и настройки различными клиентами.
 

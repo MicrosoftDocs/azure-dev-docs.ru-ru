@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: 9eef2c48b076ae0fc84aea16bb3e5b7bba17d744
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5ba844a66be0eb1acaac2cdf5b132ab422c9a954
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812072"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612030"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Создание приложения Spring Cloud Stream Binder с помощью Центров событий Azure
 
@@ -143,7 +143,7 @@ ms.locfileid: "74812072"
 
 ## <a name="create-an-azure-credential-file"></a>Создание файла учетных данных Azure
 
-1. Откройте окно командной строки.
+1. Откройте командную строку.
 
 1. Перейдите к каталогу *resources* приложения Spring Boot, например так:
 
@@ -237,10 +237,11 @@ ms.locfileid: "74812072"
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
+   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
-   Описание
+   Где:
 
-   |                          Поле                           |                                                                                   ОПИСАНИЕ                                                                                    |
+   |                          Поле                           |                                                                                   Описание                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        `spring.cloud.azure.credential-file-path`         |                                                    Определяет файл учетных данных Azure, который был создан ранее в этом примере.                                                    |
    |           `spring.cloud.azure.resource-group`            |                                                      Определяет группу ресурсов Azure, которая содержит концентратор событий Azure.                                                      |
@@ -377,14 +378,14 @@ ms.locfileid: "74812072"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   В журналах приложения должна появиться запись "hello". Например:
+   В журналах приложения должна появиться запись "hello". Пример:
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'
    [pool-10-thread-7] INFO com.wingtiptoys.eventhub.EventhubSink - Message 'hello' successfully checkpointed
    ```
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
