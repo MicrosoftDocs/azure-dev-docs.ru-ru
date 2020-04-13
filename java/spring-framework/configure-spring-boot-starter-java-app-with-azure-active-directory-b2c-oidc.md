@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
-ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+ms.openlocfilehash: 63fa23a946841d284d229561e597ea1d9450e822
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79990502"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740694"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -162,12 +162,12 @@ ms.locfileid: "79990502"
 
 8. Создайте папку с именем *controller* в исходной папке Java для приложения.
 
-9. Создайте файл Java с именем *HelloController.java* в папке *controller* и откройте его в текстовом редакторе.
+9. Создайте файл Java с именем *WebController.java* в папке *controller* и откройте его в текстовом редакторе.
 
 10. Вставьте следующий код, а затем сохраните и закройте файл:
 
     ```java
-    package sample.aad.controller;
+    package com.example.demo.controller;
     
     import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
     import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -212,12 +212,12 @@ ms.locfileid: "79990502"
 
 11. Создайте папку с именем *security* в исходной папке Java для приложения.
 
-12. Создайте файл Java с именем *WebSecurityConfig.java* в папке *security* и откройте его в текстовом редакторе.
+12. Создайте файл Java с именем *WebSecurityConfiguration.java* в папке *security* и откройте его в текстовом редакторе.
 
 13. Вставьте следующий код, а затем сохраните и закройте файл:
 
     ```java
-    package sample.aad.security;
+    package com.example.demo.security;
     
     import com.microsoft.azure.spring.autoconfigure.b2c.AADB2COidcLoginConfigurer;
     import org.springframework.security.config.annotation.web.builders.HttpSecurity;

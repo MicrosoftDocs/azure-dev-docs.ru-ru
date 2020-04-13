@@ -1,20 +1,20 @@
 ---
-title: Перенос приложений WebSphere в WildFly в Службе Azure Kubernetes
-description: Из этого руководства вы узнаете, что следует учитывать при переносе приложения WebSphere для запуска в WildFly в контейнере Службы Azure Kubernetes.
+title: Перенос приложений JBoss EAP в WildFly в Службе Azure Kubernetes
+description: Из этого руководства вы узнаете, что следует учитывать при переносе приложения JBoss EAP для запуска в WildFly в контейнере Службы Azure Kubernetes.
 author: mriem
 ms.author: manriem
 ms.topic: conceptual
-ms.date: 2/28/2020
-ms.openlocfilehash: a32784542618c3ee3a57d8cc1105837a414883ad
+ms.date: 3/16/2020
+ms.openlocfilehash: 44bc24a64aa122434e1178922b79284388c78e57
 ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/02/2020
-ms.locfileid: "80612154"
+ms.locfileid: "80613102"
 ---
-# <a name="migrate-websphere-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений WebSphere в WildFly в Службе Azure Kubernetes
+# <a name="migrate-jboss-eap-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений JBoss EAP в WildFly в Службе Azure Kubernetes
 
-Из этого руководства вы узнаете, что следует учитывать при переносе приложения WebSphere для запуска в WildFly в контейнере Службы Azure Kubernetes.
+Из этого руководства вы узнаете, что следует учитывать при переносе приложения JBoss EAP для запуска в WildFly в контейнере Службы Azure Kubernetes.
 
 ## <a name="pre-migration"></a>Подготовка к миграции
 
@@ -22,7 +22,9 @@ ms.locfileid: "80612154"
 
 ### <a name="inventory-all-secrets"></a>Проверка всех секретов
 
-Проверьте все свойства и файлы конфигурации на рабочих серверах на наличие секретов и паролей. Обязательно проверьте наличие файла *ibm-web-bnd.xml* в WAR-файлах. Кроме того, в приложении могут быть файлы конфигурации, содержащие пароли или учетные данные.
+Проверьте все свойства и файлы конфигурации на рабочих серверах на наличие секретов и паролей. Обязательно проверьте наличие файла *jboss-web.xml* в WAR-файлах. Кроме того, в приложении могут быть файлы конфигурации, содержащие пароли или учетные данные.
+
+Мы рекомендуем хранить секреты в Azure KeyVault. См. [основные понятия Azure Key Vault](/azure/key-vault/basic-concepts).
 
 [!INCLUDE [inventory-all-certificates](includes/migration/inventory-all-certificates.md)]
 
@@ -30,19 +32,25 @@ ms.locfileid: "80612154"
 
 Для использования WildFly в Службе Azure Kubernetes требуется определенная версия Java. Поэтому вам нужно проверить, может ли приложение правильно работать с этой поддерживаемой версией. Эта проверка особенно важна, если на текущем сервере используется поддерживаемая версия JDK (например, Oracle JDK или IBM OpenJ9).
 
-Чтобы узнать текущую версию, войдите на сервер в рабочей среде и выполните следующую команду:
+Чтобы получить текущую версию, войдите на рабочий сервер и выполните следующую команду:
 
 ```bash
 java -version
 ```
 
+См. сведения о том, [какую версию следует использовать для запуска WildFly](http://docs.wildfly.org/19/Getting_Started_Guide.html#requirements).
+
 ### <a name="inventory-jndi-resources"></a>Проверка ресурсов JNDI
 
 Проверьте все ресурсы JNDI. Для других ресурсов, таких как брокеры сообщений JMS, может потребоваться выполнить миграцию или перенастройку.
 
+### <a name="determine-whether-session-replication-is-used"></a>Определение того, используется ли репликация сеансов
+
+Если приложение использует репликацию сеансов, вам потребуется удалить из него эту зависимость.
+
 #### <a name="inside-your-application"></a>В приложении
 
-Проверьте файл *WEB-INF/ibm-web-bnd.xml* и (или) *WEB-INF/web.xml*.
+Проверьте файл *WEB-INF/jboss-web.xml* и (или) *WEB-INF/web.xml*.
 
 ### <a name="document-datasources"></a>Определение источников данных
 
@@ -52,11 +60,11 @@ java -version
 * конфигурация пула подключений;
 * путь к JAR-файлу драйвера JDBC.
 
-Дополнительные сведения см. в разделе о [настройке подключения к базе данных](https://www.ibm.com/support/knowledgecenter/SSQP76_8.10.x/com.ibm.odm.distrib.config.was/config_dc_websphere/tpc_was_create_datasrc_cpl.html) в документации по WebSphere.
+См. сведения об [источниках данных JBoss EAP](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.3/html/configuration_guide/datasource_management) в документации по JBoss EAP.
 
 ### <a name="determine-whether-and-how-the-file-system-is-used"></a>Определение того, используется ли файловая система и как именно она используется
 
-Для использования файловой системы на сервере приложений требуется перенастройка или, в редких случаях, изменение архитектуры. Файловая система может использоваться модулями WebSphere или кодом приложения. Вы можете определить некоторые или все сценарии, описанные в следующих разделах.
+Для использования файловой системы на сервере приложений требуется перенастройка или, в редких случаях, изменение архитектуры. Файловая система может использоваться модулями JBoss EAP или кодом приложения. Вы можете определить некоторые или все сценарии, описанные в следующих разделах.
 
 #### <a name="read-only-static-content"></a>Статическое содержимое только для чтения
 
@@ -76,9 +84,9 @@ java -version
 
 [!INCLUDE [determine-whether-jms-queues-or-topics-are-in-use](includes/migration/determine-whether-jms-queues-or-topics-are-in-use.md)]
 
-### <a name="determine-whether-your-application-uses-websphere-specific-apis"></a>Определение того, использует ли приложение API, зависящие от WebSphere
+### <a name="determine-whether-your-application-uses-jboss-eap-specific-apis"></a>Определение того, использует ли приложение API, зависящие от JBoss EAP
 
-Если приложение использует API, зависящие от WebSphere, необходимо выполнить рефакторинг для удаления этих зависимостей. Например, если вы применили класс, упомянутый в [спецификации по API, IBM WebSphere Application Server (выпуск 9.0)](https://www.ibm.com/support/knowledgecenter/en/SSEQTJ_9.0.5/com.ibm.websphere.javadoc.doc/web/apidocs/overview-summary.html?view=embed), значит вы использовали API WebSphere в приложении.
+Если приложение использует API, зависящие от JBoss EAP, необходимо выполнить рефакторинг для удаления этих зависимостей.
 
 [!INCLUDE [determine-whether-your-application-uses-entity-beans](includes/migration/determine-whether-your-application-uses-entity-beans.md)]
 
@@ -90,7 +98,7 @@ java -version
 
 ### <a name="determine-whether-jca-connectors-are-in-use"></a>Определение того, используются ли соединители JCA
 
-Если приложение использует соединители JCA, нужно проверить, можно ли использовать такой соединитель в WildFly. Если же реализация JCA связана с WebSphere, необходимо выполнить рефакторинг приложения, чтобы удалить эту зависимость. Если это возможно, добавьте JAR в путь к классу сервера и поместите необходимые файлы конфигурации в нужное расположение в каталогах сервера WildFly, чтобы обеспечить доступность.
+Если приложение использует соединители JCA, нужно проверить, можно ли использовать такой соединитель в WildFly. Если же реализация JCA зависит от JBoss EAP, необходимо выполнить рефакторинг приложения, чтобы удалить эту зависимость. Если это возможно, добавьте JAR в путь к классу сервера и поместите необходимые файлы конфигурации в нужное расположение в каталогах сервера WildFly, чтобы обеспечить доступность.
 
 [!INCLUDE [determine-whether-jaas-is-in-use](includes/migration/determine-whether-jaas-is-in-use.md)]
 
@@ -100,7 +108,7 @@ java -version
 
 ### <a name="determine-whether-your-application-is-packaged-as-an-ear"></a>Определение того, упаковано ли приложение как EAR-файл
 
-Если приложение упаковано как EAR-файл, обязательно проверьте файлы *application.xml* и *application-bnd.xml*, определив их конфигурации.
+Если приложение упаковано как EAR-файл, обязательно проверьте файл *application.xml*, определив его конфигурацию.
 
 > [!NOTE]
 > Если нужно масштабировать каждое веб-приложение отдельно для эффективного использования ресурсов AKS, следует разбить EAR на отдельные веб-приложения.

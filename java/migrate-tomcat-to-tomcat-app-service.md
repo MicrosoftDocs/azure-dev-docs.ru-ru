@@ -5,23 +5,23 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 6e14e8a18f87b67eb0ecb5ce08541058a964c988
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893759"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612103"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
-Узнайте, что следует учитывать при переносе существующего приложения Tomcat для запуска в Службе приложений Azure с использованием Tomcat 8.5 или 9.0.
+Узнайте, что следует учитывать при переносе существующего приложения Tomcat для запуска в Службе приложений Azure с использованием Tomcat 9.0.
 
 ## <a name="before-you-start"></a>Перед началом работы
 
 Если вы не можете выполнить какие-либо требования для подготовки к миграции, ознакомьтесь со следующими дополнительными руководствами по переносу:
 
 * [Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Миграция приложений Tomcat в Виртуальные машины Azure (планируется)
+* Перенос приложений Tomcat в Виртуальные машины Azure (руководство ожидается)
 
 ## <a name="pre-migration"></a>Подготовка к миграции
 
@@ -37,7 +37,7 @@ ms.locfileid: "78893759"
 ${CATALINA_HOME}/bin/version.sh
 ```
 
-Чтобы получить текущую версию, поддерживаемую в Службе приложений Azure, скачайте [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi#8.5.50) или [Tomcat 9](https://tomcat.apache.org/download-90.cgi) в зависимости от того, какую версию вы планируете использовать в Службе приложений Azure.
+Чтобы получить текущую версию, поддерживаемую в Службе приложений Azure, скачайте [Tomcat 9](https://tomcat.apache.org/download-90.cgi) в зависимости от того, какую версию вы планируете использовать в Службе приложений Azure.
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -56,7 +56,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 Чтобы узнать, какой используется диспетчер сохраняемости сеансов, изучите файлы *context.xml* в приложении и конфигурации Tomcat. Найдите элемент `<Manager>` и запишите значение атрибута `className`.
 
-Встроенные реализации [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
+Встроенные реализации [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
 
 Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например Pivotal Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
@@ -76,7 +76,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Определение того, используется ли кластеризация Tomcat
 
-[Кластеризация Tomcat](https://tomcat.apache.org/tomcat-8.5-doc/cluster-howto.html) не поддерживается в Службе приложений Azure. Вместо этого можно настроить масштабирование и балансировку нагрузки и управлять ею в Службе приложений Azure без использования специальных функций Tomcat. Можно хранить состояние сеанса в альтернативном расположении, чтобы оно было доступным для всех реплик. См. сведения о том, как [определить механизм сохранения сеанса](#identify-session-persistence-mechanism).
+[Кластеризация Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) не поддерживается в Службе приложений Azure. Вместо этого можно настроить масштабирование и балансировку нагрузки и управлять ею в Службе приложений Azure без использования специальных функций Tomcat. Можно хранить состояние сеанса в альтернативном расположении, чтобы оно было доступным для всех реплик. См. сведения о том, как [определить механизм сохранения сеанса](#identify-session-persistence-mechanism).
 
 Чтобы определить, использует ли приложение кластеризацию, найдите элемент `<Cluster>` в элементах `<Host>` или `<Engine>` в файле *server.xml*.
 
@@ -92,17 +92,17 @@ ${CATALINA_HOME}/bin/version.sh
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>Определение того, используется ли MemoryRealm
 
-Для работы [MemoryRealm](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/realm/MemoryRealm.html) требуется сохраненный XML-файл. В Службе приложений Azure передайте этот файл в каталог */home* или его подкаталог либо в подключенное хранилище. Измените параметр `pathName` соответствующим образом.
+Для работы [MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) требуется сохраненный XML-файл. В Службе приложений Azure передайте этот файл в каталог */home* или его подкаталог либо в подключенное хранилище. Измените параметр `pathName` соответствующим образом.
 
 Чтобы определить, используется ли сейчас `MemoryRealm`, изучите файлы *server.xml* и *context.xml* и найдите элементы `<Realm>`, в которых для атрибута `className` задано значение `org.apache.catalina.realm.MemoryRealm`.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>Определение того, используется ли отслеживание сеансов SSL
 
-Служба приложений выполняет разгрузку сеансов за пределами среды выполнения Tomcat. Поэтому нельзя использовать [отслеживание сеансов SSL](https://tomcat.apache.org/tomcat-8.5-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Используйте другой режим отслеживания сеансов (`COOKIE` или `URL`). Если требуется применить отслеживание сеансов SSL, не используйте Службу приложений.
+Служба приложений выполняет разгрузку сеансов за пределами среды выполнения Tomcat. Поэтому нельзя использовать [отслеживание сеансов SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Используйте другой режим отслеживания сеансов (`COOKIE` или `URL`). Если требуется применить отслеживание сеансов SSL, не используйте Службу приложений.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>Определение того, используется ли AccessLogValve
 
-Если используется [AccessLogValve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/AccessLogValve.html), укажите для параметра `directory` значение `/home/LogFiles` или подкаталог.
+Если используется [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), укажите для параметра `directory` значение `/home/LogFiles` или подкаталог.
 
 ## <a name="migration"></a>Миграция
 
@@ -180,7 +180,9 @@ ${CATALINA_HOME}/bin/version.sh
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>Перенос источников данных, библиотек и ресурсов JNDI
 
-Чтобы перенести источники данных, выполните [эти действия](/azure/app-service/containers/configure-language-java#tomcat).
+Инструкции по настройке источника данных см. в разделе [Источники данных](/azure/app-service/containers/configure-language-java#data-sources) статьи [Настройка приложения Java в Linux для Службы приложений Azure](/azure/app-service/containers/configure-language-java).
+
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
 
 Перенесите все дополнительные зависимости classpath уровня сервера, выполнив [те же действия, что и для JAR-файлов источников данных](/azure/app-service/containers/configure-language-java#finalize-configuration).
 
@@ -193,7 +195,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 Когда вы выполните инструкции из предыдущего раздела, настраиваемая конфигурация сервера должна будет находится в папке */home/tomcat/conf*.
 
-Завершите перенос, скопировав все дополнительные конфигурации (например, [realms](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html) и [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html)).
+Завершите миграцию, скопировав все дополнительные конфигурации (например, [realms](https://tomcat.apache.org/tomcat-9.0-doc/config/realm.html) и [JASPIC](https://tomcat.apache.org/tomcat-9.0-doc/config/jaspic.html)).
 
 [!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 

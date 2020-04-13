@@ -2,12 +2,12 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
-ms.openlocfilehash: affabacec95b8f1c4c7ea654ff9a765056220c76
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 4b5b73eee66c4a5c9eb28b79804e0dc610f639d6
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825834"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612054"
 ---
 ### <a name="inventory-external-resources"></a>Проверка внешних ресурсов
 
@@ -32,6 +32,8 @@ ms.locfileid: "76825834"
 * имя источника данных;
 * конфигурация пула подключений;
 * путь к JAR-файлу драйвера JDBC.
+
+Дополнительные сведения см. в [руководстве по использованию источника данных JNDI](https://tomcat.apache.org/tomcat-9.0-doc/jndi-datasource-examples-howto.html) в документации по Tomcat.
 
 #### <a name="all-other-external-resources"></a>Другие связанные внешние ресурсы
 

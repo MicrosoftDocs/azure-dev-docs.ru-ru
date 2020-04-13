@@ -5,16 +5,21 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.openlocfilehash: e6215502b54bedf62f40a024f9e7b3acc01cdc1f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79089951"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612010"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
 Эта статья содержит общие сведения о рекомендуемых стратегиях переноса приложений Java в Azure.
+
+В этом руководстве по миграции рассматриваются распространенные сценарии работы с Java в Azure, а также общие рекомендации и советы по планированию миграции. Если вы хотите обсудить конкретный сценарий миграции приложений Java со специалистами из Майкрософт по работе с Java в Azure, заполните следующую анкету и представитель свяжется с вами.
+
+> [!div class="nextstepaction"]
+> [Анкета с вопросами по миграции Java](https://aka.ms/migrate-my-Java-app-requested-thru-docs)
 
 ## <a name="identifying-application-type"></a>Определение типа приложения
 
@@ -143,10 +148,10 @@ ms.locfileid: "79089951"
 
 |Место назначения&nbsp;→<br><br>Сервер приложений&nbsp;↓|Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | Недоступно | Недоступно | Недоступно | Руководство<br>Планируется | Руководство<br>Планируется |
-| WebLogic              | Недоступно | Недоступно | Недоступно | [Руководство][6]       | [Руководство][4]       |
-| WebSphere             | Недоступно | Недоступно | Недоступно | [Руководство][7]       | Руководство<br>Планируется |
-| JBoss EAP             | Недоступно | Недоступно | Недоступно | Недоступно                 | Руководство<br>Планируется |
+| WildFly /<br>JBoss AS | Недоступно | Недоступно | Недоступно | [Руководство][9] | Руководство<br>Планируется |
+| WebLogic              | Недоступно | Недоступно | Недоступно | [Руководство][6] | [Руководство][4]       |
+| WebSphere             | Недоступно | Недоступно | Недоступно | [Руководство][7] | Руководство<br>Планируется |
+| JBoss EAP             | Недоступно | Недоступно | Недоступно | [Руководство][8] | Руководство<br>Планируется |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -156,3 +161,5 @@ ms.locfileid: "79089951"
 [5]: migrate-java-se-to-java-se-app-service.md
 [6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
 [7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+[8]: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md
+[9]: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md

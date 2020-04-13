@@ -1,26 +1,30 @@
 ---
-title: Очистка ресурсов после развертывания контейнерного приложения Node.js с помощью Visual Studio Code
-description: Руководство, часть 6. Очистка ресурсов.
+title: Потоковая передача журналов из контейнерного приложения Node.js с помощью Visual Studio Code
+description: Руководство, часть 7. Потоковая передача журналов в Visual Studio Code
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 7c235cff8b5685880fc63d7e50587980502c7e8d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 10ccf13cddfc7bb1ed7f226629072cb9baeea3a1
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467123"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740637"
 ---
-# <a name="clean-up-resources"></a>Очистка ресурсов
+# <a name="stream-logs-into-visual-studio-code"></a>Потоковая передача журналов в Visual Studio Code
 
-[Предыдущий шаг. Потоковая передача журналов](tutorial-vscode-docker-node-05.md)
+[Предыдущий шаг. Внесение изменений и повторное развертывание](tutorial-vscode-docker-node-06.md)
 
-Экземпляр Службы приложений, созданный для контейнера, включает резервный план этой службы, за использование которого может взиматься плата. Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши Службу приложений в обозревателе **Azure: Служба приложений** и выберите **Удалить**.
+На этом этапе вы узнаете, как просмотреть любые выходные данные или вывести последний фрагмент данных, которые выполняющийся веб-сайт создает в результате вызовов к `console.log`. Эти выходные данные отображаются в окне **Вывод** в Visual Studio Code.
 
-Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
+1. В обозревателе **Службы приложений Azure** щелкните узел приложения правой кнопкой мыши и выберите **Start Streaming Logs** (Начать потоковую передачу журналов).
 
-## <a name="next-steps"></a>Дополнительная информация
+    ![Просмотр журналов потоковой передачи](media/deploy-containers/stream-logs-command.png)
 
-[!INCLUDE [tutorial-next-steps](includes/tutorial-next-steps.md)]
+1. В запросе подтвердите намерение включить ведение журнала и перезапустить приложение.
+
+    ![Запрос на включение ведения журналов и перезапуск](media/deploy-azure/enable-restart.png)
+
+1. После перезапуска приложения в Visual Studio Code откроется панель **Вывод** с подключением к потоку журнала, на которой отображается сообщение `Starting Live Log Stream`.
 
 > [!div class="nextstepaction"]
-> [Готово](node-howto-deploy-containers.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=clean-up-resources)
+> [Журналы отображаются](tutorial-vscode-docker-node-08.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=tailing-logs)

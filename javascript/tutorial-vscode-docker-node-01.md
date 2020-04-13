@@ -3,16 +3,22 @@ title: Развертывание контейнеров Docker в Службе 
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 98ebb6bd857216cb395eb8cc62faa3d6ee30e3eb
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.openlocfilehash: 1a14010d362ed3858d319a141fd24e5ea1b0e714
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77709840"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740566"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
 
 В этом руководстве объясняется, как с помощью Visual Studio Code создать контейнерное приложение Node.js, используя Docker, отправить образ контейнера в реестр, а затем развернуть образ в Службе приложений Azure.
+
+## <a name="walkthrough-video"></a>Пошаговое видеоруководство
+
+Просмотрите это видео, чтобы ознакомиться с полным пошаговым руководством по содержимому этой статьи.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-to-Azure-App-Service/player]
 
 ## <a name="prerequisites"></a>Предварительные требования
 

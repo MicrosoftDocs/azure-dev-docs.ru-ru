@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 91292d50f49bde2b76084f8a09119ae74a20f72f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894205"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612114"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>Миграция веб-приложений на базе исполняемых JAR-файлов в Java SE в Службе приложений Azure
 
@@ -20,8 +20,8 @@ ms.locfileid: "78894205"
 
 Если вы не можете выполнить какие-либо требования для подготовки к миграции, ознакомьтесь со следующими дополнительными руководствами по переносу:
 
-* Миграция приложений на базе исполняемых JAR-файлов в контейнеры в Службе Azure Kubernetes (планируется)
-* Миграция приложений на базе исполняемых JAR-файлов в Виртуальные машины Azure (планируется)
+* Перенос приложений на базе исполняемых JAR-файлов в контейнеры в Службе Azure Kubernetes (руководство ожидается)
+* Перенос приложений на базе исполняемых JAR-файлов в Виртуальные машины Azure (руководство ожидается)
 
 ## <a name="pre-migration"></a>Подготовка к миграции
 
@@ -39,7 +39,7 @@ ms.locfileid: "78894205"
 
 Определите строки подключения ко всем базам данных SQL.
 
-Для приложений Spring Boot строки подключения обычно хранятся в файлах конфигурации. 
+Для приложений Spring Boot строки подключения обычно хранятся в файлах конфигурации.
 
 Вот пример из файла *application.properties*:
 
@@ -57,6 +57,8 @@ spring:
     mongodb:
       uri: mongodb://mongouser:deepsecret@mongoserver.contoso.com:27017
 ```
+
+Дополнительные сведения см. в разделах о [репозиториях JPA](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories) и [репозиториях JDBC](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#jdbc.repositories) в документации по Spring.
 
 #### <a name="jms-message-brokers"></a>Брокеры сообщений JMS
 
@@ -143,7 +145,7 @@ ibm:
 
 ### <a name="parameterize-the-configuration"></a>Параметризация конфигурации
 
-Убедитесь, что координаты всех внешних ресурсов (например, строк подключения к базам данных) и другие настраиваемые параметры считываются из переменных среды. В приложениях Spring Boot все параметры конфигурации [должны быть вынесены во внешний код](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config).
+Убедитесь, что координаты всех внешних ресурсов (например, строк подключения к базам данных) и другие настраиваемые параметры считываются из переменных среды. В приложениях Spring Boot все параметры конфигурации должны быть вынесены во внешний код. Дополнительные сведения см. в разделе о [вынесении конфигурации во внешних код](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config) в документации по Spring Boot.
 
 Вот пример со ссылкой на переменную среды `SERVICEBUS_CONNECTION_STRING` из файла *application.properties*:
 
