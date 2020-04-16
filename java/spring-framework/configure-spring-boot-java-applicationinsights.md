@@ -1,5 +1,5 @@
 ---
-title: Настройка начального приложения SpringBoot для Azure Application Insights в инициализаторе Spring Boot
+title: Настройка приложения Initializer для начального набора Spring Boot — Azure Monitor
 description: Настройка приложения Spring Boot, созданного с помощью Spring Initializr, для использования начального набора Spring Boot в Application Insights.
 services: Application-Insights
 documentationcenter: java
@@ -9,12 +9,12 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 083abdf87d2298c99b9898db3b17e1c0e5e64bd8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 39993902ba01fd92bf44c6ccb85016ef9e73ac97
+ms.sourcegitcommit: 8aac5c35fbbd3d954bc4963933f96c93e10623d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812149"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81119536"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 
@@ -161,7 +161,7 @@ ms.locfileid: "74812149"
 
 1. Сохраните и закройте файл *TestController.java*.
 
-1. Создайте приложение Spring Boot с помощью Maven и запустите его. Например:
+1. Создайте приложение Spring Boot с помощью Maven и запустите его. Пример:
 
    ```shell
    mvn clean package
@@ -230,7 +230,7 @@ ms.locfileid: "74812149"
 
 2. Сохраните и закройте файл *POM.xml*.
 
-3. В папке \src\main\resources создайте файл *log4j2.xml* и настройте его. Например:
+3. В папке \src\main\resources создайте файл *log4j2.xml* и настройте его. Пример:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -262,7 +262,7 @@ ms.locfileid: "74812149"
 
 ![Azure][AZ07]
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
