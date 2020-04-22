@@ -1,0 +1,53 @@
+### YamlMime:Landing
+title: Документация по Azure Toolkit for IntelliJ
+summary: В Azure Toolkit for IntelliJ входят шаблоны и функциональные возможности для простого создания, разработки, тестирования и развертывания приложений Azure с помощью интегрированной среды разработки IntelliJ.
+metadata:
+  title: Документация по Azure Toolkit for IntelliJ
+  description: Узнайте о наборе средств Azure для IntelliJ.
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: f816ad75074b92b0b2b8025c5e541b5ef7988b65
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675390"
+landingContent:
+- title: Руководство по началу работы
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание веб-приложения Hello World для Службы приложений Azure
+      url: create-hello-world-web-app.md
+    - text: Создание функции для триггеров HTTP в решении "Функции Azure"
+      url: quickstart-functions.md
+- title: Пошаговые инструкции
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Запуск веб-приложения Hello World в контейнере Linux
+      url: hello-world-web-app-linux.md
+    - text: Создание приложений Spark для кластера Spark в HDInsight на платформе Linux
+      url: /azure/hdinsight/hdinsight-apache-spark-intellij-tool-plugin
+- title: Управление ресурсами Azure
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Кэши Redis
+      url: managing-redis-caches-using-azure-explorer.md
+    - text: Учетные записи хранения
+      url: managing-virtual-machines-using-azure-explorer.md
+    - text: Виртуальные машины
+      url: managing-storage-accounts-using-azure-explorer.md
+- title: Поддерживаемые пакеты JDK
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Java для Azure и Azure Stack
+      url: /azure/developer/java/fundamentals
+- title: Исходный код
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Наборы средств Azure для Java
+      url: https://github.com/microsoft/azure-tools-for-java

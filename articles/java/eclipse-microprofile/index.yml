@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Документация по Eclipse MicroProfile в Azure
+summary: MicroProfile — это проект Eclipse Foundation, который предназначен для использования и развития технологий Enterprise Java, таких как Java EE, в направлении архитектуры распределенных микрослужб, внедрения инноваций в нескольких реализациях и совместной работы в общей сфере интересов с целью стандартизации.
+metadata:
+  title: Документация по Eclipse MicroProfile в Azure
+  description: Начало разработки приложений в Azure с помощью Eclipse MicroProfile.
+  author: brborges
+  ms.author: brborges
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: e17e2d97494e2043c9925283adb53c2449224586
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675210"
+landingContent:
+- title: Руководство по началу работы
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание в службу "Экземпляры контейнеров Azure"
+      url: deploy-microprofile-to-container-instances.md
+    - text: Развертывание с помощью функции Azure "Веб-приложения"
+      url: deploy-microprofile-to-web-app-for-containers.md
+    - text: Источник конфигурации для Azure Key Vault
+      url: configure-microprofile-with-keyvault.md
+    - text: CI/CD для приложений MicroProfile с использованием Azure DevOps
+      url: cicd-microprofile.md
+- title: Примеры кода
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Примеры MicroProfile для Azure
+      url: https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue
+    - text: Примеры MicroProfile
+      url: https://microprofile.io/project/eclipse/microprofile-samples
+- title: Ресурсы по MicroProfile
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: MicroProfile.io
+      url: https://microprofile.io/

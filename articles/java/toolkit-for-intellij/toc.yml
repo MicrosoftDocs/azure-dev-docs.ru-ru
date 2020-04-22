@@ -1,0 +1,30 @@
+- name: Документация по Azure Toolkit for IntelliJ
+  href: index.yml
+  items:
+    - name: Начало работы. Веб-приложение
+      href: create-hello-world-web-app.md
+    - name: Начало работы. Функции
+      href: quickstart-functions.md
+    - name: Учебники
+      expanded: true
+      items:
+        - name: Развертывание веб-приложения в контейнере Linux
+          href: hello-world-web-app-linux.md
+    - name: Инструкции
+      expanded: true
+      items:
+        - name: Вход в учетную запись Azure
+          href: sign-in-instructions.md
+        - name: Управление ресурсами Azure
+          expanded: true
+          items:
+            - name: Виртуальные машины
+              href: managing-virtual-machines-using-azure-explorer.md
+            - name: Учетные записи хранения
+              href: managing-storage-accounts-using-azure-explorer.md
+            - name: кэш Azure Redis
+              href: managing-redis-caches-using-azure-explorer.md
+    - name: Заметки о выпуске
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://plugins.jetbrains.com/plugin/8053'
