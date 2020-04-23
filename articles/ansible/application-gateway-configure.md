@@ -4,20 +4,20 @@ description: Сведения об использовании службы Ansib
 keywords: ansible, azure, devops, bash, playbook, application gateway, load balancer, web traffic
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 7fa2a8574bfa3f4848df4cce29887ac2bbc67942
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 3ff9a43513a2ee34964e6e82447e3398469db8f8
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741452"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743721"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>Руководство по управлению веб-трафиком с помощью Шлюза приложений Azure и Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 [Шлюз приложений Azure](/azure/application-gateway/overview) — это подсистема балансировки нагрузки веб-трафика, предназначенная для управления трафиком веб-приложений. Традиционные подсистемы балансировки нагрузки перенаправляют трафик на конечный IP-адрес и порт, исходя из исходного IP-адреса и порта. Шлюз приложений обеспечивает более глубокий уровень управления, позволяя направлять трафик в зависимости от URL-адреса. Например, можно определить правило: если `images` — это путь URL-адреса, то трафик направляется на определенный набор серверов (известный как пул), настроенный для образов.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -27,8 +27,8 @@ ms.locfileid: "80741452"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>Создание группы ресурсов
 

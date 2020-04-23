@@ -4,22 +4,22 @@ description: Узнайте, как использовать Ansible для ма
 keywords: ansible, azure, devops, bash, playbook, scale, autoscale, virtual machine, virtual machine scale set, vmss
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 8c8aab0a96fe30d08c0f673f9e5bc5fb47b2b409
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: f50ac83b03d957e0d6649a5803ee90982a532935
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741702"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743879"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>Руководство по автомасштабированию масштабируемых наборов виртуальных машин в Azure с помощью Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
-[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../../includes/open-source-devops-intro-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../includes/open-source-devops-intro-vm-scale-set.md)]
 
 Функция автоматической настройки количества экземпляров виртуальных машин называется [автомасштабированием](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview). Преимуществом автомасштабирования является то, что на снижает расходы на управление, связанные с мониторингом и оптимизацией производительности приложения. Автомасштабирование можно настроить для работы в режиме по запросу или по определенному расписанию. С помощью Ansible можно указать правила автомасштабирования, определяющие допустимую производительность для комфортной работы клиента.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -31,9 +31,9 @@ ms.locfileid: "80741702"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
-[!INCLUDE [ansible-prereqs-vm-scale-set.md](../../includes/ansible-prereqs-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [ansible-prereqs-vm-scale-set.md](includes/ansible-prereqs-vm-scale-set.md)]
 
 ## <a name="autoscale-based-on-a-schedule"></a>Автомасштабирование на основе расписания
 

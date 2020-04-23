@@ -4,18 +4,18 @@ description: Узнайте, как с помощью Ansible настроить
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 315ad861a9de7ff147f954f6b6d664242679c70c
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 6be7056a89b0ac0327ffc5ba39b77c31c23bb0fe
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741402"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743906"
 ---
 # <a name="tutorial-configure-azure-cni-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по настройке сети Azure CNI в Службе Azure Kubernetes (AKS) с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 С помощью AKS можно развернуть кластер, использующий одну из следующих моделей сети.
 
@@ -24,7 +24,7 @@ ms.locfileid: "80741402"
 
 Дополнительные сведения о сети см. в статье [Основные понятия сети в Службе Azure Kubernetes (AKS)](/azure/aks/concepts-network).
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -33,9 +33,9 @@ ms.locfileid: "80741402"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
 
 ## <a name="create-a-virtual-network-and-subnet"></a>Создание виртуальной сети и подсети
 

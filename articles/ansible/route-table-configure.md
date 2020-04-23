@@ -4,20 +4,20 @@ description: Сведения о том, как создавать, админи
 keywords: ansible, azure, devops, bash, playbook, networking, route, route table
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 1f08aebe7e9dcc1c5687f50ac91c7cb8cc8a62eb
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: cadc8f63d887cdd1ffe8b230dbe53a68645e601b
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741092"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743330"
 ---
 # <a name="tutorial-configure-azure-route-tables-using-ansible"></a>Руководство по Настройка таблицы маршрутов Azure с помощью Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-28-note.md)]
 
 Azure автоматически направляет трафик между подсетями Azure, виртуальными и локальными сетями. При необходимости большего контроля над маршрутизацией среды можно создать [таблицу маршрутов](/azure/virtual-network/virtual-networks-udr-overview). 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -25,8 +25,8 @@ Azure автоматически направляет трафик между п
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-route-table"></a>Создание таблицы маршрутов
 

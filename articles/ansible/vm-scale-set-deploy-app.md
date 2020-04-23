@@ -4,20 +4,20 @@ description: Узнайте, как с помощью Ansible настроить
 keywords: ansible, azure, devops, bash, playbook, virtual machine, virtual machine scale set, vmss
 ms.topic: tutorial
 ms.date: 01/13/2020
-ms.openlocfilehash: 83dc71e33db0a5c60111601be3ce9eaa5cfcdae3
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 40632c5e0cc4f544d1b561548bf54495616e4e12
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741462"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743928"
 ---
 # <a name="tutorial-deploy-apps-to-virtual-machine-scale-sets-in-azure-using-ansible"></a>Руководство по развертыванию приложений в масштабируемых наборах виртуальных машин в Azure c помощью Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
-[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../../includes/open-source-devops-intro-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../includes/open-source-devops-intro-vm-scale-set.md)]
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,9 +28,9 @@ ms.locfileid: "80741462"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
-[!INCLUDE [ansible-prereqs-vm-scale-set.md](../../includes/ansible-prereqs-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [ansible-prereqs-vm-scale-set.md](includes/ansible-prereqs-vm-scale-set.md)]
 - **git** - [git](https://git-scm.com) используется для скачивания примеров Java, которые есть в этом руководстве.
 - **Пакет SDK для Java SE (JDK)** . [JDK](https://aka.ms/azure-jdks) используется для сборки примера проекта Java.
 - **Apache Maven** - [Apache Maven](https://maven.apache.org/download.cgi) используется для сборки примера проекта Java.

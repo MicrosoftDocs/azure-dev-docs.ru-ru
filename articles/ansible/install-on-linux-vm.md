@@ -8,12 +8,12 @@ author: tomarchermsft
 manager: gwallace
 ms.author: tarcher
 ms.date: 04/30/2019
-ms.openlocfilehash: 6c346ad30be953550dfd679d60bf2c5ce6f3d8c7
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 4f577b9841375d63bfc88249da88e554c1464bde
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741132"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743588"
 ---
 # <a name="quickstart-install-ansible-on-linux-virtual-machines-in-azure"></a>Краткое руководство. Установка Ansible на виртуальные машины Linux в Azure
 
@@ -21,8 +21,8 @@ Ansible позволяет автоматизировать развертыва
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-sp.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-sp.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
 - **Доступ к Linux или виртуальной машине Linux.** Вы можете [создать виртуальную машину Linux с помощью Ansible](/azure/virtual-network/quick-create-cli), если у вас нет доступа к ней.
 
 ## <a name="install-ansible-on-an-azure-linux-virtual-machine"></a>Установка Ansible на виртуальной машине Linux в Azure
@@ -159,7 +159,7 @@ Ansible позволяет автоматизировать развертыва
 
 Для проверки успешности конфигурации создайте группу ресурсов Azure с помощью Ansible.
 
-[!INCLUDE [create-resource-group-with-ansible.md](../../includes/ansible-snippet-create-resource-group.md)]
+[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

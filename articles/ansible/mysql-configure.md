@@ -4,20 +4,20 @@ description: Узнайте, как с помощью Ansible создать и 
 keywords: ansible, azure, devops, bash, playbook, mysql, database
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 9cd574417733518b993bb242c2c168aba338e34a
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: e8aad724edd55bda7284eda5f9630e5ffbe9f74c
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741552"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743410"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>Руководство по настройке баз данных в Базе данных Azure для MySQL с помощью Ansible
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 [База данных Azure для MySQL](/azure/mysql/overview) — это служба реляционных баз данных на основе MySQL Community Edition. База данных Azure для MySQL позволяет управлять базами данных MySQL в веб-приложениях.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -30,8 +30,8 @@ ms.locfileid: "80741552"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>Создание группы ресурсов
 

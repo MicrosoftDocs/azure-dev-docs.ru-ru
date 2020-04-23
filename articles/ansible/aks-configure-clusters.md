@@ -4,22 +4,22 @@ description: Узнайте, как использовать Ansible для со
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes
 ms.topic: tutorial
 ms.date: 11/04/2019
-ms.openlocfilehash: 6672c3fac1c5d546a61622e3fd6df6c5397f87a2
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 7f68399fe2bf8dfe60a80ffdaff714b5c609b166
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741612"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743702"
 ---
 # <a name="tutorial-configure-azure-kubernetes-service-aks-clusters-in-azure-using-ansible"></a>Руководство по настройке кластеров Службы Azure Kubernetes в Azure с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 Службу Azure Kubernetes можно настроить для использования [Azure Active Directory (AD)](/azure/active-directory/) для аутентификации пользователей. После настройки можно будет использовать маркер аутентификации Azure AD для входа в кластер AKS. Управление доступом на основе ролей может основываться на удостоверении пользователя или членстве в группах каталога.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,9 +28,9 @@ ms.locfileid: "80741612"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-managed-aks-cluster"></a>Создание управляемого кластера AKS
 

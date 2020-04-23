@@ -3,16 +3,22 @@ title: Развертывание статического веб-сайта Nod
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 8b19b32933c2405082e2d1e2aa46c7a06af1f9d1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 4795d3a80be1ffa7516f64fa5563d4960f58a31b
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467088"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82026167"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Развертывание статического веб-сайта в Azure из Visual Studio Code
 
 При работе с этим руководством вы создадите и развернете статический веб-сайт в Azure с помощью [службы хранилища Azure](https://docs.microsoft.com/azure/storage). Статический веб-сайт состоит из файлов HTML, CSS, JavaScript и некоторых других, таких как файлы изображений или шрифтов. Обычно статический сайт — это одностраничное приложение ([SPA](https://en.wikipedia.org/wiki/Single-page_application)). Он создается с помощью Angular, React или Vue. Независимо от метода разработки, файлы размещаются и обслуживаются непосредственно в _хранилище_ (без специального веб-сервера). Размещение в хранилище проще и дешевле, чем обслуживание веб-сервера.
+
+## <a name="walkthrough-video"></a>Пошаговое видеоруководство
+
+Просмотрите это видео, чтобы ознакомиться с полным пошаговым руководством по содержимому этой статьи.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-static-website-to-Azure-from-Visual-Studio-Code/player]
 
 > [!NOTE]
 > Если у вас есть собственный серверный код, например приложение Node.js/Express, вместо этого руководства перейдите к [руководству по Службе приложений](tutorial-vscode-azure-app-service-node-01.md).

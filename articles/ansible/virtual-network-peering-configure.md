@@ -4,22 +4,22 @@ description: Узнайте, как установить пиринговое п
 keywords: ansible, azure, devops, bash, сборник схем, схемы, пиринг
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 78699a005d721b46a88a26452f5db68438793d34
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 2b5af7546900c45dde7eea0e1d57370d2ffc3991
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741772"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743882"
 ---
 # <a name="tutorial-configure-azure-virtual-network-peering-using-ansible"></a>Руководство по настройке пиринга виртуальных сетей Azure с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Пиринг виртуальных сетей](/azure/virtual-network/virtual-network-peering-overview) позволяет без дополнительной настройки соединить две виртуальные сети Azure. После создания пиринга две виртуальные сети выглядят как одна при подключении. 
 
 Трафик передается между виртуальными машинами в одной виртуальной сети через частные IP-адреса. Точно так же трафик между виртуальными машинами в пиринговой виртуальной сети передается через магистральную инфраструктуру Майкрософт. Поэтому виртуальные машины в разных виртуальных сетях могут взаимодействовать между собой.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -29,8 +29,8 @@ ms.locfileid: "80741772"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-two-resource-groups"></a>Создание двух групп ресурсов
 

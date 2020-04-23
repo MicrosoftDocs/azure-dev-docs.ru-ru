@@ -4,22 +4,22 @@ description: Узнайте, как с помощью Ansible настроить
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes, azure active directory, rbac
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 0ce453c143532e5328a5b32347bdd6d1f2f0edb5
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 9018ca465246163a00e984d013449cfef6ae0be1
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741582"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743810"
 ---
 # <a name="tutorial-configure-role-based-access-control-rbac-roles-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по настройке ролей RBAC (управление доступом на основе ролей) в Службе Azure Kubernetes (AKS) с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 Службу Azure Kubernetes можно настроить для использования [Azure Active Directory (AD)](/azure/active-directory/) для аутентификации пользователей. После настройки можно будет использовать маркер аутентификации Azure AD для входа в кластер AKS. Управление доступом на основе ролей может основываться на удостоверении пользователя или членстве в группах каталога.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,9 +28,9 @@ ms.locfileid: "80741582"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 - **Установите библиотеку RedHat OpenShift** - `pip install openshift`.
 
 ## <a name="configure-azure-ad-for-aks-authentication"></a>Настройка Azure AD для аутентификации AKS

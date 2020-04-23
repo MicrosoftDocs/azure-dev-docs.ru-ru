@@ -4,20 +4,20 @@ description: Сведения о том, как с помощью Ansible соз
 keywords: ansible, azure, devops, bash, сборник схем, apache hadoop, hdinsight
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 2281c9683583e1def034b79809829a068ef9f3e6
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 78cb70a3346aec86d079d2667349f9bc6e0eb4b2
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741192"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743634"
 ---
 # <a name="tutorial-configure-a-cluster-in-azure-hdinsight-using-ansible"></a>Руководство по настройке кластера в Azure HDInsight с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Azure HDInsight](/azure/hdinsight/) — это служба аналитики на основе Hadoop для обработки данных. HDInsight — это инструмент ETL (извлечение, преобразование, загрузка), предназначенное для работы с большими данными, структурированными и неструктурированными. HDInsight поддерживает несколько [типов кластера](/azure/hdinsight/hadoop/apache-hadoop-introduction), которые поддерживают разные наборы компонентов. 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,8 +28,8 @@ ms.locfileid: "80741192"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
 
 ## <a name="create-a-random-postfix"></a>Создание случайного постфикса
 
