@@ -1,0 +1,116 @@
+### YamlMime:Landing
+title: Документация по интерфейсу командной строки Azure (CLI)
+summary: "Интерфейс командной строки (Azure CLI) — это набор команд для создания ресурсов Azure и управления ими.  \nAzure CLI доступен в различных службах Azure и предназначен для быстрой работы с ними с возможностью автоматизации.\n"
+metadata:
+  title: Общие сведения об Azure CLI
+  description: Инструкции по установке Azure CLI и началу работы.
+  ms.topic: landing-page
+  ms.collection: collection
+  author: dbradish-microsoft
+  ms.author: dbradish
+  ms.date: 09/09/2019
+  ms.openlocfilehash: 804cf4efdcf88674f67f0d5e2afd2619ba1b892a
+  ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/22/2020
+  ms.locfileid: "82031356"
+landingContent:
+- title: Установка Azure CLI
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Обзор установки
+      url: install-azure-cli.md
+    - text: Установка для Windows
+      url: install-azure-cli-windows.md
+    - text: Установка для macOS
+      url: install-azure-cli-macos.md
+    - text: Установка для Linux с помощью apt
+      url: install-azure-cli-apt.md
+    - text: Установка для Linux с помощью yum
+      url: install-azure-cli-yum.md
+    - text: Установка для Linux с помощью zypper
+      url: install-azure-cli-zypper.md
+    - text: Установка для Linux без использования диспетчера пакетов
+      url: install-azure-cli-linux.md
+    - text: Выполнение в Docker
+      url: run-azure-cli-docker.md
+    - text: Запуск в Azure Cloud Shell
+      url: https://shell.azure.com
+- title: Изучение функций Azure CLI
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Начало работы с Azure CLI
+      url: get-started-with-azure-cli.md
+    - text: Службы, которыми можно управлять с помощью Azure CLI
+      url: azure-services-the-azure-cli-can-manage.md
+    - text: Популярные статьи, в которых используется Azure CLI
+      url: popular-articles-using-the-azure-cli.md
+  - linkListType: how-to-guide
+    links:
+    - text: Методы входа
+      url: authenticate-azure-cli.md
+    - text: Создание субъекта-службы
+      url: create-an-azure-service-principal-azure-cli.md
+    - text: Запрос результатов команды CLI
+      url: query-azure-cli.md
+- title: Использование Azure CLI для управления облачными ресурсами
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Развертывание веб-приложения из GitHub
+      url: /azure/app-service/scripts/cli-deploy-github?toc=%2fcli%2fazure%2ftoc.json
+    - text: Создание базы данных Postgres SQL
+      url: /azure/postgresql/quickstart-create-server-up-azure-cli?toc=%2fcli%2fazure%2ftoc.json
+    - text: Создание кластера Kubernetes
+      url: /azure/aks/kubernetes-walkthrough?toc=%2fcli%2fazure%2ftoc.json
+  - linkListType: learn
+    links:
+    - text: Управление виртуальными машинами с помощью Azure CLI
+      url: /learn/modules/manage-virtual-machines-with-azure-cli
+    - text: Управление службами Azure с помощью CLI
+      url: /learn/modules/control-azure-services-with-cli
+    - text: Подключение приложения к службе хранилища Azure
+      url: /learn/modules/connect-an-app-to-azure-storage
+  - linkListType: tutorial
+    links:
+    - text: Создание виртуальных машин в одной подсети с помощью Azure CLI
+      url: azure-cli-vm-tutorial.yml
+- title: Расширения Azure CLI
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о расширениях Azure CLI
+      url: azure-cli-extensions-overview.md
+  - linkListType: reference
+    links:
+    - text: Доступные расширения
+      url: azure-cli-extensions-list.md
+- title: Справочник по Azure CLI
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Полный справочник по командам
+      url: /cli/azure/reference-index
+    - text: Форматы выходных данных
+      url: format-output-azure-cli.md
+    - text: Параметры конфигурации
+      url: azure-cli-configuration.md
+    - text: Заметки о выпуске
+      url: release-notes-azure-cli.md
+    - text: Язык запросов JMESPath
+      url: http://jmespath.org/
+    - text: Фильтры запросов OData
+      url: https://www.odata.org/getting-started/basic-tutorial/#queryData
+- title: Отправить отзыв и получить поддержку
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Отправить запрос на добавление функции
+      url: https://github.com/Azure/azure-cli/issues/new?template=Feature_request.md
+    - text: Сообщить об ошибке в продукте
+      url: https://github.com/Azure/azure-cli/issues/new?template=Bug_report.md
+    - text: Получить помощь от сообщества
+      url: https://stackoverflow.com/questions/tagged/azure-cli
