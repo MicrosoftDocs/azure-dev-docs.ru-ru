@@ -94,10 +94,10 @@
         - name: Spring Framework
           href: 'https://spring.io/'
         - name: Дополнительные сведения о Spring
-          href: 'https://spring.io/docs'
+          href: 'https://spring.io/guides'
         - name: Spring Boot
           href: 'https://projects.spring.io/spring-boot/'
         - name: Справочные материалы по проектам Spring
-          href: 'https://spring.io/docs/reference'
+          href: 'https://spring.io/projects'
         - name: Начальные приложения Spring Boot для Azure
           href: 'https://github.com/Microsoft/azure-spring-boot/'
