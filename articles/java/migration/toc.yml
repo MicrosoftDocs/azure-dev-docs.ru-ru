@@ -1,0 +1,21 @@
+- name: Документация по миграции из Java в Azure
+  href: index.yml
+  items:
+    - name: Обзор
+      href: migration-overview.md
+    - name: Переход из Spring в Службу приложений Azure
+      href: migrate-java-se-to-java-se-app-service.md
+    - name: Перенос Tomcat в Службу приложений Azure
+      href: migrate-tomcat-to-tomcat-app-service.md
+    - name: Перенос Tomcat в контейнеры в AKS
+      href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+    - name: Переход из WebLogic в Виртуальные машины Azure
+      href: migrate-weblogic-to-virtual-machines.md
+    - name: Переход с WildFly на WildFly в AKS
+      href: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+    - name: Переход с WebLogic на WildFly в AKS
+      href: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+    - name: Переход с WebSphere на WildFly в AKS
+      href: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+    - name: Переход с JBoss EAP на WildFly в AKS
+      href: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md

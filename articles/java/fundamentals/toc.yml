@@ -1,0 +1,45 @@
+- name: Документация по средствам разработки Java в Azure
+  href: index.yml
+  items:
+    - name: Обзор
+      href: java-azure-tools.md
+    - name: Поддержка Java
+      expanded: true
+      items:
+        - name: Долгосрочная поддержка Java
+          href: java-jdk-long-term-support.md
+        - name: Установка пакета JDK Java
+          href: java-jdk-install.md
+        - name: Образы Docker в Java для Azure
+          href: java-jdk-docker-images.md
+        - name: Инструмент Java Flight Recorder и сборка Mission Control
+          href: java-jdk-flight-recorder-and-mission-control.md
+        - name: "Преимущества перехода на Java\_11"
+          href: reasons-to-move-to-java-11.md
+        - name: "Переход с Java\_8 на Java\_11"
+          href: transition-from-java-8-to-java-11.md
+    - name: Visual Studio Code
+      href: 'https://code.visualstudio.com/docs/languages/java'
+    - name: IntelliJ IDEA
+      href: /azure/developer/java/toolkit-for-intellij
+    - name: Eclipse
+      href: /azure/developer/java/toolkit-for-eclipse
+    - name: Подключаемые модули Maven
+      expanded: true
+      href: /java/api/overview/azure/maven/README
+      items:
+        - name: Служба приложений Azure
+          href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+        - name: Функции Azure
+          href: /java/api/overview/azure/maven/azure-functions-maven-plugin/readme
+        - name: Azure Spring Cloud
+          href: /java/api/overview/azure/maven/azure-spring-cloud-maven-plugin/readme
+    - name: Непрерывная интеграция и развертывание Jenkins
+      href: /azure/jenkins/
+    - name: Azure DevOps
+      href: /azure/devops/java/
+    - name: Учебники
+      expanded: true
+      items:
+        - name: Мониторинг и ведение журнала с помощью Logz.io
+          href: java-get-started-with-logzio.md

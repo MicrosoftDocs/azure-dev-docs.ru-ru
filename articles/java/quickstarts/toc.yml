@@ -1,0 +1,25 @@
+- name: Краткие руководства по Azure для Java
+  href: /azure/developer/java/quickstarts
+  items:
+    - name: Службы вычислений
+      href: compute.md
+    - name: Данные
+      href: data.md
+    - name: Память
+      href: storage.md
+    - name: Caching
+      href: caching.md
+    - name: управление секретами и конфигурациями;
+      href: secrets-and-configuration-management.md
+    - name: Каталоги
+      href: directories.md
+    - name: Обмен сообщениями и обработка событий
+      href: messaging-and-eventing.md
+    - name: Сеть
+      href: networking.md
+    - name: Наблюдение
+      href: monitoring.md
+    - name: Cognitive Services
+      href: cognitive-services.md
+    - name: DevOps
+      href: devops.md

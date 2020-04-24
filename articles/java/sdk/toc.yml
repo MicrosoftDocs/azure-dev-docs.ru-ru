@@ -1,0 +1,35 @@
+- name: Документация по пакету SDK Azure для Java
+  href: index.yml
+  items:
+    - name: Приступая к работе
+      href: java-sdk-azure-get-started.md
+    - name: Основные понятия
+      expanded: true
+      items:
+        - name: Шаблоны и рекомендации
+          href: java-sdk-azure-concepts.md
+    - name: Статьи с инструкциями
+      expanded: true
+      items:
+        - name: Добавление корневого сертификата
+          href: java-sdk-add-certificate-ca-store.md
+        - name: Authenticate
+          href: java-sdk-azure-authenticate.md
+        - name: Настройка журнала
+          href: java-sdk-azure-log.md
+    - name: Примеры кода
+      items:
+        - name: Виртуальные машины
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: Веб-приложения
+          href: java-sdk-azure-web-apps-samples.md
+        - name: База данных SQL
+          href: java-sdk-azure-sql-database-samples.md
+        - name: Безопасность
+          href: java-sdk-azure-security-samples.md
+        - name: Контейнеры
+          href: java-sdk-azure-containers-samples.md
+        - name: Все примеры для Java
+          href: /samples/browse/?products=azure&languages=java
+    - name: Справочник
+      href: /java/api/?view=azure-java
