@@ -1,0 +1,76 @@
+- name: Jenkins в Azure
+  href: index.yml
+- name: Обзор
+  items:
+    - name: Jenkins в Azure
+      href: overview.md
+- name: Краткие руководства
+  expanded: true
+  items:
+    - name: Создание сервера Jenkins
+      href: configure-on-linux-vm.md
+- name: Учебники
+  items:
+    - name: Configure
+      items:
+        - name: Масштабирование с помощью службы "Экземпляры контейнеров Azure"
+          href: azure-container-instances-as-jenkins-build-agent.md
+          maintainContext: true
+        - name: Масштабирование с помощью агентов виртуальных машин Azure
+          href: scale-deployments-using-vm-agents.md
+    - name: Реализация CI/CD
+      items:
+        - name: Azure Spring Cloud
+          items:
+            - name: Развертывание в Azure Spring Cloud с помощью Azure CLI
+              href: deploy-to-azure-spring-cloud-using-azure-cli.md
+        - name: AKS
+          items:
+            - name: CI/CD в Kubernetes
+              href: deploy-from-github-to-aks.md
+              maintainContext: true
+            - name: Развертывание в AKS с использованием шаблона Blue-Green
+              href: deploy-to-aks-using-blue-green-deployment-pattern.md
+            - name: CI/CD в Azure Dev Spaces
+              href: azure-dev-spaces-and-aks.md
+        - name: Служба приложений
+          items:
+            - name: Создание ресурсов Azure в задании конвейера
+              href: deploy-to-azure-app-service-using-azure-cli.md
+            - name: Развертывание приложения из GitHub в Службе приложений
+              href: deploy-from-github-to-azure-app-service.md
+        - name: Использование Jenkins с Azure DevOps
+          href: deploy-to-linux-vm-using-azure-devops-services.md
+          maintainContext: true
+        - name: Развертывание в Функции Azure
+          href: deploy-to-azure-functions.md
+        - name: Публикация в службе хранилища Azure
+          href: azure-storage-blobs-as-build-artifact-repository.md
+          maintainContext: true
+        - name: CI/CD в виртуальные машины Linux
+          href: pipeline-with-github-and-docker.md
+          maintainContext: true
+        - name: CI/CD в Service Fabric
+          href: deploy-to-service-fabric-cluster.md
+          maintainContext: true
+- name: Практическое руководство
+  items:
+    - name: Использование подключаемого модуля Службы приложений
+      href: deploy-to-azure-app-service-using-plugin.md
+- name: Примеры
+  items:
+    - name: Примеры заданий и скриптов
+      href: 'https://github.com/azure/jenkins'
+- name: Ресурсы
+  items:
+    - name: Подключаемые модули Jenkins для Azure
+      href: plug-ins-for-azure.md
+    - name: Стратегия развития Azure
+      href: 'https://azure.microsoft.com/roadmap/'
+    - name: Домашняя страница Jenkins
+      href: 'https://jenkins.io/'
+    - name: "Домашняя страница Jenkins\_X"
+      href: 'https://jenkins-x.io'
+    - name: Архитектура Jenkins
+      href: /azure/architecture/reference-architectures/jenkins/
+      maintainContext: true

@@ -1,0 +1,109 @@
+### YamlMime:Landing
+title: Документация по использованию Jenkins в Azure
+summary: Узнайте, как использовать Jenkins для автоматизации непрерывной интеграции и непрерывной поставки в Azure.
+metadata:
+  title: Документация по использованию Jenkins в Azure
+  description: Узнайте, как использовать Jenkins для автоматизации непрерывной интеграции и непрерывной поставки в Azure.
+  services: azure
+  ms.service: jenkins
+  ms.topic: landing-page
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.date: 02/24/2020
+  ms.openlocfilehash: 82e0f99795f46347970b3a73d9c0b78787d05cd6
+  ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/27/2020
+  ms.locfileid: "82172350"
+landingContent:
+- title: Jenkins в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Jenkins в Azure
+      url: overview.md
+  - linkListType: reference
+    links:
+    - text: Подключаемые модули Jenkins для Azure
+      url: plug-ins-for-azure.md
+  - linkListType: architecture
+    links:
+    - text: Архитектура Jenkins
+      url: /azure/architecture/reference-architectures/jenkins/
+- title: Установка и настройка Jenkins
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание сервера Jenkins
+      url: configure-on-linux-vm.md
+  - linkListType: download
+    links:
+    - text: Примеры заданий и скриптов
+      url: https://github.com/azure/jenkins
+- title: Масштабирование с помощью Jenkins в Azure
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Масштабирование с помощью службы "Экземпляры контейнеров Azure"
+      url: azure-container-instances-as-jenkins-build-agent.md
+    - text: Масштабирование с помощью агентов виртуальных машин Azure
+      url: scale-deployments-using-vm-agents.md
+- title: Использование CI/CD в Функциях Azure
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание в Функции Azure
+      url: deploy-to-azure-functions.md
+- title: Использование CI/CD в AKS
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание из GitHub в AKS
+      url: deploy-from-github-to-aks.md
+    - text: Развертывание в AKS с использованием шаблона Blue-Green
+      url: deploy-to-aks-using-blue-green-deployment-pattern.md
+    - text: Развертывание с помощью подключаемого модуля Azure Dev Spaces
+      url: azure-dev-spaces-and-aks.md
+- title: Непрерывная интеграция и поставка в службу приложений
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Создание ресурсов Azure в задании конвейера
+      url: deploy-to-azure-app-service-using-azure-cli.md
+    - text: Развертывание из GitHub в Службу приложений
+      url: deploy-from-github-to-azure-app-service.md
+  - linkListType: how-to-guide
+    links:
+    - text: Развертывание с помощью подключаемого модуля Службы приложений
+      url: deploy-to-azure-app-service-using-plugin.md
+- title: Использование CI/CD в Azure DevOps
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание на виртуальной машине Linux с помощью Azure DevOps Services
+      url: deploy-to-linux-vm-using-azure-devops-services.md
+- title: Использование CI/CD в службе хранилища Azure
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Использование службы хранилища Azure с решением непрерывной интеграции Jenkins
+      url: azure-storage-blobs-as-build-artifact-repository.md
+- title: CI/CD в виртуальные машины Linux
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Создание инфраструктуры разработки на виртуальной машине Linux
+      url: pipeline-with-github-and-docker.md
+- title: CI/CD в Service Fabric
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Создание и развертывание приложений Service Fabric
+      url: deploy-to-service-fabric-cluster.md
+- title: Использование CI/CD в Azure Spring Cloud
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание в Azure Spring Cloud с помощью Azure CLI
+      url: deploy-to-azure-spring-cloud-using-azure-cli.md
