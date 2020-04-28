@@ -3,19 +3,20 @@ title: Руководство по настройке сети Kubenet в Слу
 description: Узнайте, как с помощью Ansible настроить сеть Kubenet в кластере Службы Azure Kubernetes (AKS).
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes
 ms.topic: tutorial
+ms.custom: fasttrack-edit
 ms.date: 10/23/2019
-ms.openlocfilehash: 1f15710de9ab6f2d058b72096f0265541c131d9f
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 7d1dc7b381c02c84b2da89c5c90d822e86a3cd1b
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741692"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82026127"
 ---
 # <a name="tutorial-configure-kubenet-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по Настройка сети Kubenet в Службе Azure Kubernetes (AKS) с помощью Ansible
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 С помощью AKS можно развернуть кластер, использующий одну из следующих моделей сети.
 
@@ -24,7 +25,7 @@ ms.locfileid: "80741692"
 
 Дополнительные сведения о сети см. в статье [Основные понятия сети в Службе Azure Kubernetes (AKS)](/azure/aks/concepts-network).
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -33,9 +34,9 @@ ms.locfileid: "80741692"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-virtual-network-and-subnet"></a>Создание виртуальной сети и подсети
 
@@ -106,9 +107,9 @@ ms.locfileid: "80741692"
 - Чтобы определить поддерживаемую версию, используйте модуль `azure_rm_aks_version`.
 - Подсеть `vnet_subnet_id` была создана в предыдущем разделе.
 - `network_profile` — определяет свойства подключаемого модуля сети Kubenet.
-- `service_cidr` используется для назначения IP-адреса внутренним службам в кластере AKS. Этот диапазон IP-адресов не должен использоваться где-либо еще в сети. 
+- `service_cidr` используется для назначения IP-адреса внутренним службам в кластере AKS. Этот диапазон IP-адресов не должен использоваться вне кластеров AKS. Но можно повторно использовать IP-адрес CIDR службы для нескольких кластеров AKS. 
 - Адрес `dns_service_ip` должен быть адресом ".10" диапазона IP-адресов вашей службы.
-- Диапазон `pod_cidr` должен быть большим адресным пространством, которое не используется где-либо еще в сетевой среде. Диапазон адресов должен быть достаточно большим, чтобы вместить количество узлов, до которых вы планируете масштабировать среду. После развертывания кластера этот диапазон адресов нельзя изменить.
+- Диапазон `pod_cidr` должен быть большим адресным пространством, которое не используется где-либо еще в сетевой среде. Диапазон адресов должен быть достаточно большим, чтобы вместить количество узлов, до которых вы планируете масштабировать среду. После развертывания кластера этот диапазон адресов нельзя изменить. Как и в случае с CIDR службы, этот диапазон IP-адресов не должен существовать вне кластера AKS. Но его можно безопасно повторно использовать в кластерах.
 - Диапазон IP-адресов объектов pod используется для назначения адресного пространства /24 каждому узлу в кластере. В приведенном ниже примере `pod_cidr` для 192.168.0.0/16 назначает первому узлу 192.168.0.0/24, второму узлу — 192.168.1.0/24 и третьему узлу —192.168.2.0/24.
 - При масштабировании или обновлении кластера Azure продолжает назначать диапазон IP-адресов объектов pod каждому новому узлу.
 - Сборник схем выполняет загрузку `ssh_key` из `~/.ssh/id_rsa.pub`. При его изменении следует использовать однострочный формат, который начинается с "ssh-rsa" (без кавычек).

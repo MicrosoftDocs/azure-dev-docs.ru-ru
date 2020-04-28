@@ -7,12 +7,12 @@ metadata:
   description: Начните разрабатывать приложения для облачной среды, используя эти руководства и средства для разработчиков Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: c037f46cd3cc03c366ef9a904c4a9178eebc5a0a
-  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.openlocfilehash: d828acd15a58db94370c3f807bd51d8712ef1e2c
+  ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81675230"
+  ms.lasthandoff: 04/22/2020
+  ms.locfileid: "82026187"
 conceptualContent:
   items:
   - title: Краткие руководства по Azure для Java
@@ -20,7 +20,7 @@ conceptualContent:
     - text: Развертывание веб-приложения Java SE в Linux
       itemType: quickstart
       url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
-    - text: Создание и публикация бессерверной функции
+    - text: Создание бессерверной функции
       itemType: quickstart
       url: /azure/azure-functions/functions-create-first-java-maven
     - text: Управление большими двоичными объектами хранилища
@@ -82,6 +82,9 @@ conceptualContent:
     - text: Развертывание приложений Spring с помощью MySQL
       itemType: tutorial
       url: /azure/developer/java/spring-framework/spring-app-service-e2e
+    footerLink:
+      text: См. документацию по Службе приложений
+      url: /azure/app-service/containers/
   - title: Azure Spring Cloud
     links:
     - text: Что представляет собой Azure Spring Cloud?
@@ -121,6 +124,9 @@ conceptualContent:
     - text: Руководство разработчика
       itemType: reference
       url: /azure/azure-functions/functions-reference-java
+    footerLink:
+      text: См. документацию по Функциям Azure
+      url: /azure/azure-functions
   - title: Мониторинг приложений Java
     links:
     - text: Начало работы с Application Insights
@@ -132,17 +138,23 @@ conceptualContent:
     - text: Мониторинг приложений Spring
       itemType: how-to-guide
       url: /azure/spring-cloud/diagnostic-services
+    footerLink:
+      text: См. документацию по Azure Monitor
+      url: /azure/azure-monitor
   - title: Защита приложений Java
     links:
-    - text: Включение аутентификации и авторизации пользователя
+    - text: Включение аутентификации пользователей
       itemType: quickstart
       url: /azure/active-directory/develop/quickstart-v2-java-webapp
-    - text: Использование библиотеки проверки подлинности Майкрософт
+    - text: Библиотека проверки подлинности Майкрософт
       itemType: how-to-guide
       url: /azure/active-directory/develop/migrate-adal-msal-java
     - text: Управление секретами приложения
       itemType: quickstart
       url: /azure/key-vault/quick-create-java
+    footerLink:
+      text: См. документацию по Active Directory
+      url: /azure/active-directory
 tools:
   title: Инструменты
   items:
