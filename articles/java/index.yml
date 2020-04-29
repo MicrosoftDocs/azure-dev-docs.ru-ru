@@ -7,12 +7,12 @@ metadata:
   description: Начните разрабатывать приложения для облачной среды, используя эти руководства и средства для разработчиков Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: d828acd15a58db94370c3f807bd51d8712ef1e2c
-  ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+  ms.openlocfilehash: 6180da0bc3f35fa43fcab5fa20862763324202eb
+  ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/22/2020
-  ms.locfileid: "82026187"
+  ms.lasthandoff: 04/28/2020
+  ms.locfileid: "82209687"
 conceptualContent:
   items:
   - title: Краткие руководства по Azure для Java
@@ -134,7 +134,7 @@ conceptualContent:
       url: /azure/azure-monitor/app/java-in-process-agent
     - text: Начало работы с ELK
       itemType: tutorial
-      url: /azure/developer/java/java-get-started-with-logzio
+      url: /azure/developer/java/fundamentals/java-get-started-with-logzio
     - text: Мониторинг приложений Spring
       itemType: how-to-guide
       url: /azure/spring-cloud/diagnostic-services
@@ -178,4 +178,4 @@ tools:
     url: /java/api/overview/azure/maven/README
   - title: Jenkins в Azure
     imageSrc: https://docs.microsoft.com/media/logos/logo_jenkins.svg
-    url: /jenkins
+    url: /azure/jenkins
