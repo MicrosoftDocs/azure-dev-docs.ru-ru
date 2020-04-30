@@ -1,0 +1,83 @@
+- name: Документация по Terraform в Azure
+  href: index.yml
+- name: Обзор
+  items:
+    - name: Сведения о Terraform в Azure
+      href: overview.md
+- name: Краткие руководства
+  expanded: true
+  items:
+    - name: Установка и настройка Terraform
+      href: install-configure.md
+    - name: Создание виртуальной машины Linux
+      href: create-linux-virtual-machine-with-infrastructure.md
+- name: Учебники
+  items:
+    - name: Установка и настройка
+      items:
+        - name: Хранение состояния Terraform в службе хранилища Azure
+          href: store-state-in-azure-storage.md
+    - name: Служба приложений
+      items:
+        - name: Слоты развертывания поставщика Azure и Terraform
+          href: provision-infrastructure-using-azure-deployment-slots.md
+    - name: Контейнеры
+      items:
+        - name: Создание кластера Kubernetes с помощью AKS
+          href: create-k8s-cluster-with-tf-and-aks.md
+        - name: Создание контроллера входящего трафика Шлюза приложений в AKS
+          href: create-k8s-cluster-with-aks-applicationgateway-ingress.md
+    - name: База данных
+      items:
+        - name: Развертывание экземпляра Azure Cosmos DB
+          href: deploy-azure-cosmos-db-to-azure-container-instances.md
+    - name: Инфраструктура
+      items:
+        - name: Создание кластера виртуальных машин с помощью модулей Terraform
+          href: create-vm-cluster-module.md
+        - name: Создание кластера виртуальных машин с помощью Terraform и HCL
+          href: create-vm-cluster-with-infrastructure.md
+        - name: Подготовка масштабируемого набора виртуальных машин с инфраструктурой
+          href: create-vm-scaleset-network-disks-hcl.md
+        - name: Подготовка масштабируемого набора виртуальных машин из пользовательского образа Packer
+          href: create-vm-scaleset-network-disks-using-packer-hcl.md
+    - name: Сети
+      items:
+        - name: Звездообразная топология
+          items:
+            - name: 1. Создание звездообразной топологии
+              href: hub-spoke-introduction.md
+            - name: 2. Создание локальной виртуальной сети
+              href: hub-spoke-on-prem.md
+            - name: 3. Создание центральной виртуальной сети
+              href: hub-spoke-hub-network.md
+            - name: 4. Создание сетевого устройства для центральной виртуальной сети
+              href: hub-spoke-hub-nva.md
+            - name: 5. Создание периферийной сети
+              href: hub-spoke-spoke-network.md
+            - name: 6. Проверка подключения в топологии сети
+              href: hub-spoke-validation.md
+    - name: Инструменты
+      items:
+        - name: Установка расширения Visual Studio Code для Terraform
+          href: configure-vs-code-extension-for-terraform.md
+        - name: Создание базового шаблона Terraform с использованием Yeoman
+          href: create-a-base-template-using-yeoman.md
+        - name: Тестирование модулей Terraform с помощью Terratest
+          href: test-modules-using-terratest.md
+- name: Примеры
+  items:
+    - name: Шаблоны конфигурации
+      href: 'https://github.com/terraform-providers/terraform-provider-azurerm/tree/master/examples'
+- name: Справочник
+  items:
+    - name: Реестр модулей Azure
+      href: 'https://registry.terraform.io/modules/Azure'
+    - name: Поставщик Terraform Azure
+      href: 'https://aka.ms/terraform'
+- name: Ресурсы
+  items:
+    - name: Azure и Terraform
+      href: 'https://azure.microsoft.com/solutions/devops/terraform/'
+    - name: Стратегия развития Azure
+      href: 'https://azure.microsoft.com/roadmap/'

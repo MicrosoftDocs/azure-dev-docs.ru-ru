@@ -1,0 +1,86 @@
+### YamlMime:Landing
+title: Документация по Terraform в Azure
+summary: Узнайте, как использовать Terraform для надежной подготовки виртуальных машин и другой инфраструктуры в Azure к работе.
+metadata:
+  title: 'Документация по Terraform в Azure: руководства, примеры, справочные материалы и ресурсы'
+  description: Узнайте, как использовать Terraform для надежной подготовки виртуальных машин и другой инфраструктуры в Azure к работе.
+  ms.service: terraform
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.topic: landing-page
+  ms.date: 04/26/2020
+  ms.openlocfilehash: 12cf2a2ebe78b6cc41d85f483aae39fb65904a1a
+  ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 04/27/2020
+  ms.locfileid: "82172320"
+landingContent:
+- title: Сведения о Terraform в Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сведения о Terraform в Azure
+      url: overview.md
+  - linkListType: architecture
+    links:
+    - text: Поставщик Terraform Azure
+      url: https://aka.ms/terraform
+- title: Установка и настройка Terraform
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Установка и настройка Terraform
+      url: install-configure.md
+    - text: Установка расширения Visual Studio Code для Terraform
+      url: configure-vs-code-extension-for-terraform.md
+    - text: Создание базового шаблона Terraform с использованием Yeoman
+      url: create-a-base-template-using-yeoman.md
+    - text: Тестирование модулей Terraform с помощью Terratest
+      url: test-modules-using-terratest.md
+- title: Управление AKS
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Создание кластера Kubernetes с помощью AKS
+      url: create-k8s-cluster-with-tf-and-aks.md
+    - text: Создание кластера Kubernetes с использованием Шлюза приложений
+      url: create-k8s-cluster-with-aks-applicationgateway-ingress.md
+- title: Управление инфраструктурой
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Создание виртуальной машины Linux
+      url: create-linux-virtual-machine-with-infrastructure.md
+  - linkListType: tutorial
+    links:
+    - text: Создание кластера виртуальных машин с помощью модулей Terraform
+      url: create-vm-cluster-module.md
+    - text: Создание кластера виртуальных машин с помощью Terraform и HCL
+      url: create-vm-cluster-with-infrastructure.md
+    - text: Подготовка масштабируемого набора виртуальных машин с инфраструктурой
+      url: create-vm-scaleset-network-disks-hcl.md
+    - text: Подготовка масштабируемого набора виртуальных машин из пользовательского образа Packer
+      url: create-vm-scaleset-network-disks-using-packer-hcl.md
+- title: Управление сетями
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 1. Создание звездообразной топологии
+      url: hub-spoke-introduction.md
+    - text: 2. Создание локальной виртуальной сети
+      url: hub-spoke-on-prem.md
+    - text: 3. Создание центральной виртуальной сети
+      url: hub-spoke-hub-network.md
+    - text: 4. Создание сетевого устройства для центральной виртуальной сети
+      url: hub-spoke-hub-nva.md
+    - text: 5. Создание периферийной сети
+      url: hub-spoke-spoke-network.md
+    - text: 6. Проверка подключения в топологии сети
+      url: hub-spoke-validation.md
+- title: Управление базами данных
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Развертывание экземпляра Azure Cosmos DB
+      url: deploy-azure-cosmos-db-to-azure-container-instances.md
