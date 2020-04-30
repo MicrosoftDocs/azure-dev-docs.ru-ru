@@ -8,12 +8,12 @@ ms.date: 06/11/2018
 ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: ff5f9f5a5add52bc05009a42aeb00855eb2703fa
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: fd37b633100d92a4126910a3fb9e8ad25b11423c
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030846"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209787"
 ---
 # <a name="azure-cli-configuration"></a>Настройка Azure CLI
 
@@ -86,7 +86,7 @@ log_dir=/var/log/azure
 |---------|-----------|------|------------|
 | __core__ | output | строка | Формат вывода по умолчанию. Может иметь значение `json`, `jsonc`, `tsv` или `table`. |
 | | disable\_confirm\_prompt | Логическое | Включает и отключает запросы на подтверждение. |
-| | collect\_telemetry | Логическое | Разрешает корпорации Майкрософт собирать анонимные данные об использовании CLI. Сведения о конфиденциальности см. в описании [условий использования Azure CLI](https://aka.ms/AzureCliLegal). |
+| | collect\_telemetry | Логическое | Разрешает корпорации Майкрософт собирать анонимные данные об использовании CLI. Сведения о конфиденциальности см. в описании [условий использования Azure CLI](https://github.com/Azure/azure-cli/blob/dev/LICENSE). |
 | __logging__ | enable\_log\_file | Логическое | Включение и отключение ведения журнала. |
 | | log\_dir | строка | Каталог для записи журналов. По умолчанию это значение равно `${AZURE_CONFIG_DIR}/logs`. |
 | __storage__ | connection\_string | строка | Строка подключения по умолчанию для команд `az storage`. |

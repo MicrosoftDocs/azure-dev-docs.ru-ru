@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 227a997c8b1268444f6165e800279410d0085953
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 131cc95ce3b927ffc26ea7b08367b65dd434c0e4
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81675100"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209767"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Управление учетными записями хранения с помощью Azure Explorer для Eclipse
 
@@ -25,7 +25,7 @@ Azure Explorer, входящий в состав набора средств Azu
 
 Чтобы создать учетную запись хранения с помощью Azure Explorer, сделайте следующее:
 
-1. Войдите в свою учетную запись Azure, следуя [инструкциям по входу для набора средств Azure для Eclipse](/azure/developer/java/eclipse/sign-in-instructions).
+1. Войдите в свою учетную запись Azure, следуя [инструкциям по входу для набора средств Azure для Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
 
 1. В представлении **Azure Explorer** разверните узел **Azure**, щелкните правой кнопкой мыши элемент **Учетные записи хранения** и выберите **Создать учетную запись хранения**.
 
@@ -106,7 +106,7 @@ Azure Explorer, входящий в состав набора средств Azu
 
 <!-- URL List -->
 
-[Введение в службу хранилища Microsoft Azure]: /azure/storage/storage-introduction
+[Введение в службу хранилища Microsoft Azure]: /azure/storage/common/storage-introduction
 [Об учетных записях хранения Azure]: /azure/storage/storage-create-storage-account
 [Репликация службы хранилища Azure]: /azure/storage/storage-redundancy
 [Целевые показатели масштабируемости и производительности службы хранилища Azure]: /azure/storage/storage-scalability-targets
