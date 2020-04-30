@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9c645a44584eb4a214a3e41a158581d1d2c4ea32
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: a048cded2659c1cee15b2e26a5f3c80df79e895c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674100"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105005"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Создание виртуальных сетей Azure и управление ими с помощью приложений Java
 
@@ -19,7 +19,7 @@ ms.locfileid: "81674100"
 
 ## <a name="run-the-sample"></a>Запуск примера
 
-Создайте [файл проверки подлинности](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
+Создайте [файл проверки подлинности](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
 
 ```
 git clone https://github.com/Azure-Samples/network-java-manage-virtual-network.git

@@ -3,12 +3,12 @@ title: Развертывание статического веб-сайта Nod
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 4795d3a80be1ffa7516f64fa5563d4960f58a31b
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: c63ff76f3572a7815b385b08b05e223eb681fbbe
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82026167"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138770"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Развертывание статического веб-сайта в Azure из Visual Studio Code
 
@@ -30,7 +30,7 @@ ms.locfileid: "82026167"
 - [Расширение службы хранилища Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage).
 - [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов для Node.js). Этот пункт используется только для создания примера проекта. Если код приложения уже готов, Node.js устанавливать не обязательно.
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azurestorage">Установка расширения службы хранилища Azure </a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage">Установка расширения службы хранилища Azure </a>
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 

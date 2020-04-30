@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 1a223c858874566c2fbfe7b02faec99179cd1e72
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 762ac74b73a274e792ed19ac8ca7c2b68d98e778
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670530"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105075"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
 
@@ -107,7 +107,7 @@ Azure Explorer, входящий в состав набора средств Azu
 <!-- URL List -->
 
 [Инструкции по входу для набора средств Azure для IntelliJ]: ./sign-in-instructions.md
-[Введение в службу хранилища Microsoft Azure]: /azure/storage/storage-introduction
+[Введение в службу хранилища Microsoft Azure]: /azure/storage/common/storage-introduction
 [Об учетных записях хранения Azure]: /azure/storage/storage-create-storage-account
 [Репликация службы хранилища Azure]: /azure/storage/storage-redundancy
 [Целевые показатели масштабируемости и производительности службы хранилища Azure]: /azure/storage/storage-scalability-targets

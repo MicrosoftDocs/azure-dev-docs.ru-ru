@@ -3,12 +3,12 @@ title: Пакет Azure SDK для примеров Go для вычислени
 description: Выбранные примеры для работы с такими вычислительными ресурсами, как виртуальные машины и виртуальные сети, с помощью пакета Azure SDK для Go.
 ms.date: 09/05/2018
 ms.topic: sample
-ms.openlocfilehash: 9cb8af3ea5ceb24147006d8b57d7231c2c7e9ad9
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.openlocfilehash: b53faed0735050e7a23de8aab17f2ee8beaf105c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80319661"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105055"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>Пакет Azure SDK для примеров Go для вычислений и сетевого взаимодействия
 
@@ -18,7 +18,7 @@ ms.locfileid: "80319661"
 
 | Имя | Описание |
 |------|-------------|
-| [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network.go) | Создание, обновление и удаление сетевых ресурсов, включая виртуальные сети, подсети и группы безопасности сети, а также выполнение запросов к ним. |
+| [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network_test.go) | Создание, обновление и удаление сетевых ресурсов, включая виртуальные сети, подсети и группы безопасности сети, а также выполнение запросов к ним. |
 | [compute/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | Создание, присоединение, отсоединение, обновление и шифрование дисков данных для виртуальной машины. |
 | [compute/vm](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm.go) | Создание, удаление, деактивация и администрирование виртуальных машин. |
 | [compute/vm_with_availabilityset](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_with_availabilityset.go) | Создание групп доступности и подсистем балансировки нагрузки для виртуальных машин. |

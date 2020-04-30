@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: dde59a631f225fb5fbaecf30d91503428ebb8064
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 71bc7e2e7677ce3f53c70bd68e5e73765070bd06
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671910"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104865"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -258,7 +258,7 @@ ms.locfileid: "81671910"
    mvn spring-boot:run
    ```
 
-3. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу <http://localhost:8080/>, после чего вы будете перенаправлены на страницу входа.
+3. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу `http://localhost:8080/`, после чего вы будете перенаправлены на страницу входа.
 
    ![Страница входа](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo1-n.png)
 

@@ -3,12 +3,12 @@ title: Развертывание приложений Node.js в Службе �
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 10170b412190b01663529075f683ac5db27215e1
-ms.sourcegitcommit: a87e7a56a5aba9e13171e663ecb948266084c46a
+ms.openlocfilehash: 07f53cb5ca9c72219b6eec89e9dfe47823143dac
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80122967"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138799"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Развертывание в Службе приложений Azure с помощью Visual Studio Code
 
@@ -24,10 +24,10 @@ ms.locfileid: "80122967"
 
 - Учетная запись Azure с активной подпиской. [Создайте бесплатно](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-extension&mktingSource=vscode-tutorial-appservice-extension).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- [Расширение Службы приложений Azure](vscode:extension/ms-azuretools.vscode-azureappservice) для VS Code (установленное в VS Code).
+- [Расширение Службы приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) для VS Code (установленное в VS Code).
 - [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Установка расширения Службы приложений Azure</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice">Установка расширения Службы приложений Azure</a>
 
 ## <a name="sign-in-to-azure"></a>Вход в Azure
 

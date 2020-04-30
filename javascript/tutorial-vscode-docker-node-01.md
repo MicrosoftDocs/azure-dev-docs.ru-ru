@@ -3,12 +3,12 @@ title: Развертывание контейнеров Docker в Службе 
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 1a14010d362ed3858d319a141fd24e5ea1b0e714
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740566"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138798"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
 
@@ -24,14 +24,14 @@ ms.locfileid: "80740566"
 
 - [Подписка Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- [Расширение Docker](vscode:extension/ms-azuretools.vscode-docker).
-- [Расширение Службы приложений Azure](vscode:extension/ms-azuretools.vscode-azureappservice).
+- [Расширение Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
+- [Расширение Службы приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 - [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 - [Docker](https://www.docker.com/community-edition).
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-docker">Установка расширения Docker</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Установка расширения Docker</a>
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Установка расширения Службы приложений Azure</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice">Установка расширения Службы приложений Azure</a>
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 

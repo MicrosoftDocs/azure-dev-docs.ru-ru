@@ -9,12 +9,12 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 4002ca79f2473026582bedea8f2b9a84cf3b15c4
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 85da0b92bbc5780e923fc447c66e5a0d2518e737
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668300"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104825"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 
@@ -168,7 +168,7 @@ ms.locfileid: "81668300"
    mvn spring-boot:run
    ```
 
-1. Протестируйте веб-приложение. Для этого перейдите в веб-браузере по адресу http://localhost:8080/sample/hello или используйте следующий синтаксис в **cURL**:
+1. Протестируйте веб-приложение. Для этого перейдите в веб-браузере по адресу `http://localhost:8080/sample/hello` или используйте следующий синтаксис в **cURL**:
 
    ```shell
    curl http://localhost:8080/sample/hello

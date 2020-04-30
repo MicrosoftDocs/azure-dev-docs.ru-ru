@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 1a165468f024b375f9bf60f77c7f1ca8e7ea5b31
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: c03e458f9a91d13a3ed1c375e0b6cb0fefe15a3d
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674000"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105215"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
@@ -382,7 +382,7 @@ az group delete --name sampleSqlResourceGroup
 
 ## <a name="write-a-blob-into-a-new-storage-account"></a>Запись большого двоичного объекта в новую учетную запись хранения
 
-Замените текущий основной метод в `AzureApp.java` следующим кодом. Этот код создает [учетную запись хранения Azure](/azure/storage/storage-introduction), а затем использует библиотеки хранилища Azure для Java, чтобы создать текстовый файл в облаке.
+Замените текущий основной метод в `AzureApp.java` следующим кодом. Этот код создает [учетную запись хранения Azure](/azure/storage/common/storage-introduction), а затем использует библиотеки хранилища Azure для Java, чтобы создать текстовый файл в облаке.
 
 ```java
 public static void main(String[] args) {

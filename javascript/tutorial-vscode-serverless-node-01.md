@@ -3,12 +3,12 @@ title: Развертывание Функций Azure в Node.js с помощ�
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 915ab0cb07fe6f4cf74d812c022d5e0e9d266177
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.openlocfilehash: 23eff2eb672b7221ed74fc8085515647392d8525
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80439156"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138780"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Развертывание Функций Azure с помощью Visual Studio
 
@@ -24,10 +24,10 @@ ms.locfileid: "80439156"
 
 - [Подписка Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).
-- [Расширение "Функции Azure"](vscode:extension/ms-azuretools.vscode-azurefunctions).
+- [Расширение "Функции Azure"](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions).
 - [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azurefunctions">Установка расширения "Функции Azure"</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions">Установка расширения "Функции Azure"</a>
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 
