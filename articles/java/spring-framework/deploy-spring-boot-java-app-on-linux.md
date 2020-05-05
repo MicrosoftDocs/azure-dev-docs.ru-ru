@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5e6204d773ee8e140832361ad587e850e36b75f6
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 570b33614f32ef80e11ddf9d2c6774513248416e
+ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668820"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166684"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Развертывание приложения Spring Boot в службе приложений Azure на платформе Linux
 
@@ -97,15 +97,11 @@ ms.locfileid: "81668820"
 
    ![Создание нового реестра контейнеров Azure][AR01]
 
-1. Когда откроется страница **Создать реестр контейнеров**, укажите **имя реестра**, **подписку**, **группу ресурсов** и **расположение**. Выберите **Включить** в области **Пользователь-администратор**. Затем нажмите кнопку **Создать**.
+1. Когда откроется страница **Создать реестр контейнеров**, укажите **имя реестра**, **подписку**, **группу ресурсов** и **расположение**. Затем нажмите кнопку **Создать**.
 
    ![Настройка параметров реестра контейнеров Azure][AR03]
 
-1. После создания реестра контейнеров перейдите в реестр контейнеров на портале Azure и щелкните **Ключи доступа**. Запишите имя пользователя и пароль для последующих шагов.
-
-   ![Ключи доступа к реестру контейнеров Azure][AR04]
-
-## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Настройка Maven для использования ключей доступа к реестру контейнеров Azure
+## <a name="configure-maven-to-build-image-to-your-azure-container-registry"></a>Настройка Maven для создания образа в Реестре контейнеров Azure
 
 1. Перейдите в каталог завершенного проекта для приложения Spring Boot (например "*C:\SpringBoot\gs-spring-boot-docker\complete*" или " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") и откройте файл *pom.xml* в текстовом редакторе.
 
@@ -113,37 +109,29 @@ ms.locfileid: "81668820"
 
    ```xml
    <properties>
-      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
-      <username>wingtiptoysregistry</username>
-      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. Добавьте [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) в коллекцию `<plugins>` в файле *pom.xml*.  В этом примере используется версия 1.8.0.
+1. Добавьте [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) в коллекцию `<plugins>` в файле *pom.xml*.  В этом примере используется версия 2.2.0.
 
    Укажите базовый образ в `<from>/<image>` (здесь это `mcr.microsoft.com/java/jre:8-zulu-alpine`). Укажите имя окончательного образа, который будет создан на основе базового в `<to>/<image>`.  
 
    `{docker.image.prefix}` проверки подлинности — это значение **сервера входа** на странице реестра, показанной выше. `{project.artifactId}` — это имя и номер версии JAR-файла из первой сборки проекта Maven.
 
-   Укажите имя пользователя и пароль в области реестра в узле `<to>/<auth>`. Пример:
-
    ```xml
    <plugin>
      <artifactId>jib-maven-plugin</artifactId>
      <groupId>com.google.cloud.tools</groupId>
-     <version>1.8.0</version>
+     <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
             <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
-            <auth>
-               <username>${username}</username>
-               <password>${password}</password>
-            </auth>
         </to>
      </configuration>
    </plugin>
@@ -152,12 +140,12 @@ ms.locfileid: "81668820"
 1. Перейдите в каталог завершенного проекта для приложения Spring Boot и выполните команду ниже для перестроения приложения и отправки контейнера в реестр контейнеров Azure:
 
    ```bash
-   mvn compile jib:build
+   az acr login -n wingtiptoysregistry && mvn compile jib:build
    ```
 
 > [!NOTE]
->
-> При отправке образа в Реестр контейнеров Azure с помощью Jib образ не будет использовать *Dockerfile* (дополнительные сведения см. в [этом](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) документе).
+> 1. Команда `az acr login ...` выполнит попытку входа в Реестр контейнеров Azure. В противном случае потребуется указать `<username>` и `<password>` для jib-maven-plugin. Дополнительные сведения см. в разделе о [методах проверки подлинности](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#authentication-methods) в репозитории Jib.
+> 2. При отправке образа в Реестр контейнеров Azure с помощью Jib образ не будет использовать *Dockerfile* (дополнительные сведения см. в [этом](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) документе).
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>Создание веб-приложения в Linux в службе приложений Azure с помощью образа контейнера
@@ -300,7 +288,6 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [SB02]: media/deploy-spring-boot-java-app-on-linux/SB02.png
 [AR01]: media/deploy-spring-boot-java-app-on-linux/AR01.png
 [AR03]: media/deploy-spring-boot-java-app-on-linux/AR03.png
-[AR04]: media/deploy-spring-boot-java-app-on-linux/AR04.png
 [LX01]: media/deploy-spring-boot-java-app-on-linux/LX01.png
 [LX02]: media/deploy-spring-boot-java-app-on-linux/LX02.png
 [LX02-A]: media/deploy-spring-boot-java-app-on-linux/LX02-A.png

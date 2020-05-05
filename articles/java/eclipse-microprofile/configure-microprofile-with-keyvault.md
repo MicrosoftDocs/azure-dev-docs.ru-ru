@@ -10,12 +10,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c147bcafec87342b799f884ddc59c7c902a80a2e
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: e68df202d49b7215eb4bdbff7a42e0900499484c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670270"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105185"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Настройка MicroProfile для использования с Azure Key Vault
 
@@ -125,7 +125,7 @@ az keyvault secret set --name demo-key      \
 
 1. Попробуйте запустить сервер при помощи команды `mvn clean package payara-micro:start`.
 
-1. Попытайтесь открыть адрес [http://localhost:8080/keyvault-configsource/api/config](http://localhost:8080/keyvault-configsource/api/config) в своем веб-браузере. Должен отобразиться простой ответ, содержащий значения, полученные из Azure Key Vault.
+1. Попытайтесь открыть страницу `http://localhost:8080/keyvault-configsource/api/config` в своем веб-браузере. Должен отобразиться простой ответ, содержащий значения, полученные из Azure Key Vault.
 
 ## <a name="summary"></a>Сводка
 

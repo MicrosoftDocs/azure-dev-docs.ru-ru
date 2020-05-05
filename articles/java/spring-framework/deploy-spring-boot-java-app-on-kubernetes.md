@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: f88ad0bf2103db2bb63a4e230ea730493f4865c7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 783197c2a98ef76d1a30126144cb44ebdf474fdc
+ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668790"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166696"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot Application в Службе Azure Kubernetes
 
@@ -118,7 +118,7 @@ ms.locfileid: "81668790"
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -143,7 +143,7 @@ ms.locfileid: "81668790"
 1. Перейдите в каталог завершенного проекта для приложения Spring Boot и выполните указанную ниже команду для создания образа и его отправки в реестр:
 
    ```cmd
-   mvn compile jib:build
+   az acr login && mvn compile jib:build
    ```
 
 > [!NOTE]
@@ -153,38 +153,13 @@ ms.locfileid: "81668790"
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Создание в Службе контейнеров Azure кластера Kubernetes с помощью Azure CLI
 
-1. Создайте кластер Kubernetes в Службе Azure Kubernetes. Следующая команда отвечает за создание кластера *kubernetes* в группе ресурсов *wingtiptoys-kubernetes* с именем кластера *wingtiptoys-akscluster* и префиксом DNS *wingtiptoys-kubernetes*:
+1. Создайте кластер Kubernetes в Службе Azure Kubernetes. Следующая команда отвечает за создание кластера *kubernetes* в группе ресурсов *wingtiptoys-kubernetes* с именем кластера *wingtiptoys-akscluster*, присоединенным реестром службы "Реестр контейнеров Azure" (ACR) `wingtiptoysregistry` и префиксом DNS *wingtiptoys-kubernetes*:
    ```azurecli
    az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \ 
+    --attach-acr wingtiptoysregistry \
     --dns-name-prefix=wingtiptoys-kubernetes --generate-ssh-keys
    ```
    Выполнение этой команды может занять некоторое время.
-
-1. При использовании Реестра контейнеров Azure (ACR) со Службой Azure Kubernetes (AKS) необходимо предоставить Службе Azure Kubernetes доступ для извлечения данных из Реестра контейнеров Azure. Когда вы создаете Службу Kubernetes, в Azure создается субъект-служба по умолчанию. Выполните приведенные ниже скрипты в Bash или PowerShell, чтобы предоставить AKS доступ к ACR. Дополнительные сведения см. в статье об [Аутентификация с помощью реестра контейнеров Azure из Службы Azure Kubernetes].
-
-```bash
-   # Get the id of the service principal configured for AKS
-   CLIENT_ID=$(az.cmd aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv)
-   
-   # Get the ACR registry resource id
-   ACR_ID=$(az.cmd acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv)
-   
-   # Create role assignment
-   az.cmd role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
-
-  -- или --
-
-```PowerShell
-   # Get the id of the service principal configured for AKS
-   $CLIENT_ID = az aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv
-   
-   # Get the ACR registry resource id
-   $ACR_ID = az acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv
-   
-   # Create role assignment
-   az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
 
 1. Установите `kubectl` с использованием Azure CLI. Пользователи Linux могут добавить к этой команде префикс `sudo`, так как она развертывает интерфейс командной строки Kubernetes в `/usr/local/bin`.
    ```azurecli
@@ -246,6 +221,18 @@ ms.locfileid: "81668790"
    ```
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
+   
+
+> [!IMPORTANT]
+> Если кластер AKS использует RBAC, необходимо создать *ClusterRoleBinding*(связи кластерных ролей) прежде чем правильно подключиться к панели мониторинга. По умолчанию панель мониторинга Kubernetes развертывается с минимальными правами доступа на чтение и отображает сообщения об ошибках доступа RBAC. Сейчас панель мониторинга Kubernetes не поддерживает пользовательские учетные данные для определения уровня доступа. Вместо этого она использует роли, предоставленные учетной записи службы. Администратор кластера может предоставить дополнительный доступ к учетной записи службы *kubernetes-dashboard*, однако это может послужить вектором для эскалации привилегий. Вы также можете интегрировать аутентификацию Azure Active Directory, чтобы предоставить более детальный уровень доступа.
+> 
+> Чтобы создать связь, используйте команду [kubectl create clusterrolebinding]. В приведенном ниже примере показано, как создать пример привязки. Но этот пример привязки не предусматривает использование дополнительных компонентов проверки подлинности и может привести к небезопасному использованию. Панель мониторинга Kubernetes доступна для любого пользователя, имеющего доступ к URL-адресу. Не предоставляйте публичный доступ к панели мониторинга Kubernetes.
+>
+> ```console
+> kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+> ```
+> 
+> Дополнительные сведения об использовании разных методов проверки подлинности см. в вики-статье о панели мониторинга Kubernetes: [dashboard-authentication].
 
 1. Когда в браузере откроется веб-сайт для настройки Kubernetes, щелкните ссылку, чтобы **развернуть контейнерное приложение**:
 
@@ -320,7 +307,8 @@ ms.locfileid: "81668790"
 Дополнительные сведения об итеративном выполнении и отладке контейнеров непосредственно в Службе Azure Kubernetes (AKS) с помощью Azure Dev Spaces см. в разделе [Начало работы в Azure Dev Spaces с использованием Java].
 
 <!-- URL List -->
-
+[kubectl-create-clusterrolebinding]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-clusterrolebinding-em-
+[dashboard-authentication]: https://github.com/kubernetes/dashboard/wiki/Access-control
 [Интерфейс командной строки Azure (CLI)]: /cli/azure/overview
 [Служба Azure Kubernetes (AKS)]: https://azure.microsoft.com/services/kubernetes-service/
 [Azure для разработчиков Java]: /azure/developer/java/
@@ -346,7 +334,7 @@ ms.locfileid: "81668790"
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Аутентификация с помощью реестра контейнеров Azure из Службы Azure Kubernetes]: /azure/container-registry/container-registry-auth-aks/
+[Authenticate with Azure Container Registry from Azure Kubernetes Service]: /azure/container-registry/container-registry-auth-aks/
 [Руководства по Java для Visual Studio Code]: https://code.visualstudio.com/docs/java/java-kubernetes/
 [Начало работы в Azure Dev Spaces с использованием Java]: /azure/dev-spaces/get-started-java
 <!-- IMG List -->

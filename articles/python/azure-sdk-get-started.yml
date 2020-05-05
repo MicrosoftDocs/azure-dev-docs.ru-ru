@@ -10,12 +10,12 @@ metadata:
   displayType: two-column
   interactive: azurecli
   ms.date: 10/18/2019
-  ms.openlocfilehash: e407f48295d2ed89f8df51a6fed46b1eecbab3ce
-  ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+  ms.openlocfilehash: 6f2e30a365ea27d62cc5b32b621d78ddc35bb367
+  ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 03/31/2020
-  ms.locfileid: "80441809"
+  ms.lasthandoff: 04/28/2020
+  ms.locfileid: "82209817"
 items:
 - durationInMinutes: 1
   content: "В этом руководстве представлены сведения об использовании различных библиотек Azure SDK для Python.  \n"
@@ -26,16 +26,16 @@ items:
 
     - [Последний интерпретатор Python 3.x](https://www.python.org/downloads/)
 
-    - [Azure CLI 2.0](/azure/install-az-cli2) для работы в локальной среде или [Azure Cloud Shell](/azure/cloud-shell/quickstart) для работы только в облаке.
+    - [Azure CLI](/cli/azure/install-azure-cli) для работы в локальной среде или [Azure Cloud Shell](/azure/cloud-shell/quickstart) для работы только в облаке.
 - title: Настройка проверки подлинности
   durationInMinutes: 5
   content: >
-    Пакет SDK позволяет создать клиент, используя активную подписку CLI. Однако, в рабочей среде используйте [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) или собственную систему учетных данных.
+    Пакет SDK позволяет создать клиент, используя активную подписку CLI. Но в рабочей среде используйте [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-python) или собственную систему учетных данных.
 
 
-    Чтобы указать активные учетные данные, используйте команду [az login](/azure/authenticate-azure-cli).
+    Чтобы указать активные учетные данные, используйте команду [az login](/cli/azure/authenticate-azure-cli).
 
-    По умолчанию используется существующий идентификатор подписки, но вы также можете указать его с помощью команды [az account](/azure/manage-azure-subscriptions-azure-cli).
+    По умолчанию используется существующий идентификатор подписки, но вы также можете указать его с помощью команды [az account](/cli/azure/manage-azure-subscriptions-azure-cli).
 
 
     ```python
@@ -240,7 +240,7 @@ items:
     ```
 
 
-    Когда программа завершит работу, проверьте виртуальную машину в подписке с помощью Azure CLI 2.0:
+    Когда программа завершит работу, проверьте виртуальную машину в подписке с помощью Azure CLI:
 
 
     ```azurecli
@@ -266,7 +266,7 @@ items:
   content: "Код в примере создает Базу данных SQL с правилом брандмауэра, разрешающим удаленный доступ, и подключается к ней с помощью драйвера Microsoft ODBC. Модуль pyodbc использует драйвер Microsoft ODBC в Linux для подключения к базам данных SQL. \n\nВыполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n azure-sample-group\n```\n\nСоздайте сервер SQL Server:\n```azurecli\naz sql server create --admin-password HusH_Sec4et --admin-user mysecretname -l eastus -n samplesqlserver123 -g azure-sample-group\n```\n\nДобавьте правило брандмауэра:\n```azurecli\naz sql server firewall-rule create --end-ip-address 167.220.0.235 --name firewall_rule_name_123.123.123.123 --resource-group azure-sample-group --server samplesqlserver123 --start-ip-address 123.123.123.123\n```\n\nСоздайте базу данных SQL:\n```azurecli\naz sql db create --name sample-db --resource-group azure-sample-group --server samplesqlserver123\n```\n\n```python\nfrom azure.mgmt.sql import SqlManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\nimport pyodbc\n\nLOCATION = 'eastus'\nGROUP_NAME = 'azure-sample-group'\nSERVER_NAME = 'samplesqlserver123'\nDATABASE_NAME = 'sample-db'\nUSER_NAME ='mysecretname'\nPASSWORD='HusH_Sec4et'\n\n# authenticate\nsql_client = get_client_from_cli_profile(SqlManagementClient)\n\n\ndef run_example():\n# Get SQL Database\nprint('Get SQL Database')\ndatabase = sql_client.databases.get(\n    GROUP_NAME,\n    SERVER_NAME,\n    DATABASE_NAME\n)\nprint(database)\nprint(\"\\n\\n\")\n\n\ndef create_and_insert():\nserver = SERVER_NAME+'.database.windows.net'\ndatabase = DATABASE_NAME\nusername = USER_NAME\npassword = PASSWORD\ndriver = '{ODBC Driver 13 for SQL Server}'\ncnxn = pyodbc.connect(\n    'DRIVER=' + driver + ';PORT=1433;SERVER=' + server + ';PORT=1443;DATABASE=' + database + ';UID=' + username + ';PWD=' + password)\ncursor = cnxn.cursor()\ntsql = \"CREATE TABLE CLOUD (name varchar(255), code int);\"\ntsqlInsert = \"INSERT INTO CLOUD (name, code) VALUES ('Azure', 1); \"\nselectValues = \"SELECT * FROM CLOUD\"\nwith cursor.execute(tsql):\n    print('Successfully created table!')\nwith cursor.execute(tsqlInsert):\n    print('Successfully inserted data into table')\ncursor.execute(selectValues)\nrow = cursor.fetchone()\nwhile row:\n    print(str(row[0]) + \" \" + str(row[1]))\n    row = cursor.fetchone()\ncnxn.commit()\n\nif __name__ == \"__main__\":\nrun_example()\ncreate_and_insert()\n```\n\nУбедившись, что код работает, удалите Базу данных SQL и ее ресурсы с помощью CLI.\n\n```azurecli\naz group delete --name azure-sample-group\n```\n"
 - title: Запись большого двоичного объекта в новую учетную запись хранения
   durationInMinutes: 5
-  content: "Выполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nСоздайте учетную запись хранения:\n```azurecli\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nЭтот код создает [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/storage-introduction), а затем использует библиотеки службы хранилища Azure для Python, чтобы создать HTML-файл в облаке. \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nЧтобы проверить, успешно ли отправлено содержимое, перейдите по выведенному URL-адресу. \n\nУдалите учетную запись хранилища с помощью CLI:\n```azurecli\naz group delete --name sampleStorageResourceGroup\n```\n"
+  content: "Выполните проверку подлинности:\n```azurecli\naz login\n```\nСоздайте группу ресурсов:\n```azurecli\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nСоздайте учетную запись хранения:\n```azurecli\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nЭтот код создает [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-introduction), а затем использует библиотеки службы хранилища Azure для Python, чтобы создать HTML-файл в облаке. \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nЧтобы проверить, успешно ли отправлено содержимое, перейдите по выведенному URL-адресу. \n\nУдалите учетную запись хранилища с помощью CLI:\n```azurecli\naz group delete --name sampleStorageResourceGroup\n```\n"
 - title: Next Steps
   content: >-
     Вы завершили вводный курс по использованию библиотек Azure для Python.

@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 62c151ba4c09b348c241658df985e1489908299f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 120f176b4cf781e99428d312d420731b83d62f02
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668550"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209847"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Использование R2DBC Spring Data с Базой данных Azure для MySQL
 
@@ -115,7 +115,7 @@ az mysql db create \
 
 Чтобы создать реактивное приложение Spring Boot, мы будем использовать [Spring Initializr](https://start.spring.io/). Приложение, которое мы создадим, использует:
 
-- Spring Boot 2.3.0 M3.
+- Spring Boot 2.3.0 M4.
 - Java 8 (но поддерживаются и более новые версиями, например Java 11).
 - Следующие зависимости: Spring Reactive Web (также называется Spring WebFlux) и Spring Data R2DBC.
 
@@ -124,7 +124,7 @@ az mysql db create \
 Создайте приложение, введя в командной строке следующую команду:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M3 -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M4 -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="add-the-reactive-mysql-driver-implementation"></a>Добавление реализации реактивного драйвера MySQL
@@ -149,13 +149,16 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d b
 ```properties
 logging.level.org.springframework.data.r2dbc=DEBUG
 
-spring.r2dbc.url=r2dbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
+spring.r2dbc.url=r2dbc:pool:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
 spring.r2dbc.username=r2dbc@$AZ_DATABASE_NAME
 spring.r2dbc.password=$AZ_MYSQL_USERNAME
 ```
 
 - Замените две переменные `$AZ_DATABASE_NAME` значением, которое вы настроили ранее.
 - Замените переменную `$AZ_MYSQL_USERNAME` значением, которое вы настроили ранее.
+
+> [!NOTE]
+> Для лучшей производительности в качестве значения свойства `spring.r2dbc.url` указан пул подключений, как описано в репозитории [r2dbc-pool](https://github.com/r2dbc/r2dbc-pool).
 
 Теперь вы можете запустить приложение с помощью предоставленной оболочки Maven:
 

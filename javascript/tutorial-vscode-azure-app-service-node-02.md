@@ -3,12 +3,12 @@ title: Создание экземпляра Службы приложений A
 description: Руководство, часть 2. Создание приложения Node.js и его запуск в локальной среде
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: b2935554fb337d5f5db1a71e016638869f9d1dc4
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 86d3801b31f1a0c5fb988940a7c9f550a991f0d2
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893643"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105195"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>Создание и запуск локального приложения Node.js
 
@@ -42,7 +42,7 @@ ms.locfileid: "78893643"
     npm start
     ```
 
-1. Протестируйте приложение, перейдя по ссылке [http://localhost:3000](http://localhost:3000) в браузере. Сайт должен выглядеть следующим образом:
+1. Протестируйте приложение, перейдя по ссылке `http://localhost:3000` в браузере. Сайт должен выглядеть следующим образом:
 
     ![Выполнение приложения Express](media/deploy-azure/express.png)
 

@@ -11,12 +11,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d24300d02df1fdd079c7ba3c5f2ef3370db3c5e8
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 6ec30d83352984181caff4984769ff62d07e4164
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670580"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105115"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Развертывание службы MicroProfile на основе Java в службе Azure "Веб-приложение для контейнеров"
 
@@ -127,7 +127,7 @@ public class API {
 
 1. Выполните команду `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`, например `docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest`, если параметр `docker.registry` равен `jogilescr.azurecr.io` и параметр `docker.name` равен `samples/docker-helloworld`.
 
-1. Попробуйте открыть адреса [http://localhost:8080/microprofile/api/helloworld](http://localhost:8080/microprofile/api/helloworld) и [http://localhost:8080/health](http://localhost:8080/health) в веб-браузере. Если вы видите ожидаемый ответ "Hello, world!" (и сведения о состоянии из конечной точки [/health](http://localhost:8080/health)), значит вы успешно развернули приложение MicroProfile на своем локальном компьютере.
+1. Попробуйте открыть страницу `http://localhost:8080/microprofile/api/helloworld` и `http://localhost:8080/health` в веб-браузере. Если вы видите ожидаемый ответ "Hello, world!" (и сведения о состоянии из конечной точки `/health`), значит вы успешно развернули приложение MicroProfile на своем локальном компьютере.
 
 ## <a name="pushing-to-the-azure-container-registry"></a>Отправка в Реестр контейнеров Azure
 

@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 4424cdb3f8ee01a10f892d38b84a42c820e95266
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: 229def19340c722949308a021c2e021615ce65ec
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82026107"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105124"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -144,13 +144,13 @@ ${TOMCAT_HOME}/bin/catalina.sh run
 ```
 ---
 
-Теперь в браузере можно перейти по адресу [http://localhost:8080](http://localhost:8080), чтобы увидеть работающее приложение и оценить его работу. Когда все будет готово, нажмите клавиши CTRL+C в командной строке Bash, чтобы завершить работу Tomcat.
+Теперь в браузере можно перейти по адресу `http://localhost:8080`, чтобы увидеть работающее приложение и оценить его работу. Когда все будет готово, нажмите клавиши CTRL+C в командной строке Bash, чтобы завершить работу Tomcat.
 
 ## <a name="deploy-to-azure-app-service"></a>Развертывание в Службе приложений Azure
 
 Теперь, когда приложение протестировано локально, его можно развернуть в Azure.
 
-Сначала настройте следующие переменные среды. Для `REGION` используйте `Central US` или другие регионы, которые можно найти [здесь](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=app-service).
+Сначала настройте следующие переменные среды. Для `REGION` используйте `West US 2` или другие регионы, которые можно найти [здесь](https://azure.microsoft.com/global-infrastructure/services/?regions=all&products=app-service).
 
 # <a name="bash"></a>[bash](#tab/bash)
 
@@ -468,7 +468,7 @@ mvn cargo:deploy
 ```
 ---
 
-Теперь приложение можно просмотреть локально, перейдя по адресу [http://localhost:8080](http://localhost:8080). Приложение будет выглядеть и работать так же, как и раньше, но теперь оно использует базу данных Azure для MySQL вместо HSQLDB. Когда все будет готово, нажмите клавиши CTRL+C в командной строке Bash, чтобы завершить работу Tomcat.
+Теперь приложение можно просмотреть локально, перейдя по адресу `http://localhost:8080`. Приложение будет выглядеть и работать так же, как и раньше, но теперь оно использует базу данных Azure для MySQL вместо HSQLDB. Когда все будет готово, нажмите клавиши CTRL+C в командной строке Bash, чтобы завершить работу Tomcat.
 
 Наконец, разверните приложение в Службе приложений.
 

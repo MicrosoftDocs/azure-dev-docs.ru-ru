@@ -2,12 +2,12 @@
 author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: 59e277b0ae4a05566e2dbcd0d7a0a4a15c22eed9
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 1c7059df89281156861a935d451aca4db6f44418
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81672990"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82109515"
 ---
 ### <a name="build-and-push-the-docker-image-to-azure-container-registry"></a>Сборка и передача образа Docker в Реестр контейнеров Azure
 
@@ -49,7 +49,7 @@ docker build -t ${MY_ACR}.azurecr.io/${MY_APP_NAME}
 docker run -it -p 8080:8080 ${MY_ACR}.azurecr.io/${MY_APP_NAME}
 ```
 
-Теперь вы можете получить доступ к приложению по адресу [http://localhost:8080](http://localhost:8080).
+Теперь вы можете получить доступ к приложению по адресу `http://localhost:8080`.
 
 Войдите в Реестр контейнеров Azure:
 
