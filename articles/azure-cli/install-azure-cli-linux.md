@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 9a98da54f397c1fd03a7cc6b581a769afe84ef88
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031076"
 ---
 # <a name="install-azure-cli-on-linux-manually"></a>Установка Azure CLI в Linux вручную
@@ -24,7 +24,7 @@ ms.locfileid: "82031076"
 > [!NOTE]
 > Настоятельно рекомендуется устанавливать CLI с помощью диспетчера пакетов. Диспетчер пакетов гарантирует, что вы получите последние обновления, и обеспечит стабильность компонентов CLI. Перед установкой вручную проверьте, есть ли пакет для вашего дистрибутива.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для использования CLI требуется следующее ПО:
 

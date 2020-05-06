@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: 6be7056a89b0ac0327ffc5ba39b77c31c23bb0fe
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743906"
 ---
 # <a name="tutorial-configure-azure-cni-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по настройке сети Azure CNI в Службе Azure Kubernetes (AKS) с помощью Ansible

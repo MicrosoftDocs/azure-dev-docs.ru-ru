@@ -5,10 +5,10 @@ keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.openlocfilehash: 488569312a665d6efb91e995490254289024a745
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170540"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Руководство по масштабированию развертываний Jenkins с помощью агентов виртуальных машин Azure

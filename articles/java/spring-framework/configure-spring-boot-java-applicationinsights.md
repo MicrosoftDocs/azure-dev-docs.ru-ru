@@ -10,10 +10,10 @@ ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.openlocfilehash: 85da0b92bbc5780e923fc447c66e5a0d2518e737
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104825"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot

@@ -5,10 +5,10 @@ ms.topic: article
 ms.date: 08/20/2019
 ms.custom: seo-javascript-september2019
 ms.openlocfilehash: 5d6851f00a6a53f207ab1dc08c209416160f896e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74467251"
 ---
 # <a name="use-azure-to-deploy-scale-and-manage-nodejs-containers"></a>Использование Azure для развертывания, масштабирования и администрирования контейнеров Node.js

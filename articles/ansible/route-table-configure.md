@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, playbook, networking, route, route table
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: cadc8f63d887cdd1ffe8b230dbe53a68645e601b
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743330"
 ---
 # <a name="tutorial-configure-azure-route-tables-using-ansible"></a>Руководство по Настройка таблицы маршрутов Azure с помощью Ansible

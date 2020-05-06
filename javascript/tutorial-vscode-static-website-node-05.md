@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
 ms.openlocfilehash: d0f6be1d57c9d378a4428a5a05da0428314f76c0
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77440957"
 ---
 # <a name="make-changes-and-redeploy"></a>Внесение изменений и повторное развертывание

@@ -9,10 +9,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.openlocfilehash: ff89152b5cbcd8c0abeff74ce75c4ba21528613e
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138834"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory

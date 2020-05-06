@@ -4,10 +4,10 @@ description: Руководство, часть 7. Очистка ресурс�
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.openlocfilehash: 183539b8e2f0246bd812e5fa364a885b75626819
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709861"
 ---
 # <a name="clean-up-resources"></a>Очистка ресурсов

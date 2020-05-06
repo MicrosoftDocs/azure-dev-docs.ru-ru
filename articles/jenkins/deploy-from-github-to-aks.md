@@ -5,10 +5,10 @@ keywords: Jenkins, Azure, DevOps, AKS, Служба Azure Kubernetes, GitHub
 ms.topic: article
 ms.date: 01/09/2019
 ms.openlocfilehash: 99c46e62e0d841d9ec6668fd5bcafdfa2cb6ba3a
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170400"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе Azure Kubernetes с помощью Jenkins

@@ -4,10 +4,10 @@ description: Руководство, часть 5. Просмотр журна�
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.openlocfilehash: f96deb992af0d446876265e1b8214879ddff45e6
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709881"
 ---
 # <a name="stream-logs-from-app-service"></a>Потоковая передача журналов из Службы приложений

@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, key vault, безопасность, учет�
 ms.topic: tutorial
 ms.date: 04/20/2020
 ms.openlocfilehash: ce9adb7ea121425d410665e1f4cc225cfdb82bd8
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81755237"
 ---
 # <a name="tutorial-use-azure-key-vault-with-a-linux-virtual-machine-in-ansible"></a>Руководство по Использование Azure Key Vault с виртуальной машиной Linux в Ansible
