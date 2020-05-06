@@ -5,10 +5,10 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-september2019
 ms.openlocfilehash: 02915383dd72a18959dbb5ba0f925a0e10b691d7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670650"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Долгосрочная поддержка Java для Azure и Azure Stack

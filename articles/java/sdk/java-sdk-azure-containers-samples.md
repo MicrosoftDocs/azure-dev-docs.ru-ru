@@ -8,10 +8,10 @@ ms.topic: article
 ms.service: multiple
 ms.custom: seo-java-july2019, seo-java-september2019
 ms.openlocfilehash: c833bbc6fc7f0b7b9fc5eb5ab4391da9e082cf36
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671380"
 ---
 # <a name="java-samples-for-azure-container-service"></a>Примеры Java для решения "Служба контейнеров Azure"

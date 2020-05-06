@@ -4,10 +4,10 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: conceptual
 ms.date: 03/04/2020
 ms.openlocfilehash: 07f53cb5ca9c72219b6eec89e9dfe47823143dac
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138799"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Развертывание в Службе приложений Azure с помощью Visual Studio Code
@@ -20,7 +20,7 @@ ms.locfileid: "82138799"
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Quickstart-Create-a-Nodejs-app-in-Azure/player]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Учетная запись Azure с активной подпиской. [Создайте бесплатно](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-extension&mktingSource=vscode-tutorial-appservice-extension).
 - [Visual Studio Code](https://code.visualstudio.com/).

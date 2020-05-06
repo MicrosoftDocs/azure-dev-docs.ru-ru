@@ -4,10 +4,10 @@ description: Сведения о том, как выполнить устано�
 ms.date: 03/14/2018
 ms.topic: conceptual
 ms.openlocfilehash: 55b841101f2307e869a57193ce6d678f298b8e6e
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319801"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Установка пакета Azure SDK для Go
@@ -43,7 +43,7 @@ version = "14.0.0"
 Чтобы использовать службы Azure из кода Go, импортируйте все службы, с которыми вы взаимодействуете, и необходимые модули `autorest`.
 Получить полный список доступных модулей для [доступных служб](https://godoc.org/github.com/Azure/azure-sdk-for-go) и [пакетов AutoRest](https://godoc.org/github.com/Azure/go-autorest) можно на сайте GoDoc. Ниже приводятся наиболее распространенные пакеты, которые нужно скачать в репозитории `go-autorest`:
 
-| Пакет | Описание |
+| Пакет | Description |
 |---------|-------------|
 | [github.com/Azure/go-autorest/autorest][autorest] | Объекты для обработки аутентификации клиента службы |
 | [github.com/Azure/go-autorest/autorest/azure][autorest/azure] | Константы для взаимодействия со службами Azure |

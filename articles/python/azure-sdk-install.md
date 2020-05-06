@@ -4,10 +4,10 @@ description: Инструкции по установке, удалению и �
 ms.date: 04/23/2020
 ms.topic: conceptual
 ms.openlocfilehash: 172091bcdff5ba55ccc7c2f13c60f3c7d645efc1
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138750"
 ---
 # <a name="install-azure-sdk-for-python-libraries"></a>Установка пакета Azure SDK для библиотек Python

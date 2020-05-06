@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 03/31/2020
 ms.author: buhollan
 ms.openlocfilehash: c95177d6b4cb101b764acd8f8dad54f937a495eb
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82109709"
 ---
 1. В окне командной строке терминала перейдите к расположению, в котором нужно создать папку приложения.

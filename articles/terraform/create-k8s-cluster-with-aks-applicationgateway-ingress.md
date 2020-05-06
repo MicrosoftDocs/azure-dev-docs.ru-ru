@@ -5,10 +5,10 @@ keywords: Azure DevOps, Terraform, Шлюз приложений, входящи
 ms.topic: tutorial
 ms.date: 03/09/2020
 ms.openlocfilehash: 95a1e9ebbf0dcffb2b3101c3b794ba86e62886c8
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171250"
 ---
 # <a name="tutorial-create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Руководство по Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes

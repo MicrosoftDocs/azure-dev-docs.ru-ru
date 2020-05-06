@@ -7,10 +7,10 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
 ms.openlocfilehash: 7e50a18346eb9bd2bee50bf2ea2d65cd94381292
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104975"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Создание виртуальных машин в нескольких регионах из приложений Java

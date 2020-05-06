@@ -5,10 +5,10 @@ keywords: Jenkins, Azure, DevOps, конвейер, CI/CD, Docker
 ms.topic: tutorial
 ms.date: 03/27/2017
 ms.openlocfilehash: c584d6bbd18c36bde7730180a69194b23cd2c180
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82169690"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>Руководство по созданию конвейера Jenkins с помощью GitHub и Docker

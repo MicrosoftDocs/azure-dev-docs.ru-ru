@@ -4,10 +4,10 @@ description: Создание рабочего процесса приложен
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.openlocfilehash: e561d57427b4a8e52f1d13bf3a0ff36fc0ed047c
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441659"
 ---
 # <a name="create-a-logic-app-workflow"></a>Создание рабочего процесса приложения логики

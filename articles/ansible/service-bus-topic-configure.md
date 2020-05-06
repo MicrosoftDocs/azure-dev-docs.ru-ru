@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, сборник схем, служебн�
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: 1561a53a99954190aed71fd7d58c5535e68c00e9
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743298"
 ---
 # <a name="tutorial-configure-topics-in-azure-service-bus-using-ansible"></a>Руководство по настройке разделов в Служебной шине Azure с помощью Ansible

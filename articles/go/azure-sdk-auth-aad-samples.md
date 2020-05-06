@@ -4,10 +4,10 @@ description: Выбранные примеры для работы с Azure Acti
 ms.date: 09/05/2018
 ms.topic: sample
 ms.openlocfilehash: ccada2ed6812bf5139f8c1c34c16059e83b02f52
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319671"
 ---
 # <a name="azure-sdk-for-go-samples-for-authentication-and-aad"></a>Пакет Azure SDK для примеров Go для аутентификации и AAD
@@ -16,7 +16,7 @@ ms.locfileid: "80319671"
 
 Все примеры для пакета Azure SDK для Go доступны в репозитории [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
-| Имя | Описание |
+| Имя | Description |
 |------|-------------|
 | [internal/iam/authorizers](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/internal/iam/authorizers.go) | Аутентификация с помощью служб Azure для работы со службами. |
 | [authorization/authorization](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/authorization.go) | Добавление, удаление и проверка ролей AAD. |

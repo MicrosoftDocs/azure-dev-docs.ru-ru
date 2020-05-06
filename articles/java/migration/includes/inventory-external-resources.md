@@ -3,10 +3,10 @@ author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
 ms.openlocfilehash: 4b5b73eee66c4a5c9eb28b79804e0dc610f639d6
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671630"
 ---
 ### <a name="inventory-external-resources"></a>Проверка внешних ресурсов

@@ -8,10 +8,10 @@ ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 1694a342089e5bcb6cfd669ef723292fe48b3b55
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668470"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Как использовать JPA Spring Data с Базой данных SQL Azure

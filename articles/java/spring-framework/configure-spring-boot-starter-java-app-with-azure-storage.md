@@ -8,17 +8,17 @@ ms.service: storage
 ms.topic: article
 ms.workload: storage
 ms.openlocfilehash: e9546d2e65d198fe9ab92e5d588df8797fd97e16
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669240"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Как использовать Spring Boot Starter со службой хранилища Azure
 
 В статье описано, как создать пользовательское приложение с помощью **Spring Initializr** и добавить к нему начальное приложение службы хранилища Azure, а затем отправить большой двоичный объект в учетную запись хранения Azure с помощью этого приложения.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -212,7 +212,7 @@ ms.locfileid: "81669240"
    ```
    Где:
 
-   |                   Поле                   |                                            Описание                                            |
+   |                   Поле                   |                                            Description                                            |
    |-------------------------------------------|---------------------------------------------------------------------------------------------------|
    | `spring.cloud.azure.credential-file-path` |            Определяет файл учетных данных Azure, который был создан ранее в этом примере.             |
    |    `spring.cloud.azure.resource-group`    |           Определяет группу ресурсов Azure, которая содержит учетную запись хранения Azure.            |

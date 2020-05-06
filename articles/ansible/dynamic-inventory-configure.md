@@ -5,10 +5,10 @@ keywords: ansible, azure, разработка и операции, bash, clouds
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.openlocfilehash: c777ee18663507b6e8d658a7ba027d99f9645cc9
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104695"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible

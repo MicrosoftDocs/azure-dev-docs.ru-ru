@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: bc9b86db6fb9c5b3731550df9dda96debcbfba9f
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82030726"
 ---
 # <a name="get-started-with-azure-cli"></a>Начало работы с Azure CLI
@@ -50,7 +50,7 @@ ms.locfileid: "82030726"
 
 | Тип ресурса | Группа команд Azure CLI |
 |---------------|-------------------------|
-| [Группа ресурсов](/azure/azure-resource-manager/resource-group-overview) | [az group](/cli/azure/group) |
+| [группа ресурсов](/azure/azure-resource-manager/resource-group-overview) | [az group](/cli/azure/group) |
 | [Виртуальные машины](/azure/virtual-machines) | [az vm](/cli/azure/vm) |
 | [Учетные записи хранения](/azure/storage/common/storage-introduction) | [az storage account](/cli/azure/storage/account) |
 | [хранилище ключей;](/azure/key-vault/key-vault-whatis) | [az keyvault](/cli/azure/keyvault) |

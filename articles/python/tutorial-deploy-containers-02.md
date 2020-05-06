@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
 ms.openlocfilehash: 8005ba428d99051d9b5b86ed4f5222c1cd9ba673
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441349"
 ---
 # <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Развертывание образа контейнера в Службе приложений Azure

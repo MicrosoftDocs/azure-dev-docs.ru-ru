@@ -4,10 +4,10 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.openlocfilehash: 23eff2eb672b7221ed74fc8085515647392d8525
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138780"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Развертывание Функций Azure с помощью Visual Studio

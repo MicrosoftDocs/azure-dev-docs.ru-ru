@@ -4,17 +4,17 @@ description: 'Начало работы с модулями Azure для Node.js
 ms.date: 06/17/2017
 ms.topic: conceptual
 ms.openlocfilehash: 600c10c052a3aa95eb4dc04de0166a6974ede060
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709901"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Начало работы с модулями Azure для Node.js
 
 Это руководство поможет вам установить модули Azure для Node.js, выполнить аутентификацию в Azure с помощью субъекта-службы и запустить пример кода, который создает ресурсы в подписке Azure и подключается к облачным службам Azure.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 - [Node.js](https://nodejs.org)
@@ -36,7 +36,7 @@ npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure
 
 Чтобы выполнить пример кода из этого руководства, предоставьте приложению Node.js в вашей подписке Azure разрешения на чтение и создание. Создайте субъект-службу и настройте приложение для выполнения со связанными учетными данными. Субъект-служба это неинтерактивная учетная запись, связанная с вашим идентификатором. Этой учетной записи предоставляются только те разрешения, которые нужны для запуска приложения.
 
-[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо `MY_SECURE_PASSWORD` нужно указать в аргументе пароля [безопасный пароль](/azure/active-directory/active-directory-passwords-policy).
+[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо [ нужно указать в аргументе пароля ](/azure/active-directory/active-directory-passwords-policy)безопасный пароль`MY_SECURE_PASSWORD`.
 
 ```azurecli
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD

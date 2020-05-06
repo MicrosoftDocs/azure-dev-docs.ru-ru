@@ -4,13 +4,13 @@ description: Разверните виртуальную машину с пом�
 ms.date: 09/05/2018
 ms.topic: quickstart
 ms.openlocfilehash: d339681fc4eed55046f5a7c8fa45fffc948fa3bc
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319771"
 ---
-# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Краткое руководство. Развертывание виртуальной машины Azure из шаблона с помощью пакета Azure SDK для Go
+# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>Краткое руководство по развертыванию виртуальной машины Azure из шаблона с помощью пакета Azure SDK для Go
 
 В этом кратком руководстве показано, как развертывать ресурсы с помощью шаблона Azure Resource Manager и пакета Azure SDK для Go. Шаблоны — это моментальные снимки всех ресурсов, содержащихся в [группе ресурсов Azure](/azure/azure-resource-manager/resource-group-overview). Вы также ознакомитесь с функциями и соглашениями пакета SDK.
 
