@@ -8,10 +8,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 64da0248a34392be88bf83343929b7f4eecc6b9c
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673840"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Установка набора средств Azure для IntelliJ

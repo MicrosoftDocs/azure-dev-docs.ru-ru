@@ -4,10 +4,10 @@ description: Руководство, часть 7. Потоковая пере�
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.openlocfilehash: 10ccf13cddfc7bb1ed7f226629072cb9baeea3a1
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80740637"
 ---
 # <a name="stream-logs-into-visual-studio-code"></a>Потоковая передача журналов в Visual Studio Code

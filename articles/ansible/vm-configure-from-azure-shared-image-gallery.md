@@ -5,10 +5,10 @@ keywords: Ansible, Azure, DevOps, Bash, сборник схем, виртуал�
 ms.topic: tutorial
 ms.date: 10/14/2019
 ms.openlocfilehash: cd66899b5d5f37bc056d251a68117456062c16cf
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743265"
 ---
 # <a name="tutorial-create-a-vm-or-virtual-machine-scale-set-from-the-azure-shared-image-gallery-using-ansible"></a>Руководство по созданию виртуальной машины или масштабируемого набора виртуальных машин из Общей коллекции образов Azure с помощью Ansible
