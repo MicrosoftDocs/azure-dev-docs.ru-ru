@@ -3,12 +3,12 @@ title: Руководство. Хранение состояния Terraform в 
 description: Узнайте, как сохранить сведения о состоянии Terraform в Службе хранилища Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: f2180a8e12632c0693dcf491d621121168fa99c8
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: e61787a80905507c16a5ac7f23cfe9ed852f6708
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169700"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861247"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>Руководство по Хранение состояния Terraform в службе хранилища Azure
 
@@ -73,7 +73,7 @@ echo "access_key: $ACCOUNT_KEY"
 export ARM_ACCESS_KEY=<storage access key>
 ```
 
-Чтобы еще надежнее защитить ключ доступа к учетной записи хранения Azure, храните его в Azure Key Vault. В этом случае переменную среды можно задать с помощью команды, наподобие приведенной ниже. Дополнительные сведения об Azure Key Vault см. в [документации по Azure Key Vault](/azure/key-vault/secrets/quick-create-cli.md).
+Чтобы еще надежнее защитить ключ доступа к учетной записи хранения Azure, храните его в Azure Key Vault. В этом случае переменную среды можно задать с помощью команды, наподобие приведенной ниже. Дополнительные сведения об Azure Key Vault см. в [документации по Azure Key Vault](/azure/key-vault/secrets/quick-create-cli).
 
 ```bash
 export ARM_ACCESS_KEY=$(az keyvault secret show --name terraform-backend-key --vault-name myKeyVault --query value -o tsv)
@@ -124,7 +124,7 @@ resource "azurerm_resource_group" "state-demo-secure" {
 
 Данные, хранящиеся в большом двоичном объекте Azure, шифруются перед сохранением. При необходимости Terraform получает состояние из серверного компонента и сохраняет его в локальной памяти. При использовании этого шаблона состояние никогда не записывается на локальный диск.
 
-Дополнительные сведения о шифровании в службе хранилища Azure см. в статье [Шифрование службы хранилища Azure для неактивных данных](/azure/storage/common/storage-service-encryption.md).
+Дополнительные сведения о шифровании в службе хранилища Azure см. в статье [Шифрование службы хранилища Azure для неактивных данных](/azure/storage/common/storage-service-encryption).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

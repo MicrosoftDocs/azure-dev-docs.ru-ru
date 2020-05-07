@@ -4,12 +4,12 @@ description: Сведения об использовании Azure CLI для �
 keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
 ms.date: 04/25/2020
-ms.openlocfilehash: 03eb896717350a242fb2f504a4da9b57ecc8a209
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 242986ca95b36d95393b7ff688ebf60bb95985fa
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169890"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861237"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 
@@ -183,7 +183,7 @@ az webapp config set \
 
 Если вы используете Azure CLI в конвейере Jenkins, измените скрипт для развертывания в решении "Веб-приложения Azure в Linux". Это решение поддерживает Docker. Таким образом, необходимо предоставить Dockerfile для упаковки веб-приложения со средой выполнения службы в образ Docker. Затем подключаемый модуль создаст образ, отправит его в реестр Docker и развернет в веб-приложении.
 
-1. [Создайте веб-приложение Azure на платформе Linux](/azure/app-service/containers/quickstart-nodejs.md).
+1. [Создайте веб-приложение Azure на платформе Linux](/azure/app-service/containers/quickstart-nodejs).
 
 1. [Установите Docker в Jenkins](https://docs.docker.com/engine/installation/linux/ubuntu/).
 

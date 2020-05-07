@@ -4,12 +4,12 @@ description: Узнайте, как развертывать микрослуж�
 keywords: Jenkins, Azure, DevOps, Azure Spring Cloud, Azure CLI
 ms.topic: tutorial
 ms.date: 01/07/2020
-ms.openlocfilehash: 88a62e42218835e866f1dd9424209d5594a336d0
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c9341ef89e43f14111b6e656daebadcd4790322d
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169770"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861217"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
@@ -142,7 +142,7 @@ ms.locfileid: "82169770"
 
 ### <a name="add-your-azure-service-principal-credential-in-jenkins-credential-store"></a>Добавление учетных данных субъекта-службы Azure в хранилище учетных данных Jenkins
 
-1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в  [этом разделе](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
+1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в  [этом разделе](deploy-from-github-to-azure-app-service.md#create-service-principal) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
 
     ```
     {
@@ -193,33 +193,33 @@ ms.locfileid: "82169770"
 
 2. Измените файл указанным ниже образом. Обязательно задайте значение вместо заполнителей **\<resource group name>** (имя группы ресурсов) и **\<service name>** (имя службы). Замените заполнитель **azure_service_principal** (субъект-служба Azure) правильным идентификатором, если это значение отличается от того, которое вы указали при добавлении учетных данных в Jenkins. 
 
-```groovy
-    node {
-      stage('init') {
-        checkout scm
-      }
-      stage('build') {
-        sh 'mvn clean package'
-      }
-      stage('deploy') {
-        withCredentials([azureServicePrincipal('azure_service_principal')]) {
-          // login to Azure
-          sh '''
-            az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
-            az account set -s $AZURE_SUBSCRIPTION_ID
-          '''  
-          // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
-          sh 'az configure --defaults group=<resource group name>'
-          sh 'az configure --defaults spring-cloud=<service name>'
-          // Deploy applications
-          sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
-          sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
-          sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
-          sh 'az logout'
-        }
-      }
-    }
-```
+   ```groovy
+       node {
+         stage('init') {
+           checkout scm
+         }
+         stage('build') {
+           sh 'mvn clean package'
+         }
+         stage('deploy') {
+           withCredentials([azureServicePrincipal('azure_service_principal')]) {
+             // login to Azure
+             sh '''
+               az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+               az account set -s $AZURE_SUBSCRIPTION_ID
+             '''  
+             // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
+             sh 'az configure --defaults group=<resource group name>'
+             sh 'az configure --defaults spring-cloud=<service name>'
+             // Deploy applications
+             sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
+             sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
+             sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
+             sh 'az logout'
+           }
+         }
+       }
+   ```
 
 3. Сохраните и зафиксируйте изменения.
 

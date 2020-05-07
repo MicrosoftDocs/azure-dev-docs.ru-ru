@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как исполь
 keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kubernetes
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 427b53642b4159a82dba699c631da8948a6b744b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170290"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861257"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
@@ -58,7 +58,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     az group create --name MyResourceGroup --location westus2
     ```
 
-2. Создайте кластер AKS. Создайте кластер AKS в [регионе, который поддерживает Dev Spaces](/azure/dev-spaces/about.md#supported-regions-and-configurations).
+2. Создайте кластер AKS. Создайте кластер AKS в [регионе, который поддерживает Dev Spaces](/azure/dev-spaces/about#supported-regions-and-configurations).
 
     ```azurecli
     az aks create --resource-group MyResourceGroup --name MyAKS --location westus2 --kubernetes-version 1.11.9 --enable-addons http_application_routing --generate-ssh-keys --node-count 1 --node-vm-size Standard_D1_v2
@@ -344,7 +344,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 2. Войдите в Jenkins выберите имя конвейера, а затем щелкните **Build Now** (Собрать сейчас). 
 
-    Можно также настроить *веб-перехватчик*, который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/jenkins/deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
+    Можно также настроить *веб-перехватчик*, который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
 
 3. Сравните изменения с текущей общедоступной версией.
 

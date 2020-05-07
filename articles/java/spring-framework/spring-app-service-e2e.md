@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 229def19340c722949308a021c2e021615ce65ec
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 7e90cd39bb50f5e83ee9bc3551252fe12086e750
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82105124"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861197"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -76,7 +76,7 @@ export TOMCAT_HOME=<Tomcat install directory>
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-$TOMCAT_HOME="<Tomcat install directory>"
+$env:TOMCAT_HOME="<Tomcat install directory>"
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -134,7 +134,7 @@ ${TOMCAT_HOME}/bin/catalina.sh run
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-& $TOMCAT_HOME/bin/catalina.bat run
+& $env:TOMCAT_HOME/bin/catalina.bat run
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -164,10 +164,10 @@ export REGION=<region>
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-$RESOURCEGROUP_NAME="<resource group>"
-$WEBAPP_NAME="<web app>"
-$WEBAPP_PLAN_NAME="$WEBAPP_NAME-appservice-plan"
-$REGION="<region>"
+$env:RESOURCEGROUP_NAME="<resource group>"
+$env:WEBAPP_NAME="<web app>"
+$env:WEBAPP_PLAN_NAME="$env:WEBAPP_NAME-appservice-plan"
+$env:REGION="<region>"
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -201,15 +201,15 @@ Maven будет использовать эти значения для соз�
             <webContainer>TOMCAT 9.0</webContainer>
         </runtime>
         <deployment>
-            <resources>
-                <resource>
-                    <directory>${project.basedir}/target</directory>
-                    <includes>
-                        <include>*.war</include>
-                    </includes>
-                </resource>
-             </resources>
-         </deployment>
+            <resources>
+                <resource>
+                    <directory>${project.basedir}/target</directory>
+                    <includes>
+                        <include>*.war</include>
+                    </includes>
+                </resource>
+             </resources>
+         </deployment>
     </configuration>
 </plugin>
 ```
@@ -248,12 +248,12 @@ export DOLLAR=\$
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-$MYSQL_SERVER_NAME="<server>"
-$MYSQL_SERVER_FULL_NAME="$MYSQL_SERVER_NAME.mysql.database.azure.com"
-$MYSQL_SERVER_ADMIN_LOGIN_NAME="<admin>"
-$MYSQL_SERVER_ADMIN_PASSWORD="<password>"
-$MYSQL_DATABASE_NAME="<database>"
-$DOLLAR="$"
+$env:MYSQL_SERVER_NAME="<server>"
+$env:MYSQL_SERVER_FULL_NAME="$env:MYSQL_SERVER_NAME.mysql.database.azure.com"
+$env:MYSQL_SERVER_ADMIN_LOGIN_NAME="<admin>"
+$env:MYSQL_SERVER_ADMIN_PASSWORD="<password>"
+$env:MYSQL_DATABASE_NAME="<database>"
+$env:DOLLAR="$"
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -297,19 +297,19 @@ az mysql server configuration set --name time_zone \
 az extension add --name db-up
 
 az mysql up `
-    --resource-group $RESOURCEGROUP_NAME `
-    --server-name $MYSQL_SERVER_NAME `
-    --database-name $MYSQL_DATABASE_NAME `
-    --admin-user $MYSQL_SERVER_ADMIN_LOGIN_NAME `
-    --admin-password $MYSQL_SERVER_ADMIN_PASSWORD
+    --resource-group $env:RESOURCEGROUP_NAME `
+    --server-name $env:MYSQL_SERVER_NAME `
+    --database-name $env:MYSQL_DATABASE_NAME `
+    --admin-user $env:MYSQL_SERVER_ADMIN_LOGIN_NAME `
+    --admin-password $env:MYSQL_SERVER_ADMIN_PASSWORD
 
 az mysql server configuration set --name wait_timeout `
-    --resource-group $RESOURCEGROUP_NAME `
-    --server $MYSQL_SERVER_NAME --value 2147483
+    --resource-group $env:RESOURCEGROUP_NAME `
+    --server $env:MYSQL_SERVER_NAME --value 2147483
 
 az mysql server configuration set --name time_zone `
-    --resource-group $RESOURCEGROUP_NAME `
-    --server $MYSQL_SERVER_NAME --value=-8:00
+    --resource-group $env:RESOURCEGROUP_NAME `
+    --server $env:MYSQL_SERVER_NAME --value=-8:00
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -346,8 +346,8 @@ mysql -u ${MYSQL_SERVER_ADMIN_LOGIN_NAME}@${MYSQL_SERVER_NAME} \
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-mysql -u $MYSQL_SERVER_ADMIN_LOGIN_NAME@$MYSQL_SERVER_NAME `
- -h $MYSQL_SERVER_FULL_NAME -P 3306 -p
+mysql -u $env:MYSQL_SERVER_ADMIN_LOGIN_NAME@$env:MYSQL_SERVER_NAME `
+ -h $env:MYSQL_SERVER_FULL_NAME -P 3306 -p
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -427,15 +427,15 @@ show databases;
             </property>
         </appSettings>
         <deployment>
-            <resources>
-                <resource>
-                    <directory>${project.basedir}/target</directory>
-                    <includes>
-                        <include>*.war</include>
-                    </includes>
-                </resource>
-             </resources>
-         </deployment>
+            <resources>
+                <resource>
+                    <directory>${project.basedir}/target</directory>
+                    <includes>
+                        <include>*.war</include>
+                    </includes>
+                </resource>
+             </resources>
+         </deployment>
     </configuration>
 </plugin>
 ```
@@ -456,7 +456,7 @@ ${TOMCAT_HOME}/bin/catalina.sh run
 ```ps
 mvn package
 mvn cargo:deploy
-& $TOMCAT_HOME/bin/catalina.bat run
+& $env:TOMCAT_HOME/bin/catalina.bat run
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -492,8 +492,8 @@ az webapp log tail --name ${WEBAPP_NAME} \
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-az webapp log tail --name $WEBAPP_NAME `
-    --resource-group $RESOURCEGROUP_NAME
+az webapp log tail --name $env:WEBAPP_NAME `
+    --resource-group $env:RESOURCEGROUP_NAME
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -524,8 +524,8 @@ az appservice plan update --number-of-workers 2 \
 
 ```ps
 az appservice plan update --number-of-workers 2 `
-    --name $WEBAPP_PLAN_NAME `
-    --resource-group $RESOURCEGROUP_NAME
+    --name $env:WEBAPP_PLAN_NAME `
+    --resource-group $env:RESOURCEGROUP_NAME
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)
@@ -553,7 +553,7 @@ az group delete --name ${RESOURCEGROUP_NAME}
 # <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ```ps
-az group delete --name $RESOURCEGROUP_NAME
+az group delete --name $env:RESOURCEGROUP_NAME
 ````
 
 # <a name="cmd"></a>[Cmd](#tab/cmd)

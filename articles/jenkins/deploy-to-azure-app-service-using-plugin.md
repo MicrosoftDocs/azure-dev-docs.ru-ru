@@ -4,16 +4,16 @@ description: Узнайте, как развернуть веб-приложен
 keywords: jenkins, azure, devops, app service
 ms.topic: tutorial
 ms.date: 07/31/2018
-ms.openlocfilehash: 6ba1f2d4673e8a99425d07a24ba55500d1b43f02
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 6d5287a3e5ff9500b1a734bd5546cd6af4b3f967
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169840"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861227"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-using-the-jenkins-plugin"></a>Руководство по развертыванию в Службе приложений Azure с помощью подключаемого модуля Jenkins
 
-Для развертывания веб-приложения Java в Azure можно использовать Azure CLI в [конвейере Jenkins](/azure/jenkins/deploy-to-azure-app-service-using-azure-cli) или [подключаемый модуль Jenkins службы приложений Azure](https://plugins.jenkins.io/azure-app-service). Подключаемый модуль Jenkins версии 1.0 поддерживает непрерывное развертывание с помощью функции "Веб-приложения" службы приложений Azure, используя следующие инструменты:
+Для развертывания веб-приложения Java в Azure можно использовать Azure CLI в [конвейере Jenkins](deploy-to-azure-app-service-using-azure-cli.md) или [подключаемый модуль Jenkins службы приложений Azure](https://plugins.jenkins.io/azure-app-service). Подключаемый модуль Jenkins версии 1.0 поддерживает непрерывное развертывание с помощью функции "Веб-приложения" службы приложений Azure, используя следующие инструменты:
 * Отправка файлов.
 * Docker для веб-приложений в Linux.
 
@@ -133,7 +133,7 @@ sudo apt-get install -y maven
 
 Перед настройкой задания в Jenkins вам понадобится веб-приложение в Linux, а также реестр контейнеров для хранения частных образов контейнера Docker и управления ими. DockerHub можно использовать для создания реестра контейнеров. В этом примере используется реестр контейнеров Azure.
 
-* Создайте веб-приложение в Linux, используя сведения [этой статьи](/azure/app-service/containers/quickstart-nodejs.md).
+* Создайте веб-приложение в Linux, используя сведения [этой статьи](/azure/app-service/containers/quickstart-nodejs).
 * Реестр контейнеров Azure — это управляемая служба [реестра Docker](https://docs.docker.com/registry/) на базе реестра Docker версии 2.0 с открытым кодом. Создайте реестр контейнеров Azure, используя сведения [этой статьи](/azure/container-registry/container-registry-get-started-azure-cli). Кроме того, можно использовать DockerHub.
 
 ### <a name="set-up-the-jenkins-job-for-docker"></a>Настройка задания Jenkins для Docker
