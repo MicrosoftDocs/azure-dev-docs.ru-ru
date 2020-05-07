@@ -4,10 +4,10 @@ description: Выбранные примеры для работы с таким
 ms.date: 09/05/2018
 ms.topic: sample
 ms.openlocfilehash: b53faed0735050e7a23de8aab17f2ee8beaf105c
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105055"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>Пакет Azure SDK для примеров Go для вычислений и сетевого взаимодействия
@@ -16,7 +16,7 @@ ms.locfileid: "82105055"
 
 Все примеры для пакета Azure SDK для Go доступны в репозитории [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples).
 
-| Имя | Описание |
+| Имя | Description |
 |------|-------------|
 | [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network_test.go) | Создание, обновление и удаление сетевых ресурсов, включая виртуальные сети, подсети и группы безопасности сети, а также выполнение запросов к ним. |
 | [compute/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | Создание, присоединение, отсоединение, обновление и шифрование дисков данных для виртуальной машины. |

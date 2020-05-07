@@ -10,10 +10,10 @@ ms.topic: article
 ms.workload: web
 ms.custom: mvc
 ms.openlocfilehash: 570b33614f32ef80e11ddf9d2c6774513248416e
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82166684"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Развертывание приложения Spring Boot в службе приложений Azure на платформе Linux

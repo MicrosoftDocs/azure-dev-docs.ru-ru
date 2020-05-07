@@ -4,10 +4,10 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138798"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
@@ -20,7 +20,7 @@ ms.locfileid: "82138798"
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-to-Azure-App-Service/player]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - [Подписка Azure](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/).

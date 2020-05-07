@@ -13,10 +13,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 6f453a42fe46299043d4857b464da601b18df018
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81672370"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью IntelliJ

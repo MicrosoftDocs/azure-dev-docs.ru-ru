@@ -3,13 +3,13 @@ title: Краткое руководство. Создание виртуаль�
 description: Узнайте, как использовать Terraform для создания готовой среды виртуальных машин Linux в Azure и управления ею.
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
 ms.topic: quickstart
-ms.date: 04/26/2020
-ms.openlocfilehash: bfc9766022e0f52a73d2badbc0977e2b2aa1fc11
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.date: 05/04/2020
+ms.openlocfilehash: d6763118179251c224e0ec3ae6e05a630cae7cde
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82171520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82801892"
 ---
 # <a name="quickstart-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Краткое руководство. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
@@ -57,7 +57,7 @@ resource "azurerm_resource_group" "myterraformgroup" {
 }
 ```
 
-В дополнительных разделах нужно ссылаться на группу ресурсов, используя `${azurerm_resource_group.myterraformgroup.name}`.
+В дополнительных разделах нужно ссылаться на группу ресурсов, используя `azurerm_resource_group.myterraformgroup.name`.
 
 ## <a name="create-virtual-network"></a>Создание виртуальной сети
 
@@ -146,9 +146,9 @@ resource "azurerm_network_interface" "myterraformnic" {
 
     ip_configuration {
         name                          = "myNicConfiguration"
-        subnet_id                     = "${azurerm_subnet.myterraformsubnet.id}"
+        subnet_id                     = "azurerm_subnet.myterraformsubnet.id"
         private_ip_address_allocation = "Dynamic"
-        public_ip_address_id          = "${azurerm_public_ip.myterraformpublicip.id}"
+        public_ip_address_id          = "azurerm_public_ip.myterraformpublicip.id"
     }
 
     tags = {

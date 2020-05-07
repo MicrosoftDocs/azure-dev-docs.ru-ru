@@ -4,10 +4,10 @@ description: Сведения о реализации двух перифери�
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: 9c4a04232d91a36bdc4ff408b326330821a87b6b
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170910"
 ---
 # <a name="tutorial-create-a-spoke-network-in-azure-using-terraform"></a>Руководство по Создание периферийной сети с помощью Terraform в Azure

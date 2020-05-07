@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: fd37b633100d92a4126910a3fb9e8ad25b11423c
-ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82209787"
 ---
 # <a name="azure-cli-configuration"></a>Настройка Azure CLI
@@ -33,7 +33,7 @@ ms.locfileid: "82209787"
 
 Следующая таблица содержит список доступных ключей конфигурации.
 
-| Имя | Описание |
+| Имя | Description |
 |------|-------------|
 | group | Группа ресурсов по умолчанию для всех команд. |
 | location | Расположение по умолчанию для всех команд. |
@@ -60,8 +60,8 @@ az configure --defaults location=westus2 group=MyResourceGroup
 
 Логические операторы не зависят от регистра и представлены следующими значениями:
 
-* __True__. 1, yes, true, on.
-* __False__. 0, no, false, off.
+* __истина__: 1, yes, true, on;
+* __ложь__: 0, no, false, off.
 
 Ниже приведен пример файла конфигурации CLI, который отключает все запросы на подтверждение и настраивает для ведения журнала папку `/var/log/azure`.
 
@@ -82,7 +82,7 @@ log_dir=/var/log/azure
 
 Если указать значение по умолчанию, любая команда больше не будет требовать этот аргумент. Вместо этого используется значение по умолчанию.
 
-| Section | Имя      | Тип | Описание|
+| Section | Имя      | Тип | Description|
 |---------|-----------|------|------------|
 | __core__ | output | строка | Формат вывода по умолчанию. Может иметь значение `json`, `jsonc`, `tsv` или `table`. |
 | | disable\_confirm\_prompt | Логическое | Включает и отключает запросы на подтверждение. |

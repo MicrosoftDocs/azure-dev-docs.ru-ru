@@ -2,10 +2,10 @@
 ms.date: 09/05/2018
 ms.technology: azure-cli
 ms.openlocfilehash: b356bf7cc63d08e942213d8ee6702eeed3ffd0e1
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319731"
 ---
 ## <a name="launch-azure-cloud-shell"></a>Запуск Azure Cloud Shell

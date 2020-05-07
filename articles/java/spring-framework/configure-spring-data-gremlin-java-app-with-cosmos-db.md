@@ -9,10 +9,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.openlocfilehash: f46988e75d3230455796b2472010c3d93bff5c57
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669250"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Data Gremlin с API SQL Azure Cosmos DB
@@ -23,7 +23,7 @@ ms.locfileid: "81669250"
 
 В этой статье демонстрируется создание базы данных Azure Cosmos DB на портале Azure для использования с API Gremlin, создание пользовательского приложения Java с помощью **[Spring Initializr]** , а затем добавление в это приложение функций начального приложения Spring Data Gremlin для хранения данных в Azure Cosmos DB и получения этих данных с помощью языка запросов Gremlin.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -156,7 +156,7 @@ ms.locfileid: "81669250"
    
    Где:
    
-   | Поле | Описание |
+   | Поле | Description |
    |---|---|
    | `endpoint` | Указывает URI Gremlin, который создается на основе уникального **ИД**, введенного при создании базы данных Azure Cosmos DB ранее в этом руководстве. |
    | `port` | Указывает порт TCP/IP, который для протокола HTTPS должен иметь значение **443**. |
@@ -509,13 +509,13 @@ ms.locfileid: "81669250"
 
 Дополнительные сведения о поддержке Gremlin и API Graph в Azure см. в следующих статьях:
 
-* [Знакомство с Azure Cosmos DB: API Gremlin](/azure/cosmos-db/graph-introduction)
+* [Знакомство с базой данных Azure Cosmos DB. API Graph](/azure/cosmos-db/graph-introduction)
 
 * [Поддержка графа Gremlin в базе данных Azure Cosmos DB](/azure/cosmos-db/gremlin-support)
 
-* [Разработка Создание графовой базы данных с помощью Java и портала Azure](/azure/cosmos-db/create-graph-java)
+* [Azure Cosmos DB: создание графовой базы данных с помощью Java и портала Azure](/azure/cosmos-db/create-graph-java)
 
-* [Руководство. Выполнение запросов к API Gremlin в Azure Cosmos DB с использованием Gremlin](/azure/cosmos-db/tutorial-query-graph)
+* [Руководство по выполнению запросов к API Graph в Azure Cosmos DB с использованием Gremlin](/azure/cosmos-db/tutorial-query-graph)
 
 * [Spring Data Gremlin Starter] (Начальное приложение Spring Data Gremlin)
 
@@ -523,7 +523,7 @@ ms.locfileid: "81669250"
 
 * [Документация по Azure Cosmos DB]
 
-* [Разработка Создание ресурсов учетной записи API SQL для Azure Cosmos DB и управление ими с помощью приложения Java][Build a SQL API app with Java]
+* [Azure Cosmos DB. Создание базы данных документов с помощью Java и портала Azure][Build a SQL API app with Java]
 
 * [Spring Data для API SQL для Azure Cosmos DB]
 

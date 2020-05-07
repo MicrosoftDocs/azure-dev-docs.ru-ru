@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 01/15/2020
 ms.custom: seo-python-october2019
 ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80442149"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Очистка ресурсов Azure для Функций Azure

@@ -3,10 +3,10 @@ author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
 ms.openlocfilehash: 029277ac75c455041d26f160b1f0c16a5675368d
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673610"
 ---
 ### <a name="validate-whether-and-how-the-file-system-is-used"></a>Проверка того, используется ли файловая система и как именно она используется

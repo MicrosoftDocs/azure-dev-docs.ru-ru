@@ -9,10 +9,10 @@ ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
 ms.custom: seo-java-august2019, seo-java-september2019
 ms.openlocfilehash: 30884958dd4c829cf7b268715de7c79f3a786724
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81674180"
 ---
 # <a name="azure-management-libraries-for-java---web-app-samples"></a>Библиотеки управления Azure для Java — примеры веб-приложений 

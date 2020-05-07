@@ -5,10 +5,10 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.custom: seo-python-october2019
 ms.openlocfilehash: a8425ffbc58fe0173da4b8b75611332d3f97fa04
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441749"
 ---
 # <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Многооблачные решения. Подключение ко всем регионам с помощью пакета Azure SDK для Python

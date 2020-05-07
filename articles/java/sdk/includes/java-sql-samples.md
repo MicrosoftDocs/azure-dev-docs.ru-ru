@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: f8efc740f9641b72e8aaf1af29bf0b2620457fdd
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81674230"
 ---
-|Образец   |Описание  |
+|Образец   |Description  |
 |---------|---------|
 | [Подключение и создание запросов к данным из базы данных SQL Azure с помощью JDBC][4] | Настраивайте примеры баз данных, а затем выполняйте команды select, insert, update и delete. |
 | [Создание и администрирование баз данных SQL][1] | Создавайте базы данных SQL, определяйте уровни производительности и настраивайте брандмауэры.|

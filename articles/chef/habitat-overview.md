@@ -5,10 +5,10 @@ keywords: azure, chef, devops, virtual machines, overview, automate, habitat
 ms.date: 05/15/2018
 ms.topic: article
 ms.openlocfilehash: 9a1ef0c4f59f7b973898de0f8ad4aaeb0771265f
-ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80892973"
 ---
 # <a name="use-habitat-to-deploy-your-application-to-azure"></a>Использование Habitat для развертывания приложения в Azure

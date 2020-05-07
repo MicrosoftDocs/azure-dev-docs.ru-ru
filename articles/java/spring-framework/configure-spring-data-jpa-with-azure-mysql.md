@@ -7,10 +7,10 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
 ms.openlocfilehash: 8620c7d5306e221479baad4cc2a73cc9cb04947d
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668830"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Как использовать JPA Spring Data с Базой данных Azure для MySQL

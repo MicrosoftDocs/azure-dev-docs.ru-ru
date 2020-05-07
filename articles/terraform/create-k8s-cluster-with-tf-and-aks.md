@@ -5,10 +5,10 @@ keywords: Azure DevOps, Terraform, AKS, Kubernetes
 ms.topic: tutorial
 ms.date: 03/09/2020
 ms.openlocfilehash: 45a27dcd8751484f71c7a89f08109d2303ea121e
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171150"
 ---
 # <a name="tutorial-create-a-kubernetes-cluster-with-azure-kubernetes-service-using-terraform"></a>Руководство по созданию кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform

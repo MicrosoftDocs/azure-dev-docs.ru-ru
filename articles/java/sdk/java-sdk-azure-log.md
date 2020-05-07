@@ -8,10 +8,10 @@ ms.date: 03/25/2020
 ms.topic: article
 ms.service: multiple
 ms.openlocfilehash: 9f7ad8d772b7de1335ebc3ba77cdea8aa1e8b683
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671950"
 ---
 # <a name="configure-logging-with-the-azure-sdk-for-java"></a>Настройка ведения журнала с пакетом Azure SDK для Java

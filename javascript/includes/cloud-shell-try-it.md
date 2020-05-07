@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 4d7e328272401f51ca645028f1e4a52500afe1f3
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "68285925"
 ---
 ## <a name="launch-azure-cloud-shell"></a>Запуск Azure Cloud Shell

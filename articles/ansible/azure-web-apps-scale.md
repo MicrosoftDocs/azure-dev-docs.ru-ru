@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, playbook, Azure App Service, Web App, sc
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: beb9009fa02742ce39b15da9be60895acfbcd3cc
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743687"
 ---
 # <a name="tutorial-scale-apps-in-azure-app-service-using-ansible"></a>Руководство по масштабированию приложений в Службе приложений Azure с помощью Ansible

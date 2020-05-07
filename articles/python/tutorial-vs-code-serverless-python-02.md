@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
 ms.openlocfilehash: d1651b337c3d47b8dee839500d6fc017e50b6064
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441189"
 ---
 # <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"

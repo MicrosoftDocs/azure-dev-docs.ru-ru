@@ -3,10 +3,10 @@ author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
 ms.openlocfilehash: e37d0337361ce742ce7f7994ab634e63bc4b2ead
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671650"
 ---
 ### <a name="inventory-secrets"></a>Проверка секретов

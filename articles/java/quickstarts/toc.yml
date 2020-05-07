@@ -3,7 +3,7 @@
   items:
     - name: Службы вычислений
       href: compute.md
-    - name: Данные
+    - name: 'Данные '
       href: data.md
     - name: Память
       href: storage.md

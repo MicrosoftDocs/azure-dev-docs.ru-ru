@@ -5,16 +5,16 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
 ms.openlocfilehash: 690ae9375a8ac8d929d610bde4e306061cd1ff8e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74466836"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.
 
-## <a name="azure-cli"></a>Инфраструктура CLI Azure
+## <a name="azure-cli"></a>Azure CLI
 Azure CLI оптимизирован для управления ресурсами Azure из командной строки.
 
 ![Интерфейс командной строки Azure для управления ресурсами Azure](media/node-azure-tools/azure-cli.png)
@@ -33,7 +33,7 @@ Azure CLI оптимизирован для управления ресурса�
 ### <a name="azure-extensions"></a>Расширения Azure
 Используйте следующие бесплатные расширения для взаимодействия со службами Azure непосредственно в Visual Studio Code.
 
-| Средство | ОПИСАНИЕ  |
+| Инструмент | Description  |
 |:---------:|---------|
 | [Функции Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Средства Функций Azure](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Создание, администрирование, просмотр, отладка и развертывание функций|
 | [Служба приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Средства службы приложений](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Навигация по сайтам и порталу Azure, создание сайтов и развертывание в слоты |

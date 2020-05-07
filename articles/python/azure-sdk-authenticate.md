@@ -5,10 +5,10 @@ ms.date: 01/16/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
 ms.openlocfilehash: e972d0159f97feddf4dd773d69b422634c3966c1
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441799"
 ---
 # <a name="authenticate-by-using-the-azure-management-libraries-for-python"></a>Проверка подлинности с использованием библиотек управления Azure для Python

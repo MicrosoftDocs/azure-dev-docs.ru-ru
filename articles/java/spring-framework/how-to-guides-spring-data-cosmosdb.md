@@ -6,10 +6,10 @@ ms.author: kuthapar
 ms.topic: conceptual
 ms.date: 1/9/2019
 ms.openlocfilehash: 838fb4efa79f5d3ef8a97977a0d239a809e2506d
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81674290"
 ---
 # <a name="spring-data-azure-cosmos-db-developers-guide"></a>Руководство для разработчиков Spring Data Azure Cosmos DB
@@ -221,7 +221,7 @@ public CosmosDBConfig getConfig() {
 
 Версия 2.2.x пакета SDK для Spring Data Cosmos DB поддерживает строку диагностики ответов и метрики запросов.
 
-Чтобы включить метрики запросов, в файле `application.properties` установите для флага `populateQueryMetrics` значение **true**. Затем расширьте интерфейс `ResponseDiagnosticsProcessor` и реализуйте метод `processResponseDiagnostics` для ведения журнала диагностики. Наконец, передайте экземпляр реализации в метод `CosmosDbConfig.setResponseDiagnosticsProcessor`. Ниже приведен код примера реализации.
+Чтобы включить метрики запросов, в файле `populateQueryMetrics` установите для флага **значение**true`application.properties`. Затем расширьте интерфейс `ResponseDiagnosticsProcessor` и реализуйте метод `processResponseDiagnostics` для ведения журнала диагностики. Наконец, передайте экземпляр реализации в метод `CosmosDbConfig.setResponseDiagnosticsProcessor`. Ниже приведен код примера реализации.
 
 ```java
 @Configuration

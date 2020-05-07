@@ -7,10 +7,10 @@ ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
 ms.openlocfilehash: 5e5dfdf4aab983678195827d33451fbe626100c0
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104925"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux

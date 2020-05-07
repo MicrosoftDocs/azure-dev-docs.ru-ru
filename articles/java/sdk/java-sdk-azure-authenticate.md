@@ -9,10 +9,10 @@ ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
 ms.openlocfilehash: 744d0194958fd0bd5bb96e6a03a70a8ce126d7c5
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670260"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Проверка подлинности с использованием библиотек Azure для Java

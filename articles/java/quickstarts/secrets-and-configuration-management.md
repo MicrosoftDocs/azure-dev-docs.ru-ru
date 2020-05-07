@@ -4,10 +4,10 @@ description: Список материалов по началу работы в
 ms.date: 04/09/2020
 ms.topic: conceptual
 ms.openlocfilehash: 572472c5fabb0de053e50718f81b01d625ba9f98
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669750"
 ---
 # <a name="secrets-and-configuration-management-for-java-apps-on-azure"></a>Секреты и управление конфигурацией для приложений Java в Azure

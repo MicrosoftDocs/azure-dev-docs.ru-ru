@@ -7,10 +7,10 @@ ms.topic: article
 ms.date: 11/13/2018
 ms.custom: seo-java-july2019
 ms.openlocfilehash: c92ef101c15d5407ecc2d643388fc8caaf2fc75f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670800"
 ---
 # <a name="azure-tools-for-java-developers"></a>Средства Azure для разработчиков Java

@@ -6,10 +6,10 @@ ms.author: manriem
 ms.topic: conceptual
 ms.date: 2/28/2020
 ms.openlocfilehash: d17551aeb1041415e2c5b6d5fd8a43d3b7b670aa
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673390"
 ---
 # <a name="migrate-weblogic-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений WebLogic в WildFly в Службе Azure Kubernetes

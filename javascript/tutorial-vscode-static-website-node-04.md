@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
 ms.openlocfilehash: 53578d829167512877c2359d02c3e70d88afe77f
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77440903"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Развертывание веб-сайта в Службе хранилища Azure

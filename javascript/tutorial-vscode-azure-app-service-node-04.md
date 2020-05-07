@@ -4,10 +4,10 @@ description: Руководство, часть 4. Просмотр журна�
 ms.topic: conceptual
 ms.date: 03/04/2020
 ms.openlocfilehash: e6c1f4f87a28b33dac51d6ffc59c0cd9dfdc429d
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "78893531"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Потоковая передача журналов из Службы приложений Azure

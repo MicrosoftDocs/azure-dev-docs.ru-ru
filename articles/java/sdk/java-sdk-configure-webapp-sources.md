@@ -6,10 +6,10 @@ ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
 ms.topic: article
 ms.date: 03/30/2017
 ms.openlocfilehash: c6fcf68e5ac4509744a618fab8b80f09ce24f052
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105025"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Настройка источников развертывания в службе приложений Azure из приложений Java

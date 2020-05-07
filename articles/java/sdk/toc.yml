@@ -25,7 +25,7 @@
           href: java-sdk-azure-web-apps-samples.md
         - name: База данных SQL
           href: java-sdk-azure-sql-database-samples.md
-        - name: Безопасность
+        - name: безопасность
           href: java-sdk-azure-security-samples.md
         - name: Контейнеры
           href: java-sdk-azure-containers-samples.md

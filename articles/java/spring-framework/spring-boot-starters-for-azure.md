@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 48e1381761311a4ed9b5bd6f764af6f19f008fc1
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670020"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Начальные приложения Spring Boot для Azure
@@ -40,7 +40,7 @@ ms.locfileid: "81670020"
 <a name="azure-support"></a>
 ## <a name="azure-support"></a>Поддержка Azure
 
-Начальное приложение Spring Boot поддерживает автоматическую настройку служб Azure, таких как Служебная шина Azure, служба хранилища Azure, Active Directory, Cosmos DB, Key Vault и др.
+Это начальное приложение Spring Boot поддерживает автоматическую настройку таких служб Azure, как служебная шина, служба хранилища, Active Directory, Cosmos DB, Key Vault, и т. д.
 
 Примеры использования разных функций Azure с этим начальным приложением, см. по следующей ссылке:
 

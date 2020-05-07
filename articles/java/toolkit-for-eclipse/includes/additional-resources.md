@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: fbd1a9e6ab8f373c68345e4e43dd6d4cddfbfc44
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670910"
 ---
 Сообщить об ошибке или запросить новые функции можно в [нашем репозитории GitHub](https://github.com/Microsoft/azure-tools-for-java/issues). Также можно задать вопросы на сайте [Stack Overflow, пометив их тегом azure-java-tools](https://stackoverflow.com/questions/tagged/azure-java-tools).

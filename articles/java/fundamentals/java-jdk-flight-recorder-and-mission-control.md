@@ -5,10 +5,10 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
 ms.openlocfilehash: 23effea162bb4f39ca7ff9477695e21e6faeafdb
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670870"
 ---
 # <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>Мониторинг рабочих нагрузок Java и управление ими с помощью Java Flight Recorder (JFR) и Zulu Mission Control

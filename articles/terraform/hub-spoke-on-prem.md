@@ -4,10 +4,10 @@ description: Узнайте, как реализовать локальную в
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: cbce485076be459882609f8f38ab51d085e2b3e1
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170960"
 ---
 # <a name="tutorial-create-on-premises-virtual-network-in-azure-using-terraform"></a>Руководство по Создание локальной виртуальной сети в Azure с помощью Terraform

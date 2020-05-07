@@ -5,10 +5,10 @@ keywords: azure, chef, devops, virtual machines, overview, automate, inspec
 ms.date: 03/19/2019
 ms.topic: article
 ms.openlocfilehash: 096ea093c96187a4a88ba4ce408d2cf2edbf469d
-ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80893003"
 ---
 # <a name="use-inspec-for-compliance-automation-of-your-azure-infrastructure"></a>Использование InSpec для автоматизации обеспечения соответствия инфраструктуры Azure

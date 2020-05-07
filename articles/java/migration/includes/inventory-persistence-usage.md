@@ -3,10 +3,10 @@ author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
 ms.openlocfilehash: 478059f598b9c39609a85647945ebef3df3cb7ec
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671640"
 ---
 ### <a name="inventory-persistence-usage"></a>Проверка использования сохраняемости

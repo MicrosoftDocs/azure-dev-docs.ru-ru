@@ -9,10 +9,10 @@ manager: gwallace
 ms.author: tarcher
 ms.date: 04/30/2019
 ms.openlocfilehash: 76e59ccd9b97771877b6c2a919dcfaf8b12840eb
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743865"
 ---
 # <a name="quickstart-configure-linux-virtual-machines-in-azure-using-ansible"></a>Краткое руководство. Настройка виртуальных машин Linux в Azure с помощью Ansible
