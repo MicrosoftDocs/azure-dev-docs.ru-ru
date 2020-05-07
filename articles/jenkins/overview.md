@@ -4,12 +4,12 @@ description: Размещение сборки Jenkins и развертыван
 keywords: jenkins, azure, devops, overview
 ms.topic: overview
 ms.date: 10/23/2019
-ms.openlocfilehash: f630dd601cc384588ae4d3af1a051b5c706de0b6
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 19bacd6e1b3d4ddee4e6fef27b2183f4a33545d6
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171130"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861307"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins
 
@@ -34,7 +34,7 @@ ms.locfileid: "82171130"
 После настройки [субъекта-службы Azure](/azure/azure-resource-manager/resource-group-overview) для заданий и конвейеров Jenkins эти учетные данные можно будет использовать для следующего:
 
 - Для безопасного хранения и архивации артефактов сборки в [службе хранилища Azure](/azure/storage/common/storage-introduction) с помощью [подключаемого модуля службы хранилища Azure](https://plugins.jenkins.io/windows-azure-storage). Просмотрите [практическое руководство по хранилищу Jenkins](azure-storage-blobs-as-build-artifact-repository.md), чтобы получить дополнительные сведения.
-- Для управления и настройки ресурсов Azure с помощью [Azure CLI](/azure/jenkins/deploy-to-azure-app-service-using-azure-cli).
+- Для управления и настройки ресурсов Azure с помощью [Azure CLI](deploy-to-azure-app-service-using-azure-cli.md).
 
 ## <a name="deploy-your-code-into-azure-services"></a>Развертывание кода в службах Azure
 
