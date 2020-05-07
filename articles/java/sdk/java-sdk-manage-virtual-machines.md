@@ -7,10 +7,10 @@ ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
 ms.openlocfilehash: 90bf21232ed5ac8b4f98122951b6cfe4aed2eb4c
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104985"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Управление виртуальными машинами Azure из приложений Java

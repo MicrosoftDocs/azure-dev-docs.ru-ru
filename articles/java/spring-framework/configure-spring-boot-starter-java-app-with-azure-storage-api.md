@@ -9,10 +9,10 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
 ms.openlocfilehash: ef39aa09fb3f10f34d70fb5b0a72cd8a55f0859e
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669130"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Использование начального приложения Spring Boot с API службы хранилища Azure
@@ -21,7 +21,7 @@ ms.locfileid: "81669130"
 
 В этой статье описано, как с помощью **Spring Initializr** создать приложение для получения доступа к хранилищу Azure с помощью API службы хранилища Azure.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -104,7 +104,7 @@ ms.locfileid: "81669130"
    ```
    Где:
 
-   | Параметр | Описание |
+   | Параметр | Description |
    |---|---|
    | `name` | Указывает уникальное имя для группы ресурсов. |
    | `location` | Указывает [регион Azure](https://azure.microsoft.com/regions/) для размещения группы ресурсов. |
@@ -130,7 +130,7 @@ ms.locfileid: "81669130"
    ```
    Где:
 
-   | Параметр | Описание |
+   | Параметр | Description |
    |---|---|
    | `name` | Указывает уникальное имя для учетной записи хранения. |
    | `resource-group` | Указывает имя созданной ранее группы ресурсов. |
@@ -160,7 +160,7 @@ ms.locfileid: "81669130"
    ```
    Где:
 
-   | Параметр | Описание |
+   | Параметр | Description |
    | ---|---|
    | `name` | Указывает уникальное имя созданной ранее учетной записи хранения. |
    | `resource-group` | Указывает имя созданной ранее группы ресурсов. |

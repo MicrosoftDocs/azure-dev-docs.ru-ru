@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, сборник схем, cosmo db, ба�
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: 471b53e71683311a99a811dbc14e4439a81f5948
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743355"
 ---
 # <a name="tutorial-configure-azure-cosmos-db-accounts-using-ansible"></a>Руководство по настройке учетных записей Azure Cosmos DB с помощью Ansible

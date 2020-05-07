@@ -4,10 +4,10 @@ description: Узнайте, как создать простую конфигу
 ms.topic: tutorial
 ms.date: 04/26/2020
 ms.openlocfilehash: 88bcb862389a4cbfc611f7beab797e7601c49258
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171020"
 ---
 # <a name="tutorial-deploy-an-azure-cosmos-db-to-azure-container-instances"></a>Руководство по развертыванию Azure Cosmos DB в службе "Экземпляры контейнеров Azure"

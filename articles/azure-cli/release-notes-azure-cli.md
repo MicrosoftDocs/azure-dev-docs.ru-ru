@@ -9,10 +9,10 @@ ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 10dfdc316ba00f8a7019f0724aab231e344c1c6d
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031316"
 ---
 # <a name="azure-cli-release-notes"></a>Заметки о выпуске Azure CLI

@@ -3,10 +3,10 @@ author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
 ms.openlocfilehash: 59b4d787679daed57d4647787da17b6f508d95c4
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673470"
 ---
 ### <a name="account-for-the-use-of-custom-security-providers-and-jaas"></a>Учетная запись для использования настраиваемых поставщиков услуг безопасности и JAAS

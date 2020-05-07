@@ -4,10 +4,10 @@ description: Руководство, часть 5. Очистка ресурс�
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.openlocfilehash: ab20f86fd01aaac65c44afd0901c62f61a6ce119
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74466508"
 ---
 # <a name="clean-up-resources"></a>Очистка ресурсов
@@ -18,7 +18,7 @@ ms.locfileid: "74466508"
 
 Чтобы удалить эти ресурсы, можно посетить [портал Azure](https://portal.azure.com), щелкнуть **Группы ресурсов** в области навигации слева, выбрать созданную с помощью этого руководства группу ресурсов и щелкнуть **Удалить группу ресурсов**.
 
-## <a name="next-steps"></a>Дополнительная информация
+## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [tutorial-next-steps](includes/tutorial-next-steps.md)]
 

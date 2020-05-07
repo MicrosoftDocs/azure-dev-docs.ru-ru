@@ -4,10 +4,10 @@ description: Руководство, часть 2. Создание прило�
 ms.topic: conceptual
 ms.date: 03/04/2020
 ms.openlocfilehash: 86d3801b31f1a0c5fb988940a7c9f550a991f0d2
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105195"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>Создание и запуск локального приложения Node.js

@@ -4,10 +4,10 @@ description: Узнайте, как использовать Terraform для р
 ms.topic: overview
 ms.date: 10/26/2019
 ms.openlocfilehash: 63f17be153d8c1683eb6aff98552834cc88b8f03
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171110"
 ---
 # <a name="terraform-with-azure"></a>Terraform с Azure

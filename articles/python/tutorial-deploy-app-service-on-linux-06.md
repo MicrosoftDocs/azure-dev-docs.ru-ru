@@ -5,10 +5,10 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
 ms.openlocfilehash: f2e19a52b673ddcef927165191d610776e06a32f
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80441899"
 ---
 # <a name="6-stream-logs-from-azure-app-service-into-visual-studio-code"></a>6\. Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code

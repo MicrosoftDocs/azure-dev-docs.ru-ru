@@ -5,10 +5,10 @@ keywords: Jenkins, Azure, DevOps, портал, Linux, виртуальная м
 ms.topic: quickstart
 ms.date: 03/03/2020
 ms.openlocfilehash: 2ea038dad2294784804f45026ea26198a9b12d79
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170340"
 ---
 # <a name="quickstart-create-a-jenkins-server-on-an-azure-linux-vm"></a>Краткое руководство. Создание сервера Jenkins на виртуальной машине Azure под управлением Linux.

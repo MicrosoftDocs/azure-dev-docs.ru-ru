@@ -5,10 +5,10 @@ keywords: jenkins, azure, devops, overview
 ms.topic: overview
 ms.date: 10/23/2019
 ms.openlocfilehash: f630dd601cc384588ae4d3af1a051b5c706de0b6
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171130"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins

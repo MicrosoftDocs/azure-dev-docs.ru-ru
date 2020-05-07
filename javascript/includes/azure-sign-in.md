@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e58e36b140c1512600497bffbbd149334904981f
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "78894308"
 ---
 Установив расширение Azure, войдите в свою учетную запись Azure в VS Code. Для этого перейдите в обозреватель **Azure**, щелкните **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).

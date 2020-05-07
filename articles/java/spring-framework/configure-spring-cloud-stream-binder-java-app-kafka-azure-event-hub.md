@@ -7,17 +7,17 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.topic: article
 ms.openlocfilehash: 1141c54e613003f6fcc9396b11528765eaf3f8ad
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669600"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
 
 В статье показано, как настроить приложение Spring Cloud Stream Binder на основе Java, созданное с помощью Spring Boot Initializr для использования [Apache Kafka] в Центрах событий Azure.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -222,7 +222,7 @@ ms.locfileid: "81669600"
    ```
    Где:
 
-   |                       Поле                       |                                                                                   Описание                                                                                    |
+   |                       Поле                       |                                                                                   Description                                                                                    |
    |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `spring.cloud.azure.credential-file-path`     |                                                    Определяет файл учетных данных Azure, который был создан ранее в этом примере.                                                    |
    |        `spring.cloud.azure.resource-group`        |                                                      Определяет группу ресурсов Azure, которая содержит концентратор событий Azure.                                                      |

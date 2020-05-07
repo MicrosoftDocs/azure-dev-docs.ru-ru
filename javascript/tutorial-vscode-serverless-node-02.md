@@ -4,10 +4,10 @@ description: Руководство, часть 2. Создание прило�
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.openlocfilehash: fb7b5f3bab0dbde0a04671126ad7aa8e5be16ba0
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "79089958"
 ---
 # <a name="create-the-local-functions-app"></a>Создание локального приложения в службе "Функции"

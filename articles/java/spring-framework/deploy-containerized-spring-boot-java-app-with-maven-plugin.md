@@ -10,10 +10,10 @@ ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019
 ms.openlocfilehash: b926b0bd1cb401f12f927abfea112e6004988812
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668400"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Развертывание контейнерного приложения Spring Boot в Azure с помощью Maven для веб-приложений Azure
@@ -27,7 +27,7 @@ ms.locfileid: "81668400"
 > Подключаемый модуль Maven для веб-приложений Azure в настоящее время доступен в предварительной версии. Сейчас поддерживается только FTP-публикация, но на будущее запланированы дополнительные функции.
 > 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для работы с этим руководством требуется следующее.
 
@@ -103,7 +103,7 @@ ms.locfileid: "81668400"
    ```
    Где:
 
-   | Параметр  |                    Описание                     |
+   | Параметр  |                    Description                     |
    |------------|----------------------------------------------------|
    | `uuuuuuuu` | Определяет имя пользователя для субъекта-службы. |
    | `pppppppp` | Определяет пароль для субъекта-службы.  |
@@ -152,7 +152,7 @@ ms.locfileid: "81668400"
    ```
    Где:
 
-   |     Элемент     |                                                                                   Описание                                                                                   |
+   |     Элемент     |                                                                                   Description                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `<id>`      |                                Задает уникальное имя, которое Maven использует для поиска параметров безопасности при развертывании веб-приложения в Azure.                                |
    |   `<client>`    |                                                             Содержит значение `appId` из субъекта-службы.                                                             |
@@ -163,7 +163,7 @@ ms.locfileid: "81668400"
 
 3. Сохраните и закройте файл *settings.xml*.
 
-## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>НЕОБЯЗАТЕЛЬНО. Развертывание локального файла Docker в Docker Hub
+## <a name="optional-deploy-your-local-docker-file-to-docker-hub"></a>НЕОБЯЗАТЕЛЬНО. Развертывание локального файла Docker в центр Docker
 
 При наличии учетной записи Docker образ контейнера Docker можно создать локально и принудительно отправить его в центр Docker. Для этого выполните следующие действия.
 
@@ -191,7 +191,7 @@ ms.locfileid: "81668400"
       mvn clean package docker:build -DpushImage
       ```
 
-## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>НЕОБЯЗАТЕЛЬНО. Настройка pom.xml перед развертыванием контейнера в Azure
+## <a name="optional-customize-your-pomxml-before-deploying-your-container-to-azure"></a>НЕОБЯЗАТЕЛЬНО. Настройка pom.xml перед развертыванием веб-приложения в Azure
 
 Откройте файл `pom.xml` для приложения Spring Boot в текстовом редакторе, а затем найдите элемент `<plugin>` для `azure-webapp-maven-plugin`. Этот элемент должен выглядеть примерно следующим образом.
 
@@ -222,7 +222,7 @@ ms.locfileid: "81668400"
 
 Существует несколько значений, которые можно изменить для подключаемого модуля Maven. Подробное описание каждого из этих элементов см. в документации по [Подключаемый модуль Maven для веб-приложений Azure]. Существует ряд значений, на которые следует обратить внимание в этой статье.
 
-| Элемент | Описание |
+| Элемент | Description |
 |---|---|
 | `<version>` | Версия [Подключаемый модуль Maven для веб-приложений Azure]. См. список версий в [центральном репозитории Maven](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22), чтобы убедиться, что вы используете актуальную версию. |
 | `<authentication>` | Сведения для проверки подлинности для Azure, в которых в данном примере содержится элемент `<serverId>`, который, в свою очередь, содержит `azure-auth`; Maven использует это значение для поиска значений субъекта-службы Azure в файле Maven *settings.xml*, который вы определили в предыдущем разделе этой статьи. |
@@ -336,7 +336,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Docker]: https://www.docker.com/
 [Подключаемый модуль Docker для Maven]: https://github.com/spotify/docker-maven-plugin
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Git]: https://github.com/;
+[Git]: https://github.com/
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Maven]: https://maven.apache.org/
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

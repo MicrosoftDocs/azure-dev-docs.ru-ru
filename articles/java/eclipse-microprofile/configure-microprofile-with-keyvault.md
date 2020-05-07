@@ -11,10 +11,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: e68df202d49b7215eb4bdbff7a42e0900499484c
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105185"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Настройка MicroProfile для использования с Azure Key Vault
