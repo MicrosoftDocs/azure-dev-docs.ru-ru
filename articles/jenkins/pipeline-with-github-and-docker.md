@@ -4,12 +4,12 @@ description: Узнайте, как создать виртуальную маш
 keywords: Jenkins, Azure, DevOps, конвейер, CI/CD, Docker
 ms.topic: tutorial
 ms.date: 03/27/2017
-ms.openlocfilehash: c584d6bbd18c36bde7730180a69194b23cd2c180
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 29c5d8926fe60eeb2e3603f0e3248e1d94763b6c
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169690"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861297"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>Руководство по созданию конвейера Jenkins с помощью GitHub и Docker
 
@@ -28,7 +28,7 @@ ms.locfileid: "82169690"
 Если вы решили установить и использовать интерфейс командной строки локально, то для работы с этим руководством вам понадобится Azure CLI 2.0.30 или более поздней версии. Чтобы узнать версию, выполните команду `az --version`. Если вам необходимо выполнить установку или обновление, см. статью [Установка Azure CLI 2.0]( /cli/azure/install-azure-cli).
 
 ## <a name="create-jenkins-instance"></a>Создание экземпляра Jenkins
-В предыдущем руководстве [Как настроить виртуальную машину Linux при первой загрузке](/azure/virtual-machines/linux/tutorial-automate-vm-deployment.md) вы узнали, как автоматизировать настройку виртуальной машины с помощью cloud-init. В этом учебнике используется файл cloud-init для установки Jenkins и Docker на виртуальной машине. Jenkins — это популярный сервер автоматизации с открытым исходным кодом, который легко интегрируется с Azure для обеспечения непрерывной интеграции и непрерывной поставки (CI/CD). Другие руководства по использованию Jenkins см. в документации [Jenkins® в Azure](https://docs.microsoft.com/azure/jenkins/).
+В предыдущем руководстве [Как настроить виртуальную машину Linux при первой загрузке](/azure/virtual-machines/linux/tutorial-automate-vm-deployment) вы узнали, как автоматизировать настройку виртуальной машины с помощью cloud-init. В этом учебнике используется файл cloud-init для установки Jenkins и Docker на виртуальной машине. Jenkins — это популярный сервер автоматизации с открытым исходным кодом, который легко интегрируется с Azure для обеспечения непрерывной интеграции и непрерывной поставки (CI/CD). Другие руководства по использованию Jenkins см. в документации [Jenkins® в Azure](https://docs.microsoft.com/azure/jenkins/).
 
 В текущей оболочке создайте файл *cloud-init-jenkins.txt* и вставьте в него приведенную ниже конфигурацию. Например, создайте файл в Cloud Shell, не на локальном компьютере. Введите `sensible-editor cloud-init-jenkins.txt`, чтобы создать файл и просмотреть список доступных редакторов. Убедитесь, что весь файл cloud-init скопирован правильно, особенно первая строка:
 
@@ -153,8 +153,8 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 На веб-сайте Jenkins щелкните **Create new jobs** (Создание заданий) на домашней странице.
 
 - Введите *HelloWorld* в качестве имени задания. Выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК**.
-- В разделе **General** (Общие) выберите **проект GitHub** и введите URL-адрес разветвления репозитория, например *https://github.com/cynthn/nodejs-docs-hello-world* .
-- В разделе **Source code management** (Управление исходным кодом) выберите **Git** и введите URL-адрес *GIT-файла* разветвления репозитория, например *https://github.com/cynthn/nodejs-docs-hello-world.git* .
+- В разделе **Общие** выберите проект **GitHub** и введите URL-адрес вилки репозитория, например `https://github.com/cynthn/nodejs-docs-hello-world`.
+- В разделе **Управление исходным кодом** выберите **Git** и введите URL-адрес *GIT-файла* вилки репозитория, например `https://github.com/cynthn/nodejs-docs-hello-world.git`.
 - В разделе **Build Triggers** (Создание триггеров) выберите **GitHub hook trigger for GITScm polling** (Обработчик триггера Github для опроса GITScm).
 - В разделе **Build** (Сборка) щелкните **Add build step** (Добавить шаг сборки). Выберите **Execute shell** (Выполнение оболочки), затем введите `echo "Test"` в командном окне.
 - В нижней части окна заданий нажмите кнопку **Save** (Сохранить).
