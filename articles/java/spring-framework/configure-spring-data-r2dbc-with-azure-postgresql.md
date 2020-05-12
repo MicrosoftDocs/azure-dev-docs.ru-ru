@@ -1,22 +1,22 @@
 ---
-title: Использование R2DBC Spring Data с Базой данных Azure для MySQL
-description: Сведения об использовании R2DBC Spring Data с Базой данных Azure для MySQL.
+title: Использование R2DBC Spring Data с Базой данных Azure для PostgreSQL
+description: Узнайте, как использовать R2DBC Spring Data с Базой данных Azure для PostgreSQL.
 documentationcenter: java
 ms.date: 03/18/2020
-ms.service: mysql
+ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 5dd4f1d41f73f177d99068fc0d981270f0134bb8
+ms.openlocfilehash: 1cc74fd296eeef8cf033fcf304ea577e04dddafd
 ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/05/2020
-ms.locfileid: "82801872"
+ms.locfileid: "82801862"
 ---
-# <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Использование R2DBC Spring Data с Базой данных Azure для MySQL
+# <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Использование R2DBC Spring Data с Базой данных Azure для PostgreSQL
 
-В этом разделе показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](https://docs.microsoft.com/azure/mysql/) и ее извлечения с помощью [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc), используя реализацию R2DBC для MySQL из [репозитория GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
+В этом разделе показано, как создать пример приложения для хранения информации в [Базе данных Azure для PostgreSQL](https://docs.microsoft.com/azure/postgresql/) и ее извлечения с помощью [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc), используя реализацию R2DBC для PostgreSQL из [репозитория GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
 
 [R2DBC](https://r2dbc.io/) приносит реактивные API к традиционным реляционным базам данных. Вы можете применять это решение со Spring WebFlux для создания полностью реактивных приложений Spring Boot, которые используют неблокирующие API. Оно обеспечивает улучшенную масштабируемость по сравнению с классическим подходом "один поток на подключение".
 
@@ -35,16 +35,16 @@ ms.locfileid: "82801872"
 AZ_RESOURCE_GROUP=r2dbc-workshop
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
-AZ_MYSQL_USERNAME=r2dbc
-AZ_MYSQL_PASSWORD=<YOUR_MYSQL_PASSWORD>
+AZ_POSTGRESQL_USERNAME=r2dbc
+AZ_POSTGRESQL_PASSWORD=<YOUR_POSTGRESQL_PASSWORD>
 AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 ```
 
 Замените заполнители следующими значениями, которые используются в этой статье:
 
-- `<YOUR_DATABASE_NAME>`: имя сервера MySQL. Оно должно быть уникальным в Azure.
+- `<YOUR_DATABASE_NAME>`: Имя сервера PostgreSQL. Оно должно быть уникальным в Azure.
 - `<YOUR_AZURE_REGION>`: регион Azure, который вы будете использовать. Вы можете использовать `eastus` по умолчанию, но мы рекомендуем настроить регион, расположенный близко к месту проживания. Полный список доступных регионов можно получить, введя `az account list-locations`.
-- `<YOUR_MYSQL_PASSWORD>`: пароль вашего сервера базы данных MySQL. Такой пароль должен содержать не менее восьми символов и включать знаки всех следующих типов: прописные латинские буквы, строчные латинские буквы, цифры (0–9) и небуквенно-цифровые знаки (!, $, #, % и т. д.).
+- `<YOUR_POSTGRESQL_PASSWORD>`: Пароль для сервера базы данных PostgreSQL. Такой пароль должен содержать не менее восьми символов и включать знаки всех следующих типов: прописные латинские буквы, строчные латинские буквы, цифры (0–9) и небуквенно-цифровые знаки (!, $, #, % и т. д.).
 - `<YOUR_LOCAL_IP_ADDRESS>`: IP-адрес локального компьютера, с которого будет запускаться приложение Spring Boot. Одним из удобных способов его поиска является ввод в обозревателе адреса [whatismyip.akamai.com](http://whatismyip.akamai.com/).
 
 Затем создайте группу ресурсов:
@@ -60,37 +60,37 @@ az group create \
 > Чтобы отобразить данные JSON и сделать их более удобными для чтения, мы используем служебную программу `jq`, которая по умолчанию устанавливается в [Azure Cloud Shell](https://shell.azure.com/).
 > Если вам не нравится эта служебная программа, вы можете безопасно удалить `| jq` часть всех команд, которые мы будем использовать.
 
-## <a name="create-an-azure-database-for-mysql-instance"></a>Создание экземпляра Базы данных Azure для MySQL
+## <a name="create-an-azure-database-for-postgresql-instance"></a>Создание экземпляра Базы данных Azure для PostgreSQL
 
-Первое, что мы создадим, — это управляемый сервер MySQL.
+Прежде всего мы создадим управляемый сервер PostgreSQL.
 
 > [!NOTE]
-> См. сведения о создании серверов MySQL в руководстве по [созданию базы данных Azure для сервера MySQL с помощью портала Azure](/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal).
+> См. сведения о [создании сервера Базы данных Azure для PostgreSQL с помощью портала Azure](/azure/postgresql/quickstart-create-server-database-portal).
 
 Выполните следующий скрипт в [Azure Cloud Shell](https://shell.azure.com/):
 
 ```azurecli
-az mysql server create \
+az postgres server create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name $AZ_DATABASE_NAME \
     --location $AZ_LOCATION \
     --sku-name B_Gen5_1 \
     --storage-size 5120 \
-    --admin-user $AZ_MYSQL_USERNAME \
-    --admin-password $AZ_MYSQL_PASSWORD \
+    --admin-user $AZ_POSTGRESQL_USERNAME \
+    --admin-password $AZ_POSTGRESQL_PASSWORD \
     | jq
 ```
 
-Эта команда создает небольшой сервер MySQL.
+Эта команда создает небольшой сервер PostgreSQL.
 
-### <a name="configure-a-firewall-rule-for-your-mysql-server"></a>Настройка правила брандмауэра для сервера MySQL
+### <a name="configure-a-firewall-rule-for-your-postgresql-server"></a>Настройка правила брандмауэра для сервера PostgreSQL
 
-Экземпляры Базы данных Azure для MySQL по умолчанию защищены. В них включен брандмауэр, который блокирует все входящие подключения. Чтобы вы могли использовать нашу базу данных, добавьте правило брандмауэра, которое разрешит локальному IP-адресу обращаться к серверу базы данных.
+Экземпляры Базы данных Azure для PostgreSQL по умолчанию защищены. В них включен брандмауэр, который блокирует все входящие подключения. Чтобы вы могли использовать нашу базу данных, добавьте правило брандмауэра, которое разрешит локальному IP-адресу обращаться к серверу базы данных.
 
 Так как вы настроили локальный IP-адрес ранее, вы можете открыть брандмауэр сервера, выполнив следующую команду:
 
 ```azurecli
-az mysql server firewall-rule create \
+az postgres server firewall-rule create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name $AZ_DATABASE_NAME-database-allow-local-ip \
     --server $AZ_DATABASE_NAME \
@@ -99,12 +99,12 @@ az mysql server firewall-rule create \
     | jq
 ```
 
-### <a name="configure-a-mysql-database"></a>Настройка базы данных MySQL
+### <a name="configure-a-postgresql-database"></a>Настройка базы данных PostgreSQL
 
-Созданный вами ранее сервер MySQL пуст. На нем отсутствует база данных, которую можно использовать с приложением Spring Boot. Создайте новую базу данных с именем `r2dbc`:
+Созданный вами ранее сервер PostgreSQL пуст. На нем отсутствует база данных, которую можно использовать с приложением Spring Boot. Создайте новую базу данных с именем `r2dbc`:
 
 ```azurecli
-az mysql db create \
+az postgres db create \
     --resource-group $AZ_RESOURCE_GROUP \
     --name r2dbc \
     --server-name $AZ_DATABASE_NAME \
@@ -127,35 +127,38 @@ az mysql db create \
 curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M4 -d javaVersion=8 | tar -xzvf -
 ```
 
-### <a name="add-the-reactive-mysql-driver-implementation"></a>Добавление реализации реактивного драйвера MySQL
+### <a name="add-the-reactive-postgresql-driver-implementation"></a>Добавление реализации реактивного драйвера PostgreSQL
 
-Откройте файл *pom.xml* созданного проекта, чтобы добавить реактивный драйвер MySQL из [репозитория GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
+Откройте файл *pom.xml* созданного проекта, чтобы добавить реактивный драйвер PostgreSQL из [репозитория GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
 
 После зависимости `spring-boot-starter-webflux` добавьте следующий фрагмент кода:
 
 ```xml
 <dependency>
-   <groupId>dev.miku</groupId>
-   <artifactId>r2dbc-mysql</artifactId>
-   <version>0.8.1.RELEASE</version>
-   <scope>runtime</scope>
+    <groupId>io.r2dbc</groupId>
+    <artifactId>r2dbc-postgresql</artifactId>
+    <scope>runtime</scope>
 </dependency>
 ```
 
-### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Настройка Spring Boot для использования Базы данных Azure для MySQL
+### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Настройка Spring Boot для использования Базы данных Azure для PostgreSQL
 
 Откройте файл *src/main/resources/application.properties* и добавьте следующее:
 
 ```properties
 logging.level.org.springframework.data.r2dbc=DEBUG
 
-spring.r2dbc.url=r2dbc:pool:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
+spring.r2dbc.url=r2dbc:pool:postgres://$AZ_DATABASE_NAME.postgres.database.azure.com:5432/r2dbc
 spring.r2dbc.username=r2dbc@$AZ_DATABASE_NAME
-spring.r2dbc.password=$AZ_MYSQL_PASSWORD
+spring.r2dbc.password=$AZ_POSTGRESQL_PASSWORD
+spring.r2dbc.properties.sslMode=REQUIRE
 ```
 
+> [!WARNING]
+> Из соображений безопасности для Базы данных Azure для PostgreSQL требуется использовать SSL-соединения. Поэтому вам нужно добавить свойство конфигурации `spring.r2dbc.properties.sslMode=REQUIRE`. В противном случае драйвер R2DBC PostgreSQL будет использовать небезопасное подключение, что приведет к сбою.
+
 - Замените две переменные `$AZ_DATABASE_NAME` значением, которое вы настроили ранее.
-- Замените переменную `$AZ_MYSQL_PASSWORD` значением, которое вы настроили ранее.
+- Замените переменную `$AZ_POSTGRESQL_PASSWORD` значением, которое вы настроили ранее.
 
 > [!NOTE]
 > Для лучшей производительности в качестве значения свойства `spring.r2dbc.url` указан пул подключений, как описано в репозитории [r2dbc-pool](https://github.com/r2dbc/r2dbc-pool).
@@ -168,7 +171,7 @@ spring.r2dbc.password=$AZ_MYSQL_PASSWORD
 
 Ниже приведен снимок экрана приложения, выполняемого в первый раз:
 
-[![Выполняющееся приложение](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-01.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-01.png#lightbox)
+[![Выполняющееся приложение](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-01.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-01.png#lightbox)
 
 ### <a name="create-the-database-schema"></a>Создание схемы базы данных
 
@@ -200,11 +203,11 @@ CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARC
 
 Ниже приведен снимок экрана с создаваемой таблицей базы данных:
 
-[![Создание таблицы базы данных](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-02.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-02.png#lightbox)
+[![Создание таблицы базы данных](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-02.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-02.png#lightbox)
 
 ## <a name="code-the-application"></a>Добавление кода приложения
 
-Затем добавьте код Java, который будет использовать R2DBC для хранения и извлечения данных из сервера MySQL.
+Затем добавьте код Java, который будет использовать R2DBC для хранения и извлечения данных с сервера PostgreSQL.
 
 Теперь создайте новый класс Java `Todo` рядом с классом `DemoApplication`:
 
@@ -354,9 +357,9 @@ curl http://127.0.0.1:8080
 
 Ниже приведен снимок экрана с этими запросами cURL:
 
-[![Тестирование с помощью cURL](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-03.png)](media/configure-spring-data-r2dbc-with-azure-mysql/create-mysql-03.png#lightbox)
+[![Тестирование с помощью cURL](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-03.png)](media/configure-spring-data-r2dbc-with-azure-postgresql/create-postgresql-03.png#lightbox)
 
-Поздравляем! Вы создали полностью реактивное приложение Spring Boot, которое использует R2DBC для хранения и извлечения данных из Базы данных Azure для MySQL.
+Поздравляем! Вы создали полностью реактивное приложение Spring Boot, которое использует R2DBC для хранения и извлечения данных из Базы данных Azure для PostgreSQL.
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 

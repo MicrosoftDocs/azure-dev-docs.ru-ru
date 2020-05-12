@@ -1,0 +1,48 @@
+### YamlMime:Landing
+title: Совместная работа GitHub и Azure
+summary: Узнайте, как использовать GitHub в сочетании с Azure для создания и развертывания приложений.
+metadata:
+  title: Совместная работа GitHub и Azure
+  description: Узнайте, как использовать GitHub в сочетании с Azure для создания и развертывания приложений.
+  ms.service: azure
+  ms.topic: landing-page
+  author: KathrynEE
+  ms.author: kaelli
+  ms.date: 05/05/2020
+  ms.openlocfilehash: ea8d295dcd5c5a51261cbcbe223a5b89400740ba
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82990366"
+landingContent:
+- title: GitHub Actions для Azure
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Развертывание в Azure с помощью GitHub Actions
+      url: github-actions.md
+- title: Развертывание в Azure
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Развертывание приложений из GitHub в Azure
+      url: deploy-to-azure.md
+- title: Visual Studio и Visual Studio Code
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Развертывание приложений из GitHub с помощью Visual Studio или Visual Studio Code
+      url: deploy-with-visual-studio.md
+- title: Интеграция Azure DevOps с GitHub
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Работа с Azure DevOps и GitHub
+      url: integrate-azure-devops.md
+- title: Подключение из Azure к GitHub
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Подключение к GitHub из Azure и других служб
+      url: connect-from-azure.md

@@ -1,0 +1,13 @@
+- name: Совместная работа Azure и GitHub
+  href: index.yml
+  items:
+    - name: GitHub Actions для Azure
+      href: github-actions.md
+    - name: Развертывание приложений из GitHub в Azure
+      href: deploy-to-azure.md
+    - name: Интеграция средств для GitHub Actions
+      href: deploy-with-visual-studio.md
+    - name: Интеграция Azure DevOps с GitHub
+      href: integrate-azure-devops.md
+    - name: Подключение из Azure к GitHub
+      href: connect-from-azure.md

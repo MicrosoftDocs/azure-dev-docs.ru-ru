@@ -8,12 +8,12 @@ metadata:
   ms.author: karler
   ms.date: 04/03/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 772bb5caba59d9f620d22d7d5fb945a617419095
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: abd14e250416b5718537e1ca14b4ffdd8f3f3b5e
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "81675160"
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82988938"
 landingContent:
 - title: Перенос приложений Java в Azure
   linkLists:
@@ -25,8 +25,12 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Переход из Spring в Службу приложений Azure
-      url: migrate-java-se-to-java-se-app-service.md
+    - text: Переход со Spring Boot на Службу приложений Azure
+      url: migrate-spring-boot-to-app-service.md
+    - text: Переход со Spring Boot на AKS
+      url: migrate-spring-boot-to-azure-kubernetes-service.md
+    - text: Переход со Spring Cloud на Azure Spring Cloud
+      url: migrate-spring-cloud-to-azure-spring-cloud.md
 - title: Миграция из Tomcat в Azure
   linkLists:
   - linkListType: how-to-guide

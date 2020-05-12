@@ -3,8 +3,12 @@
   items:
     - name: Обзор
       href: migration-overview.md
-    - name: Переход из Spring в Службу приложений Azure
-      href: migrate-java-se-to-java-se-app-service.md
+    - name: Переход со Spring Boot на Службу приложений Azure
+      href: migrate-spring-boot-to-app-service.md
+    - name: Переход со Spring Boot на AKS
+      href: migrate-spring-boot-to-azure-kubernetes-service.md
+    - name: Переход со Spring Cloud на Azure Spring Cloud
+      href: migrate-spring-cloud-to-azure-spring-cloud.md
     - name: Перенос Tomcat в Службу приложений Azure
       href: migrate-tomcat-to-tomcat-app-service.md
     - name: Перенос Tomcat в контейнеры в AKS

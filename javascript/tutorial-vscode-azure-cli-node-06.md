@@ -4,10 +4,10 @@ description: Руководство, часть 6. Внесение измен�
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.openlocfilehash: 9702f10795893004965631fa99dfbfab181f2292
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74467158"
 ---
 # <a name="make-changes-and-redeploy"></a>Внесение изменений и повторное развертывание
