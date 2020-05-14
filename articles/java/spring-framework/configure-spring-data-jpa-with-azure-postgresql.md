@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 77addcc8b35dc15fe6bc64722e0a5d61b67bd4a5
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 723d98afd5f82a733011db207f8f462888c95e57
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81668960"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369796"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Как использовать JPA Spring Data с базой данных Azure PostgreSQL
 
@@ -93,7 +93,7 @@ ms.locfileid: "81668960"
    | Параметр | Описание |
    |---|---|
    | `host` | Указывается полное доменное имя сервера PostgreSQL, описанное ранее в этой статье. |
-   | `host` | Указывается порт сервера PostgreSQL, то есть по умолчанию — `5432`. |
+   | `port` | Указывается порт сервера PostgreSQL, то есть по умолчанию — `5432`. |
    | `username` | Указывается администратор PostgreSQL и сокращенное имя сервера, описанные ранее в этой статье. |
    | `dbname` | Указывается, хотите ли вы сейчас использовать по умолчанию базу данных `postgres`. |
 

@@ -3,12 +3,12 @@ title: Руководство. Создание масштабируемого �
 description: Узнайте, как использовать Terraform для настройки и модификации масштабируемого набора виртуальных машин Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: e2b60c4b0aa35f85c7799e8c2ef065d26549fd7f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: bb6175c92d0487bd5707b721ebc39ce4b727fed6
+ms.sourcegitcommit: aa417af8b5f00cbc056666e481250ef45c661d52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171660"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83153722"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>Руководство по созданию масштабируемого набора виртуальных машин Azure с помощью Terraform
 
@@ -82,7 +82,7 @@ ms.locfileid: "82171660"
 
    variable "tags" {
     description = "A map of the tags to use for the resources that are deployed"
-    type        = "map"
+    type        = map
 
     default = {
       environment = "codelab"

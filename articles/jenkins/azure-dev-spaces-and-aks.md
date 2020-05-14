@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как исполь
 keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kubernetes
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.openlocfilehash: acc4fba8bc12c631f395bf980ca6ee8b42dc8f49
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861257"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369930"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
@@ -202,7 +202,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 ### <a name="add-credentials-to-jenkins"></a>Добавление учетных данных в Jenkins
 
-1. Серверу Jenkins требуется субъект-служба Azure для аутентификации и доступа к ресурсам Azure. Сведения о создании субъекта-службы см. в  [этом разделе](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal)  руководства по развертыванию в Службе приложений Azure. Не забудьте сохранить копию выходных данных команды `create-for-rbac`, так как эти сведения вам потребуются для выполнения следующего шага. Результат должен выглядеть следующим образом.
+1. Серверу Jenkins требуется субъект-служба Azure для аутентификации и доступа к ресурсам Azure. Сведения о создании субъекта-службы см. в  [этом разделе](deploy-from-github-to-azure-app-service.md#create-service-principal)  руководства по развертыванию в Службе приложений Azure. Не забудьте сохранить копию выходных данных команды `create-for-rbac`, так как эти сведения вам потребуются для выполнения следующего шага. Результат должен выглядеть следующим образом.
 
     ```json
     {
@@ -220,7 +220,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
     ![Добавление учетных данных субъекта-службы в Jenkins](media/azure-dev-spaces-and-aks/add-service-principal-credentials.png)
 
-    Поле **Description** (Описание) заполнять необязательно. Подробные сведения см. в [разделе о добавлении субъекта-службы в Jenkins](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#add-service-principal-to-jenkins)  руководства по развертыванию в Службе приложений Azure. 
+    Поле **Description** (Описание) заполнять необязательно. Подробные сведения см. в [разделе о добавлении субъекта-службы в Jenkins](deploy-from-github-to-azure-app-service.md#add-service-principal-to-jenkins)  руководства по развертыванию в Службе приложений Azure. 
 
 
 
