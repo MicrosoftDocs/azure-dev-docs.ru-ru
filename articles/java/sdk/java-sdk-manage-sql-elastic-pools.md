@@ -83,7 +83,7 @@ anotherDatabase = anotherDatabase.update()
                      .apply();
 ```
 
-Значения, которые нужно передать в [, см. в ](/java/api/com.microsoft.azure.management.sql.databaseeditions)справочнике по классу DatabaseEditions`withEdition()`.
+Значения, которые нужно передать в `withEdition()`, см. в [справочнике по классу DatabaseEditions](/java/api/com.microsoft.azure.management.sql.databaseeditions).
 
 ## <a name="list-current-database-activities-in-an-elastic-pool"></a>Получение списка текущих действий базы данных в эластичном пуле
 ```java

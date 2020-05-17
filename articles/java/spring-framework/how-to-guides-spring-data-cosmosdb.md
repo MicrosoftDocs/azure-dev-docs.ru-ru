@@ -221,7 +221,7 @@ public CosmosDBConfig getConfig() {
 
 Версия 2.2.x пакета SDK для Spring Data Cosmos DB поддерживает строку диагностики ответов и метрики запросов.
 
-Чтобы включить метрики запросов, в файле `populateQueryMetrics` установите для флага **значение**true`application.properties`. Затем расширьте интерфейс `ResponseDiagnosticsProcessor` и реализуйте метод `processResponseDiagnostics` для ведения журнала диагностики. Наконец, передайте экземпляр реализации в метод `CosmosDbConfig.setResponseDiagnosticsProcessor`. Ниже приведен код примера реализации.
+Чтобы включить метрики запросов, в файле `application.properties` установите для флага `populateQueryMetrics` значение **true**. Затем расширьте интерфейс `ResponseDiagnosticsProcessor` и реализуйте метод `processResponseDiagnostics` для ведения журнала диагностики. Наконец, передайте экземпляр реализации в метод `CosmosDbConfig.setResponseDiagnosticsProcessor`. Ниже приведен код примера реализации.
 
 ```java
 @Configuration

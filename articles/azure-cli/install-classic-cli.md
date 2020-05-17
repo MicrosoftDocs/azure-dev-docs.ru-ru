@@ -39,7 +39,7 @@ ms.locfileid: "82030766"
 npm install -g azure-cli
 ```
 
-В дистрибутивах Linux для выполнения команды `sudo` может потребоваться команда `npm`:
+В дистрибутивах Linux для выполнения команды `npm` может потребоваться команда `sudo`:
 
 ```bash
 sudo npm install -g azure-cli

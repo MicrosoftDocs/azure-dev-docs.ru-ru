@@ -36,7 +36,7 @@ npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure
 
 Чтобы выполнить пример кода из этого руководства, предоставьте приложению Node.js в вашей подписке Azure разрешения на чтение и создание. Создайте субъект-службу и настройте приложение для выполнения со связанными учетными данными. Субъект-служба это неинтерактивная учетная запись, связанная с вашим идентификатором. Этой учетной записи предоставляются только те разрешения, которые нужны для запуска приложения.
 
-[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо [ нужно указать в аргументе пароля ](/azure/active-directory/active-directory-passwords-policy)безопасный пароль`MY_SECURE_PASSWORD`.
+[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо `MY_SECURE_PASSWORD` нужно указать в аргументе пароля [безопасный пароль](/azure/active-directory/active-directory-passwords-policy).
 
 ```azurecli
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD

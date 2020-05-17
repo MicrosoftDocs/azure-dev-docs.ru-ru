@@ -195,7 +195,7 @@ items:
 
     * Работа с виртуальными машинами [Linux](/azure/virtual-machines/linux/cli-samples?toc=%2fcli%2fazure%2ftoc.json) и [Windows](/azure/virtual-machines/windows/cli-samples?toc=%2fcli%2fazure%2ftoc.json).
 
-    * Работа с [веб-приложениями](/azure/app-service/app-service-cli-samples?toc=%2Fcli%2Fazure%2Ftoc.json) и [Функциями Azure](/azure/azure-functions/functions-cli-samples?toc=%2fcli%2fazure%2ftoc.json).
+    * Работа с [веб-приложениями[ и ](/azure/azure-functions/functions-cli-samples?toc=%2fcli%2fazure%2ftoc.json)Функциями Azure](/azure/app-service/app-service-cli-samples?toc=%2Fcli%2Fazure%2Ftoc.json).
 
     * Работа с базами данных [SQL Azure](/azure/sql-database/sql-database-cli-samples?toc=%2fcli%2fazure%2ftoc.json), [PostgreSQL](/azure/postgresql/sample-scripts-azure-cli?toc=%2fcli%2fazure%2ftoc.json), [MySQL](/azure/mysql/sample-scripts-azure-cli?toc=%2fcli%2fazure%2ftoc.json) и [Cosmos DB](/azure/cosmos-db/cli-samples?toc=%2fcli%2fazure%2ftoc.json).
 
