@@ -2,12 +2,12 @@
 author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
-ms.openlocfilehash: 59b4d787679daed57d4647787da17b6f508d95c4
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 895e415b97600bc9af7ef76bef01c86161742f99
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673470"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988903"
 ---
 ### <a name="account-for-the-use-of-custom-security-providers-and-jaas"></a>Учетная запись для использования настраиваемых поставщиков услуг безопасности и JAAS
 

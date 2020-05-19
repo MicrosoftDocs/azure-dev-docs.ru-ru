@@ -5,18 +5,20 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 3/16/2020
-ms.openlocfilehash: a1ebbee2127c283e990021da0b395e9fbb7d883c
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 4ab902e61703d5abc093dc508a370777b69632ff
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672840"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988946"
 ---
 # <a name="migrate-jboss-eap-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений JBoss EAP в WildFly в Службе Azure Kubernetes
 
 Из этого руководства вы узнаете, что следует учитывать при переносе приложения JBoss EAP для запуска в WildFly в контейнере Службы Azure Kubernetes.
 
 ## <a name="pre-migration"></a>Подготовка к миграции
+
+Чтобы обеспечить успешную миграцию, перед ее началом выполните шаги оценки и инвентаризации, описанные в следующих разделах.
 
 [!INCLUDE [inventory-server-capacity-aks](includes/inventory-server-capacity-aks.md)]
 
@@ -28,17 +30,7 @@ ms.locfileid: "81672840"
 
 [!INCLUDE [inventory-all-certificates](includes/inventory-all-certificates.md)]
 
-### <a name="validate-that-the-supported-java-version-works-correctly"></a>Проверка правильной работы поддерживаемой версии Java
-
-Для использования WildFly в Службе Azure Kubernetes требуется определенная версия Java. Поэтому вам нужно проверить, может ли приложение правильно работать с этой поддерживаемой версией. Эта проверка особенно важна, если на текущем сервере используется поддерживаемая версия JDK (например, Oracle JDK или IBM OpenJ9).
-
-Чтобы получить текущую версию, войдите на рабочий сервер и выполните следующую команду:
-
-```bash
-java -version
-```
-
-См. сведения о том, [какую версию следует использовать для запуска WildFly](http://docs.wildfly.org/19/Getting_Started_Guide.html#requirements).
+[!INCLUDE [validate-that-the-supported-java-version-works-correctly-wildfly](includes/validate-that-the-supported-java-version-works-correctly-wildfly.md)]
 
 ### <a name="inventory-jndi-resources"></a>Проверка ресурсов JNDI
 
@@ -50,7 +42,7 @@ java -version
 
 #### <a name="inside-your-application"></a>В приложении
 
-Проверьте файл *WEB-INF/jboss-web.xml* и (или) *WEB-INF/web.xml*.
+Проверьте файлы *WEB-INF/jboss-web.xml* и (или) *WEB-INF/web.xml*.
 
 ### <a name="document-datasources"></a>Определение источников данных
 
@@ -66,17 +58,9 @@ java -version
 
 Для использования файловой системы на сервере приложений требуется перенастройка или, в редких случаях, изменение архитектуры. Файловая система может использоваться модулями JBoss EAP или кодом приложения. Вы можете определить некоторые или все сценарии, описанные в следующих разделах.
 
-#### <a name="read-only-static-content"></a>Статическое содержимое только для чтения
+[!INCLUDE [static-content](includes/static-content.md)]
 
-Если ваше приложение сейчас обслуживает статическое содержимое, вам потребуется альтернативное расположение для этого статического содержимого. Вы можете переместить статическое содержимое в хранилище BLOB-объектов Azure и включить Azure CDN для быстрого скачивания в глобальном масштабе. См. руководство по [размещению статических веб-сайтов в службе хранилища Azure](/azure/storage/blobs/storage-blob-static-website) и [ по интеграции учетной записи хранения Azure с Azure CDN](/azure/cdn/cdn-create-a-storage-account-with-cdn).
-
-#### <a name="dynamically-published-static-content"></a>Динамически опубликованное статическое содержимое
-
-Если приложение допускает использование статического содержимого, которое передается или создается приложением и после этого становится неизменяемым, вы можете использовать хранилище BLOB-объектов Azure и Azure CDN, как описано выше, с Функциями Azure для выполнения отправки и обновления CDN. Практический пример реализации см. в руководстве по [отправке и предварительной загрузке статического содержимого CDN с помощью Функций Azure](https://github.com/Azure-Samples/functions-java-push-static-contents-to-cdn).
-
-#### <a name="dynamic-or-internal-content"></a>Динамическое или внутреннее содержимое
-
-Для использования файлов, которые часто записываются и считываются приложением (например, временные файлы данных), или статических файлов, видимых только для вашего приложения, вы можете подключить общие папки службы хранилища Azure в качестве постоянных томов. См. сведения о [динамическом создании и использовании постоянного тома с Файлами Azure в Службе Azure Kubernetes](/azure/aks/azure-files-dynamic-pv).
+[!INCLUDE [dynamic-or-internal-content-aks](includes/dynamic-or-internal-content-aks.md)]
 
 [!INCLUDE [determine-whether-your-application-relies-on-scheduled-jobs](includes/determine-whether-your-application-relies-on-scheduled-jobs.md)]
 
@@ -98,7 +82,7 @@ java -version
 
 ### <a name="determine-whether-jca-connectors-are-in-use"></a>Определение того, используются ли соединители JCA
 
-Если приложение использует соединители JCA, нужно проверить, можно ли использовать такой соединитель в WildFly. Если же реализация JCA зависит от JBoss EAP, необходимо выполнить рефакторинг приложения, чтобы удалить эту зависимость. Если это возможно, добавьте JAR в путь к классу сервера и поместите необходимые файлы конфигурации в нужное расположение в каталогах сервера WildFly, чтобы обеспечить доступность.
+Если приложение использует соединители JCA, проверьте, можно ли использовать соединитель JCA в WildFly. Если же реализация JCA зависит от JBoss EAP, необходимо выполнить рефакторинг приложения, чтобы удалить эту зависимость. Если вы можете использовать соединитель JCA в WildFly, для его работы нужно добавить файлы JAR в путь к классу сервера и поместить необходимые файлы конфигурации в нужное расположение в каталогах сервера WildFly.
 
 [!INCLUDE [determine-whether-jaas-is-in-use](includes/determine-whether-jaas-is-in-use.md)]
 

@@ -2,18 +2,18 @@
 author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: 6d6f0f701e9507f5dee065c14b48b30be423e100
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 08389c5802d2f6fef5360ac09adb11bb6494beb6
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672850"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988850"
 ---
 ### <a name="create-a-docker-image-for-wildfly"></a>Создание образа Docker для WildFly
 
 Чтобы создать Dockerfile, вам потребуется следующее:
 
-* поддерживаемый JDK;
+* поддерживаемый пакет JDK;
 * установленная версия WildFly;
 * среда выполнения JVM;
 * способ передачи переменных среды (если применимо).

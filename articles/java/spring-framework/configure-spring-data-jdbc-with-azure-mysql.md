@@ -1,252 +1,102 @@
 ---
-title: Как использовать JDBC Spring Data с Базой данных Azure для MySQL
+title: Использование JDBC Spring Data с Базой данных Azure для MySQL
 description: Узнайте, как использовать JDBC Spring Data с Базой данных Azure для MySQL.
 documentationcenter: java
-ms.date: 01/07/2020
+ms.date: 04/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
-ms.topic: conceptual
-ms.openlocfilehash: 3fc5a9af588da64a65659935d3d6c3f72e4fa0e3
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.author: judubois
+ms.topic: article
+ms.openlocfilehash: 256a32753c5677f3676e5096c7a1e3223d751c60
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669060"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369963"
 ---
-# <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Как использовать JDBC Spring Data с базой данных Azure MySQL
+# <a name="use-spring-data-jdbc-with-azure-database-for-mysql"></a>Использование JDBC Spring Data с Базой данных Azure для MySQL
 
-## <a name="overview"></a>Обзор
+В этой статье описано создание примера приложения, которое использует [JDBC Spring Data](https://spring.io/projects/spring-data-jdbc) для сохранения и извлечения информации в [Базе данных Azure для MySQL](https://docs.microsoft.com/azure/mysql/).
 
-В этой статье показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) с помощью [Spring Data] и извлечения информации из базы данных с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
+[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) — это стандартный API Java для подключения к стандартным реляционным базам данных.
 
-## <a name="prerequisites"></a>Предварительные требования
+[!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
-Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
+[!INCLUDE [spring-data-mysql-setup.md](includes/spring-data-mysql-setup.md)]
 
-* Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
-* Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
-* [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
-* [Curl](https://curl.haxx.se/) или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности.
-* Служебная программа командной строки [mysql](https://dev.mysql.com/downloads/).
-* Клиент [Git](https://git-scm.com/downloads).
+### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
 
-## <a name="create-an-azure-database-for-mysql"></a>Создание Базы данных Azure для MySQL 
+Создайте приложение, введя в командной строке следующую команду:
 
-### <a name="create-a-server-using-the-azure-portal"></a>Создание сервера с помощью портала Azure
+```bash
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RC1 -d javaVersion=8 | tar -xzvf -
+```
+
+### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Настройка Spring Boot для использования Базы данных Azure для MySQL
+
+Откройте файл *src/main/resources/application.properties* и добавьте следующее:
+
+```properties
+logging.level.org.springframework.jdbc.core=DEBUG
+
+spring.datasource.url=jdbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/demo?serverTimezone=UTC
+spring.datasource.username=spring@$AZ_DATABASE_NAME
+spring.datasource.password=$AZ_MYSQL_PASSWORD
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.datasource.initialization-mode=always
+```
+
+- Замените две переменные `$AZ_DATABASE_NAME` значением, которое вы настроили ранее.
+- Замените переменную `$AZ_MYSQL_PASSWORD` значением, которое вы настроили ранее.
+
+> [!WARNING]
+> Свойство конфигурации `spring.datasource.initialization-mode=always` означает, что Spring Boot при каждом запуске сервера будет автоматически создавать схему базы данных на основе файла `schema.sql`, который вы создадите позднее. Это очень удобно для тестирования, но при каждой перезагрузке все данные будут удаляться, поэтому не следует использовать этот подход в рабочей среде.
 
 > [!NOTE]
-> 
-> Дополнительные сведения см. в статье о [создании базы данных Azure для сервера MySQL с помощью портала Azure](/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal).
+> Мы добавляем `?serverTimezone=UTC` к свойству конфигурации `spring.datasource.url`, чтобы драйвер JDBC при соединении с базой данных использовал UTC в качестве формата даты. В противном случае сервер Java и база данных будут использовать разные форматы даты, что неизбежно приведет к ошибке.
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Теперь вы можете запустить приложение с помощью предоставленной оболочки Maven:
 
-1. Щелкните элемент **+Create a resource** (+Создать ресурс), **Базы данных**, а затем выберите **База данных Azure для MySQL**.
+```bash
+./mvnw spring-boot:run
+```
 
-   ![Создание базы данных MySQL][MYSQL01]
+Ниже приведен снимок экрана приложения, выполняемого в первый раз:
 
-1. Введите следующие сведения:
+[![Выполняющееся приложение](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png)](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png#lightbox)
 
-   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
-   - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Имя сервера**: Для сервера MySQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoysmysql.mysql.database.azure.com*.
-   - **Источник данных**: В рамках данного руководства выберите `Blank`, чтобы создать базу данных.
-   - **Имя пользователя администратора.** Укажите имя администратора базы данных.
-   - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
-   - **Расположение.** Укажите ближайший географический регион для базы данных.
-   - **Версия.** Укажите самую последнюю версию базы данных.
+### <a name="create-the-database-schema"></a>Создание схемы базы данных
 
-   ![Создание свойств базы данных MySQL][MYSQL02]
+Spring Boot будет автоматически выполнять *src/main/resources/`schema.sql`* для создания схемы базы данных. Создайте такой файл со следующим содержимым:
 
-1. После ввода всех этих данных нажмите кнопку **Отзыв и создание**.
+```sql
+DROP TABLE IF EXISTS todo;
+CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARCHAR(4096), done BOOLEAN);
+```
 
-1. Проверьте спецификацию и щелкните **Создать**.
+Остановите приложение и запустите его снова. Теперь приложение будет использовать созданную ранее базу данных `demo` и создаст в ней таблицу `todo`.
 
-### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера с помощью портала Azure
+```bash
+./mvnw spring-boot:run
+```
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+## <a name="code-the-application"></a>Добавление кода приложения
 
-1. Щелкните **Все ресурсы**, а затем выберите только что созданные ресурсы Базы данных Azure для MySQL.
+Затем добавьте код Java, который будет использовать JDBC для сохранения и извлечения данных на сервере MySQL.
 
-1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**. (В этом упражнении мы используем IP-адрес компьютера разработки, который является клиентом.  Его можно использовать в качестве **начального** и **конечного** IP-адресов.
+[!INCLUDE [spring-data-jdbc-create-application.md](includes/spring-data-jdbc-create-application.md)]
 
-   ![Настройка безопасности подключения][MYSQL04]
+Ниже приведен снимок экрана с этими запросами cURL:
 
-### <a name="retrieve-the-connection-string-for-your-server-using-the-azure-portal"></a>Получение строки подключения для сервера с помощью портала Azure
+[![Тестирование с помощью cURL](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png)](media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png#lightbox)
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Поздравляем! Вы создали приложение Spring Boot, которое использует JDBC для сохранения и извлечения данных в Базе данных Azure для MySQL.
 
-1. Щелкните **Все ресурсы**, а затем выберите только что созданный ресурс Базы данных Azure для MySQL.
-
-1. Нажмите кнопку **Строки подключения** и скопируйте значение в текстовое поле **JDBC**.
-
-   ![Получение строки подключения JDBC][MYSQL05]
-
-### <a name="create-a-database-using-the-mysql-command-line-utility"></a>Создание базы данных с помощью служебной программы командной строки `mysql`
-
-1. Откройте командную оболочку и подключитесь к серверу MySQL, введя команду `mysql`, как в следующем примере:
-
-   ```shell
-   mysql --host wingtiptoysmysql.mysql.database.azure.com --user wingtiptoysuser@wingtiptoysmysql -p
-   ```
-   Где:
-
-   | Параметр | Описание |
-   |---|---|
-   | `host` | Указывается полное доменное имя сервера MySQL, описанное ранее в этой статье. |
-   | `user` | Указываются администратор MySQL и сокращенное имя сервера, описанные ранее в этой статье. |
-   | `p` | Указывается, что следует ожидать запрос пароля. |
-
-   Сервер MySQL должен отобразить экран, как в следующем примере:
-
-   ```shell
-   Welcome to the MySQL monitor.  Commands end with ; or \g.
-   Your MySQL connection id is 64552
-   Server version: 5.6.39.0 MySQL Community Server (GPL)
-   
-   Copyright (c) 2000, 2016, Oracle and/or its affiliates. All rights reserved.
-   
-   Oracle is a registered trademark of Oracle Corporation and/or its
-   affiliates. Other names may be trademarks of their respective
-   owners.
-   
-   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-   
-   mysql>
-   ```
-   > Примечание. Если вы получили сообщение о том, что сервер не распознает этот IP-адрес, в сообщении об ошибке будет отображаться IP-адрес, который используется клиентом.  Назначьте его, как описано выше. *Настройка правила брандмауэра для сервера с помощью портала Azure*
-
-1. Создайте базу данных с именем *mysqldb*, введя команду `mysql`, как в следующем примере:
-
-   ```SQL
-   CREATE DATABASE mysqldb;
-   ```
-
-   Сервер MySQL должен отобразить экран, как в следующем примере:
-
-   ```shell
-   Query OK, 1 row affected (0.30 sec)
-   ```
-
-1. НЕОБЯЗАТЕЛЬНО. Убедитесь, что база данных создана, введя команду `mysql`, как в следующем примере:
-
-   ```SQL
-   SHOW DATABASES;
-   ```
-
-   Сервер MySQL должен отобразить экран, как в следующем примере:
-
-   ```shell
-   +--------------------+
-   | Database           |
-   +--------------------+
-   | information_schema |
-   | mysql              |
-   | mysqldb            |
-   | performance_schema |
-   | sys                |
-   +--------------------+
-   ```
-
-1. Введите `\q` для выхода из служебной программы `mysql`.
-
-## <a name="configure-the-sample-application"></a>Настройка примера приложения
-
-1. Откройте командную строку и клонируйте пример проекта с помощью команды Git, как в следующем примере:
-
-   ```shell
-   git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
-   ```
-
-1. Найдите файл *application.properties* в каталоге *resources* примера приложения или создайте его, если он еще не существует.
-
-1. Откройте файл *application.properties* в текстовом редакторе, добавьте или настройте указанные ниже строки в файл и замените примеры значений на соответствующие полученные ранее значения:
-
-   ```yaml
-   spring.datasource.url=jdbc:mysql://wingtiptoysmysql.mysql.database.azure.com:3306/mysqldb?useSSL=true&requireSSL=false&serverTimezone=UTC
-   spring.datasource.username=wingtiptoysuser@wingtiptoysmysql
-   spring.datasource.password=********
-    ```
-   Где:
-
-   | Параметр | Описание |
-   |---|---|
-   | `spring.datasource.url` | Указываются строки MySQL JDBC, описанные ранее в этой статье, с добавлением часового пояса. |
-   | `spring.datasource.username` | Указывается администратор MySQL, описанный ранее в этой статье, вместе с сокращенным именем сервера. |
-   | `spring.datasource.password` | Указывается пароль администратора MySQL, описанный ранее в этой статье. |
-
-1. Сохраните и закройте файл *application.properties*.
-
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
-
-1. Создайте пример приложения с помощью Maven, например:
-
-   ```shell
-   mvn clean package -P mysql
-   ```
-
-1. Запустите пример приложения, например:
-
-   ```shell
-   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
-   ```
-
-1. Из командной строки создайте записи с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-
-   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-   ```
-
-   Приложение должно возвращать значения следующим образом:
-
-   ```shell
-   Added Pet(id=1, name=dog, species=canine).
-
-   Added Pet(id=2, name=cat, species=feline).
-   ```
-
-1. Получите все имеющиеся записи из командной строки с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s http://localhost:8080/pets
-   ```
-    
-   Приложение должно возвращать значения следующим образом:
-
-   ```json
-   [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
-   ```
-
-## <a name="summary"></a>Сводка
-
-В рамках этого руководства вы создали пример приложения Java для хранения информации в Базе данных Azure для MySQL с помощью Spring Data и извлечения информации из базы данных с помощью JDBC.
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
-
-> [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+[!INCLUDE [spring-data-conclusion.md](includes/spring-data-conclusion.md)]
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-Дополнительные сведения об использовании Java в Azure см. в статьях [Azure для разработчиков Java] и [Working with Azure DevOps and Java] (Работа с Azure DevOps и Java).
+Дополнительные сведения о JDBC для Spring Data см. в [справочной документации по Spring](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#reference).
 
-<!-- URL List -->
-
-[Azure для разработчиков Java]: /azure/developer/java/
-[бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
-[Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Data]: https://spring.io/projects/spring-data
-[Spring Initializr]: https://start.spring.io/
-[Spring Framework]: https://spring.io/
-
-<!-- IMG List -->
-
-[MYSQL01]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-01.png
-[MYSQL02]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-02.png
-[MYSQL04]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-04.png
-[MYSQL05]: media/configure-spring-data-jdbc-with-azure-mysql/create-mysql-05.png
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).

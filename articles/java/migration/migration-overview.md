@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: e6215502b54bedf62f40a024f9e7b3acc01cdc1f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 1eeb7d6a17bb21963f3203d484387c0aae6c402f
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670610"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988696"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -28,7 +28,7 @@ ms.locfileid: "81670610"
 * [приложения Spring Boot (JAR);](#spring-boot--jar-applications)
 * [приложения Spring Cloud (микрослужбы);](#spring-cloud--microservices)
 * [Веб-приложения](#web-applications)
-* [Приложения Java EE](#java-ee-applications)
+* [приложения Java EE;](#java-ee-applications)
 * [пакетные или запланированные задания.](#batch--scheduled-jobs)
 
 Эти типы описаны в следующих разделах.
@@ -80,7 +80,7 @@ ms.locfileid: "81670610"
 
 |   |Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| Приложения Spring Boot (JAR)                                    |&#x2714;|        |        |&#x2714;|&#x2714;|
+| Приложения Spring Boot (JAR)                                    |&#x2714;|        |&#x2714;|&#x2714;|&#x2714;|
 | Приложения Spring Cloud (микрослужбы)                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
 | Веб-приложения                                                  |        |&#x2714;|        |&#x2714;|&#x2714;|
 | Приложения Java EE                                              |        |        |        |&#x2714;|&#x2714;|
@@ -88,6 +88,8 @@ ms.locfileid: "81670610"
 | Долгосрочное хранение в локальной файловой системе                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
 | Кластеризация на уровне сервера приложений                               |        |        |        |&#x2714;|&#x2714;|
 | Пакетные или запланированные задания                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
+| интеграция виртуальной сети и гибридные подключения;                              |Preview (Предварительный просмотр) |Preview (Предварительный просмотр) |        |&#x2714;|&#x2714;|
+| Доступность по регионам                | [Сведения][10] | [Сведения][10] | [Сведения][11] |[Сведения][12]|[Сведения][13]|
 
 ### <a name="ongoing-responsibility-grid"></a>Таблица текущих обязанностей
 
@@ -98,14 +100,14 @@ ms.locfileid: "81670610"
 > [!NOTE]
 > Этот список обязанностей не является исчерпывающим.
 
-|   | Служба приложений | Azure Spring Cloud | AKS | Виртуальные машины |
+|                                                                       | Служба приложений | Azure Spring Cloud | AKS | Виртуальные машины |
 |---|---|---|---|---|
 | Обновление библиотек<br>(включая устранение уязвимостей)                 | &#x1F449;   | &#x1F449;   | &#x1F449;   | &#x1F449; |
 | Обновление сервера приложений<br>(включая устранение уязвимостей)    | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |
 | Обновление среды выполнения Java<br>(включая устранение уязвимостей)          | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |
-| Активация обновлений Kubernetes<br>(выполняется платформой Azure с помощью ручного триггера) | Недоступно         | Недоступно         | &#x1F449;   | Недоступно       |
-| Согласование изменений в API Kubernetes, не имеющих обратной совместимости                  | Недоступно         | Недоступно         | &#x1F449;   | Недоступно       |
-| Обновление базового образа контейнера<br>(включая устранение уязвимостей)      | Недоступно         | Недоступно         | &#x1F449;   | Недоступно       |
+| Активация обновлений Kubernetes<br>(выполняется платформой Azure с помощью ручного триггера) | Недоступно         | ![Azure][1] | &#x1F449;   | Недоступно       |
+| Согласование изменений в API Kubernetes, не имеющих обратной совместимости                  | Недоступно         | ![Azure][1] | &#x1F449;   | Недоступно       |
+| Обновление базового образа контейнера<br>(включая устранение уязвимостей)      | Недоступно         | ![Azure][1] | &#x1F449;   | Недоступно       |
 | Обновление операционной системы<br>(включая устранение уязвимостей)      | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
 | Обнаружение и перезапуск экземпляров после сбоя                                   | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
 | Реализация очистки и перезапуска для обновлений                       | ![Azure][1] | ![Azure][1] | ![Azure][1] | &#x1F449; |
@@ -138,8 +140,8 @@ ms.locfileid: "81670610"
 
 |Место назначения&nbsp;→<br><br>Тип&nbsp;приложения&nbsp;↓|Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| Приложения<br>Spring Boot (JAR) | [Руководство][5] | Руководство<br>Планируется | Руководство<br>Планируется | Руководство<br>Планируется | Руководство<br>Планируется |
-| Spring Cloud<br>(микрослужбы)   | Недоступно           | Недоступно                 | Руководство<br>Планируется | Руководство<br>Планируется | Руководство<br>Планируется |
+| Приложения<br>Spring Boot (JAR) | [Руководство][5] | Руководство<br>Планируется | Руководство<br>Планируется | [Руководство][14]      | Руководство<br>Планируется |
+| Spring Cloud<br>(микрослужбы)   | Недоступно           | Недоступно                 | [Руководство][15]      | Руководство<br>Планируется | Руководство<br>Планируется |
 | Веб-приложения<br>в Tomcat     | Недоступно           | [Руководство][2]       | Недоступно                 | [Руководство][3]       | Руководство<br>Планируется |
 
 **Приложения Java EE**
@@ -158,8 +160,14 @@ ms.locfileid: "81670610"
 [2]: migrate-tomcat-to-tomcat-app-service.md
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
 [4]: migrate-weblogic-to-virtual-machines.md
-[5]: migrate-java-se-to-java-se-app-service.md
+[5]: migrate-spring-boot-to-app-service.md
 [6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
 [7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
 [8]: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md
 [9]: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+[10]: https://azure.microsoft.com/global-infrastructure/services/?products=app-service-linux
+[11]: https://azure.microsoft.com/global-infrastructure/services/?products=spring-cloud
+[12]: https://azure.microsoft.com/global-infrastructure/services/?products=kubernetes-service
+[13]: https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines
+[14]: migrate-spring-boot-to-azure-kubernetes-service.md
+[15]: migrate-spring-cloud-to-azure-spring-cloud.md

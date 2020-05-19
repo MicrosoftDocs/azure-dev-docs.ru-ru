@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 71bc7e2e7677ce3f53c70bd68e5e73765070bd06
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c06c1205d1ef1f8dc7eec674c846cf53c6a2e5e8
+ms.sourcegitcommit: 996212c5a141d724d26f3899e91d194b08b2dc0b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82104865"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82985185"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -88,15 +88,16 @@ ms.locfileid: "82104865"
 
    ![Добавление URI перенаправления приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-3. В приложении выберите **Сертификаты и секреты**, щелкните **Создать ключ**, чтобы создать `${your-client-secret}`, а затем выберите **Сохранить**.
+3. Выберите **Сертификаты и секреты**, **Новый секрет клиента**, чтобы создать ключ.
 
    ![Создание потока пользователя](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
 
 4. Слева выберите **Потоки пользователей**, а затем щелкните **Создать поток пользователя**.
 
-5. Выберите **Sign up or in** (Регистрация или вход), **Profile editing** (Изменение профиля) и **Сброс пароля**, чтобы создать соответствующие потоки пользователей. Укажите **имя** потока пользователя, а также **атрибуты пользователя и утверждения** и щелкните **Создать**.
+5. Выберите **Регистрация или вход**, **Изменение профиля** и **Сброс пароля**, чтобы создать соответствующие потоки пользователей. Дополнительные сведения см. в статье [Учебник. Создание потоков пользователей в Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-create-user-flows). AAD B2C поддерживает локальные учетные записи, а также поставщики удостоверений социальных сетей. Пример создания поставщика удостоверений GitHub см. в статье [Настройка регистрации и входа с учетной записью GitHub через Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
+Не забудьте выбрать **отображаемое имя**, чтобы оно присутствовало в токене утверждений.
 
-   ![Настройка потока пользователей](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c4-n.png)
+   ![Создание потока пользователя](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c-create-userflow.png)
 
 ## <a name="configure-and-compile-your-app"></a>Настройка и компиляция приложения
 
@@ -110,7 +111,7 @@ ms.locfileid: "82104865"
    <dependency>
        <groupId>com.microsoft.azure</groupId>
        <artifactId>azure-active-directory-b2c-spring-boot-starter</artifactId>
-       <version>2.1.6.M2</version>
+       <version>2.2.4</version>
    </dependency>
    <dependency>
        <groupId>org.springframework.boot</groupId>
@@ -132,10 +133,10 @@ ms.locfileid: "82104865"
    azure:
      activedirectory:
        b2c:
-         tenant: ${your-tenant-name}
+         tenant: ${your-tenant-name} # This is also the first part of your domain name before "onmicrosoft.com".
          client-id: ${your-client-id}
          client-secret: ${your-client-secret}
-         reply-url: ${your-redirect-uri-from-aad} # should be absolute url.
+         reply-url: ${your-redirect-uri-from-aad} # This should be an absolute URL.
          logout-success-url: ${you-logout-success-url}
          user-flows:
            sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}

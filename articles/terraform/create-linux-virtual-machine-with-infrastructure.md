@@ -3,13 +3,13 @@ title: Краткое руководство. Создание виртуаль�
 description: Узнайте, как использовать Terraform для создания готовой среды виртуальных машин Linux в Azure и управления ею.
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
 ms.topic: quickstart
-ms.date: 05/04/2020
-ms.openlocfilehash: d6763118179251c224e0ec3ae6e05a630cae7cde
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 05/11/2020
+ms.openlocfilehash: 3485e899deaf84a63a2cf2d8085ac34b43f6fca9
+ms.sourcegitcommit: aa417af8b5f00cbc056666e481250ef45c661d52
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82801892"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83153712"
 ---
 # <a name="quickstart-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Краткое руководство. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
@@ -146,9 +146,9 @@ resource "azurerm_network_interface" "myterraformnic" {
 
     ip_configuration {
         name                          = "myNicConfiguration"
-        subnet_id                     = "azurerm_subnet.myterraformsubnet.id"
+        subnet_id                     = azurerm_subnet.myterraformsubnet.id
         private_ip_address_allocation = "Dynamic"
-        public_ip_address_id          = "azurerm_public_ip.myterraformpublicip.id"
+        public_ip_address_id          = azurerm_public_ip.myterraformpublicip.id
     }
 
     tags = {
@@ -412,6 +412,9 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
 }
 ```
 
+**Примечания.**
+
+- Агент виртуальной машины Azure ожидает, что ключи SSH для блока `admin_ssh_key` записаны по пути `/home/{username}/.ssh/authorized_keys`. Чтобы запустить этот пример в Windows, нужно поверить наличие такого каталога. Дополнительные сведения о блоке `admin_ssh_key` см. в [документации по виртуальным машинам Linux в Azure на сайте terraform.io](https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html).
 
 ## <a name="build-and-deploy-the-infrastructure"></a>Создание и развертывание инфраструктуры
 

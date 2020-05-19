@@ -5,31 +5,31 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: c6586f0ba2e651445e95fa3606daa35ee566df87
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 6d2d18a6dbf87a97b806876a534a103dbbf88420
+ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673480"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82988777"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
 Узнайте, что следует учитывать при переносе существующего приложения Tomcat для запуска в Службе приложений Azure с использованием Tomcat 9.0.
 
-## <a name="before-you-start"></a>Перед началом работы
+## <a name="pre-migration"></a>Подготовка к миграции
+
+Чтобы обеспечить успешную миграцию, перед ее началом выполните шаги оценки и инвентаризации, описанные в следующих разделах.
 
 Если вы не можете выполнить какие-либо требования для подготовки к миграции, ознакомьтесь со следующими дополнительными руководствами по переносу:
 
 * [Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Перенос приложений Tomcat в Виртуальные машины Azure (руководство ожидается)
 
-## <a name="pre-migration"></a>Подготовка к миграции
-
 ### <a name="switch-to-a-supported-platform"></a>Переход на поддерживаемую платформу
 
 В Службе приложений доступны некоторые версии Tomcat на основе определенных версий Java. Чтобы обеспечить совместимость, перенесите приложение в одну из поддерживаемых версий Tomcat и Java в текущей среде, прежде чем переходить к остальным действиям. Обязательно полностью протестируйте готовую конфигурацию. Используйте в этих тестах последний стабильный выпуск дистрибутива Linux.
 
-[!INCLUDE [note-obtain-your-current-java-version](includes/note-obtain-your-current-java-version.md)]
+[!INCLUDE [note-obtain-your-current-java-version-app-service](includes/note-obtain-your-current-java-version-app-service.md)]
 
 Чтобы получить текущую версию Tomcat, войдите на рабочий сервер и выполните следующую команду:
 
@@ -43,9 +43,11 @@ ${CATALINA_HOME}/bin/version.sh
 
 [!INCLUDE [inventory-secrets](includes/inventory-secrets.md)]
 
+### <a name="inventory-certificates"></a>Проверка сертификатов
+
 [!INCLUDE [inventory-certificates](includes/inventory-certificates.md)]
 
-[!INCLUDE [inventory-persistence-usage](includes/inventory-persistence-usage.md)]
+[!INCLUDE [determine-whether-and-how-the-file-system-is-used](includes/determine-whether-and-how-the-file-system-is-used.md)]
 
 <!-- App-Service-specific addendum to inventory-persistence-usage -->
 #### <a name="dynamic-or-internal-content"></a>Динамическое или внутреннее содержимое
@@ -66,13 +68,13 @@ ${CATALINA_HOME}/bin/version.sh
 
 #### <a name="determine-whether-application-relies-on-scheduled-jobs"></a>Определение того, использует ли приложение запланированные задания
 
-Запланированные задания, такие как задачи планировщика Quartz или задания Cron, нельзя использовать со Службой приложений. Служба приложений не будет препятствовать развертыванию приложения, содержащего запланированные задачи. Но если приложение масштабируется, одно запланированное задание может выполняться несколько раз в течение указанного периода. Это может привести к нежелательным последствиям.
+Запланированные задания, такие как задачи планировщика Quartz или задания Cron, нельзя использовать со Службой приложений. Служба приложений не будет препятствовать развертыванию приложения, содержащего запланированные внутренние задачи. Но если приложение масштабируется, одно запланированное задание может выполняться несколько раз в течение указанного периода. Это может привести к нежелательным последствиям.
 
 Проверьте все запланированные задания на сервере приложений или за его пределами.
 
 #### <a name="determine-whether-your-application-contains-os-specific-code"></a>Определение того, содержит ли приложение код, зависящий от ОС
 
-Если приложение содержит код, зависящий от ОС узла, вам нужно выполнить рефакторинг кода для удаления этих зависимостей. Например, вам нужно заменить все символы `/` или `\`, используемые в путях файловой системы, на [`File.Separator`](https://docs.oracle.com/javase/8/docs/api/java/io/File.html#separator) или [`Paths.get`](https://docs.oracle.com/javase/8/docs/api/java/nio/file/Paths.html#get-java.lang.String-java.lang.String...-).
+[!INCLUDE [determine-whether-your-application-contains-os-specific-code-no-title](includes/determine-whether-your-application-contains-os-specific-code-no-title.md)]
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Определение того, используется ли кластеризация Tomcat
 
@@ -82,7 +84,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 #### <a name="identify-all-outside-processesdaemons-running-on-the-production-servers"></a>Определение всех внешних процессов и управляющих программ, запущенных на рабочих серверах
 
-Вам нужно будет перенести в другое расположение или удалить все процессы (например, управляющие программы мониторинга), выполняющиеся за пределами сервера приложений.
+Вам нужно будет перенести в другое расположение или удалить все процессы (например, управляющие программы для мониторинга), выполняющиеся за пределами сервера приложений.
 
 #### <a name="determine-whether-non-http-connectors-are-used"></a>Определение того, используются ли соединители, отличающиеся от HTTP
 
@@ -92,23 +94,23 @@ ${CATALINA_HOME}/bin/version.sh
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>Определение того, используется ли MemoryRealm
 
-Для работы [MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) требуется сохраненный XML-файл. В Службе приложений Azure передайте этот файл в каталог */home* или его подкаталог либо в подключенное хранилище. Измените параметр `pathName` соответствующим образом.
+Для работы [MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html) требуется сохраненный XML-файл. В Службе приложений Azure передайте этот файл в каталог */home*, его подкаталог или в подключенное хранилище. Затем измените параметр `pathName` соответствующим образом.
 
 Чтобы определить, используется ли сейчас `MemoryRealm`, изучите файлы *server.xml* и *context.xml* и найдите элементы `<Realm>`, в которых для атрибута `className` задано значение `org.apache.catalina.realm.MemoryRealm`.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>Определение того, используется ли отслеживание сеансов SSL
 
-Служба приложений выполняет разгрузку сеансов за пределами среды выполнения Tomcat. Поэтому нельзя использовать [отслеживание сеансов SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Используйте другой режим отслеживания сеансов (`COOKIE` или `URL`). Если требуется применить отслеживание сеансов SSL, не используйте Службу приложений.
+Служба приложений выполянет загрузку сеансов за пределами среды выполнения Tomcat, поэтому вы не можете использовать [отслеживание сеансов SSL](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL). Используйте другой режим отслеживания сеансов (`COOKIE` или `URL`). Если требуется применить отслеживание сеансов SSL, не используйте Службу приложений.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>Определение того, используется ли AccessLogValve
 
-Если используется [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), укажите для параметра `directory` значение `/home/LogFiles` или подкаталог.
+Если используется [AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html), укажите для параметра `directory` значение `/home/LogFiles` или любой подкаталог этой папки.
 
 ## <a name="migration"></a>Миграция
 
 ### <a name="parameterize-the-configuration"></a>Параметризация конфигурации
 
-В ходе предварительной миграции будут определены секреты и внешние зависимости, такие как источники данных, в файлах *server.xml* и *context.xml*. Для каждого определенного элемента измените имя пользователя, пароль, строку подключения или URL-адрес на переменную среды.
+На этапе предварительной миграции вы наверняка нашли некоторые секреты и внешние зависимости, например источники данных, в файлах *server.xml* и *context.xml*. Для каждого определенного элемента измените имя пользователя, пароль, строку подключения или URL-адрес на переменную среды.
 
 Например, предположим, что файл *context.xml* содержит следующий элемент:
 
