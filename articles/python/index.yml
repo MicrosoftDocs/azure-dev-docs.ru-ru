@@ -4,36 +4,44 @@ summary: >
   Azure предоставляет такие службы для разработчиков Python, как решения для размещения приложений, хранилище, базы данных с открытым исходным кодом (например, mySQL и PostgreSQL), а также средства обработки и анализа данных, машинного обучения и ИИ. Пакет Azure SDK для Python помогает разработчикам эффективно работать с этими службами.
 metadata:
   title: Azure для разработчиков Python
-  description: Начните разработку с помощью Python и Azure для Python.
+  description: Начните разработку с помощью Python и Azure.
   author: kraigb
   ms.author: kraigb
-  ms.date: 10/11/2019
+  ms.date: 05/04/2020
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: python
-  ms.openlocfilehash: d874f84249ed67a6597574d7ccc6c8e02d3066f0
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: ef9b2de52a63454d89a74698852fc68118ccfdf2
+  ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "80442229"
+  ms.lasthandoff: 05/14/2020
+  ms.locfileid: "83403552"
 landingContent:
-- title: Начало работы с Azure SDK для Python
+- title: Начало работы с Python в Azure
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Разработка в облаке с помощью Azure
+      url: cloud-development-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: Настройка локальной среды разработки
+      url: configure-local-development-environment.md
   - linkListType: overview
     links:
     - text: Сведения о пакете Azure SDK для Python
       url: azure-sdk-overview.md
-  - linkListType: download
-    links:
-    - text: Установка пакета SDK
-      url: azure-sdk-install.md
   - linkListType: how-to-guide
     links:
-    - text: Аутентификация приложения
-      url: azure-sdk-authenticate.md
+    - text: Установка библиотек SDK
+      url: azure-sdk-install.md
+  - linkListType: tutorial
+    links:
+    - text: Использование пакета SDK для Azure из кода
+      url: azure-sdk-example-resource-group.md
   - linkListType: reference
     links:
     - text: Справочник по пакету SDK Azure для API Python

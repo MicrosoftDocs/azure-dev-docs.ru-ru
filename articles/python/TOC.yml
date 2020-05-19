@@ -1,15 +1,31 @@
 - name: Azure для разработчиков Python
   href: index.yml
-- name: Обзор
+- name: Разработка в облаке с помощью Azure
   items:
-    - name: Сведения о пакете SDK для Python
+    - name: Что такое Azure?
+      href: cloud-development-overview.md
+    - name: 'Подготовка ресурсов к работе, предоставление доступа к ним и управление ими'
+      href: cloud-development-provisioning.md
+    - name: Поток разработки в Azure
+      href: cloud-development-flow.md
+- name: Настройка среды разработки для Azure
+  href: configure-local-development-environment.md
+- name: Начало работы с Azure SDK для Python
+  items:
+    - name: Обзор
       href: azure-sdk-overview.md
-    - name: Средства для разработчиков
-      href: azure-tools.md
-- name: Краткие руководства
+    - name: Установка библиотек SDK
+      href: azure-sdk-install.md
+    - name: Пример Создание группы ресурсов
+      href: azure-sdk-example-resource-group.md
+    - name: Пример Использование Службы хранилища Azure
+      href: azure-sdk-example-storage.md
+    - name: Пример Подготовка к работе веб-приложения с помощью кода
+      href: azure-sdk-example-web-app.md
+    - name: Пример Подготовка виртуальной машины
+      href: azure-sdk-example-virtual-machines.md
+- name: Краткие руководства по службам Azure
   items:
-    - name: Пакет SDK для Python
-      href: azure-sdk-get-started.yml
     - name: Размещение приложений
       href: quickstarts-app-hosting.md
     - name: Решения для работы с данными
@@ -22,9 +38,9 @@
       href: quickstarts-messaging.md
     - name: Безопасность и интеграция
       href: quickstarts-security-integration.md
-- name: Учебники
+- name: Руководства по конкретным сценариям
   items:
-    - name: Развертывание в Службе приложений с помощью VS Code
+    - name: "Развертывание веб-приложения с помощью VS\_Code"
       items:
         - name: "1.\_Общие сведения и предварительные требования"
           href: tutorial-deploy-app-service-on-linux-01.md
@@ -52,7 +68,7 @@
           href: tutorial-deploy-containers-04.md
         - name: "5.\_Очистка ресурсов"
           href: tutorial-deploy-containers-05.md
-    - name: Развертывание Функций Azure с помощью VS Code
+    - name: "Развертывание бессерверных Функций Azure с помощью VS\_Code"
       items:
         - name: "1.\_Общие сведения и предварительные требования"
           href: tutorial-vs-code-serverless-python-01.md
@@ -72,11 +88,13 @@
           href: tutorial-vs-code-serverless-python-08.md
 - name: Практические руководства
   items:
-    - name: Установка пакета SDK
-      href: azure-sdk-install.md
-    - name: Аутентификация
+    - name: Аутентификация приложений с помощью Azure
       href: azure-sdk-authenticate.md
-    - name: Конфигурация операций
+    - name: Управление субъектами-службами
+      href: how-to-manage-service-principals.md
+    - name: Назначение субъектам безопасности разрешений ролей
+      href: how-to-assign-role-permissions.md
+    - name: "Настройка аргументов REST\_API"
       href: azure-sdk-operation-config.md
     - name: Разработка многооблачных решений
       href: azure-sdk-multi-cloud.md
