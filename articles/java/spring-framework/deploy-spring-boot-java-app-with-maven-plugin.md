@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: da40d293d0ad42286e6dfb2fd47074a4ae218b6b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: f4c0a870ce61508a846d62ae956fb13653e051ea
+ms.sourcegitcommit: 2760d3ca0ff0b939181d976a652f2b35ea5b3fb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673090"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83426083"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Развертывание приложения Spring Boot в виде файла JAR в Службе приложений Azure с помощью Maven и Azure на платформе Linux
 
@@ -95,7 +95,7 @@ ms.locfileid: "81673090"
    <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.9.0</version>
+    <version>1.9.1</version>
    </plugin>
    ```
 
@@ -117,7 +117,7 @@ ms.locfileid: "81673090"
    [INFO] Building gs-spring-boot 0.1.0
    [INFO] --------------------------------[ jar ]---------------------------------
    [INFO]
-   [INFO] --- azure-webapp-maven-plugin:1.9.0:config (default-cli) @ gs-spring-boot ---
+   [INFO] --- azure-webapp-maven-plugin:1.9.1:config (default-cli) @ gs-spring-boot ---
    [WARNING] The plugin may not work if you change the os of an existing webapp.
    Define value for OS(Default: Linux):
    1. linux [*]
@@ -145,7 +145,7 @@ ms.locfileid: "81673090"
    <plugin>
        <groupId>com.microsoft.azure</groupId>
        <artifactId>azure-webapp-maven-plugin</artifactId>
-       <version>1.9.0</version>
+       <version>1.9.1</version>
        <configuration>
           <schemaVersion>V2</schemaVersion>
           <resourceGroup>gs-spring-boot-1559091271202-rg</resourceGroup>
@@ -171,7 +171,7 @@ ms.locfileid: "81673090"
                 <directory>${project.basedir}/target</directory>
                 <includes>
                   <include>*.jar</include>
-               includes>
+                <includes>
               </resource>
             </resources>
           </deployment>

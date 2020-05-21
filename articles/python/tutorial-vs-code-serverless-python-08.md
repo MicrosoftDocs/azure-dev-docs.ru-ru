@@ -2,14 +2,14 @@
 title: Шаг 8. Очистка ресурсов, используемых с кодом Python, в Функциях Azure
 description: 'Шаг руководства 8: очистка ресурсов Azure, позволяющая избежать постоянных расходов.'
 ms.topic: conceptual
-ms.date: 01/15/2020
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 151f063e87de6d8db528a20a5e0df958ec9a3afd
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80442149"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708628"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Очистка ресурсов Azure для Функций Azure
 

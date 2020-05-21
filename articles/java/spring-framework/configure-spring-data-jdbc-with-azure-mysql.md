@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 256a32753c5677f3676e5096c7a1e3223d751c60
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: de4a913e7cd4e96c8223ddd005a9d3014780d0fe
+ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369963"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83631629"
 ---
 # <a name="use-spring-data-jdbc-with-azure-database-for-mysql"></a>Использование JDBC Spring Data с Базой данных Azure для MySQL
 
@@ -29,7 +29,7 @@ ms.locfileid: "83369963"
 Создайте приложение, введя в командной строке следующую команду:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RC1 -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Настройка Spring Boot для использования Базы данных Azure для MySQL
@@ -42,7 +42,6 @@ logging.level.org.springframework.jdbc.core=DEBUG
 spring.datasource.url=jdbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/demo?serverTimezone=UTC
 spring.datasource.username=spring@$AZ_DATABASE_NAME
 spring.datasource.password=$AZ_MYSQL_PASSWORD
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 spring.datasource.initialization-mode=always
 ```
