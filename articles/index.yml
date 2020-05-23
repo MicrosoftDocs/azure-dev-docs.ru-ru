@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: 2afe0deb03a1aff2b40c2d739f873bd6a2bbcf0c
-  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+  ms.openlocfilehash: 193bcf51848ac6fbf3c1f3fb263313bbde2784f8
+  ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/08/2020
-  ms.locfileid: "82988703"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83631564"
 productDirectory:
   items:
   - title: Python
@@ -124,7 +124,7 @@ additionalContent:
     - title: Azure DevOps
       summary: Используйте Azure DevOps для планирования работы, совместной разработки кода, а также для создания и развертывания приложений.
       url: https://docs.microsoft.com/azure/devops/?view=azure-devops
-    - title: Совместная работа Azure и GitHub
+    - title: Интеграция Azure с GitHub
       summary: Автоматизируйте, настраивайте и выполняйте рабочие процессы разработки программного обеспечения в репозитории с помощью GitHub и GitHub Actions.
       url: https://docs.microsoft.com/azure/developer/github
     - title: Jenkins
@@ -141,7 +141,7 @@ additionalContent:
       url: https://docs.microsoft.com/azure/developer/chef/
     - title: Maven
       summary: Применяйте Maven для автоматизированного создания проектов Java и управления ими. Также поддерживаются другие языки.
-      url: https://docs.microsoft.com/java/api/overview/azure/maven/README
+      url: https://github.com/Microsoft/azure-maven-plugins#readme
     - title: Набор средств Azure для IntelliJ
       summary: Создавайте, разрабатывайте, тестируйте и развертывайте приложения Azure в интегрированной среде разработки IntelliJ с помощью Azure Toolkit for IntelliJ.
       url: https://docs.microsoft.com/azure/developer/java/toolkit-for-intellij/
