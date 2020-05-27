@@ -2,14 +2,14 @@
 title: Шаг 4. Локальная отладка кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 ms.topic: conceptual
-ms.date: 09/02/2019
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 51ef666bd529194670279deaae51ee073633fd3a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 167e1c2be4d379f7457d35f2e6fe4a226092ac08
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441599"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708576"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 
@@ -64,6 +64,11 @@ ms.locfileid: "80441599"
 1. Чтобы проверить отладку функции, установите точку останова в строке с текстом `name = req.params.get('name')` и снова выполните запрос к URL-адресу. Отладчик Visual Studio Code должен остановиться на указанной строке, что позволит вам проверять переменные и выполнить код по шагам. (Краткое пошаговое руководство по базовым возможностям отладки см. в [учебнике для Visual Studio Code по настройке и запуску отладчика](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
 
 1. Когда вы будете полностью удовлетворены результатами локального тестирования функции, закройте отладчик (с помощью команды меню **Отладка** > **Остановить отладку** или команды **Отключить** на панели инструментов отладки).
+
+> [!NOTE]
+> Если возникает ошибка, информирующая о том, что не удалось проверить подключение AzureWebJobsStorage, указанное в файле local.settings.json, это значит, что файл *local.settings.json* в проекте содержит строку `"AzureWebJobsStorage": "UseDevelopmentStorage=true"`. Эта строка указывает, что отладчик должен использовать эмулятор хранения Azure локально, но он не установлен. В этом случае вы можете [установить эмулятор хранения Azure](/azure/storage/common/storage-use-emulator#get-the-storage-emulator), а затем [запустить и инициализировать его](/azure/storage/common/storage-use-emulator#start-and-initialize-the-storage-emulator), а также перезапустить отладчик.
+>
+> Или вы можете изменить строку в файле JSON на `"AzureWebJobsStorage": ""` и перезапустить отладчик.
 
 > [!div class="nextstepaction"]
 > [Локальная работа с отладчиком завершена — перейти к шагу 5 >>>](tutorial-vs-code-serverless-python-05.md)

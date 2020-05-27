@@ -2,14 +2,14 @@
 title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 ms.topic: conceptual
-ms.date: 09/02/2019
+ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 509e62b5bb8b23365dc30781b6f658a39894d56d
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: fcb9a520e10036d5059f060dedf49e8f222af184
+ms.sourcegitcommit: 089b87e1631a9db145583eb274edac6f80d16367
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441239"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83708588"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -42,7 +42,7 @@ ms.locfileid: "80441239"
 
 Установите следующее программное обеспечение:
 
-- Python 3.7 или Python 3.6 для работы с Функциями Azure. [Python 3.7.5](https://www.python.org/downloads/release/python-375/) и [Python 3.6.8](https://www.python.org/downloads/release/python-368/) — это новейшие совместимые версии. Прокрутите страницы вниз, чтобы найти установщики. При установке выберите **Add Python 3.x to PATH** (Добавить в путь Python 3.x). Используйте параметры по умолчанию, выбрав **Установить сейчас**. В Windows также выберите **Disable Path length limit** (Отключить ограничение длины пути) в конце процесса.
+- Python 3.6, 3.7 или 3.8 для работы с Функциями Azure. Установите Python с сайта [python.org](https://www.python.org/downloads). При установке выберите **Add Python 3.x to PATH** (Добавить в путь Python 3.x). Используйте параметры по умолчанию, выбрав **Установить сейчас**. В Windows также выберите **Disable Path length limit** (Отключить ограничение длины пути) в конце процесса.
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Расширение Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), как описано в разделе [предварительных требований](https://code.visualstudio.com/docs/python/python-tutorial) учебника по Python в VS Code.
 - [Расширение "Функции Azure"](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Общие сведения см. в репозитории [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions) на сайте GitHub.
