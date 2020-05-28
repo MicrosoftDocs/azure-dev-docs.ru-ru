@@ -3,12 +3,12 @@ title: Подготовка виртуальной машины с помощь�
 description: Узнайте, как подготовить виртуальную машину Azure с помощью Python и библиотек управления Azure SDK.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 816419d99647ed23173d6c9ff707c256b384968f
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: f21495cc42f3bb228e460f1c591c9aa037dd8123
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404987"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862787"
 ---
 # <a name="example-use-the-azure-sdk-to-provision-a-virtual-machine"></a>Пример использования пакета Azure SDK для подготовки виртуальной машины
 
@@ -35,7 +35,7 @@ ms.locfileid: "83404987"
     azure-mgmt-resource
     azure-mgmt-network
     azure-mgmt-compute
-    azure-core-cli
+    azure-cli-core
     ```
 
 1. В окне терминала или в командной строке с активированной виртуальной средой установите библиотеки управления, указанные в файле *requirements.txt*.

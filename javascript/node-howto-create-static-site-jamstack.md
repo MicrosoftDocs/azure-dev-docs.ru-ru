@@ -4,12 +4,12 @@ description: Как использовать Azure для создания пр�
 ms.topic: article
 ms.date: 08/20/2019
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 6c804185859611f4534d5fa4e62b8e2585d14aa5
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: abe56482d616a5dfcc3dc25a8ab7949bc5164fe0
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "74467241"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862797"
 ---
 # <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Создание веб-приложений JAMstack (статический сайт) в Azure с помощью Node.js
 
@@ -22,7 +22,7 @@ ms.locfileid: "74467241"
 - Выберите библиотеки, необходимые для разработки внешнего интерфейса, например Angular. Затем вы передаете эти статические файлы HTML, CSS и JavaScript в хранилище BLOB-объектов Azure, которое предоставляет встроенный веб-сервер.
 - Создайте обратный прокси-сервер, чтобы весь трафик прошел через один домен URL-адреса.
 
-Вы можете посмотреть демонстрацию процесса с помощью сеанса //build 2019, [Productive front-end development with JavaScript, Visual Studio Code, and Azure](https://mybuild.techcommunity.microsoft.com/sessions/77038?source=sessions#top-anchor) (Продуктивная внешняя разработка с использованием JavaScript, кода Visual Studio и Azure).
+Вы можете посмотреть демонстрацию процесса с помощью сеанса //build 2019, [Productive front-end development with JavaScript, Visual Studio Code, and Azure](https://azure.microsoft.com/resources/videos/build-2019-productive-front-end-development-with-javascript-visual-studio-code-and-azure/) (Продуктивная внешняя разработка с использованием JavaScript, кода Visual Studio и Azure).
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/B19-BRK3021?latestplayer=true]
 
