@@ -7,18 +7,18 @@ ms.date: 12/19/2018
 ms.service: storage
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: e9546d2e65d198fe9ab92e5d588df8797fd97e16
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 7375373696b59320100e8109b75cb1fdef6ed64b
+ms.sourcegitcommit: 5322c817033e6e20064f53f0fbedcf1f455f54d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669240"
+ms.lasthandoff: 05/25/2020
+ms.locfileid: "83825199"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-storage"></a>Как использовать Spring Boot Starter со службой хранилища Azure
 
 В статье описано, как создать пользовательское приложение с помощью **Spring Initializr** и добавить к нему начальное приложение службы хранилища Azure, а затем отправить большой двоичный объект в учетную запись хранения Azure с помощью этого приложения.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
@@ -105,11 +105,9 @@ ms.locfileid: "81669240"
    <dependency>
       <groupId>com.microsoft.azure</groupId>
       <artifactId>spring-azure-starter-storage</artifactId>
-      <version>1.0.0.M2</version>
+      <version>1.2.5</version>
    </dependency>
    ```
-
-   ![Редактирование файла pom.xml][SI03]
 
 1. Сохраните и закройте файл *pom.xml*.
 
@@ -207,19 +205,20 @@ ms.locfileid: "81669240"
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
    spring.cloud.azure.resource-group=wingtiptoysresources
-   spring.cloud.azure.region=West US
+   spring.cloud.azure.region=westUS
    spring.cloud.azure.storage.account=wingtiptoysstorage
+   blob=azure-blob://containerName/blobName
    ```
    Где:
 
-   |                   Поле                   |                                            Description                                            |
+   |                   Поле                   |                                            Описание                                            |
    |-------------------------------------------|---------------------------------------------------------------------------------------------------|
    | `spring.cloud.azure.credential-file-path` |            Определяет файл учетных данных Azure, который был создан ранее в этом примере.             |
    |    `spring.cloud.azure.resource-group`    |           Определяет группу ресурсов Azure, которая содержит учетную запись хранения Azure.            |
    |        `spring.cloud.azure.region`        | Определяет географический регион, указанный при создании учетной записи хранения Azure. |
    |   `spring.cloud.azure.storage.account`    |            Определяет учетную запись хранения Azure, которая была создана ранее в этом примере.             |
-
-
+   |                   `blob`                  |           Определяет имена контейнера и большого двоичного объекта для хранения данных.         |
+    
 3. Сохраните и закройте файл *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>Добавление примера кода для реализации базовых функций службы хранилища Azure
@@ -254,17 +253,17 @@ ms.locfileid: "81669240"
 
 1. Сохраните и закройте файл основного приложения Java.
 
-### <a name="add-a-web-controller-class"></a>Добавление класса веб-контроллера
+### <a name="add-a-blob-controller-class"></a>Добавление класса контроллера большого двоичного объекта
 
-1. Создайте файл Java с именем *WebController.java* в каталоге пакета приложения, например так:
+1. Создайте файл Java с именем *BlobController.java* в каталоге пакета приложения, например так:
 
-   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\WebController.java`
+   `C:\SpringBoot\storage\src\main\java\com\wingtiptoys\storage\BlobController.java`
 
    -или-
 
-   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/WebController.java`
+   `/users/example/home/storage/src/main/java/com/wingtiptoys/storage/BlobController.java`
 
-1. Откройте файл Java веб-контроллера в текстовом редакторе и добавьте следующие строки.  Вместо *wingtiptoys* укажите реальную группу ресурсов, а вместо *storage* — реальное имя артефакта.
+1. Откройте файл Java контроллера большого двоичного объекта в текстовом редакторе и добавьте указанные ниже строки.  Вместо *wingtiptoys* укажите реальную группу ресурсов, а вместо *storage* — реальное имя артефакта.
 
    ```java
    package com.wingtiptoys.storage;
@@ -273,41 +272,37 @@ ms.locfileid: "81669240"
    import org.springframework.core.io.Resource;
    import org.springframework.core.io.WritableResource;
    import org.springframework.util.StreamUtils;
-   import org.springframework.web.bind.annotation.GetMapping;
-   import org.springframework.web.bind.annotation.PostMapping;
-   import org.springframework.web.bind.annotation.RequestBody;
-   import org.springframework.web.bind.annotation.RestController;
+   import org.springframework.web.bind.annotation.*;
 
    import java.io.IOException;
    import java.io.OutputStream;
    import java.nio.charset.Charset;
 
    @RestController
-   public class WebController {
-
-      @Value("blob://test/myfile.txt")
-      private Resource blobFile;
-
-      @GetMapping(value = "/")
-      public String readBlobFile() throws IOException {
-         return StreamUtils.copyToString(
-            this.blobFile.getInputStream(),
-            Charset.defaultCharset()) + "\n";
-      }
-
-      @PostMapping(value = "/")
-      public String writeBlobFile(@RequestBody String data) throws IOException {
-         try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
-            os.write(data.getBytes());
-         }
-         return "File was updated.\n";
-      }
+   @RequestMapping("blob")
+   public class BlobController {
+   
+       @Value("${blob}")
+       private Resource blobFile;
+   
+       @GetMapping
+       public String readBlobFile() throws IOException {
+           return StreamUtils.copyToString(
+                   this.blobFile.getInputStream(),
+                   Charset.defaultCharset());
+       }
+   
+       @PostMapping
+       public String writeBlobFile(@RequestBody String data) throws IOException {
+           try (OutputStream os = ((WritableResource) this.blobFile).getOutputStream()) {
+               os.write(data.getBytes());
+           }
+           return "file was updated";
+       }
    }
    ```
 
-   Синтаксис `@Value("blob://[container]/[blob]")` определяет имена контейнера и большого двоичного объекта для хранения данных.
-
-1. Сохраните и закройте файл Java веб-контроллера.
+1. Сохраните и закройте файл Java контроллера большого двоичного объекта.
 
 1. Откройте командную строку и перейдите из каталога в папку с файлом *pom.xml*, например:
 
@@ -329,7 +324,7 @@ ms.locfileid: "81669240"
    а. Отправьте запрос POST, чтобы обновить содержимое файла:
 
       ```shell
-      curl -X POST -H "Content-Type: text/plain" -d "Hello World" http://localhost:8080/
+      curl -d 'new message' -H 'Content-Type: text/plain' localhost:8080/blob
       ```
 
       Вы должны получить ответ, подтверждающий обновление файла.
@@ -373,4 +368,3 @@ ms.locfileid: "81669240"
 
 [SI01]: media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-01.png
 [SI02]: media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-02.png
-[SI03]: media/configure-spring-boot-starter-java-app-with-azure-storage/create-project-03.png

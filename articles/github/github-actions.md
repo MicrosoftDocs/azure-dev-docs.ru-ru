@@ -6,12 +6,12 @@ ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: 1b3906eeacf48e2561f49dc8480ce83565aeca3a
-ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
+ms.openlocfilehash: 3e6f6d447da93873a1278eaa42882a9d08a94d57
+ms.sourcegitcommit: 9330d5af796b4b114466bbe75b8e18a9206f218e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631670"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83862807"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Развертывание в Azure с помощью GitHub Actions
 
@@ -23,11 +23,6 @@ ms.locfileid: "83631670"
 
 > [!NOTE]   
 > Приведенные в этой статье ссылки ведут на статьи и репозитории в GitHub. 
-
-- [Действие Azure/webapps-deploy](https://github.com/Azure/webapps-deploy) выполняет развертывание в Веб-приложениях Azure и Веб-приложении для контейнеров Azure. 
-- [Azure/appservice-settings](https://github.com/Azure/appservice-settings) позволяет массово настраивать параметры приложения, строки подключения и другие общие параметры с использованием синтаксиса JSON в веб-приложении Azure (для Windows или Linux) и для любых поддерживаемых слотов развертывания.
-
-
 
 ## <a name="key-concepts"></a>Основные понятия
 
@@ -53,10 +48,11 @@ GitHub Actions содержат предварительно настроенн�
 
 ## <a name="connect-to-azure"></a>Подключение к Azure
 
-Примеры рабочих процессов для подключения к Azure см. в описании следующих действий GitHub:  
+Примеры рабочих процессов для подключения к Azure и выполнения скриптов на основе Az CLI или Az PowerShell с помощью действий GitHub:  
 
 - [Вход в Azure](https://github.com/Azure/login)  
-- [Azure CLI](https://github.com/Azure/CLI)  
+- [Azure CLI](https://github.com/Azure/CLI)
+- [Azure PowerShell](https://github.com/Azure/powershell)
 
 
 ## <a name="sample-apps-with-cicd-workflow-samples"></a>Примеры приложений с примерами рабочих процессов CI/CD 
@@ -69,15 +65,22 @@ GitHub Actions содержат предварительно настроенн�
 - [Развертывание веб-приложения Java](https://github.com/Azure-Samples/java-spring-petclinic)  
 - [Развертывание приложения Java Spring](https://github.com/Azure-Samples/Java-application-petstore-ee7)  
 - [Развертывание веб-приложения Python](https://github.com/Azure-Samples/pythonSample_thecatsaidno)  
-- [Развертывание с помощью Docker](https://github.com/Azure-Samples/Node_express_container)  
+- [Развертывание контейнерного веб-приложения с помощью Docker](https://github.com/Azure-Samples/Node_express_container)
 
 
 ## <a name="deploy-a-web-app"></a>Развертывание веб-приложения
 
-- [Веб-приложение Azure](https://github.com/Azure/webapps-deploy)  
+Развертывание в службах Azure "Веб-приложения" и "Веб-приложение для контейнеров"
+
+- [Действие Azure/webapps-deploy](https://github.com/Azure/webapps-deploy)
+
+Развертывание статического веб-приложения
+- [Azure/static-web-apps-deploy](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=angular)
+
+
 Настройте параметры приложения и строки подключения с помощью действий:
 
-- [Веб-приложение Azure для контейнеров](https://github.com/Azure/webapps-container-deploy)  
+- [Azure/appservice-settings](https://github.com/Azure/appservice-settings) 
 - [Параметры Службы приложений Azure](https://github.com/Azure/appservice-settings)  
 
 ## <a name="deploy-a-serverless-app"></a>Развертывание бессерверного приложения
