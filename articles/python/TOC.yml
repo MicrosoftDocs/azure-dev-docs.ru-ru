@@ -8,19 +8,19 @@
       href: cloud-development-provisioning.md
     - name: Поток разработки в Azure
       href: cloud-development-flow.md
-- name: Настройка среды разработки для Azure
-  href: configure-local-development-environment.md
-- name: Начало работы с Azure SDK для Python
+- name: Начало работы в Azure с Python
   items:
-    - name: Общие сведения и шаблоны использования
+    - name: Общие сведения о библиотеках Azure
       href: azure-sdk-overview.md
-    - name: Установка библиотек SDK
-      href: azure-sdk-install.md
-    - name: Пример Создание группы ресурсов
+    - name: Настройка среды разработки
+      href: configure-local-development-environment.md
+    - name: Варианты использования библиотеки
+      href: azure-sdk-library-usage-patterns.md
+    - name: Пример Подготовка группы ресурсов к работе
       href: azure-sdk-example-resource-group.md
-    - name: Пример Использование Службы хранилища Azure
+    - name: Пример Подготовка к работе и использование Службы хранилища Azure
       href: azure-sdk-example-storage.md
-    - name: Пример Подготовка к работе веб-приложения с помощью кода
+    - name: Пример Подготовка к работе и развертывание веб-приложения
       href: azure-sdk-example-web-app.md
     - name: Пример Подготовка виртуальной машины
       href: azure-sdk-example-virtual-machines.md
@@ -88,6 +88,8 @@
           href: tutorial-vs-code-serverless-python-08.md
 - name: Практические руководства
   items:
+    - name: Установка пакетов библиотек
+      href: azure-sdk-install.md
     - name: Аутентификация приложений с помощью Azure
       href: azure-sdk-authenticate.md
     - name: Управление субъектами-службами
@@ -128,7 +130,5 @@
       href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-search'
     - name: Все примеры
       href: 'https://docs.microsoft.com/samples/browse/?languages=python'
-- name: Справочник
-  items:
-    - name: Пакет SDK Azure
-      href: sdk.md
+- name: Справочник по API библиотеки
+  href: sdk-library-api-reference.md
