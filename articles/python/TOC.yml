@@ -18,26 +18,30 @@
       href: azure-sdk-library-usage-patterns.md
     - name: Пример Подготовка группы ресурсов к работе
       href: azure-sdk-example-resource-group.md
-    - name: Пример Подготовка к работе и использование Службы хранилища Azure
+    - name: Пример Подготовка службы хранилища Azure к работе
       href: azure-sdk-example-storage.md
+    - name: Пример Использование Службы хранилища Azure
+      href: azure-sdk-example-storage-use.md
     - name: Пример Подготовка к работе и развертывание веб-приложения
       href: azure-sdk-example-web-app.md
     - name: Пример Подготовка виртуальной машины
       href: azure-sdk-example-virtual-machines.md
-- name: Краткие руководства по службам Azure
+- name: Изучение отдельных служб Azure
   items:
     - name: Размещение приложений
       href: quickstarts-app-hosting.md
     - name: Решения для работы с данными
       href: quickstarts-data-solutions.md
+    - name: Идентификация и безопасность
+      href: quickstarts-identity-security.md
     - name: Машинное обучение
       href: quickstarts-machine-learning.md
-    - name: Azure Cognitive Services
+    - name: ИИ (Cognitive Services)
       href: quickstarts-cognitive-services.md
-    - name: Обмен сообщениями
-      href: quickstarts-messaging.md
-    - name: Безопасность и интеграция
-      href: quickstarts-security-integration.md
+    - name: Обмен сообщениями и Интернет вещей
+      href: quickstarts-messaging-iot.md
+    - name: Другие службы
+      href: quickstarts-other-services.md
 - name: Руководства по конкретным сценариям
   items:
     - name: "Развертывание веб-приложения с помощью VS\_Code"
