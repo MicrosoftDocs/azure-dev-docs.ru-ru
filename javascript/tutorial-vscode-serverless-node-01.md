@@ -3,12 +3,12 @@ title: Развертывание Функций Azure в Node.js с помощ�
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 23eff2eb672b7221ed74fc8085515647392d8525
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: eaf8ea2c121319693c4007d8301c95c9b9d3a6c1
+ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82138780"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202913"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Развертывание Функций Azure с помощью Visual Studio
 
@@ -18,7 +18,7 @@ ms.locfileid: "82138780"
 
 Просмотрите это видео, чтобы ознакомиться с полным пошаговым руководством по содержимому этой статьи.
 
-> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-Azure-Functions-from-Visual-Studio-Code/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-Azure-Functions-Visual-Studio-Code/player]
 
 ## <a name="prerequisites"></a>Предварительные требования
 

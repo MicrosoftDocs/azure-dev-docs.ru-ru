@@ -4,12 +4,12 @@ description: Узнайте, как создать кластер Kubernetes с 
 keywords: Azure DevOps, Terraform, AKS, Kubernetes
 ms.topic: tutorial
 ms.date: 03/09/2020
-ms.openlocfilehash: 45a27dcd8751484f71c7a89f08109d2303ea121e
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 01355f79f4c50d8599bf1c9cfab7c72257860f25
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171150"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329622"
 ---
 # <a name="tutorial-create-a-kubernetes-cluster-with-azure-kubernetes-service-using-terraform"></a>Руководство по созданию кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform
 
@@ -28,7 +28,7 @@ ms.locfileid: "82171150"
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](install-configure.md).
+- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](getting-started-cloud-shell.md).
 
 - **Субъект-служба Azure.** Следуйте инструкциям по **созданию субъекта-службы** в руководстве по [созданию субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Запишите значения appId (идентификатор приложения), displayName (отображаемое имя), password (пароль) и tenant (клиент).
 

@@ -3,12 +3,12 @@ title: Руководство. Создание периферийной сет�
 description: Сведения о реализации двух периферийных виртуальных сетей (VNets), подключенных к концентратору, в звездообразной топологии.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 9c4a04232d91a36bdc4ff408b326330821a87b6b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 935bf66b19eeb73d1fff5d4471d2541f38d7f03a
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170910"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329592"
 ---
 # <a name="tutorial-create-a-spoke-network-in-azure-using-terraform"></a>Руководство по Создание периферийной сети с помощью Terraform в Azure
 
@@ -80,7 +80,7 @@ ms.locfileid: "82170910"
       resource_group_name = azurerm_resource_group.spoke1-vnet-rg.name
       address_space       = ["10.1.0.0/16"]
 
-      tags {
+      tags = {
         environment = local.prefix-spoke1
       }
     }
@@ -109,7 +109,7 @@ ms.locfileid: "82170910"
       allow_forwarded_traffic = true
       allow_gateway_transit   = false
       use_remote_gateways     = true
-      depends_on = ["azurerm_virtual_network.spoke1-vnet", "azurerm_virtual_network.hub-vnet" , "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke1-vnet, azurerm_virtual_network.hub-vnet , azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
 
     resource "azurerm_network_interface" "spoke1-nic" {
@@ -156,7 +156,7 @@ ms.locfileid: "82170910"
         disable_password_authentication = false
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke1
       }
     }
@@ -170,7 +170,7 @@ ms.locfileid: "82170910"
       allow_forwarded_traffic   = true
       allow_gateway_transit     = true
       use_remote_gateways       = false
-      depends_on = ["azurerm_virtual_network.spoke1-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke1-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
     ```
 
@@ -202,7 +202,7 @@ ms.locfileid: "82170910"
       resource_group_name = azurerm_resource_group.spoke2-vnet-rg.name
       address_space       = ["10.2.0.0/16"]
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -231,7 +231,7 @@ ms.locfileid: "82170910"
       allow_forwarded_traffic = true
       allow_gateway_transit   = false
       use_remote_gateways     = true
-      depends_on = ["azurerm_virtual_network.spoke2-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke2-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
 
     resource "azurerm_network_interface" "spoke2-nic" {
@@ -246,7 +246,7 @@ ms.locfileid: "82170910"
         private_ip_address_allocation = "Dynamic"
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -282,7 +282,7 @@ ms.locfileid: "82170910"
         disable_password_authentication = false
       }
 
-      tags {
+      tags = {
         environment = local.prefix-spoke2
       }
     }
@@ -296,7 +296,7 @@ ms.locfileid: "82170910"
       allow_forwarded_traffic   = true
       allow_gateway_transit     = true
       use_remote_gateways       = false
-      depends_on = ["azurerm_virtual_network.spoke2-vnet", "azurerm_virtual_network.hub-vnet", "azurerm_virtual_network_gateway.hub-vnet-gateway"]
+      depends_on = [azurerm_virtual_network.spoke2-vnet, azurerm_virtual_network.hub-vnet, azurerm_virtual_network_gateway.hub-vnet-gateway]
     }
     ```
      

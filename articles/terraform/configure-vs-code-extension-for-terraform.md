@@ -3,12 +3,12 @@ title: Руководство. Настройка расширения Visual St
 description: Сведения о том, как установить и использовать расширение Azure Terraform в Visual Studio Code.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: c33006fc2be87bfce42f15a6fc123c9c8326aa42
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 9fd6d6b93537795109117198aa20063b556b8368
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171260"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329572"
 ---
 # <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Руководство по Настройка расширения Visual Studio Code для Azure Terraform
 
@@ -25,7 +25,7 @@ ms.locfileid: "82171260"
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Terraform**. [Установите и настройте Terraform](install-configure.md).
+- **Terraform**. [Установите и настройте Terraform](getting-started-cloud-shell.md).
 - **Visual Studio Code**. Установите подходящую для вашей среды версию [Visual Studio Code](https://code.visualstudio.com/download).
 
 ## <a name="prepare-your-dev-environment"></a>Подготовка среды разработки

@@ -4,14 +4,14 @@ description: включить файл
 author: tomarchermsft
 ms.service: terraform
 ms.topic: include
-ms.date: 04/26/2020
+ms.date: 06/01/2020
 ms.author: tarcher
-ms.openlocfilehash: 2a07579545a5177f660642580e38ed24d1bd1fe8
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: 424f7874870a2548ed17864c60a16ac7381ba8c4
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169670"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329321"
 ---
 > [!NOTE]
 > Чтобы получить поддержку по Terraform, используйте один из каналов службы поддержки Terraform в сообществе HashiCorp.

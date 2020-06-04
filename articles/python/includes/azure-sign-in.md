@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 90ac4162e1a6032bcb1f3cfab7f249e4538314f7
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: cbcc292bf0b59adf35789bbd24ca37b0301a2ad7
+ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441479"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84268913"
 ---
 Установив расширение Azure, войдите в свою учетную запись Azure. Для этого перейдите в обозреватель **Azure**, выберите **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).
 
@@ -19,14 +19,14 @@ ms.locfileid: "80441479"
 > [!NOTE]
 > Если отображается сообщение об ошибке **Не удается найти подписку с именем [идентификатор подписки]** , возможно вы находитесь за прокси-сервером и не можете получить доступ к API Azure. Укажите в переменных среды `HTTP_PROXY` и `HTTPS_PROXY` параметры прокси-сервера в терминале:
 >
-> ```bash
-> # macOS/Linux
-> export HTTPS_PROXY=https://username:password@proxy:8080
-> export HTTP_PROXY=http://username:password@proxy:8080
-> ```
->
 > ```cmd
 > # Windows
 > set HTTPS_PROXY=https://username:password@proxy:8080
 > set HTTP_PROXY=http://username:password@proxy:8080
+> ```
+>
+> ```bash
+> # macOS/Linux
+> export HTTPS_PROXY=https://username:password@proxy:8080
+> export HTTP_PROXY=http://username:password@proxy:8080
 > ```

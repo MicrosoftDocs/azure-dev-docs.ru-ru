@@ -4,12 +4,12 @@ description: Узнайте, как создать кластер Kubernetes с 
 keywords: Azure DevOps, Terraform, Шлюз приложений, входящий трафик, AKS, Kubernetes
 ms.topic: tutorial
 ms.date: 03/09/2020
-ms.openlocfilehash: 95a1e9ebbf0dcffb2b3101c3b794ba86e62886c8
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 60036b7ba4071d900a86835889501a932d48e7fe
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171250"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329632"
 ---
 # <a name="tutorial-create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Руководство по Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes
 
@@ -32,7 +32,7 @@ ms.locfileid: "82171250"
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](install-configure.md).
+- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](getting-started-cloud-shell.md).
 
 - **Группа ресурсов Azure**. Если у вас нет группы ресурсов Azure, которую можно использовать для демонстрационной версии, [создайте группу ресурсов Azure](/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups). Запишите имя и расположение группы ресурсов, так как эти значения используются в демонстрационной версии.
 
@@ -225,8 +225,8 @@ ms.locfileid: "82171250"
       default     = "~/.ssh/id_rsa.pub"
     }
 
-    variable "tags" {
-      type = "map"
+    variable "tags" = {
+      type = map(string)
 
       default = {
         source = "terraform"
@@ -387,7 +387,7 @@ ms.locfileid: "82171250"
 
       tags = var.tags
 
-      depends_on = ["azurerm_virtual_network.test", "azurerm_public_ip.test"]
+      depends_on = [azurerm_virtual_network.test, azurerm_public_ip.test]
     }
     ```
 
@@ -399,28 +399,28 @@ ms.locfileid: "82171250"
       role_definition_name = "Network Contributor"
       principal_id         = var.aks_service_principal_object_id 
 
-      depends_on = ["azurerm_virtual_network.test"]
+      depends_on = [azurerm_virtual_network.test]
     }
 
     resource "azurerm_role_assignment" "ra2" {
       scope                = azurerm_user_assigned_identity.testIdentity.id
       role_definition_name = "Managed Identity Operator"
       principal_id         = var.aks_service_principal_object_id
-      depends_on           = ["azurerm_user_assigned_identity.testIdentity"]
+      depends_on           = [azurerm_user_assigned_identity.testIdentity]
     }
 
     resource "azurerm_role_assignment" "ra3" {
       scope                = azurerm_application_gateway.network.id
       role_definition_name = "Contributor"
       principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-      depends_on           = ["azurerm_user_assigned_identity.testIdentity", "azurerm_application_gateway.network"]
+      depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
     }
 
     resource "azurerm_role_assignment" "ra4" {
       scope                = data.azurerm_resource_group.rg.id
       role_definition_name = "Reader"
       principal_id         = azurerm_user_assigned_identity.testIdentity.principal_id
-      depends_on           = ["azurerm_user_assigned_identity.testIdentity", "azurerm_application_gateway.network"]
+      depends_on           = [azurerm_user_assigned_identity.testIdentity, azurerm_application_gateway.network]
     }
     ```
 
@@ -468,7 +468,7 @@ ms.locfileid: "82171250"
         service_cidr       = var.aks_service_cidr
       }
 
-      depends_on = ["azurerm_virtual_network.test", "azurerm_application_gateway.network"]
+      depends_on = [azurerm_virtual_network.test, azurerm_application_gateway.network]
       tags       = var.tags
     }
 
