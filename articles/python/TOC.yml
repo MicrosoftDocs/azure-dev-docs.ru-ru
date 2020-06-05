@@ -16,18 +16,20 @@
       href: configure-local-development-environment.md
     - name: Варианты использования библиотеки
       href: azure-sdk-library-usage-patterns.md
-    - name: Пример Подготовка группы ресурсов к работе
-      href: azure-sdk-example-resource-group.md
-    - name: Пример Подготовка службы хранилища Azure к работе
-      href: azure-sdk-example-storage.md
-    - name: Пример Использование Службы хранилища Azure
-      href: azure-sdk-example-storage-use.md
-    - name: Пример Подготовка к работе и развертывание веб-приложения
-      href: azure-sdk-example-web-app.md
-    - name: Пример Подготовка базы данных к работе и выполнение запросов к ней
-      href: azure-sdk-example-database.md
-    - name: Пример Подготовка виртуальной машины
-      href: azure-sdk-example-virtual-machines.md
+    - name: Примеры
+      items:
+        - name: Подготовка группы ресурсов к работе
+          href: azure-sdk-example-resource-group.md
+        - name: Подготовка службы хранилища Azure к работе
+          href: azure-sdk-example-storage.md
+        - name: Использование Службы хранилища Azure
+          href: azure-sdk-example-storage-use.md
+        - name: Подготовка к работе и развертывание веб-приложения
+          href: azure-sdk-example-web-app.md
+        - name: Подготовка базы данных к работе и выполнение запросов к ней
+          href: azure-sdk-example-database.md
+        - name: Подготовка виртуальной машины
+          href: azure-sdk-example-virtual-machines.md
 - name: Изучение отдельных служб Azure
   items:
     - name: Размещение приложений
@@ -102,6 +104,8 @@
       href: how-to-manage-service-principals.md
     - name: Назначение субъектам безопасности разрешений ролей
       href: how-to-assign-role-permissions.md
+    - name: Настройка журнала
+      href: azure-sdk-logging.md
     - name: "Настройка аргументов REST\_API"
       href: azure-sdk-operation-config.md
     - name: Разработка многооблачных решений
