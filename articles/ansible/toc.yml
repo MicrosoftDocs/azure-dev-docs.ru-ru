@@ -7,13 +7,13 @@
 - name: Краткие руководства
   expanded: true
   items:
+    - name: "Начало работы\_— Cloud Shell"
+      href: getting-started-cloud-shell.md
     - name: Развертывание шаблона решения Ansible в CentOS
       href: solution-template-deploy.md
     - name: Установка Ansible на виртуальные машины Linux
       href: install-on-linux-vm.md
       maintainContext: true
-    - name: Запуск модулей playbook в Cloud Shell
-      href: cloudshell-run-playbook.md
     - name: Работа с Виртуальными машинами Linux
       expanded: true
       items:

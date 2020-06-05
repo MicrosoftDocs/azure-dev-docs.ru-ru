@@ -24,6 +24,8 @@
       href: azure-sdk-example-storage-use.md
     - name: Пример Подготовка к работе и развертывание веб-приложения
       href: azure-sdk-example-web-app.md
+    - name: Пример Подготовка базы данных к работе и выполнение запросов к ней
+      href: azure-sdk-example-database.md
     - name: Пример Подготовка виртуальной машины
       href: azure-sdk-example-virtual-machines.md
 - name: Изучение отдельных служб Azure

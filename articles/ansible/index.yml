@@ -10,12 +10,12 @@ metadata:
   author: TomArcherMsft
   ms.author: tarcher
   ms.date: 04/03/2020
-  ms.openlocfilehash: 30a37bac54c8b150a78a417a2fcf9f8c39a4cb7b
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: 451ac36d03d9a97e5685bc4ed2d96ccc4123cace
+  ms.sourcegitcommit: 367217792f3b16c769e2c39372358bc6b9c9c044
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "81743565"
+  ms.lasthandoff: 06/02/2020
+  ms.locfileid: "84292781"
 landingContent:
 - title: Общие сведения об Ansible в Azure
   linkLists:
@@ -33,12 +33,12 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
+    - text: Начало работы — Cloud Shell
+      url: getting-started-cloud-shell.md
     - text: Развертывание шаблона решения Ansible в CentOS
       url: solution-template-deploy.md
     - text: Установка Ansible на виртуальные машины Linux
       url: install-on-linux-vm.md
-    - text: Запуск модулей playbook в Cloud Shell
-      url: cloudshell-run-playbook.md
   - linkListType: tutorial
     links:
     - text: Настройка динамического списка
