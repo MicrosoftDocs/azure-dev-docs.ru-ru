@@ -1,0 +1,55 @@
+- name: Документация по Azure для разработчиков мобильных приложений
+  href: index.yml
+- name: Обзор
+  expanded: true
+  items:
+    - name: Выбор платформы для разработки мобильных приложений
+      href: choose-mobile-framework.md
+    - name: Этапы разработки мобильных приложений в облаке
+      href: mobile-cloud-development-stages.md
+- name: Основные понятия
+  items:
+    - name: Аутентификация
+      href: authentication.md
+    - name: Данные
+      items:
+        - name: Хранилище данных
+          href: data-storage.md
+        - name: Хранилище Azure
+          href: azure-storage.md
+        - name: Сеть доставки содержимого Azure
+          href: azure-content-delivery-network.md
+    - name: Службы вычислений
+      items:
+        - name: Бессерверные вычисления
+          href: serverless-compute.md
+        - name: 'Приложения, работающие в режиме реального времени'
+          href: real-time-communication.md
+    - name: Система управления версиями
+      href: code-hosting-services.md
+    - name: DevOps
+      items:
+        - name: Что такое DevOps?
+          href: devops.md
+        - name: Непрерывная сборка и интеграция
+          href: continuous-integration.md
+        - name: Тестирование на реальных устройствах
+          href: test-mobile-apps.md
+        - name: Непрерывная доставка
+          href: continuous-delivery.md
+    - name: Телеметрия
+      items:
+        - name: Анализ использования и поведения пользователей
+          href: analytics.md
+        - name: Создание отчетов о сбоях в реальном времени
+          href: diagnostics.md
+    - name: Push-уведомления
+      href: push-notifications.md
+    - name: Машинное обучение
+      items:
+        - name: Azure Cognitive Services
+          href: cognitive-services.md
+        - name: Azure Maps
+          href: azure-maps.md
+        - name: Когнитивный поиск Azure
+          href: azure-search.md
