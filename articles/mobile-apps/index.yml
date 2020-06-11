@@ -1,0 +1,159 @@
+### YamlMime:Hub
+title: Документация по Azure для разработчиков мобильных приложений
+summary: Найдите сведения, необходимые для разработки мобильных приложений в Azure.
+brand: azure
+metadata:
+  title: Azure для разработчиков мобильных приложений
+  description: Найдите сведения, необходимые для разработки мобильных приложений в Azure.
+  services: mobile-services
+  ms.service: mobile-services
+  ms.topic: hub-page
+  author: codemillmatt
+  ms.author: masoucou
+  ms.date: 06/08/2020
+  ms.openlocfilehash: b641175986a6cede2bbd982e20e78f35b3b4ecb3
+  ms.sourcegitcommit: f02ff55cef47581303a217cf1d310879cd722237
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/09/2020
+  ms.locfileid: "84632736"
+highlightedContent:
+  items:
+  - title: Выбор платформ для разработки мобильных приложений
+    itemType: architecture
+    url: choose-mobile-framework.md
+  - title: Этапы разработки мобильных приложений в Azure
+    itemType: architecture
+    url: mobile-cloud-development-stages.md
+  - title: Создание полноценного мобильного приложения с помощью Azure
+    itemType: video
+    url: https://channel9.msdn.com/Shows/Partly-Cloudy
+  - title: Создание мобильного приложения с помощью Xamarin.Forms
+    itemType: learn
+    url: https://docs.microsoft.com/learn/paths/build-mobile-apps-with-xamarin-forms/
+conceptualContent:
+  title: Начало работы
+  summary: Создание подключенных к облаку мобильных приложений с помощью Azure
+  items:
+  - title: Вызов веб-служб
+    links:
+    - url: serverless-compute.md
+      itemType: concept
+      text: Создание серверной части с бессерверной архитектурой для мобильного приложения с помощью Функций Azure и других служб
+    - url: /xamarin/xamarin-forms/data-cloud/azure-services/azure-functions.md
+      itemType: quickstart
+      text: Начало работы с Функциями Azure и Xamarin
+    - url: /learn/modules/consume-rest-services.md
+      itemType: learn
+      text: Использование веб-службы на основе REST с Xamarin
+    - url: /xamarin/xamarin-forms/data-cloud/azure-services/azure-signalr.md
+      itemType: concept
+      text: Использование службы Azure SignalR с Xamarin.Forms
+    - url: /azure/api-management/api-management-key-concepts.md
+      itemType: overview
+      text: Общие сведения о службе "Управление API" в Azure
+    - url: real-time-communication.md
+      itemType: overview
+      text: Создание приложений в реальном времени с помощью службы Azure SignalR
+  - title: Сохранение данных
+    links:
+    - url: data-storage.md
+      itemType: concept
+      text: Хранение, синхронизация и запрашивание данных для мобильных приложений в облаке
+    - url: /azure/cosmos-db/create-sql-api-xamarin-dotnet.md
+      itemType: quickstart
+      text: Сохранение данных с помощью Azure Cosmos DB
+    - url: /azure/cosmos-db/create-mongodb-xamarin.md
+      itemType: quickstart
+      text: Создание приложения Xamarin.Forms с помощью пакета SDK для .NET и API Azure Cosmos DB для MongoDB
+    - url: azure-storage.md
+      itemType: overview
+      text: Создание облачного хранилища для приложений с высоким уровнем защиты, устойчивости и масштабируемости с помощью службы хранилища Azure
+    - url: /azure/storage/blobs/storage-quickstart-blobs-xamarin.md
+      itemType: quickstart
+      text: Работа с хранилищем BLOB-объектов
+    - url: azure-content-delivery-network.md
+      itemType: overview
+      text: Доставка содержимого с помощью сети доставки содержимого Azure
+  - title: Отправка push-уведомлений
+    links:
+    - url: push-notifications.md
+      itemType: overview
+      text: Взаимодействие с пользователями приложения через отправку push-уведомлений
+    - url: /azure/notification-hubs/create-notification-hub-portal.md
+      itemType: quickstart
+      text: Создание центра уведомлений Azure с помощью портала Azure
+    - url: /azure/notification-hubs/notification-hubs-android-push-notification-google-fcm-get-started.md
+      itemType: tutorial
+      text: Отправка push-уведомлений на устройства Android
+    - url: /azure/notification-hubs/push-notifications-android-specific-devices-firebase-cloud-messaging.md
+      itemType: tutorial
+      text: Отправка push-уведомлений на конкретные устройства с помощью Центров уведомлений и Google Firebase Cloud Messaging
+    - url: /azure/notification-hubs/notification-hubs-aspnet-backend-ios-apple-push-notification-service-apns-rich.md
+      itemType: how-to-guide
+      text: Широкие возможности отправки содержимого на устройства
+  - title: Аутентификация пользователей
+    links:
+    - url: authentication.md
+      itemType: overview
+      text: Добавление проверки подлинности и управление удостоверениями пользователей в мобильных приложениях
+    - url: /azure/active-directory/develop/tutorial-v2-android.md
+      itemType: tutorial
+      text: Вход пользователей и вызов Microsoft Graph из приложения Android
+    - url: /azure/active-directory-b2c/add-native-application.md
+      itemType: how-to-guide
+      text: Добавление собственного клиентского приложения в клиент Azure Active Directory B2C.
+    - url: /azure/active-directory/develop/msal-authentication-flows.md
+      itemType: concept
+      text: Поддерживаемые потоки проверки подлинности с использованием библиотеки проверки подлинности Майкрософт (MSAL)
+    - url: https://github.com/Azure-Samples/active-directory-b2c-ios-swift-native-msal
+      itemType: sample
+      text: Вход пользователей с помощью приложения на Swift для iOS
+  - title: DevOps
+    links:
+    - url: continuous-delivery.md
+      itemType: concept
+      text: Автоматизация развертывания и выпуска мобильных приложений с помощью служб непрерывной поставки
+    - url: continuous-integration.md
+      itemType: concept
+      text: Автоматизация жизненного цикла приложений с помощью непрерывной сборки и интеграции
+    - url: https://docs.microsoft.com/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops
+      itemType: concept
+      text: Основные понятия для новых пользователей Azure Pipelines
+    - url: /appcenter/distribution/uploading.md
+      itemType: how-to-guide
+      text: Выпуск сборки с помощью Центра приложений
+    - url: /appcenter/distribution/codepush.md
+      itemType: overview
+      text: Служба CodePush Центра приложений
+  - title: Аналитика и отчеты о сбоях
+    links:
+    - url: analytics.md
+      itemType: concept
+      text: Анализ и понимание использования мобильных приложений
+    - url: /appcenter/analytics/overview.md
+      itemType: overview
+      text: Аналитика Центра приложений
+    - url: https://docs.microsoft.com/appcenter/diagnostics/enabling-diagnostics
+      itemType: how-to-guide
+      text: Включение диагностики в приложении
+    - url: diagnostics.md
+      itemType: concept
+      text: Мониторинг сбоев и ошибок в реальном времени для мобильного приложения
+    - url: /appcenter/analytics/log-flow.md
+      itemType: tutorial
+      text: Получение аналитики в реальном времени
+additionalContent:
+  sections:
+  - title: Пакеты Azure SDK для мобильных приложений
+    summary: Ниже приведены некоторые пакеты Azure SDK для мобильных клиентов
+    items:
+    - title: iOS
+      summary: Клиентские пакеты SDK для iOS для Microsoft Azure
+      url: https://github.com/Azure/azure-sdk-for-ios
+    - title: Android
+      summary: Клиентские пакеты SDK для Android для Microsoft Azure
+      url: https://github.com/Azure/azure-sdk-for-android
+    - title: .NET и Xamarin
+      summary: Пакет Azure SDK для .NET и Xamarin
+      url: https://azure.github.io/azure-sdk/releases/latest/dotnet.html
