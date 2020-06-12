@@ -1,21 +1,21 @@
 ---
-title: Подключение ко всем регионам. Пакет Azure SDK для многооблачных решений Python
-description: Использование Azure во всех регионах
-ms.date: 05/04/2020
+title: Подключение ко всем регионам с помощью библиотек Azure для многооблачных решений Python
+description: Использование модуля azure_cloud из msrestazure для подключения к Azure в разных независимых регионах
+ms.date: 05/27/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b585cc6853c338ca1d1f97b8e477818368342f8e
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: f24e2261c8002f3f34d28ee02e0f409e8632f825
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83403678"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84146182"
 ---
-# <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>Многооблачные решения. Подключение ко всем регионам с помощью пакета Azure SDK для Python
+# <a name="multi-cloud-connect-to-all-regions-with-the-azure-libraries-for-python"></a>Многооблачные решения. Подключение ко всем регионам с помощью библиотек Azure для Python
 
-Пакет Azure SDK для Python можно использовать для подключения ко всем регионам с [доступом](https://azure.microsoft.com/regions/services) к Azure.
+Библиотеки Azure для Python можно использовать для подключения ко всем регионам с [доступом](https://azure.microsoft.com/regions/services) к Azure.
 
-По умолчанию пакет Azure SDK для Python настраивается для подключения к глобальной службе Azure.
+По умолчанию библиотеки Azure настраиваются для подключения к глобальной службе Azure.
 
 ## <a name="using-pre-declared-cloud-definition"></a>Использование предварительно объявленного определения облака
 

@@ -4,12 +4,12 @@ description: Из этой статьи вы узнаете, как исполь
 keywords: ansible, azure, devops, key vault, безопасность, учетные данные, секреты, ключи, сертификаты, модули ansible для azure, группа ресурсов, azure_rm_resourcegroup,
 ms.topic: tutorial
 ms.date: 04/20/2020
-ms.openlocfilehash: ce9adb7ea121425d410665e1f4cc225cfdb82bd8
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 84ed514e742c8a8fa3a9acc9328fc71743dfc5cb
+ms.sourcegitcommit: 79890367158a9931909f11da1c894daa11188cba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81755237"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84145972"
 ---
 # <a name="tutorial-use-azure-key-vault-with-a-linux-virtual-machine-in-ansible"></a>Руководство по Использование Azure Key Vault с виртуальной машиной Linux в Ansible
 

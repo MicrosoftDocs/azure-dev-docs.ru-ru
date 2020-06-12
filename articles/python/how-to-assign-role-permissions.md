@@ -3,12 +3,12 @@ title: Назначение разрешений роли удостоверен
 description: Предоставление разрешений субъекту-службе или удостоверению приложения с помощью Azure CLI
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 28aa6b41d84c31eb8b6e6332c08c3a464c6cb04e
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: 4eedf982d16f9991bd884d6b575f0f8d8ee97bd2
+ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404907"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256439"
 ---
 # <a name="how-to-assign-role-permissions-to-an-app-identity-or-service-principal"></a>Как назначить разрешения роли удостоверению приложения или субъекту-службе
 
@@ -104,12 +104,12 @@ az role assignment create --assignee <assignee> --role <role> --scope <scope>
 
 ### <a name="examples"></a>Примеры
 
-В следующих примерах соблюдаются указанные ниже условия (см. статью [Пример использования пакета Azure SDK со службой хранилища Azure](azure-sdk-example-storage.md)):
+В следующих примерах соблюдаются указанные ниже условия (см. статью [Пример Подготовка к работе и использование службы хранилища Azure](azure-sdk-example-storage.md)):
 
 - Идентификатор подписки Azure содержится в переменной среды `AZURE_SUBSCRIPTION_ID`.
 - Идентификатор клиента субъекта-службы, которой необходимо назначить роль, содержится в переменной среды `AZURE_CLIENT_ID`.
-- В подписке есть группа ресурсов PythonSDKExample-Storage-rg.
-- Группа ресурсов содержит учетную запись хранения Azure pythonsdkstorage-12345.
+- В подписке есть группа ресурсов PythonAzureExample-Storage-rg.
+- Группа ресурсов содержит учетную запись хранения Azure pythonazurestorage-12345.
 - У вас есть контейнер больших двоичных объектов в этой учетной записи хранения с именем blob-container-01.
 - Необходимо назначить субъекту-службе роль "Участник для данных BLOB-объектов хранилища".
 
@@ -118,89 +118,81 @@ az role assignment create --assignee <assignee> --role <role> --scope <scope>
 
 #### <a name="grant-permissions-for-the-specific-container-only"></a>Предоставление разрешений только для конкретного контейнера
 
-# <a name="bash"></a>[bash](#tab/bash)
-
-```azurecli
-az role assignment create --assignee $AZURE_CLIENT_ID \
-    --role "Storage Blob Data Contributor" \
-    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonSDKExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonsdkstorage12345/blobServices/default/containers/blob-container-01"
-```
-
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
 az role assignment create --assignee %AZURE_CLIENT_ID% ^
     --role "Storage Blob Data Contributor" ^
-    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonSDKExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonsdkstorage12345/blobServices/default/containers/blob-container-01"
+    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonAzureExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonazurestorage12345/blobServices/default/containers/blob-container-01"
+```
+
+# <a name="bash"></a>[bash](#tab/bash)
+
+```azurecli
+az role assignment create --assignee $AZURE_CLIENT_ID \
+    --role "Storage Blob Data Contributor" \
+    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonAzureExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonazurestorage12345/blobServices/default/containers/blob-container-01"
 ```
 
 ---
 
 #### <a name="grant-permissions-for-all-blob-containers-in-the-storage-account"></a>Предоставление разрешений для всех контейнеров больших двоичных объектов в учетной записи хранения
 
-# <a name="bash"></a>[bash](#tab/bash)
-
-```azurecli
-az role assignment create --assignee $AZURE_CLIENT_ID \
-    --role "Storage Blob Data Contributor" \
-    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonSDKExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonsdkstorage12345"
-```
-
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
 az role assignment create --assignee %AZURE_CLIENT_ID% ^
     --role "Storage Blob Data Contributor" ^
-    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonSDKExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonsdkstorage12345"
+    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonAzureExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonazurestorage12345"
+```
+
+# <a name="bash"></a>[bash](#tab/bash)
+
+```azurecli
+az role assignment create --assignee $AZURE_CLIENT_ID \
+    --role "Storage Blob Data Contributor" \
+    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonAzureExample-Storage-rg/providers/Microsoft.Storage/storageAccounts/pythonazurestorage12345"
 ```
 
 ---
 
 #### <a name="grant-permissions-for-all-blob-containers-in-the-resource-group"></a>Предоставление разрешений для всех контейнеров больших двоичных объектов в группе ресурсов
 
-# <a name="bash"></a>[bash](#tab/bash)
-
-```azurecli
-az role assignment create --assignee $AZURE_CLIENT_ID \
-    --role "Storage Blob Data Contributor" \
-    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonSDKExample-Storage-rg"
-```
-
-Кроме того, можно просто указать группу ресурсов с помощью параметра `--resource-group`:
-
-```azurecli
-az role assignment create --assignee $AZURE_CLIENT_ID \
-    --role "Storage Blob Data Contributor" \
-    --resource-group "PythonSDKExample-Storage-rg"
-```
-
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
 az role assignment create --assignee %AZURE_CLIENT_ID% ^
     --role "Storage Blob Data Contributor" ^
-    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonSDKExample-Storage-rg"
+    --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%/resourceGroups/PythonAzureExample-Storage-rg"
 ```
 
-Кроме того, можно просто указать группу ресурсов с помощью параметра `--resource-group`:
+Кроме того, можно указать группу ресурсов с помощью параметра `--resource-group`:
 
 ```azurecli
 az role assignment create --assignee %AZURE_CLIENT_ID% ^
     --role "Storage Blob Data Contributor" ^
-    --resource-group "PythonSDKExample-Storage-rg"
+    --resource-group "PythonAzureExample-Storage-rg"
 ```
-
----
-
-#### <a name="grant-permissions-to-all-blob-containers-in-the-subscription"></a>Предоставление разрешений для всех контейнеров больших двоичных объектов в подписке
 
 # <a name="bash"></a>[bash](#tab/bash)
 
 ```azurecli
 az role assignment create --assignee $AZURE_CLIENT_ID \
     --role "Storage Blob Data Contributor" \
-    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID"
+    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID/resourceGroups/PythonAzureExample-Storage-rg"
 ```
+
+Кроме того, можно указать группу ресурсов с помощью параметра `--resource-group`:
+
+```azurecli
+az role assignment create --assignee $AZURE_CLIENT_ID \
+    --role "Storage Blob Data Contributor" \
+    --resource-group "PythonAzureExample-Storage-rg"
+```
+
+---
+
+#### <a name="grant-permissions-to-all-blob-containers-in-the-subscription"></a>Предоставление разрешений для всех контейнеров больших двоичных объектов в подписке
 
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -208,6 +200,14 @@ az role assignment create --assignee $AZURE_CLIENT_ID \
 az role assignment create --assignee %AZURE_CLIENT_ID% ^
     --role "Storage Blob Data Contributor" ^
     --scope "/subscriptions/%AZURE_SUBSCRIPTION_ID%"
+```
+
+# <a name="bash"></a>[bash](#tab/bash)
+
+```azurecli
+az role assignment create --assignee $AZURE_CLIENT_ID \
+    --role "Storage Blob Data Contributor" \
+    --scope "/subscriptions/$AZURE_SUBSCRIPTION_ID"
 ```
 
 ---

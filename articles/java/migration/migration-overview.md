@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 1eeb7d6a17bb21963f3203d484387c0aae6c402f
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.openlocfilehash: bbc7dd44e975fd47b52df41baa1ec526ac1908f8
+ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82988696"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202833"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -74,9 +74,9 @@ ms.locfileid: "82988696"
 
 В следующих разделах показано, какие целевые службы соответствуют требованиям вашего приложения и какие обязанности с ними связаны.
 
-### <a name="feature-grid"></a>Таблица функций
+### <a name="hosting-options-grid"></a>Таблица с вариантами размещения
 
-С помощью следующей таблицы можно определить целевые расположения, которые поддерживают требуемые типы приложений и функции.
+Приведенная ниже таблица поможет вам определить потенциальные назначения для определенного типа приложений. Как видите, AKS и виртуальные машины поддерживают все типы приложений, но они предъявляют больше требований к вашей команде, как показано в следующем разделе.
 
 |   |Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|

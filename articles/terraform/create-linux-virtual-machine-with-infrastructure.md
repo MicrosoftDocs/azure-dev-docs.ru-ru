@@ -1,19 +1,19 @@
 ---
-title: Краткое руководство. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
+title: Учебник. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 description: Узнайте, как использовать Terraform для создания готовой среды виртуальных машин Linux в Azure и управления ею.
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
-ms.topic: quickstart
-ms.date: 05/11/2020
-ms.openlocfilehash: 3485e899deaf84a63a2cf2d8085ac34b43f6fca9
-ms.sourcegitcommit: aa417af8b5f00cbc056666e481250ef45c661d52
+ms.topic: tutorial
+ms.date: 05/31/2020
+ms.openlocfilehash: 40dfe97d2311e251e23468b5d7a6eede778d7b8e
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83153712"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329442"
 ---
-# <a name="quickstart-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Краткое руководство. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
+# <a name="tutorial--create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Учебник. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
-Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](install-configure.md).
+Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](getting-started-cloud-shell.md).
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
@@ -25,22 +25,17 @@ Terraform позволяет определить и создать развер
 
 Мы разберем каждый раздел шаблона Terraform. Здесь также приведена полная версия [шаблона Terraform](#complete-terraform-script), который можно скопировать и вставить.
 
-В разделе `provider` указывается, что Terraform нужно использовать поставщик Azure. Значения для `subscription_id`, `client_id`, `client_secret` и `tenant_id` см. в статье об [установке и настройке Terraform](install-configure.md). 
+В разделе `provider` указывается, что Terraform нужно использовать поставщик Azure. Значения для `subscription_id`, `client_id`, `client_secret` и `tenant_id` см. в статье об [установке и настройке Terraform](getting-started-cloud-shell.md).
 
 > [!TIP]
 > При создании переменных среды для значений или использовании [Azure Cloud Shell Bash](/azure/cloud-shell/overview) не нужно включать объявления переменных в этом разделе.
 
 ```hcl
 provider "azurerm" {
-    # The "feature" block is required for AzureRM provider 2.x. 
+    # The "feature" block is required for AzureRM provider 2.x.
     # If you're using version 1.x, the "features" block is not allowed.
     version = "~>2.0"
     features {}
-    
-    subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_secret   = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 ```
 
@@ -83,10 +78,9 @@ resource "azurerm_subnet" "myterraformsubnet" {
     name                 = "mySubnet"
     resource_group_name  = azurerm_resource_group.myterraformgroup.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork.name
-    address_prefix       = "10.0.2.0/24"
+    address_prefixes       = ["10.0.2.0/24"]
 }
 ```
-
 
 ## <a name="create-public-ip-address"></a>Создание общедоступного IP-адреса
 
@@ -163,7 +157,6 @@ resource "azurerm_network_interface_security_group_association" "example" {
 }
 ```
 
-
 ## <a name="create-storage-account-for-diagnostics"></a>Создание учетной записи хранения для диагностики
 
 Чтобы сохранить диагностику загрузки для виртуальной машины, необходима учетная запись хранения. Диагностика загрузки может помочь в устранении неполадок и наблюдении за состоянием виртуальной машины. Создаваемая учетная запись хранения используется только для хранения данных диагностики загрузки. Каждая учетная запись хранения должна иметь уникальное имя, поэтому в следующем разделе генерируется некоторый произвольный текст:
@@ -203,6 +196,13 @@ resource "azurerm_storage_account" "mystorageaccount" {
  Данные ключа SSH предоставлены в разделе `ssh_keys`. Укажите открытый ключ SSH в поле `key_data`.
 
 ```hcl
+resource "tls_private_key" "example_ssh" {
+  algorithm = "RSA"
+  rsa_bits = 4096
+}
+
+output "tls_private_key" { value = "tls_private_key.example_ssh.private_key_pem" }
+
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
     name                  = "myVM"
     location              = "eastus"
@@ -229,7 +229,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         
     admin_ssh_key {
         username       = "azureuser"
-        public_key     = file("/home/azureuser/.ssh/authorized_keys")
+        public_key     = tls_private_key.example_ssh.public_key_openssh
     }
 
     boot_diagnostics {
@@ -253,11 +253,6 @@ provider "azurerm" {
     # If you're using version 1.x, the "features" block is not allowed.
     version = "~>2.0"
     features {}
-
-    subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_secret   = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    tenant_id       = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 }
 
 # Create a resource group if it doesn't exist
@@ -287,7 +282,7 @@ resource "azurerm_subnet" "myterraformsubnet" {
     name                 = "mySubnet"
     resource_group_name  = azurerm_resource_group.myterraformgroup.name
     virtual_network_name = azurerm_virtual_network.myterraformnetwork.name
-    address_prefix       = "10.0.1.0/24"
+    address_prefixes       = ["10.0.1.0/24"]
 }
 
 # Create public IPs
@@ -372,6 +367,13 @@ resource "azurerm_storage_account" "mystorageaccount" {
     }
 }
 
+# Create (and display) an SSH key
+resource "tls_private_key" "example_ssh" {
+  algorithm = "RSA"
+  rsa_bits = 4096
+}
+output "tls_private_key" { value = "${tls_private_key.example_ssh.private_key_pem}" }
+
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
     name                  = "myVM"
@@ -399,7 +401,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         
     admin_ssh_key {
         username       = "azureuser"
-        public_key     = file("/home/azureuser/.ssh/authorized_keys")
+        public_key     = tls_private_key.example_ssh.public_key_openssh
     }
 
     boot_diagnostics {
@@ -411,10 +413,6 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     }
 }
 ```
-
-**Примечания.**
-
-- Агент виртуальной машины Azure ожидает, что ключи SSH для блока `admin_ssh_key` записаны по пути `/home/{username}/.ssh/authorized_keys`. Чтобы запустить этот пример в Windows, нужно поверить наличие такого каталога. Дополнительные сведения о блоке `admin_ssh_key` см. в [документации по виртуальным машинам Linux в Azure на сайте terraform.io](https://www.terraform.io/docs/providers/azurerm/r/linux_virtual_machine.html).
 
 ## <a name="build-and-deploy-the-infrastructure"></a>Создание и развертывание инфраструктуры
 

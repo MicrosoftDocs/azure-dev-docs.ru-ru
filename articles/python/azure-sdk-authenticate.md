@@ -1,21 +1,21 @@
 ---
 title: Проверка подлинности приложений Python с помощью служб Azure
-description: Проверка подлинности приложения Python с помощью служб Azure и библиотек SDK для управления Azure
+description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 8dd434c0a18c0a263573188e04a54f48afcf2b0d
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: 5a882a6cc18ef20a8a26650bacaa7bfe94e90771
+ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83403693"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84329432"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Проверка подлинности приложений Python с помощью служб Azure
 
-При написании кода приложения с использованием Azure SDK для Python для доступа к ресурсам Azure применяется приведенный ниже шаблон.
+При написании кода приложения с использованием библиотек Azure для Python для доступа к ресурсам Azure применяется приведенный ниже шаблон.
 
 1. Получите учетные данные (как правило, это одноразовая операция).
-1. Используйте учетные данные для получения предоставленного пакетом SDK клиентского объекта для ресурса.
+1. Используйте учетные данные для получения соответствующего объекта клиента для ресурса.
 1. Попытайтесь получить доступ к ресурсу или изменить его через клиентский объект, который создает HTTP-запрос к REST API ресурса.
 
 Запрос к REST API — это точка, в которой Azure выполняет проверку подлинности удостоверения приложения, как описано в объекте учетных данных. Затем Azure проверяет, авторизовано ли это удостоверение для выполнения запрошенного действия. Если удостоверение не авторизовано, операция завершается ошибкой. (Предоставление разрешений зависит от типа ресурса, такого как Azure Key Vault, служба хранилища Azure и т. д. Дополнительные сведения см. в документации по этому типу ресурса.)
@@ -33,10 +33,15 @@ import os
 from azure.identity import DefaultAzureCredential
 from azure.keyvault.secrets import SecretClient
 
-# Obtain the credential object
+# Obtain the credential object. When run locally, DefaultAzureCredential relies
+# on environment variables named AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, and AZURE_TENANT_ID.
 credential = DefaultAzureCredential()
 
-# Create the SDK client object to access Key Vault secrets.
+# Create the client object using the credential
+#
+# **NOTE**: SecretClient here is only an example; the same process
+# applies to all other Azure client libraries.
+
 vault_url = os.environ["KEY_VAULT_URL"]
 secret_client = SecretClient(vault_url=vault_url, credential=credential)
 
@@ -137,17 +142,11 @@ print(subscription.subscription_id)
     Укажите вместо четырех заполнителей идентификатор подписки Azure, идентификатор арендатора, идентификатор клиента и секрет клиента.
 
     > [!TIP]
-    > Как указано в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-for-development), для непосредственного создания этого формата JSON можно использовать команду [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac) c параметром `--sdk-auth`.
+    > Как указано в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development), для непосредственного создания этого формата JSON можно использовать команду [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac) c параметром `--sdk-auth`.
 
 1. Сохраните файл с именем, например *credentials.json*, в безопасном расположении, к которому код может получить доступ. Чтобы защитить учетные данные, обязательно исключите этот файл из системы управления версиями и не предоставляйте его другим разработчикам. То есть идентификатор арендатора, идентификатор клиента и секрет клиента субъекта-службы всегда должны быть изолированны на рабочей станции разработки.
 
 1. Создайте переменную среды `AZURE_AUTH_LOCATION`, указав путь к файлу JSON в качестве значения:
-
-    # <a name="bash"></a>[bash](#tab/bash)
-
-    ```bash
-    AZURE_AUTH_LOCATION="../credentials.json"
-    ```
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -155,9 +154,16 @@ print(subscription.subscription_id)
     set AZURE_AUTH_LOCATION=../credentials.json
     ```
 
-    В этих примерах предполагается, что файлу JSON присвоено имя *credentials.json* и он находится в родительской папке проекта.
+    # <a name="bash"></a>[bash](#tab/bash)
+
+    ```bash
+    AZURE_AUTH_LOCATION="../credentials.json"
+    ```
 
     ---
+
+    В этих примерах предполагается, что файлу JSON присвоено имя *credentials.json* и он находится в родительской папке проекта.
+
 
 1. Чтобы создать клиентский объект, используйте метод [get_client_from_auth_file](/python/api/azure-common/azure.common.client_factory?view=azure-python#get-client-from-auth-file-client-class--auth-path-none----kwargs-):
 
@@ -211,7 +217,7 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-Чтобы не использовать файл, описанный в предыдущем разделе, вы можете создать необходимые данные JSON в переменной и вызвать [get_client_from_json_dict](/python/api/azure-common/azure.common.client_factory?view=azure-python#get-client-from-json-dict-client-class--config-dict----kwargs-). В этом коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-for-development). Для развернутого в облаке кода эти переменные среды можно создавать на виртуальной машине сервера или в качестве параметров приложения при использовании службы платформы, такой как Служба приложений Azure и Функции Azure.
+Чтобы не использовать файл, описанный в предыдущем разделе, вы можете создать необходимые данные JSON в переменной и вызвать [get_client_from_json_dict](/python/api/azure-common/azure.common.client_factory?view=azure-python#get-client-from-json-dict-client-class--config-dict----kwargs-). В этом коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development). Для развернутого в облаке кода эти переменные среды можно создавать на виртуальной машине сервера или в качестве параметров приложения при использовании службы платформы, такой как Служба приложений Azure и Функции Azure.
 
 Вы также можете хранить значения в Azure Key Vault и извлекать их во время выполнения, а не с помощью переменных среды.
 
@@ -236,7 +242,7 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-В этом методе вы создаете объект [`ServicePrincipalCredentials`](/python/api/msrestazure/msrestazure.azure_active_directory.serviceprincipalcredentials?view=azure-python) с использованием учетных данных, полученных из защищенного хранилища, например Azure Key Vault или переменных среды. В предыдущем коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-for-development).
+В этом методе вы создаете объект [`ServicePrincipalCredentials`](/python/api/msrestazure/msrestazure.azure_active_directory.serviceprincipalcredentials?view=azure-python) с использованием учетных данных, полученных из защищенного хранилища, например Azure Key Vault или переменных среды. В предыдущем коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development).
 
 С помощью этого метода вместо общедоступного облака Azure вы можете использовать [национальное облако Azure](/azure/active-directory/develop/authentication-national-cloud), указав для клиентского объекта аргумент `base_url`:
 
@@ -320,4 +326,8 @@ print(subscription.subscription_id)
 ## <a name="see-also"></a>См. также раздел
 
 - [Настройка локальной среды разработки Python для Azure](configure-local-development-environment.md)
-- [Пример. Использование пакета Azure SDK со службой хранилища Azure](azure-sdk-example-storage.md)
+- [Пример. Подготовка группы ресурсов к работе](azure-sdk-example-resource-group.md)
+- [Пример. Подготовка к работе и использование службы хранилища Azure](azure-sdk-example-storage.md)
+- [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
+- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
