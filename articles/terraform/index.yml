@@ -9,12 +9,12 @@ metadata:
   ms.author: tarcher
   ms.topic: landing-page
   ms.date: 04/26/2020
-  ms.openlocfilehash: 12cf2a2ebe78b6cc41d85f483aae39fb65904a1a
-  ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+  ms.openlocfilehash: 9749f2bbd1c2e10c83e15430998a96e41b58abd4
+  ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82172320"
+  ms.lasthandoff: 06/03/2020
+  ms.locfileid: "84329712"
 landingContent:
 - title: Сведения о Terraform в Azure
   linkLists:
@@ -28,14 +28,16 @@ landingContent:
       url: https://aka.ms/terraform
 - title: Установка и настройка Terraform
   linkLists:
+  - linkListType: get-started
+    links:
+    - text: Начало работы — Cloud Shell
+      url: getting-started-cloud-shell.md
   - linkListType: tutorial
     links:
-    - text: Установка и настройка Terraform
-      url: install-configure.md
     - text: Установка расширения Visual Studio Code для Terraform
       url: configure-vs-code-extension-for-terraform.md
     - text: Создание базового шаблона Terraform с использованием Yeoman
-      url: create-a-base-template-using-yeoman.md
+      url: create-base-template-using-yeoman.md
     - text: Тестирование модулей Terraform с помощью Terratest
       url: test-modules-using-terratest.md
 - title: Управление AKS

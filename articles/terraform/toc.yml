@@ -7,10 +7,8 @@
 - name: Краткие руководства
   expanded: true
   items:
-    - name: Установка и настройка Terraform
-      href: install-configure.md
-    - name: Создание виртуальной машины Linux
-      href: create-linux-virtual-machine-with-infrastructure.md
+    - name: "Начало работы\_— Cloud Shell"
+      href: getting-started-cloud-shell.md
 - name: Учебники
   items:
     - name: Установка и настройка
@@ -31,16 +29,6 @@
       items:
         - name: Развертывание экземпляра Azure Cosmos DB
           href: deploy-azure-cosmos-db-to-azure-container-instances.md
-    - name: Инфраструктура
-      items:
-        - name: Создание кластера виртуальных машин с помощью модулей Terraform
-          href: create-vm-cluster-module.md
-        - name: Создание кластера виртуальных машин с помощью Terraform и HCL
-          href: create-vm-cluster-with-infrastructure.md
-        - name: Подготовка масштабируемого набора виртуальных машин с инфраструктурой
-          href: create-vm-scaleset-network-disks-hcl.md
-        - name: Подготовка масштабируемого набора виртуальных машин из пользовательского образа Packer
-          href: create-vm-scaleset-network-disks-using-packer-hcl.md
     - name: Сети
       items:
         - name: Звездообразная топология
@@ -62,9 +50,21 @@
         - name: Установка расширения Visual Studio Code для Terraform
           href: configure-vs-code-extension-for-terraform.md
         - name: Создание базового шаблона Terraform с использованием Yeoman
-          href: create-a-base-template-using-yeoman.md
+          href: create-base-template-using-yeoman.md
         - name: Тестирование модулей Terraform с помощью Terratest
           href: test-modules-using-terratest.md
+    - name: Виртуальные машины
+      items:
+        - name: Виртуальная машина с инфраструктурой
+          href: create-linux-virtual-machine-with-infrastructure.md
+        - name: Кластер виртуальной машины с модулями Terraform
+          href: create-vm-cluster-module.md
+        - name: Кластер виртуальной машины с Terraform и HCL
+          href: create-vm-cluster-with-infrastructure.md
+        - name: Масштабируемый набор виртуальных машин с инфраструктурой
+          href: create-vm-scaleset-network-disks-hcl.md
+        - name: Масштабируемый набор виртуальных машин из образа Packer
+          href: create-vm-scaleset-network-disks-using-packer-hcl.md
 - name: Примеры
   items:
     - name: Шаблоны конфигурации
