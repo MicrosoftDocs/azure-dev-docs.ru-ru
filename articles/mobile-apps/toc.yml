@@ -1,7 +1,6 @@
 - name: Документация по Azure для разработчиков мобильных приложений
   href: index.yml
 - name: Обзор
-  expanded: true
   items:
     - name: Выбор платформы для разработки мобильных приложений
       href: choose-mobile-framework.md
@@ -9,7 +8,7 @@
       href: mobile-cloud-development-stages.md
 - name: Основные понятия
   items:
-    - name: Аутентификация
+    - name: Проверка подлинности
       href: authentication.md
     - name: Данные
       items:

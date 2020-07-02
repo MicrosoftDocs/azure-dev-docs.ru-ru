@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: e4a12380521828ac69aead376ae7ff5797e300ab
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.openlocfilehash: 46fa281fdbaf53e35a73701fa2c17ae2ed3e2d90
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82990306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507644"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-app-service"></a>Перенос приложений Spring Boot в Службу приложений Azure
 
@@ -39,9 +39,13 @@ ms.locfileid: "82990306"
 
 [!INCLUDE [identify-jms-brokers-in-spring](includes/identify-jms-brokers-in-spring.md)]
 
-Определите один или несколько используемых брокеров, а затем найдите их параметры, которые для Spring Boot обычно хранятся в файлах *application.properties* и *application.yml*.
+Когда вы найдете один или несколько используемых брокеров, получите их параметры. В приложениях Spring Boot они обычно размещаются в файле *application.properties* или *application.yml* в каталоге приложения.
 
 [!INCLUDE [jms-broker-settings-examples-in-spring](includes/jms-broker-settings-examples-in-spring.md)]
+
+[!INCLUDE [identify-external-caches-azure-spring-cloud](includes/identify-external-caches-azure-spring-cloud.md)]
+
+[!INCLUDE [inventory-identity-providers-spring-boot](includes/inventory-identity-providers-spring-boot.md)]
 
 #### <a name="all-other-external-resources"></a>Другие связанные внешние ресурсы
 
@@ -53,9 +57,7 @@ ms.locfileid: "82990306"
 
 Проверьте наличие секретных строк и паролей во всех свойствах и файлах конфигурации, а также всех переменных среды в рабочих развертываниях. В приложении Spring Boot такие строки обычно содержатся в файлах *application.properties* или *application.yml*.
 
-#### <a name="inventory-certificates"></a>Проверка сертификатов
-
-[!INCLUDE [inventory-certificates](includes/inventory-certificates.md)]
+[!INCLUDE [inventory-certificates-h4](includes/inventory-certificates-h4.md)]
 
 [!INCLUDE [determine-whether-and-how-the-file-system-is-used](includes/determine-whether-and-how-the-file-system-is-used.md)]
 
@@ -146,6 +148,8 @@ spring.jms.servicebus.idle-timeout=10000
 ![Конфигурация приложений Службы приложений](media/migrate-spring-boot-to-app-service/app-service-parameterized-spring-boot-app-settings.png)
 
 [!INCLUDE [migrate-scheduled-jobs](includes/migrate-scheduled-jobs.md)]
+
+[!INCLUDE [migrate-identity-provider-app-service.md](includes/migrate-identity-provider-app-service.md)]
 
 ### <a name="restart-and-smoke-test"></a>Перезапуск и тест состояния
 

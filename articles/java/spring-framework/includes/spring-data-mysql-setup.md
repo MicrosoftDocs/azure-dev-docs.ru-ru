@@ -2,19 +2,19 @@
 author: judubois
 ms.date: 05/06/2020
 ms.author: judubois
-ms.openlocfilehash: bdd2d2f1eacbe3dd5f12a236f691d32e7a29fb68
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: 5216c009929906f619075841cda559d02d006cf7
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369906"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84562242"
 ---
 ## <a name="prepare-the-working-environment"></a>Подготовка среды выполнения
 
 Сначала настройте некоторые переменные среды с помощью следующих команд:
 
 ```bash
-AZ_RESOURCE_GROUP=r2dbc-workshop
+AZ_RESOURCE_GROUP=database-workshop
 AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
 AZ_LOCATION=<YOUR_AZURE_REGION>
 AZ_MYSQL_USERNAME=spring

@@ -3,12 +3,12 @@ title: Учебник. Создание масштабируемого набо�
 description: Узнайте, как использовать Terraform для настройки и модификации масштабируемого набора виртуальных машин Azure на основе пользовательского образа, созданного в Packer (с виртуальной сетью и управляемыми подключенными дисками).
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: c2c6ccce0f657d572d74f2930b934ba989ab7189
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: d9db8f47cdb4c295ef5625450980938ff348b5fb
+ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790837"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Руководство по созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
 
@@ -31,7 +31,7 @@ ms.locfileid: "84329562"
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 - **Terraform**. [Установка Terraform и настройка доступа к Azure](getting-started-cloud-shell.md).
 - **Пара ключей SSH**: [Создание пары ключей SSH](/azure/virtual-machines/linux/mac-create-ssh-keys).
-- **Packer**:  [Установка Packer](https://www.packer.io/docs/install/index.html).
+- **Packer**:  [Установка Packer](https://learn.hashicorp.com/packer/getting-started/install).
 
 ## <a name="create-the-file-structure"></a>Создание структуры файлов
 

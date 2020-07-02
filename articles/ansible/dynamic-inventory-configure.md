@@ -4,12 +4,12 @@ description: Узнайте, как управлять динамическим�
 keywords: ansible, azure, разработка и операции, bash, cloudshell, динамические списки
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: c777ee18663507b6e8d658a7ba027d99f9645cc9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 8ad48c49094c19087318434cd02c38dcb1857a76
+ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82104695"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133627"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
@@ -87,12 +87,12 @@ az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionI
 
 ### <a name="using-ansible-version--28"></a>Использование версий Ansible, предшествующих версии 2.8
 
-Ansible предоставляет сценарий Python [azure_rm.py](https://github.com/ansible/ansible/blob/stable-2.9/contrib/inventory/azure_rm.py), который создает динамический список ресурсов Azure. Ниже описано, как использовать скрипт `azure_rm.py` для подключения двух тестовых виртуальных машин Azure:
+Ansible предоставляет сценарий Python [azure_rm.py](https://github.com/ansible-collections/community.general/blob/master/scripts/inventory/azure_rm.py), который создает динамический список ресурсов Azure. Ниже описано, как использовать скрипт `azure_rm.py` для подключения двух тестовых виртуальных машин Azure:
 
 1. Получите скрипт `azure_rm.py`, используя команду `wget` GNU:
 
     ```python
-    wget https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/azure_rm.py
+    wget https://raw.githubusercontent.com/ansible-collections/community.general/master/scripts/inventory/azure_rm.py
     ```
 
 1. Измените разрешения на доступ к скрипту `azure_rm.py`, используя команду `chmod`: В следующей команде используется параметр `+x`, чтобы разрешить выполнение указанного файла (`azure_rm.py`):

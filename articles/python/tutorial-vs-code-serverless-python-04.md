@@ -4,12 +4,12 @@ description: 'Руководство, шаг 4: локальный запуск 
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8d6b27b9390f347a464b9daded05b9c3b9a3352c
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.openlocfilehash: 761ffab12712f5c90127665addb65201016be2c8
+ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256409"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85370695"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 
@@ -34,7 +34,7 @@ ms.locfileid: "84256409"
     > [!TIP]
     > Если вы не можете получить доступ к URL-адресу и процессы выполняются за корпоративным прокси-сервером (вероятнее всего, с заданными переменными среды `HTTP_PROXY` и `HTTPS_PROXY`), задайте для переменной среды с именем `NO_PROXY` значение `localhost,127.0.0.1` и повторите попытку.
 
-1. Теперь попробуйте добавить параметр name, например со значением `http://localhost:7071/api/HttpExample?name=VS%20Code`. В окне браузера должно отобразиться сообщение "Hello Visual Studio Code!", что подтверждает выполнение этого пути кода.
+1. Теперь попробуйте добавить параметр name, например со значением `http://localhost:7071/api/HttpExample?name=Visual%20Studio%20Code`. В окне браузера должно отобразиться сообщение "Hello Visual Studio Code!", что подтверждает выполнение этого пути кода.
 
 1. Чтобы передать значение name в формате JSON в тексте запроса, примените инструмент curl и передайте ему встроенный текст JSON:
 

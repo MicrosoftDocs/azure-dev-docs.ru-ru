@@ -5,12 +5,12 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 4/10/2020
-ms.openlocfilehash: 6c2781914e65d28a57f2f80ed287921eab3b76ae
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: bb355fdd8436d6483ebd1ffeead4c522c9895e16
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507681"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-kubernetes-service"></a>Перенос приложений Spring Boot в Службу Azure Kubernetes
 
@@ -64,7 +64,7 @@ ms.locfileid: "83369988"
 
 ### <a name="inventory-external-resources"></a>Проверка внешних ресурсов
 
-Определите внешние ресурсы, в том числе источники данных, брокеры сообщений JMS и URL-адреса других служб. В приложениях Spring Boot файл с конфигурацией этих ресурсов обычно размещается в каталоге *src/main/directory* и называется *application.properties* или *application.yml*.
+Определите внешние ресурсы, в том числе источники данных, брокеры сообщений JMS и URL-адреса других служб. В приложениях Spring Boot файл с конфигурацией этих ресурсов обычно размещается в каталоге *src/main/directory* и называется *application.properties* или *application.yml*. Кроме того, проверьте наличие параметров конфигурации в переменных среды в рабочем развертывании.
 
 [!INCLUDE [inventory-databases-spring-boot](includes/inventory-databases-spring-boot.md)]
 

@@ -9,12 +9,12 @@ ms.date: 07/17/2019
 ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 258b3e8fef4202df3b151ca7058daf72d7be2b61
-ms.sourcegitcommit: 2760d3ca0ff0b939181d976a652f2b35ea5b3fb4
+ms.openlocfilehash: 30c225ed4d8e17860fe169e326f994c70ebe7d85
+ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83426090"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85370725"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Начало работы с функцией Spring Cloud в Azure
 
@@ -64,14 +64,13 @@ ms.locfileid: "83426090"
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <azure.functions.maven.plugin.version>1.4.1</azure.functions.maven.plugin.version>
-    <azure.functions.java.library.version>1.3.0</azure.functions.java.library.version>
+    <azure.functions.maven.plugin.version>1.5.0</azure.functions.maven.plugin.version>
     <functionAppName>my-spring-function</functionAppName>
     <functionAppRegion>westus</functionAppRegion>
     <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>
     <functionResourceGroup>my-resource-group</functionResourceGroup>
     <start-class>com.example.HelloFunction</start-class>
-    <spring.boot.wrapper.version>1.0.24.RELEASE</spring.boot.wrapper.version>
+    <spring.boot.wrapper.version>1.0.25.RELEASE</spring.boot.wrapper.version>
 </properties>
 ```
 

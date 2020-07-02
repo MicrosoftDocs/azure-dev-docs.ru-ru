@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 2/12/2020
-ms.openlocfilehash: 31243bb89024b9c6106538425e0254e309eb4ba2
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.openlocfilehash: c9b05ea7f7e7d181150e11afb7e145740fc5ab5a
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82990156"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507614"
 ---
 # <a name="migrate-spring-cloud-applications-to-azure-spring-cloud"></a>Перенос приложений Spring Cloud в Azure Spring Cloud
 
@@ -27,22 +27,7 @@ ms.locfileid: "82990156"
 
 ### <a name="inspect-application-components"></a>Проверка компонентов приложения
 
-#### <a name="determine-whether-and-how-the-file-system-is-used"></a>Определение того, используется ли файловая система и как именно она используется
-
-Найдите все экземпляры, из которых выполняется чтение и (или) запись в локальной файловой системе. Найдите все фрагменты, из которых записываются и считываются временные файлы, файлы с коротким и длительным сроком хранения.
-
-> [!NOTE]
-> Azure Spring Cloud предоставляет на каждый экземпляр Azure Spring Cloud по 5 ГБ временного хранилища, подключенного к расположению `/tmp`. Если объемы записи временных файлов превысят этот лимит или файлы сохраняются в другом расположении, придется изменить соответствующий код.
-
-<!-- The following two "static content" sections should be identical to the contents of includes\static-content.md except that here we use H5 headings. -->
-
-##### <a name="read-only-static-content"></a>Статическое содержимое только для чтения
-
-Если ваше приложение сейчас обслуживает статическое содержимое, вам потребуется альтернативное расположение для этого статического содержимого. Вы можете переместить статическое содержимое в хранилище BLOB-объектов Azure и включить Azure CDN для быстрого скачивания в глобальном масштабе. См. руководство по [размещению статических веб-сайтов в службе хранилища Azure](/azure/storage/blobs/storage-blob-static-website) и [ по интеграции учетной записи хранения Azure с Azure CDN](/azure/cdn/cdn-create-a-storage-account-with-cdn).
-
-##### <a name="dynamically-published-static-content"></a>Динамически опубликованное статическое содержимое
-
-Если приложение допускает использование статического содержимого, которое передается или создается приложением и после этого становится неизменяемым, вы можете использовать хранилище BLOB-объектов Azure и Azure CDN, как описано выше, с Функциями Azure для выполнения отправки и обновления CDN. Практический пример реализации см. в руководстве по [отправке и предварительной загрузке статического содержимого CDN с помощью Функций Azure](https://github.com/Azure-Samples/functions-java-push-static-contents-to-cdn).
+[!INCLUDE [determine-whether-and-how-the-file-system-is-used-azure-spring-cloud](includes/determine-whether-and-how-the-file-system-is-used-azure-spring-cloud.md)]
 
 #### <a name="determine-whether-any-of-the-services-contain-os-specific-code"></a>Определение того, содержат ли службы код, зависящий от ОС
 
