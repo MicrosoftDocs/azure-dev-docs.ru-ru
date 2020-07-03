@@ -16,6 +16,8 @@
       href: configure-local-development-environment.md
     - name: Варианты использования библиотеки
       href: azure-sdk-library-usage-patterns.md
+    - name: Индекс пакетов библиотек
+      href: azure-sdk-library-package-index.md
     - name: Примеры
       items:
         - name: Подготовка группы ресурсов к работе
@@ -106,10 +108,10 @@
       href: how-to-assign-role-permissions.md
     - name: Настройка журнала
       href: azure-sdk-logging.md
-    - name: "Настройка аргументов REST\_API"
-      href: azure-sdk-operation-config.md
-    - name: Разработка многооблачных решений
-      href: azure-sdk-multi-cloud.md
+    - name: Настройка прокси-серверов
+      href: azure-sdk-configure-proxy.md
+    - name: Использование независимых доменов
+      href: azure-sdk-sovereign-domain.md
 - name: Примеры
   items:
     - name: Веб-приложения и бессерверные приложения
