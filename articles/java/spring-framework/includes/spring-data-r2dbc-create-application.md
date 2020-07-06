@@ -2,14 +2,14 @@
 author: judubois
 ms.date: 05/06/2020
 ms.author: judubois
-ms.openlocfilehash: d4b9becdce2b78e928b97b7d980024eac5871df2
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: e1bd45413368abe253ff4ac7733bbdcd3d0a4cc3
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369848"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507524"
 ---
-Теперь создайте новый класс Java `Todo` рядом с классом `DemoApplication`:
+Создайте новый класс Java `Todo` рядом с классом `DemoApplication` с помощью следующего кода:
 
 ```java
 package com.example.demo;
@@ -72,7 +72,7 @@ public class Todo {
 
 Этот класс является моделью предметной области, сопоставленной с таблицей `todo`, созданной ранее.
 
-Для управления этим классом потребуется репозиторий. Определите новый интерфейс `TodoRepository` в том же пакете:
+Для управления этим классом потребуется репозиторий. Определите новый интерфейс `TodoRepository` в том же пакете с помощью следующего кода:
 
 ```java
 package com.example.demo;
@@ -118,7 +118,7 @@ public class TodoController {
 }
 ```
 
-Наконец, остановите приложение и запустите его снова:
+Остановите приложение и запустите его снова с помощью следующей команды:
 
 ```bash
 ./mvnw spring-boot:run
@@ -128,28 +128,28 @@ public class TodoController {
 
 Чтобы протестировать приложение, можно использовать cURL.
 
-Сначала создайте новый элемент "todo" в базе данных:
+Сначала создайте новый элемент todo в базе данных с помощью следующей команды:
 
 ```bash
-curl  --header "Content-Type: application/json" \
-          --request POST \
-          --data '{"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done": "true"}' \
-          http://127.0.0.1:8080
+curl --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done": "true"}' \
+    http://127.0.0.1:8080
 ```
 
-Эта команда должна возвращать созданный элемент:
+Эта команда должна возвращать созданный элемент, как показано здесь:
 
 ```json
 {"id":1,"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done":true}
 ```
 
-Затем извлеките данные, используя новый запрос cURL:
+Затем извлеките данные, используя новый запрос cURL, с помощью следующей команды:
 
 ```bash
 curl http://127.0.0.1:8080
 ```
 
-Эта команда вернет список элементов todo, включая созданный вами элемент:
+Эта команда вернет список элементов todo, включая созданный вами элемент, как показано здесь:
 
 ```json
 [{"id":1,"description":"configuration","details":"congratulations, you have set up R2DBC correctly!","done":true}]

@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 11/13/2018
-ms.openlocfilehash: 5377aed7ee541f1954a95f992ffee03a7cb569a7
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 0dc5459ab4898deecebbc199e62f5dccc8ee6f7d
+ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790740"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>Добавление корневого сертификата в хранилище сертификатов ЦС Java
 
@@ -44,7 +44,7 @@ ms.locfileid: "81672810"
 
 ## <a name="to-add-a-root-certificate-to-the-cacerts-store"></a>Добавление корневого сертификата в хранилище cacerts
 
-1. Скачайте корневой сертификат Baltimore CyberTrust по ссылке <https://cacert.omniroot.com/bc2025.crt> и сохраните его в папке *jdk\jre\lib\security* как файл с расширением *.cer*. Предположим, что вы скачали корневой сертификат Baltimore CyberTrust как файл *bc2025.cer*.
+1. Скачайте корневой сертификат Baltimore CyberTrust по ссылке <https://cacert.omniroot.com/bc2025.crt> и сохраните его в папке *jdk\jre\lib\security* как файл с расширением *.crt*. Предположим, что вы скачали корневой сертификат Baltimore CyberTrust как файл *bc2025.crt*.
 
    > [!NOTE]
    > Корневой сертификат Baltimore CyberTrust имеет серийный номер `02:00:00:b9` и отпечаток SHA1 `d4:de:20:d0:5e:66:fc:53:fe:1a:50:88:2c:78:db:28:52:ca:e4:74`.
@@ -52,7 +52,7 @@ ms.locfileid: "81672810"
 2. Импортируйте сертификат в хранилище cacerts с помощью следующей команды:
 
    ```shell
-   keytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.cer
+   keytool -keystore cacerts -importcert -alias bc2025ca -file bc2025.crt
    ```
 
    Где:

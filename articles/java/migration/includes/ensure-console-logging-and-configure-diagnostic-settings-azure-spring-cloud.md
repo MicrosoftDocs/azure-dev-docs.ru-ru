@@ -2,16 +2,16 @@
 author: yevster
 ms.author: yebronsh
 ms.date: 4/15/2020
-ms.openlocfilehash: b53308d4a9db52a25665d0daa74be678e726c499
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.openlocfilehash: 3ff76d977c231b4b238f9dbec7f3bfaddfe5e484
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82990186"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507612"
 ---
 ### <a name="ensure-console-logging-and-configure-diagnostic-settings"></a>Настройка записи журналов в консоль и параметров диагностики
 
-Настройте приложения Azure Spring Cloud так, чтобы все они выводили журналы в консоль, а не в файлы.
+Настройте ведение журналов так, чтобы все они выводили данные в консоль, а не в файлы.
 
 Завершив развертывание приложения в Azure Spring Cloud, [добавьте параметр диагностики](/azure/spring-cloud/diagnostic-services) для подготовки зарегистрированных событий к использованию, например чрез Azure Monitor Log Analytics.
 

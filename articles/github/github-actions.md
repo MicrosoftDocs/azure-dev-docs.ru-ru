@@ -6,12 +6,12 @@ ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: a7bcf09da47e9af41f404bfdd2454b25f94eb7b4
-ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
+ms.openlocfilehash: 15d839ff8c05dbe4ffb990e31a883794c30d5649
+ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942403"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Развертывание в Azure с помощью GitHub Actions
 
@@ -92,6 +92,7 @@ GitHub Actions содержат предварительно настроенн�
 
 - [Вход в Docker](https://github.com/Azure/docker-login)  
 - [Развертывание в Экземплярах контейнеров Azure](https://github.com/Azure/aci-deploy)
+- [Действие сканирования контейнера](https://github.com/Azure/container-scan)
 
 ## <a name="deploy-to-kubernetes"></a>Развертывание в Kubernetes
 

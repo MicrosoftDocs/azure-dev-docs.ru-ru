@@ -1,14 +1,14 @@
 ---
-title: Подготовка и использование службы хранилища Azure с помощью пакета Azure SDK для Python
+title: Использование службы хранилища Azure с пакетом Azure SDK для Python
 description: Узнайте, как с помощью библиотек из пакета Azure SDK для Python получить доступ к заранее подготовленному контейнеру больших двоичных объектов в учетной записи хранения Azure, а затем передать файл в этот контейнер.
-ms.date: 05/29/2020
+ms.date: 06/15/2020
 ms.topic: conceptual
-ms.openlocfilehash: 50d9b781e0ec3a1a9f752a9ec193720d99b88f4d
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 9015017b1e0b2839e4a3986950625fb8a498717e
+ms.sourcegitcommit: 74ff4dec3b0556201c243e8c2302555b08dd79e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329662"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84812667"
 ---
 # <a name="example-use-the-azure-libraries-with-azure-storage"></a>Пример Использование библиотек Azure со службой хранилища Azure
 
@@ -47,11 +47,11 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
 ## <a name="4-use-blob-storage-from-app-code"></a>4: Использование хранилища больших двоичных объектов из кода приложения
 
-В следующих разделах (4а и 4б) показаны два способа доступа к контейнеру больших двоичных объектов.
+В следующих разделах (4а и 4б) показаны два способа доступа к контейнеру больших двоичных объектов, подготовленных с помощью инструкций из статьи [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md).
 
-При использовании [первого способа (4а)](#4a-use-blob-storage-with-authentication) проверка подлинности приложения выполняется с помощью `DefaultAzureCredential`, как описано в [разделе об аутентификации приложений Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential). При использовании этого метода необходимо сначала назначить соответствующие разрешения удостоверению приложения. Это также является рекомендуемым подходом.
+При использовании [первого способа (4а ниже)](#4a-use-blob-storage-with-authentication) аутентификация приложения выполняется с помощью `DefaultAzureCredential`, как описано в [разделе об аутентификации приложений Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential). При использовании этого метода необходимо сначала назначить соответствующие разрешения удостоверению приложения. Это также является рекомендуемым подходом.
 
-Во [втором случае (4б)](#4b-use-blob-storage-with-a-connection-string) используется строка подключения для прямого доступа к учетной записи хранения. Этот метод кажется проще. Но он имеет два существенных недостатка:
+Во [втором случае (4б ниже)](#4b-use-blob-storage-with-a-connection-string) используется строка подключения для прямого доступа к учетной записи хранения. Этот метод кажется проще. Но он имеет два существенных недостатка:
 
 - Строка подключения лишь выполняет проверку подлинности агента для подключения к учетной записи *хранения*, а не к отдельным ресурсам в этой учетной записи. В результате этого строка подключения предоставляет больше разрешений, чем может потребоваться.
 
@@ -116,7 +116,7 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
     Так как ваша локальная субъект-служба не имеет разрешения на доступ к контейнеру больших двоичных объектов, поступит сообщение об ошибке со сведениями о том, что у вызывающей стороны нет прав на выполнение этой операции.
 
-1. Чтобы предоставить субъекту-службе разрешение на доступ к контейнеру, выполните команду Azure CLI [az role assignment create](/cli/azure/role/assignment?view=azure-cli-latest#az-role-assignment-create) (в которой довольно много текста).
+1. Предоставьте контейнеру разрешения на доступ к субъекту-службе, выполнив команду Azure CLI [az role assignment create](/cli/azure/role/assignment?view=azure-cli-latest#az-role-assignment-create) (в которой довольно много текста).
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -199,5 +199,5 @@ az group delete -n PythonAzureExample-Storage-rg
 - [Пример. Подготовка группы ресурсов к работе](azure-sdk-example-resource-group.md)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
-- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)

@@ -1,6 +1,10 @@
 - name: Azure для разработчиков JavaScript и Node.js
   href: index.yml
   items:
+    - name: Начало работы в Azure с JavaScript
+      items:
+        - name: Настройка среды разработки
+          href: configure-local-development-environment.md
     - name: Краткие руководства
       expanded: true
       items:

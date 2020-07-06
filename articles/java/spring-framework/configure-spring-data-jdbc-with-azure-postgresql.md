@@ -1,240 +1,97 @@
 ---
-title: Как использовать JDBC Spring Data с базой данных Azure PostgreSQL
-description: Узнайте, как использовать JDBC Spring Data с базой данных Azure PostgreSQL.
-services: postgresql
+title: Использование JDBC Spring Data с Базой данных Azure для PostgreSQL
+description: Сведения о том, как использовать JDBC Spring Data с Базой данных Azure для PostgreSQL.
 documentationcenter: java
-ms.date: 12/26/2019
+ms.date: 05/18/2020
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
+ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: f259ac4b169f3533c0f5eabd179dd79cc45b708b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 91bcd54783e82ca598b4b64da261338ceae6b463
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669630"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507756"
 ---
-# <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Как использовать JDBC Spring Data с базой данных Azure PostgreSQL
+# <a name="use-spring-data-jdbc-with-azure-database-for-postgresql"></a>Использование JDBC Spring Data с Базой данных Azure для PostgreSQL
 
-В этой статье показано, как создать пример приложения, использующего [Spring Data] для хранения и извлечения информации в базу данных Azure [PostgreSQL](https://www.postgresql.org/) с помощью [Java Database Connectivity (JDBC)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/).
+В этой статье описано создание примера приложения, которое использует [JDBC Spring Data](https://spring.io/projects/spring-data-jdbc) для сохранения данных в [Базе данных Azure для PostgreSQL](/azure/postgresql/) и их извлечения из нее.
 
-## <a name="prerequisites"></a>Предварительные требования
+[JDBC](https://en.wikipedia.org/wiki/Java_Database_Connectivity) — это стандартный API Java для подключения к стандартным реляционным базам данных.
 
-Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
+[!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
-* Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
-* Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
-* [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
-* [Curl](https://curl.haxx.se/) или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности.
-* Служебная программа командной строки [psql](https://www.postgresql.org/docs/current/app-psql.html).
-* Клиент [Git](https://git-scm.com/downloads).
+[!INCLUDE [spring-data-postgresql-setup.md](includes/spring-data-postgresql-setup.md)]
 
-## <a name="create-a-postgresql-database-for-azure"></a>Создание базы данных PostgreSQL в Azure
+### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
 
-### <a name="create-a-postgresql-database-server-using-the-azure-portal"></a>Создание сервера базы данных PostgreSQL с помощью портала Azure
+Создайте приложение в командной строке с помощью следующей команды:
 
-> [!NOTE]
-> 
-> Дополнительные сведения см. в статье о [создании базы данных Azure для сервера PostgreSQL с помощью портала Azure](/azure/postgresql/quickstart-create-server-database-portal).
+```bash
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,postgresql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+```
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Настройка Spring Boot для использования Базы данных Azure для PostgreSQL
 
-1. Щелкните элемент **+Create a resource** (+Создать ресурс), **Базы данных**, а затем выберите **База данных Azure для PostgreSQL**.
+Откройте файл *src/main/resources/application.properties* и добавьте следующий текст:
 
-   ![Создание базы данных PostgreSQL][POSTGRESQL01]
+```properties
+logging.level.org.springframework.jdbc.core=DEBUG
 
-1. Введите следующие сведения:
+spring.datasource.url=jdbc:postgresql://$AZ_DATABASE_NAME.postgres.database.azure.com:5432/demo
+spring.datasource.username=spring@$AZ_DATABASE_NAME
+spring.datasource.password=$AZ_POSTGRESQL_PASSWORD
 
-   - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
-   - **Имя сервера**: Для сервера PostgreSQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoyspostgresql.postgres.database.azure.com*.
-   - **Выберите источник**. В рамках данного руководства выберите `None`, чтобы создать базу данных.
-   - **Имя для входа администратора сервера**. Укажите имя администратора базы данных.
-   - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
-   - **Расположение.** Укажите ближайший географический регион для базы данных.
-   - **Версия.** Укажите самую последнюю версию базы данных.
+spring.datasource.initialization-mode=always
+```
 
-   ![Создание свойств базы данных PostgreSQL][POSTGRESQL02]
+Замените две переменные `$AZ_DATABASE_NAME` и переменную `$AZ_POSTGRESQL_PASSWORD` значениями, которые вы настроили в начале работы с этой статьей.
 
-1. После ввода всех этих данных нажмите кнопку **Проверка и создание**.
+> [!WARNING]
+> Свойство конфигурации `spring.datasource.initialization-mode=always` означает, что Spring Boot при каждом запуске сервера будет автоматически создавать схему базы данных на основе файла *schema.sql*, который вы создадите позднее. Это очень удобно для тестирования, но при каждой перезагрузке все данные будут удаляться, поэтому не следует использовать этот подход в рабочей среде.
 
-1. Проверьте спецификации и щелкните **Создать**.
+Теперь вы можете запустить приложение с помощью предоставленной программы-оболочки Maven:
 
-### <a name="configure-a-firewall-rule-for-your-postgresql-database-server-using-the-azure-portal"></a>Настройка правила брандмауэра для сервера базы данных PostgreSQL с помощью портала Azure
+```bash
+./mvnw spring-boot:run
+```
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Ниже приведен снимок экрана приложения, выполняемого в первый раз:
 
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных PostgreSQL.
+[![Выполняющееся приложение](media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-01.png)](media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-01.png#lightbox)
 
-1. Щелкните **Безопасность подключения**, после этого создайте правило на вкладке **Правила брандмауэра**, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**. (В этом упражнении мы используем IP-адрес компьютера разработки, который является клиентом.  Его можно использовать в качестве **начального** и **конечного** IP-адресов.
+### <a name="create-the-database-schema"></a>Создание схемы базы данных
 
-   ![Настройка безопасности подключения][POSTGRESQL03]
+Spring Boot будет автоматически выполнять файл *src/main/resources/schema.sql* для создания схемы базы данных. Создайте файл и добавьте следующее содержимое:
 
-### <a name="retrieve-the-connection-string-for-your-postgresql-server-using-the-azure-portal"></a>Получение строки подключения для сервера PostgreSQL с помощью портала Azure
+```sql
+DROP TABLE IF EXISTS todo;
+CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARCHAR(4096), done BOOLEAN);
+```
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Остановите приложение и запустите его снова с помощью следующей команды. Теперь приложение будет использовать созданную ранее базу данных `demo` и создаст в ней таблицу `todo`.
 
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную базу данных PostgreSQL.
+```bash
+./mvnw spring-boot:run
+```
 
-1. Нажмите кнопку **Строки подключения** и скопируйте значение в текстовое поле **JDBC**.
+## <a name="code-the-application"></a>Добавление кода приложения
 
-   ![Получение строки подключения JDBC][POSTGRESQL05]
+Затем добавьте код Java, который будет использовать JDBC для хранения данных на сервере PostgreSQL и их извлечения из него.
 
-### <a name="create-postgresql-database-using-the-psql-command-line-utility"></a>Создание базы данных PostgreSQL с помощью служебной программы командной строки `psql`
+[!INCLUDE [spring-data-jdbc-create-application.md](includes/spring-data-jdbc-create-application.md)]
 
-1. Откройте командную оболочку и подключитесь к серверу PostgreSQL, введя команду `psql`, как в следующем примере:
+Ниже приведен снимок экрана с этими запросами cURL:
 
-   ```shell
-   psql --host=wingtiptoyspostgresql.postgres.database.azure.com --port=5432 --username=wingtiptoysuser@wingtiptoyspostgresql --dbname=postgres
-   ```
-   Где:
+[![Тестирование с помощью cURL](media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-02.png)](media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-02.png#lightbox)
 
-   | Параметр | Описание |
-   |---|---|
-   | `host` | Указывается полное доменное имя сервера PostgreSQL, описанное ранее в этой статье. |
-   | `host` | Указывается порт сервера PostgreSQL, то есть по умолчанию — `5432`. |
-   | `username` | Указывается администратор PostgreSQL и сокращенное имя сервера, описанные ранее в этой статье. |
-   | `dbname` | Указывается, хотите ли вы сейчас использовать по умолчанию базу данных `postgres`. |
+Поздравляем! Вы создали приложение Spring Boot, которое использует JDBC для сохранения данных в Базе данных Azure для PostgreSQL и их извлечения из нее.
 
-   Сервер PostgreSQL должен отобразить экран, как в следующем примере:
-
-   ```shell
-   psql (9.3.24, server 10.5)
-   SSL connection (cipher: ECDHE-RSA-AES256-SHA384, bits: 256)
-   Type "help" for help.
-   
-   postgres=>
-   ```
-   > Примечание. Если вы получили сообщение о том, что сервер не распознает этот IP-адрес, в сообщении об ошибке будет отображаться IP-адрес, который используется клиентом.  Назначьте его, как описано выше. *Настройка правила брандмауэра для сервера с помощью портала Azure*
-
-1. Создайте базу данных с именем *mypgsqldb*, введя команду `psql`, как в следующем примере:
-
-   ```SQL
-   CREATE DATABASE mypgsqldb;
-   ```
-
-   Сервер PostgreSQL должен отобразить экран, как в следующем примере:
-
-   ```shell
-   CREATE DATABASE
-   ```
-
-1. НЕОБЯЗАТЕЛЬНО. Убедитесь, что база данных создана, введя `\l` в `psql`. Сервер PostgreSQL должен вернуть ответ примерно такого содержания, как в следующем примере:
-
-   ```shell
-                   List of databases
-          Name        |      Owner      | Encoding
-   -------------------+-----------------+----------
-    azure_maintenance | azure_superuser | UTF8
-    azure_sys         | azure_superuser | UTF8
-    mypgsqldb         | wingtiptoysuser | UTF8
-    postgres          | azure_superuser | UTF8
-    template0         | azure_superuser | UTF8
-    template1         | azure_superuser | UTF8
-   (6 rows)
-   ```
-
-1. Введите `\q` для выхода из служебной программы `psql`.
-
-## <a name="configure-the-sample-application"></a>Настройка примера приложения
-
-1. Откройте командную строку и клонируйте пример проекта с помощью команды Git, как в следующем примере:
-
-   ```shell
-   git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
-   ```
-
-1. Найдите файл *application.properties* в каталоге *resources* примера приложения или создайте его, если он еще не существует.
-
-1. Откройте файл *application.properties* в текстовом редакторе, добавьте или настройте указанные ниже строки в файл и замените примеры значений на соответствующие полученные ранее значения:
-
-   ```yaml
-   spring.datasource.url=jdbc:postgresql://wingtiptoyspostgresql.postgres.database.azure.com:5432/mypgsqldb?ssl=true&sslmode=prefer
-   spring.datasource.username=wingtiptoysuser@wingtiptoyspostgresql
-   spring.datasource.password=********
-    ```
-   Где:
-
-   | Параметр | Описание |
-   |---|---|
-   | `spring.datasource.url` | Указываются строки PostgreSQL JDBC, описанные ранее в этой статье. |
-   | `spring.datasource.username` | Указывается администратор PostgreSQL, описанный ранее в этой статье, вместе с сокращенным именем сервера. |
-   | `spring.datasource.password` | Указывается пароль администратора PostgreSQL, описанный ранее в этой статье. |
-
-1. Сохраните и закройте файл *application.properties*.
-
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения 
-
-1. Создайте пример приложения с помощью Maven, например:
-
-   ```shell
-   mvn clean package -P postgresql
-   ```
-
-1. Запустите пример приложения, например:
-
-   ```shell
-   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
-   ```
-
-1. Из командной строки создайте записи с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-   ```
-
-   Приложение должно возвращать значения следующим образом:
-
-   ```shell
-   Added Pet(id=1, name=dog, species=canine).
-
-   Added Pet(id=2, name=cat, species=feline).
-   ```
-
-1. Получите все имеющиеся записи из командной строки с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s http://localhost:8080/pets
-   ```
-    
-   Приложение должно возвращать значения следующим образом:
-
-   ```json
-   [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
-   ```
-
-## <a name="summary"></a>Сводка
-
-С помощью этого руководства вы создали пример приложения Java, использующий Spring Data для хранения и извлечения информации в базу данных Azure PostgreSQL с помощью JDBC.
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
-
-> [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+[!INCLUDE [spring-data-conclusion.md](includes/spring-data-conclusion.md)]
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-Дополнительные сведения об использовании Java в Azure см. в статьях [Azure для разработчиков Java] и [Working with Azure DevOps and Java] (Работа с Azure DevOps и Java).
+Дополнительные сведения о JDBC для Spring Data см. в [справочной документации по Spring](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#reference).
 
-<!-- URL List -->
-
-[Azure для разработчиков Java]: /azure/developer/java/
-[бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
-[Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Data]: https://spring.io/projects/spring-data
-[Spring Initializr]: https://start.spring.io/
-[Spring Framework]: https://spring.io/
-
-<!-- IMG List -->
-
-[POSTGRESQL01]: media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-01.png
-[POSTGRESQL02]: media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-02.png
-[POSTGRESQL03]: media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-03.png
-[POSTGRESQL04]: media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-04.png
-[POSTGRESQL05]: media/configure-spring-data-jdbc-with-azure-postgresql/create-postgresql-05.png
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).

@@ -4,18 +4,20 @@ description: 'Шаг руководства 1: введение, предвар�
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ed0370e5e4905403ec7917410f68fb4969969a05
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 444dd9737d52de58f71ef9a01aeca6a203e97a92
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82138760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069380"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Развертывание приложений Python в Службе приложений Azure в Linux с помощью Visual Studio Code
 
 В этой статье описано, как развернуть приложение Python в Службе приложений Azure в Linux с использованием Visual Studio Code и расширения [Службы приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте ссылку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
+
+Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=dNVvFttc-sA&feature=youtu.be&ocid=AID3006292" target="_blank">Создание веб-приложений с помощью VS Code и Службы приложений Azure</a> (YouTube.com).
 
 > [!TIP]
 > [Служба приложений Azure в Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) предназначена для выполнения исходного кода в предварительно определенном контейнере Docker. Этот контейнер запускает приложения в среде Python 3.7, используя веб-сервер [Gunicorn](https://gunicorn.org). Характеристики этого контейнера описаны в статье [Настройка приложения Python в Linux для Службы приложений Azure](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). Само определение контейнера находится по адресу [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).

@@ -4,18 +4,20 @@ description: 'Руководство, шаг 1: общие сведения и �
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b01c45d1f61e021bb025dec4980a7a10eae6185b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 1e86b06b87ed2a0471f38102d1ad5bca8d0dfcb1
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069402"
 ---
 # <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Руководство по Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
 
 В этой статье описано, как в [Службе приложений Azure](https://azure.microsoft.com/services/app-service/containers/) развернуть образ контейнера из реестра контейнеров с помощью Visual Studio Code.
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте ссылку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
+
+Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=t79HDLC5kQA&feature=youtu.be&ocid=AID3006292" target="_blank">Приложения Django в контейнерах разработки VS Code</a> (YouTube.com).
 
 ## <a name="prerequisites"></a>Предварительные требования
 

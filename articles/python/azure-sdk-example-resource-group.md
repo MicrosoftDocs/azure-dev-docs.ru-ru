@@ -3,12 +3,12 @@ title: Подготовка группы ресурсов с помощью би
 description: Узнайте, как с помощью библиотеки управления ресурсами из пакета Azure SDK для Python создать группу ресурсов, используя код на Python.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 0d0ff5bf8a2417e38f9fd066b226ed26da87322b
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 38c2f87511c040a04040844fb512fd436d566c15
+ms.sourcegitcommit: 499f7275446f006fa43c4eff3b1f0d001e9a98d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329682"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84453705"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Пример использования библиотек Azure для подготовки группы ресурсов
 
@@ -127,5 +127,5 @@ az group create -n PythonAzureExample-ResourceGroup-rg -l centralus
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
 - [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
-- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)

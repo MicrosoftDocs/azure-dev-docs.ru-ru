@@ -1,19 +1,19 @@
 ---
-title: Просмотр данных с помощью Java Flight Recorder и Mission Control
-description: Руководство по использованию инструмента Java Flight Recorder и сборки Mission Control для сбора и просмотра данных приложения.
+title: Просмотр данных с помощью Zulu Flight Recorder и Mission Control
+description: Руководство по использованию инструмента Zulu Flight Recorder и сборки Mission Control для сбора и просмотра данных приложения.
 ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 23effea162bb4f39ca7ff9477695e21e6faeafdb
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: afd95e7f39fb9abdfe2261c8ef0f5ac961347ffb
+ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670870"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418202"
 ---
-# <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>Мониторинг рабочих нагрузок Java и управление ими с помощью Java Flight Recorder (JFR) и Zulu Mission Control
+# <a name="monitor-and-manage-java-workloads-with-zulu-flight-recorder-and-zulu-mission-control"></a>Мониторинг рабочих нагрузок Java и управление ими с помощью Zulu Flight Recorder и Zulu Mission Control
 
-Из этой статьи вы узнаете, как выполнять мониторинг и администрирование рабочих нагрузок Java с помощью Java Flight Recorder (JFR) и Zulu Mission Control.
+Из этой статьи вы узнаете, как выполнять мониторинг и администрирование рабочих нагрузок Java с помощью Zulu Flight Recorder и Zulu Mission Control.
 
 Zulu Mission Control — это полностью протестированная сборка JDK Mission Control с открытым исходным кодом. Она была представлена компанией Oracle в 2018 году и управляется как проект на базе OpenJDK. Flight Recorder и Mission Control вместе предоставляют интерактивные возможности управления и мониторинга с минимальными затратами для рабочих нагрузок Java.
 

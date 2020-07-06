@@ -3,12 +3,12 @@ title: Подготовка службы хранилища Azure с помощ�
 description: Узнайте, как с помощью библиотек из пакета Azure SDK для Python подготовить контейнер больших двоичных объектов в учетной записи хранения Azure, а затем передать файл в этот контейнер.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: ffc65746be0a7e002263010df4fe3048e0c321d1
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 74f6e21b80505cd0b63061a76f4811b0c687d1a9
+ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329672"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716102"
 ---
 # <a name="example-use-the-azure-libraries-with-azure-storage"></a>Пример Использование библиотек Azure со службой хранилища Azure
 
@@ -165,22 +165,22 @@ python provision_blob.py
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
-# Provision the resource group
+rem Provision the resource group
 
 az group create -n PythonAzureExample-Storage-rg -l centralus
 
-# Provision the storage account
+rem Provision the storage account
 
 az storage account create -g PythonAzureExample-Storage-rg -l centralus ^
     -n pythonazurestorage12345 --kind StorageV2 --sku Standard_LRS
 
-# Retrieve the connection string
+rem Retrieve the connection string
 
 az storage account show-connection-string -g PythonAzureExample-Storage-rg ^
     -n pythonazurestorage12345
 
-# Provision the blob container; NOTE: this command assumes you have an environment variable
-# named AZURE_STORAGE_CONNECTION_STRING with the connection string for the storage account.
+rem Provision the blob container; NOTE: this command assumes you have an environment variable
+rem named AZURE_STORAGE_CONNECTION_STRING with the connection string for the storage account.
 
 set AZURE_STORAGE_CONNECTION_STRING=<connection_string>
 az storage container create --account-name pythonazurestorage12345 -n blob-container-01
@@ -229,5 +229,5 @@ az group delete -n PythonAzureExample-Storage-rg
 - [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
 - [Пример. Подготовка группы ресурсов к работе](azure-sdk-example-resource-group.md)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
-- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)

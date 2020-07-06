@@ -1,22 +1,22 @@
 ---
 title: Использование начального приложения Spring Boot с Azure Active Directory B2C
-description: Сведения о настройке приложения Spring Boot Initializer с помощью начального приложения Azure Active Directory B2C.
+description: Сведения о настройке приложения Spring Boot Initializr с помощью начального приложения Azure Active Directory B2C.
 services: active-directory-b2c
 documentationcenter: java
 author: panli
 manager: kevinzha
-ms.author: panli
-ms.date: 02/06/2020
+ms.author: edburns
+ms.date: 06/04/2020
 ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: c06c1205d1ef1f8dc7eec674c846cf53c6a2e5e8
-ms.sourcegitcommit: 996212c5a141d724d26f3899e91d194b08b2dc0b
+ms.openlocfilehash: 4a6463df852511ab37af772598f9ae525d8a02e9
+ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82985185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069420"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -32,12 +32,11 @@ ms.locfileid: "82985185"
 > * защита приложения с помощью классов и аннотаций Spring Boot;
 > * сборка и тестирование приложения Java.
 
-Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись](https://azure.microsoft.com/free/?WT.mc_id=A261C142F), прежде чем начинать работу.
+[Azure Active Directory](https://azure.microsoft.com/services/active-directory) представляет собой решение Майкрософт для корпоративной идентификации в облачном масштабе. [Azure Active Directory B2C](https://azure.microsoft.com/services/active-directory/external-identities/b2c/) дополняет набор функций Azure Active Directory возможностью управлять доступом клиентов, потребителей и пользователей к приложениям B2C.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
-
+* Подписка Azure. Если у вас еще нет подписки Azure, [создайте бесплатную учетную](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) запись, прежде чем начать работу.
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
 
@@ -45,195 +44,272 @@ ms.locfileid: "82985185"
 
 1. Перейдите по адресу <https://start.spring.io/>.
 
-2. Укажите, что необходимо создать проект **Maven** с помощью **Java**, введите имя **группы** и **артефакта** вашего приложения, а затем выберите модуль **Интернет** и **Безопасность** Spring Initializr.
+2. Укажите значения в соответствии с инструкциями в этом руководстве. Обратите внимание, что метки и макет могут отличаться от представленных здесь изображений.
 
-   ![Указание имен группы и артефакта](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/si-n.png)
+    * В поле **Project** (Проект) выберите элемент **Maven Project** (Проект Maven).
+    * В поле **Language** (Язык) выберите элемент **Java**.
+    * В поле **Spring Boot** выберите версию **2.2.7**.
+    * В полях **Group** (Группа), **Artifact** (Артефакт) и **Name** (Имя) введите одно и то же строковое значение с кратким описанием проекта. Возможно, пользовательский интерфейс автоматически заполнит часть этих значений по мере ввода.
+    * На панели **Dependencies** (Зависимости) выберите элемент **Add Dependencies** (Добавить зависимости). Через предоставленный пользовательский интерфейс добавьте зависимости **Spring Web** и **Spring Security**.
 
+   ![Заполнение значений для создания проекта](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/si-n.png)
 
-3. При появлении запроса щелкните `Generate Project` и скачайте проект на локальный компьютер.
+3. Щелкните элемент **Generate Project** (Создать проект), затем скачайте проект в папку на локальном компьютере. Переместите скачанный файл в каталог, имя которого совпадает с именем проекта, и распакуйте этот файл. Макет файла должен быть похож на представленный ниже пример, но с указанным вами значением для параметра **Group** (Группа) вместо указанного здесь `yourProject`.
 
-## <a name="create-azure-active-directory-instance"></a>Создание экземпляра Azure Active Directory
+    ```
+    .
+    ├── HELP.md
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    └── src
+        ├── main
+        │   ├── java
+        │   │   └── yourProject
+        │   │       └── yourProject
+        │   │           └── YourProjectApplication.java
+        │   └── resources
+        │       ├── application.properties
+        │       ├── static
+        │       └── templates
+        └── test
+            └── java
+                └── yourProject
+                    └── yourProject
+                        └── YourProjectApplicationTests.java
+    ```
+
+## <a name="create-and-initialize-an-azure-active-directory-instance"></a>Создание и инициализация экземпляра Azure Active Directory
 
 ### <a name="create-the-active-directory-instance"></a>Создание экземпляра Active Directory
 
 1. Войдите на сайт <https://portal.azure.com>.
 
-2. Щелкните **+ Создать ресурс**, а затем выберите **Удостоверение** и **Показать все**.  Выполните поиск по фразе **Azure Active Directory B2C**.
+2. Щелкните команду **+ Создать ресурс**, а затем выберите элементы **Удостоверение** и **Показать все**. Выполните поиск по фразе **Azure Active Directory B2C**.
 
-   ![Создание экземпляра Azure Active Directory B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-1-n.png)
+    ![Создание экземпляра Azure Active Directory B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-1-n.png)
 
-3. Нажмите кнопку **Создать**.
+3. Нажмите кнопку **создания**.
 
-   ![Получение имени клиента B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-5-n.png)
+    ![Получение имени клиента B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-5-n.png)
 
 4. Выберите **Создать B2C-клиент Azure AD**.
 
-   ![Создание клиента Azure Active Directory](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-2-n.png)
+    ![Создание клиента Azure Active Directory](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-2-n.png)
 
-5. Укажите имя организации и первоначальное доменное имя, а затем запишите имя домена для использования в будущем.  Нажмите кнопку **Создать**.
+5. Введите подходящие значения в полях **Имя организации** и **Первоначальное доменное имя**, а затем щелкните элемент **Создать**.
 
-   ![Выбор экземпляра Azure Active Directory](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-3-n.png)
+    ![Выбор экземпляра Azure Active Directory](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-3-n.png)
 
-6. После создания клиента в Active Directory перейдите к новому каталогу.  Либо выполните поиск по слову `b2c` и выберите службу `Azure AD B2C`.
+6. После создания клиента в Active Directory перейдите к новому каталогу. Кроме того, можно выполнить поиск по строке `b2c` и выбрать элемент **Azure AD B2C**.
 
-   ![Поиск экземпляра Azure Active Directory B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-4-n.ng.png)
+    ![Поиск экземпляра Azure Active Directory B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-4-n.ng.png)
 
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Регистрация приложения для приложения Spring Boot
 
-1. В меню портала выберите **Azure AD B2C**, щелкните **Приложения**, а затем выберите **Добавить**.
+1. На панели **Управление** слева выберите элемент **Приложения**, а затем нажмите кнопку **Добавить**.
 
-   ![Регистрация приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
+    ![Регистрация приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
 
-2. Укажите **имя** приложения, добавьте `http://localhost:8080/home` для **URI перенаправления**. Выберите команду **Сохранить**.  Затем запишите значение **идентификатора приложения** в качестве `${your-client-id}`.  
+2. В поле **Имя** введите значение **Group** (Группа), которое вы использовали выше, затем для элемента управления **include web app/web API** (Включить веб-приложение или веб-API) установите значение **Да**.
 
-   ![Добавление URI перенаправления приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
+3. Для параметра **URL-адрес ответа** задайте значение `http://localhost:8080/home`.
 
-3. Выберите **Сертификаты и секреты**, **Новый секрет клиента**, чтобы создать ключ.
+4. Сохраните в других полях значения по умолчанию.
 
-   ![Создание потока пользователя](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
+5. Нажмите кнопку **создания**. До появления приложения может пройти некоторое время.
 
-4. Слева выберите **Потоки пользователей**, а затем щелкните **Создать поток пользователя**.
+    ![Добавление URI перенаправления приложения](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-5. Выберите **Регистрация или вход**, **Изменение профиля** и **Сброс пароля**, чтобы создать соответствующие потоки пользователей. Дополнительные сведения см. в статье [Учебник. Создание потоков пользователей в Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-create-user-flows). AAD B2C поддерживает локальные учетные записи, а также поставщики удостоверений социальных сетей. Пример создания поставщика удостоверений GitHub см. в статье [Настройка регистрации и входа с учетной записью GitHub через Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
-Не забудьте выбрать **отображаемое имя**, чтобы оно присутствовало в токене утверждений.
+6. Щелкните элемент **Обзор**, а затем — элемент **Приложения**.
 
-   ![Создание потока пользователя](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c-create-userflow.png)
+7. В таблице приложений выберите строку с именем проекта.
+
+8. В области **Общие** выберите элемент "Ключи", а затем щелкните команду **Создать ключ**.
+
+9. Задайте для параметра **Ключ приложения** значение `yourGroupIdkey`, заменив в нем `yourGroupId` значением, указанным ранее в поле **Группа**.
+
+10. Щелкните **Сохранить**. Дождитесь, пока ключ появится в разделе ключей приложения, затем скопируйте его для использования далее в этой статье.
+
+    > [!NOTE]
+    > Если вы закроете раздел **Ключи**, при последующих входах значение ключа отображаться не будет. В таком случае придется создать еще один ключ и скопировать его для дальнейшего использования.
+    > Иногда созданный ключ будет содержать символы, которые сложно включить в файл *application.yml*, например обратную косую черту или обратный апостроф. В этом случае просто удалите такой ключ и создайте новый.
+
+    ![Создание секрета](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
+
+11. Щелкните **Обзор**.
+
+12. В разделе **Политики** на панели слева выберите элемент **Потоки пользователя**, а затем команду **Создать поток пользователя**.
+
+13. Теперь вам нужно отложить работу с этим руководством, выполнить инструкции из другого руководства и вернуться к этому руководству по завершении работы. При переходе к другому руководству следует помнить о некоторых вещах.
+
+    * Начните с этапа, на котором предлагается выбрать действие **Создать поток пользователя**.
+    * При каждом упоминании `webapp1` в этом руководстве заменяйте его тем значением, которое вы указали в поле **Group** (Группа).
+    * Когда вы выбираете утверждения, которые должны возвращаться из потоков, обязательно укажите **Display Name** (Отображаемое имя). Без этого утверждения не будет работать приложение, которое вы создадите по инструкциям в этом руководстве.
+    * Когда вам предлагается выполнить потоки пользователя, указанный выше URL-адрес перенаправления еще не активен. Это не помешает вам выполнить потоки, но перенаправление не будет успешным. Это ожидаемое поведение.
+    * Когда вы дойдете до этапа "Дальнейшие действия", вернитесь к этому руководству.
+
+    Выполните все действия, описанные в статье [Руководство. Создание потоков пользователей в Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-create-user-flows), чтобы создать потоки пользователей "Регистрация и входа", "Изменение профиля" и "Сброс пароля".
+
+    AAD B2C поддерживает локальные учетные записи, а также поставщики удостоверений социальных сетей. Пример создания поставщика удостоверений GitHub см. в статье [Настройка регистрации и входа с учетной записью GitHub через Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
 
 ## <a name="configure-and-compile-your-app"></a>Настройка и компиляция приложения
 
-1. Распакуйте архив с файлами проекта, который вы создали и скачали в каталог ранее в рамках этого руководства.
+Итак, вы создали экземпляр AAD B2C и несколько потоков пользователей, которые позволят вам подключить приложение Spring к этому экземпляру AAD B2C.
 
-2. Перейдите в родительскую папку проекта и откройте файл проекта Maven `pom.xml` в текстовом редакторе.
+1. В сеансе командной строки перейдите с помощью команды cd в каталог, куда вы распаковали содержимое ZIP-файла, скачанного из Spring Initializr.
 
-3. Добавьте зависимости для защиты с помощью Spring OAuth2 в `pom.xml`:
+2. Перейдите в родительскую папку проекта и откройте файл проекта Maven *pom.xml* в текстовом редакторе.
 
-   ```xml
-   <dependency>
-       <groupId>com.microsoft.azure</groupId>
-       <artifactId>azure-active-directory-b2c-spring-boot-starter</artifactId>
-       <version>2.2.4</version>
-   </dependency>
-   <dependency>
-       <groupId>org.springframework.boot</groupId>
-       <artifactId>spring-boot-starter-thymeleaf</artifactId>
-   </dependency>
-   <dependency>
-       <groupId>org.thymeleaf.extras</groupId>
-       <artifactId>thymeleaf-extras-springsecurity5</artifactId>
-   </dependency>
-   ```
+3. Добавьте в *pom.xml* зависимости для применения защиты Spring OAuth2:
+
+    ```xml
+    <dependency>
+        <groupId>com.microsoft.azure</groupId>
+        <artifactId>azure-active-directory-b2c-spring-boot-starter</artifactId>
+        <version>See Below</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        <version>See Below</version>
+    </dependency>
+    <dependency>
+        <groupId>org.thymeleaf.extras</groupId>
+        <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+        <version>See Below</version>
+    </dependency>
+    ```
+
+    Для параметра `azure-active-directory-b2c-spring-boot-starter` укажите последнюю доступную версию. Вы можете найти ее на сайте [mvnrepository.com](https://mvnrepository.com/ artifact/com.microsoft.azure/azure-active-directory-spring-boot-starter). На момент написания этой статьи последняя версия имела номер `2.2.4`.
+
+    Для параметра `spring-boot-starter-thymeleaf` укажите версию, которая соответствует выбранной версии Spring Boot, например `2.2.7.RELASE`.
+
+    Для параметра `thymeleaf-extras-springsecurity5` укажите последнюю доступную версию. Вы можете найти ее на сайте [mvnrepository.com](https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5). На момент написания этой статьи последняя версия имела номер `3.0.4.RELEASE`.
 
 4. Сохраните и закройте файл *pom.xml*.
 
-5. В папке *src/main/resources* проекта откройте файл *application.yml* в текстовом редакторе.
+    * Проверьте правильность всех зависимостей, выполнив `mvn -DskipTests clean install`. Если не отобразится сообщение `BUILD SUCCESS`, устраните неполадку и решите проблему, прежде чем продолжить работу.
+
+5. Перейдите к папке *src/main/resources* проекта и создайте файл *application.yml* в текстовом редакторе.
 
 6. Задайте параметры для регистрации вашего приложения, используя созданные ранее значения. Например:
 
-   ```yaml
-   azure:
-     activedirectory:
-       b2c:
-         tenant: ${your-tenant-name} # This is also the first part of your domain name before "onmicrosoft.com".
-         client-id: ${your-client-id}
-         client-secret: ${your-client-secret}
-         reply-url: ${your-redirect-uri-from-aad} # This should be an absolute URL.
-         logout-success-url: ${you-logout-success-url}
-         user-flows:
-           sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}
-           profile-edit: ${your-profile-edit-user-flow}     # optional
-           password-reset: ${your-password-reset-user-flow} # optional
-   ```
-   Где:
+    ```yaml
+    azure:
+      activedirectory:
+        b2c:
+          tenant: ejb0518domain
+          client-id: ejb0518
+          client-secret: '<yourAppKey>'
+          reply-url: http://localhost:8080/home
+          logout-success-url: http://localhost:8080/home
+          user-flows:
+            sign-up-or-sign-in: B2C_1_signupsignin1
+            profile-edit: B2C_1_profileediting1
+            password-reset: B2C_1_passwordreset1
+    ```
 
-   | Параметр | Описание |
-   |---|---|
-   | `azure.activedirectory.b2c.tenant` | Содержит имя `${your-tenant-name` AD B2C, указанное ранее. |
-   | `azure.activedirectory.b2c.client-id` | Содержит `${your-client-id}` из приложения, указанный ранее. |
-   | `azure.activedirectory.b2c.client-secret` | Содержит `${your-client-secret}` из приложения, указанный ранее. |
-   | `azure.activedirectory.b2c.reply-url` | Содержит один из **URI перенаправления** из приложения, указанных ранее. |
-   | `azure.activedirectory.b2c.logout-success-url` | Указывает URL-адрес после успешного выхода из приложения. |
-   | `azure.activedirectory.b2c.user-flows` | Содержит имена потоков пользователей, созданных ранее.
+    Обратите внимание, что значение `client-secret` заключено в одинарные кавычки. Это необходимо потому, что значение `<yourAppKey>` почти наверняка будет содержать некоторые символы, которые в формате YAML обязательно заключаются в одинарные кавычки.
 
-   > [!NOTE]
-   > 
-   > Полный список значений, доступных в файле *application.yml*, см. в [примере приложения Spring Boot для Azure Active Directory B2C][примере приложения Spring Boot для AAD B2C] на сайте GitHub.
-   >
+    > [!NOTE]
+    > На момент написания этой статьи для интеграции Active Directory B2C со Spring в файле *application.yml* можно указывать следующие значения:
+    >
+    > ```
+    > azure:
+    >   activedirectory:
+    >     b2c:
+    >       tenant:
+    >       oidc-enabled:
+    >       client-id:
+    >       client-secret:
+    >       reply-url:  # should be absolute url.
+    >       logout-success-url:
+    >       user-flows:
+    >         sign-up-or-sign-in:
+    >         profile-edit: # optional
+    >         password-reset: # optional
+    > ```
+    >
+    > Файл *application.yml* доступен в [примере Azure Active Directory B2C для Spring Boot](https://github.com/microsoft/azure-spring-boot/blob/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/application.yml) на сайте GitHub.
 
 7. Сохраните и закройте файл *application.yml*.
 
-8. Создайте папку с именем *controller* в исходной папке Java для приложения.
+8. Создайте папку с именем *controller* в *src/main/java/<yourGroupId>/<yourGroupId>* , заменив `<yourGroupId>` значением, которое вы указали в поле **Group** (Группа).
 
 9. Создайте файл Java с именем *WebController.java* в папке *controller* и откройте его в текстовом редакторе.
 
-10. Вставьте следующий код, а затем сохраните и закройте файл:
+10. Введите в файл следующий код, изменив `yourGroupId` соответствующим образом, а затем сохраните и закройте файл:
 
     ```java
-    package com.example.demo.controller;
-    
+    package yourGroupId.yourGroupId.controller;
+
     import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
     import org.springframework.security.oauth2.core.user.OAuth2User;
     import org.springframework.stereotype.Controller;
     import org.springframework.ui.Model;
     import org.springframework.web.bind.annotation.GetMapping;
-    
+
     @Controller
     public class WebController {
-    
+
         private void initializeModel(Model model, OAuth2AuthenticationToken token) {
             if (token != null) {
                 final OAuth2User user = token.getPrincipal();
-    
+
                 model.addAttribute("grant_type", user.getAuthorities());
                 model.addAllAttributes(user.getAttributes());
             }
         }
-    
+
         @GetMapping(value = "/")
         public String index(Model model, OAuth2AuthenticationToken token) {
             initializeModel(model, token);
-    
+
             return "home";
         }
-    
+
         @GetMapping(value = "/greeting")
         public String greeting(Model model, OAuth2AuthenticationToken token) {
             initializeModel(model, token);
-    
+
             return "greeting";
         }
-    
+
         @GetMapping(value = "/home")
         public String home(Model model, OAuth2AuthenticationToken token) {
             initializeModel(model, token);
-    
+
             return "home";
         }
     }
     ```
 
-11. Создайте папку с именем *security* в исходной папке Java для приложения.
+    Так как каждый метод в контроллере вызывает `initializeModel()`, а этот метод вызывает `model.addAllAttributes(user.getAttributes());`, любая HTML-страница в *src/main/resources/templates* может получить доступ к любому из этих атрибутов, таким как `${name}`, `${grant_type}`или `${auth_time}`. Значения, возвращаемые из `user.getAttributes()`, фактически являются утверждениями `id_token` для проверки подлинности. Полный список доступных утверждений приведен в статье [Маркеры идентификаторов платформы удостоверений Майкрософт](/azure/active-directory/develop/id-tokens#payload-claims).
+
+11. Создайте папку с именем *security* в *src/main/java/<yourGroupId>/<yourGroupId>* , заменив `yourGroupId` значением, которое вы указали в поле **Group** (Группа).
 
 12. Создайте файл Java с именем *WebSecurityConfiguration.java* в папке *security* и откройте его в текстовом редакторе.
 
-13. Вставьте следующий код, а затем сохраните и закройте файл:
+13. Введите в файл следующий код, изменив `yourGroupId` соответствующим образом, а затем сохраните и закройте файл:
 
     ```java
-    package com.example.demo.security;
-    
+    package yourGroupId.yourGroupId.security;
+
     import com.microsoft.azure.spring.autoconfigure.b2c.AADB2COidcLoginConfigurer;
     import org.springframework.security.config.annotation.web.builders.HttpSecurity;
     import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
     import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-    
+
     @EnableWebSecurity
     public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
-    
+
         private final AADB2COidcLoginConfigurer configurer;
-    
+
         public WebSecurityConfiguration(AADB2COidcLoginConfigurer configurer) {
             this.configurer = configurer;
         }
-    
+
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             http
@@ -246,7 +322,8 @@ ms.locfileid: "82985185"
         }
     }
     ```
-14. Скопируйте `greeting.html` и `home.html` из [примера приложения Spring Boot для Azure AD B2C](https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/templates), а затем замените `${your-profile-edit-user-flow}` и `${your-password-reset-user-flow}` именем потока пользователя, созданного ранее.
+
+14. Скопируйте файлы *greeting.html* и *home.html* из [примера Azure AD B2C для Spring Boot](https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/templates) в папку *src/main/resources/templates*. Затем замените `${your-profile-edit-user-flow}` и `${your-password-reset-user-flow}` именами созданных ранее потоков пользователей.
 
 ## <a name="build-and-test-your-app"></a>Создание и тестирование приложения
 
@@ -254,26 +331,27 @@ ms.locfileid: "82985185"
 
 2. Создайте приложение Spring Boot с помощью Maven и запустите его, например, следующим образом:
 
-   ```shell
-   mvn clean package
-   mvn spring-boot:run
-   ```
+    > [!NOTE]
+    > Очень важно, чтобы время системных часов на том устройстве, где выполняется локальное приложение Spring Boot, было точным. При использовании OAuth 2.0 допускается лишь очень малое отклонение по времени. Даже три минуты неточности могут привести к появлению при входе ошибок следующего вида: `[invalid_id_token] An error occurred while attempting to decode the Jwt: Jwt used before 2020-05-19T18:52:10Z`. На момент написания этой статьи сайт [time.gov](https://time.gov/) предоставлял информацию о том, насколько показания ваших часов отличаются от реального времени. Приложение успешно выполнено с отклонением в +0,019 секунд.
+
+    ```shell
+    mvn -DskipTests clean package
+    mvn -DskipTests spring-boot:run
+    ```
 
 3. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу `http://localhost:8080/`, после чего вы будете перенаправлены на страницу входа.
 
-   ![Страница входа](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo1-n.png)
+    ![Страница входа](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo1-n.png)
 
-4. Щелкните ссылку с именем потока пользователя `${your-sign-up-or-in}`, после чего вы будете перенаправлены в Azure AD B2C, чтобы начать процесс проверки подлинности.
+4. Выберите ссылку с текстом, обозначающим процесс входа. Вы перейдете на страницу Azure AD B2C, где можете начать проверку подлинности.
 
-   ![Вход в Azure Active Directory B2C](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo2-n.png)
+5. Войдя в приложение, вы увидите пример `home page` в браузере.
 
-4. Войдя в приложение, вы увидите пример `home page` в браузере.
-
-   ![Успешный вход в приложение](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo3-n.png)
+    ![Успешный вход в приложение](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo3-n.png)
 
 ## <a name="summary"></a>Сводка
 
-В этом учебнике вы создали веб-приложение Java с использованием начального приложения Spring Boot для Azure Active Directory B2C, настроили клиент Azure AD B2C, зарегистрировали в нем созданное приложение, а затем настроили это приложение для использования аннотаций и классов Spring с целью защиты веб-приложения.
+В рамках этого руководства вы создали веб-приложение Java с использованием начального приложения Spring для Azure Active Directory B2C, настроили клиент Azure AD B2C, зарегистрировали в нем созданное приложение, а затем настроили это приложение для использования аннотаций и классов Spring для защиты веб-приложения.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 7e90cd39bb50f5e83ee9bc3551252fe12086e750
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.openlocfilehash: 19eb7a5633f51400e139ba8dd7ad0a1f5999a213
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861197"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507450"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -86,7 +86,7 @@ set TOMCAT_HOME=<Tomcat install directory>
 ```
 ---
 
-После этого обновите файл *pom.xml*, чтобы настроить Maven для развертывания с использованием файла WAR Tomcat. Добавьте следующий код XML в качестве дочернего узла существующего элемента `<plugins>`. При необходимости измените `1.7.11` на текущую версию [подключаемого модуля Cargo Maven 2](https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-maven2-plugin).
+Затем обновите файл *pom.xml* для развертывания файла WAR. Добавьте следующий код XML в качестве дочернего узла существующего элемента `<plugins>`. При необходимости измените `1.7.11` на текущую версию [подключаемого модуля Cargo Maven 2](https://mvnrepository.com/artifact/org.codehaus.cargo/cargo-maven2-plugin).
 
 ```xml
 <plugin>

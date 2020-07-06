@@ -3,12 +3,12 @@ title: Подготовка виртуальной машины с помощь�
 description: Узнайте, как подготовить виртуальную машину Azure с помощью Python и библиотек управления Azure SDK.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 297e45b2d694d723b84f84f6457577503155a598
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 4b11caa66eb297225b4b61000575a8a9c48edb19
+ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329652"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716092"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Пример использования библиотек Azure для подготовки виртуальной машины
 
@@ -227,28 +227,28 @@ python provision_vm.py
 # <a name="cmd"></a>[cmd](#tab/cmd)
 
 ```azurecli
-# Provision the resource group
+rem Provision the resource group
 
 az group create -n PythonAzureExample-VM-rg -l centralus
 
-# Provision a virtual network and subnet
+rem Provision a virtual network and subnet
 
 az network vnet create -g PythonAzureExample-VM-rg -n python-example-vnet ^
     --address-prefix 10.0.0.0/16 --subnet-name python-example-subnet ^
     --subnet-prefix 10.0.0.0/24
 
-# Provision a public IP address
+rem Provision a public IP address
 
 az network public-ip create -g PythonAzureExample-VM-rg -n python-example-ip ^
     --allocation-method Dynamic --version IPv4
 
-# Provision a network interface client
+rem Provision a network interface client
 
 az network nic create -g PythonAzureExample-VM-rg --vnet-name python-example-vnet ^
     --subnet python-example-subnet -n python-example-nic ^
     --public-ip-address python-example-ip
 
-# Provision the virtual machine
+rem Provision the virtual machine
 
 az vm create -g PythonAzureExample-VM-rg -n ExampleVM -l "centralus" ^
     --nics python-example-nic --image UbuntuLTS ^
@@ -303,7 +303,7 @@ az group delete -n PythonAzureExample-VM-rg
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
 - [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
-- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 
 Более подробные примеры использования Python для создания виртуальной машины см. в следующих ресурсах:
 

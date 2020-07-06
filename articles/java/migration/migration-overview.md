@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: bbc7dd44e975fd47b52df41baa1ec526ac1908f8
-ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
+ms.openlocfilehash: 51babfacd133ed0ba0d9b5bc728c4373e137022c
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507470"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -78,7 +78,7 @@ ms.locfileid: "84202833"
 
 Приведенная ниже таблица поможет вам определить потенциальные назначения для определенного типа приложений. Как видите, AKS и виртуальные машины поддерживают все типы приложений, но они предъявляют больше требований к вашей команде, как показано в следующем разделе.
 
-|   |Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
+|   |Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные<br>машины|
 |---|---|---|---|---|---|---|
 | Приложения Spring Boot (JAR)                                    |&#x2714;|        |&#x2714;|&#x2714;|&#x2714;|
 | Приложения Spring Cloud (микрослужбы)                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
@@ -100,7 +100,7 @@ ms.locfileid: "84202833"
 > [!NOTE]
 > Этот список обязанностей не является исчерпывающим.
 
-|                                                                       | Служба приложений | Azure Spring Cloud | AKS | Виртуальные машины |
+|                                                                       | Приложение<br>Служба | Azure<br>Spring<br>Cloud | AKS | Виртуальные<br>машины |
 |---|---|---|---|---|
 | Обновление библиотек<br>(включая устранение уязвимостей)                 | &#x1F449;   | &#x1F449;   | &#x1F449;   | &#x1F449; |
 | Обновление сервера приложений<br>(включая устранение уязвимостей)    | ![Azure][1] | ![Azure][1] | &#x1F449;   | &#x1F449; |
@@ -140,9 +140,9 @@ ms.locfileid: "84202833"
 
 |Место назначения&nbsp;→<br><br>Тип&nbsp;приложения&nbsp;↓|Приложение<br>Служба<br>Java SE|Приложение<br>Служба<br>Tomcat|Azure<br>Spring<br>Cloud|AKS|Виртуальные машины|
 |---|---|---|---|---|---|---|
-| Приложения<br>Spring Boot (JAR) | [Руководство][5] | Руководство<br>Планируется | Руководство<br>Планируется | [Руководство][14]      | Руководство<br>Планируется |
-| Spring Cloud<br>(микрослужбы)   | Недоступно           | Недоступно                 | [Руководство][15]      | Руководство<br>Планируется | Руководство<br>Планируется |
-| Веб-приложения<br>в Tomcat     | Недоступно           | [Руководство][2]       | Недоступно                 | [Руководство][3]       | Руководство<br>Планируется |
+| Приложения<br>Spring Boot (JAR) | [Руководство][5] | Руководство<br>Планируется | [Руководство][16] | [Руководство][14]      | Руководство<br>Планируется |
+| Spring Cloud<br>(микрослужбы)   | Недоступно           | Недоступно                 | [Руководство][15] | Руководство<br>Планируется | Руководство<br>Планируется |
+| Веб-приложения<br>в Tomcat     | Недоступно           | [Руководство][2]       | Недоступно            | [Руководство][3]       | Руководство<br>Планируется |
 
 **Приложения Java EE**
 
@@ -171,3 +171,4 @@ ms.locfileid: "84202833"
 [13]: https://azure.microsoft.com/global-infrastructure/services/?products=virtual-machines
 [14]: migrate-spring-boot-to-azure-kubernetes-service.md
 [15]: migrate-spring-cloud-to-azure-spring-cloud.md
+[16]: migrate-spring-boot-to-azure-spring-cloud.md

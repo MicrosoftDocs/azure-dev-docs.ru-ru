@@ -7,110 +7,28 @@ ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 154997506c15b84c7e0110fa2e45645bfd1585a2
-ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
+ms.openlocfilehash: bd3208cc68b863afe2ce39e83d62d358a4baea96
+ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631666"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85370735"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Использование R2DBC Spring Data с Базой данных Azure для PostgreSQL
 
-В этом разделе показано, как создать пример приложения для хранения информации в [Базе данных Azure для PostgreSQL](https://docs.microsoft.com/azure/postgresql/) и ее извлечения с помощью [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc), используя реализацию R2DBC для PostgreSQL из [репозитория GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
+В этой статье описано создание примера приложения, которое использует [R2DBC Spring Data](https://spring.io/projects/spring-data-r2dbc) для сохранения данных в [Базе данных Azure для PostgreSQL](/azure/postgresql/) и их извлечения из нее. В этом примере будет использоваться реализация R2DBC для PostgreSQL из репозитория [r2dbc-postgresql](https://github.com/pgjdbc/r2dbc-postgresql) в GitHub.
 
 [R2DBC](https://r2dbc.io/) приносит реактивные API к традиционным реляционным базам данных. Вы можете применять это решение со Spring WebFlux для создания полностью реактивных приложений Spring Boot, которые используют неблокирующие API. Оно обеспечивает улучшенную масштабируемость по сравнению с классическим подходом "один поток на подключение".
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
-## <a name="prepare-the-working-environment"></a>Подготовка среды выполнения
-
-Сначала настройте некоторые переменные среды с помощью следующих команд:
-
-```bash
-AZ_RESOURCE_GROUP=r2dbc-workshop
-AZ_DATABASE_NAME=<YOUR_DATABASE_NAME>
-AZ_LOCATION=<YOUR_AZURE_REGION>
-AZ_POSTGRESQL_USERNAME=spring
-AZ_POSTGRESQL_PASSWORD=<YOUR_POSTGRESQL_PASSWORD>
-AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
-```
-
-Замените заполнители следующими значениями, которые используются в этой статье:
-
-- `<YOUR_DATABASE_NAME>`: Имя сервера PostgreSQL. Оно должно быть уникальным в Azure.
-- `<YOUR_AZURE_REGION>`: регион Azure, который вы будете использовать. Вы можете использовать `eastus` по умолчанию, но мы рекомендуем настроить регион, расположенный близко к месту проживания. Полный список доступных регионов можно получить, введя `az account list-locations`.
-- `<YOUR_POSTGRESQL_PASSWORD>`: Пароль для сервера базы данных PostgreSQL. Такой пароль должен содержать не менее восьми символов и включать знаки всех следующих типов: прописные латинские буквы, строчные латинские буквы, цифры (0–9) и небуквенно-цифровые знаки (!, $, #, % и т. д.).
-- `<YOUR_LOCAL_IP_ADDRESS>`: IP-адрес локального компьютера, с которого будет запускаться приложение Spring Boot. Одним из удобных способов его поиска является ввод в обозревателе адреса [whatismyip.akamai.com](http://whatismyip.akamai.com/).
-
-Затем создайте группу ресурсов:
-
-```azurecli
-az group create \
-    --name $AZ_RESOURCE_GROUP \
-    --location $AZ_LOCATION \
-    | jq
-```
-
-> [!NOTE]
-> Чтобы отобразить данные JSON и сделать их более удобными для чтения, мы используем служебную программу `jq`, которая по умолчанию устанавливается в [Azure Cloud Shell](https://shell.azure.com/).
-> Если вам не нравится эта служебная программа, вы можете безопасно удалить `| jq` часть всех команд, которые мы будем использовать.
-
-## <a name="create-an-azure-database-for-postgresql-instance"></a>Создание экземпляра Базы данных Azure для PostgreSQL
-
-Прежде всего мы создадим управляемый сервер PostgreSQL.
-
-> [!NOTE]
-> См. сведения о [создании сервера Базы данных Azure для PostgreSQL с помощью портала Azure](/azure/postgresql/quickstart-create-server-database-portal).
-
-Выполните следующий скрипт в [Azure Cloud Shell](https://shell.azure.com/):
-
-```azurecli
-az postgres server create \
-    --resource-group $AZ_RESOURCE_GROUP \
-    --name $AZ_DATABASE_NAME \
-    --location $AZ_LOCATION \
-    --sku-name B_Gen5_1 \
-    --storage-size 5120 \
-    --admin-user $AZ_POSTGRESQL_USERNAME \
-    --admin-password $AZ_POSTGRESQL_PASSWORD \
-    | jq
-```
-
-Эта команда создает небольшой сервер PostgreSQL.
-
-### <a name="configure-a-firewall-rule-for-your-postgresql-server"></a>Настройка правила брандмауэра для сервера PostgreSQL
-
-Экземпляры Базы данных Azure для PostgreSQL по умолчанию защищены. В них включен брандмауэр, который блокирует все входящие подключения. Чтобы вы могли использовать нашу базу данных, добавьте правило брандмауэра, которое разрешит локальному IP-адресу обращаться к серверу базы данных.
-
-Так как вы настроили локальный IP-адрес ранее, вы можете открыть брандмауэр сервера, выполнив следующую команду:
-
-```azurecli
-az postgres server firewall-rule create \
-    --resource-group $AZ_RESOURCE_GROUP \
-    --name $AZ_DATABASE_NAME-database-allow-local-ip \
-    --server $AZ_DATABASE_NAME \
-    --start-ip-address $AZ_LOCAL_IP_ADDRESS \
-    --end-ip-address $AZ_LOCAL_IP_ADDRESS \
-    | jq
-```
-
-### <a name="configure-a-postgresql-database"></a>Настройка базы данных PostgreSQL
-
-Созданный вами ранее сервер PostgreSQL пуст. На нем отсутствует база данных, которую можно использовать с приложением Spring Boot. Создайте новую базу данных с именем `demo`:
-
-```azurecli
-az postgres db create \
-    --resource-group $AZ_RESOURCE_GROUP \
-    --name demo \
-    --server-name $AZ_DATABASE_NAME \
-    | jq
-```
+[!INCLUDE [spring-data-postgresql-setup.md](includes/spring-data-postgresql-setup.md)]
 
 [!INCLUDE [spring-data-create-reactive.md](includes/spring-data-create-reactive.md)]
 
 ### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
 
-Создайте приложение, введя в командной строке следующую команду:
+Создайте приложение в командной строке с помощью следующей команды:
 
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
@@ -118,9 +36,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d b
 
 ### <a name="add-the-reactive-postgresql-driver-implementation"></a>Добавление реализации реактивного драйвера PostgreSQL
 
-Откройте файл *pom.xml* созданного проекта, чтобы добавить реактивный драйвер PostgreSQL из [репозитория GitHub r2dbc-postgresql](https://github.com/r2dbc/r2dbc-postgresql).
-
-После зависимости `spring-boot-starter-webflux` добавьте следующий фрагмент кода:
+Откройте файл *pom.xml* созданного проекта и добавьте реактивный драйвер PostgreSQL из [репозитория r2dbc-postgresql на GitHub](https://github.com/pgjdbc/r2dbc-postgresql). После зависимости `spring-boot-starter-webflux` добавьте следующий текст:
 
 ```xml
 <dependency>
@@ -132,7 +48,7 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d b
 
 ### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Настройка Spring Boot для использования Базы данных Azure для PostgreSQL
 
-Откройте файл *src/main/resources/application.properties* и добавьте следующее:
+Откройте файл *src/main/resources/application.properties* и добавьте следующий текст:
 
 ```properties
 logging.level.org.springframework.data.r2dbc=DEBUG
@@ -146,13 +62,12 @@ spring.r2dbc.properties.sslMode=REQUIRE
 > [!WARNING]
 > Из соображений безопасности для Базы данных Azure для PostgreSQL требуется использовать SSL-соединения. Поэтому вам нужно добавить свойство конфигурации `spring.r2dbc.properties.sslMode=REQUIRE`. В противном случае драйвер R2DBC PostgreSQL будет использовать небезопасное подключение, что приведет к сбою.
 
-- Замените две переменные `$AZ_DATABASE_NAME` значением, которое вы настроили ранее.
-- Замените переменную `$AZ_POSTGRESQL_PASSWORD` значением, которое вы настроили ранее.
+Замените две переменные `$AZ_DATABASE_NAME` и переменную `$AZ_POSTGRESQL_PASSWORD` значениями, которые вы настроили в начале работы с этой статьей.
 
 > [!NOTE]
 > Для лучшей производительности в качестве значения свойства `spring.r2dbc.url` указан пул подключений, как описано в репозитории [r2dbc-pool](https://github.com/r2dbc/r2dbc-pool).
 
-Теперь вы можете запустить приложение с помощью предоставленной оболочки Maven:
+Теперь вы можете запустить приложение с помощью предоставленной программы-оболочки Maven:
 
 ```bash
 ./mvnw spring-boot:run
@@ -171,7 +86,7 @@ DROP TABLE IF EXISTS todo;
 CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARCHAR(4096), done BOOLEAN);
 ```
 
-Остановите приложение и запустите его снова. Теперь приложение будет использовать созданную ранее базу данных `demo` и создаст в ней таблицу `todo`.
+Остановите приложение и запустите его снова с помощью следующей команды. Теперь приложение будет использовать созданную ранее базу данных `demo` и создаст в ней таблицу `todo`.
 
 ```bash
 ./mvnw spring-boot:run

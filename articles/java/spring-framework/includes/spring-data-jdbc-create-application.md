@@ -2,14 +2,14 @@
 author: judubois
 ms.date: 05/06/2020
 ms.author: judubois
-ms.openlocfilehash: a1ba753cb0c5c3b9c07f9597df71bc7e53394eae
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.openlocfilehash: 012043df3cf07de098d1a7f3a6715374814d1d9b
+ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369977"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507723"
 ---
-Теперь создайте новый класс Java `Todo` рядом с классом `DemoApplication`:
+Создайте новый класс Java `Todo` рядом с классом `DemoApplication` и добавьте следующий код:
 
 ```java
 package com.example.demo;
@@ -116,7 +116,7 @@ public class TodoController {
 }
 ```
 
-Наконец, остановите приложение и запустите его снова:
+Остановите приложение и запустите его снова с помощью следующей команды:
 
 ```bash
 ./mvnw spring-boot:run
@@ -126,13 +126,13 @@ public class TodoController {
 
 Чтобы протестировать приложение, можно использовать cURL.
 
-Сначала создайте новый элемент "todo" в базе данных:
+Сначала создайте новый элемент todo в базе данных с помощью следующей команды:
 
 ```bash
-curl  --header "Content-Type: application/json" \
-          --request POST \
-          --data '{"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done": "true"}' \
-          http://127.0.0.1:8080
+curl --header "Content-Type: application/json" \
+    --request POST \
+    --data '{"description":"configuration","details":"congratulations, you have set up JDBC correctly!","done": "true"}' \
+    http://127.0.0.1:8080
 ```
 
 Эта команда должна возвращать созданный элемент:

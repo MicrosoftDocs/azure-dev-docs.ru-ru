@@ -1,207 +1,80 @@
 ---
-title: Как использовать JPA Spring Data с Базой данных SQL Azure
-description: Узнайте, как использовать JPA Spring Data с базой данных SQL Azure.
-services: sql-database
+title: Использование JPA Spring Data с Базой данных SQL Azure
+description: Сведения о том, как использовать JPA Spring Data с базой данных SQL Azure.
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 06/19/2020
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
+ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 1694a342089e5bcb6cfd669ef723292fe48b3b55
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 933a8140ba3e9c71a5beeb0ff36b16c4937117a1
+ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81668470"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85133663"
 ---
-# <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Как использовать JPA Spring Data с Базой данных SQL Azure
+# <a name="use-spring-data-jpa-with-azure-sql-database"></a>Использование JPA Spring Data с Базой данных SQL Azure
 
-## <a name="overview"></a>Обзор
+В этой статье описано создание примера приложения, которое использует [JPA Spring Data](https://spring.io/projects/spring-data-jpa) для сохранения и извлечения информации в [Базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/).
 
-В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации в [базу данных SQL Azure](https://azure.microsoft.com/services/sql-database/) с помощью [Java Persistence API (JPA)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm).
+[Java Persistence API (JPA)](https://en.wikipedia.org/wiki/Java_Persistence_API) — это стандартный API Java для объектно-реляционного сопоставления.
 
-## <a name="prerequisites"></a>Предварительные требования
+[!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
-Чтобы выполнить действия, описанные в этой статье, необходимо следующее:
+[!INCLUDE [spring-data-sql-server-setup.md](includes/spring-data-sql-server-setup.md)]
 
-* Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
-* Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
-* [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
-* [Curl](https://curl.haxx.se/) или подобная служебная HTTP-программа, с помощью которой можно протестировать функциональные возможности.
-* Клиент [Git](https://git-scm.com/downloads).
+### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
 
-## <a name="create-an-azure-sql-database"></a>Создание базы данных SQL Azure
+Создайте приложение, введя в командной строке следующую команду:
 
-### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Создание сервера базы данных SQL с помощью портала Azure
+```bash
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,sqlserver -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+```
 
-> [!NOTE]
-> 
-> Дополнительные сведения см. в статье о [создании базы данных Azure SQL с помощью портала Azure](/azure/sql-database/sql-database-get-started-portal).
+### <a name="configure-spring-boot-to-use-azure-sql-database"></a>Настройка Spring Boot для использования Базы данных SQL Azure
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Откройте файл *src/main/resources/application.properties* и добавьте следующее содержимое. Обязательно замените две переменные `$AZ_DATABASE_NAME` и переменную `$AZ_SQL_SERVER_PASSWORD` значениями, которые вы настроили в начале работы с этой статьей.
 
-1. Щелкните элемент **+Create a resource** (+Создать ресурс), **Базы данных**, а затем выберите **База данных SQL**.
+```properties
+logging.level.org.hibernate.SQL=DEBUG
+spring.datasource.url=jdbc:sqlserver://$AZ_DATABASE_NAME.database.windows.net:1433;database=demo;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+spring.datasource.username=spring@$AZ_DATABASE_NAME
+spring.datasource.password=$AZ_SQL_SERVER_PASSWORD
 
-   ![Создание базы данных SQL][SQL01]
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create-drop
+```
 
-1. Укажите следующие сведения:
+> [!WARNING]
+> Свойство конфигурации `spring.jpa.hibernate.ddl-auto=create-drop` означает, что Spring Boot будет автоматически создавать схему данных при запуске приложения и попытается удалить ее после завершения работы приложения. Это очень удобно для тестирования, но не используйте его в производственной среде!
 
-   - **Имя базы данных**. Выберите уникальное имя Базы данных SQL. Позже оно будет использоваться при создании сервера SQL.
-   - **Подписка**: Укажите подписку Azure, которую нужно использовать.
-   - **Группа ресурсов.** Укажите, следует ли создать группу ресурсов, или выберите имеющуюся группу ресурсов.
-   - **Выберите источник**. В рамках данного руководства выберите `Blank database`, чтобы создать базу данных.
+Теперь вы можете запустить приложение с помощью предоставленной оболочки Maven:
 
-   ![Укажите свойства Базы данных SQL][SQL02]
-   
-1. Щелкните **Сервер**, после этого выберите **Создать сервер**, а затем укажите следующие сведения:
+```bash
+./mvnw spring-boot:run
+```
 
-   - **Имя сервера**: Для сервера SQL выберите уникальное имя. Это имя будет использоваться для создания полного доменного имени, например *wingtiptoyssql.database.windows.net*.
-   - **Имя для входа администратора сервера**. Укажите имя администратора базы данных.
-   - **Пароль** и **Подтверждение пароля**. Укажите пароль администратора базы данных.
-   - **Расположение.** Укажите ближайший географический регион для базы данных.
+Ниже приведен снимок экрана приложения, выполняемого в первый раз:
 
-1. После ввода всех этих данных нажмите кнопку **OK**.
+[![Выполняющееся приложение](media/configure-spring-data-jpa-with-azure-sql-server/create-sql-server-01.png)](media/configure-spring-data-jpa-with-azure-sql-server/create-sql-server-01.png#lightbox)
 
-1. Щелкните **Проверка и создание**.
+## <a name="code-the-application"></a>Добавление кода приложения
 
-### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Настройка правила брандмауэра для SQL-сервера с помощью портала Azure
+Затем добавьте код Java, который будет использовать JPA для хранения данных в Базе данных SQL Azure и их извлечения из нее.
 
-После создания базы данных и сервера SQL вы можете настроить параметры безопасности.
+[!INCLUDE [spring-data-jpa-create-application.md](includes/spring-data-jpa-create-application.md)]
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
+Ниже приведен снимок экрана с этими запросами cURL:
 
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданный SQL сервер.
+[![Тестирование с помощью cURL](media/configure-spring-data-jpa-with-azure-sql-server/create-sql-server-02.png)](media/configure-spring-data-jpa-with-azure-sql-server/create-sql-server-02.png#lightbox)
 
-1. В разделе **Обзор** щелкните **Показать параметры брандмауэра**
+Поздравляем! Вы создали приложение Spring Boot, которое использует JPA для сохранения данных в Базе данных SQL Azure и их извлечения из нее.
 
-   ![Показать параметры брандмауэра][SQL06]
-
-1. В разделе **Брандмауэры и виртуальные сети** создайте правило, указав для него уникальное имя, а затем введите диапазон IP-адресов, которым потребуется доступ к базе данных, и нажмите кнопку **Сохранить**. (В этом упражнении мы используем IP-адрес компьютера разработки, который является клиентом.  Его можно использовать в качестве **начального** и **конечного** IP-адресов.
-
-   ![Настройка параметров брандмауэра][SQL07]
-
-### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Получение строки подключения для SQL-сервера на портале Azure
-
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
-
-1. Нажмите кнопку **Все ресурсы**, а затем щелкните только что созданную Базу данных SQL.
-
-1. Щелкните **Строки подключения**.
-
-
-   ![Выбор Базы данных SQL][SQL08]
-
-1. Затем щелкните**JDBC** и скопируйте значение в текстовое поле JDBC.
-
-   ![Получение строки подключения JDBC][SQL09]
-
-## <a name="configure-the-sample-application"></a>Настройка примера приложения
-
-1. Откройте командную строку и клонируйте пример проекта с помощью команды Git, как в следующем примере:
-
-   ```shell
-   git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
-   ```
-
-1. Найдите файл *application.properties* в каталоге *resources* примера приложения или создайте его, если он еще не существует.
-
-1. Откройте файл *application.properties* в текстовом редакторе, добавьте или настройте указанные ниже строки в файл и замените примеры значений на соответствующие полученные ранее значения:
-
-   ```yaml
-   spring.datasource.url=jdbc:sqlserver://wingtiptoyssql.database.windows.net:1433;database=wingtiptoys;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-   spring.datasource.username=wingtiptoysuser@wingtiptoyssql
-   spring.datasource.password=********
-    ```
-   Где:
-
-   | Параметр | Описание |
-   |---|---|
-   | `spring.datasource.url` | Указывается измененная версия строки SQL JDBC, описанная ранее в этой статье. |
-   | `spring.datasource.username` | Указывается администратор SQL, описанный ранее в этой статье вместе с сокращенным именем сервера. |
-   | `spring.datasource.password` | Указывается пароль администратора SQL, описанный ранее в этой статье. |
-
-1. Сохраните и закройте файл *application.properties*.
-
-> [!NOTE]
-> Первое свойство файла *application.properties* — `spring.jpa.hibernate.ddl-auto=create`. Это есть свойство гибернации, которое автоматически удаляет и повторно создает схему базы данных при запуске приложения.
-> Эта конфигурация полезна во время разработки и тестирования, но ее не следует использовать в рабочей среде.
-
-## <a name="package-and-test-the-sample-application"></a>Упаковывание и тестирование примера приложения
-
-1. Создайте пример приложения с помощью Maven, например:
-
-   ```shell
-   mvn clean package -P sql
-   ```
-
-1. Запустите пример приложения, например:
-
-   ```shell
-   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
-   ```
-
-1. Из командной строки создайте записи с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-
-   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
-   ```
-
-   Приложение должно возвращать значения следующим образом:
-
-   ```shell
-   Added Pet(id=1, name=dog, species=canine).
-
-   Added Pet(id=2, name=cat, species=feline).
-   ```
-
-1. Получите все имеющиеся записи из командной строки с помощью `curl`, как в следующем примере:
-
-   ```shell
-   curl -s http://localhost:8080/pets
-   ```
-    
-   Приложение должно возвращать значения следующим образом:
-
-   ```json
-   [{"id":1,"name":"dog","species":"canine"},{"id":2,"name":"cat","species":"feline"}]
-   ```
-
-## <a name="summary"></a>Сводка
-
-С помощью этого руководства вы создали пример приложения Java, использующий Spring Data для хранения и извлечения информации в базе данных SQL Azure с помощью JPA.
-
-## <a name="next-steps"></a>Дальнейшие действия
-
-Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
-
-> [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+[!INCLUDE [spring-data-conclusion.md](includes/spring-data-conclusion.md)]
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
-Дополнительные сведения об использовании Java в Azure см. в статьях [Azure для разработчиков Java] и [Working with Azure DevOps and Java] (Работа с Azure DevOps и Java).
+Дополнительные сведения о JPA для Spring Data см. в [справочной документации по Spring](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference).
 
-<!-- URL List -->
-
-[Azure для разработчиков Java]: /azure/developer/java/
-[бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
-[Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring Data]: https://spring.io/projects/spring-data
-[Spring Initializr]: https://start.spring.io/
-[Spring Framework]: https://spring.io/
-
-<!-- IMG List -->
-
-[SQL01]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-01.png
-[SQL02]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-02.png
-[SQL03]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-03.png
-[SQL04]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-04.png
-[SQL05]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-05.png
-[SQL06]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-06.png
-[SQL07]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-07.png
-[SQL08]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-08.png
-[SQL09]: media/configure-spring-data-jpa-with-azure-sql-server/create-azure-sql-09.png
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).

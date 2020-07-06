@@ -3,15 +3,15 @@ title: Учебник. Создание виртуальной машины Linu
 description: Узнайте, как использовать Terraform для создания готовой среды виртуальных машин Linux в Azure и управления ею.
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
 ms.topic: tutorial
-ms.date: 05/31/2020
-ms.openlocfilehash: 40dfe97d2311e251e23468b5d7a6eede778d7b8e
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.date: 06/14/2020
+ms.openlocfilehash: 97b4381c45e67458e01093d735f9b32e97584149
+ms.sourcegitcommit: 2d6c9687b39e33a6b5e980d9a375c9f8f1f2cab7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329442"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779656"
 ---
-# <a name="tutorial--create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Учебник. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
+# <a name="tutorial-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Руководство по Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
 Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](getting-started-cloud-shell.md).
 
@@ -463,10 +463,10 @@ Plan: 7 to add, 0 to change, 0 to destroy.
 terraform apply
 ```
 
-После завершения действий в Terraform инфраструктура виртуальной машины будет готова. Получите общедоступный IP-адрес виртуальной машины с помощью команды [az vm show](/cli/azure/vm).
+После завершения действий в Terraform инфраструктура виртуальной машины будет готова. Получите общедоступный IP-адрес виртуальной машины с помощью команды [az vm show](/cli/azure/vm#az-vm-show).
 
 ```azurecli-interactive
-az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] --o tsv
+az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] -o tsv
 ```
 
 После этого можно подключиться по SSH к виртуальной машине:

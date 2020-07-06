@@ -3,12 +3,12 @@ title: Разработка в облаке с помощью Azure. Что та
 description: Общие сведения о разработке облачных приложений на платформе Microsoft Azure, в частности о том, как связаны между собой центры обработки данных, службы и ресурсы.
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 815da765aaed1e8364c37f621f17f279212bf77f
-ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
+ms.openlocfilehash: 25b3e45dbc885dea4dd75a60ea0b7866f28e1710
+ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404957"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85370715"
 ---
 # <a name="cloud-development-on-azure"></a>Разработка в облаке на платформе Azure
 

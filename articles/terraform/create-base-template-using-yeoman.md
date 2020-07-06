@@ -2,13 +2,13 @@
 title: Учебник. Создание базового шаблона Terraform в Azure с использованием Yeoman
 description: Здесь вы узнаете, как создать базовый шаблон Terraform в Azure с использованием Yeoman.
 ms.topic: tutorial
-ms.date: 04/25/2020
-ms.openlocfilehash: 1c60af3f4ebdac75dc5c4c56b76ee271002f29d6
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.date: 05/25/2020
+ms.openlocfilehash: 3278b1abb16275eb325964a3e0d78a2d61230dd4
+ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329952"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85418222"
 ---
 # <a name="tutorial-create-a-terraform-base-template-in-azure-using-yeoman"></a>Руководство по Создание базового шаблона Terraform в Azure с использованием Yeoman
 
@@ -282,7 +282,7 @@ yo --version
 
     ![Сборка с помощью Rake](media/create-a-base-template-using-yeoman/ymg-rake-build.png)
 
-1. Запустите текст с помощью следующей команды:
+1. Запустите тест с помощью следующей команды:
 
     ```bash
     rake e2e
