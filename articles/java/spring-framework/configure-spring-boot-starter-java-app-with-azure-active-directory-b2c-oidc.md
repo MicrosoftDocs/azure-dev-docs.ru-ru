@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 4a6463df852511ab37af772598f9ae525d8a02e9
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.openlocfilehash: dfd5dc1e81a5d25f1bb08f373bafae7e3c2fe61e
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069420"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018633"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -231,7 +231,7 @@ ms.locfileid: "85069420"
     >         password-reset: # optional
     > ```
     >
-    > Файл *application.yml* доступен в [примере Azure Active Directory B2C для Spring Boot](https://github.com/microsoft/azure-spring-boot/blob/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/application.yml) на сайте GitHub.
+    > Файл *application.yml* доступен в [примере Azure Active Directory B2C для Spring Boot](https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-b2c-oidc/src/main/resources/application.yml) на сайте GitHub.
 
 7. Сохраните и закройте файл *application.yml*.
 
@@ -323,7 +323,7 @@ ms.locfileid: "85069420"
     }
     ```
 
-14. Скопируйте файлы *greeting.html* и *home.html* из [примера Azure AD B2C для Spring Boot](https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-b2c-oidc-spring-boot-sample/src/main/resources/templates) в папку *src/main/resources/templates*. Затем замените `${your-profile-edit-user-flow}` и `${your-password-reset-user-flow}` именами созданных ранее потоков пользователей.
+14. Скопируйте файлы *greeting.html* и *home.html* из [примера Azure AD B2C для Spring Boot](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-b2c-oidc/src/main/resources/templates) в папку *src/main/resources/templates*. Затем замените `${your-profile-edit-user-flow}` и `${your-password-reset-user-flow}` именами созданных ранее потоков пользователей.
 
 ## <a name="build-and-test-your-app"></a>Создание и тестирование приложения
 
