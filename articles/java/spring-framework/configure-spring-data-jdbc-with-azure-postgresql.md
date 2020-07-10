@@ -7,12 +7,12 @@ ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 91bcd54783e82ca598b4b64da261338ceae6b463
-ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
+ms.openlocfilehash: 91cb38146b123f8d05eb9ca89b88af9e776f74f6
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507756"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018520"
 ---
 # <a name="use-spring-data-jdbc-with-azure-database-for-postgresql"></a>Использование JDBC Spring Data с Базой данных Azure для PostgreSQL
 
@@ -22,6 +22,10 @@ ms.locfileid: "84507756"
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
+## <a name="sample-application"></a>Пример приложения
+
+В этой статье показано, как создать пример приложения. Если вы хотите ускорить работу, готовое приложение доступно здесь: [https://github.com/Azure-Samples/quickstart-spring-data-jdbc-postgresql](https://github.com/Azure-Samples/quickstart-spring-data-jdbc-postgresql).
+
 [!INCLUDE [spring-data-postgresql-setup.md](includes/spring-data-postgresql-setup.md)]
 
 ### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
@@ -29,7 +33,7 @@ ms.locfileid: "84507756"
 Создайте приложение в командной строке с помощью следующей команды:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,postgresql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,postgresql -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Настройка Spring Boot для использования Базы данных Azure для PostgreSQL

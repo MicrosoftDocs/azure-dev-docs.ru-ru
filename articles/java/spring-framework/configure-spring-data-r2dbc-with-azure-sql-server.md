@@ -7,12 +7,12 @@ ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: fbde7d54010bc68bf89ea757f08432a46e8f6fbb
-ms.sourcegitcommit: 81577378a4c570ced1e9c6765f4a9eee8453c889
+ms.openlocfilehash: 64316322d509d588f94185452d5c21fdee6e9ef1
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507771"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018652"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-sql-database"></a>Использование R2DBC Spring Data с Базой данных SQL Azure
 
@@ -21,6 +21,10 @@ ms.locfileid: "84507771"
 [R2DBC](https://r2dbc.io/) приносит реактивные API к традиционным реляционным базам данных. Вы можете применять это решение со Spring WebFlux для создания полностью реактивных приложений Spring Boot, которые используют неблокирующие API. Оно обеспечивает улучшенную масштабируемость по сравнению с классическим подходом "один поток на подключение".
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
+
+## <a name="sample-application"></a>Пример приложения
+
+В этой статье показано, как создать пример приложения. Если вы хотите ускорить работу, готовое приложение доступно здесь: [https://github.com/Azure-Samples/quickstart-spring-data-r2dbc-sql-server](https://github.com/Azure-Samples/quickstart-spring-data-r2dbc-sql-server).
 
 [!INCLUDE [spring-data-sql-server-setup.md](includes/spring-data-sql-server-setup.md)]
 
@@ -31,7 +35,7 @@ ms.locfileid: "84507771"
 Создайте приложение в командной строке с помощью следующей команды:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="add-the-reactive-azure-sql-database-driver-implementation"></a>Добавление реализации реактивного драйвера Базы данных SQL Azure

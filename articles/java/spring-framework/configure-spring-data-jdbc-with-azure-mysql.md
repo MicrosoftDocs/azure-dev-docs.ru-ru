@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: de4a913e7cd4e96c8223ddd005a9d3014780d0fe
-ms.sourcegitcommit: fbbc341a0b9e17da305bd877027b779f5b0694cc
+ms.openlocfilehash: 22c8cb54921121cf1afeb45c1ae99eb53cfcfed9
+ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83631629"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86018547"
 ---
 # <a name="use-spring-data-jdbc-with-azure-database-for-mysql"></a>Использование JDBC Spring Data с Базой данных Azure для MySQL
 
@@ -22,6 +22,10 @@ ms.locfileid: "83631629"
 
 [!INCLUDE [spring-data-prerequisites.md](includes/spring-data-prerequisites.md)]
 
+## <a name="sample-application"></a>Пример приложения
+
+В этой статье показано, как создать пример приложения. Если вы хотите ускорить работу, готовое приложение доступно здесь: [https://github.com/Azure-Samples/quickstart-spring-data-jdbc-mysql](https://github.com/Azure-Samples/quickstart-spring-data-jdbc-mysql).
+
 [!INCLUDE [spring-data-mysql-setup.md](includes/spring-data-mysql-setup.md)]
 
 ### <a name="generate-the-application-by-using-spring-initializr"></a>Создание приложения с помощью Spring Initializr
@@ -29,7 +33,7 @@ ms.locfileid: "83631629"
 Создайте приложение, введя в командной строке следующую команду:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.0.RELEASE -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jdbc,mysql -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="configure-spring-boot-to-use-azure-database-for-mysql"></a>Настройка Spring Boot для использования Базы данных Azure для MySQL
