@@ -1,19 +1,21 @@
 ### YamlMime:Landing
-title: Документация по миграции из Java в Azure
+title: Документация по создании стратегии миграции приложений Java в Azure
 summary: Рекомендуемые стратегии миграции приложений Java в Azure.
 metadata:
   title: Документация с рекомендациями по миграции из Java в Azure
-  description: Рекомендуемые стратегии миграции приложений Java в Azure
+  description: Ознакомьтесь с рекомендуемыми стратегиями миграции для приложений Java. Упростите перенос приложений Java, Tomcat, WildFly, WebSphere, JBoss и WebLogic в Azure.
+  keywords: migration strategies, migration strategy, java migration
   author: KarlErickson
   ms.author: karler
   ms.date: 04/03/2020
   ms.topic: landing-page
-  ms.openlocfilehash: abd14e250416b5718537e1ca14b4ffdd8f3f3b5e
-  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+  ms.custom: azure-migrate-seo
+  ms.openlocfilehash: 875ee9ed26bd865f8074752be92aeefed3cae0e3
+  ms.sourcegitcommit: 513381434d3538f4397a6c1d40c94e002af6ffa9
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/08/2020
-  ms.locfileid: "82988938"
+  ms.lasthandoff: 07/09/2020
+  ms.locfileid: "86195445"
 landingContent:
 - title: Перенос приложений Java в Azure
   linkLists:
