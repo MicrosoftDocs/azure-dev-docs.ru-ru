@@ -6,12 +6,13 @@ documentationcenter: java
 ms.date: 12/19/2018
 ms.service: event-hubs
 ms.topic: article
-ms.openlocfilehash: 1141c54e613003f6fcc9396b11528765eaf3f8ad
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 3a57a0bd684946a90675206be4b0e7908c51ec79
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669600"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379148"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
 
