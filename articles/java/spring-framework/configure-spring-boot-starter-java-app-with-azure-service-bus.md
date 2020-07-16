@@ -6,12 +6,13 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: d997b679d1a608351748b67f99977d48d95febe2
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: efccf07733cb4ae509753f5e384453a46e2bf678
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81674300"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379218"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Использование Spring Boot Starter для служебных шин Azure JMS
 

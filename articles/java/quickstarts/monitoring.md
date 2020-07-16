@@ -3,12 +3,13 @@ title: Краткие руководства по мониторингу для 
 description: Список материалов по началу работы в документации Azure, касающейся мониторинга для приложений Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: a078d3b73642bc30d97941add0a301de6097c2eb
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 03aa2e93684ec17a12d2f4f4a6e19e0b9a69edd3
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82209837"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379588"
 ---
 # <a name="monitoring-for-java-apps-on-azure"></a>Мониторинг для приложений Java в Azure
 

@@ -3,12 +3,13 @@ title: Краткие руководства по кэшированию для 
 description: Список материалов по началу работы в документации Azure, касающейся кэширования для приложений Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: b7c3e1bef7e7a4427743eb8d95108c657adfe7ca
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 35a36123ec264da7a509d82075f6ecd752652f8a
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673750"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379668"
 ---
 # <a name="caching-for-java-apps-on-azure"></a>Кэширование для приложений Java в Azure
 

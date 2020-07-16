@@ -7,12 +7,13 @@ ms.date: 11/13/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 3ea18b6645320d9a9c916868d409dfee8c38df93
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 9c15441396a0475c97c3d5362f30ee19a62af648
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672550"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379908"
 ---
 # <a name="whats-new-in-the-azure-toolkit-for-eclipse"></a>Новые возможности набора средств Azure для Eclipse
 

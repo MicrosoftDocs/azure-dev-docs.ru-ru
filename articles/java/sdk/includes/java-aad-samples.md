@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 7efca5bce2ffeaaa9930bb91d0787b8643391f4a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: d19bb343e8db9e80f3919264944b9d526e698f0f
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81671900"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86407951"
 ---
-|  |  |
+| Образец  | Описание |
 |---------|---------|
 | [Интеграция Azure AD в веб-приложения Java][1] | Настраивайте проверку подлинности OAuth2 в веб-приложениях Java.
 | [Вызов API Graph Azure AD в веб-приложении][2] | Получайте данные каталога и выполняйте запросы из API Graph Azure AD |

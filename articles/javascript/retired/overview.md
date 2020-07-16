@@ -3,16 +3,16 @@ title: Модули Azure для JavaScript
 description: Обзор модулей служб и управления Azure для JavaScript
 ms.date: 06/17/2017
 ms.topic: article
-ms.openlocfilehash: 193e2d3c92a9c2b8e3970e7a130246947a7cc4da
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.openlocfilehash: 2d01dcc2095bc91fb9695c0299b603b86c4719f0
+ms.sourcegitcommit: a7f2019727a954836b803493807664d4e4574ee3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792564"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86286451"
 ---
 # <a name="azure-modules-for-javascript"></a>Модули Azure для JavaScript
 
-Управляйте ресурсами Azure и подключайтесь к службам из приложений JavaScript с помощью модулей Azure для JavaScript. Код доступен в виде модулей npm](/api/?view=azure-node-latest.md) для использования в проектах.
+Управляйте ресурсами Azure и подключайтесь к службам из приложений JavaScript с помощью модулей Azure для JavaScript. Код доступен в виде [модулей npm](https://docs.microsoft.com/javascript/api/overview/azure/sql?view=azure-node-latest) для использования в проектах.
 
 ## <a name="manage-azure-resources"></a>Управление ресурсами Azure
 
@@ -75,7 +75,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 });
 ```
 
-Полный список модулей см. в [инструкциях по установке](/api/?view=azure-node-latest). Инструкции по настройке аутентификации, выполнению примера кода, а также созданию и обновлению ресурсов в подписке Azure см. в [статье по началу работы](../index.yml).
+Полный список модулей см. в [инструкциях по установке](https://docs.microsoft.com/javascript/api/overview/azure/sql?view=azure-node-latest). Инструкции по настройке аутентификации, выполнению примера кода, а также созданию и обновлению ресурсов в подписке Azure см. в [статье по началу работы](../index.yml).
 
 ## <a name="connect-to-azure-services"></a>Подключение к службам Azure
 

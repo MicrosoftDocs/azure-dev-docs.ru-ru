@@ -6,12 +6,13 @@ ms.date: 12/19/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 48e1381761311a4ed9b5bd6f764af6f19f008fc1
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 7bfd7edbdabd2298c84b3480292949e1fb351913
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670020"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86378438"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Начальные приложения Spring Boot для Azure
 
@@ -44,7 +45,7 @@ ms.locfileid: "81670020"
 
 Примеры использования разных функций Azure с этим начальным приложением, см. по следующей ссылке:
 
-* <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples>
+* <https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples>
 
 Когда вы добавляете это начальное приложение в проект Spring Boot, в файл *pom.xml* вносятся следующие изменения:
 
@@ -89,7 +90,7 @@ ms.locfileid: "81670020"
 
 Примеры использования функций Azure Active Directory с этим начальным приложением, см. по следующей ссылке:
 
-* <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-sample>
+* <https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory>
 
 Когда вы добавляете это начальное приложение в проект Spring Boot, в файл *pom.xml* вносятся следующие изменения:
 
@@ -134,7 +135,7 @@ ms.locfileid: "81670020"
 
 Примеры использования функций Azure Key Vault, предоставляемых этим начальным приложением, см. по следующей ссылке:
 
-* <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-keyvault-secrets-spring-boot-sample>
+* <https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-keyvault-secrets>
 
 Когда вы добавляете это начальное приложение в проект Spring Boot, в файл *pom.xml* вносятся следующие изменения:
 
@@ -180,8 +181,7 @@ ms.locfileid: "81670020"
 Примеры использования функций службы хранилища Azure, предоставляемых этим начальным приложением, см. по следующей ссылке:
 
 * [Как использовать Spring Boot Starter со службой хранилища Azure](configure-spring-boot-starter-java-app-with-azure-storage.md)
-
-* <https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-storage-spring-boot-sample>
+* <https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-storage-blob>
 
 Когда вы добавляете это начальное приложение в проект Spring Boot, в файл *pom.xml* вносятся следующие изменения:
 

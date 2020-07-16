@@ -3,12 +3,13 @@ title: Краткие руководства по DevOps для приложен
 description: Список материалов по началу работы в документации Azure, касающейся DevOps для приложений Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 2920259ca64addb86a58c166f5a1ce1863ff9e9b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 62c755665008f83cc6a644f8bf702d6b1486cf6a
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673700"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379638"
 ---
 # <a name="devops-for-java-apps-on-azure"></a>DevOps для приложений Java в Azure
 

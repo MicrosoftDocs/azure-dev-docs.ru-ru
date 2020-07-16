@@ -3,13 +3,13 @@ title: Пакеты JDK, а также среднесрочная и долго�
 description: В этой статье содержатся ссылки для скачивания и заявление о поддержке Azure для разработки и запуска приложений Java.
 ms.date: 04/09/2019
 ms.topic: conceptual
-ms.custom: seo-java-september2019
-ms.openlocfilehash: 86d4d94e27b7cc088ec7d818695b1b97565f2ff0
-ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
+ms.custom: seo-java-september2019, devx-track-java
+ms.openlocfilehash: 5bffb4e4d2f68ef61ea96ededdf51ea98bb72d2a
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418212"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379838"
 ---
 # <a name="java-long-term-support-and-medium-term-support-on-azure-and-azure-stack"></a>Средне- и долгосрочная поддержка Java в Azure и Azure Stack
 

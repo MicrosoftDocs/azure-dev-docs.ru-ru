@@ -5,12 +5,13 @@ author: mriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 2/28/2020
-ms.openlocfilehash: b8df6a28083521bca900e5c1c939c6456546f349
-ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+ms.custom: devx-track-java
+ms.openlocfilehash: aa496125a5a692f13e90441eb7be85f049481151
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82988929"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379778"
 ---
 # <a name="migrate-weblogic-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений WebLogic в WildFly в Службе Azure Kubernetes
 

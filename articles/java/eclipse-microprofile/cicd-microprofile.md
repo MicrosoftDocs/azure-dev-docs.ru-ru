@@ -10,12 +10,13 @@ ms.date: 07/31/2019
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: cdd704626b51105f93c19378511f4a267cb56649
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 7ce992ca063daf0430ad3fc2d6882b820c2a2315
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81670300"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379918"
 ---
 # <a name="cicd-for-microprofile-apps-using-azure-pipelines"></a>Реализация CI/CD для приложений MicroProfile с помощью Azure Pipelines
 

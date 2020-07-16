@@ -7,12 +7,13 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: af45b63bba4dcca817ebbe38600ae4a348dc1562
-ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
+ms.custom: devx-track-java
+ms.openlocfilehash: 159f009725d803341e46513bd699d7e3826d6199
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86018573"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86378768"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Использование R2DBC Spring Data с Базой данных Azure для MySQL
 

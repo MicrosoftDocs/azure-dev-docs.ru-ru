@@ -6,12 +6,13 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 051704a83e0535a6754c3c4dbd82eb8dfcf8e3c4
-ms.sourcegitcommit: 7be67fb768fb5e19f7de573068cc1376b3d90d1f
+ms.custom: devx-track-java
+ms.openlocfilehash: f88b144e869742d4d48ec67a770e3af55cd8a2cd
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85906431"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86377948"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
 

@@ -7,13 +7,13 @@ ms.date: 04/16/2017
 ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
-ms.custom: seo-java-august2019
-ms.openlocfilehash: 80e83873150356b53c826d7920df1163e51f2636
-ms.sourcegitcommit: 486b55521d7c27666dbb8035bc46fb60d1cbcf0a
+ms.custom: seo-java-august2019, devx-track-java
+ms.openlocfilehash: d8f173fca56af289fb83012a101bc5cb99e4ed12
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550935"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379518"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 

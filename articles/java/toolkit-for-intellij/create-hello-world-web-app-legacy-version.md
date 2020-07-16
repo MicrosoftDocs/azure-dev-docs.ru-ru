@@ -8,12 +8,13 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 0e68e7f74c9ccdbd624e3ef60ef612607bc050f8
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: d8512eba1da4eabb6910d588374551a93dd8f3a6
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81672410"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379988"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>Создание веб-приложения Hello World для Azure с помощью набора средств для IntelliJ предыдущих версий
 

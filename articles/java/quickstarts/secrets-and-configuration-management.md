@@ -3,12 +3,13 @@ title: Краткие руководства по использованию с�
 description: Список материалов по началу работы в документации Azure, касающейся секретов и управления конфигурацией для приложений Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: 572472c5fabb0de053e50718f81b01d625ba9f98
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 940f84400f4352c339eb1de6501aee7906d39831
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81669750"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379608"
 ---
 # <a name="secrets-and-configuration-management-for-java-apps-on-azure"></a>Секреты и управление конфигурацией для приложений Java в Azure
 

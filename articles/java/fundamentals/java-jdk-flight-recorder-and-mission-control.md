@@ -3,13 +3,13 @@ title: Просмотр данных с помощью Zulu Flight Recorder и M
 description: Руководство по использованию инструмента Zulu Flight Recorder и сборки Mission Control для сбора и просмотра данных приложения.
 ms.date: 04/09/2019
 ms.topic: conceptual
-ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: afd95e7f39fb9abdfe2261c8ef0f5ac961347ffb
-ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
+ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019, devx-track-java
+ms.openlocfilehash: eda3eef3f733a9fc6a0b56d5ca22339c1d84c9cb
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418202"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379848"
 ---
 # <a name="monitor-and-manage-java-workloads-with-zulu-flight-recorder-and-zulu-mission-control"></a>Мониторинг рабочих нагрузок Java и управление ими с помощью Zulu Flight Recorder и Zulu Mission Control
 

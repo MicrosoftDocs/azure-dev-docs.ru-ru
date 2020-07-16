@@ -7,12 +7,13 @@ ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 6bc835ef46a85ec3988c2d7e750447054be9e9bc
-ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
+ms.custom: devx-track-java
+ms.openlocfilehash: 281ce33914c4f8aa4116721020f1e14a41868930
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86018658"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86378728"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Использование R2DBC Spring Data с Базой данных Azure для PostgreSQL
 
