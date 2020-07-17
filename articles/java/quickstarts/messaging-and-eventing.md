@@ -3,14 +3,15 @@ title: Краткие руководства по обмену сообщени�
 description: Список материалов по началу работы в документации Azure, касающейся обмена сообщениями и событиями для приложений Java.
 ms.date: 04/09/2020
 ms.topic: conceptual
-ms.openlocfilehash: fc45140d68493bd80093f361b478e485cc2ed42f
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: d5455c05872c67853b526fd30ecb4aee3c75954c
+ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81673650"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405645"
 ---
-# <a name="caching-for-java-apps-on-azure"></a>Кэширование для приложений Java в Azure
+# <a name="messaging-and-eventing-for-java-apps-on-azure"></a>Обмен сообщениями и обработка событий для приложений Java в Azure
 
 Следующие статьи помогут вам приступить к работе с различными вариантами обмена сообщениями и событиями в Azure:
 

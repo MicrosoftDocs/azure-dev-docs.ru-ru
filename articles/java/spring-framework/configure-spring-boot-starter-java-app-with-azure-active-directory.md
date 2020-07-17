@@ -8,12 +8,13 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: ff89152b5cbcd8c0abeff74ce75c4ba21528613e
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-java
+ms.openlocfilehash: 2714d4d4b8a614bcdbf951eb2a9dc4c2dc78dda2
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82138834"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86379428"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 
@@ -124,9 +125,7 @@ ms.locfileid: "82138834"
     ![Настройка манифеста приложения][create-app-registration-11]
 
     > [!NOTE]
-    > 
-    > См. подробнее о параметре `oauth2AllowImplicitFlow` и других параметрах приложения в статье [Манифест приложения Azure Active Directory][AAD app manifest]. 
-    >
+    > См. подробнее о параметре `oauth2AllowImplicitFlow` и других параметрах приложения в статье [Манифест приложения Azure Active Directory][AAD app manifest].
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>Добавление учетной записи пользователя в каталог и в группу
 
@@ -139,11 +138,9 @@ ms.locfileid: "82138834"
    ![Ввод сведений об учетной записи пользователя][create-user-02]
 
    > [!NOTE]
-   > 
    > При вводе имени пользователя укажите URL-адрес каталога, ранее скопированный в рамках этого руководства. Например:
    >
    > `wingtipuser@wingtiptoysdirectory.onmicrosoft.com`
-   > 
 
 1. Выберите **Группы** и **Создать группу**, чтобы создать группу, которая будет использоваться для авторизации в приложении.
 
@@ -151,7 +148,7 @@ ms.locfileid: "82138834"
 
    ![Выбор пользователя для группы][create-user-03]
 
-1. Вернитесь в область **Пользователи**, выберите тестового пользователя и щелкните **Сброс пароля**, а затем скопируйте пароль. Он вам понадобится при входе в приложение, как описывается далее в этом руководстве. 
+1. Вернитесь в область **Пользователи**, выберите тестового пользователя и щелкните **Сброс пароля**, а затем скопируйте пароль. Он вам понадобится при входе в приложение, как описывается далее в этом руководстве.
 
    ![Отображение пароля][create-user-04]
 
@@ -193,6 +190,7 @@ ms.locfileid: "82138834"
    # Specifies the list of Active Directory groups to use for authorization:
    azure.activedirectory.active-directory-groups=Users
    ```
+
    Где:
 
    | Параметр | Описание |
@@ -203,9 +201,7 @@ ms.locfileid: "82138834"
    | `azure.activedirectory.active-directory-groups` | Содержит список групп Active Directory, используемых для авторизации. |
 
    > [!NOTE]
-   > 
-   > Полный список значений, доступных в файле *application.properties*, см. на [сайте GitHub][AAD Spring Boot Sample].
-   >
+   > Полный список значений, доступных в файле *application.properties*, см. в примере [Azure Active Directory Spring Boot][AAD Spring Boot Sample] на сайте GitHub.
 
 1. Сохраните и закройте файл *application.properties*.
 
@@ -236,10 +232,10 @@ ms.locfileid: "82138834"
       }
    }
    ```
+
    > [!NOTE]
-   > 
    > Имя группы, указываемое для метода `@PreAuthorize("hasRole('')")`, должно содержать одну из групп, указанных в поле `azure.activedirectory.active-directory-groups` в файле *application.properties*.
-   > 
+   >
    > Для разных сопоставлений запросов можно указывать разные параметры авторизации, например:
    >
    > ``` java
@@ -262,7 +258,6 @@ ms.locfileid: "82138834"
    >    }
    > }
    > ```
-   >    
 
 1. Создайте папку с именем *security* в папке с исходным кодом Java для приложения, например: *src/main/java/com/wingtiptoys/security/security*.
 
@@ -319,20 +314,16 @@ ms.locfileid: "82138834"
    ![Вход в приложение][application-login]
 
    > [!NOTE]
-   > 
    > Если это первый вход с новой учетной записью пользователя, возможно, вам будет предложено изменить пароль.
-   > 
+   >
    > ![Изменение пароля][update-password]
-   > 
 
 1. Войдя в приложение, вы увидите сообщение контроллера "Hello World".
 
    ![Успешный вход в приложение][hello-world]
 
    > [!NOTE]
-   > 
    > Пользователи с неавторизованными учетными записями получат сообщение **HTTP 403 — не авторизовано**.
-   >
 
 ## <a name="summary"></a>Сводка
 
@@ -360,7 +351,7 @@ ms.locfileid: "82138834"
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
-[AAD Spring Boot Sample]: https://github.com/Microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-active-directory-spring-boot-backend-sample
+[AAD Spring Boot Sample]: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-active-directory-backend
 
 <!-- IMG List -->
 

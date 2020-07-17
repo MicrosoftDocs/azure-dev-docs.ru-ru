@@ -1,15 +1,15 @@
 ---
 title: Подключение ко всем регионам с помощью библиотек Azure для многооблачных решений Python
 description: Использование модуля azure_cloud из msrestazure для подключения к Azure в разных независимых регионах
-ms.date: 06/09/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: c8dc34260f4a37090af8c8408f7da70cf1de1f23
-ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
+ms.openlocfilehash: 25e8851a8812782712ff65ec4627a0d2ead848ae
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947524"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86377908"
 ---
 # <a name="multi-cloud-connect-to-all-regions-with-the-azure-libraries-for-python"></a>Многооблачные решения. Подключение ко всем регионам с помощью библиотек Azure для Python
 
@@ -17,9 +17,18 @@ ms.locfileid: "84947524"
 
 По умолчанию библиотеки Azure настраиваются для подключения к глобальной службе Azure.
 
-## <a name="using-pre-declared-cloud-definition"></a>Использование предварительно объявленного определения облака
+## <a name="using-pre-defined-sovereign-cloud-constants"></a>Использование предварительно определенных констант национального облака
 
-Используйте модуль `azure_cloud` `msrestazure` (0.4.11+):
+Предварительно определенные константы национального облака предоставляются модулем `azure_cloud` `msrestazure` (версии 0.4.11 и выше).
+
+- `AZURE_PUBLIC_CLOUD`
+- `AZURE_CHINA_CLOUD`
+- `AZURE_US_GOV_CLOUD`
+- `AZURE_GERMAN_CLOUD`
+
+Чтобы константа применялась во всем коде, определите переменную среды с именем `AZURE_CLOUD`, используя одно из значений из предыдущего списка. (Значение по умолчанию — `AZURE_PUBLIC_CLOUD`.)
+
+Чтобы константа применялась в определенных операциях, импортируйте ее из `msrest.azure_cloud` и используйте при создании учетных данных и клиентских объектов.
 
 ```python
 from msrestazure.azure_cloud import AZURE_CHINA_CLOUD
@@ -33,16 +42,9 @@ client = ResourceManagementClient(credentials,
     subscription_id, base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
 ```
   
-Ниже приведены доступные определения облаков:
-
-- `AZURE_PUBLIC_CLOUD`
-- `AZURE_CHINA_CLOUD`
-- `AZURE_US_GOV_CLOUD`
-- `AZURE_GERMAN_CLOUD`
-
 ## <a name="using-your-own-cloud-definition"></a>Использование собственного определения облака
 
-В этом коде вы используете `get_cloud_from_metadata_endpoint` с конечной точкой Azure Resource Manager для частного облака (например, на основе Azure Stack):
+Следующий код использует `get_cloud_from_metadata_endpoint` с конечной точкой Azure Resource Manager для частного облака (например, на основе Azure Stack).
 
 ```python
 from msrestazure.azure_cloud import get_cloud_from_metadata_endpoint
@@ -59,7 +61,7 @@ client = ResourceManagementClient(credentials, subscription_id,
 
 ## <a name="using-adal"></a>Использование ADAL
 
-Для подключения к другому региону, нужно учитывать следующее:
+При подключении к другому региону учитывайте следующие моменты.
 
 - Какая конечная точка используется для запроса маркера (для аутентификации)?
 - Какая конечная точка используется для этого маркера (для применения)?

@@ -3,12 +3,12 @@ title: Проверка подлинности приложений Python с п
 description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 5a882a6cc18ef20a8a26650bacaa7bfe94e90771
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 337c520ba163c4029c4352c10d6ca865caf34755
+ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329432"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86377998"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Проверка подлинности приложений Python с помощью служб Azure
 
@@ -86,13 +86,15 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-В настоящее время метод `DefaultAzureCredential` работает только с клиентскими библиотеками пакета Azure SDK (плоскость данных) и не работает с библиотеками управления Azure SDK, имена которых начинаются с `azure-mgmt`, как показано в этом примере кода. Вызов `subscription_client.subscriptions.list()` завершается сбоем с довольно неясной ошибкой: DefaultAzureCredential object has no attribute signed_session (Объект DefaultAzureCredential не имеет атрибута signed_session). Эта ошибка возникает из-за того, что текущие библиотеки управления пакета SDK предполагают, что объект учетных данных содержит свойство `signed_session`, в котором отсутствует `DefaultAzureCredential`.
+Сейчас метод `DefaultAzureCredential` работает только с клиентскими библиотеками пакета Azure SDK (плоскость данных) и предварительными версиями библиотек управления Azure SDK, имена которых начинаются с `azure-mgmt`, как показано в этом примере кода. Так, при использовании текущего выпуска библиотек вызов `subscription_client.subscriptions.list()` завершается сбоем с довольно неясной ошибкой: DefaultAzureCredential object has no attribute signed_session (Объект DefaultAzureCredential не имеет атрибута signed_session). Эта ошибка возникает из-за того, что текущие библиотеки управления пакета SDK предполагают, что объект учетных данных содержит свойство `signed_session`, в котором отсутствует `DefaultAzureCredential`.
 
-До тех пор, пока эти библиотеки не будут обновлены позже в 2020 году, эту ошибку можно устранить двумя приведенными ниже способами.
+Эту проблему можно решить, используя библиотеки управления предварительной версии, как описано в записи блога, посвященной [представлению новых предварительных версий для библиотек управления Azure](https://devblogs.microsoft.com/azure-sdk/introducing-new-previews-for-azure-management-libraries/).
+
+Вы также можете использовать следующие методы:
 
 1. Используйте любой из других методов проверки подлинности, описанных в последующих разделах этой статьи, который может подойти для кода, использующего *только* библиотеки управления пакета SDK и который не будет развернут в облаке. В этом случае вы можете полагаться только на локальные субъекты-службы.
 
-1. Вместо `DefaultAzureCredential` используйте [класс CredentialWrapper (cred_wrapper.py)](https://gist.github.com/lmazuel/cc683d82ea1d7b40208de7c9fc8de59d), предоставленный участником команды разработки Azure SDK. Как только корпорация Майкрософт выпустит обновленные библиотеки управления, вы сможете просто вернуться к `DefaultAzureCredential`. Преимущество этого метода заключается в том, что вы можете использовать одни и те же учетные данные для клиента SDK и для библиотек управления. Он работает как локально, так и в облаке.
+1. Вместо `DefaultAzureCredential` используйте [класс CredentialWrapper (cred_wrapper.py)](https://gist.github.com/lmazuel/cc683d82ea1d7b40208de7c9fc8de59d), предоставленный участником команды разработки Azure SDK. Как только этап предварительной версии для обновленных библиотек управления завершится, вы сможете просто вернуться к `DefaultAzureCredential`. Преимущество этого метода заключается в том, что вы можете использовать одни и те же учетные данные для клиента SDK и для библиотек управления. Он работает как локально, так и в облаке.
 
     Предположим, что вы загрузили копию *cred_wrapper.py* в папку проекта. Приведенный выше код будет выглядеть следующим образом:
 
@@ -106,7 +108,7 @@ print(subscription.subscription_id)
     print(subscription.subscription_id)
     ```
 
-    После обновления библиотек управления вы можете использовать `DefaultAzureCredential` напрямую.
+    Опять же, как только этап предварительной версии для обновленных библиотек управления завершится, вы сможете использовать `DefaultAzureCredential` напрямую.
 
 ## <a name="other-authentication-methods"></a>Другие методы проверки подлинности
 
