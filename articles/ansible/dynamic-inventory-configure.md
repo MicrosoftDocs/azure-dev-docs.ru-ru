@@ -4,12 +4,12 @@ description: Узнайте, как управлять динамическим�
 keywords: ansible, azure, разработка и операции, bash, cloudshell, динамические списки
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 8ad48c49094c19087318434cd02c38dcb1857a76
-ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
+ms.openlocfilehash: 20c152c6f276aed68abf10a6f2e6ae052235a99f
+ms.sourcegitcommit: 9365b437b119eebf98e40f851bd6f66fe966be4a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133627"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86422666"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
@@ -87,7 +87,7 @@ az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionI
 
 ### <a name="using-ansible-version--28"></a>Использование версий Ansible, предшествующих версии 2.8
 
-Ansible предоставляет сценарий Python [azure_rm.py](https://github.com/ansible-collections/community.general/blob/master/scripts/inventory/azure_rm.py), который создает динамический список ресурсов Azure. Ниже описано, как использовать скрипт `azure_rm.py` для подключения двух тестовых виртуальных машин Azure:
+Ansible предоставляет сценарий Python [azure_rm.py](https://github.com/ansible-collections/community.general/blob/main/scripts/inventory/azure_rm.py), который создает динамический список ресурсов Azure. Ниже описано, как использовать скрипт `azure_rm.py` для подключения двух тестовых виртуальных машин Azure:
 
 1. Получите скрипт `azure_rm.py`, используя команду `wget` GNU:
 
