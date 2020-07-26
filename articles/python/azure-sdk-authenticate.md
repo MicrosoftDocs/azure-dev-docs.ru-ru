@@ -3,12 +3,12 @@ title: Проверка подлинности приложений Python с п
 description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 337c520ba163c4029c4352c10d6ca865caf34755
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 1694f85b2ad41a12865bb3d367b1b8498ab474bb
+ms.sourcegitcommit: 04ee2325e3efd9b7797102b4cd9d5db009c38a42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86377998"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86945822"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Проверка подлинности приложений Python с помощью служб Azure
 
@@ -69,7 +69,7 @@ retrieved_secret = client.get_secret("secret-name-01")
 ### <a name="using-defaultazurecredential-with-sdk-management-libraries"></a>Использование метода DefaultAzureCredential с библиотеками управления пакета SDK
 
 ```python
-# WARNING: this code presently fails!
+# WARNING: this code presently fails with current release libraries!
 
 from azure.identity import DefaultAzureCredential
 
@@ -86,7 +86,7 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-Сейчас метод `DefaultAzureCredential` работает только с клиентскими библиотеками пакета Azure SDK (плоскость данных) и предварительными версиями библиотек управления Azure SDK, имена которых начинаются с `azure-mgmt`, как показано в этом примере кода. Так, при использовании текущего выпуска библиотек вызов `subscription_client.subscriptions.list()` завершается сбоем с довольно неясной ошибкой: DefaultAzureCredential object has no attribute signed_session (Объект DefaultAzureCredential не имеет атрибута signed_session). Эта ошибка возникает из-за того, что текущие библиотеки управления пакета SDK предполагают, что объект учетных данных содержит свойство `signed_session`, в котором отсутствует `DefaultAzureCredential`.
+Сейчас метод `DefaultAzureCredential` работает только с клиентскими библиотеками пакета Azure SDK (плоскость данных) и предварительными версиями библиотек управления Azure SDK (последними предварительными версиями библиотек, имена которых начинаются с `azure-mgmt`), как показано в этом примере кода. Так, при использовании текущего выпуска библиотек вызов `subscription_client.subscriptions.list()` завершается сбоем с довольно неясной ошибкой: DefaultAzureCredential object has no attribute signed_session (Объект DefaultAzureCredential не имеет атрибута signed_session). Эта ошибка возникает из-за того, что текущие библиотеки управления пакета SDK предполагают, что объект учетных данных содержит свойство `signed_session`, в котором отсутствует `DefaultAzureCredential`.
 
 Эту проблему можно решить, используя библиотеки управления предварительной версии, как описано в записи блога, посвященной [представлению новых предварительных версий для библиотек управления Azure](https://devblogs.microsoft.com/azure-sdk/introducing-new-previews-for-azure-management-libraries/).
 
