@@ -15,8 +15,13 @@
       href: migrate-tomcat-to-tomcat-app-service.md
     - name: Перенос Tomcat в контейнеры в AKS
       href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
-    - name: Переход из WebLogic в Виртуальные машины Azure
-      href: migrate-weblogic-to-virtual-machines.md
+    - name: Миграция из WebLogic в Azure
+      expanded: true
+      items:
+        - name: Переход из WebLogic в Виртуальные машины Azure
+          href: migrate-weblogic-to-virtual-machines.md
+        - name: Миграция из WebLogic в Azure с использованием AAD и LDAP
+          href: migrate-weblogic-with-aad-ldap.md
     - name: Переход с WildFly на WildFly в AKS
       href: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
     - name: Переход с WebLogic на WildFly в AKS
