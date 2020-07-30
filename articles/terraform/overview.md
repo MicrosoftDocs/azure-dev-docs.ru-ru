@@ -3,12 +3,12 @@ title: Использование Terraform с Azure
 description: Узнайте, как использовать Terraform для развертывания и модификации инфраструктуры в Azure.
 ms.topic: overview
 ms.date: 10/26/2019
-ms.openlocfilehash: ca5602d83ef1e8e4f201c6ae058dbdc004cb8fdb
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 8819a20e9bfb381cb6eb4f5b610b4ffcaa1d63b2
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329422"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334499"
 ---
 # <a name="terraform-with-azure"></a>Terraform с Azure
 
@@ -40,6 +40,6 @@ Terraform используется при развертывании инфра�
 
 Теперь, когда вы ознакомились с Terraform и его преимуществами, предлагаем следующие шаги:
 
-- Начните работу с [установки и настройки Terraform для подготовки виртуальных машин и другой инфраструктуры в Azure](getting-started-cloud-shell.md).
+- Начните работу с [установки и настройки Terraform для подготовки виртуальных машин и другой инфраструктуры в Azure](get-started-cloud-shell.md).
 - [Создание готовой инфраструктуры виртуальных машин Linux в Azure с помощью Terraform](create-linux-virtual-machine-with-infrastructure.md)
 - Ознакомьтесь со статьей [Microsoft AzureRM Provider ](https://www.terraform.io/docs/providers/azurerm/) (Поставщик AzureRM Microsoft) 

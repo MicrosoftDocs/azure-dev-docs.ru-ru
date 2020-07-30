@@ -4,16 +4,16 @@ description: Узнайте, как использовать Terraform для с
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
 ms.topic: tutorial
 ms.date: 06/14/2020
-ms.openlocfilehash: 97b4381c45e67458e01093d735f9b32e97584149
-ms.sourcegitcommit: 2d6c9687b39e33a6b5e980d9a375c9f8f1f2cab7
+ms.openlocfilehash: 53580815deaaef30512ca9ccd2c506908d2192ca
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779656"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334439"
 ---
 # <a name="tutorial-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Руководство по Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
-Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](getting-started-cloud-shell.md).
+Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](get-started-cloud-shell.md).
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
@@ -25,7 +25,7 @@ Terraform позволяет определить и создать развер
 
 Мы разберем каждый раздел шаблона Terraform. Здесь также приведена полная версия [шаблона Terraform](#complete-terraform-script), который можно скопировать и вставить.
 
-В разделе `provider` указывается, что Terraform нужно использовать поставщик Azure. Значения для `subscription_id`, `client_id`, `client_secret` и `tenant_id` см. в статье об [установке и настройке Terraform](getting-started-cloud-shell.md).
+В разделе `provider` указывается, что Terraform нужно использовать поставщик Azure. Значения для `subscription_id`, `client_id`, `client_secret` и `tenant_id` см. в статье об [установке и настройке Terraform](get-started-cloud-shell.md).
 
 > [!TIP]
 > При создании переменных среды для значений или использовании [Azure Cloud Shell Bash](/azure/cloud-shell/overview) не нужно включать объявления переменных в этом разделе.

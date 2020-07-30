@@ -3,12 +3,12 @@ title: Учебник. Создание базового шаблона Terrafor
 description: Здесь вы узнаете, как создать базовый шаблон Terraform в Azure с использованием Yeoman.
 ms.topic: tutorial
 ms.date: 05/25/2020
-ms.openlocfilehash: 3278b1abb16275eb325964a3e0d78a2d61230dd4
-ms.sourcegitcommit: bbfa6e0dfb3c8e66e5f47b080590105787a6e74b
+ms.openlocfilehash: 8e9c4444d95f052fc5872565b316ec15e033be82
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85418222"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334469"
 ---
 # <a name="tutorial-create-a-terraform-base-template-in-azure-using-yeoman"></a>Руководство по Создание базового шаблона Terraform в Azure с использованием Yeoman
 
@@ -27,7 +27,7 @@ ms.locfileid: "85418222"
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 - **Visual Studio Code**. [Скачайте Visual Studio Code](https://code.visualstudio.com/download) для вашей платформы
-- **Terraform**. Чтобы запускать модуль, созданный с помощью Yeoman, необходимо [установить Terraform](getting-started-cloud-shell.md).
+- **Terraform**. Чтобы запускать модуль, созданный с помощью Yeoman, необходимо [установить Terraform](get-started-cloud-shell.md).
 - **Docker**. [Установка Docker](https://www.docker.com/get-started) используется для запуска модуля, созданного с помощью генератора Yeoman.
 - **Язык программирования Go**. [Установка Go](https://golang.org/) в виде тестовых случаев, создаваемых Yeoman, — это код, использующий язык Go.
 
@@ -141,7 +141,7 @@ yo --version
     - Тестовые случаи написаны на языке Go.
     - Все коды в тесте — комплексные.
     - Комплексные тесты пытаются подготавливать все элементы, определенные в разделе `fixture`. Результаты в файле `template_output.go` сравниваются с предварительно определенными ожидаемыми значениями.
-    - `Gopkg.lock` и `Gopkg.toml`: Определяет зависимости. 
+    - `Gopkg.lock` и `Gopkg.toml`: Определяет зависимости.
 
 Дополнительные сведения о генераторе Yeoman для Azure https://github.com/Azure/generator-az-terra-module см. в [документации по Terratest](https://terratest.gruntwork.io/docs/).
 

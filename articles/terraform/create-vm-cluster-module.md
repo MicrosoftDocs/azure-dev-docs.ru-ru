@@ -4,12 +4,12 @@ description: Узнайте, как использовать модули Terraf
 keywords: Azure DevOps, Terraform, виртуальная машина, кластер виртуальных машин, реестр модулей
 ms.topic: tutorial
 ms.date: 03/09/2020
-ms.openlocfilehash: c6561f2e5ba98be4906f480ff8ac7970eae6e408
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: ad318237dcefd6586211c45fb79e51baa05549c4
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329492"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334389"
 ---
 # <a name="tutorial-create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Руководство по Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
 
@@ -30,9 +30,9 @@ ms.locfileid: "84329492"
 ## <a name="set-up-authentication-with-azure"></a>настройка аутентификации в Azure;
 
 > [!TIP]
-> При [использовании переменной среды Terraform](getting-started-cloud-shell.md) или выполнении этого руководства в [Azure Cloud Shell](/azure/cloud-shell/overview) пропустите этот шаг.
+> При [использовании переменной среды Terraform](get-started-cloud-shell.md) или выполнении этого руководства в [Azure Cloud Shell](/azure/cloud-shell/overview) пропустите этот шаг.
 
- Просмотрите статью об [установке Terraform и настройке доступа к Azure](getting-started-cloud-shell.md), чтобы создать субъект-службу Azure. Используйте этот субъект-службу для заполнения нового файла `azureProviderAndCreds.tf` в пустом каталоге с помощью следующего кода:
+ Просмотрите статью об [установке Terraform и настройке доступа к Azure](get-started-cloud-shell.md), чтобы создать субъект-службу Azure. Используйте этот субъект-службу для заполнения нового файла `azureProviderAndCreds.tf` в пустом каталоге с помощью следующего кода:
 
 ```hcl
 variable subscription_id {}
