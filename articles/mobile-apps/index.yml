@@ -10,13 +10,13 @@ metadata:
   ms.collection: collection
   author: codemillmatt
   ms.author: masoucou
-  ms.date: 06/25/2020
-  ms.openlocfilehash: 5d0d3c3aa4a1cca11ae54d1346e80aa790dd64b3
-  ms.sourcegitcommit: e9accb9d82b5c633dffffd148974911398f2d096
-  ms.translationtype: 
+  ms.date: 07/27/2020
+  ms.openlocfilehash: f7f2f1d9d7b9764904fa995ce575fc7409d3a237
+  ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+  ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/06/2020
-  ms.locfileid: "86018645"
+  ms.lasthandoff: 07/29/2020
+  ms.locfileid: "87400672"
 landingContent:
 - title: Начало работы с мобильными приложениями в Azure
   linkLists:
@@ -85,7 +85,7 @@ landingContent:
   - linkListType: tutorial
     links:
     - text: Отправка push-уведомлений в приложения Xamarin.Forms с помощью ASP.NET Core и Центров уведомлений Azure
-      url: https://docs.microsoft.com/azure/notification-hubs/notification-hubs-backend-service-xamarin-forms
+      url: notification-hubs-backend-service-xamarin-forms.md
     - text: Отправка push-уведомлений на устройства Android
       url: https://docs.microsoft.com/azure/notification-hubs/notification-hubs-android-push-notification-google-fcm-get-started
     - text: Широкие возможности отправки содержимого на устройства
