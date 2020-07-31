@@ -1,64 +1,94 @@
 ### YamlMime:Landing
-title: Документация по пакету SDK для JavaScript
+title: Azure для разработчиков JavaScript
 summary: >
   Из этой статьи вы узнаете о пакете Azure SDK для JavaScript и Node.js, о том, как начать работу с ним, и о том, что разработчики могут делать с его помощью. Начните работу с такими возможностями Azure, как размещение приложений, задачи DevOps, постоянное хранилище и базы данных, а также использование устройств Интернета вещей.
 metadata:
   title: Azure для разработчиков JavaScript и Node.js
   description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js, используя наши руководства, средства и справочник по пакету SDK.
-  author: sptramer
-  ms.author: sttramer
-  ms.date: 09/15/2019
+  author: diberry
+  ms.author: diberry
+  ms.date: 07/23/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 3ce57713de241e8741c8dd947b1ced5160376119
-  ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  ms.devlang: javascript
+  ms.openlocfilehash: 946afb0fff0d5a32647b94c8e4bee5fc6f328586
+  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/01/2020
-  ms.locfileid: "85793106"
+  ms.lasthandoff: 07/28/2020
+  ms.locfileid: "87260381"
 landingContent:
-- title: Начало работы с пакетом Azure SDK для JavaScript
-  linkLists:
-  - linkListType: quickstart
-    links:
-    - text: Быстрое развертывание примера Node.js в Службе приложений Azure
-      url: https://aka.ms/try-azure-node
-    - text: Обзор всех доступных примеров пакета Azure SDK для JavaScript
-      url: /samples/browse/?languages=javascript,nodejs
-- title: Размещение приложений в Azure
+- title: Начало работы в Azure
   linkLists:
   - linkListType: overview
     links:
-    - text: Сведения о Службе приложений Azure
+    - text: Настройка локальной среды разработки
+      url: configure-local-development-environment.md
+  - linkListType: quickstart
+    links:
+    - text: Быстрое развертывание в Службе приложений Azure
+      url: https://aka.ms/try-azure-node
+    - text: Обзор примеров
+      url: /samples/browse/?languages=javascript,nodejs
+  - linkListType: learn
+    links:
+    - text: Создание приложений Node.js
+      url: /learn/paths/build-javascript-applications-nodejs/
+  - linkListType: reference
+    links:
+    - text: Справочная документация по API
+      url: /javascript/api/overview/azure/?view=azure-node-latest
+    - text: Последние пакеты SDK
+      url: https://azure.github.io/azure-sdk/releases/latest/index.html#javascript
+- title: Развертывание с помощью Visual Studio Code
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Статические веб-приложения
+      url: tutorial-vscode-static-website-node-01.md
+    - text: Бессерверные приложения
+      url: tutorial-vscode-serverless-node-01.md
+    - text: Приложения с полным стеком
+      url: tutorial-vscode-azure-app-service-node-01.md
+    - text: Контейнерные приложения
+      url: tutorial-vscode-docker-node-01.md
+- title: Развертывание с помощью интерфейса командной строки Azure
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Приложения Deno
+      url: tutorial-visual-studio-code-azure-app-service-deno-01.md
+- title: Узел
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Служба приложений Azure
       url: /azure/app-service/overview
   - linkListType: architecture
     links:
-    - text: Выбор подходящего варианта размещения
+    - text: Поиск подходящего варианта размещения
       url: /azure/architecture/guide/technology-choices/compute-decision-tree
+- title: DevOps
+  linkLists:
   - linkListType: quickstart
     links:
-    - text: Развертывание статических веб-приложений из Visual Studio Code
-      url: tutorial-vscode-static-website-node-01.md
-    - text: Развертывание бессерверных приложений с помощью Функций Azure из Visual Studio Code
-      url: tutorial-vscode-serverless-node-01.md
-    - text: Развертывание комплексных приложений Node.js из Visual Studio Code
-      url: tutorial-vscode-azure-app-service-node-01.md
-    - text: Развертывание приложений Deno в Службе приложений с помощью Azure CLI
-      url: tutorial-visual-studio-code-azure-app-service-deno-01.md
-    - text: Развертывание контейнерных приложений из Visual Studio Code
-      url: tutorial-vscode-docker-node-01.md
-- title: Создание, развертывание и мониторинг приложений с помощью Azure
+    - text: Настройка CI/CD в Azure Pipelines
+      url: /azure/devops-project/azure-devops-project-nodejs?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
+- title: Монитор
   linkLists:
   - linkListType: overview
     links:
-    - text: Общие сведения об Azure Monitor
+    - text: Azure Monitor
       url: /azure/azure-monitor/overview?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
   - linkListType: quickstart
     links:
-    - text: Настройка CI/CD для приложений Node.js в Azure Pipelines
+    - text: CI/CD в Azure Pipelines
       url: /azure/devops-project/azure-devops-project-nodejs?toc=%2Fazure%2Fjavascript%2Ftoc.json&bc=%2Fazure%2Fjavascript%2Fbreadcrumb%2Ftoc.json
-    - text: Мониторинг развернутых приложений с помощью Azure Monitor
+    - text: Мониторинг развернутых приложений
       url: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Подключение приложений и устройств с помощью служб обмена сообщениями
+- title: Службы обмена сообщениями
   linkLists:
   - linkListType: quickstart
     links:
@@ -66,25 +96,19 @@ landingContent:
       url: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
     - text: Отправка сообщений с помощью очередей службы хранилища Azure
       url: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Решения для хранения и баз данных в Azure
+- title: Хранилище и базы данных
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Работа с большими двоичными объектами в службе хранилища Azure
-      url: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-    - text: Перенос приложений MongoDB для использования Cosmos DB в Azure
+    - text: Миграция из MongoDB в Azure Cosmos DB
       url: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Работа с устройствами Интернета вещей
+    - text: Работа с большими двоичными объектами
+      url: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+- title: Устройства Интернета вещей (IoT)
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Управление устройствами с помощью Центра Интернета вещей Azure
+    - text: Управление устройствами
       url: /azure/iot-hub/quickstart-control-device-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-    - text: Обработка данных, поступающих с устройств, с помощью концентратора событий Azure
+    - text: Обработка данных
       url: /azure/iot-hub/quickstart-send-telemetry-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-- title: Справочник по пакету Azure SDK для JavaScript
-  linkLists:
-  - linkListType: reference
-    links:
-    - text: Справочник по пакету Azure SDK для API JavaScript
-      url: /javascript/api/overview/azure/
