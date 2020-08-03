@@ -8,7 +8,7 @@
       href: mobile-cloud-development-stages.md
 - name: Основные понятия
   items:
-    - name: Проверка подлинности
+    - name: Аутентификация
       href: authentication.md
     - name: Данные
       items:
@@ -43,7 +43,15 @@
         - name: Создание отчетов о сбоях в реальном времени
           href: diagnostics.md
     - name: Push-уведомления
-      href: push-notifications.md
+      items:
+        - name: Взаимодействие с пользователями через отправку push-уведомлений
+          href: push-notifications.md
+        - name: Отправка push-уведомления в приложение Xamarin.Forms с помощью Центров уведомлений Azure
+          href: notification-hubs-backend-service-xamarin-forms.md
+        - name: Отправка push-уведомления в приложение React Native с помощью Центров уведомлений Azure
+          href: notification-hubs-backend-service-react-native.md
+        - name: Отправка push-уведомления в приложение Flutter с помощью Центров уведомлений Azure
+          href: notification-hubs-backend-service-flutter.md
     - name: Машинное обучение
       items:
         - name: Azure Cognitive Services

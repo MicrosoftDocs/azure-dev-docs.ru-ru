@@ -90,6 +90,10 @@
               href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
             - name: Распознавание речи
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+        - name: Ведение журнала и метрики
+          items:
+            - name: Ведение журнала с использованием пакета Azure SDK
+              href: node-sdk-logging.md
     - name: Учебники
       items:
         - name: Развертывание Функций Azure с помощью VS Code
@@ -220,5 +224,7 @@
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-search'
         - name: Все примеры
           href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs'
-    - name: Справочник
-      href: /javascript/api/?view=azure-node-latest
+    - name: Справочник по API библиотеки
+      href: /javascript/api/overview/azure/?view=azure-node-latest
+    - name: Последние версии пакетов SDK
+      href: 'https://azure.github.io/azure-sdk/releases/latest/index.html#javascript'

@@ -8,7 +8,9 @@
   expanded: true
   items:
     - name: "Начало работы\_— Cloud Shell"
-      href: getting-started-cloud-shell.md
+      href: get-started-cloud-shell.md
+    - name: "Начало работы\_— PowerShell"
+      href: get-started-powershell.md
 - name: Учебники
   items:
     - name: Установка и настройка
