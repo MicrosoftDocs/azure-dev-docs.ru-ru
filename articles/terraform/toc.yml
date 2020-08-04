@@ -7,16 +7,12 @@
 - name: Краткие руководства
   expanded: true
   items:
-    - name: "Начало работы\_— Cloud Shell"
+    - name: 'Начало работы: Azure Cloud Shell'
       href: get-started-cloud-shell.md
-    - name: "Начало работы\_— PowerShell"
+    - name: 'Начало работы: Windows и PowerShell'
       href: get-started-powershell.md
-- name: Учебники
+- name: Практические руководства
   items:
-    - name: Установка и настройка
-      items:
-        - name: Хранение состояния Terraform в службе хранилища Azure
-          href: store-state-in-azure-storage.md
     - name: Служба приложений
       items:
         - name: Слоты развертывания поставщика Azure и Terraform
@@ -31,6 +27,30 @@
       items:
         - name: Развертывание экземпляра Azure Cosmos DB
           href: deploy-azure-cosmos-db-to-azure-container-instances.md
+    - name: Инструменты
+      items:
+        - name: Установка расширения Visual Studio Code для Terraform
+          href: configure-vs-code-extension-for-terraform.md
+        - name: Создание базового шаблона Terraform с использованием Yeoman
+          href: create-base-template-using-yeoman.md
+    - name: Виртуальные машины
+      items:
+        - name: Виртуальная машина с инфраструктурой
+          href: create-linux-virtual-machine-with-infrastructure.md
+        - name: Кластер виртуальной машины с модулями Terraform
+          href: create-vm-cluster-module.md
+        - name: Кластер виртуальной машины с Terraform и HCL
+          href: create-vm-cluster-with-infrastructure.md
+        - name: Масштабируемый набор виртуальных машин с инфраструктурой
+          href: create-vm-scaleset-network-disks-hcl.md
+        - name: Масштабируемый набор виртуальных машин из образа Packer
+          href: create-vm-scaleset-network-disks-using-packer-hcl.md
+- name: Учебники
+  items:
+    - name: Установка и настройка
+      items:
+        - name: Хранение состояния Terraform в службе хранилища Azure
+          href: store-state-in-azure-storage.md
     - name: Сети
       items:
         - name: Звездообразная топология
@@ -47,26 +67,16 @@
               href: hub-spoke-spoke-network.md
             - name: 6. Проверка подключения в топологии сети
               href: hub-spoke-validation.md
-    - name: Инструменты
+    - name: Тестирование проектов Terraform
       items:
-        - name: Установка расширения Visual Studio Code для Terraform
-          href: configure-vs-code-extension-for-terraform.md
-        - name: Создание базового шаблона Terraform с использованием Yeoman
-          href: create-base-template-using-yeoman.md
-        - name: Тестирование модулей Terraform с помощью Terratest
-          href: test-modules-using-terratest.md
-    - name: Виртуальные машины
-      items:
-        - name: Виртуальная машина с инфраструктурой
-          href: create-linux-virtual-machine-with-infrastructure.md
-        - name: Кластер виртуальной машины с модулями Terraform
-          href: create-vm-cluster-module.md
-        - name: Кластер виртуальной машины с Terraform и HCL
-          href: create-vm-cluster-with-infrastructure.md
-        - name: Масштабируемый набор виртуальных машин с инфраструктурой
-          href: create-vm-scaleset-network-disks-hcl.md
-        - name: Масштабируемый набор виртуальных машин из образа Packer
-          href: create-vm-scaleset-network-disks-using-packer-hcl.md
+        - name: 1. Общие сведения о тестировании Terraform
+          href: best-practices-testing-overview.md
+        - name: 2. Тестирование интеграции
+          href: best-practices-integration-testing.md
+        - name: 3. Тестирование соответствия
+          href: best-practices-compliance-testing.md
+        - name: 4. Комплексное тестирование
+          href: best-practices-end-to-end-testing.md
 - name: Примеры
   items:
     - name: Шаблоны конфигурации

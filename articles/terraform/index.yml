@@ -8,13 +8,13 @@ metadata:
   author: TomArcherMsft
   ms.author: tarcher
   ms.topic: landing-page
-  ms.date: 04/26/2020
-  ms.openlocfilehash: c85e77d0e2cebd0cc8c5b9a0485e6002cb3014ee
-  ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+  ms.date: 07/31/2020
+  ms.openlocfilehash: 40e1650488552387f5a62cf02a754dde89fed773
+  ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/28/2020
-  ms.locfileid: "87334509"
+  ms.lasthandoff: 07/31/2020
+  ms.locfileid: "87478544"
 landingContent:
 - title: Сведения о Terraform в Azure
   linkLists:
@@ -30,21 +30,33 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: Cloud Shell и Azure CLI
+    - text: 'Начало работы: Azure Cloud Shell'
       url: get-started-cloud-shell.md
-    - text: Windows и PowerShell
+    - text: 'Начало работы: Windows и PowerShell'
       url: get-started-powershell.md
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
     - text: Установка расширения Visual Studio Code для Terraform
       url: configure-vs-code-extension-for-terraform.md
     - text: Создание базового шаблона Terraform с использованием Yeoman
       url: create-base-template-using-yeoman.md
-    - text: Тестирование модулей Terraform с помощью Terratest
-      url: test-modules-using-terratest.md
+- title: Тестирование проектов Terraform
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о тестировании Terraform
+      url: best-practices-testing-overview.md
+  - linkListType: tutorial
+    links:
+    - text: Тестирование интеграции
+      url: best-practices-integration-testing.md
+    - text: Тестирование соответствия
+      url: best-practices-compliance-testing.md
+    - text: Комплексное тестирование
+      url: best-practices-end-to-end-testing.md
 - title: Управление AKS
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
     - text: Создание кластера Kubernetes с помощью AKS
       url: create-k8s-cluster-with-tf-and-aks.md
@@ -56,7 +68,7 @@ landingContent:
     links:
     - text: Создание виртуальной машины Linux
       url: create-linux-virtual-machine-with-infrastructure.md
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
     - text: Создание кластера виртуальных машин с помощью модулей Terraform
       url: create-vm-cluster-module.md
@@ -84,7 +96,7 @@ landingContent:
       url: hub-spoke-validation.md
 - title: Управление базами данных
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
     - text: Развертывание экземпляра Azure Cosmos DB
       url: deploy-azure-cosmos-db-to-azure-container-instances.md
