@@ -9,14 +9,14 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 5cfdb7bd0965248e98e0719099c657bcf5f884bd
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 7b6d393f44034794494f4e77a6365bf0d7bf6c1d
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378048"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334429"
 ---
-# <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-intellij"></a>Развертывание веб-приложения Hello World в контейнере Linux в облаке с помощью набора средств Azure для IntelliJ
+# <a name="deploy-java-app-to-azure-web-apps-for-containers-using-azure-toolkit-for-intellij"></a>Развертывание приложения Java в Веб-приложении Azure для контейнеров с помощью Azure Toolkit for IntelliJ
 
 Контейнеры [Docker] широко используются при развертывании веб-приложений. При этом разработчики могут объединить все зависимости и файлы проекта в одном пакете, а затем развернуть его на сервере. Набор средств Azure для IntelliJ упрощает этот процесс для разработчиков на языке Java, предоставляя функции для развертывания контейнеров в Microsoft Azure.
 
@@ -99,7 +99,7 @@ ms.locfileid: "86378048"
       * *registry* — это реестр контейнеров из предыдущего раздела этой статьи; 
       * *appname* — это имя веб-приложения. 
 
-   * **Use Existing Web App** (Использовать существующее веб-приложение) или **Create New Web App** (Создать веб-приложение). Указывает, будете ли вы развертывать контейнер в существующем веб-приложении или создадите новое. С помощью указанного вами **имени приложения** будет создан URL-адрес для вашего веб-приложения, например: *wingtiptoys.azurewebsites.net*.
+   * **Use Existing Web App** (Использовать имеющееся веб-приложение) или **Create New Web App** (Создать веб-приложение) — указывает, будете ли вы развертывать контейнер в имеющемся веб-приложении или создадите веб-приложение. С помощью указанного вами **имени приложения** будет создан URL-адрес для вашего веб-приложения, например: *wingtiptoys.azurewebsites.net*.
 
    * **Группа ресурсов**. Указывает, создадите ли вы группу ресурсов или будете использовать существующую. 
 

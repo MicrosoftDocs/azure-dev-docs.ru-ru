@@ -3,12 +3,12 @@ title: Руководство. Настройка расширения Visual St
 description: Сведения о том, как установить и использовать расширение Azure Terraform в Visual Studio Code.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 9fd6d6b93537795109117198aa20063b556b8368
-ms.sourcegitcommit: db56786f046a3bde1bd9b0169b4f62f0c1970899
+ms.openlocfilehash: 7bbddd2d455e53354829557b99c19a8fb3e3dbf7
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84329572"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334489"
 ---
 # <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Руководство по Настройка расширения Visual Studio Code для Azure Terraform
 
@@ -25,7 +25,7 @@ ms.locfileid: "84329572"
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Terraform**. [Установите и настройте Terraform](getting-started-cloud-shell.md).
+- **Terraform**. [Установите и настройте Terraform](get-started-cloud-shell.md).
 - **Visual Studio Code**. Установите подходящую для вашей среды версию [Visual Studio Code](https://code.visualstudio.com/download).
 
 ## <a name="prepare-your-dev-environment"></a>Подготовка среды разработки
@@ -137,7 +137,7 @@ ms.locfileid: "84329572"
 
 1. Когда появится запрос на подтверждение, щелкните **ОК**.
 
-    ![Запрос на открытие Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloud-shell.png)
+    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloud-shell.png)
 
 1. При первом запуске Cloud Shell из новой папки вам будет предложено создать веб-приложение. Щелкните **Open**(Открыть).
 
@@ -273,7 +273,7 @@ ms.locfileid: "84329572"
 
 1. Когда появится запрос на подтверждение, щелкните **ОК** и следуйте инструкциям на экране.
 
-    ![Запрос на открытие Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
+    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >При выполнении тестов **lint** или **end-to-end** Azure с использованием службы контейнеров подготавливает тестовый компьютер к выполнению реального теста. Это означает, что результаты тестов обычно возвращаются только через несколько минут.
@@ -292,7 +292,7 @@ ms.locfileid: "84329572"
 
 1. Когда появится запрос на подтверждение, щелкните **ОК** и следуйте инструкциям на экране.
 
-    ![Запрос на открытие Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
+    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >При выполнении тестов **lint** или **end-to-end** Azure с использованием службы контейнеров подготавливает тестовый компьютер к выполнению реального теста. Это означает, что результаты тестов обычно возвращаются только через несколько минут.

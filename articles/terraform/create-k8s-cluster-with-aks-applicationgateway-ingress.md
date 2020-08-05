@@ -4,12 +4,12 @@ description: Узнайте, как создать кластер Kubernetes с 
 keywords: Azure DevOps, Terraform, Шлюз приложений, входящий трафик, AKS, Kubernetes
 ms.topic: tutorial
 ms.date: 03/09/2020
-ms.openlocfilehash: 433cf2e73e4672d73e036ebc1e25b6c1cc98795e
-ms.sourcegitcommit: fb0564696f8067e6dfa8b9eaf819fadf321c2884
+ms.openlocfilehash: a98d9af5c8d3bd63451f007f66a8793d9f38a61d
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85327210"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334456"
 ---
 # <a name="tutorial-create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Руководство по Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes
 
@@ -32,11 +32,11 @@ ms.locfileid: "85327210"
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](getting-started-cloud-shell.md).
+- **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](get-started-cloud-shell.md).
 
 - **Группа ресурсов Azure**. Если у вас нет группы ресурсов Azure, которую можно использовать для демонстрационной версии, [создайте группу ресурсов Azure](/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups). Запишите имя и расположение группы ресурсов, так как эти значения используются в демонстрационной версии.
 
-- **Субъект-служба Azure.** Следуйте указаниям, приведенным в разделе **Создание субъекта-службы** статьи [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Запишите значения для appId, displayName и password.
+- **Субъект-служба Azure.** Следуйте указаниям, приведенным в разделе **Создание субъекта-службы** статьи [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Запишите значения для `appId`, `displayName` и `password`.
 
 - **Получите идентификатор объекта субъекта-службы**: Выполните следующую команду в Cloud Shell: `az ad sp list --display-name <displayName>`.
 

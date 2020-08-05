@@ -8,12 +8,12 @@ ms.date: 03/25/2020
 ms.topic: article
 ms.service: multiple
 ms.custom: devx-track-java
-ms.openlocfilehash: 5dbe0235143621587b111f4537a49b36f88115f1
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 5bb7f711eae230a08893d2f94c242a06af809f88
+ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379448"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87400622"
 ---
 # <a name="configure-logging-with-the-azure-sdk-for-java"></a>Настройка ведения журнала с пакетом Azure SDK для Java
 
@@ -26,17 +26,30 @@ ms.locfileid: "86379448"
 
 ## <a name="declare-a-logging-framework"></a>Объявление платформы ведения журналов
 
-Перед реализацией этих средств ведения журнала необходимо объявить соответствующую платформу в качестве зависимости в проекте. Дополнительные сведения см. в [руководстве пользователя по SLF4J](http://www.slf4j.org/manual.html#projectDep).
+Перед реализацией этих средств ведения журнала необходимо объявить соответствующую платформу в качестве зависимости в проекте. Дополнительные сведения см. в [руководстве по SLF4J для пользователей](https://www.slf4j.org/manual.html#projectDep).
 
-## <a name="configure-log4j-or-log4j-2"></a>Настройка log4j или log4j 2
+В следующих разделах приведены примеры конфигурации для распространенных платформ ведения журналов.
 
-Вы можете настроить ведение журнала log4j и log4j 2 в файле свойств или в XML-файле. Подробные сведения о ведении журнала log4j и log4j 2 см. в [руководстве по Apache Log4j 2](https://logging.apache.org/log4j/2.x/manual/configuration.html).
+## <a name="use-log4j"></a>Использование Log4j
 
-### <a name="use-a-properties-file"></a>Использование файла свойств
+В следующих примерах приведены конфигурации для платформы ведения журналов Log4j. Дополнительные сведения см. в [документации по Log4j](https://logging.apache.org/log4j/1.2/).
 
-В каталоге проекта *./src/main/resource* создайте новый файл с именем *log4j.properties* или *log4j2.properties* (последний для Logj4 2). Используйте эти примеры, чтобы приступить к работе.
+**Включение Log4j путем добавления зависимости Maven**
 
-Пример log4j:
+Добавьте следующий код в файл *pom.xml* проекта:
+
+```xml
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>[1.0,)</version> <!-- Version number 1.0 and above -->
+</dependency>
+```
+
+**Включение Log4j с помощью файла свойств**
+
+Создайте файл *log4j.properties* в каталоге *./src/main/resource* проекта и добавьте следующее содержимое:
 
 ```properties
 log4j.rootLogger=INFO, A1
@@ -46,47 +59,70 @@ log4j.appender.A1.layout.ConversionPattern=%m%n
 log4j.logger.com.azure.core=ERROR
 ```
 
-Пример Log4j2:
+**Включение Log4j с помощью файла XML**
 
-```properties
-appender.console.type = Console
-appender.console.name = LogToConsole
-appender.console.layout.type = PatternLayout
-appender.console.layout.pattern = %msg%n
-logger.app.name=com.azure.core
-logger.app.level=ERROR
-```
-
-### <a name="use-an-xml-file"></a>Использование XML-файла
-
-Кроме того, для настройки log4j и Log4j2 можно использовать XML-файл. В каталоге проекта *./src/main/resource* создайте новый файл с именем *log4j.xml* или *log4j2.xml* (последний для Logj4 2). Используйте эти примеры, чтобы приступить к работе.
-
-Пример log4j:
+Создайте файл *log4j.xml* в каталоге *./src/main/resource* проекта и добавьте следующее содержимое:
 
 ```xml
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
 
-  <appender name="console" class="org.apache.log4j.ConsoleAppender">
-    <param name="Target" value="System.out"/>
-    <layout class="org.apache.log4j.PatternLayout">
-    <param name="ConversionPattern" value="%m%n" />
-    </layout>
-  </appender>
-  <logger name="com.azure.core" additivity="true">
-    <level value="ERROR" />
-    <appender-ref ref="console" />
-  </logger>
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%m%n" />
+        </layout>
+    </appender>
+    <logger name="com.azure.core">
+        <level value="ERROR" />
+        <appender-ref ref="console" />
+    </logger>
 
-  <root>
-    <priority value ="info"></priority>
-    <appender-ref ref="console"></appender>
-  </root>
+    <root>
+        <level value="info" />
+        <appender-ref ref="console" />
+    </root>
 
 </log4j:configuration>
 ```
 
-Пример Log4j2:
+## <a name="use-log4j-2"></a>Использование Log4j 2
+
+В следующих примерах приведены конфигурации для платформы ведения журналов Log4j 2. Дополнительные сведения см. в [документации по Log4j 2](https://logging.apache.org/log4j/2.x/manual/configuration.html).
+
+**Включение Log4j 2 путем добавления зависимости Maven**
+
+Добавьте следующий код в файл *pom.xml* проекта:
+
+```
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-slf4j-impl</artifactId>
+    <version>[2.0,)</version> <!-- Version number 2.0 and above -->
+</dependency>
+```
+
+**Включение Log4j 2 с помощью файла свойств**
+
+Создайте файл *log4j2.properties* в каталоге *./src/main/resource* проекта и добавьте следующее содержимое:
+
+```properties
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = %msg%n
+logger.app.name=com.azure.core
+logger.app.level=ERROR
+
+rootLogger.level = info
+rootLogger.appenderRefs = stdout
+rootLogger.appenderRef.stdout.ref = STDOUT
+```
+
+**Включение Log4j 2 с помощью файла XML**
+
+Создайте файл *log4j2.xml* в каталоге *./src/main/resource* проекта и добавьте следующее содержимое:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -108,14 +144,28 @@ logger.app.level=ERROR
 </Configuration>
 ```
 
-## <a name="configure-logback"></a>Настройка Logback
+## <a name="use-logback"></a>Использование Logback
 
-[Logback](https://logback.qos.ch/manual/introduction.html) — одна из популярных платформ ведения журналов и собственная реализация SLF4J. Чтобы настроить Logback, создайте новый XML-файл с именем *logback.xml* в каталоге проекта *./src/main/resources*. Дополнительные сведения о параметрах конфигурации можно найти на веб-сайте [Logback Project](https://logback.qos.ch/manual/configuration.html).
+В следующих примерах приведены базовые конфигурации для платформы ведения журналов Logback. Дополнительные сведения см. в [документации по Logback](https://logback.qos.ch/manual/configuration.html).
 
-Ниже приведен пример конфигурации Logback.
+**Включение Logback путем добавления зависимости Maven**
+
+Добавьте следующий код в файл *pom.xml* проекта:
+
+```
+<!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>[0.2.5,)</version> <!-- Version number 0.2.5 and above -->
+</dependency>
+```
+
+**Включение Logback с помощью файла XML**
+
+Создайте файл *logback.xml* в каталоге *./src/main/resources* проекта и добавьте следующее содержимое:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
     <encoder>
@@ -131,9 +181,19 @@ logger.app.level=ERROR
 </configuration>
 ```
 
-Вот простая конфигурация Logback для входа в консоль:
+## <a name="use-logback-in-a-spring-boot-application"></a>Использование Logback в приложении Spring Boot
 
-```xml
+В следующих примерах приведены некоторые конфигурации для использования Logback со Spring. Обычно конфигурации ведения журналов добавляются в файл *logback.xml* в каталоге *./src/main/resources* проекта. Spring выполняет поиск различных конфигураций в этом файле, в том числе для ведения журналов. Дополнительные сведения см. в [документации по Logback](https://logback.qos.ch/manual/configuration.html).
+
+Вы можете настроить свое приложение на считывание конфигураций Logback из любого файла. Чтобы связать файл *logback.xml* с приложением Spring, создайте файл *application.properties* в каталоге *./src/main/resources* проекта и добавьте следующее содержимое:
+
+```properties
+logging.config=classpath:logback.xml
+```
+
+Чтобы создать конфигурацию Logback для ведения журнала в консоли, добавьте следующий код в файл *logback.xml*:
+
+```xml 
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <appender name="Console"
@@ -151,7 +211,7 @@ logger.app.level=ERROR
 </configuration>
 ```
 
-Ниже приведена конфигурация для ведения журнала в файл, который переносится после каждого часа и архивируется в формате GZIP:
+Чтобы настроить ведение журнала в файл, который перезаписывается каждый час и архивируется в формате GZIP, добавьте следующий код в файл *logback.xml*:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -177,17 +237,9 @@ logger.app.level=ERROR
 </configuration>
 ```
 
-### <a name="configure-logback-for-a-spring-boot-application"></a>Настройка Logback для приложения Spring Boot
-
-Spring ищет конфигурации проекта, включая ведение журнала, в файле *application.properties*, который находится в каталоге *./src/main/resources*. Добавьте следующую строку в файле *application.properties*, чтобы связать *logback.xml* с приложением Spring Boot:
-
-```properties
-logging.config=classpath:logback.xml
-```
-
 ## <a name="configure-fallback-logging-for-temporary-debugging"></a>Настройка резервного журнала для временной отладки
 
-В сценариях, где невозможно повторно развернуть приложение с помощью средства ведения журнала SLF4J, можно использовать резервное средство ведения журнала, встроенное в клиентские библиотеки Azure для Java, в Azure Core 1.3.0 или более поздней версии. Чтобы включить это средство ведения журнала, необходимо сначала убедиться в отсутствии средства ведения журнала SLF4J (так как оно будет иметь приоритет), а затем задать переменную среды `AZURE_LOG_LEVEL`. После задания переменной среды, чтобы начать создание журналов необходимо перезапустить приложение.
+В сценариях, где невозможно повторно развернуть приложение с помощью средства ведения журналов SLF4J, можно использовать резервное средство ведения журналов, встроенное в клиентские библиотеки Azure для Java, в Azure Core 1.3.0 или более поздней версии. Чтобы включить это средство ведения журнала, необходимо сначала убедиться в отсутствии средства ведения журнала SLF4J (так как оно будет иметь приоритет), а затем задать переменную среды `AZURE_LOG_LEVEL`. После задания переменной среды, чтобы начать создание журналов необходимо перезапустить приложение.
 
 В следующей таблице приведены допустимые значения для этой переменной среды.
 
@@ -198,8 +250,8 @@ logging.config=classpath:logback.xml
 |WARNING     |"warn", "warning"       |
 |ошибка    |"err", "error"  |
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-- [Включение ведения журнала диагностики для приложений в Службе приложений Azure](/azure/app-service/troubleshoot-diagnostic-logs) 
+- [Включение функции ведения журналов диагностики для приложений в Службе приложений Azure](/azure/app-service/troubleshoot-diagnostic-logs) 
 - [Просмотрите параметры ведения журнала безопасности и аудита в Azure](/azure/security/fundamentals/log-audit)
 - [Узнайте о том, как работать с журналами платформы Azure](/azure/azure-monitor/platform/platform-logs-overview)

@@ -1,14 +1,14 @@
 ---
 title: Учебник. Создание масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
-description: Узнайте, как использовать Terraform для настройки и модификации масштабируемого набора виртуальных машин Azure на основе пользовательского образа, созданного в Packer (с виртуальной сетью и управляемыми подключенными дисками).
+description: Узнайте, как использовать Terraform для настройки и управления версиями масштабируемого набора виртуальных машин Azure из пользовательского образа, созданного с помощью Packer
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: d9db8f47cdb4c295ef5625450980938ff348b5fb
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.openlocfilehash: f72d8ab828259e4408ceb78528ce310a214e05ad
+ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790837"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87334399"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Руководство по созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
 
@@ -29,7 +29,7 @@ ms.locfileid: "85790837"
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Terraform**. [Установка Terraform и настройка доступа к Azure](getting-started-cloud-shell.md).
+- **Terraform**. [Установка Terraform и настройка доступа к Azure](get-started-cloud-shell.md).
 - **Пара ключей SSH**: [Создание пары ключей SSH](/azure/virtual-machines/linux/mac-create-ssh-keys).
 - **Packer**:  [Установка Packer](https://learn.hashicorp.com/packer/getting-started/install).
 
