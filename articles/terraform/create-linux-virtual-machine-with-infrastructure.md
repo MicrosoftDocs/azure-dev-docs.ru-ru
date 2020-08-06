@@ -1,17 +1,17 @@
 ---
-title: Учебник. Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
+title: Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 description: Узнайте, как использовать Terraform для создания готовой среды виртуальных машин Linux в Azure и управления ею.
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 06/14/2020
-ms.openlocfilehash: 53580815deaaef30512ca9ccd2c506908d2192ca
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 518e5f619e142b3bed0ff539ff2b448c6f3e5b48
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334439"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478355"
 ---
-# <a name="tutorial-create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Руководство по Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
+# <a name="create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
 Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](get-started-cloud-shell.md).
 
