@@ -11,12 +11,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: 85d0ff61efef01049fd17ae0a30fd67ff28109d8
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 9f17491cfa7c8c4ec82945fe1fed69b1d681ba8b
+ms.sourcegitcommit: da9fab1b718c71e40c7cbe0a08526c316dcdd6df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379178"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525819"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 
@@ -90,6 +90,7 @@ Azure Cosmos DB — это глобально распределенная сл�
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-cosmosdb-spring-boot-starter</artifactId>
+        <version>3.0.0-beta.1</version>
     </dependency>
     ```
 

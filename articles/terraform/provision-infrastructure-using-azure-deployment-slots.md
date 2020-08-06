@@ -1,17 +1,17 @@
 ---
-title: Руководство. Подготовка инфраструктуры со слотами развертывания Azure с помощью Terraform
+title: подготовке инфраструктуры со слотами развертывания Azure с помощью Terraform
 description: Узнайте, как использовать Terraform со слотами развертывания поставщика Azure.
 keywords: Azure DevOps, Terraform, слоты развертывания
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: 8f5597684a9d61474685f8117fa584405fa0979e
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: 8ae9f51b82f7868e4df11f1586664f203aa5403b
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171960"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478490"
 ---
-# <a name="tutorial-provision-infrastructure-with-azure-deployment-slots-using-terraform"></a>Руководство по подготовке инфраструктуры со слотами развертывания Azure с помощью Terraform
+# <a name="provision-infrastructure-with-azure-deployment-slots-using-terraform"></a>подготовке инфраструктуры со слотами развертывания Azure с помощью Terraform
 
 Вы можете использовать [слоты развертывания Azure](/azure/app-service/deploy-staging-slots) для переключения между разными версиями приложения. Эту возможность помогает минимизировать влияние неработающих развертываний. 
 

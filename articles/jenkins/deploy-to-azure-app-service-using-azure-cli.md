@@ -4,12 +4,13 @@ description: Сведения об использовании Azure CLI для �
 keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
 ms.date: 04/25/2020
-ms.openlocfilehash: 242986ca95b36d95393b7ff688ebf60bb95985fa
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.custom: devx-track-azurecli
+ms.openlocfilehash: 63a5097358001e0312af13053e3d7310fe413cc7
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861237"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478344"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 

@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 37ca9a27ec009efb0b08b0df091565209568b59a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 5d561d59b4bc84e26fc405135c26de6ec0f4f27f
+ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378188"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438344"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Управление виртуальными машинами с помощью Azure Explorer для Eclipse
 
@@ -149,8 +149,8 @@ ms.locfileid: "86378188"
 
 <!-- URL List -->
 
-[Размеры виртуальных машин Windows в Azure]: /azure/virtual-machines/virtual-machines-windows-sizes
-[Размеры виртуальных машин Linux в Azure]: /azure/virtual-machines/virtual-machines-linux-sizes
+[Размеры виртуальных машин Windows в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Размеры виртуальных машин Linux в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
 [Цены на виртуальные машины Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Цены на виртуальные машины Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

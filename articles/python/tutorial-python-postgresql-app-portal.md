@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: tracking-python
-ms.openlocfilehash: 7d155d307f1984861188ac7daab82db5104a6a7a
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: f3c667ab720a3e8c82b59dc439b8033697b4fc2a
+ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401575"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87810597"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
@@ -279,4 +279,4 @@ ms.locfileid: "87401575"
 Узнайте, как Служба приложений запускает приложение Python:
 
 > [!div class="nextstepaction"]
-> [Настройка приложения Python](/azure/app-service/containers/how-to-configure-python.md)
+> [Настройка приложения Python](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python)

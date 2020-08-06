@@ -6,13 +6,13 @@ ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
-ms.custom: devx-track-java
-ms.openlocfilehash: 4da3d61a8335ebe71e248204f1181e11944a8a42
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: 028d3c9d0270a69ac9894b3176eda305b02a6abc
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379348"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478424"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
 

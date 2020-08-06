@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 5/26/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: c779a85f49ccd7507882fbd123a329addca60a7c
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 7bc4a5188181f3b4b6d98b5308a5027a42bbac5e
+ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379748"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87810587"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-spring-cloud"></a>Перенос приложений Spring Boot в Azure Spring Cloud
 
@@ -134,7 +134,7 @@ az spring-cloud app update -n <application name> --is-public true
 
 * Оцените возможность настроить работу приложения с реестром Spring Cloud. Это позволит другим развернутым микрослужбам и клиентам динамически обнаруживать это приложение. Дополнительные сведения см. в статье [Учебник. по подготовке приложения Java Spring для развертывания в Azure Spring Cloud](/azure/spring-cloud/spring-cloud-tutorial-prepare-app-deployment). Затем измените все клиенты приложений, чтобы они использовали подсистему балансировки нагрузки клиентов Spring. Это позволит клиенту получать адреса всех работающих экземпляров приложения и находить работающий экземпляр, когда нарушается работа другого экземпляра или он не отвечает. Дополнительные сведения см. в записи [Spring Tips: Spring Cloud Loadbalancer](https://spring.io/blog/2020/03/25/spring-tips-spring-cloud-loadbalancer) (Советы по Spring: подсистема балансировки нагрузки в Spring Cloud) блога, посвященного Spring Cloud.
 
-* Вместо того, чтобы делать приложение общедоступным, попробуйте добавить экземпляр [шлюза Spring Cloud](https://cloud.spring.io/spring-cloud-static/spring-cloud-gateway/current/reference/html/). Шлюз Spring Cloud выполняет роль единой конечной точки для всех приложений и микрослужб, развернутых в экземпляре Spring Cloud. Если шлюз Spring Cloud уже развернут, настройте маршрутизацию трафика в только что развернутое приложение.
+* Вместо того, чтобы делать приложение общедоступным, попробуйте добавить экземпляр [шлюза Spring Cloud](https://cloud.spring.io/spring-cloud-gateway/reference/html/). Шлюз Spring Cloud выполняет роль единой конечной точки для всех приложений и микрослужб, развернутых в экземпляре Spring Cloud. Если шлюз Spring Cloud уже развернут, настройте маршрутизацию трафика в только что развернутое приложение.
 
 * Попробуйте добавить сервер облачной конфигурации Spring Cloud для централизованного управления всеми микрослужбами Spring Cloud и настройки управления версиями. Сначала создайте репозиторий Git для размещения конфигурации и настройте его использование в экземпляре Azure Spring Cloud. Дополнительные сведения см. в статье [Учебник. Настройка экземпляра сервера конфигурации Spring Cloud для службы](/azure/spring-cloud/spring-cloud-tutorial-config-server). Затем перенесите конфигурацию, выполнив следующие действия:
 

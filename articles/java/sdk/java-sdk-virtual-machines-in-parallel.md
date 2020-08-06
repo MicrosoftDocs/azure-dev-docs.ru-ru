@@ -7,19 +7,19 @@ ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
 ms.custom: devx-track-java
-ms.openlocfilehash: 78f50ce1c0110a9329d259d951e665a65bcbafeb
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: a0e93cd355560c62c91cee61df843564e738dd25
+ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379408"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87438352"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Создание виртуальных машин в нескольких регионах из приложений Java
 
 [В этом примере](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel) виртуальные машины создаются параллельно в разных регионах Azure с помощью [библиотек управления Azure для Java](https://github.com/Azure/azure-sdk-for-java).
 
 > [!IMPORTANT]
-> В этом примере в четырех регионах создается 48 виртуальных машин [размером STANDARD_DS3_V2](/azure/virtual-machines/virtual-machines-windows-sizes) под управлением LTS Ubuntu 16.04. Этот пример кода удаляет виртуальные машины перед завершением работы. Обязательно [проверьте квоты и ограничения службы](/azure/azure-subscription-service-limits), прежде чем выполнять этот пример с определенным по умолчанию числом виртуальных машин.
+> В этом примере в четырех регионах создается 48 виртуальных машин [размером STANDARD_DS3_V2](https://docs.microsoft.com/azure/virtual-machines/sizes) под управлением LTS Ubuntu 16.04. Этот пример кода удаляет виртуальные машины перед завершением работы. Обязательно [проверьте квоты и ограничения службы](/azure/azure-subscription-service-limits), прежде чем выполнять этот пример с определенным по умолчанию числом виртуальных машин.
 
 ## <a name="run-the-sample"></a>Запуск примера
 

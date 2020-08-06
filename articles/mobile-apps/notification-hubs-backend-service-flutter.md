@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: 624de3b00000bf553cb2e36b46c6497690d5638e
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: b9c5f45dfa95af43ec3b56ca9c86957fcd1b7b88
+ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401572"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87810657"
 ---
 # <a name="tutorial-send-push-notifications-to-flutter-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по Отправка push-уведомлений в приложения Flutter с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -66,7 +66,7 @@ ms.locfileid: "87401572"
 * [Портал разработчика Apple](https://developer.apple.com)
 * [ASP.NET Core](https://docs.microsoft.com/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
-* [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started.md)
+* [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](https://docs.microsoft.com/azure/notification-hubs/ios-sdk-get-started)
 * [Flutter](https://flutter.dev) и [Dart](https://dart.dev) для кросс-платформенной разработки
 * [Kotlin](https://kotlinlang.org) и [Swift](https://developer.apple.com/swift) для разработки нативных приложений для Android и iOS
 
@@ -120,15 +120,15 @@ ms.locfileid: "87401572"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-* [Общие сведения о Центрах уведомлений Azure](/azure/notification-hubs/notification-hubs-push-notification-overview.md)
+* [Общие сведения о Центрах уведомлений Azure](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)
 * [Установка Flutter в macOS](https://flutter.dev/docs/get-started/install/macos)
 * [Установка Flutter в Windows](https://flutter.dev/docs/get-started/install/windows)
 * [Пакет средств разработки Центров уведомлений для операций серверной части](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
 * [Пакет средств разработки для Центров уведомлений на GitHub](https://github.com/Azure/azure-notificationhubs)
-* [Регистрация в серверной части приложения](/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification.md)
-* [Управление регистрацией](/azure/notification-hubs/notification-hubs-push-notification-registration-management.md)
-* [Работа с тегами](/azure/notification-hubs/notification-hubs-tags-segment-push-message.md)
-* [Работа с пользовательскими шаблонами](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages.md)
+* [Регистрация в серверной части приложения](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification)
+* [Управление регистрацией](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management)
+* [Работа с тегами](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message)
+* [Работа с пользовательскими шаблонами](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
