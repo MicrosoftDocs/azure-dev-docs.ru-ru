@@ -1,20 +1,20 @@
 ---
-title: Учебник. Создание масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
+title: созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
 description: Узнайте, как использовать Terraform для настройки и управления версиями масштабируемого набора виртуальных машин Azure из пользовательского образа, созданного с помощью Packer
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 11/07/2019
-ms.openlocfilehash: f72d8ab828259e4408ceb78528ce310a214e05ad
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 541d294a3098e2da7c76855de4db0c425b408e0e
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334399"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478474"
 ---
-# <a name="tutorial-create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>Руководство по созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
+# <a name="create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
 
 [Масштабируемые наборы виртуальных машин Azure](/azure/virtual-machine-scale-sets) позволяют настроить идентичные виртуальные машины. Количество экземпляров виртуальных машин можно настроить по запросу или расписанию. Дополнительные сведения см. в статье [Автоматическое масштабирование масштабируемого набора виртуальных машин на портале Azure](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-portal).
 
-В этом руководстве описано следующее:
+Вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * настройка развертывания Terraform;
@@ -158,14 +158,14 @@ terraform apply
 
 
 ## <a name="create-an-azure-image-by-using-packer"></a>Создание образа Azure с помощью Packer
-Создайте пользовательский образ Linux, выполнив действия, описанные в руководстве [Создание образов виртуальных машин Linux в Azure с помощью Packer](/azure/virtual-machines/linux/build-image-with-packer).
+Создайте пользовательский образ Linux, выполнив действия, описанные в статье [Создание образов виртуальных машин Linux в Azure с помощью Packer](/azure/virtual-machines/linux/build-image-with-packer).
  
-Выполните шаги из руководства, чтобы создать отозванный образ Ubuntu с установленным Nginx.
+Выполните шаги из статьи, чтобы создать отозванный образ Ubuntu с установленным Nginx.
 
 ![После создания вы получаете образ Packer](./media/create-vm-scaleset-network-disks-using-packer-hcl/packerimagecreated.png)
 
 > [!NOTE]
-> Для целей данного руководства выполняется команда для установки Nginx в образе Packer. Во время создания можно также запустить собственный сценарий.
+> В рамках этой статьи установка Nginx в образе Packer выполняется с помощью команды. Во время создания можно также запустить собственный сценарий.
 
 ## <a name="edit-the-infrastructure-to-add-the-virtual-machine-scale-set"></a>Изменение инфраструктуры для добавления масштабируемого набора виртуальных машин
 
@@ -442,7 +442,7 @@ terraform apply
 
 ## <a name="clean-up-the-environment"></a>Очистка среды
 
-С помощью следующих команд удаляются ресурсы, созданные в этом руководстве:
+С помощью следующих команд удаляются ресурсы, созданные при работе с этой статьей:
 
 ```bash
 terraform destroy

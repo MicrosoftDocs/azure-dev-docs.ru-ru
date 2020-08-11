@@ -1,21 +1,21 @@
 ---
-title: Руководство. Создание кластера Kubernetes с помощью службы Azure Kubernetes и Terraform
+title: Создание кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform
 description: Узнайте, как создать кластер Kubernetes с помощью Службы Azure Kubernetes и Terraform.
 keywords: Azure DevOps, Terraform, AKS, Kubernetes
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: 6056b6990e820d863404eea7394adc483de0cd3c
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 0f0d8eb512f4ba6d2e4245ad61dcb41d969cf4b8
+ms.sourcegitcommit: da9fab1b718c71e40c7cbe0a08526c316dcdd6df
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334459"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87525809"
 ---
-# <a name="tutorial-create-a-kubernetes-cluster-with-azure-kubernetes-service-using-terraform"></a>Руководство по созданию кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform
+# <a name="create-a-kubernetes-cluster-with-azure-kubernetes-service-using-terraform"></a>созданию кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform
 
 [Служба Azure Kubernetes (AKS)](/azure/aks/) управляет размещенной средой Kubernetes. AKS позволяет развернуть и администрировать контейнерные приложения даже без опыта в оркестрации контейнеров. AKS также позволяет выполнять множество общих операций обслуживания без перевода приложения в автономный режим. Эти операции включают подготовку, обновление и масштабирование ресурсов по требованию.
 
-Из этого руководства вы узнаете, как выполнять такие задачи:
+В этой статье вы узнаете, как выполнить следующие задачи:
 
 > [!div class="checklist"]
 > * определение кластера Kubernetes с помощью языка HCL;
@@ -147,7 +147,7 @@ ms.locfileid: "87334459"
         default_node_pool {
             name            = "agentpool"
             node_count      = var.agent_count
-            vm_size         = "Standard_DS1_v2"
+            vm_size         = "Standard_D2_v2"
         }
 
         service_principal {
@@ -160,6 +160,11 @@ ms.locfileid: "87334459"
             enabled                    = true
             log_analytics_workspace_id = azurerm_log_analytics_workspace.test.id
             }
+        }
+        
+        network_profile {
+        load_balancer_sku = "Standard"
+        network_plugin = "kubenet"
         }
 
         tags = {
@@ -334,7 +339,7 @@ Terraform отслеживает состояние локально через 
 
     ![Пример результатов выполнения команды terraform plan](./media/create-k8s-cluster-with-tf-and-aks/terraform-plan-complete.png)
 
-1. Выполните команду `terraform apply`, чтобы применить план для создания кластера Kubernetes. Процесс создания кластера Kubernetes может занять несколько минут. В результате может быть превышено время ожидания сеанса Cloud Shell. Если время ожидания сеанса Cloud Shell истечет, можно выполнить действия из раздела "Восстановление после истечения времени ожидания Cloud Shell", что позволит завершить работу с руководством.
+1. Выполните команду `terraform apply`, чтобы применить план для создания кластера Kubernetes. Процесс создания кластера Kubernetes может занять несколько минут. В результате может быть превышено время ожидания сеанса Cloud Shell. Если время ожидания сеанса Cloud Shell истечет, можно выполнить действия из раздела "Восстановление после истечения времени ожидания Cloud Shell", чтобы завершить процесс.
 
     ```bash
     terraform apply out.plan

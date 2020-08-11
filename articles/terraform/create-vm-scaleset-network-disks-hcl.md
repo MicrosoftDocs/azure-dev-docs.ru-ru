@@ -1,20 +1,20 @@
 ---
-title: Руководство. Создание масштабируемого набора виртуальных машин Azure с помощью Terraform
+title: созданию масштабируемого набора виртуальных машин Azure с помощью Terraform
 description: Узнайте, как использовать Terraform для настройки и модификации масштабируемого набора виртуальных машин Azure.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 11/07/2019
-ms.openlocfilehash: 057fbec811c842b27823395735186120612bc6c5
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 75481c04038b13d81fa273e53bd1950c84fa5053
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334409"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478504"
 ---
-# <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>Руководство по созданию масштабируемого набора виртуальных машин Azure с помощью Terraform
+# <a name="create-an-azure-virtual-machine-scale-set-using-terraform"></a>созданию масштабируемого набора виртуальных машин Azure с помощью Terraform
 
 [Масштабируемые наборы виртуальных машин Azure](/azure/virtual-machine-scale-sets) позволяют настроить идентичные виртуальные машины. Количество экземпляров виртуальных машин можно настроить по запросу или расписанию. Дополнительные сведения см. в статье [Автоматическое масштабирование масштабируемого набора виртуальных машин на портале Azure](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-portal).
 
-В этом руководстве описано следующее:
+Вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * настройка развертывания Terraform;
@@ -512,7 +512,7 @@ ms.locfileid: "87334409"
 
 ## <a name="environment-cleanup"></a>Очистка среды
 
-Чтобы удалить ресурсы Terraform, которые вы создали при работе с этим руководством, введите следующую команду в Cloud Shell:
+Чтобы удалить ресурсы Terraform, которые вы создали при работе с этой статье, введите следующую команду в Cloud Shell:
 
 ```bash
 terraform destroy

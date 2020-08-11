@@ -1,17 +1,17 @@
 ---
-title: Краткое руководство. Начало работы с Terraform с использованием PowerShell
+title: Краткое руководство. Начало работы с Terraform с использованием Windows и PowerShell
 description: Из этого краткого руководства можно узнать, как установить и настроить Terraform для создания ресурсов Azure.
 keywords: azure devops terraform установка настройка windows init план применение выполнение вход портал rbac субъект-служба автоматизированный сценарий powershell
 ms.topic: quickstart
 ms.date: 07/27/2020
-ms.openlocfilehash: 40663f23d79066354cb7a78318eba7a8998676c5
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: 055d3fcdbe095ddc3e5e1f5b90efcbd4950d43f6
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400662"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478584"
 ---
-# <a name="quickstart-get-started-with-terraform-using-powershell"></a>Краткое руководство. Начало работы с Terraform с использованием PowerShell
+# <a name="quickstart-get-started-with-terraform-using-windows-and-powershell"></a>Краткое руководство. Начало работы с Terraform с использованием Windows и PowerShell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 

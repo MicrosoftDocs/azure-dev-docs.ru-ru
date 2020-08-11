@@ -1,16 +1,16 @@
 ---
-title: Руководство. Настройка расширения Visual Studio Code для Azure Terraform
+title: Настройка расширения Visual Studio Code для Azure Terraform
 description: Сведения о том, как установить и использовать расширение Azure Terraform в Visual Studio Code.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 10/26/2019
-ms.openlocfilehash: 7bbddd2d455e53354829557b99c19a8fb3e3dbf7
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 6ac6cada3e7a411d940f5207fa6cfa10f4fea0de
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334489"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478554"
 ---
-# <a name="tutorial-configure-the-azure-terraform-visual-studio-code-extension"></a>Руководство по Настройка расширения Visual Studio Code для Azure Terraform
+# <a name="configure-the-azure-terraform-visual-studio-code-extension"></a>Настройка расширения Visual Studio Code для Azure Terraform
 
 Расширение Visual Studio Code для Azure Terraform позволяет работать с Terraform в редакторе. С помощью этого расширения можно создавать, тестировать и выполнять конфигурации Terraform. Это расширение также поддерживает визуализацию графа ресурсов.
 
@@ -166,7 +166,7 @@ ms.locfileid: "87334489"
 
 ### <a name="visualize-the-plan"></a>Визуализация плана
 
-Ранее с помощью этого руководства вы установили GraphViz. Terraform с помощью GraphViz может создать визуальное представление плана выполнения или конфигурации. Расширение Azure Terraform для Visual Studio Code реализует эту функцию с помощью команды *visualize*.
+Ранее по инструкциям из этой статьи вы установили GraphViz. Terraform с помощью GraphViz может создать визуальное представление плана выполнения или конфигурации. Расширение Azure Terraform для Visual Studio Code реализует эту функцию с помощью команды *visualize*.
 
 - В строке меню выберите **Просмотр > Палитра команд > Azure Terraform: visualize**.
 

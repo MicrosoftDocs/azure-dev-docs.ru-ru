@@ -1,19 +1,19 @@
 ---
-title: Руководство. Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
+title: Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
 description: Узнайте, как использовать модули Terraform для создания кластера виртуальных машин Windows в Azure.
 keywords: Azure DevOps, Terraform, виртуальная машина, кластер виртуальных машин, реестр модулей
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: ad318237dcefd6586211c45fb79e51baa05549c4
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 771f8a1ce86aa36f7dfa9cf3f97f50e41ca23efa
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334389"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478454"
 ---
-# <a name="tutorial-create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Руководство по Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
+# <a name="create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
 
-В этой статье описывается создание небольшого кластера виртуальных машин с помощью [модуля вычислений Azure](https://registry.terraform.io/modules/Azure/compute/azurerm/1.0.2) Terraform. Из этого руководства вы узнаете, как выполнить следующие задачи: 
+В этой статье описывается создание небольшого кластера виртуальных машин с помощью [модуля вычислений Azure](https://registry.terraform.io/modules/Azure/compute/azurerm/1.0.2) Terraform. В этой статье раскрываются следующие темы:
 
 > [!div class="checklist"]
 > * настройка аутентификации в Azure;
@@ -30,7 +30,7 @@ ms.locfileid: "87334389"
 ## <a name="set-up-authentication-with-azure"></a>настройка аутентификации в Azure;
 
 > [!TIP]
-> При [использовании переменной среды Terraform](get-started-cloud-shell.md) или выполнении этого руководства в [Azure Cloud Shell](/azure/cloud-shell/overview) пропустите этот шаг.
+> Пропустите этот шаг, если вы [используете переменные среды Terraform](get-started-cloud-shell.md) или выполняете этот пример в [Azure Cloud Shell](/azure/cloud-shell/overview).
 
  Просмотрите статью об [установке Terraform и настройке доступа к Azure](get-started-cloud-shell.md), чтобы создать субъект-службу Azure. Используйте этот субъект-службу для заполнения нового файла `azureProviderAndCreds.tf` в пустом каталоге с помощью следующего кода:
 

@@ -1,18 +1,18 @@
 ---
-title: Учебник. Создание базового шаблона Terraform в Azure с использованием Yeoman
+title: Создание базового шаблона Terraform в Azure с использованием Yeoman
 description: Здесь вы узнаете, как создать базовый шаблон Terraform в Azure с использованием Yeoman.
-ms.topic: tutorial
+ms.topic: how-to
 ms.date: 05/25/2020
-ms.openlocfilehash: 8e9c4444d95f052fc5872565b316ec15e033be82
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: e43c28232009f3dec274ad2c1749d9ab5d88957b
+ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334469"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87478534"
 ---
-# <a name="tutorial-create-a-terraform-base-template-in-azure-using-yeoman"></a>Руководство по Создание базового шаблона Terraform в Azure с использованием Yeoman
+# <a name="create-a-terraform-base-template-in-azure-using-yeoman"></a>Создание базового шаблона Terraform в Azure с использованием Yeoman
 
-В этом руководстве вы узнаете, как использовать сочетание [Terraform](/azure/terraform/) и [Yeoman](https://yeoman.io/). Terraform — это инструмент для создания инфраструктуры в Azure. Yeoman упрощает создание модулей Terraform.
+Из этого руководства вы узнаете, как использовать [Terraform](/azure/terraform/) с [Yeoman](https://yeoman.io/). Terraform — это инструмент для создания инфраструктуры в Azure. Yeoman упрощает создание модулей Terraform.
 
 В этой статье вы узнаете, как выполнить следующие задачи:
 > [!div class="checklist"]
@@ -32,7 +32,7 @@ ms.locfileid: "87334469"
 - **Язык программирования Go**. [Установка Go](https://golang.org/) в виде тестовых случаев, создаваемых Yeoman, — это код, использующий язык Go.
 
 >[!NOTE]
->Большая часть процедур, описанных в этом руководстве включают в себя интерфейс командной строки. Описанные шаги применяются для всех операционных систем и средств командной строки. Для этих примеров мы используем PowerShell для локальной среды и Git Bash для среды Cloud Shell.
+>Большая часть процедур, описанных в этой статье, включают в себя интерфейс командной строки. Описанные шаги применяются для всех операционных систем и средств командной строки. Для этих примеров мы используем PowerShell для локальной среды и Git Bash для среды Cloud Shell.
 
 ## <a name="prepare-your-environment"></a>Подготовка среды
 
