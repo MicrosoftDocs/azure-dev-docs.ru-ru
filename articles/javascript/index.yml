@@ -13,12 +13,12 @@ metadata:
   ms.technology: azure
   ms.service: multiple
   ms.devlang: javascript
-  ms.openlocfilehash: 946afb0fff0d5a32647b94c8e4bee5fc6f328586
-  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
+  ms.openlocfilehash: 9bd3770871be1c687f8f3096a840c0dd465dec54
+  ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/28/2020
-  ms.locfileid: "87260381"
+  ms.lasthandoff: 08/07/2020
+  ms.locfileid: "87983446"
 landingContent:
 - title: Начало работы в Azure
   linkLists:
@@ -34,8 +34,8 @@ landingContent:
       url: /samples/browse/?languages=javascript,nodejs
   - linkListType: learn
     links:
-    - text: Создание приложений Node.js
-      url: /learn/paths/build-javascript-applications-nodejs/
+    - text: Модули и курсы Microsoft Learn
+      url: learn-azure-javascript.md
   - linkListType: reference
     links:
     - text: Справочная документация по API
