@@ -10,12 +10,12 @@ metadata:
   ms.date: 04/03/2020
   ms.topic: landing-page
   ms.custom: seo-azure-migrate
-  ms.openlocfilehash: 8e1d7912ff2910e717fba1f3518dcf3a55847ee4
-  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
+  ms.openlocfilehash: 9441fc04c0ec04b07870221168a235b6bc67c585
+  ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/28/2020
-  ms.locfileid: "87260331"
+  ms.lasthandoff: 08/10/2020
+  ms.locfileid: "88052231"
 landingContent:
 - title: Перенос приложений Java в Azure
   linkLists:
@@ -49,8 +49,10 @@ landingContent:
       url: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
     - text: Переход из WebLogic в Виртуальные машины Azure
       url: migrate-weblogic-to-virtual-machines.md
-    - text: Миграция из WebLogic в Azure с использованием AAD и LDAP
+    - text: Взаимодействие WebLogic с AAD по протоколу LDAP
       url: migrate-weblogic-with-aad-ldap.md
+    - text: Использование WebLogic со Шлюзом приложений
+      url: migrate-weblogic-with-app-gateway.md
 - title: Миграция из WildFly в Azure
   linkLists:
   - linkListType: how-to-guide

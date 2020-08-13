@@ -20,8 +20,10 @@
       items:
         - name: Переход из WebLogic в Виртуальные машины Azure
           href: migrate-weblogic-to-virtual-machines.md
-        - name: Миграция из WebLogic в Azure с использованием AAD и LDAP
+        - name: Взаимодействие WebLogic с AAD по протоколу LDAP
           href: migrate-weblogic-with-aad-ldap.md
+        - name: Использование WebLogic со Шлюзом приложений
+          href: migrate-weblogic-with-app-gateway.md
     - name: Переход с WildFly на WildFly в AKS
       href: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
     - name: Переход с WebLogic на WildFly в AKS
