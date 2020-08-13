@@ -3,13 +3,13 @@ title: Руководство по Развертывание приложени
 description: 'Шаг руководства 1: введение, предварительные требования и вход в Azure.'
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 444dd9737d52de58f71ef9a01aeca6a203e97a92
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 88335c081375e0a3830de7676e137f5b1038a98c
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069380"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147405"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Развертывание приложений Python в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -20,7 +20,7 @@ ms.locfileid: "85069380"
 Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=dNVvFttc-sA&feature=youtu.be&ocid=AID3006292" target="_blank">Создание веб-приложений с помощью VS Code и Службы приложений Azure</a> (YouTube.com).
 
 > [!TIP]
-> [Служба приложений Azure в Linux](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro) предназначена для выполнения исходного кода в предварительно определенном контейнере Docker. Этот контейнер запускает приложения в среде Python 3.7, используя веб-сервер [Gunicorn](https://gunicorn.org). Характеристики этого контейнера описаны в статье [Настройка приложения Python в Linux для Службы приложений Azure](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python). Само определение контейнера находится по адресу [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).
+> [Служба приложений Azure в Linux](/azure/app-service/overview#app-service-on-linux) предназначена для выполнения исходного кода в предварительно определенном контейнере Docker. Этот контейнер запускает приложения в среде Python 3.7, используя веб-сервер [Gunicorn](https://gunicorn.org). Характеристики этого контейнера описаны в статье [Настройка приложения Python в Linux для Службы приложений Azure](/azure/app-service/configure-language-python). Само определение контейнера находится по адресу [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).
 
 ## <a name="prerequisites"></a>Предварительные требования
 

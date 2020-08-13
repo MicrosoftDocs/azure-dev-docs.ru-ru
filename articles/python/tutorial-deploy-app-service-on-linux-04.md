@@ -3,13 +3,13 @@ title: Шаг 4. Настройка пользовательского файл
 description: Руководство, шаг 4. Инструкции по настройке способа запуска веб-приложения в Службе приложений, в частности для Django, Flask и других платформ.
 ms.topic: conceptual
 ms.date: 05/19/2020
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 1e724fa7d35c1b3488dbe6738a4840e20bbfbf96
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 5de5f7f52fbf8c88bf05c7cb300952aee81a8439
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256449"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147385"
 ---
 # <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "84256449"
 
 В этой статье описано, как настроить пользовательский файл запуска для приложения Python в Службе приложений Azure.
 
-В зависимости от структуры приложения вам может потребоваться пользовательский файл с командой запуска (см. руководстве по [настройке приложений Python для Службы приложений в Linux](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python) в документации Azure).
+В зависимости от структуры приложения вам может потребоваться пользовательский файл с командой запуска (см. руководстве по [настройке приложений Python для Службы приложений в Linux](/azure/app-service/configure-language-python) в документации Azure).
 
 Ниже перечислены сценарии использования такого файла:
 

@@ -4,12 +4,12 @@ description: Узнайте, как увеличить емкость конве
 keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
 ms.date: 07/31/2018
-ms.openlocfilehash: 488569312a665d6efb91e995490254289024a745
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c5ea0c3782414abfda47810ba68ad1092cd7b0d5
+ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170540"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88162053"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Руководство по масштабированию развертываний Jenkins с помощью агентов виртуальных машин Azure
 
@@ -28,9 +28,6 @@ ms.locfileid: "82170540"
 > [!VIDEO https://channel9.msdn.com/Shows/Azure-Friday/Continuous-Integration-with-Jenkins-Using-Azure-VM-Agents/player]
 
 ## <a name="install-azure-vm-agents-plugin"></a>Установка подключаемого модуля агентов виртуальных машин
-
-> [!TIP]
-> Подключаемый модуль агента виртуальной машины Azure уже установлен, если вы развернули Jenkins в Azure с помощью [этого шаблона решения](configure-on-linux-vm.md).
 
 1. На панели мониторинга Jenkins выберите **Manage Jenkins** (Управление Jenkins), а затем — **Manage Plugins** (Управление подключаемыми модулями).
 

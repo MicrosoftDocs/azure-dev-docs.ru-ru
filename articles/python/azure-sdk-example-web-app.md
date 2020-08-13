@@ -3,12 +3,13 @@ title: Подготовка и развертывание веб-приложе�
 description: Узнайте, как с помощью библиотек управления из библиотек Azure SDK для Python подготовить веб-приложение, а затем развернуть код приложения из репозитория GitHub.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: f09775fbd5eda59e9e4a687d63acca052429b8e1
-ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
+ms.custom: devx-track-python
+ms.openlocfilehash: 6da2da6ba2111608d965c8d2f7243b9a42fa7055
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716082"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147375"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-and-deploy-a-web-app"></a>Пример использования библиотек Azure для подготовки и развертывания веб-приложения
 
@@ -138,7 +139,7 @@ print(f"Provisioned web app {web_app_result.name} at {web_app_result.default_hos
 # Step 4: deploy code from a GitHub repository. For Python code, App Service on Linux runs
 # the code inside a container that makes certain assumptions about the structure of the code.
 # For more information, see How to configure Python apps,
-# https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python.
+# https://docs.microsoft.com/azure/app-service/configure-language-python.
 #
 # The create_or_update_source_control method doesn't provision a web app. It only sets the
 # source control configuration for the app. In this case we're simply pointing to

@@ -3,12 +3,13 @@ title: Создание рабочего процесса приложения �
 description: Создание рабочего процесса приложения логики
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.openlocfilehash: e561d57427b4a8e52f1d13bf3a0ff36fc0ed047c
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-python
+ms.openlocfilehash: c14a575cb1a1dbc8caa88c8fe439fedbe0886c57
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441659"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982646"
 ---
 # <a name="create-a-logic-app-workflow"></a>Создание рабочего процесса приложения логики
 

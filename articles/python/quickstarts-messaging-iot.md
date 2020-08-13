@@ -3,12 +3,13 @@ title: Начало работы с обменом сообщениями и И�
 description: Индекс материалов по началу работы в документации Azure по обмену сообщениями и Интернету вещей для приложений Python.
 ms.date: 05/28/2020
 ms.topic: conceptual
-ms.openlocfilehash: 23c4f8d92d8ae0653eff43c29db8d06b15df4e67
-ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
+ms.custom: devx-track-python
+ms.openlocfilehash: b9c3746d5f6dab9cca74d9493e0e68380018db19
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84207627"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983016"
 ---
 # <a name="messaging-and-iot-for-python-apps-on-azure"></a>Обмен сообщениями и Интернет вещей для приложений Python в Azure
 

@@ -2,13 +2,14 @@
 title: Средства для разработчиков Python в Azure
 description: Средства интеграции IDE и интерфейсы командной строки для разработчиков Python, работающих со службами Azure.
 ms.topic: conceptual
-ms.date: 02/19/2020
-ms.openlocfilehash: 04616841d9e345a29209814f7a32576b54fc25da
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/06/2020
+ms.custom: devx-track-python
+ms.openlocfilehash: cd81a4dcceb4d13630fd5cad60162729028eb91e
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441629"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982576"
 ---
 # <a name="azure-tools-for-python-developers"></a>Средства для разработчиков Python в Azure
 
@@ -41,4 +42,3 @@ Azure CLI — кроссплатформенный интерфейс кома�
 Visual Studio в Windows предоставляет поддержку Python (открытый код), реализованную с помощью и рабочих нагрузок Python для разработки и обработки и анализа данных (в Visual Studio 2017 и выше), а также бесплатного расширения "Инструменты Python для Visual Studio" (в Visual Studio 2015 и ниже). Visual Studio чаще всего используют разработчики, работающие с Python и C++, так как Visual Studio обеспечивает лучшую в своем классе поддержку разных языков для разработки и отладки.
 
 [Установка средств для поддержки Python в Visual Studio](https://docs.microsoft.com/visualstudio/python/installation)
-

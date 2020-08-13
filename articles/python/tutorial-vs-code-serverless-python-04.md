@@ -3,13 +3,13 @@ title: Шаг 4. Локальная отладка кода Python в Функ�
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 ms.topic: conceptual
 ms.date: 05/19/2020
-ms.custom: seo-python-october2019
-ms.openlocfilehash: 761ffab12712f5c90127665addb65201016be2c8
-ms.sourcegitcommit: 0d492c9cc9b5295285ab75da55e5ab0577576287
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 8b7af7f4ebc5861083f5fd430129b8f013199bf3
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85370695"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983476"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 

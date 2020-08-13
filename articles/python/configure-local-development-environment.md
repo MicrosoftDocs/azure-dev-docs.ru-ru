@@ -3,12 +3,13 @@ title: Настройка локальной среды Python для разра
 description: Сведения о настройке локальной среды разработки Python для работы с Azure, включая Visual Studio Code, библиотеки Azure SDK и необходимые учетные данные для проверки подлинности библиотеки.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: cf87c90bd36594ffa4e1f3837133238f89a77836
-ms.sourcegitcommit: 43e4b50f6f6f5806b2f162ca39367face0779ff6
+ms.custom: devx-track-python
+ms.openlocfilehash: 8d20960df802dc4671f6b432173a56f6dc88c38c
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421500"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983146"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Настройка локальной среды разработки Python для Azure
 

@@ -3,13 +3,13 @@ title: Руководство по Создание и развертывани�
 description: 'Руководство, шаг 1: общие сведения и предварительные требования.'
 ms.topic: conceptual
 ms.date: 05/19/2020
-ms.custom: seo-python-october2019
-ms.openlocfilehash: e05402123da0c95a7e3abed8d0f525ad0c065bbe
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: 25ae33cef961b35747ee614a52ff80ebf1e96d62
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069375"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982986"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 

@@ -3,12 +3,13 @@ title: Подготовка виртуальной машины с помощь�
 description: Узнайте, как подготовить виртуальную машину Azure с помощью Python и библиотек управления Azure SDK.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 4b11caa66eb297225b4b61000575a8a9c48edb19
-ms.sourcegitcommit: 5ebbc1c06f98e29a146764661efbf34957020fe8
+ms.custom: devx-track-python
+ms.openlocfilehash: a6595b60a70ab3b6ee36bf95b4557cb37c496188
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716092"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983496"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Пример использования библиотек Azure для подготовки виртуальной машины
 

@@ -3,12 +3,13 @@ title: Использование библиотек Azure (пакет SDK) дл
 description: Обзор функций и возможностей библиотек Azure для Python, которые позволяют повысить продуктивность разработчиков при подготовке, использовании и администрировании ресурсов Azure.
 ms.date: 05/26/2020
 ms.topic: conceptual
-ms.openlocfilehash: ffa626db0518967e2659eeb5b89ece4bc15c1ce2
-ms.sourcegitcommit: 7474de4884bce076ce33ca77ae3584ba1598bbc6
+ms.custom: devx-track-python
+ms.openlocfilehash: dce4485a65da75d0918805ef55fafe71d55ce0a6
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85069388"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983286"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Использование библиотек Azure (пакет SDK) для Python
 

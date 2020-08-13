@@ -3,12 +3,13 @@ title: Подготовка службы хранилища Azure с помощ�
 description: Узнайте, как с помощью библиотек из пакета Azure SDK для Python подготовить контейнер больших двоичных объектов в учетной записи хранения Azure, а затем передать файл в этот контейнер.
 ms.date: 05/29/2020
 ms.topic: conceptual
-ms.openlocfilehash: 648abeb105f1c575d5454af09cd2279c059d7b98
-ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.custom: devx-track-python
+ms.openlocfilehash: 6a956cf0f4f4689e653307f95d5f0900c8d01589
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405725"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983436"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Пример Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 

@@ -4,17 +4,17 @@ description: Узнайте, как подготовить веб-приложе
 ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
-ms.custom: tracking-python
-ms.openlocfilehash: f3c667ab720a3e8c82b59dc439b8033697b4fc2a
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.custom: devx-track-python
+ms.openlocfilehash: 0e9785871eba8866b5d225bb9ac1339becc172a3
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810597"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147395"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
-На портале Azure вы можете развернуть управляемое данными веб-приложение Python [Django](https://www.djangoproject.com/) в [Службе приложений Azure](/azure/app-service/containers/app-service-linux-intro) и подключить его к [Базе данных Azure для PostgreSQL](/azure/postgresql/). Вы можете начать с бесплатного уровня и позже вертикально увеличить масштаб.
+На портале Azure вы можете развернуть управляемое данными веб-приложение Python [Django](https://www.djangoproject.com/) в [Службе приложений Azure](/azure/app-service/overview#app-service-on-linux) и подключить его к [Базе данных Azure для PostgreSQL](/azure/postgresql/). Вы можете начать с бесплатного уровня и позже вертикально увеличить масштаб.
 
 Источником кода веб-приложения в этом случае является репозиторий GitHub. Вы настроите веб-приложение для непрерывного развертывания из GitHub. После настройки вы можете выполнить дальнейшую разработку на локальном компьютере и зафиксировать изменения в репозитории. Веб-приложение в Azure затем автоматически развертывает эти изменения.
 
@@ -27,7 +27,7 @@ ms.locfileid: "87810597"
 > - просмотр журналов диагностики;
 > - управление веб-приложением на портале Azure.
 
-Вы также можете использовать [версию этого руководства для Azure CLI](/azure/app-service/containers/tutorial-python-postgresql-app?tabs=bash%2Cclone).
+Вы также можете использовать [версию этого руководства для Azure CLI](/azure/app-service/tutorial-python-postgresql-app).
 
 ## <a name="fork-the-sample-repository"></a>Создание вилки репозитория с примером
 
@@ -137,7 +137,7 @@ ms.locfileid: "87810597"
 
 ## <a name="connect-the-database"></a>Подключение к базе данных
 
-В этом разделе описано, как создать параметры для веб-приложения, которые требуются для его подключения к базе данных `pollsdb`. Эти параметры отображаются в коде приложения в виде переменных среды. (Дополнительную информацию см. в разделе [Доступ к переменным среды](/azure/app-service/containers/how-to-configure-python#access-environment-variables).)
+В этом разделе описано, как создать параметры для веб-приложения, которые требуются для его подключения к базе данных `pollsdb`. Эти параметры отображаются в коде приложения в виде переменных среды. (Дополнительную информацию см. в разделе [Доступ к переменным среды](/azure/app-service/configure-language-python#access-environment-variables).)
 
 1. Вернитесь на вкладку или в окно браузера к веб-приложению, созданному ранее.
 
@@ -182,7 +182,7 @@ ms.locfileid: "87810597"
 
 1. Нажмите **Продолжить**, чтобы выбрать репозиторий, а затем нажмите **Готово**. Azure развернет код в течение нескольких секунд и запустит приложение.
 
-    Служба приложений определяет проекты Django по файлу *wsgi.py* в каждой подпапке. Обнаружив такой файл, Служба приложений загружает веб-приложение Django. Дополнительные сведения см. в статье о [настройке встроенного образа Python](/azure/app-service/containers/how-to-configure-python).
+    Служба приложений определяет проекты Django по файлу *wsgi.py* в каждой подпапке. Обнаружив такой файл, Служба приложений загружает веб-приложение Django. Дополнительные сведения см. в статье о [настройке встроенного образа Python](/azure/app-service/configure-language-python).
 
 [Возникли проблемы? Сообщите нам!](https://aka.ms/DjangoPortalTutorialHelp)
 
@@ -279,4 +279,4 @@ ms.locfileid: "87810597"
 Узнайте, как Служба приложений запускает приложение Python:
 
 > [!div class="nextstepaction"]
-> [Настройка приложения Python](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python)
+> [Настройка приложения Python](/azure/app-service/configure-language-python)

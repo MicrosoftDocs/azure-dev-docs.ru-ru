@@ -3,12 +3,13 @@ title: Проверка подлинности приложений Python с п
 description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
 ms.date: 05/12/2020
 ms.topic: conceptual
-ms.openlocfilehash: 1694f85b2ad41a12865bb3d367b1b8498ab474bb
-ms.sourcegitcommit: 04ee2325e3efd9b7797102b4cd9d5db009c38a42
+ms.custom: devx-track-python
+ms.openlocfilehash: 08636d4a9b8b0b93b6e448b919a14cbfc3ae2a96
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86945822"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982676"
 ---
 # <a name="how-to-authenticate-python-apps-with-azure-services"></a>Проверка подлинности приложений Python с помощью служб Azure
 

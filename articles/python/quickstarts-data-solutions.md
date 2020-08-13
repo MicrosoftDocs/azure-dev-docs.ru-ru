@@ -3,12 +3,13 @@ title: Знакомство c решениями для работы с данн
 description: Список материалов по началу работы в документации Azure по решениям для работы с данными для приложений Python.
 ms.date: 05/28/2020
 ms.topic: conceptual
-ms.openlocfilehash: 9880025bcbe2d019d04469e6cff0b415cbbdc744
-ms.sourcegitcommit: a9b9157bb3a802ecfe3699854788d010a3f08d7e
+ms.custom: devx-track-python
+ms.openlocfilehash: bdd55f180b6ba72386bee64fb8f6bfd0b916af02
+ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202893"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147345"
 ---
 # <a name="data-solutions-for-python-apps-on-azure"></a>Решения для работы с данными для приложений Python в Azure
 
@@ -18,7 +19,7 @@ ms.locfileid: "84202893"
 
 - **PostgreSQL.**
   - [Подключение и запрос данных из Базы данных Azure для PostgreSQL с помощью Python](/azure/postgresql/connect-python)
-  - [Запуск веб-приложения Python (Django) с PostgreSQL в Службе приложений Azure](/azure/app-service/containers/tutorial-python-postgresql-app)
+  - [Запуск веб-приложения Python (Django) с PostgreSQL в Службе приложений Azure](/azure/app-service/tutorial-python-postgresql-app)
 
 - **MySQL.**
   - [Использование Python для подключения к данным и отправки запросов к ним с помощью Базы данных Azure для MySQL](/azure/mysql/connect-python)

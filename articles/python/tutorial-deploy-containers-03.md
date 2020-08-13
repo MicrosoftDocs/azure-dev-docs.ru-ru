@@ -3,13 +3,13 @@ title: Шаг 3. Повторное развертывание контейне
 description: 'Шаг руководства 3: простой процесс повторного создания и развертывания образа контейнера.'
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.custom: seo-python-october2019
-ms.openlocfilehash: f0e6eb808e25f3bb48eb2c849310747945e0d7f9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-python, seo-python-october2019
+ms.openlocfilehash: c23676dd0d8b3741881f38d1a3bbee367f7d6c58
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441869"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982886"
 ---
 # <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 

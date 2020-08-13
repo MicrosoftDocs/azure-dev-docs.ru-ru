@@ -3,12 +3,13 @@ title: Подготовка ресурсов в Azure, получения к н�
 description: Общие сведения о методах, используемых для работы с ресурсами Azure, включая портал Azure, Azure CLI и библиотеки Azure (SDK).
 ms.date: 05/27/2020
 ms.topic: conceptual
-ms.openlocfilehash: bc2fb2138c5ea5cf5438f2d892483b094e78eb8d
-ms.sourcegitcommit: b3e506c6f140d91e6fdd9dcadf22ab1aa67f6978
+ms.custom: devx-track-python
+ms.openlocfilehash: 457970eb359be9f10c6269e1ea98efec76612009
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84942423"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87983216"
 ---
 # <a name="provisioning-accessing-and-managing-resources-on-azure"></a>Подготовка ресурсов в Azure, получения к ним доступа и управление ими
 
