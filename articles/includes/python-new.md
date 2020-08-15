@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f7db99471224ab62abfee88c6353f67d29a2efa7
-ms.sourcegitcommit: f82e9f569dce0416f4040312882d28eafab05a4a
+ms.openlocfilehash: e081deeefa9e51c4da9138f67f63fcc8084be487
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057807"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88226171"
 ---
 | Имя | Пакет | Docs | Источник |
 | ---- | ------- | ---- | ------ |
@@ -15,7 +15,7 @@ ms.locfileid: "88057807"
 | Центры событий | pypi [5.1.0](https://pypi.org/project/azure-eventhub/5.1.0)<br>pypi [5.2.0b1](https://pypi.org/project/azure-eventhub/5.2.0b1) | [docs](https://docs.microsoft.com/python/api/overview/azure/eventhub-readme/) | github [5.1.0](https://github.com/Azure/azure-sdk-for-python/tree/azure-eventhub_5.1.0/sdk/eventhub/azure-eventhub/)<br>github [5.2.0b1](https://github.com/Azure/azure-sdk-for-python/tree/azure-eventhub_5.2.0b1/sdk/eventhub/azure-eventhub/) |
 | Центры событий — хранилище контрольных точек Хранилища BLOB-объектов Azure | pypi [1.1.0](https://pypi.org/project/azure-eventhub-checkpointstoreblob/1.1.0) | [docs](https://docs.microsoft.com/python/api/overview/azure/eventhub-checkpointstoreblob-readme/) | github [1.1.0](https://github.com/Azure/azure-sdk-for-python/tree/azure-eventhub-checkpointstoreblob_1.1.0/sdk/eventhub/azure-eventhub-checkpointstoreblob/) |
 | Центры событий — хранилище контрольных точек Хранилища BLOB-объектов Azure (AIO) | pypi [1.1.0](https://pypi.org/project/azure-eventhub-checkpointstoreblob-aio/1.1.0) | [docs](https://docs.microsoft.com/python/api/overview/azure/eventhub-checkpointstoreblob-aio-readme/) | github [1.1.0](https://github.com/Azure/azure-sdk-for-python/tree/azure-eventhub-checkpointstoreblob-aio_1.1.0/sdk/eventhub/azure-eventhub-checkpointstoreblob-aio/) |
-| Распознаватель документов | pypi [1.0.0b4](https://pypi.org/project/azure-ai-formrecognizer/1.0.0b4) | [docs](https://docs.microsoft.com/python/api/overview/azure/ai-formrecognizer-readme/) | github [1.0.0b4](https://github.com/Azure/azure-sdk-for-python/tree/azure-ai-formrecognizer_1.0.0b4/sdk/formrecognizer/azure-ai-formrecognizer/) |
+| Распознаватель документов | pypi [1.0.0b4](https://pypi.org/project/azure-ai-formrecognizer/1.0.0b4) | [docs](https://docs.microsoft.com/python/api/overview/azure/ai-formrecognizer-readme-pre) | github [1.0.0b4](https://github.com/Azure/azure-sdk-for-python/tree/azure-ai-formrecognizer_1.0.0b4/sdk/formrecognizer/azure-ai-formrecognizer/) |
 | Идентификация | pypi [1.3.1](https://pypi.org/project/azure-identity/1.3.1)<br>pypi [1.4.0b7](https://pypi.org/project/azure-identity/1.4.0b7) | [docs](https://docs.microsoft.com/python/api/overview/azure/identity-readme/) | github [1.3.1](https://github.com/Azure/azure-sdk-for-python/tree/azure-identity_1.3.1/sdk/identity/azure-identity/)<br>github [1.4.0b7](https://github.com/Azure/azure-sdk-for-python/tree/azure-identity_1.4.0b7/sdk/identity/azure-identity/) |
 | Key Vault — сертификаты | pypi [4.1.0](https://pypi.org/project/azure-keyvault-certificates/4.1.0)<br>pypi [4.2.0b1](https://pypi.org/project/azure-keyvault-certificates/4.2.0b1) | [docs](https://docs.microsoft.com/python/api/overview/azure/keyvault-certificates-readme/) | github [4.1.0](https://github.com/Azure/azure-sdk-for-python/tree/azure-keyvault-certificates_4.1.0/sdk/keyvault/azure-keyvault-certificates/)<br>github [4.2.0b1](https://github.com/Azure/azure-sdk-for-python/tree/azure-keyvault-certificates_4.2.0b1/sdk/keyvault/azure-keyvault-certificates/) |
 | Key Vault — ключи | pypi [4.1.0](https://pypi.org/project/azure-keyvault-keys/4.1.0)<br>pypi [4.2.0b1](https://pypi.org/project/azure-keyvault-keys/4.2.0b1) | [docs](https://docs.microsoft.com/python/api/overview/azure/keyvault-keys-readme/) | github [4.1.0](https://github.com/Azure/azure-sdk-for-python/tree/azure-keyvault-keys_4.1.0/sdk/keyvault/azure-keyvault-keys/)<br>github [4.2.0b1](https://github.com/Azure/azure-sdk-for-python/tree/azure-keyvault-keys_4.2.0b1/sdk/keyvault/azure-keyvault-keys/) |
