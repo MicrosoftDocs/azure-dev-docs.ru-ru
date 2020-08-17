@@ -8,16 +8,116 @@
       href: cloud-development-provisioning.md
     - name: Поток разработки в Azure
       href: cloud-development-flow.md
-- name: Начало работы в Azure с Python
+- name: Развертывание бессерверных функций
   items:
-    - name: Общие сведения о библиотеках Azure
+    - name: Создание функции
+      items:
+        - name: Использование Visual Studio Code
+          items:
+            - name: "1.\_Общие сведения и предварительные требования"
+              href: tutorial-vs-code-serverless-python-01.md
+            - name: "2.\_Создание функции на Python"
+              href: tutorial-vs-code-serverless-python-02.md
+            - name: "3.\_Проверка файлов кода"
+              href: tutorial-vs-code-serverless-python-03.md
+            - name: "4.\_Отладка в локальной среде"
+              href: tutorial-vs-code-serverless-python-04.md
+            - name: "5.\_Развертывание в Azure"
+              href: tutorial-vs-code-serverless-python-05.md
+            - name: "6.\_Добавление второй функции"
+              href: tutorial-vs-code-serverless-python-06.md
+            - name: "7.\_Добавление привязки к хранилищу"
+              href: tutorial-vs-code-serverless-python-07.md
+            - name: "8.\_Очистка ресурсов"
+              href: tutorial-vs-code-serverless-python-08.md
+        - name: Использование Azure CLI
+          href: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
+    - name: Подключение к службе хранилища Azure
+      items:
+        - name: Использование Visual Studio Code
+          href: /azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots=programming-language-python
+        - name: Использование Azure CLI
+          href: /azure/azure-functions/functions-add-output-binding-storage-queue-cli?tabs=bash%2Cbrowser&pivots=programming-language-python
+- name: Развертывание веб-приложений и баз данных
+  items:
+    - name: Простое приложение Flask
+      items:
+        - name: Использование Visual Studio Code
+          items:
+            - name: "1.\_Общие сведения и предварительные требования"
+              href: tutorial-deploy-app-service-on-linux-01.md
+            - name: "2.\_Подготовка приложения"
+              href: tutorial-deploy-app-service-on-linux-02.md
+            - name: "3.\_Создание Службы приложений"
+              href: tutorial-deploy-app-service-on-linux-03.md
+            - name: "4.\_Настройка файла запуска"
+              href: tutorial-deploy-app-service-on-linux-04.md
+            - name: "5.\_Развертывание приложения"
+              href: tutorial-deploy-app-service-on-linux-05.md
+            - name: "6.\_Потоковая передача журналов"
+              href: tutorial-deploy-app-service-on-linux-06.md
+            - name: "7.\_Очистка ресурсов"
+              href: tutorial-deploy-app-service-on-linux-07.md
+        - name: Использование Azure CLI
+          href: /azure/app-service/quickstart-python
+    - name: Приложение Django и PostgreSQL
+      items:
+        - name: Использование портала Azure
+          href: tutorial-python-postgresql-app-portal.md
+        - name: Использование Azure CLI
+          href: /azure/app-service/tutorial-python-postgresql-app
+    - name: Настройка непрерывной интеграции и непрерывного развертывания.
+      href: /azure/devops/pipelines/languages/python-webapp
+    - name: Настройка узла Linux
+      href: /azure/app-service/configure-language-python
+    - name: Включение возможности входа
+      href: /azure/active-directory/develop/quickstart-v2-python-webapp
+    - name: Сохранение и извлечение секретов
+      href: /azure/key-vault/quick-create-python
+    - name: Настройка Azure Monitor
+      href: /azure/azure-monitor/app/opencensus-python
+- name: Развертывание контейнеров
+  items:
+    - name: Использование Visual Studio Code
+      items:
+        - name: "1.\_Общие сведения и предварительные требования"
+          href: tutorial-deploy-containers-01.md
+        - name: "2.\_Развертывание образа контейнера"
+          href: tutorial-deploy-containers-02.md
+        - name: "3.\_Внесение изменений и повторное развертывание"
+          href: tutorial-deploy-containers-03.md
+        - name: "4.\_Потоковая передача журналов"
+          href: tutorial-deploy-containers-04.md
+        - name: "5.\_Очистка ресурсов"
+          href: tutorial-deploy-containers-05.md
+    - name: Развертывание кластера Kubernetes
+      href: /azure/aks/kubernetes-walkthrough
+- name: Развертывание моделей машинного обучения
+  href: quickstarts-machine-learning.md
+- name: Развертывание данных и хранилища
+  href: quickstarts-data-solutions.md
+- name: Использование библиотек Azure (пакетов средств разработки)
+  items:
+    - name: Обзор
       href: azure-sdk-overview.md
     - name: Настройка среды разработки
       href: configure-local-development-environment.md
     - name: Варианты использования библиотеки
       href: azure-sdk-library-usage-patterns.md
-    - name: Индекс пакетов библиотек
+    - name: Аутентификация
+      items:
+        - name: Аутентификация приложений с помощью Azure
+          href: azure-sdk-authenticate.md
+        - name: Управление субъектами-службами
+          href: how-to-manage-service-principals.md
+        - name: Назначение субъектам безопасности разрешений ролей
+          href: how-to-assign-role-permissions.md
+    - name: Установка пакетов
+      href: azure-sdk-install.md
+    - name: Индекс пакетов
       href: azure-sdk-library-package-index.md
+    - name: Справочник по API библиотеки
+      href: sdk-library-api-reference.md
     - name: Примеры
       items:
         - name: Подготовка группы ресурсов к работе
@@ -32,7 +132,15 @@
           href: azure-sdk-example-database.md
         - name: Подготовка виртуальной машины
           href: azure-sdk-example-virtual-machines.md
-- name: Изучение отдельных служб Azure
+    - name: Настройка журнала
+      href: azure-sdk-logging.md
+    - name: Настройка прокси-серверов
+      href: azure-sdk-configure-proxy.md
+    - name: Использование независимого домена
+      href: azure-sdk-sovereign-domain.md
+- name: Средства для разработчиков Python
+  href: azure-tools.md
+- name: 'Изучение служб, поддерживающих Python'
   items:
     - name: Размещение приложений
       href: quickstarts-app-hosting.md
@@ -46,103 +154,37 @@
       href: quickstarts-cognitive-services.md
     - name: Обмен сообщениями и Интернет вещей
       href: quickstarts-messaging-iot.md
-    - name: Другие службы
+    - name: Дополнительные службы
       href: quickstarts-other-services.md
-- name: Руководства по конкретным сценариям
-  items:
-    - name: Развертывание веб-приложения и базы данных (портал)
-      href: tutorial-python-postgresql-app-portal.md
-    - name: "Развертывание веб-приложения (VS\_Code)"
-      items:
-        - name: "1.\_Общие сведения и предварительные требования"
-          href: tutorial-deploy-app-service-on-linux-01.md
-        - name: "2.\_Подготовка приложения"
-          href: tutorial-deploy-app-service-on-linux-02.md
-        - name: "3.\_Создание Службы приложений"
-          href: tutorial-deploy-app-service-on-linux-03.md
-        - name: "4.\_Настройка файла запуска"
-          href: tutorial-deploy-app-service-on-linux-04.md
-        - name: "5.\_Развертывание приложения"
-          href: tutorial-deploy-app-service-on-linux-05.md
-        - name: "6.\_Потоковая передача журналов"
-          href: tutorial-deploy-app-service-on-linux-06.md
-        - name: "7.\_Очистка ресурсов"
-          href: tutorial-deploy-app-service-on-linux-07.md
-    - name: "Развертывание контейнеров (VS\_Code)"
-      items:
-        - name: "1.\_Общие сведения и предварительные требования"
-          href: tutorial-deploy-containers-01.md
-        - name: "2.\_Развертывание образа контейнера"
-          href: tutorial-deploy-containers-02.md
-        - name: "3.\_Внесение изменений и повторное развертывание"
-          href: tutorial-deploy-containers-03.md
-        - name: "4.\_Потоковая передача журналов"
-          href: tutorial-deploy-containers-04.md
-        - name: "5.\_Очистка ресурсов"
-          href: tutorial-deploy-containers-05.md
-    - name: "Развертывание бессерверных функций (VS\_Code)"
-      items:
-        - name: "1.\_Общие сведения и предварительные требования"
-          href: tutorial-vs-code-serverless-python-01.md
-        - name: "2.\_Создание функции на Python"
-          href: tutorial-vs-code-serverless-python-02.md
-        - name: "3.\_Проверка файлов кода"
-          href: tutorial-vs-code-serverless-python-03.md
-        - name: "4.\_Отладка в локальной среде"
-          href: tutorial-vs-code-serverless-python-04.md
-        - name: "5.\_Развертывание в Azure"
-          href: tutorial-vs-code-serverless-python-05.md
-        - name: "6.\_Добавление второй функции"
-          href: tutorial-vs-code-serverless-python-06.md
-        - name: "7.\_Добавление привязки к хранилищу"
-          href: tutorial-vs-code-serverless-python-07.md
-        - name: "8.\_Очистка ресурсов"
-          href: tutorial-vs-code-serverless-python-08.md
-- name: Практические руководства
-  items:
-    - name: Установка пакетов библиотек
-      href: azure-sdk-install.md
-    - name: Аутентификация приложений с помощью Azure
-      href: azure-sdk-authenticate.md
-    - name: Управление субъектами-службами
-      href: how-to-manage-service-principals.md
-    - name: Назначение субъектам безопасности разрешений ролей
-      href: how-to-assign-role-permissions.md
-    - name: Настройка журнала
-      href: azure-sdk-logging.md
-    - name: Настройка прокси-серверов
-      href: azure-sdk-configure-proxy.md
-    - name: Использование независимых доменов
-      href: azure-sdk-sovereign-domain.md
 - name: Примеры
   items:
     - name: Веб-приложения и бессерверные приложения
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-functions%2Cazure-app-service%2Cazure-logic-apps'
+      href: /samples/browse/?languages=python&products=azure-functions%2Cazure-app-service%2Cazure-logic-apps
     - name: Базы данных
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-cosmos-db%2Cazure-sql-database'
-    - name: Хранилище
+      href: /samples/browse/?languages=python&products=azure-cosmos-db%2Cazure-sql-database
+    - name: Память
       items:
         - name: Хранилище Azure
-          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-storage'
+          href: /samples/browse/?languages=python&products=azure-storage
         - name: кэш Redis;
-          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-redis-cache'
+          href: /samples/browse/?languages=python&products=azure-redis-cache
     - name: Идентификация и безопасность
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-active-directory%2Cazure-key-vault'
+      href: /samples/browse/?languages=python&products=azure-active-directory%2Cazure-key-vault
     - name: Интернет вещей
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-iot-hub%2Cazure-iot-edge%2Cazure-iot-central'
+      href: /samples/browse/?languages=python&products=azure-iot-hub%2Cazure-iot-edge%2Cazure-iot-central
     - name: Обработка и анализ данных
       items:
         - name: Служба машинного обучения
-          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-machine-learning-service'
+          href: /samples/browse/?languages=python&products=azure-machine-learning-service
         - name: Databricks
-          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-databricks'
+          href: /samples/browse/?languages=python&products=azure-databricks
         - name: HDInsight
-          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-hdinsight'
+          href: /samples/browse/?languages=python&products=azure-hdinsight
     - name: Искусственный интеллект и Cognitive Services
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-cognitive-services'
+      href: /samples/browse/?languages=python&products=azure-cognitive-services
     - name: Поиск
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-search'
+      href: /samples/browse/?languages=python&products=azure-search
     - name: Все примеры
-      href: 'https://docs.microsoft.com/samples/browse/?languages=python'
+      href: /samples/browse/?languages=python
 - name: Справочник по API библиотеки
   href: sdk-library-api-reference.md
