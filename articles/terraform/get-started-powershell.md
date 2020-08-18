@@ -3,19 +3,32 @@ title: Краткое руководство. Начало работы с Terra
 description: Из этого краткого руководства можно узнать, как установить и настроить Terraform для создания ресурсов Azure.
 keywords: azure devops terraform установка настройка windows init план применение выполнение вход портал rbac субъект-служба автоматизированный сценарий powershell
 ms.topic: quickstart
-ms.date: 07/27/2020
-ms.openlocfilehash: 055d3fcdbe095ddc3e5e1f5b90efcbd4950d43f6
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.date: 08/08/2020
+ms.openlocfilehash: 7ba60acf445f9ba29836e76aa50626985695bf2c
+ms.sourcegitcommit: 6a8485d659d6239569c4e3ecee12f924c437b235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478584"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88026155"
 ---
 # <a name="quickstart-get-started-with-terraform-using-windows-and-powershell"></a>Краткое руководство. Начало работы с Terraform с использованием Windows и PowerShell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
 В этой статье описывается, как начать работу с [Terraform в Azure](https://www.terraform.io/docs/providers/azurerm/index.html) с использованием PowerShell.
+
+Вы узнаете, как выполнять следующие задачи:
+> [!div class="checklist"]
+> * установка последней версии PowerShell;
+> * установка нового модуля Az PowerShell;
+> * Установка Azure CLI
+> * Установка Terraform
+> * создание субъекта-службы Azure для аутентфикации;
+> * вход в Azure с помощью субъекта-службы; 
+> * настройка переменных среды для корректной аутентификации с помощью Terraform в подписке Azure;
+> * написание скрипта Terraform для создания группы ресурсов Azure;
+> * Создание и применение плана выполнения Terraform
+> * использование флага `terraform plan -destroy` для отмены плана выполнения.
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
@@ -119,6 +132,16 @@ ms.locfileid: "87478584"
     Connect-AzAccount -Credential $spCredential -Tenant "<azure_subscription_tenant_id>" -ServicePrincipal
     ```
 
+## <a name="set-environment-variables"></a>Настройка переменных среды
+
+Чтобы разрешить Terraform использовать нужную подписку Azure, задайте переменные среды. Это можно сделать на уровне системы Windows или в определенном сеансе PowerShell. Если вы хотите задать переменные среды для определенного сеанса, используйте следующий код. Замените заполнители соответствующими значениями для вашей среды.
+
+```powershell
+$env:ARM_CLIENT_ID=<service_principle_app_id>
+$env:ARM_SUBSCRIPTION_ID=<azure_subscription_id>
+$env:ARM_TENANT_ID=<azure_subscription_tenant_id>
+```
+
 ## <a name="create-a-terraform-configuration-file"></a>Создание файла конфигурации Terraform
 
 Выполнив инструкции из этого раздела, вы создадите файл конфигурации Terraform, который позволяет создать группу ресурсов Azure.
@@ -162,16 +185,6 @@ ms.locfileid: "87478584"
     - В блоке поставщика `azurerm` заданы атрибуты `version` и `features`. Как указано в комментариях, их использование зависит от конкретной версии. Дополнительные сведения о настройке этих атрибутов см. в статье [Поставщик AzureRM версии 2.0](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
     - Только [объявление ресурса](https://www.terraform.io/docs/configuration/resources.html) предназначено для типа ресурса [azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html). Для azure_resource_group нужно передать два обязательных параметра: имя и расположение.
 
-## <a name="set-environment-variables"></a>Настройка переменных среды
-
-Чтобы разрешить Terraform использовать нужную подписку Azure, задайте переменные среды. Это можно сделать на уровне системы Windows или в определенном сеансе PowerShell. Если вы хотите задать переменные среды для определенного сеанса, используйте следующий код. Замените заполнители соответствующими значениями для вашей среды.
-
-```powershell
-$env:ARM_CLIENT_ID=<service_principle_app_id>
-$env:ARM_SUBSCRIPTION_ID=<azure_subscription_id>
-$env:ARM_TENANT_ID=<azure_subscription_tenant_id>
-```
-
 ## <a name="create-and-apply-a-terraform-execution-plan"></a>Создание и применение плана выполнения Terraform
 
 В этом разделе описывается, как создать *план выполнения* и применить его к облачной инфраструктуре.
@@ -205,7 +218,9 @@ $env:ARM_TENANT_ID=<azure_subscription_tenant_id>
     Get-AzResourceGroup -Name QuickstartTerraformTest-rg
     ```
 
-    В случае успеха команда отображает различные свойства только что созданной группы ресурсов.
+    **Примечания**
+
+    - В случае успеха команда отображает различные свойства только что созданной группы ресурсов.
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 

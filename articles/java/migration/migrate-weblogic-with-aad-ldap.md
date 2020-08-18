@@ -3,14 +3,14 @@ title: Авторизация и аутентификация пользоват
 description: В этом руководстве описывается, как настроить Oracle WebLogic Server для подключения к доменным службам Azure Active Directory с помощью протокола LDAP.
 author: edburns
 ms.author: edburns
-ms.topic: conceptual
-ms.date: 07/09/2020
-ms.openlocfilehash: 0f3b8f7e2535bc91629f056cf59bc0d2658aba19
-ms.sourcegitcommit: 1f78e54deb85c6063b887286a13a967d1d186b50
+ms.topic: tutorial
+ms.date: 08/10/2020
+ms.openlocfilehash: b828fc2bc41b0e4e557472e7efd00498e68933db
+ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87118450"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052221"
 ---
 # <a name="end-user-authorization-and-authentication-for-migrating-java-apps-on-weblogic-server-to-azure"></a>Авторизация и аутентификация пользователей для переноса приложений Java в WebLogic Server в Azure
 
@@ -35,7 +35,7 @@ ms.locfileid: "87118450"
 ## <a name="prerequisites"></a>Предварительные требования
 
 * Активная подписка Azure.
-  * Если у вас еще нет подписки Azure, [создайте учетную запись](https://azure.microsoft.com/free/).
+  * Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись](https://azure.microsoft.com/free/).
 * Возможность развернуть одно из приложений Azure на WLS, указанных в статье [Приложения Azure на Oracle WebLogic Server](/azure/virtual-machines/workloads/oracle/oracle-weblogic).
 
 ## <a name="migration-context"></a>Контекст миграции
@@ -46,6 +46,7 @@ ms.locfileid: "87118450"
 * Если в вашем сценарии используется локальный лес Active Directory, примените решение гибридной идентификации на основе Azure AD.  Дополнительные сведения см. в [документации по гибридной идентификации](/azure/active-directory/hybrid/).
 * Если у вас уже есть локальное развертывание доменных служб Active Directory (AD DS), изучите пути миграции, описанные в статье [Сравнение самостоятельно управляемых доменных служб Active Directory, Azure Active Directory и управляемых доменных служб Azure Active Directory](/azure/active-directory-domain-services/compare-identity-solutions).
 * Если вы оптимизируете облако, это руководство поможет вам начать с нуля работу с LDAP в Azure AD DS и WLS.
+* Полный обзор миграции сервера с помощью WebLogic Server на Виртуальные машины Azure см. в статье [Миграция приложений WebLogic в Виртуальные машины Azure](migrate-weblogic-to-virtual-machines.md).
 
 ## <a name="azure-active-directory-configuration"></a>Настройка Azure Active Directory
 
@@ -115,6 +116,38 @@ ms.locfileid: "87118450"
 
 Учитывая сказанное выше, выполните инструкции из статьи [Руководство по настройке защищенного протокола LDAP для управляемого домена доменных служб Azure AD](/azure/active-directory-domain-services/tutorial-configure-ldaps).  Теперь мы можем собрать значения для указания в конфигурации WLS.
 
+### <a name="disable-weak-tls-v1"></a>Отключение ненадежного TLS v1
+
+По умолчанию доменные службы Azure Active Directory (Azure AD DS) позволяют использовать TLS v1, который считается ненадежным и не поддерживается в WebLogic Server 14 и более поздних версиях. 
+
+Здесь описывается процедура отключения шифров TLS v1.
+
+Сначала получите идентификатор ресурса экземпляра доменной службы Azure, который включает протокол LDAP. В следующем примере возвращается идентификатор экземпляра доменной службы Azure с именем `aaddscontoso.com` в группе ресурсов `aadds-rg`.
+
+```azurecli
+AADDS_ID=$(az resource show --resource-group aadds-rg --resource-type "Microsoft.AAD/DomainServices" --name aaddscontoso.com --query "id" --output tsv)
+```
+
+Для отключения TLS v1 выполните приведенную ниже команду:
+
+```azurecli
+az resource update --ids $AADDS_ID --set properties.domainSecuritySettings.tlsV1=Disabled
+```
+
+Выходные данные отображают `"tlsV1": "Disabled"` для `domainSecuritySettings`, как показано в следующем примере:
+
+```text
+"domainSecuritySettings": {
+      "ntlmV1": "Enabled",
+      "syncKerberosPasswords": "Enabled",
+      "syncNtlmPasswords": "Enabled",
+      "syncOnPremPasswords": "Enabled",
+      "tlsV1": "Disabled"
+}
+```
+
+Дополнительные сведения см. в статье [Отключение ненадежных шифров и синхронизации хэшей паролей для обеспечения безопасности управляемого домена доменных служб Azure Active Directory](/azure/active-directory-domain-services/secure-your-domain).
+
 ## <a name="wls-configuration"></a>Настройка WLS
 
 Выполнив инструкции из этого раздела, вы соберете значения параметров из служб Azure AD DS, развернутых ранее.
@@ -162,6 +195,8 @@ ms.locfileid: "87118450"
 Теперь выполните действия, описанные в разделе [Очистка ресурсов](/azure/active-directory-domain-services/tutorial-configure-ldaps#clean-up-resources) статьи [Руководство по настройке защищенного протокола LDAP для управляемого домена доменных служб Azure AD](/azure/active-directory-domain-services/tutorial-configure-ldaps#clean-up-resources).
 
 ## <a name="next-steps"></a>Дальнейшие действия
+
+Изучите другие аспекты миграции приложений WebLogic Server в Azure.
 
 > [!div class="nextstepaction"]
 > [Миграция приложений WebLogic в Виртуальные машины Azure](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines)

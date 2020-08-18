@@ -1,16 +1,17 @@
 ---
 title: Использование службы хранилища Azure с пакетом Azure SDK для Python
 description: Узнайте, как с помощью библиотек из пакета Azure SDK для Python получить доступ к заранее подготовленному контейнеру больших двоичных объектов в учетной записи хранения Azure, а затем передать файл в этот контейнер.
-ms.date: 06/15/2020
+ms.date: 08/05/2020
 ms.topic: conceptual
-ms.openlocfilehash: 41c2c586678084e30f9f5b2bff3c773b46f5463d
-ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.custom: devx-track-python
+ms.openlocfilehash: bcb8d680950e2c42d3d7f092478c4d6096454b12
+ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405735"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87982696"
 ---
-# <a name="example-access-azure-storage-using-the-azure-libraries-for-pyhon"></a>Пример Доступ к службе хранилища Azure с помощью библиотек Azure для Python
+# <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Пример Доступ к службе хранилища Azure с помощью библиотек Azure для Python
 
 Здесь показано, как использовать клиентские библиотеки Azure в коде приложения Python для отправки файла в контейнер хранилища больших двоичных объектов. В примере предполагается, что у вас подготовлены ресурсы, показанные в разделе [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md).
 

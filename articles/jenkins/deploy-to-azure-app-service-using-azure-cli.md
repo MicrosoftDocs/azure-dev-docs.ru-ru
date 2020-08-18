@@ -3,14 +3,14 @@ title: Руководство. Развертывание в Службе при
 description: Сведения об использовании Azure CLI для развертывания веб-приложения Java в Azure в конвейере Jenkins
 keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
-ms.date: 04/25/2020
+ms.date: 08/08/2020
 ms.custom: devx-track-azurecli
-ms.openlocfilehash: 63a5097358001e0312af13053e3d7310fe413cc7
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.openlocfilehash: b26adfa3fd4639efa5de20ffcf93f1730a992a12
+ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478344"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88162073"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 
@@ -26,7 +26,7 @@ ms.locfileid: "87478344"
 
 ## <a name="create-and-configure-jenkins-instance"></a>Создание и настройка экземпляра Jenkins
 
-Если у вас еще нет главного экземпляра Jenkins, установите его с помощью [шаблона решения Jenkins](configure-on-linux-vm.md). По умолчанию с помощью шаблона устанавливается требуемый подключаемый модуль для [учетных данных Azure](https://plugins.jenkins.io/azure-credentials). 
+Если у вас еще нет главного экземпляра Jenkins, [установите Jenkins в виртуальной машине Linux](configure-on-linux-vm.md).
 
 Подключаемый модуль учетных данных Azure позволяет хранить учетные данные субъекта-службы Microsoft Azure в Jenkins. В версии 1.2 добавлена соответствующая поддержка, поэтому конвейер Jenkins может получать учетные данные Azure. 
 
@@ -46,7 +46,7 @@ sudo apt-get install -y maven
 
 Для выполнения Azure CLI необходимы учетные данные Azure.
 
-* На панели мониторинга Jenkins выберите **Credentials -> System ->** (Учетные данные -> Система). Щелкните **Global credentials (unrestricted)** (Глобальные учетные данные (неограниченные)).
+* На панели мониторинга Jenkins выберите **Credentials -> System ->**(Учетные данные -> Система). Щелкните **Global credentials (unrestricted)** (Глобальные учетные данные (неограниченные)).
 * Щелкните **Add Credentials** (Добавить учетные данные), чтобы добавить [субъект-службу Microsoft Azure](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json) путем ввода следующих значений: идентификатор подписки, идентификатор клиента, секрет клиента и конечная точка маркера OAuth 2.0. Укажите идентификатор, который будет использоваться в следующем шаге.
 
 ![Добавить учетные данные](./media/deploy-to-azure-app-service-using-azure-cli/add-credentials.png)
@@ -114,7 +114,7 @@ az webapp create \
 
 Настройте конфигурацию среды выполнения Java, необходимую для работы приложения, с помощью команды [az appservice web config update](/cli/azure/webapp/config).
 
-Следующая команда настраивает веб-приложение для запуска в Java 8 JDK и [Apache Tomcat](https://tomcat.apache.org/) 8.0.
+Следующая команда настраивает веб-приложение для запуска в последней версии JDK Java 8 и [Apache Tomcat](https://tomcat.apache.org/) 8.0.
 
 ```azurecli
 az webapp config set \ 
@@ -167,7 +167,7 @@ az webapp config set \
 
 1. Откройте веб-браузер:
 
-1. Перейдите по ссылке `http://&lt;app_name>.azurewebsites.net/api/calculator/ping`.
+1. Перейдите по адресу `http://&lt;app_name>.azurewebsites.net/api/calculator/ping`.
 
 1. Должен отобразиться текст, аналогичный приведенному ниже.
 

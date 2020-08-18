@@ -3,13 +3,13 @@ title: Общие сведения о Jenkins и Azure
 description: Размещение сборки Jenkins и развертывание сервера автоматизации в Azure, а также использование вычислительных ресурсов и ресурсов службы хранилища Azure для расширения конвейеров непрерывной интеграции и непрерывного развертывания (CI/CD).
 keywords: jenkins, azure, devops, overview
 ms.topic: overview
-ms.date: 10/23/2019
-ms.openlocfilehash: 19bacd6e1b3d4ddee4e6fef27b2183f4a33545d6
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.date: 08/08/2020
+ms.openlocfilehash: 2592ad806d58b3cbfcf930f180fa582945be3196
+ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861307"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88162043"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins
 
@@ -19,13 +19,7 @@ ms.locfileid: "82861307"
 
 ## <a name="host-your-jenkins-servers-in-azure"></a>Размещение серверов Jenkins в Azure
 
-Разместите Jenkins в Azure, чтобы централизовать автоматизацию выполнения сборки и масштабировать развертывание по мере роста потребностей проектов программного обеспечения. Jenkins можно развернуть в Azure с помощью:
- 
-- [шаблона решения Jenkins](configure-on-linux-vm.md) из Azure Marketplace;
-- [виртуальных машин Azure](/azure/virtual-machines/linux/overview). Создание экземпляра Jenkins на виртуальной машине описывается в нашем [руководстве](pipeline-with-github-and-docker.md).
-- Если используется кластер Kubernetes в [Службе контейнеров Azure](/azure/container-service/kubernetes/container-service-kubernetes-walkthrough), ознакомьтесь с нашим [практическим руководством](/azure/container-service/kubernetes/container-service-kubernetes-jenkins).
-
-Для мониторинга развертывания Jenkins в Azure и управления им можно использовать [журналы Azure Monitor](/azure/log-analytics/log-analytics-overview) и [Azure CLI](/cli/azure).
+Разместите Jenkins в Azure, чтобы централизовать автоматизацию выполнения сборки и масштабировать развертывание по мере роста потребностей проектов программного обеспечения. Сведения об установке и настройке Jenkins в виртуальной машине Linux см. в статье [Краткое руководство. Начало работы с Jenkins](configure-on-linux-vm.md). Для мониторинга развертывания Jenkins в Azure и управления им можно использовать [журналы Azure Monitor](/azure/log-analytics/log-analytics-overview) и [Azure CLI](/cli/azure).
 
 ## <a name="scale-your-build-automation-on-demand"></a>Масштабирование по требованию автоматизации выполнения сборки
 

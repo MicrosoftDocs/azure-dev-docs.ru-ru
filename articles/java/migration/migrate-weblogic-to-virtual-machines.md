@@ -6,16 +6,16 @@ ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 3f3f4cd3a7714b45a68abe4d92c489581d1c1d5f
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 3b6d9847cc72f246587a36b74173521736a6cc9a
+ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379728"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88052269"
 ---
-# <a name="migrate-weblogic-applications-to-azure-virtual-machines"></a>Миграция приложений WebLogic в Виртуальные машины Azure
+# <a name="migrate-weblogic-server-applications-to-azure-virtual-machines"></a>Миграция приложений WebLogic в Виртуальные машины Azure
 
-Узнайте о том, что следует учитывать при миграции существующего приложения WebLogic для выполнения в Виртуальных машинах Azure.
+Узнайте о том, что следует учитывать при миграции существующего приложения WebLogic для выполнения в Виртуальных машинах Azure.  Общие сведения о доступных решениях WebLogic Server в Azure Marketplace см. в статье [Что такое Oracle WebLogic Server в Azure](/azure/virtual-machines/workloads/oracle/oracle-weblogic).
 
 ## <a name="pre-migration"></a>Подготовка к миграции
 
@@ -29,7 +29,7 @@ ms.locfileid: "86379728"
 
 ### <a name="determine-whether-the-pre-built-marketplace-offers-are-a-good-starting-point"></a>Определение того, можно ли использовать готовые предложения Marketplace в качестве отправной точки
 
-Oracle и Майкрософт совместно работают над созданием в Azure Marketplace набора шаблонов для решений Azure, с помощью которых можно начать миграцию в Azure. См. документацию по [Oracle Fusion Middleware](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/), чтобы изучить список предложений и выбрать то, которое в наибольшей степени отвечает требованиям существующего развертывания. См. список предложений в [документации Oracle](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/select-required-oracle-weblogic-server-offer-azure-marketplace.html#GUID-187739C5-EE7A-47C6-B3BA-C0A0333DC398).
+Oracle и Майкрософт совместно работают над созданием в Azure Marketplace набора шаблонов для решений Azure, с помощью которых можно начать миграцию в Azure. См. документацию по [Oracle Fusion Middleware](https://docs.oracle.com/en/middleware/standalone/weblogic-server/wlazu/), чтобы изучить список предложений и выбрать то, которое в наибольшей степени отвечает требованиям существующего развертывания. Список предложений см. в статье [Что такое Oracle WebLogic Server в Azure](/azure/virtual-machines/workloads/oracle/oracle-weblogic).
 
 Если ни одно из существующих предложений не подходит в качестве отправной точки, развертывание нужно будет воспроизвести вручную на основе ресурсов Виртуальных машин Azure. См. сведения об [IaaS](https://azure.microsoft.com/overview/what-is-iaas/).
 
@@ -99,7 +99,7 @@ Oracle и Майкрософт совместно работают над соз
 
 Для WebLogic доступны следующие предложения в Виртуальных машинах Azure.
 
-Во время развертывания предложения вам будет предложено выбрать размер виртуальной машины для узлов WebLogic Server. При выборе размера виртуальной машины важно учитывать все аспекты (память, процессор, диск). См. сведения см. в документации по [предложениям](https://docs.oracle.com/en/middleware/fusion-middleware/weblogic-server/12.2.1.4/wlazu/deploy-oracle-weblogic-server-administration-server-single-node.html) и [размерам виртуальных машин Azure](/azure/cloud-services/cloud-services-sizes-specs).
+Во время развертывания предложения вам будет предложено выбрать размер виртуальной машины для узлов WebLogic Server. При выборе размера виртуальной машины важно учитывать все аспекты (память, процессор, диск). Дополнительные сведения см. в [документации Azure по определению размера виртуальных машин](/azure/cloud-services/cloud-services-sizes-specs).
 
 #### <a name="weblogic-server-single-node-with-no-admin-server"></a>Отдельный узел WebLogic Server без сервера администрирования
 
@@ -107,7 +107,7 @@ Oracle и Майкрософт совместно работают над соз
 
 #### <a name="weblogic-server-single-node-with-admin-server"></a>Отдельный узел WebLogic Server с сервером администрирования
 
-Это предложение подготавливает одну виртуальную машину и устанавливает на ней WebLogic Server 12.1.2.3. При этом создается домен и запускается сервер администрирования.
+Это предложение подготавливает одну виртуальную машину и устанавливает на ней WebLogic Server. При этом создается домен и запускается сервер администрирования.
 
 #### <a name="weblogic-server-n-node-cluster"></a>N-узловой кластер WebLogic Server
 
@@ -119,7 +119,7 @@ Oracle и Майкрософт совместно работают над соз
 
 ### <a name="provision-the-offer"></a>Подготовка предложения
 
-Выбрав предложение в качестве отправной точки, подготовьте его согласно [этой документации](https://wls-eng.github.io/arm-oraclelinux-wls/). Учтите, что здесь нужно выбрать доменное имя, которое вы уже используете. Вы даже можете указать существующий пароль домена.
+Выбрав предложение в качестве отправной точки, подготовьте его согласно [этой документации](https://docs.oracle.com/en/middleware/standalone/weblogic-server/wlazu/). Учтите, что здесь нужно выбрать доменное имя, которое вы уже используете. Вы даже можете указать существующий пароль домена.
 
 ### <a name="migrate-the-domains"></a>Миграция доменов
 
@@ -136,6 +136,8 @@ Oracle и Майкрософт совместно работают над соз
 ### <a name="connect-the-jms-sources"></a>Подключение источников JMS
 
 Подключившись к базам данных, вы можете настроить JMS согласно руководству по [администрированию ресурсов JMS для сервера Oracle WebLogic Server с помощью Fusion Middleware](https://docs.oracle.com/middleware/12213/wls/JMSAD/toc.htm).
+
+[!INCLUDE [account-for-authentication-and-authorization](includes/account-for-authentication-and-authorization.md)]
 
 ### <a name="account-for-logging"></a>Учетная запись для ведения журнала
 
@@ -158,6 +160,8 @@ Oracle и Майкрософт совместно работают над соз
 * Используйте службу хранилища Azure для обслуживания статического содержимого, подключенного к виртуальным машинам. См. сведения о том, как [подключать диск данных к виртуальной машине и отключать его от нее](/azure/lab-services/devtest-lab-attach-detach-data-disk).
 
 * Разверните приложения в перенесенный кластер WebLogic с помощью Azure DevOps. См. сведения о том, как [начать работу с Azure DevOps](/azure/devops/get-started/?view=azure-devops).
+
+* Если вы развернули WebLogic Server со Шлюзом приложений Azure, выполнив инструкции из статьи [Учебник. Перенос кластера WebLogic Server в Azure с помощью Шлюза приложений Azure в качестве подсистемы балансировки нагрузки](migrate-weblogic-with-app-gateway.md), вам может потребоваться добавить дополнительную конфигурацию для Шлюза приложений.  Дополнительные сведения см. в статье [Обзор конфигурации Шлюза приложений](/azure/application-gateway/configuration-overview).
 
 * Включите в топологию сети расширенные службы балансировки нагрузки. См. сведения о том, как [использовать службы балансировки нагрузки в Azure](/azure/traffic-manager/traffic-manager-load-balancing-azure).
 

@@ -3,19 +3,29 @@ title: Краткое руководство. Начало работы с Terra
 description: Из этого краткого руководства можно узнать, как установить и настроить Terraform для создания ресурсов Azure.
 keywords: azure devops terraform установка настройка cloud shell init план применение выполнение вход портал rbac субъект-служба автоматизированный сценарий
 ms.topic: quickstart
-ms.date: 07/26/2020
-ms.openlocfilehash: dbe290fbb7909d116d2ff0cec8e01a3b145ded30
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.date: 08/08/2020
+ms.openlocfilehash: 736c805b8dd8c95d1950537b754059cca9fc5712
+ms.sourcegitcommit: 6a8485d659d6239569c4e3ecee12f924c437b235
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478594"
+ms.lasthandoff: 08/09/2020
+ms.locfileid: "88026145"
 ---
 # <a name="quickstart-get-started-with-terraform-using-azure-cloud-shell"></a>Краткое руководство. Начало работы с Terraform с использованием Azure Cloud Shell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
 В этой статье описывается, как начать работу с [Terraform в Azure](https://www.terraform.io/docs/providers/azurerm/index.html).
+
+Вы узнаете, как выполнять следующие задачи:
+> [!div class="checklist"]
+> * аутентификация в Azure с помощью команды `az login`;
+> * создание субъекта-службы Azure с помощью Azure CLI;
+> * аутентификация в Azure с помощью субъекта-службы;
+> * настройка текущей подписки Azure для использования, если у вас несколько подписок;
+> * написание скрипта Terraform для создания группы ресурсов Azure;
+> * Создание и применение плана выполнения Terraform
+> * использование флага `terraform plan -destroy` для отмены плана выполнения.
 
 [!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
@@ -166,7 +176,7 @@ az login --service-principal -u <service_principal_name> -p "<service_principal_
 
 ## <a name="create-and-apply-a-terraform-execution-plan"></a>Создание и применение плана выполнения Terraform
 
-После создания файлов конфигурации воспользуйтесь инструкциями в этом разделе, чтобы создать *план выполнения* и применить его к своей облачной инфраструктуре.
+В этом разделе описывается, как создать *план выполнения* и применить его к облачной инфраструктуре.
 
 1. Инициализируйте развертывание Terraform с помощью команды [terraform init](https://www.terraform.io/docs/commands/init.html). На этом шаге загружаются модули Azure, необходимые для создания группы ресурсов Azure.
 
@@ -174,27 +184,24 @@ az login --service-principal -u <service_principal_name> -p "<service_principal_
     terraform init
     ```
 
-1. Чтобы создать план выполнения и просмотреть результаты, выполните команду [terraform plan](https://www.terraform.io/docs/commands/plan.html).
+1. Выполните команду [terraform plan](https://www.terraform.io/docs/commands/plan.html), чтобы создать план выполнения из файла конфигурации Terraform.
 
     ```bash
-    terraform plan
+    terraform plan -out QuickstartTerraformTest.tfplan
     ```
 
-    **Примечания**
+    **Примечания.**
+    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации. Этот шаблон позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вы начнете вносить изменения в фактические ресурсы.
+    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Использование параметра `-out` гарантирует, что проверяемый план полностью соответствует применяемому.
+    - Дополнительные сведения о сохранении планов выполнения и обеспечении безопасности см. в разделе о [предупреждениях безопасности](https://www.terraform.io/docs/commands/plan.html#security-warning).
 
-    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации.
-    - Команда `terraform plan` позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вносить изменения в фактические ресурсы.
-    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Дополнительные сведения об использовании параметра `-out` см. в разделе [Сохранение планов выполнения для последующего развертывания](#persist-an-execution-plan-for-later-deployment).
-
-1. Примените план выполнения с помощью команды [terraform apply](https://www.terraform.io/docs/commands/apply.html).
+1. Выполните команду [terraform apply](https://www.terraform.io/docs/commands/apply.html), чтобы применить план выполнения.
 
     ```bash
-    terraform apply
+    terraform apply QuickstartTerraformTest.tfplan
     ```
 
-1. Terraform показывает, что произойдет, если применить план выполнения, и требует подтвердить его выполнение. Подтвердите команду, введя `yes` и нажав клавишу **ВВОД**.
-
-1. После подтверждения выполнения плана убедитесь, что группа ресурсов была успешно создана, с помощью команды [az group show](/cli/azure/group?#az-group-show).
+1. После применения плана выполнения вы можете проверить, создана ли группа ресурсов, выполнив команду [az group show](/cli/azure/group?#az-group-show).
 
     ```azurecli
     az group show -n "QuickstartTerraformTest-rg"
@@ -204,39 +211,6 @@ az login --service-principal -u <service_principal_name> -p "<service_principal_
 
     - В случае успеха `az group show` отображает различные свойства только что созданной группы ресурсов.
 
-## <a name="persist-an-execution-plan-for-later-deployment"></a>Сохранение плана выполнения для последующего развертывания
-
-В предыдущем разделе вы узнали, как выполнить команду [terraform plan](https://www.terraform.io/docs/commands/plan.html) для создания плана выполнения. Затем вы увидели, что команда [terraform apply](https://www.terraform.io/docs/commands/apply.html) применяет этот план. Этот шаблон хорошо работает, когда шаги являются интерактивными и последовательными.
-
-Для более сложных сценариев можно сохранить план выполнения в файл. Позднее или даже с другого компьютера можно применить этот план выполнения.
-
-Если вы используете эту функцию, мы рекомендуем вам изучить статью [Автоматический запуск Terraform](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation).
-
-Следующие шаги иллюстрируют базовый шаблон использования этой функции:
-
-1. Запустите [terraform init](https://www.terraform.io/docs/commands/init.html).
-
-    ```bash
-    terraform init
-    ```
-
-1. Запустите `terraform plan` с параметром `-out`.
-
-    ```bash
-    terraform plan -out QuickstartTerraformTest.tfplan
-    ```
-
-1. Запустите `terraform apply`, указав имя файла из предыдущего шага.
-
-    ```bash
-    terraform apply QuickstartTerraformTest.tfplan
-    ```
-
-    **Примечания**
-    
-    - Чтобы включить использование с автоматизацией, запуск `terraform apply <filename>` не требует подтверждения.
-    - Если вы решили использовать эту функцию, ознакомьтесь с разделом [Предупреждение системы безопасности](https://www.terraform.io/docs/commands/plan.html#security-warning).
-    
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
 Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны.
@@ -248,9 +222,9 @@ az login --service-principal -u <service_principal_name> -p "<service_principal_
     ```
 
     **Примечания**
-    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации. Это позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вы начнете вносить изменения в фактические ресурсы.
+    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации. Этот шаблон позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вы начнете вносить изменения в фактические ресурсы.
     - Параметр `-destroy` создает план для удаления ресурсов.
-    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Параметр `-out` обязателен, так как он гарантирует, что проверяемый план полностью соответствует применяемому.
+    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Использование параметра `-out` гарантирует, что проверяемый план полностью соответствует применяемому.
     - Дополнительные сведения о сохранении планов выполнения и обеспечении безопасности см. в разделе о [предупреждениях безопасности](https://www.terraform.io/docs/commands/plan.html#security-warning).
 
 1. Выполните команду [terraform apply](https://www.terraform.io/docs/commands/apply.html), чтобы применить план выполнения.
