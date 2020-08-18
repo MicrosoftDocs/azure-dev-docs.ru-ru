@@ -7,9 +7,9 @@
 - name: Краткие руководства
   expanded: true
   items:
-    - name: 'Начало работы: Azure Cloud Shell'
+    - name: Настройка Terraform с помощью Azure Cloud Shell
       href: get-started-cloud-shell.md
-    - name: 'Начало работы: Windows и PowerShell'
+    - name: Настройка Terraform с помощью Azure PowerShell
       href: get-started-powershell.md
 - name: Практические руководства
   items:

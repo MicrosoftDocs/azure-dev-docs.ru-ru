@@ -1,13 +1,13 @@
 - name: Jenkins в Azure
   href: index.yml
-- name: Обзор
+- name: Общие сведения
   items:
     - name: Jenkins в Azure
       href: overview.md
 - name: Краткие руководства
   expanded: true
   items:
-    - name: Создание сервера Jenkins
+    - name: Настройка Jenkins с помощью Azure CLI
       href: configure-on-linux-vm.md
 - name: Учебники
   items:

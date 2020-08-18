@@ -10,12 +10,12 @@ metadata:
   author: TomArcherMsft
   ms.author: tarcher
   ms.date: 02/24/2020
-  ms.openlocfilehash: 82e0f99795f46347970b3a73d9c0b78787d05cd6
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: f2950b7e466081351c3dca3e19eb15925ac68eb3
+  ms.sourcegitcommit: a5a47f96602996f2867ac1405f9ea18daed23a23
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82172350"
+  ms.lasthandoff: 08/13/2020
+  ms.locfileid: "88200540"
 landingContent:
 - title: Jenkins в Azure
   linkLists:
@@ -35,7 +35,7 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: Создание сервера Jenkins
+    - text: Настройка Jenkins с помощью Azure CLI
       url: configure-on-linux-vm.md
   - linkListType: download
     links:

@@ -9,12 +9,12 @@ metadata:
   ms.author: tarcher
   ms.topic: landing-page
   ms.date: 07/31/2020
-  ms.openlocfilehash: 40e1650488552387f5a62cf02a754dde89fed773
-  ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+  ms.openlocfilehash: 47b88bc1907bbe369b6e67d19a79320e00f3dbf7
+  ms.sourcegitcommit: a5a47f96602996f2867ac1405f9ea18daed23a23
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/31/2020
-  ms.locfileid: "87478544"
+  ms.lasthandoff: 08/13/2020
+  ms.locfileid: "88200642"
 landingContent:
 - title: Сведения о Terraform в Azure
   linkLists:
@@ -30,9 +30,9 @@ landingContent:
   linkLists:
   - linkListType: get-started
     links:
-    - text: 'Начало работы: Azure Cloud Shell'
+    - text: Настройка Terraform с помощью Azure Cloud Shell
       url: get-started-cloud-shell.md
-    - text: 'Начало работы: Windows и PowerShell'
+    - text: Настройка Terraform с помощью Azure PowerShell
       url: get-started-powershell.md
   - linkListType: how-to-guide
     links:

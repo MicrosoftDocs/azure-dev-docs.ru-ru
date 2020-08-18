@@ -7,13 +7,10 @@
 - name: Краткие руководства
   expanded: true
   items:
-    - name: "Начало работы\_— Cloud Shell"
+    - name: Настройка Ansible с помощью Azure Cloud Shell
       href: getting-started-cloud-shell.md
-    - name: Развертывание шаблона решения Ansible в CentOS
-      href: solution-template-deploy.md
-    - name: Установка Ansible на виртуальные машины Linux
+    - name: Настройка Ansible с помощью Azure CLI
       href: install-on-linux-vm.md
-      maintainContext: true
     - name: Работа с Виртуальными машинами Linux
       expanded: true
       items:
