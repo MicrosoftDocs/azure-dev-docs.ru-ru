@@ -4,12 +4,12 @@ description: Руководство, шаг 4. Инструкции по нас
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 5de5f7f52fbf8c88bf05c7cb300952aee81a8439
-ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
+ms.openlocfilehash: 45c24711131f03c2475d3ecb2a5538cadd6e7c56
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501429"
 ---
 # <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
 
@@ -113,4 +113,4 @@ gunicorn --bind=0.0.0.0 --timeout 600 <module>.wsgi
 > [!div class="nextstepaction"]
 > [Файл запуска настроен — перейти к шагу 5 >>>](tutorial-deploy-app-service-on-linux-05.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=04-startup-command)
+[Возникли проблемы? Сообщите нам!](https://aka.ms/FlaskVSCQuickstartHelp)

@@ -3,12 +3,13 @@ title: Руководство по тестированию соответств
 description: Узнайте, как применить проверку соответствия в стиле разработки на основе поведения (BDD) к конфигурациям Terraform
 ms.topic: tutorial
 ms.date: 07/31/2020
-ms.openlocfilehash: 38358be8bc7626d7b8a6b2df7e5da9b53d98618e
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 7abb4072d923d4d5ec4fa3df6251f07576dba3bc
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810617"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241316"
 ---
 # <a name="tutorial-compliance-testing-with-terraform-and-azure"></a>Руководство по тестированию соответствия с помощью Terraform и Azure
 

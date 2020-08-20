@@ -4,12 +4,12 @@ description: 'Шаг 6 руководства: потоковая передач
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: e6955e849fbec2d3d3c3546b00fb3745b6a0b8f3
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: a303976143b2b2579c23bde8eb320ee4dc902dba
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501419"
 ---
 # <a name="6-stream-logs-from-azure-app-service-into-visual-studio-code"></a>6\. Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
 
@@ -30,4 +30,4 @@ ms.locfileid: "87983556"
 > [!div class="nextstepaction"]
 > [Журналы отображаются — перейти к шагу 7 >>>](tutorial-deploy-app-service-on-linux-07.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=06-stream-logs)
+[Возникли проблемы? Сообщите нам!](https://aka.ms/FlaskVSCQuickstartHelp)

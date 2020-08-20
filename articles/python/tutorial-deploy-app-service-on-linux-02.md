@@ -4,12 +4,12 @@ description: 'Руководство, шаг 2: настройка прилож�
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 0f85ea4e7da74b67ce2a20168ae751444b63b292
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 9bb25bf6cfef2e6a93efa2ca195f27a10a6ca891
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501399"
 ---
 # <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Подготовка приложения к развертыванию в Службе приложений Azure
 
@@ -89,4 +89,4 @@ ms.locfileid: "87983589"
 > [!div class="nextstepaction"]
 > [Мое приложение готово — перейти к шагу 3 >>>](tutorial-deploy-app-service-on-linux-03.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=02-prepare-app)
+[Возникли проблемы? Сообщите нам!](https://aka.ms/FlaskVSCQuickstartHelp)
