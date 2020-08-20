@@ -4,12 +4,13 @@ description: Сведения о развертывании в службе Azur
 keywords: jenkins, azure, devops, kubernetes, k8s, aks, blue green deployment, continuous delivery, cd
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 051a1531c9e973231ca56256603df63f60e21cf9
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: 9a81b47d0e3828bb7c1cd809a66b2245f5a83771
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169950"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240996"
 ---
 # <a name="tutorial-deploy-to-azure-kubernetes-service-aks-using-the-bluegreen-deployment-pattern"></a>Руководство по развертыванию в службе Azure Kubernetes (AKS) с использованием "сине-зеленого" шаблона развертывания
 
@@ -189,7 +190,7 @@ ms.locfileid: "82169950"
 
 В этом разделе вы узнаете, как подготовить сервер Jenkins для выполнения сборки, удобной для тестирования. Тем не менее следует использовать [агент виртуальной машины Azure](https://plugins.jenkins.io/azure-vm-agents) или [агент контейнеров Azure](https://plugins.jenkins.io/azure-container-agents) для выполнения развертывания агента и запуска сборки. Дополнительные сведения см. в статье о [вопросах безопасности при сборке в главном узле](https://wiki.jenkins.io/display/JENKINS/Security+implication+of+building+on+master) в документации по Jenkins.
 
-1. Разверните [Jenkins Master в Azure](https://aka.ms/jenkins-on-azure).
+1. Разверните [Jenkins Master в Azure](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins).
 
 1. Подключение к серверу с помощью протокола SSH и установка средств сборки на сервере, где выполняется сборка.
    

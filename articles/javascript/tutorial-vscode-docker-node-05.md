@@ -3,12 +3,13 @@ title: Развертывание образа контейнера для пр�
 description: Руководство, часть 5. Развертывание образа в Службе приложений Azure
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 487110258ed3302e781cfa24a5ae9f518ebb3bda
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: f9809deacac828cac6ba4a89b5eb08968de1d012
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792947"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218446"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Развертывание образа в Службе приложений Azure
 

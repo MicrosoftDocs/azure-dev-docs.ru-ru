@@ -4,12 +4,13 @@ description: Узнайте, как создать кластер Kubernetes с 
 keywords: Azure DevOps, Terraform, Шлюз приложений, входящий трафик, AKS, Kubernetes
 ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: 4e34942257baa1e530a7ed0990a6d30a5297dadf
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 4d83e6720958ff76126c7e71e8cfbbcfb13c666a
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478524"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241266"
 ---
 # <a name="create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes
 

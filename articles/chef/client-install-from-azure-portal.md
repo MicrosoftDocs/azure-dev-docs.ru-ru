@@ -4,12 +4,13 @@ description: Узнайте, как развернуть клиент Chef и н
 keywords: azure, chef, devops, client, install, portal
 ms.date: 02/22/2020
 ms.topic: article
-ms.openlocfilehash: b5dd158bd06511bf440228d4ae0948596bca0612
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-chef
+ms.openlocfilehash: 3fb282914bad8992a5f4df76019df89824675da0
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80892903"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240826"
 ---
 # <a name="install-the-chef-client-from-the-azure-portal"></a>Установка клиента Chef с портала Azure
 Вы можете добавить расширение клиента Chef непосредственно на компьютере под управлением Windows или Linux на портале Azure. В этой статье процесс добавления рассматривается с использованием новой виртуальной машины Linux.

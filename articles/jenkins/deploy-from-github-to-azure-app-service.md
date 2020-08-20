@@ -4,12 +4,13 @@ description: Узнайте, как настроить Jenkins для непре
 keywords: jenkins, azure, devops, app service
 ms.topic: tutorial
 ms.date: 08/10/2020
-ms.openlocfilehash: 3961d413a573d416777f649cef44ceccdecb0b01
-ms.sourcegitcommit: e792f681ab66c54e6fd0c7f3cb71816206216d72
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: 6b7f1693eb02b51107e595365bc800540f98f20e
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88075717"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241026"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-app-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе приложений Azure с помощью Jenkins
 

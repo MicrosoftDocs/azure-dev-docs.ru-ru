@@ -3,12 +3,13 @@ title: Аутентификация с использованием модуле
 description: Аутентификация с помощью субъекта-службы в модулях управления Azure для Node.js
 ms.topic: article
 ms.date: 06/17/2017
-ms.openlocfilehash: 76233fb6e6d15829783ff98b3af672abc7eba226
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 6697e96264a09db1b1b74a74932b6fff78fa8443
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792284"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218877"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Аутентификация с использованием модулей Azure для Node.js
 

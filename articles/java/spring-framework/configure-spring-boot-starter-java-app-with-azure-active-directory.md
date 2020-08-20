@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 2714d4d4b8a614bcdbf951eb2a9dc4c2dc78dda2
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: f449df07048dfcc20e173bc4103995ac989e38fe
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379428"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240946"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 
@@ -188,7 +188,7 @@ ms.locfileid: "86379428"
    spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
 
    # Specifies the list of Active Directory groups to use for authorization:
-   azure.activedirectory.active-directory-groups=Users
+   azure.activedirectory.user-group.allowed-groups=Users
    ```
 
    Где:
@@ -198,7 +198,7 @@ ms.locfileid: "86379428"
    | `azure.activedirectory.tenant-id` | Содержит **идентификатор каталога** Active Directory, который вы скопировали ранее. |
    | `spring.security.oauth2.client.registration.azure.client-id` | Содержит **идентификатор приложения**, полученный после регистрации приложения. |
    | `spring.security.oauth2.client.registration.azure.client-secret` | Содержит **значение** ключа, полученное после регистрации приложения. |
-   | `azure.activedirectory.active-directory-groups` | Содержит список групп Active Directory, используемых для авторизации. |
+   | `azure.activedirectory.user-group.allowed-groups` | Содержит список групп Active Directory, используемых для авторизации. |
 
    > [!NOTE]
    > Полный список значений, доступных в файле *application.properties*, см. в примере [Azure Active Directory Spring Boot][AAD Spring Boot Sample] на сайте GitHub.
@@ -234,7 +234,7 @@ ms.locfileid: "86379428"
    ```
 
    > [!NOTE]
-   > Имя группы, указываемое для метода `@PreAuthorize("hasRole('')")`, должно содержать одну из групп, указанных в поле `azure.activedirectory.active-directory-groups` в файле *application.properties*.
+   > Имя группы, указываемое для метода `@PreAuthorize("hasRole('')")`, должно содержать одну из групп, указанных в поле `azure.activedirectory.user-group.allowed-groups` в файле *application.properties*.
    >
    > Для разных сопоставлений запросов можно указывать разные параметры авторизации, например:
    >

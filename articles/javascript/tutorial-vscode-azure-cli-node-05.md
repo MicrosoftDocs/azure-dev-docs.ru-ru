@@ -3,12 +3,13 @@ title: Потоковая передача журналов из Службы п
 description: Руководство, часть 5. Просмотр журналов
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: f96deb992af0d446876265e1b8214879ddff45e6
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 7a962f7e6dc7cdb572f78e40b25e1ff98f102ea3
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792149"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217905"
 ---
 # <a name="stream-logs-from-app-service"></a>Потоковая передача журналов из Службы приложений
 

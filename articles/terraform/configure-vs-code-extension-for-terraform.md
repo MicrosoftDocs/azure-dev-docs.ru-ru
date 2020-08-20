@@ -3,12 +3,13 @@ title: Настройка расширения Visual Studio Code для Azure T
 description: Сведения о том, как установить и использовать расширение Azure Terraform в Visual Studio Code.
 ms.topic: how-to
 ms.date: 10/26/2019
-ms.openlocfilehash: 6ac6cada3e7a411d940f5207fa6cfa10f4fea0de
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: dbb76f2bcdce12ebb55d9ae6002747701858751e
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478554"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241326"
 ---
 # <a name="configure-the-azure-terraform-visual-studio-code-extension"></a>Настройка расширения Visual Studio Code для Azure Terraform
 

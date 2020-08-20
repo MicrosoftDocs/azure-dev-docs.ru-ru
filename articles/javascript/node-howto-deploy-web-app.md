@@ -3,13 +3,13 @@ title: Развертывание веб-приложений Node.js в Azure
 description: Начало работы со службой приложений Azure и другие варианты размещения для веб-приложений, включая прогрессивные веб-приложения (PWA)
 ms.topic: article
 ms.date: 08/20/2019
-ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: e7cb374b645738140ead924296ef7cef9b1b61d7
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
+ms.openlocfilehash: 379960ccbeec1fc5fdd0030e7460a97acb149066
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792344"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218644"
 ---
 # <a name="deploy-nodejs-web-apps-to-azure-app-service"></a>Развертывание веб-приложений Node.js в Службе приложений Azure
 

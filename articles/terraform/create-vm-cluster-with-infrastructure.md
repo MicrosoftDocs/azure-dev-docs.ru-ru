@@ -4,12 +4,13 @@ description: Научитесь создавать кластер виртуал
 keywords: Azure DevOps, Terraform, виртуальная машина, кластер виртуальных машин
 ms.topic: how-to
 ms.date: 03/09/2020
-ms.openlocfilehash: f970bdd0f3d37d32cae9e556094c199cfb82df2e
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: b0de2ed0c82f26902470835658ba7bb34f1acd7a
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478494"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241209"
 ---
 # <a name="create-an-azure-vm-cluster-with-terraform-and-hcl"></a>созданию кластера виртуальных машин Azure с помощью Terraform и HCL
 

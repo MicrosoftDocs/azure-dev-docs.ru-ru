@@ -4,12 +4,13 @@ description: Узнайте, как выполнить развертывани�
 keywords: jenkins, azure, devops, java, azure functions
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 4dbd37b9527a3c41c6f1d5b40edf974b6adda6c3
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: fa63ebf5a41a3c515f92b0c551ee63d683b665c7
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169800"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240935"
 ---
 # <a name="tutorial-deploy-to-azure-functions-using-jenkins"></a>Руководство по развертыванию в Функциях Azure с помощью Jenkins
 
@@ -51,7 +52,7 @@ ms.locfileid: "82169800"
 
 Ниже описывается, как подготовить сервер Jenkins:
 
-1. Разверните [сервер Jenkins](https://aka.ms/jenkins-on-azure) в Azure. Если у вас еще не установлен экземпляр сервера Jenkins, в статье [Создание сервера Jenkins на виртуальной машине Azure под управлением Linux на портале Azure](./configure-on-linux-vm.md) приведены соответствующие пошаговые инструкции.
+1. Разверните [сервер Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure. Если у вас еще не установлен экземпляр сервера Jenkins, в статье [Создание сервера Jenkins на виртуальной машине Azure под управлением Linux на портале Azure](./configure-on-linux-vm.md) приведены соответствующие пошаговые инструкции.
 
 1. Войдите в экземпляр Jenkins по SSH.
 

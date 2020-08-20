@@ -3,12 +3,13 @@ title: Руководство. Создание устройства вирту�
 description: В этом руководстве описывается, как создать центральную виртуальную сеть, которая будет выступать в качестве общей точки подключения между другими сетями.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 71599c3d62ba3c3e0c6132cdf5197b87927cec91
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 1bc9b2b899157985394165171adc76d988fe7e6a
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478564"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241136"
 ---
 # <a name="tutorial-create-a-hub-virtual-network-appliance-in-azure-using-terraform"></a>Руководство по Создание устройства виртуальной сети концентратора в Azure с помощью Terraform
 

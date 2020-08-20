@@ -4,12 +4,13 @@ description: Использование Ansible для обновления ма
 keywords: ansible, azure, devops, bash, playbook, virtual machine, virtual machine scale set, vmss
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: ae25012346c7d6fbc65c43fad6b3b228eedc9e7c
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 5e94d26ac4dc0b8aee2dfcf495e010702c4c79f5
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743823"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240876"
 ---
 # <a name="tutorial-update-the-custom-image-of-azure-virtual-machine-scale-sets-using-ansible"></a>Руководство по обновлению пользовательского образа масштабируемого набора виртуальных машин Azure с помощью Ansible
 

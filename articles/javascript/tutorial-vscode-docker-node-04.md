@@ -3,12 +3,13 @@ title: Создание образа контейнера для приложе�
 description: Руководство, часть 4. Создание образа приложения Node.js
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: a8659edb4d0b3664c7704fd0bedde0c274562f3c
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 023f5fcba7231a6f767e3e61f6f212ddc2c385c0
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792122"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218433"
 ---
 # <a name="create-your-nodejs-application-image"></a>Создание образа приложения Node.js
 

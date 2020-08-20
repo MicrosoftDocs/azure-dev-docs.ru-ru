@@ -3,12 +3,13 @@ title: Создание Службы приложений Azure для разм�
 description: Руководство, часть 3. Создание Службы приложений
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 827bcde79336304f424a283ccbdc4a4282a50bf7
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: d48ee9ba1b1ddb813b0dd7f0f48da52e0cf96e15
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792457"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217933"
 ---
 # <a name="create-the-app-service"></a>Создание службы приложений
 

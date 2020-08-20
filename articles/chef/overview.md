@@ -4,12 +4,13 @@ description: Общие сведения о настройке и проверк
 keywords: azure, chef, devops, virtual machines, overview, automate
 ms.date: 02/22/2020
 ms.topic: article
-ms.openlocfilehash: 94cfe5d57673db151d53133fb8b2ef66c5629b93
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-chef
+ms.openlocfilehash: 86678436612f97e2928228ec9dd47ac9185d9b72
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80892993"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240927"
 ---
 # <a name="using-chef-with-azure"></a>Использование Chef в Azure
 
@@ -26,7 +27,7 @@ ms.locfileid: "80892993"
 Используйте рабочую станцию Chef непосредственно в Azure Cloud Shell! Запустите все ваши 	служебные программы Chef и InSpec справа от Cloud Shell. Можно использовать следующие команды Chef:
 
 * [chef](https://docs.chef.io/ctl_chef.html)
-* [kitchen](https://docs.chef.io/ctl_kitchen.html)
+* [Кухня](https://docs.chef.io/ctl_kitchen.html)
 * [inspec](https://www.inspec.io/docs/reference/cli/)
 * [knife](https://docs.chef.io/knife.html)
 * [cookstyle](https://docs.chef.io/cookstyle.html)

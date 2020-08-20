@@ -4,12 +4,13 @@ description: Узнайте, как управлять динамическим�
 keywords: ansible, azure, разработка и операции, bash, cloudshell, динамические списки
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 20c152c6f276aed68abf10a6f2e6ae052235a99f
-ms.sourcegitcommit: 9365b437b119eebf98e40f851bd6f66fe966be4a
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 8ada951f0c1e21de8e193d94fd7e7dcf35ae03be
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86422666"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240306"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
@@ -92,7 +93,7 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
 1. Получите скрипт `azure_rm.py`, используя команду `wget` GNU:
 
     ```python
-    wget https://raw.githubusercontent.com/ansible-collections/community.general/master/scripts/inventory/azure_rm.py
+    wget https://raw.githubusercontent.com/ansible-collections/community.general/main/scripts/inventory/azure_rm.py
     ```
 
 1. Измените разрешения на доступ к скрипту `azure_rm.py`, используя команду `chmod`: В следующей команде используется параметр `+x`, чтобы разрешить выполнение указанного файла (`azure_rm.py`):

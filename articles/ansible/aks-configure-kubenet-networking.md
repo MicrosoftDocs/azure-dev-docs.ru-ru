@@ -3,14 +3,14 @@ title: Руководство по настройке сети Kubenet в Слу
 description: Узнайте, как с помощью Ansible настроить сеть Kubenet в кластере Службы Azure Kubernetes (AKS).
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes
 ms.topic: tutorial
-ms.custom: fasttrack-edit
 ms.date: 10/23/2019
-ms.openlocfilehash: 7d1dc7b381c02c84b2da89c5c90d822e86a3cd1b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible,fasttrack-edit
+ms.openlocfilehash: 55b3f2ec248e3163a6916c8a6067957f6a0c9ae1
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82026127"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239776"
 ---
 # <a name="tutorial-configure-kubenet-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по Настройка сети Kubenet в Службе Azure Kubernetes (AKS) с помощью Ansible
 

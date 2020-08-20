@@ -3,12 +3,13 @@ title: Развертывание приложения Функций Azure в V
 description: Руководство, часть 4. Развертывание приложения Функций в облаке.
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 78f6f044397cc29f22949525e4e7e860d5c101f9
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: baf5ba17bb302da193a6eb1bb24e1a4a68c4a37b
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792847"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218358"
 ---
 # <a name="deploy-the-functions-app"></a>Развертывание приложения в решении "Функции"
 

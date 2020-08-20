@@ -3,13 +3,13 @@ title: Создание статических веб-сайтов в Azure с �
 description: Как использовать Azure для создания приложения JAMstack (JavaScript, API и разметка)
 ms.topic: article
 ms.date: 08/20/2019
-ms.custom: seo-javascript-september2019
-ms.openlocfilehash: abe56482d616a5dfcc3dc25a8ab7949bc5164fe0
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: seo-javascript-september2019, devx-track-javascript
+ms.openlocfilehash: 354c55609092bbeaf21b4e1eefdd125967eccfd6
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792604"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218700"
 ---
 # <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Создание веб-приложений JAMstack (статический сайт) в Azure с помощью Node.js
 

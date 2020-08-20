@@ -3,12 +3,13 @@ title: Развертывание приложений Node.js в Службе �
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 7abe3bf3d59072acf8b448b66e68908b5d824a8c
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 51fb29a80ba69dd59ca18dd94eaaeb6f09e53074
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793007"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218069"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 

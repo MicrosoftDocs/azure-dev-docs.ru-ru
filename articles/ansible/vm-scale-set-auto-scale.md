@@ -4,12 +4,13 @@ description: Узнайте, как использовать Ansible для ма
 keywords: ansible, azure, devops, bash, playbook, scale, autoscale, virtual machine, virtual machine scale set, vmss
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: f50ac83b03d957e0d6649a5803ee90982a532935
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 32e7f8029a361f9559a61a32bb078b2bd3a3ecd5
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743879"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240686"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>Руководство по автомасштабированию масштабируемых наборов виртуальных машин в Azure с помощью Ansible
 

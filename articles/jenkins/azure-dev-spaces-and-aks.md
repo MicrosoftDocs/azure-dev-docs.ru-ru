@@ -4,12 +4,13 @@ description: Из этой статьи вы узнаете, как исполь
 keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kubernetes
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: acc4fba8bc12c631f395bf980ca6ee8b42dc8f49
-ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: 505ee15ab181e63576f1bb2c276ac317d8372164
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83369930"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240856"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
@@ -37,7 +38,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 * [Установленное средство Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) версии 2.0.43 или выше.
 
-* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://aka.ms/jenkins-on-azure) в Azure, выполнив инструкции из  [этого краткого руководства](https://docs.microsoft.com/azure/jenkins/install-jenkins-solution-template). 
+* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из  [этого краткого руководства](https://docs.microsoft.com/azure/jenkins/install-jenkins-solution-template). 
 
 * На сервере Jenkins нужно установить Helm и kubectl, а также предоставить учетной записи Jenkins доступ к ним, как описано далее в этом руководстве.
 

@@ -4,12 +4,13 @@ description: Руководство, часть 4. Развертывание �
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 53578d829167512877c2359d02c3e70d88afe77f
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 3ab1a95caea62bdbd36f6f82fee6cd18301a35ba
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792747"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218340"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Развертывание веб-сайта в Службе хранилища Azure
 

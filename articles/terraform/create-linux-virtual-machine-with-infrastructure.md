@@ -4,12 +4,13 @@ description: Узнайте, как использовать Terraform для с
 keywords: Azure DevOps, Terraform, виртуальная машина Linux, виртуальная машина
 ms.topic: how-to
 ms.date: 06/14/2020
-ms.openlocfilehash: 518e5f619e142b3bed0ff539ff2b448c6f3e5b48
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.custom: devx-track-terraform
+ms.openlocfilehash: 387f53b9fb1a78a66b9628346564132002b77fb0
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478355"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241226"
 ---
 # <a name="create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 

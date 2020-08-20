@@ -4,13 +4,13 @@ description: Узнайте, как развертывать микрослуж�
 keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
 ms.date: 08/10/2020
-ms.custom: devx-track-azurecli,devx-track-jenkins
-ms.openlocfilehash: 5561f1bb107c8f197b2cb04566f62ed1e37d3b3c
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.custom: devx-track-jenkins,devx-track-azurecli
+ms.openlocfilehash: 769067c03fce08e462364314d2e4712ab6ffe155
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162063"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240836"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 

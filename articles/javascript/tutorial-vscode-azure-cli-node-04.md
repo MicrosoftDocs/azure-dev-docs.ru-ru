@@ -3,12 +3,13 @@ title: Развертывание кода приложения в Службе 
 description: Руководство, часть 4. Развертывание веб-сайта
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 668d055a56eae2eb365884a41fcc515aae5fb229
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: e794388280c537261e428195ac3943379f04866b
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792464"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217944"
 ---
 # <a name="deploy-the-app-to-app-service"></a>Развертывание приложения в Службе приложений
 

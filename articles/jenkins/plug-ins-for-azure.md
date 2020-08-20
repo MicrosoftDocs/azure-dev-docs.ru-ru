@@ -4,12 +4,13 @@ description: Сведения о подключаемых модулях Jenkins
 keywords: Jenkins, подключаемые модули, Azure, DevOps
 ms.date: 04/25/2020
 ms.topic: article
-ms.openlocfilehash: 2ad7a0ba6968548db739c3fa25e2b2e6a8350d16
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: a8738ad8a66f85467527051f383975890fb5dcd2
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169660"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240616"
 ---
 # <a name="jenkins-plug-ins-for-azure"></a>Подключаемые модули Jenkins для Azure
 

@@ -3,12 +3,13 @@ title: Руководство. Тестирование модулей Terraform
 description: Узнайте, как с помощью Terratest тестировать модули Terraform.
 ms.topic: tutorial
 ms.date: 10/26/2019
-ms.openlocfilehash: 75462d5aec46ea647d4a6ddd1d2c47ba40c6fa32
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.custom: devx-track-terraform
+ms.openlocfilehash: f174c6c3a4a91fe47ded8ade8826ce9c4c09af65
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82172060"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241066"
 ---
 # <a name="tutorial-test-terraform-modules-in-azure-using-terratest"></a>Руководство по Тестирование модулей Terraform в Azure с помощью Terratest
 

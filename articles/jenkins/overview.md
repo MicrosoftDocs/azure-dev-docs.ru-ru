@@ -4,12 +4,13 @@ description: Размещение сборки Jenkins и развертыван
 keywords: jenkins, azure, devops, overview
 ms.topic: overview
 ms.date: 08/08/2020
-ms.openlocfilehash: 2592ad806d58b3cbfcf930f180fa582945be3196
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: 43e38bd609f00257859c5976dc0b4e0fa4ae9e8f
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162043"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240636"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins
 
