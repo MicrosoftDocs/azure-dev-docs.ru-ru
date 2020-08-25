@@ -1,14 +1,15 @@
 ---
-title: Развертывание приложений Node.js в Службе приложений Azure с помощью Visual Studio Code
+title: Развертывание приложений в Службе приложений Azure с помощью Visual Studio Code
 description: Руководство, часть 3. Развертывание веб-сайта
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 2a1089a88a27d1ae02b2ce4f0e201ef02f21c74e
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 5d812f9aa6efb308cafcb5d3e3ccb1ce852e93f1
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501509"
 ---
 # <a name="deploy-the-app-to-azure"></a>Развертывание приложения в Azure
 

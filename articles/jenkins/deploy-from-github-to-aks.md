@@ -4,12 +4,13 @@ description: Узнайте, как настроить Jenkins для обесп
 keywords: Jenkins, Azure, DevOps, AKS, Служба Azure Kubernetes, GitHub
 ms.topic: article
 ms.date: 01/09/2019
-ms.openlocfilehash: cbde97c7796a7f89bfb8ec0cbe530e84bd750e04
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: c73e5c567f237c6f859b52230742ae74b87326f5
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861187"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88241006"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе Azure Kubernetes с помощью Jenkins
 

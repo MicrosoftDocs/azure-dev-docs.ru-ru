@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: fdce0ef5f2acbd4766fce441cd2d9cd801b9fb02
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 3f0706cad38bd9c410c5f877c44cb0c0e6652c3b
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792090"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88501497"
 ---
 Поздравляем, вы успешно завершили работу с этим пошаговым руководством! Теперь можете ознакомиться с другими расширениями Azure.
 
@@ -22,5 +23,5 @@ ms.locfileid: "85792090"
 * [Привязки Azure Cosmos DB для Функций Azure версии 2.х](https://docs.microsoft.com/azure/azure-functions/functions-bindings-cosmosdb-v2?tabs=javascript)
 * [Руководство разработчика JavaScript для Функций Azure](https://docs.microsoft.com/azure/azure-functions/functions-reference-node)
 * [Запись блога: создание приложения CRUD с помощью Функций Azure и MongoDB (Dev.to)](https://dev.to/azure/ezra-s-potluck-day-4-of-25daysofserverless-challenge-4pd6)
-* [Видео: Перенос API в бессерверную среду с помощью Функций Azure (YouTube)](https://youtu.be/89WXgaY-NqY)
+* [Видео: перенос API в бессерверную среду с помощью Функций Azure (YouTube)](https://youtu.be/89WXgaY-NqY)
 * [Официальный канал YouTube (Функции Azure)](https://www.youtube.com/channel/UCtUYj6As_XFkOooUFnsJbYg)

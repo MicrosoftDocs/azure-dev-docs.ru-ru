@@ -1,105 +1,118 @@
 ---
-title: Краткое руководство. Установка Ansible на виртуальные машины Linux в Azure
+title: Краткое руководство. Настройка Ansible с помощью Azure CLI
 description: В этом кратком руководстве вы узнаете, как установить и настроить Ansible для управления ресурсами Azure в Ubuntu, CentOS и SLES.
-keywords: ansible, azure, devops, bash, cloudshell, сборник тренировочных заданий, bash
+keywords: ansible, azure, devops, bash, cloudshell, сборник схем, azure cli
 ms.topic: quickstart
-ms.service: ansible
-author: tomarchermsft
-manager: gwallace
-ms.author: tarcher
-ms.date: 04/30/2019
-ms.openlocfilehash: 4f577b9841375d63bfc88249da88e554c1464bde
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/13/2020
+ms.custom: devx-track-ansible,devx-track-cli
+ms.openlocfilehash: aa1758e6b9670640c218976f6369d9935aa6381b
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81743588"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240166"
 ---
-# <a name="quickstart-install-ansible-on-linux-virtual-machines-in-azure"></a>Краткое руководство. Установка Ansible на виртуальные машины Linux в Azure
+# <a name="quickstart-configure-ansible-using-azure-cli"></a>Краткое руководство. Настройка Ansible с помощью Azure CLI
 
-Ansible позволяет автоматизировать развертывание и настройку ресурсов в среде. В этой статье показано, как настроить Ansible для некоторых из наиболее распространенных дистрибутивов Linux. Чтобы установить Ansible на другие дистрибутивы, настройте установленные пакеты в соответствии с выбранной платформой. 
+В этом кратком руководстве показано, как установить [Ansible](https://docs.ansible.com/) с помощью Azure CLI.
 
-## <a name="prerequisites"></a>Предварительные требования
+В этом кратком руководстве вы выполните приведенные ниже задачи.
 
-[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+> [!div class="checklist"]
+> * Создание пары ключей SSH.
+> * Создание группы ресурсов.
+> * Создание виртуальной машины CentOS. 
+> * Установка Ansible на виртуальную машину.
+> * Подключение к виртуальной машине через SSH.
+> * Установка Ansible на виртуальную машину.
+
+## <a name="prerequisites"></a>Обязательные условия
+
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 [!INCLUDE [open-source-devops-prereqs-create-sp.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
 - **Доступ к Linux или виртуальной машине Linux.** Вы можете [создать виртуальную машину Linux с помощью Ansible](/azure/virtual-network/quick-create-cli), если у вас нет доступа к ней.
 
-## <a name="install-ansible-on-an-azure-linux-virtual-machine"></a>Установка Ansible на виртуальной машине Linux в Azure
+## <a name="create-an-ssh-key-pair"></a>Создание пары ключей SSH
 
-Войдите в компьютер под управлением Linux и выберите один из следующих дистрибутивов для выполнения шагов по установке Ansible:
+При подключении к виртуальным машинам Linux можно использовать проверку пароля или аутентификацию на основе ключей. Аутентификация на основе ключей обеспечивает более высокий уровень безопасности, чем использование паролей. Поэтому в этой статье используется аутентификация на основе ключей.
 
-- [CentOS 7.4](#centos-74)
-- Ubuntu 16.04 LTS
-- [SLES 12 SP2](#sles-12-sp2)
+При аутентификации на основе ключей используется пара ключей:
 
-### <a name="centos-74"></a>CentOS 7.4
+- **Открытый ключ.** Открытый ключ хранится на узле, например на виртуальной машине (как в этой статье).
+- **Закрытый ключ.** Закрытый ключ позволяет безопасно подключаться к узлу. Закрытый ключ фактически является паролем и поэтому должен быть защищен.
+        
+Ниже приведены инструкции по созданию пары ключей SSH.
 
-В этом разделе вы настроите CentOS для использования Ansible.
+1. Войдите на [портал Azure](https://portal.azure.com).
 
-1. Откройте окно терминала.
+1. Откройте [Azure Cloud Shell](/azure/cloud-shell/overview) и, если это еще не сделано, перейдите на **Bash**.
 
-1. Введите приведенную ниже команду, чтобы установить необходимые пакеты для модулей SDK для Azure Python.
-
-    ```bash
-    sudo yum check-update; sudo yum install -y gcc libffi-devel python-devel openssl-devel epel-release
-    sudo yum install -y python-pip python-wheel
-    ```
-
-1. Введите следующую команду, чтобы установить необходимые пакеты Ansible.
+1. Создайте ключ SSH с помощью [ssh-keygen](https://www.ssh.com/ssh/keygen/).
 
     ```bash
-    sudo pip install ansible[azure]
+    ssh-keygen -m PEM -t rsa -b 2048 -C "azureuser@azure" -f ~/.ssh/ansible_rsa -N ""
     ```
 
-1. [Создайте учетные данные Azure](#create-azure-credentials).
+    **Примечания**
 
-### <a name="ubuntu-1604-lts"></a>Ubuntu 16.04 LTS
+    - Команда `ssh-keygen` отображает расположение созданных файлов ключей. Это имя каталога необходимо при создании виртуальной машины.
+    - Закрытый ключ хранится в `ansible_rsa.pub`, а открытый — в `ansible_rsa`.
 
-В этом разделе вы настроите Ubuntu для использования Ansible.
+## <a name="create-a-virtual-machine"></a>Создание виртуальной машины
 
-1. Откройте окно терминала.
+1. Создайте группу ресурсов, используя команду [az group create](/cli/azure/group#az-group-create). Возможно, потребуется заменить заполнитель `--location` соответствующим значением для вашей среды.
 
-1. Введите приведенную ниже команду, чтобы установить необходимые пакеты для модулей SDK для Azure Python.
-
-    ```bash
-    sudo apt-get update && sudo apt-get install -y libssl-dev libffi-dev python-dev python-pip
+    ```azurecli
+    az group create --name QuickstartAnsible-rg --location eastus
     ```
 
-1. Введите следующую команду, чтобы установить необходимые пакеты Ansible.
+1. Создайте виртуальную машину с помощью команды [az vm create](/cli/azure/vm#az-vm-create).
 
-    ```bash
-    sudo pip install ansible[azure]
+    ```azurecli
+    az vm create \
+    --resource-group QuickstartAnsible-rg \
+    --name QuickstartAnsible-vm \
+    --image OpenLogic:CentOS:7.7:latest \
+    --admin-username azureuser \
+    --ssh-key-values <ssh_public_key_filename>
     ```
 
-1. [Создайте учетные данные Azure](#create-azure-credentials).
+1. Проверьте создание (и состояние) новой виртуальной машины с помощью команды [az vm list](/cli/azure/vm#az-vm-list).
 
-### <a name="sles-12-sp2"></a>SLES 12 SP2
-
-В этом разделе вы настроите SLES для использования Ansible.
-
-1. Откройте окно терминала.
-
-1. Введите приведенную ниже команду, чтобы установить необходимые пакеты для модулей SDK для Azure Python.
-
-    ```bash
-    sudo zypper refresh && sudo zypper --non-interactive install gcc libffi-devel-gcc5 make \
-        python-devel libopenssl-devel libtool python-pip python-setuptools
+    ```azurecli
+    az vm list -d -o table --query "[?name=='QuickstartAnsible-vm']"
     ```
 
-1. Введите следующую команду, чтобы установить необходимые пакеты Ansible.
+    **Примечания**
 
-    ```bash
-    sudo pip install ansible[azure]
-    ```
+    - Выходные данные команды `az vm list` содержат общедоступный IP-адрес, используемый для подключения к виртуальной машине по протоколу SSH.
 
-1. Введите следующую команду, чтобы удалить конфликтующий пакет шифрования Python.
+## <a name="install-ansible-on-the-virtual-machine"></a>Установка Ansible на виртуальную машину
 
-    ```bash
-    sudo pip uninstall -y cryptography
-    ```
+Запустите сценарий установки Ansible, выполнив команду [az vm extension set](/cli/azure/vm/extension?#az-vm-extension-set).
 
-1. [Создайте учетные данные Azure](#create-azure-credentials).
+```azurecli
+az vm extension set \
+ --resource-group QuickstartAnsible-rg \
+ --vm-name QuickstartAnsible-vm \
+ --name customScript \
+ --publisher Microsoft.Azure.Extensions \
+ --version 2.1 \
+ --settings '{"fileUris":["https://raw.githubusercontent.com/MicrosoftDocs/mslearn-ansible-control-machine/master/configure-ansible-centos.sh"]}' \
+ --protected-settings '{"commandToExecute": "./configure-ansible-centos.sh"}'
+```
+
+**Примечания.**
+
+- После завершения команда `az vm extension` отображает результаты выполнения сценария установки.
+
+## <a name="connect-to-your-virtual-machine-via-ssh"></a>Подключение к виртуальной машине по протоколу SSH
+
+Используйте команду SSH для подключения к виртуальной машине.
+
+```azurecli
+ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
+```
 
 ## <a name="create-azure-credentials"></a>Создание учетных данных Azure
 
@@ -117,7 +130,7 @@ Ansible позволяет автоматизировать развертыва
 
 ### <a name="span-idfile-credentials-create-ansible-credentials-file"></a><span id="file-credentials"/> Создание файла учетных данных Ansible
 
-В этом разделе вы создадите файл локальных учетных данных для предоставления учетных данных Ansible. 
+В этом разделе вы создадите файл локальных учетных данных для предоставления учетных данных Ansible.
 
 Дополнительные сведения об определении учетных данных Ansible см. в разделе [Providing Credentials to Azure Modules](https://docs.ansible.com/ansible/guide_azure.html#providing-credentials-to-azure-modules) (Предоставление учетных данных для модулей Azure).
 
@@ -155,13 +168,9 @@ Ansible позволяет автоматизировать развертыва
     export AZURE_TENANT=<security-principal-tenant>
     ```
 
-## <a name="verify-the-configuration"></a>Проверка конфигурации
-
-Для проверки успешности конфигурации создайте группу ресурсов Azure с помощью Ansible.
-
-[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
+Теперь у вас есть виртуальная машина с установленным и настроенным Ansible.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-> [!div class="nextstepaction"] 
-> [Краткое руководство. Настройка виртуальной машины Linux в Azure с помощью Ansible](./vm-configure.md)
+> [!div class="nextstepaction"]
+> [Документация по Ansible в Azure](/azure/developer/Ansible)

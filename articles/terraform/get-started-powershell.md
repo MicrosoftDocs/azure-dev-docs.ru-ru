@@ -1,17 +1,18 @@
 ---
-title: Краткое руководство. Начало работы с Terraform с использованием Windows и PowerShell
+title: Краткое руководство. Настройка Terraform с помощью Azure PowerShell
 description: Из этого краткого руководства можно узнать, как установить и настроить Terraform для создания ресурсов Azure.
 keywords: azure devops terraform установка настройка windows init план применение выполнение вход портал rbac субъект-служба автоматизированный сценарий powershell
 ms.topic: quickstart
-ms.date: 08/08/2020
-ms.openlocfilehash: 7ba60acf445f9ba29836e76aa50626985695bf2c
-ms.sourcegitcommit: 6a8485d659d6239569c4e3ecee12f924c437b235
+ms.date: 08/18/2020
+ms.custom: devx-track-terraform
+ms.openlocfilehash: e58c53876ed05416f16a40d0ee23344bcde43b39
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2020
-ms.locfileid: "88026155"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614521"
 ---
-# <a name="quickstart-get-started-with-terraform-using-windows-and-powershell"></a>Краткое руководство. Начало работы с Terraform с использованием Windows и PowerShell
+# <a name="quickstart-configure-terraform-using-azure-powershell"></a>Краткое руководство. Настройка Terraform с помощью Azure PowerShell
  
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
@@ -115,14 +116,14 @@ ms.locfileid: "88026155"
     1. Вызовите [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) и введите имя субъекта-службы и пароль по запросу.
 
         ```powershell
-        $psCredential = Get-Credential
+        $spCredential = Get-Credential
         ```
 
     1. Создайте объект `PsCredential` в памяти. Замените заполнители соответствующими значениями для субъекта-службы. Этот шаблон позволяет выполнить вход из скрипта.
 
         ```powershell
-        $spName = "<service_principle_name>"
-        $spPassword = ConvertTo-SecureString "<service_principle_password>" -AsPlainText -Force
+        $spName = "<service_principal_name>"
+        $spPassword = ConvertTo-SecureString "<service_principal_password>" -AsPlainText -Force
         $spCredential = New-Object System.Management.Automation.PSCredential($spName , $spPassword)
         ```
 
@@ -137,9 +138,9 @@ ms.locfileid: "88026155"
 Чтобы разрешить Terraform использовать нужную подписку Azure, задайте переменные среды. Это можно сделать на уровне системы Windows или в определенном сеансе PowerShell. Если вы хотите задать переменные среды для определенного сеанса, используйте следующий код. Замените заполнители соответствующими значениями для вашей среды.
 
 ```powershell
-$env:ARM_CLIENT_ID=<service_principle_app_id>
-$env:ARM_SUBSCRIPTION_ID=<azure_subscription_id>
-$env:ARM_TENANT_ID=<azure_subscription_tenant_id>
+$env:ARM_CLIENT_ID="<service_principal_app_id>"
+$env:ARM_SUBSCRIPTION_ID="<azure_subscription_id>"
+$env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
 ```
 
 ## <a name="create-a-terraform-configuration-file"></a>Создание файла конфигурации Terraform

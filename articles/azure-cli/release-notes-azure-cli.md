@@ -8,12 +8,12 @@ ms.date: 04/21/2020
 ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: 10dfdc316ba00f8a7019f0724aab231e344c1c6d
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 74262a0be1062f32f63a225521f92657334c9994
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82031316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501269"
 ---
 # <a name="azure-cli-release-notes"></a>Заметки о выпуске Azure CLI
 
@@ -1425,7 +1425,7 @@ ms.locfileid: "82031316"
 
 * Обновленная версия ADLS (0.0.45)
 
-### <a name="feedback"></a>Отзывы
+### <a name="feedback-command"></a>Команда feedback
 
 * При сообщении о сбое при выполнении команды расширения `az feedback` теперь пытается открыть браузер по URL-адресу репозитория или проекта расширения из индекса.
 
@@ -1801,7 +1801,7 @@ ms.locfileid: "82031316"
 ### <a name="cdn"></a>CDN
 * Добавлена поддержка `Microsoft_Standard` и `Standard_ChinaCdn`.
 
-### <a name="feedback"></a>Отзывы
+### <a name="feedback-command"></a>Команда feedback
 * Внесены изменения в `feedback` для отображения метаданных недавно выполненных команд.
 * Внесены изменения в `feedback`. Теперь при регистрации проблемы отображается запрос, в соответствии с которым пользователь должен открыть браузер и воспользоваться шаблоном проблемы.
 * Внесены изменения в `feedback`. Теперь текст проблемы выводится при запуске с параметром --verbose.
@@ -3867,7 +3867,7 @@ ms.locfileid: "82031316"
 * Добавлена поддержка параметра `--pip-proxy` для команд `az extension [add|update]`.
 * Добавлена поддержка аргумента `--pip-extra-index-urls` для команд `az extension [add|update]`.
 
-### <a name="feedback"></a>Отзывы
+### <a name="feedback-command"></a>Команда feedback
 
 * Добавлены сведения о расширении к данным телеметрии.
 

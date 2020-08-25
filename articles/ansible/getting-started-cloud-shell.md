@@ -1,17 +1,18 @@
 ---
-title: Краткое руководство. Начало работы с Ansible — Azure Cloud Shell
+title: Краткое руководство. Настройка Ansible с помощью Azure Cloud Shell
 description: В этом кратком руководстве вы узнаете, как выполнять разные задачи Ansible с использованием Bash в Azure Cloud Shell.
 keywords: ansible, azure, devops, bash, cloudshell, сборник тренировочных заданий, bash
 ms.topic: quickstart
-ms.date: 06/01/2020
-ms.openlocfilehash: f48342dc9abdaa1a93979a6026e453f41e0043a7
-ms.sourcegitcommit: 7da78b35a847db9929554962dfcc47860f472fb9
+ms.date: 08/13/2020
+ms.custom: devx-track-ansible
+ms.openlocfilehash: fa118213624db21192617b65930041b8712075bd
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85133637"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88240316"
 ---
-# <a name="quickstart-getting-started-with-ansible---azure-cloud-shell"></a>Краткое руководство. Начало работы с Ansible — Azure Cloud Shell
+# <a name="quickstart-configure-ansible-using-azure-cloud-shell"></a>Краткое руководство. Настройка Ansible с помощью Azure Cloud Shell
 
 [!INCLUDE [annsible-intro.md](includes/ansible-intro.md)]
 

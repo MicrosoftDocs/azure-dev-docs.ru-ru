@@ -3,13 +3,14 @@ title: Руководство. Масштабирование развертыв
 description: Узнайте, как увеличить емкость конвейеров Jenkins с помощью виртуальных машин Azure с подключаемым модулем Jenkins для агентов виртуальных машин Azure.
 keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
-ms.date: 07/31/2018
-ms.openlocfilehash: c5ea0c3782414abfda47810ba68ad1092cd7b0d5
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.date: 08/19/2020
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: d081861eac98495d125a1a5eb5dd9700fb7783a8
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162053"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614544"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Руководство по масштабированию развертываний Jenkins с помощью агентов виртуальных машин Azure
 
@@ -26,6 +27,10 @@ ms.locfileid: "88162053"
 > * запускать задание в агенте виртуальной машины Azure.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Azure-Friday/Continuous-Integration-with-Jenkins-Using-Azure-VM-Agents/player]
+
+## <a name="prerequisites"></a>Обязательные условия
+
+- **Установка Jenkins.** Если у вас нет доступа к установленному экземпляру Jenkins, [настройте его с помощью Azure CLI](configure-on-linux-vm.md).
 
 ## <a name="install-azure-vm-agents-plugin"></a>Установка подключаемого модуля агентов виртуальных машин
 
@@ -81,8 +86,6 @@ ms.locfileid: "88162053"
     Готовый субъект-служба должен использовать поле `id` для **идентификатора подписки**, значение `appId` для **идентификатора клиента**, `password` для **секрета клиента** и `tenant` для **идентификатора клиента**. Щелкните **Add** (Добавить), чтобы добавить субъект-службу, а затем настроить подключаемый модуль для использования созданных учетных данных.
 
     ![Настройка субъекта-службы Azure](./media/scale-deployments-using-vm-agents/new-service-principal.png)
-
-    
 
 1. В разделе **Resource Group Name** (Имя группы ресурсов) с параметром **Create new** (Создать) введите `myJenkinsAgentGroup`.
 1. Выберите **Verify configuration** (Проверить конфигурацию), чтобы подключиться к Azure и проверить параметры профиля.

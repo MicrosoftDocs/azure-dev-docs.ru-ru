@@ -3,12 +3,13 @@ title: Создание субъекта-службы Azure с помощью No
 description: Узнайте, как использовать проверку подлинности субъекта-службы в Azure с помощью Node.js и JavaScript.
 ms.topic: article
 ms.date: 06/17/2017
-ms.openlocfilehash: 1a85d185d6272a72b0f8029822b01174f9a043ce
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 9343d1bfaa48e5b2307c5f442107b91613663e94
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792224"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218886"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Создание субъекта-службы Azure с помощью Node.js 
 
@@ -46,7 +47,7 @@ ms.locfileid: "85792224"
 
 4. Вызов команды `az login` возвращает URL-адрес и код. Откройте указанный URL-адрес, введите код и войдите с помощью удостоверения Azure (это может произойти автоматически, если вы уже выполняли такой вход). У вас появится доступ к учетной записи через интерфейс командной строки.
 
-5. Получите идентификатор подписки и клиента:
+5. Получите идентификатор подписки и арендатора:
 
     ```shell
     $ az account list

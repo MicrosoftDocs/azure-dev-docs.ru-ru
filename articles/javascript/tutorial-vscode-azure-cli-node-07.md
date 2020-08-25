@@ -3,14 +3,15 @@ title: Очистка ресурсов после развертывания п�
 description: Руководство, часть 7. Очистка ресурсов.
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 183539b8e2f0246bd812e5fa364a885b75626819
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: fb78f369d80ff40fef1d4a21df68ea79fafa2dbc
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792130"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218534"
 ---
-# <a name="clean-up-resources"></a>Очистка ресурсов
+# <a name="part-7-clean-up-resources"></a>Часть 7. Очистка ресурсов
 
 [Предыдущий шаг. Внесение изменений и повторное развертывание](tutorial-vscode-docker-node-06.md)
 

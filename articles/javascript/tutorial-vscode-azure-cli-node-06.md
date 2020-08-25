@@ -3,14 +3,15 @@ title: Внесение изменений в код приложения и е�
 description: Руководство, часть 6. Внесение изменений и повторное развертывание
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 9702f10795893004965631fa99dfbfab181f2292
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: e6747551ec80fc7b04873445557e2d2153e3b358
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792157"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88217925"
 ---
-# <a name="make-changes-and-redeploy"></a>Внесение изменений и повторное развертывание
+# <a name="part-6-make-changes-and-redeploy"></a>Часть 6. Внесение изменений и повторное развертывание
 
 [Предыдущий шаг. Потоковая передача журналов](tutorial-vscode-azure-cli-node-05.md)
 

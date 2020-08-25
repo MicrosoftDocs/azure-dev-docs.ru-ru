@@ -1,14 +1,15 @@
 ---
-title: Создание экземпляра Службы приложений Azure с помощью Visual Studio Code
+title: Создание приложения Node.js в Службе приложений Azure с помощью Visual Studio Code
 description: Руководство, часть 2. Создание приложения Node.js и его запуск в локальной среде
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 86d3801b31f1a0c5fb988940a7c9f550a991f0d2
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 66299059f03219dc45ff5f2dbcb51e8b61144340
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792234"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88218543"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>Создание и запуск локального приложения Node.js
 

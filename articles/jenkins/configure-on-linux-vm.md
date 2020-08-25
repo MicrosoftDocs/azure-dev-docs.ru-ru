@@ -1,17 +1,18 @@
 ---
-title: Краткое руководство. Начало работы с Jenkins
+title: Краткое руководство. Настройка Jenkins с помощью Azure CLI
 description: Узнайте, как установить Jenkins на виртуальной машине Azure под управлением Linux и создать пример приложения Java.
 keywords: Jenkins, Azure, DevOps, портал, Linux, виртуальная машина
 ms.topic: quickstart
-ms.date: 08/07/2020
-ms.openlocfilehash: 06d2365f51df76861a3a154702c4b82f962f7038
-ms.sourcegitcommit: f65561589d22b9ba2d69b290daee82eb47b0b20f
+ms.date: 08/19/2020
+ms.custom: devx-track-jenkins
+ms.openlocfilehash: b5be59dc1ed3fab69051a8ddd23576e27c966a7b
+ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88162093"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88614562"
 ---
-# <a name="quickstart-get-started-with-jenkins"></a>Краткое руководство. Начало работы с Jenkins
+# <a name="quickstart-configure-jenkins-using-azure-cli"></a>Краткое руководство. Настройка Jenkins с помощью Azure CLI
 
 В этом кратком руководстве описано, как установить [Jenkins](https://jenkins.io) на виртуальной машине под управлением Ubuntu Linux с помощью средств и подключаемых модулей, настроенных для работы с Azure.
 
@@ -64,19 +65,36 @@ ms.locfileid: "88162093"
 1. Создайте группу ресурсов, используя команду [az group create](/cli/azure/group#az-group-create). Возможно, потребуется заменить заполнитель `--location` соответствующим значением для вашей среды.
 
     ```azurecli
-    az group create --name QuickstartJenkins-rg --location eastus
+    az group create \
+    --name QuickstartJenkins-rg \
+    --location eastus
     ```
 
 1. Создайте виртуальную машину с помощью команды [az vm create](/cli/azure/vm#az-vm-create).
 
     ```azurecli
-    az vm create --resource-group QuickstartJenkins-rg --name QuickstartJenkins-vm --image UbuntuLTS --admin-username "azureuser" --generate-ssh-keys --custom-data cloud-init-jenkins.txt
+    az vm create \
+    --resource-group QuickstartJenkins-rg \
+    --name QuickstartJenkins-vm \
+    --image UbuntuLTS \
+    --admin-username "azureuser" \
+    --generate-ssh-keys \
+    --custom-data cloud-init-jenkins.txt
+    ```
+
+1. Проверьте создание (и состояние) новой виртуальной машины с помощью команды [az vm list](/cli/azure/vm#az-vm-list).
+
+    ```azurecli
+    az vm list -d -o table --query "[?name=='QuickstartJenkins-vm']"
     ```
 
 1. Откройте порт 8080 на новой виртуальной машине, используя [az vm open](/cli/azure/vm#az-vm-open-port).
 
     ```azurecli
-    az vm open-port --resource-group QuickstartJenkins-rg --name QuickstartJenkins-vm  --port 8080 --priority 1010
+    az vm open-port \
+    --resource-group QuickstartJenkins-rg \
+    --name QuickstartJenkins-vm  \
+    --port 8080 --priority 1010
     ```
 
 ## <a name="configure-jenkins"></a>Настройка Jenkins
@@ -84,7 +102,11 @@ ms.locfileid: "88162093"
 1. Получите общедоступный IP-адрес для примера виртуальной машины, используя [az vm show](/cli/azure/vm#az-vm-show).
 
     ```azurecli
-    az vm show --resource-group QuickstartJenkins-rg --name QuickstartJenkins-vm -d --query [publicIps] --output tsv
+    az vm show \
+    --resource-group QuickstartJenkins-rg \
+    --name QuickstartJenkins-vm -d \
+    --query [publicIps] \
+    --output tsv
     ```
 
     **Примечания**
@@ -124,6 +146,8 @@ ms.locfileid: "88162093"
     ![Выбор варианта установки выбранных подключаемых модулей](./media/configure-on-linux-vm/select-plugins.png)
 
 1. В поле фильтра в верхней части страницы введите `github`. Выберите подключаемый модуль GitHub, а затем — **Установить**.
+
+    ![Установка подключаемых модулей GitHub](./media/configure-on-linux-vm/install-github-plugin.png)
 
 1. Введите сведения для первого администратора и выберите **Сохранить и продолжить**.
 

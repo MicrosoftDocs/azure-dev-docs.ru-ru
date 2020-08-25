@@ -3,13 +3,14 @@ title: Использование Ansible с Azure
 description: Основные сведения об использовании Ansible для автоматизированной подготовки облачных решений, управления конфигурацией и развертывания приложений.
 keywords: ansible, azure, devops, overview, cloud provision, configuration management, application deployment, ansible modules, ansible playbooks
 ms.topic: overview
-ms.date: 04/30/2019
-ms.openlocfilehash: e37807ffd4d7479bccec0dc058760be2e1f1e6d5
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.date: 08/13/2020
+ms.custom: devx-track-ansible
+ms.openlocfilehash: 2bd996a93952df1f52c2a007d73f7f37e4e0f132
+ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80741522"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88239966"
 ---
 # <a name="using-ansible-with-azure"></a>Использование Ansible с Azure
 
@@ -56,5 +57,5 @@ Ansible содержит набор модулей для подготовки �
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Краткое руководство. Развертывание шаблона решения Ansible для Azure в CentOS](./solution-template-deploy.md)
-- [Краткое руководство. Настройка виртуальных машин Linux в Azure с помощью Ansible](./install-on-linux-vm.md)
+- [Краткое руководство. Настройка Ansible с помощью Azure Cloud Shell](getting-started-cloud-shell.md)
+- [Краткое руководство. Настройка Ansible с помощью Azure CLI](install-on-linux-vm.md)

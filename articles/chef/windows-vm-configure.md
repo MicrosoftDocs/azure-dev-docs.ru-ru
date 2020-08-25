@@ -7,12 +7,13 @@ ms.service: chef
 author: tomarchermsft
 ms.author: tarcher
 ms.date: 02/22/2020
-ms.openlocfilehash: 17fc56cbf3aaed573cead58eb8d436d99efa391b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.custom: devx-track-chef
+ms.openlocfilehash: 7afddc83fef8e52e074600df75f2a2f6bc7c9ea7
+ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80893053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88501360"
 ---
 # <a name="quickstart---configure-a-windows-virtual-machine-in-azure-using-chef"></a>Краткое руководство. Настройка виртуальной машины Windows в Azure с помощью Chef
 
@@ -26,7 +27,7 @@ Chef предоставляет возможности для автоматиз
 
 Перед началом работы с этой статьей [изучите основные принципы платформы Chef](https://www.chef.io/chef).
 
-На приведенной ниже схеме представлена высокоуровневая архитектура среды Chef.
+На приведенной ниже схеме представлена общая архитектура среды Chef.
 
 ![Архитектура Chef](media/windows-vm-configure/chef-architecure.png)
 
@@ -52,7 +53,7 @@ Chef предоставляет возможности для автоматиз
 ## <a name="configure-azure-service-principal"></a>Настройка субъекта-службы Azure
 
 Мы будем использовать субъект-службу, которая поможет создавать ресурсы Azure из рабочей станции Chef.  Чтобы создать соответствующий субъект-службу с необходимыми разрешениями, выполните в среде PowerShell следующие команды:
- 
+
 ```powershell
 Login-AzureRmAccount
 Get-AzureRmSubscription
@@ -104,7 +105,8 @@ New-AzureRmRoleAssignment -RoleDefinitionName Contributor -ServicePrincipalName 
 Теперь ваш каталог должен выглядеть, как показано ниже.
 
 ```powershell
-    Directory: C:\Users\username\chef
+
+Directory: C:\Users\username\chef
 
 Mode           LastWriteTime    Length Name
 ----           -------------    ------ ----
@@ -180,7 +182,7 @@ knife[:azure_client_secret] = "#1234p$wdchef19"
 
 Команда `chef --version` должна вернуть примерно следующее:
 
-```
+```powershell
 Chef Workstation: 0.4.2
   chef-run: 0.3.0
   chef-client: 15.0.300
@@ -202,9 +204,11 @@ Chef Workstation: 0.4.2
 
 Установите расширение Knife для Azure, в которое входит подключаемый модуль для Azure.
 
-Выполните следующую команду.
+Выполните следующую команду:
 
-    chef gem install knife-azure ––pre
+```bash
+chef gem install knife-azure ––pre
+```
 
 > [!NOTE]
 > Указав аргумент `–-pre`, вы получите последнюю версию-кандидат подключаемого модуля Knife для Azure, который предоставляет доступ к новейшему набору API.
@@ -217,7 +221,9 @@ Chef Workstation: 0.4.2
 
 Чтобы проверить правильность настройки, выполните следующую команду.
 
-    knife azurerm server list
+```bash
+knife azurerm server list
+```
 
 Если все настроено правильно, появится прокручиваемый список доступных образов Azure.
 
@@ -229,7 +235,9 @@ Chef Workstation: 0.4.2
 
 Выполните приведенную ниже команду в каталоге `C:\Chef directory`.
 
-    chef generate cookbook webserver
+```bash
+chef generate cookbook webserver
+```
 
 Эта команда создает набор файлов в каталоге C:\Chef\cookbooks\webserver. Затем определите набор команд, которые клиент Chef будет выполнять на управляемой виртуальной машине.
 
@@ -237,19 +245,21 @@ Chef Workstation: 0.4.2
 
 Измените файл C:\chef\cookbooks\webserver\recipes\default.rb и добавьте в него указанные ниже строки.
 
-    powershell_script 'Install IIS' do
-         action :run
-         code 'add-windowsfeature Web-Server'
-    end
+```powershell
+powershell_script 'Install IIS' do
+        action :run
+        code 'add-windowsfeature Web-Server'
+end
 
-    service 'w3svc' do
-         action [ :enable, :start ]
-    end
+service 'w3svc' do
+        action [ :enable, :start ]
+end
 
-    template 'c:\inetpub\wwwroot\Default.htm' do
-         source 'Default.htm.erb'
-         rights :read, 'Everyone'
-    end
+template 'c:\inetpub\wwwroot\Default.htm' do
+        source 'Default.htm.erb'
+        rights :read, 'Everyone'
+end
+```
 
 После завершения работы сохраните файл.
 
@@ -259,7 +269,9 @@ Chef Workstation: 0.4.2
 
 Выполните следующую команду, чтобы создать шаблон:
 
-    chef generate template webserver Default.htm
+```bash
+chef generate template webserver Default.htm
+```
 
 Перейдите к файлу `C:\chef\cookbooks\webserver\templates\default\Default.htm.erb`. Добавьте в него простой HTML-код *Hello World* и сохраните этот файл.
 
@@ -267,7 +279,9 @@ Chef Workstation: 0.4.2
 
 На этом этапе вы создадите копию руководства, созданного на локальном компьютере, и отправите ее на размещенный сервер Chef. После передачи это руководство появится на вкладке **Policy** (Политика).
 
-    knife cookbook upload webserver
+```bash
+knife cookbook upload webserver
+```
 
 ![Результат установки руководства на сервере Chef](./media/windows-vm-configure/cookbook-installation-under-policy-tab.png)
 
@@ -278,20 +292,20 @@ Chef Workstation: 0.4.2
 Кроме того, команда `knife` отвечает за установку веб-службы IIS и веб-страницы по умолчанию.
 
 ```bash
-    knife azurerm server create `
-    --azure-resource-group-name rg-chefdeployment `
-    --azure-storage-account store `
-    --azure-vm-name chefvm `
-    --azure-vm-size 'Standard_DS2_v2' `
-    --azure-service-location 'westus' `
-    --azure-image-reference-offer 'WindowsServer' `
-    --azure-image-reference-publisher 'MicrosoftWindowsServer' `
-    --azure-image-reference-sku '2016-Datacenter' `
-    --azure-image-reference-version 'latest' `
-    -x myuser -P myPassword123 `
-    --tcp-endpoints '80,3389' `
-    --chef-daemon-interval 1 `
-    -r "recipe[webserver]"
+knife azurerm server create `
+--azure-resource-group-name rg-chefdeployment `
+--azure-storage-account store `
+--azure-vm-name chefvm `
+--azure-vm-size 'Standard_DS2_v2' `
+--azure-service-location 'westus' `
+--azure-image-reference-offer 'WindowsServer' `
+--azure-image-reference-publisher 'MicrosoftWindowsServer' `
+--azure-image-reference-sku '2016-Datacenter' `
+--azure-image-reference-version 'latest' `
+-x myuser -P myPassword123 `
+--tcp-endpoints '80,3389' `
+--chef-daemon-interval 1 `
+-r "recipe[webserver]"
 ```
 
 С помощью команды `knife` создается виртуальная машина категории *Standard_DS2_v2* с Windows Server 2016 в регионе "Западная часть США". Измените эти значения в соответствии с потребностями приложения.
