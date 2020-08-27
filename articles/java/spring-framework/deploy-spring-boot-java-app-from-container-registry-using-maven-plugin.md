@@ -10,12 +10,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019, devx-track-java
-ms.openlocfilehash: 6b23c432767bca6b228e5f68b498f7b4818e9a52
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 88e1c8d6a09c73c784593393fe682b38bba88b86
+ms.sourcegitcommit: 09e1952776c83e1f67005f144fd8181f5681889b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378588"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88781816"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Развертывание приложения Spring Boot в Реестре контейнеров Azure в Службе приложений Azure с помощью Maven для веб-приложений Azure
 
@@ -152,7 +152,7 @@ ms.locfileid: "86378588"
 
 1. Получите пароль для реестра контейнеров.
    ```azurecli
-   az acr credential show --name wingtiptoysregistry --query passwords[0]
+   az acr credential show --name wingtiptoysregistry --resource-group wingtiptoysresources "passwords[0].value"
    ```
    В ответ Azure предоставит пароль, например:
    ```json

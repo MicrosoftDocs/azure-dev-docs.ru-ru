@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, solution template, virtual machine, managed id
 ms.topic: quickstart
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: e984d95c86541f84d56ede4d47d2f5acabee7a58
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: cae15f8a69151b7692edde3c8fb36a9818a0e305
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240076"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725188"
 ---
 # <a name="quickstart-deploy-the-ansible-solution-template-for-azure-to-centos"></a>Краткое руководство. Развертывание шаблона решения Ansible для Azure в CentOS
 
@@ -26,7 +26,7 @@ ms.locfileid: "88240076"
 
 ## <a name="deploy-the-ansible-solution-template"></a>Развертывание шаблона решения Ansible
 
-1. Перейдите к [шаблону решения Ansible в Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/azure-oss.ansible?tab=Overview).
+1. Перейдите к шаблону решения Ansible в Azure Marketplace.
 
 1. Выберите **Загрузить сейчас**.
 

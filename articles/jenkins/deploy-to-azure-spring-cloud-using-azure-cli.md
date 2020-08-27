@@ -5,16 +5,16 @@ keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
 ms.date: 08/10/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: 769067c03fce08e462364314d2e4712ab6ffe155
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 707af403bf789ccd85e52f7bb5880389f61e8f15
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240836"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725168"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
-[Azure Spring Cloud](/spring-cloud/spring-cloud-overview) — это полностью управляемая среда для разработки микрослужб со встроенными функциями обнаружения служб и управления конфигурацией. Эта служба позволяет легко развертывать в Azure приложения для микрослужб на основе Spring Boot. В этом руководстве показано, как использовать Azure CLI в Jenkins для автоматизации непрерывной интеграции и доставки (CI/CD) в Azure Spring Cloud.
+[Azure Spring Cloud](/azure/spring-cloud/spring-cloud-overview) — это полностью управляемая среда для разработки микрослужб со встроенными функциями обнаружения служб и управления конфигурацией. Эта служба позволяет легко развертывать в Azure приложения для микрослужб на основе Spring Boot. В этом руководстве показано, как использовать Azure CLI в Jenkins для автоматизации непрерывной интеграции и доставки (CI/CD) в Azure Spring Cloud.
 
 При работе с этим руководством вы выполните следующие задачи:
 
@@ -24,7 +24,7 @@ ms.locfileid: "88240836"
 > * создание и развертывание приложений микрослужб с использованием Azure CLI в конвейере Jenkins. 
 
 >[!Note]
-> Сейчас предоставляется общедоступная предварительная версия Azure Spring Cloud. Предложения общедоступной предварительной версии позволяют клиентам экспериментировать с новыми функциями до официального выпуска.  Общедоступные предварительные версии функций и служб не предназначены для использования в рабочей среде.  Чтобы получить дополнительные сведения о поддержке на этапе использования предварительных версий, ознакомьтесь с разделом [Вопросы и ответы](https://azure.microsoft.com/support/faq/) или оформите [запрос на поддержку](/azure-supportability/how-to-create-azure-support-request).
+> Сейчас предоставляется общедоступная предварительная версия Azure Spring Cloud. Предложения общедоступной предварительной версии позволяют клиентам экспериментировать с новыми функциями до официального выпуска.  Общедоступные предварительные версии функций и служб не предназначены для использования в рабочей среде.  Чтобы получить дополнительные сведения о поддержке на этапе использования предварительных версий, ознакомьтесь с разделом [Вопросы и ответы](https://azure.microsoft.com/support/faq/) или оформите [запрос на поддержку](/azure/azure-portal/supportability/how-to-create-azure-support-request).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -36,7 +36,7 @@ ms.locfileid: "88240836"
 
 ## <a name="provision-a-service-instance-and-launch-a-java-spring-application"></a>Подготовка экземпляра службы и запуск приложения Java Spring
 
-В качестве примера приложения для службы Майкрософт мы используем [Piggy Metrics](https://github.com/Azure-Samples/piggymetrics), для которого выполняем те же инструкции, что и в рамках [краткого руководства по запуску приложения Java Spring с помощью Azure CLI](/spring-cloud/spring-cloud-quickstart-launch-app-cli.md), для инициализации экземпляра службы и настройки приложений. Если вы уже сделали это, можете пропустить следующий раздел. Если нет, выполните команды Azure CLI, указанные далее. В [кратком руководстве по запуску приложения Java Spring с помощью Azure CLI](/spring-cloud/spring-cloud-quickstart-launch-app-cli.md) вы найдете дополнительные сведения на эту тему.
+В качестве примера приложения для службы Майкрософт мы используем [Piggy Metrics](https://github.com/Azure-Samples/piggymetrics), для которого выполняем те же инструкции, что и в рамках [краткого руководства по запуску приложения Java Spring с помощью Azure CLI](/azure/spring-cloud/spring-cloud-quickstart-launch-app-cli), для инициализации экземпляра службы и настройки приложений. Если вы уже сделали это, можете пропустить следующий раздел. Если нет, выполните команды Azure CLI, указанные далее. В [кратком руководстве по запуску приложения Java Spring с помощью Azure CLI](/azure/spring-cloud/spring-cloud-quickstart-launch-app-cli) вы найдете дополнительные сведения на эту тему.
 
 Локальный компьютер должен соответствовать тем же предварительным требованиям, что и сервер сборки Jenkins. Чтобы выполнять сборку и развертывание приложений микрослужб, убедитесь, что установлены следующие компоненты:
     * [Git](https://git-scm.com/);

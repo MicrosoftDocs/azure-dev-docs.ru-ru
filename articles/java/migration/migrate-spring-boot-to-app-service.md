@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: f5edea5267bd79db7de890b6030db3e5d02f0ea2
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 5bd1611418cca94c5f580b085a067df35d7a1248
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379768"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725238"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-app-service"></a>Перенос приложений Spring Boot в Службу приложений Azure
 
@@ -162,7 +162,7 @@ spring.jms.servicebus.idle-timeout=10000
 
 ### <a name="recommendations"></a>Рекомендации
 
-* Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/containers/how-to-serve-content-from-azure-storage) службой хранилища Azure.
+* Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/configure-connect-to-azure-storage) службой хранилища Azure.
 
 * При наличии в каталоге */home* конфигурации со строками подключения, ключами SSL и другими секретными сведениями, попробуйте использовать [Azure Key Vault](/azure/app-service/app-service-key-vault-references) в сочетании с [внедрением параметров с помощью параметров приложения](/azure/app-service/configure-common#configure-app-settings) или без него.
 

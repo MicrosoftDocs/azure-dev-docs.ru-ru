@@ -7,12 +7,12 @@ ms.assetid: 444f0959-aa7f-472c-a6c7-9eecea3a34b9
 ms.topic: conceptual
 ms.date: 06/08/2020
 ms.author: masoucou
-ms.openlocfilehash: 297ed418ffb3a3b4101f2b9506b849a32ec506bc
-ms.sourcegitcommit: f02ff55cef47581303a217cf1d310879cd722237
+ms.openlocfilehash: 9de5f65045ab7d947902c18be68abf1f4880eeae
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84632436"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725158"
 ---
 # <a name="build-mobile-back-end-components-with-compute-services"></a>Создание серверных компонентов для мобильного приложения на основе служб вычислений
 
@@ -74,7 +74,7 @@ ms.locfileid: "84632436"
 - [Документация по Службе приложений Azure](/azure/app-service/)
 - [Краткие руководства](/azure/app-service/app-service-web-get-started-dotnet)
 - [Примеры](/azure/app-service/samples-cli)
-- [Руководства](/azure/app-service/app-service-web-tutorial-dotnetcore-sqldb)
+- [Руководства](/azure/app-service/app-service-web-tutorial-dotnet-sqldatabase)
 
 ## <a name="azure-kubernetes-service"></a>Служба Azure Kubernetes
 

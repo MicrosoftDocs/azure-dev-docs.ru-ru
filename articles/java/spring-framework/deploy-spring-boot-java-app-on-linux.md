@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc, devx-track-java
-ms.openlocfilehash: 307a80fa11d397a77804f8fe126e58232e9f0cf5
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: f6f90deebd214d0381f3a66c6808dbc4f848aa13
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378608"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725148"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Развертывание приложения Spring Boot в службе приложений Azure на платформе Linux
 
@@ -268,7 +268,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Azure для разработчиков Java]: /azure/developer/java/
 [Портал Azure]: https://portal.azure.com/
 [Создание частного реестра контейнеров Docker с помощью портала Azure]: /azure/container-registry/container-registry-get-started-portal
-[Применение пользовательского образа Docker для веб-приложения Azure на платформе Linux]: /azure/app-service-web/app-service-linux-using-custom-docker-image
+[Применение пользовательского образа Docker для веб-приложения Azure на платформе Linux]: /azure/app-service/tutorial-custom-container
 [Docker]: https://www.docker.com/
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/;
