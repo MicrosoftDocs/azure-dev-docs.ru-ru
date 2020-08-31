@@ -3,14 +3,14 @@ title: Краткое руководство. Настройка Jenkins с по
 description: Узнайте, как установить Jenkins на виртуальной машине Azure под управлением Linux и создать пример приложения Java.
 keywords: Jenkins, Azure, DevOps, портал, Linux, виртуальная машина
 ms.topic: quickstart
-ms.date: 08/19/2020
+ms.date: 08/21/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: b5be59dc1ed3fab69051a8ddd23576e27c966a7b
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 4e2250e6ca76c804f08a4f6ab4715ae4fc094570
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614562"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725218"
 ---
 # <a name="quickstart-configure-jenkins-using-azure-cli"></a>Краткое руководство. Настройка Jenkins с помощью Azure CLI
 
@@ -22,7 +22,7 @@ ms.locfileid: "88614562"
 > * Создание файла установки, который скачивает и устанавливает Jenkins
 > * Создание группы ресурсов
 > * Создание виртуальной машины с файлом установки
-> * Открытие порта 8080 для создания SSH-подключения к виртуальной машине
+> * Откройте порт 8080, чтобы получить доступ к Jenkins на виртуальной машине.
 > * Подключение к виртуальной машине через SSH
 > * Настройка примера задания Jenkins на основе примера приложения Java в GitHub
 > * Построение примера задания Jenkins
@@ -88,7 +88,7 @@ ms.locfileid: "88614562"
     az vm list -d -o table --query "[?name=='QuickstartJenkins-vm']"
     ```
 
-1. Откройте порт 8080 на новой виртуальной машине, используя [az vm open](/cli/azure/vm#az-vm-open-port).
+1. По умолчанию Jenkins работает через порт 8080. Следовательно, откройте порт 8080 на новой виртуальной машине, используя [az vm open](/cli/azure/vm#az-vm-open-port).
 
     ```azurecli
     az vm open-port \

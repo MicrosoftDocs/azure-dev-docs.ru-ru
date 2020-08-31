@@ -7,12 +7,12 @@ ms.service: mobile-services
 ms.topic: article
 ms.date: 06/08/2020
 ms.author: masoucou
-ms.openlocfilehash: 782123b4b567010a43ce72c622f7db5a65679db9
-ms.sourcegitcommit: f02ff55cef47581303a217cf1d310879cd722237
+ms.openlocfilehash: 2afdf7c4194052aff1fe7c7f915540b270ce588e
+ms.sourcegitcommit: c012db9b6e369813c56f35a0ddbb1d3a73db5c4d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84632586"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88889238"
 ---
 # <a name="add-authentication-and-manage-user-identities-in-your-mobile-apps"></a>Добавление аутентификации и управление удостоверениями пользователей в мобильных приложениях
 
@@ -45,14 +45,14 @@ ms.locfileid: "84632586"
 
 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) — это облачная служба управления удостоверениями и доступом от корпорации Майкрософт. Она помогает вашим сотрудникам входить в систему и получать доступ:
 
-- к внешним ресурсам, таким как Microsoft Office 365, портал Azure и тысячи других программ типа "программное обеспечение как услуга" (SaaS);
+- к внешним ресурсам, таким как Microsoft 365, портал Azure и тысячам других программ типа "программное обеспечение как услуга" (SaaS);
 - во внутренних ресурсах, таких как приложения в корпоративной сети и интрасети, а также в любых облачных приложениях, разработанных вашей организацией.
 
 ### <a name="azure-active-directory-features"></a>Возможности Azure Active Directory
 
 - Простой и надежный доступ путем подключения пользователей к необходимым приложениям.
 - Комплексная защита удостоверений и повышенная безопасность для удостоверений и доступа на основе контекста пользователя, расположения, устройства, данных и приложения.
-- Встроенная поддержка тысяч коммерческих и пользовательских приложений, таких как Office 365, Salesforce.com и Box.
+- Встроенная поддержка тысяч коммерческих и пользовательских приложений, таких как Microsoft 365, Salesforce.com и Box.
 - Возможность управления доступом в большом масштабе.
 
 ### <a name="azure-active-directory-references"></a>Справочные материалы по Azure Active Directory

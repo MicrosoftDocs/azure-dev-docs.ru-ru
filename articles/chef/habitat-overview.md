@@ -5,12 +5,12 @@ keywords: azure, chef, devops, virtual machines, overview, automate, habitat
 ms.date: 05/15/2018
 ms.topic: article
 ms.custom: devx-track-chef
-ms.openlocfilehash: af7a08e526a5b9109cb9662b1be5d2243af92e9d
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d2a834c631986b70a13c95f1403e84e82886a5f2
+ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240776"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88662945"
 ---
 # <a name="use-habitat-to-deploy-your-application-to-azure"></a>Использование Habitat для развертывания приложения в Azure
 
@@ -28,7 +28,7 @@ Habitat решает проблему непрерывного разверты�
 
 ## <a name="run-any-application-anywhere"></a>Выполнение любого приложения в любой среде
 
-С помощью Habitat приложения могут работать без изменений в любой среде выполнения. Это включает в себя все: от исходного состояния систем и виртуальных машин до контейнеров (например, Docker), систем управления кластерами (таких как Mesosphere или Kubernetes) и систем PaaS (таких как Pivotal Cloud Foundry).
+С помощью Habitat приложения могут работать без изменений в любой среде выполнения. Это включает в себя все: от исходного состояния систем и виртуальных машин до контейнеров (например, Docker), систем управления кластерами (таких как Mesosphere или Kubernetes) и систем PaaS (таких как VMware Tanzu Application Service, ранее — Pivotal Cloud Foundry).
 
 ## <a name="integrate-into-the-chef-devops-workflow"></a>Интеграция в рабочий процесс DevOps Chef
 

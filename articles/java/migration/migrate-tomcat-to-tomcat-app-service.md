@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 1b22dfa4269cc0c51450ca307bb96b787278625b
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 227908087ffdbdc3ce27a3da721464ff91b6b085
+ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379708"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88725198"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
@@ -53,7 +53,7 @@ ${CATALINA_HOME}/bin/version.sh
 <!-- App-Service-specific addendum to inventory-persistence-usage -->
 #### <a name="dynamic-or-internal-content"></a>Динамическое или внутреннее содержимое
 
-Для использования файлов, которые приложение часто записывает и считывает (например, временные файлы данных), или статических файлов, видимых только для вашего приложения, вы можете подключить службу хранилища Azure к файловой системе Службы приложений. См. сведения в руководстве по [обработке содержимого из службы хранилища Azure в Службе приложений в Linux](/azure/app-service/containers/how-to-serve-content-from-azure-storage).
+Для использования файлов, которые приложение часто записывает и считывает (например, временные файлы данных), или статических файлов, видимых только для вашего приложения, вы можете подключить службу хранилища Azure к файловой системе Службы приложений. См. сведения в руководстве по [обработке содержимого из службы хранилища Azure в Службе приложений в Linux](/azure/app-service/configure-connect-to-azure-storage).
 
 ### <a name="identify-session-persistence-mechanism"></a>Определение механизма сохранения сеанса
 
@@ -61,7 +61,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 Встроенные реализации [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
 
-Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например Pivotal Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
+Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например VMware Tanzu Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
 
 ### <a name="special-cases"></a>Особые случаи
 
@@ -212,7 +212,7 @@ ${CATALINA_HOME}/bin/version.sh
 
 ### <a name="recommendations"></a>Рекомендации
 
-* Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/containers/how-to-serve-content-from-azure-storage) службой хранилища Azure.
+* Если для хранения файлов вы решили использовать каталог */home*, попробуйте [заменить его](/azure/app-service/configure-connect-to-azure-storage) службой хранилища Azure.
 
 * При наличии в каталоге */home* конфигурации, содержащей строки подключения, ключи SSL и другие секретные сведения, по возможности используйте [Azure Key Vault](/azure/app-service/app-service-key-vault-references) в сочетании с [внедрением параметров с помощью параметров приложения](/azure/app-service/configure-common#configure-app-settings) или без него.
 
