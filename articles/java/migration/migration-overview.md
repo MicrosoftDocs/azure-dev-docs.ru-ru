@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 3487cc326222a013c7f0acec396ed343c8bd9621
-ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.openlocfilehash: 005fc97633135f8458b0650b9a3afb49e841001d
+ms.sourcegitcommit: 4036ac08edd7fc6edf8d11527444061b0e4531ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405715"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89061993"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Перенос приложений Java в Azure
 
@@ -89,7 +89,7 @@ ms.locfileid: "86405715"
 | Долгосрочное хранение в локальной файловой системе                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
 | Кластеризация на уровне сервера приложений                               |        |        |        |&#x2714;|&#x2714;|
 | Пакетные или запланированные задания                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
-| интеграция виртуальной сети и гибридные подключения;                              |Preview (Предварительный просмотр) |Preview (Предварительный просмотр) |        |&#x2714;|&#x2714;|
+| интеграция виртуальной сети и гибридные подключения;                              |&#x2714;|&#x2714;|Preview (Предварительный просмотр) |&#x2714;|&#x2714;|
 | Доступность по регионам                | [Сведения][10] | [Сведения][10] | [Сведения][11] |[Сведения][12]|[Сведения][13]|
 
 ### <a name="ongoing-responsibility-grid"></a>Таблица текущих обязанностей
@@ -143,7 +143,7 @@ ms.locfileid: "86405715"
 |---|---|---|---|---|---|---|
 | Приложения<br>Spring Boot (JAR) | [Руководство][5] | Руководство<br>Планируется | [Руководство][16] | [Руководство][14]      | Руководство<br>Планируется |
 | Spring Cloud<br>(микрослужбы)   | Недоступно           | Недоступно                 | [Руководство][15] | Руководство<br>Планируется | Руководство<br>Планируется |
-| Веб-приложения<br>в Tomcat     | Недоступно           | [Руководство][2]       | Недоступно            | [Руководство][3]       | Руководство<br>Планируется |
+| Веб-приложения<br>в Tomcat     | Недоступно           | [Руководство][2]       | [Руководство][17] | [Руководство][3]       | Руководство<br>Планируется |
 
 **Приложения Java EE**
 
@@ -173,3 +173,4 @@ ms.locfileid: "86405715"
 [14]: migrate-spring-boot-to-azure-kubernetes-service.md
 [15]: migrate-spring-cloud-to-azure-spring-cloud.md
 [16]: migrate-spring-boot-to-azure-spring-cloud.md
+[17]: migrate-tomcat-to-azure-spring-cloud.md

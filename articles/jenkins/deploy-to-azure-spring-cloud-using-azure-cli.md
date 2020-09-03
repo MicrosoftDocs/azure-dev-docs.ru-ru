@@ -3,14 +3,14 @@ title: Развертывание приложений в Azure Spring Cloud с 
 description: Узнайте, как развертывать микрослужбы в службе Azure Spring Cloud с помощью Azure CLI в конвейере непрерывной интеграции и развертывания
 keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
-ms.date: 08/10/2020
+ms.date: 09/01/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: 707af403bf789ccd85e52f7bb5880389f61e8f15
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: 7c6b9d526b2fe42a0210daf70ec8ba919641ced9
+ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725168"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89374565"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
@@ -23,16 +23,13 @@ ms.locfileid: "88725168"
 > * подготовка сервера Jenkins;
 > * создание и развертывание приложений микрослужб с использованием Azure CLI в конвейере Jenkins. 
 
->[!Note]
-> Сейчас предоставляется общедоступная предварительная версия Azure Spring Cloud. Предложения общедоступной предварительной версии позволяют клиентам экспериментировать с новыми функциями до официального выпуска.  Общедоступные предварительные версии функций и служб не предназначены для использования в рабочей среде.  Чтобы получить дополнительные сведения о поддержке на этапе использования предварительных версий, ознакомьтесь с разделом [Вопросы и ответы](https://azure.microsoft.com/support/faq/) или оформите [запрос на поддержку](/azure/azure-portal/supportability/how-to-create-azure-support-request).
-
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-**Jenkins**: [установите Jenkins на виртуальной машине Linux.](configure-on-linux-vm.md)
+- **Jenkins**: [установите Jenkins на виртуальной машине Linux.](configure-on-linux-vm.md)
 
-**Учетная запись GitHub**. Если у вас нет учетной записи GitHub, [создайте бесплатную учетную запись](https://github.com/), прежде чем начинать работу.
+- **Учетная запись GitHub**. Если у вас нет учетной записи GitHub, [создайте бесплатную учетную запись](https://github.com/), прежде чем начинать работу.
 
 ## <a name="provision-a-service-instance-and-launch-a-java-spring-application"></a>Подготовка экземпляра службы и запуск приложения Java Spring
 

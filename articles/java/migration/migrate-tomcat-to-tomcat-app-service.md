@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 227908087ffdbdc3ce27a3da721464ff91b6b085
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: 7a8de3191551be1557b68cab55b6d91afcf41feb
+ms.sourcegitcommit: 4036ac08edd7fc6edf8d11527444061b0e4531ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725198"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062003"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
@@ -44,8 +44,6 @@ ${CATALINA_HOME}/bin/version.sh
 
 [!INCLUDE [inventory-secrets](includes/inventory-secrets.md)]
 
-### <a name="inventory-certificates"></a>Проверка сертификатов
-
 [!INCLUDE [inventory-certificates](includes/inventory-certificates.md)]
 
 [!INCLUDE [determine-whether-and-how-the-file-system-is-used](includes/determine-whether-and-how-the-file-system-is-used.md)]
@@ -62,6 +60,10 @@ ${CATALINA_HOME}/bin/version.sh
 Встроенные реализации [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html), например [StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) или [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components), не предназначены для использования с распределенной, масштабируемой платформой, такой как Служба приложений. Так как Служба приложений может распределять нагрузку между несколькими экземплярами и прозрачно перезапускать любой экземпляр в любое время, не рекомендуется сохранять изменяющееся состояние в файловой системе.
 
 Если требуется сохранение сеанса, необходимо использовать альтернативную реализацию `PersistentManager`, которая будет выполнять запись во внешнее хранилище данных, например VMware Tanzu Session Manager с Redis Cache. См. сведения о том, как [использовать Redis в качестве кэша сеансов с Tomcat](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat).
+
+[!INCLUDE [identify-all-outside-processes-and-daemons-running-on-the-production-servers](includes/identify-all-outside-processes-and-daemons-running-on-the-production-servers.md)]
+
+[!INCLUDE [identify-all-outside-processes-and-daemons-running-on-the-production-servers](includes/identify-all-outside-processes-and-daemons-running-on-the-production-servers.md)]
 
 ### <a name="special-cases"></a>Особые случаи
 
@@ -82,10 +84,6 @@ ${CATALINA_HOME}/bin/version.sh
 [Кластеризация Tomcat](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html) не поддерживается в Службе приложений Azure. Вместо этого можно настроить масштабирование и балансировку нагрузки и управлять ею в Службе приложений Azure без использования специальных функций Tomcat. Можно хранить состояние сеанса в альтернативном расположении, чтобы оно было доступным для всех реплик. См. сведения о том, как [определить механизм сохранения сеанса](#identify-session-persistence-mechanism).
 
 Чтобы определить, использует ли приложение кластеризацию, найдите элемент `<Cluster>` в элементах `<Host>` или `<Engine>` в файле *server.xml*.
-
-#### <a name="identify-all-outside-processesdaemons-running-on-the-production-servers"></a>Определение всех внешних процессов и управляющих программ, запущенных на рабочих серверах
-
-Вам нужно будет перенести в другое расположение или удалить все процессы (например, управляющие программы для мониторинга), выполняющиеся за пределами сервера приложений.
 
 #### <a name="determine-whether-non-http-connectors-are-used"></a>Определение того, используются ли соединители, отличающиеся от HTTP
 
