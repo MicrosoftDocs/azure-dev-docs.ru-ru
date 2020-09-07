@@ -14,28 +14,28 @@ metadata:
   ms.service: multiple
   ms.devlang: python
   ms.custom: devx-track-python
-  ms.openlocfilehash: 1a89da5a7ce092de4d8194db2136d390fec22928
-  ms.sourcegitcommit: 5051b25ad32be891800b23fc7ae12a4ca85cbb73
+  ms.openlocfilehash: 2dbd633555e7841eb28f58813a9ba292da989dd6
+  ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/12/2020
-  ms.locfileid: "88147255"
+  ms.lasthandoff: 09/02/2020
+  ms.locfileid: "89374545"
 landingContent:
-- title: Развертывание бессерверных функций
+- title: Бессерверные функции
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Использование Visual Studio Code
+    - text: Развертывание с помощью Visual Studio Code
       url: tutorial-vs-code-serverless-python-01.md
-    - text: с помощью командной строки;
+    - text: Развертывание с использованием командной строки
       url: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
     - text: Подключение к хранилищу с помощью Visual Studio Code
       url: /azure/azure-functions/functions-add-output-binding-storage-queue-vs-code?pivots=programming-language-python
     - text: Подключение к хранилищу с помощью командной строки
       url: /azure/azure-functions/functions-add-output-binding-storage-queue-cli?tabs=bash%2Cbrowser&pivots=programming-language-python
-- title: Развертывание веб-приложений
+- title: Веб-приложения
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: deploy
     links:
     - text: Использование Flask с Visual Studio Code
       url: tutorial-deploy-app-service-on-linux-01.md
@@ -47,9 +47,9 @@ landingContent:
       url: /azure/app-service/tutorial-python-postgresql-app
     - text: Использование контейнеров с Visual Studio Code
       url: tutorial-deploy-containers-01.md
-    - text: Создание конвейера CI/CD
+    - text: Конвейер CI/CD
       url: /azure/devops/pipelines/ecosystems/python-webapp
-- title: Развертывание моделей машинного обучения
+- title: Машинное обучение
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -63,9 +63,9 @@ landingContent:
       url: quickstarts-cognitive-services.md
     - text: Дополнительно...
       url: quickstarts-machine-learning.md
-- title: Развертывание данных и хранилища
+- title: Данные и хранилище
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: deploy
     links:
     - text: базы данных SQL;
       url: quickstarts-data-solutions.md#sql-databases
@@ -73,7 +73,7 @@ landingContent:
       url: quickstarts-data-solutions.md#tables-blobs-files-nosql
     - text: Большие данные и аналитика
       url: quickstarts-data-solutions.md#big-data-and-analytics
-- title: Использование библиотек Azure (пакетов средств разработки)
+- title: Библиотеки Azure (пакет SDK)
   linkLists:
   - linkListType: get-started
     links:
@@ -85,7 +85,9 @@ landingContent:
       url: azure-sdk-overview.md
     - text: Изучение шаблонов использования библиотек
       url: azure-sdk-library-usage-patterns.md
-- title: Изучение средств для разработчиков
+    - text: Аутентификация с помощью служб Azure
+      url: walkthrough-tutorial-authentication-01.md
+- title: Средства разработчика
   linkLists:
   - linkListType: get-started
     links:
