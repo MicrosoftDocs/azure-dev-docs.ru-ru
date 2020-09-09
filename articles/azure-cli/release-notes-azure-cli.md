@@ -8,12 +8,12 @@ ms.date: 04/21/2020
 ms.topic: article
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: 74262a0be1062f32f63a225521f92657334c9994
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: 4dcc1bcfb6e42089e221a1ebd7eb5abc0d37a4e3
+ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501269"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89374555"
 ---
 # <a name="azure-cli-release-notes"></a>Заметки о выпуске Azure CLI
 
@@ -4571,7 +4571,7 @@ ms.locfileid: "88501269"
 
 * Исправлена проблема, из-за которой для команды `vmss get-instance-view` отображались лишние и неправильные сведения при использовании параметра `--instance-id *`.
 * Добавлена поддержка параметра `--lb-sku` в команде `vmss create`.
-* Из черного списка имен администраторов для команд `[vm|vmss] create` удалены имена людей.
+* Из списка блокировок с именами администраторов для команд `[vm|vmss] create` удалены имена людей.
 * Исправлена проблема, из-за которой команда `[vm|vmss] create` выдавала ошибку, если из образа не удавалось извлечь сведения о плане.
 * Исправлена проблема, которая приводила к сбою при создании масштабируемого набора виртуальных машин с внутренней подсистемой балансировки нагрузки.
 * Исправлена проблема, из-за которой аргумент `--no-wait` не работал с командой `vm availability-set create`.

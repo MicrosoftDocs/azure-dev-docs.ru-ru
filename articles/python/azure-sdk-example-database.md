@@ -4,16 +4,16 @@ description: Использование библиотек управления 
 ms.date: 06/02/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 04e80a2b5ab6e6a1dc0adbe546132cf861667995
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: e9a08761fb9af300b5d3f2c4a9704bc7f10e1158
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982656"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275127"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-database"></a>Пример Использование библиотек Azure для подготовки базы данных
 
-В этом примере показано, как использовать библиотеки управления пакета Azure SDK в скрипте Python для подготовки базы данных MySQL Azure. ([Эквивалентные команды Azure CLI](#for-reference-equivalent-azure-cli-commands) приведены далее в этой статье.) Здесь также показан простой скрипт для запроса в базу данных с помощью библиотеки mysql-connector (не входит в пакет SDK для Azure).
+В этом примере показано, как использовать библиотеки управления пакета Azure SDK в скрипте Python для подготовки базы данных MySQL Azure. Здесь также показан простой скрипт для запроса в базу данных с помощью библиотеки mysql-connector (не входит в пакет SDK для Azure). ([Эквивалентные команды Azure CLI](#for-reference-equivalent-azure-cli-commands) приведены далее в этой статье. Если вы предпочитаете использовать портал Azure, ознакомьтесь со статьей [Создание сервера PostgreSQL](/azure/postgresql/quickstart-create-server-database-portal) или [Создание сервера MariaDB](/azure/mariadb/quickstart-create-mariadb-server-database-using-azure-portal).)
 
 Для инициализации базы данных PostgreSQL или MariaDB можно использовать аналогичный код.
 
@@ -60,9 +60,6 @@ from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.rdbms.mysql import MySQLManagementClient
 
 from azure.mgmt.rdbms.mysql.models import ServerForCreate, ServerPropertiesForDefaultCreate, ServerVersion
-
-# Retrieve subscription ID from environment variable
-subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
 
 # Constants we need in multiple places: the resource group name and the region
 # in which we provision resources. You can change these values however you want.

@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: bcb8d680950e2c42d3d7f092478c4d6096454b12
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 8bbbb03a4bbbdb24e2c45692a0a982341fbcd7a5
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982696"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275138"
 ---
 # <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Пример Доступ к службе хранилища Azure с помощью библиотек Azure для Python
 
@@ -21,7 +21,16 @@ ms.locfileid: "87982696"
 
 Выполните все инструкции из статьи [Настройка локальной среды разработки Python для Azure](configure-local-development-environment.md), если вы этого еще не сделали.
 
-Обязательно создайте субъект-службу для локальной разработки, а также создайте и активируйте виртуальную среду для этого проекта.
+Обязательно создайте субъект-службу для локальной разработки, задайте переменные среды для субъекта-службы (см. ниже), а также создайте и активируйте виртуальную среду для этого проекта.
+
+В этом примере предполагается, что вы задали следующие переменные среды.
+
+| Имя переменной | Ожидаемое значение |
+| --- | --- |
+| AZURE_SUBSCRIPTION_ID | GUID подписки Azure. |
+| AZURE_CLIENT_ID | Идентификатор клиента локального субъекта-службы. |
+| AZURE_CLIENT_SECRET | Секрет клиента субъекта-службы. |
+| AZURE_TENANT_ID | Идентификатор арендатора для субъекта-службы. |
 
 ## <a name="2-install-library-packages"></a>2: Установка пакетов библиотек
 

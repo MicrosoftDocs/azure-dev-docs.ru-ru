@@ -4,16 +4,16 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 6a956cf0f4f4689e653307f95d5f0900c8d01589
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b774d986b886aae528c97c4583511a8d6c0ba0a5
+ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983436"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89275208"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Пример Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 
-Из этой статьи вы узнаете, как использовать библиотеки управления Azure в скрипте Python, чтобы создать группу ресурсов с учетной записью хранения Azure и контейнер хранилища BLOB-объектов. ([Эквивалентные команды Azure CLI](#for-reference-equivalent-azure-cli-commands) приведены далее в этой статье.)
+Из этой статьи вы узнаете, как использовать библиотеки управления Azure в скрипте Python, чтобы создать группу ресурсов с учетной записью хранения Azure и контейнер хранилища BLOB-объектов. ([Эквивалентные команды Azure CLI](#for-reference-equivalent-azure-cli-commands) приведены далее в этой статье. Если вы предпочитаете использовать портал Azure, см. статью [Создание учетной записи хранения Azure](/azure/storage/common/storage-account-create?tabs=azure-portal) и [Создание контейнера BLOB-объектов](/azure/storage/blobs/storage-quickstart-blobs-portal).)
 
 После подготовки ресурсов см. [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md), чтобы использовать клиентские библиотеки Azure в коде приложения Python для отправки файла в контейнер хранилища больших двоичных объектов.
 
