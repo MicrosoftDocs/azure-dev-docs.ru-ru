@@ -54,7 +54,7 @@
           items:
             - name: Azure Active Directory
               href: configure-spring-boot-starter-java-app-with-azure-active-directory.md
-            - name: Azure Active Directory B2C
+            - name: "Azure Active Directory\_B2C"
               href: configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc.md
         - name: Spring Cloud
           expanded: true
@@ -75,7 +75,7 @@
           href: deploy-spring-boot-java-app-on-kubernetes.md
         - name: Развертывание в решение "Веб-приложение для контейнеров"
           href: deploy-spring-boot-java-app-on-linux.md
-        - name: кэш Azure Redis
+        - name: Кэш Azure для Redis
           href: configure-spring-boot-initializer-java-app-with-redis-cache.md
         - name: Развертывание контейнера Docker с помощью Maven
           href: deploy-containerized-spring-boot-java-app-with-maven-plugin.md
@@ -89,8 +89,6 @@
           href: 'https://github.com/Microsoft/todo-app-java-on-azure/'
         - name: Использование списка дел с MySQL
           href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
-        - name: Использование службы хранилища Azure с пакетом SDK для Java
-          href: configure-spring-boot-starter-java-app-with-azure-storage-api.md
         - name: Spring Initializr
           href: 'https://start.spring.io/'
     - name: Справочник

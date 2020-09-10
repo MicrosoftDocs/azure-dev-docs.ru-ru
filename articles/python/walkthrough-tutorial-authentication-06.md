@@ -4,12 +4,12 @@ description: В этой части рассматривается код зап
 ms.date: 08/24/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 5fc344fcf00655bbac7b2a20a2401ffb52482447
-ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
+ms.openlocfilehash: 17d5e007c65572ef301a4aa682260af6f492a626
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379527"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614284"
 ---
 # <a name="part-6-main-app-startup-code"></a>Часть 6. Код запуска основного приложения
 
@@ -25,7 +25,8 @@ app = Flask(__name__)
 number_url = os.environ["THIRD_PARTY_API_ENDPOINT"]
 ```
 
-Затем мы получим объект [`DefaultAzureCredential`](/api/azure-identity/azure.identity.defaultazurecredential?view=azure-python), который рекомендуется использовать для аутентификации в службах Azure (см. статью об [аутентификации приложений Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential)).
+Затем мы получим объект [`DefaultAzureCredential`](/python/api/azure-identity/azure.identity.defaultazurecredential?view=azure-python
+), который рекомендуется использовать для аутентификации в службах Azure (см. статью об [аутентификации приложений Python](azure-sdk-authenticate.md#authenticate-with-defaultazurecredential)).
 
 ```python
 credential = DefaultAzureCredential()
