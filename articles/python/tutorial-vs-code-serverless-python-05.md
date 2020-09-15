@@ -4,12 +4,12 @@ description: Шаг руководства 5. Развертывание код
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 950dda297f131f9ae9e2029f79cecae7455e0c07
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: e4108ff7b705be96f62c06a02e301bce9247c048
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982856"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473599"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Развертывание решения "Функции Azure" на Python
 
@@ -75,4 +75,4 @@ func azure functionapp logstream <app_name> --browser
 > [!div class="nextstepaction"]
 > [Функции развернуты — перейти к шагу 6 >>>](tutorial-vs-code-serverless-python-06.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=05-deploy)
+Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

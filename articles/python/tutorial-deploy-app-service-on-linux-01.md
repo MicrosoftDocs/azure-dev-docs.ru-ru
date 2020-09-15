@@ -1,15 +1,15 @@
 ---
 title: Руководство по Развертывание приложений Python в Службе приложений Azure в Linux с помощью Visual Studio Code
-description: 'Шаг руководства 1: введение, предварительные требования и вход в Azure.'
+description: 'Руководство, шаг 1: работа с веб-приложениями, общие сведения и предварительные требования.'
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 255e94d863f0c144ff4de402a2d775a21645b95a
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: d4544c6e013f20b606303e56ff2169e87383d88c
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501379"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614321"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>Руководство по Развертывание приложений Python в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -18,6 +18,9 @@ ms.locfileid: "88501379"
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте ссылку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
 
 Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=dNVvFttc-sA&feature=youtu.be&ocid=AID3006292" target="_blank">Создание веб-приложений с помощью VS Code и Службы приложений Azure</a> (YouTube.com).
+
+> [!NOTE]
+> Если вы предпочитаете развертывать приложения с помощью интерфейса командной строки, см. статью **[Краткое руководство. Создание приложения Python в Службе приложений Azure в Linux](/azure/app-service/quickstart-python)** .
 
 > [!TIP]
 > [Служба приложений Azure в Linux](/azure/app-service/overview#app-service-on-linux) предназначена для выполнения исходного кода в предварительно определенном контейнере Docker. Этот контейнер запускает приложения в среде Python 3.7, используя веб-сервер [Gunicorn](https://gunicorn.org). Характеристики этого контейнера описаны в статье [Настройка приложения Python в Linux для Службы приложений Azure](/azure/app-service/configure-language-python). Само определение контейнера находится по адресу [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7).

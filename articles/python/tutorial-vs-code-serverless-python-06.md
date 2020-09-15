@@ -4,12 +4,12 @@ description: 'Шаг руководства 6: расширение проект
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 6dbdd722d1167e703119b8709ec6b44eadc3dcec
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 29d625d40868ab761037c1a4a049f7e95e63df26
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982796"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473579"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 
@@ -119,4 +119,4 @@ ms.locfileid: "87982796"
 > [!div class="nextstepaction"]
 > [Вторая функция добавлена — перейти к шагу 7 >>>](tutorial-vs-code-serverless-python-07.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=06-second-function)
+Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

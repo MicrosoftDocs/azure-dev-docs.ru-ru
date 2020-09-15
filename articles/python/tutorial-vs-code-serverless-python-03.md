@@ -4,12 +4,12 @@ description: 'Руководство, шаг 3: основные сведени�
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 61d7074b49cf84bbc63180f9a4549f59f12bb006
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 29802cf346a53d7230a2b6f46e8f39127be70d0a
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982846"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473539"
 ---
 # <a name="3-examine-the-python-code-files-in-visual-studio-code"></a>3: Изучение файлов кода на Python в Visual Studio Code
 
@@ -93,4 +93,4 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 > [!div class="nextstepaction"]
 > [Файлы кода изучены — перейти к шагу 4 >>>](tutorial-vs-code-serverless-python-04.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=03-examine-code-files)
+Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 9e6794d655d420d5f6b4093aecf15b7540f34709
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 4ad5086e0bc0500a7b7a117142a153e56ee4b481
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614533"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614287"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
@@ -27,7 +27,7 @@ ms.locfileid: "88614533"
 > - просмотр журналов диагностики;
 > - управление веб-приложением на портале Azure.
 
-Вы также можете использовать [версию этого руководства для Azure CLI](/azure/app-service/tutorial-python-postgresql-app).
+Вы также можете использовать **[версию этого руководства для Azure CLI](/azure/app-service/tutorial-python-postgresql-app)** .
 
 ## <a name="fork-the-sample-repository"></a>Создание вилки репозитория с примером
 

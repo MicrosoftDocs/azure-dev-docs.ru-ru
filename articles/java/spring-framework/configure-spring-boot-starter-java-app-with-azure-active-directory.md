@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: e8d9cf1c1fcc834b74f265c94ef5aae361100dbe
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: c867f52063d657d93637ea1010e47c27e8101cb7
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725228"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614336"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 
@@ -43,14 +43,11 @@ ms.locfileid: "88725228"
 1. Перейдите по адресу <https://start.spring.io/>.
 
 1. Укажите, что требуется создать проект **Maven** на **Java**, введите имя **группы** и **артефакта** для приложения.
-
-   ![Присвоение имен группе и артефакту][create-spring-app-01]
-
-1. Прокрутите вниз и добавьте **зависимости** для **Spring Web**, **Azure Active Directory** и **Spring Security**.
-
+1. Добавьте **зависимости** для **Spring Web**, **Azure Active Directory** и **Spring Security**.
 1. Внизу страницы нажмите кнопку **Создать**.
-
-   ![Выбор начальных компонентов Security, Web и Azure Active Directory][create-spring-app-02]
+   
+   >[!div class="mx-imgBorder"]
+   >![Присвоение имен группе и артефакту, выбор зависимостей][create-spring-app-01]
 
 1. При появлении запроса скачайте проект на локальный компьютер.
 
@@ -61,96 +58,120 @@ ms.locfileid: "88725228"
 1. Войдите на сайт <https://portal.azure.com>.
 
 1. Щелкните **Создать ресурс**, а затем выберите **Удостоверение** и **Azure Active Directory**.
+   
+   >[!div class="mx-imgBorder"]
+   >![Создание экземпляра Azure Active Directory][create-directory-01]
 
-   ![Создание экземпляра Azure Active Directory][create-directory-01]
+1. Укажите **имя организации** и **первоначальное доменное имя**. Скопируйте полный URL-адрес вашего каталога. Он вам понадобится, чтобы добавить учетные записи пользователей, как описывается далее в этом руководстве.
+ (Например, `azuresampledirectory.onmicrosoft.com`.) 
 
-1. Укажите **имя организации** и **первоначальное доменное имя**. Скопируйте полный URL-адрес вашего каталога. Он вам понадобится, чтобы добавить учетные записи пользователей, как описывается далее в этом руководстве. (Например, `wingtiptoysdirectory.onmicrosoft.com`.) 
-
-    Скопируйте полный URL-адрес вашего каталога. Он вам понадобится, чтобы добавить учетные записи пользователей, как описывается далее в этом руководстве. (Например, wingtiptoysdirectory.onmicrosoft.com.).
+    Скопируйте полный URL-адрес вашего каталога. Он вам понадобится, чтобы добавить учетные записи пользователей, как описывается далее в этом руководстве. (Например, azuresampledirectory.onmicrosoft.com.)
 
     По завершении нажмите кнопку **Создать**. Создание ресурса займет несколько минут.
-
-   ![Указание имен Azure Active Directory][create-directory-02]
+   
+   >[!div class="mx-imgBorder"]
+   >![Указание имен Azure Active Directory][create-directory-02]
 
 1. По завершении щелкните ссылку, чтобы получить доступ к новому каталогу.
-
-   ![Выбор учетной записи Azure][create-directory-03]
+   
+   >[!div class="mx-imgBorder"]
+   >![Выбор учетной записи Azure][create-directory-03]
 
 1. Скопируйте **идентификатор клиента**. Это значение понадобится при настройке файла *application.properties*, как описывается далее в этом руководстве.
-
-   ![Копирование идентификатора клиента][create-directory-05]
+   
+   >[!div class="mx-imgBorder"]
+   >![Копирование идентификатора клиента][create-directory-04]
 
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Регистрация приложения для приложения Spring Boot
 
 1. В меню на портале выберите **Регистрация приложений**, а затем щелкните **Зарегистрировать приложение**.
-
-   ![Регистрация приложения][create-app-registration-01]
+   
+   >[!div class="mx-imgBorder"]
+   >![Регистрация приложения][create-app-registration-01]
 
 1. Выберите свое приложение и щелкните **Зарегистрировать**.
-
-   ![Создание регистрации приложения][create-app-registration-02]
+   
+   >[!div class="mx-imgBorder"]
+   >![Создание регистрации приложения][create-app-registration-02]
 
 1. Когда появится страница регистрации приложения, скопируйте **идентификатор приложения** и **идентификатор клиента**. Эти значения понадобятся при настройке файла *application.properties*, как описывается далее в этом руководстве.
-
-   ![Создание ключей зарегистрированного приложения][create-app-registration-03]
+   
+   >[!div class="mx-imgBorder"]
+   >![Копирование регистрационных ключей приложения][create-app-registration-03]
 
 1. В области навигации слева щелкните **Сертификаты и секреты**.  Щелкните **Создать секрет клиента**.
-
-   ![Создание ключей зарегистрированного приложения][create-app-registration-03-5]
+   
+   >[!div class="mx-imgBorder"]
+   >![Создание ключей зарегистрированного приложения][create-app-registration-03-5]
 
 1. Добавьте **описание** и выберите нужное значение в списке **Срок действия**.  Нажмите кнопку **Добавить**. Значение ключа заполнится автоматически.
-
-   ![Указание параметров зарегистрированного приложения][create-app-registration-04]
+   
+   >[!div class="mx-imgBorder"]
+   >![Указание параметров зарегистрированного приложения][create-app-registration-04]
 
 1. Скопируйте и сохраните секрет ключа. Это значение понадобится при настройке файла *application.properties*, как описывается далее в этом руководстве. (Вы не сможете получить это значение позже.)
-
-   ![Указание параметров зарегистрированного приложения][create-app-registration-04-5]
+   
+   >[!div class="mx-imgBorder"]
+   >![Копирование значения регистрационного ключа приложения][create-app-registration-04-5]
 
 1. Щелкните **Разрешения API** в области навигации слева. 
 
 1. Щелкните элемент **Microsoft Graph** и установите флажки **Доступ к каталогу, аналогичный доступу вошедшего пользователя** и **Вход в систему и чтение профиля пользователя**. Щелкните **Предоставить разрешения...** и выберите **Да** при появлении запроса.
-
-   ![Предоставление разрешений на доступ][create-app-registration-08]
+   
+   >[!div class="mx-imgBorder"]
+   >![Добавление разрешений на доступ][create-app-registration-08]
+   
+1. Щелкните **Предоставить согласие администратора для Azure Sample** и нажмите кнопку **Да**.
+   
+   >[!div class="mx-imgBorder"]
+   >![Предоставление разрешений на доступ][create-app-registration-05]
 
 1. На главной странице регистрации приложения выберите **Проверка подлинности** и щелкните **Добавить платформу**.  Затем щелкните **Веб-приложения**.
-
-    ![Изменение URL-адресов ответа][create-app-registration-09]
+   
+   >[!div class="mx-imgBorder"]
+   >![Изменение URL-адресов ответа][create-app-registration-09]
 
 1. Введите http://localhost:8080/login/oauth2/code/azure в качестве нового **URI перенаправления**, а затем щелкните **Настроить**.
+   
+   >[!div class="mx-imgBorder"]
+   >![Добавление нового URL-адреса ответа][create-app-registration-10]
 
-    ![Добавление нового URL-адреса ответа][create-app-registration-10]
+1. На главной странице регистрации приложения щелкните **Манифест**, задайте значение `true` для параметров `oauth2AllowIdTokenImplicitFlow` и `oauth2AllowImplicitFlow`, а затем нажмите кнопку **Сохранить**.
+   
+   >[!div class="mx-imgBorder"]
+   >![Настройка манифеста приложения][create-app-registration-11]
 
-1. На главной странице регистрации приложения щелкните **Манифест**, затем установите для параметра `oauth2AllowImplicitFlow` значение `true` и нажмите кнопку **Сохранить**.
-
-    ![Настройка манифеста приложения][create-app-registration-11]
-
-    > [!NOTE]
-    > См. подробнее о параметре `oauth2AllowImplicitFlow` и других параметрах приложения в статье [Манифест приложения Azure Active Directory][AAD app manifest].
+   > [!NOTE]
+   > Дополнительные сведения о параметрах `oauth2AllowIdTokenImplicitFlow` и `oauth2AllowImplicitFlow` и других параметрах приложения см. в статье [Манифест приложения Azure Active Directory][AAD app manifest].
 
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>Добавление учетной записи пользователя в каталог и в группу
 
-1. На странице **Обзор** своего экземпляра службы Active Directory щелкните **Все пользователи**, а затем — **Новый пользователь**.
-
-   ![Добавление новой учетной записи пользователя][create-user-01]
+1. На странице **Обзор** своего экземпляра службы Active Directory щелкните **Пользователи** и **Новый пользователь**.
+   
+   >[!div class="mx-imgBorder"]
+   >![Добавление новой учетной записи пользователя][create-user-01]
 
 1. Когда появится область **Пользователь**, введите значения в поля **Имя пользователя** и **Имя**.  Затем нажмите кнопку **Создать**.
-
-   ![Ввод сведений об учетной записи пользователя][create-user-02]
+   
+   >[!div class="mx-imgBorder"]
+   >![Ввод сведений об учетной записи пользователя][create-user-02]
 
    > [!NOTE]
    > При вводе имени пользователя укажите URL-адрес каталога, ранее скопированный в рамках этого руководства. Например:
    >
-   > `wingtipuser@wingtiptoysdirectory.onmicrosoft.com`
+   > `test-user@azuresampledirectory.onmicrosoft.com`
 
-1. Выберите **Группы** и **Создать группу**, чтобы создать группу, которая будет использоваться для авторизации в приложении.
+1. На странице **Обзор** своего экземпляра службы Active Directory выберите **Группы** и **Создать группу**, чтобы создать группу, которая будет использоваться для авторизации в приложении.
 
 1. Затем щелкните **Нет выбранных участников**. (В рамках этого руководства мы создадим группу с именем *Users*.)  Найдите пользователя, созданного на предыдущем шаге.  Чтобы добавить пользователя в группу, нажмите кнопку **Выбрать**.  Затем нажмите кнопку **Создать**, чтобы создать группу.
-
-   ![Выбор пользователя для группы][create-user-03]
+   
+   >[!div class="mx-imgBorder"]
+   >![Выбор пользователя для группы][create-user-03]
 
 1. Вернитесь в область **Пользователи**, выберите тестового пользователя и щелкните **Сброс пароля**, а затем скопируйте пароль. Он вам понадобится при входе в приложение, как описывается далее в этом руководстве.
-
-   ![Отображение пароля][create-user-04]
+   
+   >[!div class="mx-imgBorder"]
+   >![Отображение пароля][create-user-04]
 
 ## <a name="configure-and-compile-your-app"></a>Настройка и компиляция приложения
 
@@ -306,21 +327,25 @@ ms.locfileid: "88725228"
    mvn clean package
    mvn spring-boot:run
    ```
-
-   ![Сборка приложения][build-application]
+   
+   >[!div class="mx-imgBorder"]
+   >![Сборка приложения][build-application]
 
 1. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу http:<span></span>//localhost:8080. Должен появиться запрос на ввод имени пользователя и пароля.
-
+   
+   >[!div class="mx-imgBorder"]
    ![Вход в приложение][application-login]
 
    > [!NOTE]
    > Если это первый вход с новой учетной записью пользователя, возможно, вам будет предложено изменить пароль.
-   >
-   > ![Изменение пароля][update-password]
+
+   >[!div class="mx-imgBorder"]
+   >![Изменение пароля][update-password]
 
 1. Войдя в приложение, вы увидите сообщение контроллера "Hello World".
 
-   ![Успешный вход в приложение][hello-world]
+   >[!div class="mx-imgBorder"]
+   >![Успешный вход в приложение][hello-world]
 
    > [!NOTE]
    > Пользователи с неавторизованными учетными записями получат сообщение **HTTP 403 — не авторизовано**.
@@ -336,8 +361,8 @@ ms.locfileid: "88725228"
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
-> [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+   >[!div class="nextstepaction"]
+   >[Spring в Azure](/azure/developer/java/spring-framework)
 
 <!-- URL List -->
 
@@ -356,14 +381,11 @@ ms.locfileid: "88725228"
 <!-- IMG List -->
 
 [create-spring-app-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-spring-app-01.png
-[create-spring-app-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-spring-app-02.png
-[create-spring-app-03]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-spring-app-03.png
 
 [create-directory-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-01.png
 [create-directory-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-02.png
 [create-directory-03]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-03.png
 [create-directory-04]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-04.png
-[create-directory-05]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-05.png
 
 [create-app-registration-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-01.png
 [create-app-registration-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-02.png
@@ -372,8 +394,6 @@ ms.locfileid: "88725228"
 [create-app-registration-04]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-04.png
 [create-app-registration-04-5]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-04-5.png
 [create-app-registration-05]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-05.png
-[create-app-registration-06]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-06.png
-[create-app-registration-07]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-07.png
 [create-app-registration-08]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-08.png
 [create-app-registration-09]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-09.png
 [create-app-registration-10]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-10.png

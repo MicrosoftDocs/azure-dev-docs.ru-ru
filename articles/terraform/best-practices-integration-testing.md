@@ -4,12 +4,12 @@ description: Сведения об интеграционном тестиров
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 3d305fb63deffb8f56ebd2cb1503bac543c5b84b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ced6dc9a3ff40ceee3ac37daea3ab6300a529e0e
+ms.sourcegitcommit: 62f78d529c02c7d7895d32ec8ed415bf0946d056
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241306"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89557557"
 ---
 # <a name="tutorial-configure-integration-tests-for-terraform-projects-in-azure"></a>Руководство по Настройка интеграционного тестирования для проектов Terraform в Azure
 
@@ -36,7 +36,7 @@ ms.locfileid: "88241306"
 - **Наличие Terraform.** [Скачайте и установите версию Terraform](https://www.terraform.io/downloads.html), которая соответствует вашей среде.
 - **Вилка примеров тестирования.** Создайте вилку [примера проекта Terraform на GitHub](https://github.com/Azure/terraform) и клонируйте его на локальный компьютер разработки и тестирования.
 
-## <a name="validate-alocal-terraform-configuration"></a>Проверка конфигурации Terraform на локальном компьютере
+## <a name="validate-a-local-terraform-configuration"></a>Проверка конфигурации Terraform на локальном компьютере
 
 Команда [terraform validate](https://www.terraform.io/docs/commands/validate.html) выполняется из командной строки в каталоге, который содержит файлы Terraform. Основной задачей этой команды является проверка синтаксиса.
 

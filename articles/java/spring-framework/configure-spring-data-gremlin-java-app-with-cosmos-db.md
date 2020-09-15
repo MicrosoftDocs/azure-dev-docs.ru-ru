@@ -1,20 +1,20 @@
 ---
 title: Использование начального приложения Spring Data Gremlin с API SQL Azure Cosmos DB
-description: Сведения о настройке приложения, созданного с помощью Spring Boot Initializer в API Azure Cosmos DB.
+description: Сведения о настройке приложения, созданного с помощью Spring Boot Initializr в API SQL для Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-ms.date: 01/10/2020
+ms.date: 08/03/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: 81a80d14e4cf371801cf75af1618048dda8775d7
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.openlocfilehash: 4a19b6dff945cb04d2b726b546e362c261a00595
+ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810627"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614334"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Data Gremlin с API SQL Azure Cosmos DB
 
@@ -33,16 +33,16 @@ ms.locfileid: "87810627"
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
 
 
-## <a name="create-resource"></a>Создание ресурса
+## <a name="create-an-azure-cosmos-db-account"></a>создание учетной записи Azure Cosmos DB;
 
-### <a name="create-azure-cosmos-db"></a>Создание Azure Cosmos DB
+### <a name="create-a-cosmos-db-account-using-the-azure-portal"></a>Создание учетной записи Cosmos DB с помощью портала Azure
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните `+Create a resource`.
+1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выберите `+Create a resource`.
 
    >[!div class="mx-imgBorder"]
    >![create-a-resource][create-a-resource-01]
 
-1. Щелкните `Databases`, а затем `Azure Cosmos DB`.
+1. Выберите `Databases`, а затем `Azure Cosmos DB`.
 
    >[!div class="mx-imgBorder"]
    >![create-azure-cosmos-db][create-a-resource-02]
@@ -62,6 +62,10 @@ ms.locfileid: "87810627"
 
 1. Проверьте спецификацию и щелкните `Create`, чтобы создать базу данных.
 
+1. Когда завершится создание базы данных, щелкните **Перейти к ресурсу**. База данных отобразится на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB**. Вы можете выбрать базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
+
+1. Когда откроется страница свойств базы данных, щелкните **Ключи** и скопируйте URI и ключи доступа для базы данных. Эти значения будут использоваться в приложении Spring Boot.
+
 ### <a name="add-a-graph-to-your-azure-cosmos-database"></a>Добавление графа в базу данных Azure Cosmos DB
 
 1. На странице Cosmos DB щелкните `Data Explorer`, а затем `New Graph`.
@@ -74,8 +78,7 @@ ms.locfileid: "87810627"
    * Укажите уникальный идентификатор `Database id` для базы данных.
    * Можно указать свое значение в поле `Storage capacity` или оставить значение по умолчанию.
    * Укажите уникальный идентификатор `Graph id` для графа.
-   * Укажите `Partition key`. Дополнительные сведения см. в статье о [секционировании графов].
-Нажмите кнопку `OK`.
+   * Укажите `Partition key`. Дополнительные сведения см. в статье о [секционировании графов]. Выберите `OK`.
    
    Указав эти параметры, щелкните `OK`, чтобы создать граф.
 
@@ -89,44 +92,64 @@ ms.locfileid: "87810627"
    
    
 
-## <a name="create-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
+## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
 
 1. Перейдите по адресу <https://start.spring.io/>.
 
-1. Заполните метаданные проекта, а затем щелкните `GENERATE`:
+1. Укажите, что требуется создать проект **Maven** на **Java**, введите имя **группы** и **артефакта** для приложения, укажите для версии **Spring Boot** значение 2.3.1, а затем щелкните **GENERATE** (Создать).
+
+> [!NOTE]
+>
+> Spring Initializr использует имена **группы** и **артефакта**, чтобы создать имя пакета, например `com.example.wintiptoysdata`.
+
 
    >[!div class="mx-imgBorder"]
    >![spring-initializr][spring-initializr-01]
 
-1. Распакуйте файл и импортируйте его в интегрированную среду разработки.
+1. При появлении запроса скачайте проект на локальный компьютер.
+
+1. После извлечения файлов в локальной системе импортируйте их в интегрированную среду разработки.
 
 
-## <a name="update-code-according-to-the-sample-project"></a>Обновление кода на примере проекта
+## <a name="configure-your-spring-boot-app-to-use-the-spring-data-gremlin-starter"></a>Настройка приложения Spring Boot для использования начального приложения Spring Data Gremlin
 
-Измените проект, как показано в примере: [azure-spring-data-sample-gremlin].
+Мы реплицируем конфигурации существующего [примера Gremlin для Azure Spring Data](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-data-sample-gremlin). Перейдите к этому примеру и выполните описанные в этом разделе действия, чтобы настроить приложение Spring Boot.
 
-1. Добавьте зависимость `azure-spring-data-gremlin`
+1. Найдите файл *pom.xml* в каталоге приложения, например:
 
-1. Удалите все содержимое `src/test/`
+   *C:\SpringBoot\wingtiptoysdata\pom.xml*
 
-1. Добавьте в `src/main/java` все файлы Java, как это сделано в примере.
+   -или-
 
-1. Обновите конфигурацию в `src/main/resorces/application.properties`, где:
+   */users/example/home/wingtiptoysdata/pom.xml*
 
-   | Поле              | Описание:                                                                                                                                                                                                             |
+1. Откройте файл *pom.xml* и добавьте Spring Data Gremlin Starter в список `<dependencies>`:
+
+   ```xml
+   <dependency>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-spring-data-gremlin</artifactId>
+      <version>2.3.1-beta.1</version> <!-- {x-version-update;com.azure:azure-spring-data-gremlin;current} -->
+    </dependency>
+   ```
+
+1. Сохраните и закройте файл *pom.xml*.
+
+1. Перейдите в папку *src/test/* и удалите все ее содержимое.
+
+1. Перейдите в папку *src/main/java* в примере приложения, а затем скопируйте и перезапишите этот же каталог в локальное приложение Spring Boot.
+
+1. В файле *src/main/resources/application.properties* измените конфигурации, включив в них следующее:
+
+   | Поле              | Описание                                                                                                                                                                                                             |
    |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   | `endpoint`         | Указывает URI Gremlin, который создается на основе уникального **ИД**, введенного при создании базы данных Azure Cosmos DB ранее в этом руководстве.                                                 |
+   | `endpoint`         | Указывает URI Gremlin для вашей базы данных, который создается на основе уникального **ИД**, введенного при создании базы данных Azure Cosmos DB ранее в этом кратком руководстве.                                                 |
    | `port`             | Указывает порт TCP/IP, который для протокола HTTPS должен иметь значение **443**.                                                                                                                                                           |
-   | `username`         | Указывает уникальные значения параметров **Идентификатор базы данных** и **Идентификатор графа**, которые использовались при добавлении графа ранее в этом руководстве. Это значение нужно вводить, используя следующий синтаксис: "/dbs/**{Идентификатор базы данных}**/colls/**{Идентификатор графа}**". |
-   | `password`         | Указывает основной или дополнительный **ключ доступа**, который вы скопировали ранее в этом руководстве.                                                                                                                      |
+   | `username`         | Указывает уникальные значения параметров **Идентификатор базы данных** и **Идентификатор графа**, которые использовались при добавлении графа ранее в этом руководстве. Это значение нужно вводить, используя следующий синтаксис: "/dbs/ **{идентификатор базы данных}** /colls/ **{идентификатор графа}** ". |
+   | `password`         | Указывает основной или дополнительный **ключ доступа**, который вы скопировали ранее в этом кратком руководстве.                                                                                                                      |
    | `sslEnabled`       | Указывает, следует ли разрешить SSL.                                                                                                                                                                                           |
    | `telemetryAllowed` | Укажите **true**, если нужно включить телеметрию. В противном случае укажите **false**.
    | `maxContentLength` | Указывает максимальную длину содержимого.                                                                                                                                                                                           |
-
-1. Как получить пароль:
-
-   >[!div class="mx-imgBorder"]
-   >![get-password][get-password-01]
 
 ## <a name="build-and-run-the-project"></a>Построение и запуск проекта
 
@@ -145,7 +168,7 @@ ms.locfileid: "87810627"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
+Дополнительные сведения об использовании Spring в Azure см. в соответствующей документации.
 
 > [!div class="nextstepaction"]
 > [Spring в Azure](/azure/developer/java/spring-framework)

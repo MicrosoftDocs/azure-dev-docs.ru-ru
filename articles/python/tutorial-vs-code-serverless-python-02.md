@@ -4,12 +4,12 @@ description: 'Руководство, шаг 2: использование ра�
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 13c0083434d024064462bb583a6b24d9e80c38dd
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 08f301ef4596ae8aac96051a13fd680917bd79be
+ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983516"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89473569"
 ---
 # <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"
 
@@ -48,4 +48,4 @@ ms.locfileid: "87983516"
 > [!div class="nextstepaction"]
 > [Функция создана —перейти к шагу 3 >>>](tutorial-vs-code-serverless-python-03.md)
 
-[У меня есть проблема](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=02-create-function)
+Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.
