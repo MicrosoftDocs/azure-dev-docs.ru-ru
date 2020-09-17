@@ -16,10 +16,8 @@
       items:
         - name: Настройка виртуальных машин Linux
           href: vm-configure.md
-          maintainContext: true
         - name: Управление виртуальными машинами Linux
           href: vm-manage.md
-          maintainContext: true
 - name: Учебники
   items:
     - name: Шлюз приложений Azure
