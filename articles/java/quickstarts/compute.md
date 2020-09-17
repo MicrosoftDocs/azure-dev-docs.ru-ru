@@ -4,19 +4,19 @@ description: Список материалов по началу работы в
 ms.date: 04/09/2020
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: 37dee8493855f0a17c5b18e2c1ed2c85138687e7
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 164ba2d57b633195baec751d9b2a987e159b1ee9
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379648"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682106"
 ---
 # <a name="compute-services-for-java-apps-on-azure"></a>Службы вычислений для приложений Java в Azure
 
 Следующие статьи помогут вам приступить к работе со службами вычислений в Azure:
 
 - [Служба приложений для Linux](/azure/app-service/containers/quickstart-java).
-- [Служба приложений в Linux — Spring Boot](/azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin)
+- [Служба приложений в Linux — Spring Boot](/azure/app-service/quickstart-java?tabs=javase&pivots=platform-linux)
 - [Служба приложений с использованием IntelliJ](/azure/developer/java/toolkit-for-intellij/create-hello-world-web-app)
 - [Служба приложений с использованием Eclipse](/azure/developer/java/toolkit-for-eclipse/create-hello-world-web-app)
 - [Служба приложений с использованием Visual Studio Code](https://code.visualstudio.com/docs/java/java-webapp)

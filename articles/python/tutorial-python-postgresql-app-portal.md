@@ -5,12 +5,12 @@ ms.devlang: python
 ms.topic: tutorial
 ms.date: 07/23/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 4ad5086e0bc0500a7b7a117142a153e56ee4b481
-ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
+ms.openlocfilehash: 19c0dda48b0fb7b5b0c3af75a1d94d3c9b9e4080
+ms.sourcegitcommit: 4824cea71195b188b4e8036746f58bf8b70dc224
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614287"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89753770"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
@@ -230,15 +230,15 @@ ms.locfileid: "89614287"
 
 Теперь вы можете выполнить небольшой тест приложения, чтобы продемонстрировать его работу с базой данных PostgreSQL.
 
-1. В окне браузера или на вкладке веб-приложения вернитесь на страницу **Обзор**, а затем выберите **URL-адрес** для веб-приложения (в виде `http:\//\<app-name>.azurewebsites.net`).
+1. В окне браузера или на вкладке веб-приложения вернитесь на страницу **Обзор**, а затем выберите **URL-адрес** для веб-приложения (в виде `http://<app-name>.azurewebsites.net`).
 
 1. В приложении должно отобразиться сообщение No polls are available (Доступных опросов нет), так как в базе данных нет отдельных опросов.
 
-1. Перейдите по адресу `http:\//\<app-name>.azurewebsites.net/admin` (страница администрирования Django) и выполните вход с учетными данными суперпользователя из предыдущего раздела (`root` и `Pollsdb1`).
+1. Перейдите по адресу `http://<app-name>.azurewebsites.net/admin` (страница администрирования Django) и выполните вход с учетными данными суперпользователя из предыдущего раздела (`root` и `Pollsdb1`).
 
 1. В разделе **Polls** (Опросы) щелкните **Add** (Добавить) возле поля **Questions** (Вопросы) и создайте вопрос с несколькими вариантами ответа.
 
-1. Еще раз перейдите по адресу `http:\//\<app-name>.azurewebsites.net/`, чтобы убедиться, что пользователь видит вопросы. Ответьте на вопросы произвольным образом, чтобы наполнить базу данных.
+1. Еще раз перейдите по адресу `http://<app-name>.azurewebsites.net/`, чтобы убедиться, что пользователь видит вопросы. Ответьте на вопросы произвольным образом, чтобы наполнить базу данных.
 
 **Поздравляем!** Вы запустили веб-приложение Python Django в Службе приложений Azure для Linux с активной базой данных PostgreSQL.
 

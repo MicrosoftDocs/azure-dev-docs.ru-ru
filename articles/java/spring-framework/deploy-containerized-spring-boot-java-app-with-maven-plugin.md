@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, devx-track-java
-ms.openlocfilehash: e6e3effc4a857656a6d118d3fee898fa086c082e
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: c8ee810df90ed9b0de12e92c336898fb700e1c67
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378628"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681636"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Развертывание контейнерного приложения Spring Boot в Azure с помощью Maven для веб-приложений Azure
 
@@ -318,7 +318,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 * [Вход в Azure из интерфейса командной строки Azure](/azure/xplat-cli-connect)
 
-* [Развертывание приложения Spring Boot в Azure с помощью подключаемого модуля Maven для веб-приложений Azure в службе приложений Azure](deploy-spring-boot-java-app-with-maven-plugin.md)
+* [Краткое руководство. Создание приложения Java в Службе приложений Azure](/azure/app-service/quickstart-java?tabs=javase&pivots=platform-linux)
 
 * [Создание субъекта-службы Azure с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli)
 
