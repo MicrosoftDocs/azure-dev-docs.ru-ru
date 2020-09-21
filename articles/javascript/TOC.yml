@@ -10,7 +10,9 @@
       items:
         - name: Размещение приложений
           items:
-            - name: Статические веб-сайты
+            - name: Статические веб-приложения Azure
+              href: /azure/static-web-apps/getting-started
+            - name: Создание статических сайтов с помощью службы хранилища
               href: tutorial-vscode-static-website-node-01.md
             - name: API-интерфейсы и веб-приложения Node.js
               href: tutorial-vscode-azure-app-service-node-01.md
