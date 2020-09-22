@@ -7,19 +7,19 @@ metadata:
   description: Начните разрабатывать приложения для облачной среды, используя эти руководства и средства для разработчиков Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: b6bce3af7a5d7dcd5faaa8e588ec06098f52a2d5
-  ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+  ms.openlocfilehash: bcbd1b0b40aa6b10df1db7db0e4695e600160647
+  ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/14/2020
-  ms.locfileid: "88218910"
+  ms.lasthandoff: 09/21/2020
+  ms.locfileid: "90830440"
 conceptualContent:
   items:
   - title: Краткие руководства по Azure для Java
     links:
     - text: Развертывание веб-приложения Java SE в Linux
       itemType: quickstart
-      url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
     - text: Создание бессерверной функции
       itemType: quickstart
       url: /azure/azure-functions/functions-create-first-java-maven
@@ -81,7 +81,7 @@ conceptualContent:
       url: /azure/app-service/containers/configure-language-java
     - text: Развертывание приложений Spring с помощью MySQL
       itemType: tutorial
-      url: /azure/developer/java/spring-framework/spring-app-service-e2e
+      url: ./spring-framework/spring-app-service-e2e.md
     footerLink:
       text: См. документацию по Службе приложений
       url: /azure/app-service/containers/
@@ -109,7 +109,7 @@ conceptualContent:
       url: spring-framework/how-to-guides-spring-data-cosmosdb.md
     - text: Развертывание приложения Spring Boot
       itemType: tutorial
-      url: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
     footerLink:
       text: Подробнее
       url: spring-framework/index.yml
@@ -120,7 +120,7 @@ conceptualContent:
       url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
     - text: Создание функции Spring Cloud
       itemType: tutorial
-      url: /azure/developer/java/spring-framework/getting-started-with-spring-cloud-function-in-azure
+      url: ./spring-framework/getting-started-with-spring-cloud-function-in-azure.md
     - text: Руководство разработчика
       itemType: reference
       url: /azure/azure-functions/functions-reference-java
@@ -134,7 +134,7 @@ conceptualContent:
       url: /azure/azure-monitor/app/java-in-process-agent
     - text: Начало работы с ELK
       itemType: tutorial
-      url: /azure/developer/java/fundamentals/java-get-started-with-logzio
+      url: ./fundamentals/java-get-started-with-logzio.md
     - text: Мониторинг приложений Spring
       itemType: how-to-guide
       url: /azure/spring-cloud/diagnostic-services

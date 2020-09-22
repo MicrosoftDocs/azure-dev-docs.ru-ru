@@ -1,9 +1,9 @@
 - name: Краткие руководства по Azure для Java
-  href: /azure/developer/java/quickstarts
+  href: ./index.yml
   items:
     - name: Службы вычислений
       href: compute.md
-    - name: 'Данные '
+    - name: Данные
       href: data.md
     - name: Память
       href: storage.md

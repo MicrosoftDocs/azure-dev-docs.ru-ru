@@ -70,7 +70,7 @@
     - name: Учебники
       items:
         - name: Развертывание в службу приложений с помощью Maven
-          href: deploy-spring-boot-java-app-with-maven-plugin.md
+          href: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
         - name: Развертывание в Kubernetes
           href: deploy-spring-boot-java-app-on-kubernetes.md
         - name: Развертывание в решение "Веб-приложение для контейнеров"
