@@ -11,12 +11,12 @@ ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
 ms.custom: devx-track-java
-ms.openlocfilehash: 6aa930bb4ee5c6a5019e33b3d8075765b92f0bfc
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 2f7a7777551aadc5ef970d071e93974f1dea17b9
+ms.sourcegitcommit: 4824cea71195b188b4e8036746f58bf8b70dc224
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379788"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89753757"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Переход с Java 8 на Java 11
 
@@ -126,7 +126,7 @@ sun.misc.Unsafe                          See http://openjdk.java.net/jeps/260
 ### <a name="check-command-line-options"></a>Проверка параметров командной строки
 
 Перед выполнением на Java 11 следует выполнить быструю проверку параметров командной строки. 
-[Удаленные опции](#unrecognized-options) приведут к выходу виртуальной машины Java. Эта проверка особенно важна, если вы используете опции ведения журнала для сборки мусора, поскольку они радикально изменились с Java 8. Инструмент [JaCoLine](https://jacoline.dev/about) хорошо подходит для обнаружения проблем с параметрами командной строки. 
+[Удаленные опции](#unrecognized-options) приведут к выходу виртуальной машины Java. Эта проверка особенно важна, если вы используете опции ведения журнала для сборки мусора, поскольку они радикально изменились с Java 8. Инструмент JaCoLine хорошо подходит для обнаружения проблем с параметрами командной строки. 
 
 ### <a name="check-third-party-libraries"></a>Проверка сторонних библиотек
 

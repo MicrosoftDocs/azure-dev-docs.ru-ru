@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: f5606cb8b1e61358e610c8ff1bcadc837e44a539
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 51037098f05d985bcb8c35580688d37db0cbe363
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378288"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534742"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-eclipse"></a>Развертывание веб-приложения Hello World в контейнере Linux в облаке с помощью Azure Toolkit for Eclipse
 

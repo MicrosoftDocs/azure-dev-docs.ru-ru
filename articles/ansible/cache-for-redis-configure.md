@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, cache, redis
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: e5e3211dc2625670937a583d3db0018c6222ae19
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 66da31edef14a09a903b3a78d97e1067856098ef
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240336"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681733"
 ---
 # <a name="tutorial-configure-caches-in-azure-cache-for-redis-using-ansible"></a>Руководство по Настройка кэшей в Кэше Azure для Redis с использованием Ansible
 
@@ -159,7 +159,7 @@ ok: [localhost]
 
 Существует два способа получения полного примера сборника схем:
 - [Скачайте сборник схем](https://github.com/Azure-Samples/ansible-playbooks/blob/master/rediscache.yml) и сохраните его в `rediscache.yml`.
-- Создайте файл с именем `rediscache.yml` и скопируйте в него следующее содержимое.
+- Создайте файл с именем `rediscache.yml` и скопируйте в него следующее содержимое:
 
 ```yml
 - name: Manage Azure Cache for Redis
@@ -241,7 +241,7 @@ ok: [localhost]
 
 В разделе `vars` замените заполнитель `{{ resource_group_name }}` именем вашей группы ресурсов.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook rediscache.yml
@@ -323,28 +323,7 @@ Tuesday 12 March 2019  16:44:14 +0800 (0:00:06.217)       0:23:08.626
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны. 
-
-Сохраните следующий код как `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: "{{ resource_group_name }}"
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        state: absent
-```
-
-В разделе `vars` замените заполнитель `{{ resource_group_name }}` именем вашей группы ресурсов.
-
-Запустите сборник схем с помощью команды `ansible-playbook`.
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

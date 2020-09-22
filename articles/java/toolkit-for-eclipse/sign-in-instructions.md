@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 3be8734755455dfaebcf1478f4441058496f7999
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: d0dbc16a16ca3a5ff367e6c67fceabcb37e2cce6
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379978"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534431"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-eclipse"></a>Инструкции по входу для набора средств Azure в Eclipse
 
@@ -27,20 +27,19 @@ ms.locfileid: "86379978"
 
 ## <a name="sign-in-to-your-azure-account-by-device-login"></a>Вход в учетную запись Azure с помощью имени пользователя устройства
 
-Чтобы войти в Azure с помощью имени пользователя устройства, сделайте следующее:
+В этом разделе описывается процесс входа в Azure через устройство.
 
 1. Откройте проект с помощью Eclipse.
 
-2. Выберите **Сервис**, **Azure** и затем **Войти**.
-   ![Меню Eclipse для входа в систему Azure][I01]
+1. Выберите **Сервис**, **Azure** и затем **Войти**.
 
-3. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход).
+      :::image type="content" source="media/sign-in-instructions/eclipse-azure-signin.png" alt-text="Вход в Azure из интегрированной среде разработки Eclipse":::.
+
+1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход).
 
    ![Окно Azure Sign In (Вход в Azure) с выбранным именем пользователя устройства][I02]
 
-4. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
-
-   ![Диалоговое окно входа Azure][I03]
+1. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
 
 > [!NOTE]
 >
@@ -51,13 +50,11 @@ ms.locfileid: "86379978"
 > 2. Выберите предпочитаемый браузер.
 >
 
-5. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
+1. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
 
-   ![Вход в систему устройства в браузере][I04]
+1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
 
-6. Наконец, в диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
-
-   ![Диалоговое окно выбора подписок][I05]
+1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки Eclipse. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **ОК**.
 
 ## <a name="sign-in-to-your-azure-account-by-service-principal"></a>Вход в учетную запись Azure с помощью субъекта-службы
 
@@ -66,15 +63,14 @@ ms.locfileid: "86379978"
 1. Откройте проект с помощью Eclipse.
 
 2. Выберите **Сервис**, **Azure** и затем **Войти**.
-   ![Команда Azure Sign In (Вход в Azure) в Eclipse][A01]
+
+      :::image type="content" source="media/sign-in-instructions/eclipse-azure-signin.png" alt-text="Вход в Azure из интегрированной среде разработки Eclipse":::.
 
 3. В окне **Azure Sign In** (Вход в Azure) выберите **Service Principal** (Субъект-служба). Если у вас еще нет файла проверки подлинности с помощью субъекта-службы, щелкните **New** (Создать), чтобы создать его. В противном случае вы можете щелкнуть **Browse** (Обзор), чтобы открыть нужный файл и перейти к шагу 8.
 
    ![Окно Azure Sign In (Вход в Azure) с выбранным субъектом-службы][A02]
 
 4. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
-
-   ![Диалоговое окно входа Azure][A08]
 
 > [!NOTE]
 >
@@ -87,15 +83,9 @@ ms.locfileid: "86379978"
 
 5. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
 
-   ![Вход в систему устройства в браузере][A03]
-
 6. В диалоговом окне **Create authentication files** (Создание файлов проверки подлинности) выберите нужные подписки, конечный каталог и нажмите кнопку **Start** (Начать).
 
-   ![Окно Create authentication files (Создание файлов проверки подлинности)][A04]
-
 7. В диалоговом окне **Service Principal Creation Status** (Состояние создания субъекта-службы) после успешного создания файлов нажмите кнопку **ОК**.
-
-   ![Диалоговое окно Service Principal Creation Status (Состояние создания субъекта-службы)][A05]
 
 8. Адрес созданного файла будет автоматически заполнен в окне **Azure Sign In** (Вход в Azure). Теперь щелкните **Sign in** (Вход).
 
@@ -103,7 +93,6 @@ ms.locfileid: "86379978"
 
 9. Наконец, в диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
 
-   ![Диалоговое окно выбора подписок][A07]
 
 ## <a name="sign-out-of-your-azure-account"></a>Выход из учетной записи Azure
 
@@ -111,11 +100,7 @@ ms.locfileid: "86379978"
 
 1. В Eclipse выберите **Сервис**, **Azure** и затем **Выйти**.
 
-   ![Меню Eclipse для выхода из системы Azure][L01]
-
 2. При отображении диалогового окна **Выход из Azure** нажмите кнопку **Да**.
-
-   ![Диалоговое окно выхода][L02]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -126,21 +111,7 @@ ms.locfileid: "86379978"
 
 <!-- IMG List -->
 
-[I01]: media/sign-in-instructions/I01.png
 [I02]: media/sign-in-instructions/I02.png
-[I03]: media/sign-in-instructions/I03.png
-[I04]: media/sign-in-instructions/I04.png
-[I05]: media/sign-in-instructions/I05.png
 
-[A01]: media/sign-in-instructions/A01.png
 [A02]: media/sign-in-instructions/A02.png
-[A03]: media/sign-in-instructions/A03.png
-[A04]: media/sign-in-instructions/A04.png
-[A05]: media/sign-in-instructions/A05.png
 [A06]: media/sign-in-instructions/A06.png
-[A07]: media/sign-in-instructions/A07.png
-[A08]: media/sign-in-instructions/A08.png
-
-[L01]: media/sign-in-instructions/L01.png
-[L02]: media/sign-in-instructions/L02.png
-[L03]: media/sign-in-instructions/L03.png

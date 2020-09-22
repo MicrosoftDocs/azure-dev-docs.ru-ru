@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, сборник схем, apache hadoop, 
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 922d1a26daa7b956c2f73210a4ba372d2819d635
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 199603354ff602683b9a6c38f9ff64ebfbe0bd97
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240286"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682051"
 ---
 # <a name="tutorial-configure-a-cluster-in-azure-hdinsight-using-ansible"></a>Руководство по настройке кластера в Azure HDInsight с помощью Ansible
 
@@ -203,7 +203,7 @@ ms.locfileid: "88240286"
 
 Существует два способа получения полного примера сборника схем:
 - [Скачайте сборник схем](https://github.com/Azure-Samples/ansible-playbooks/blob/master/hdinsight_create.yml) и сохраните его в `hdinsight_create.yml`.
-- Создайте файл с именем `hdinsight_create.yml` и скопируйте в него следующее содержимое.
+- Создайте файл с именем `hdinsight_create.yml` и скопируйте в него следующее содержимое:
 
 ```yml
 ---
@@ -352,7 +352,7 @@ ms.locfileid: "88240286"
 Перед выполнением сборника схем внесите следующие изменения.
 - В разделе `vars` замените заполнитель `{{ resource_group_name }}` именем вашей группы ресурсов.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook hdinsight.yml
@@ -360,27 +360,7 @@ ansible-playbook hdinsight.yml
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны. 
-
-Сохраните следующий код как `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: myResourceGroup
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
-```
-
-Запустите сборник схем с помощью команды `ansible-playbook`.
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

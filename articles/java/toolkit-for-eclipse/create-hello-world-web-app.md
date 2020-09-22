@@ -7,22 +7,22 @@ documentationcenter: java
 author: selvasingh
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
 ms.reviewer: asirveda
-ms.date: 02/01/2018
+ms.date: 08/25/2020
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java
-ms.openlocfilehash: ea650fdf86f0a614303f94f67792f2c05827576e
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 053bca7e41ef9c95a8ad0e20b40d682552d0b384
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378398"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534529"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью Eclipse
 
-С помощью модуля с открытым кодом [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse) всего за несколько минут можно создать и развернуть в Службе приложений Azure базовое приложение Hello World в качестве веб-приложения.
+В этой статье приведены действия, необходимые для создания базового веб-приложения Hello World и его публикации в Службе приложений Azure с помощью [Azure Toolkit for Eclipse](https://marketplace.eclipse.org/content/azure-toolkit-eclipse).
 
 > [!NOTE]
 >
@@ -37,64 +37,80 @@ ms.locfileid: "86378398"
 
 ## <a name="installation-and-sign-in"></a>Установка и вход
 
-1. Перетащите следующую кнопку в запущенную рабочую область Eclipse, чтобы установить подключаемый модуль Azure Toolkit for Eclipse ([другие варианты установки](installation.md)).
+Следующие шаги описывают процесс входа в Azure в среде разработки Eclipse.
 
-    [![Перетаскивание запущенной рабочей области Eclipse*. *Требуется клиент Eclipse Marketplace](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "Перетаскивание запущенной рабочей области Eclipse*. *Требуется клиент Eclipse Marketplace")
+1. Если вы еще не установили подключаемый модуль, воспользуйтесь статьей [Установка Azure Toolkit for Eclipse](installation.md).
 
-1. Чтобы войти в учетную запись Azure, щелкните **Tools** (Средства), выберите **Azure** и **Sign In** (Вход).
-   ![Меню Eclipse для входа в систему Azure][I01]
+1. Чтобы войти в учетную запись Azure, щелкните **Tools** (Средства), выберите **Azure** и **Sign In** (Войти).
+
+   :::image type="content" source="media/sign-in-instructions/eclipse-azure-signin.png" alt-text="Вход в Azure из интегрированной среде разработки Eclipse":::.
 
 1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход) ([другие варианты входа](sign-in-instructions.md)).
 
-   ![Окно Azure Sign In (Вход в Azure) с выбранным именем пользователя устройства][I02]
-
-1. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
-
-   ![Диалоговое окно входа Azure][I03]
+1. В диалоговом окне **Azure Device Login** (Вход на устройство Azure) щелкните **Copy&Open** (Копировать и открыть).
 
 1. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
 
-   ![Вход в систему устройства в браузере][I04]
+1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
 
-1. Наконец, в диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
+1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки Eclipse. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **ОК**.
 
-   ![Диалоговое окно выбора подписок][I05]
+### <a name="install-required-software-optional"></a>Установка необходимого программного обеспечения *(необязательно)*
 
-## <a name="creating-web-app-project"></a>Создание проекта веб-приложения
+Чтобы обеспечить наличие необходимых компонентов для работы с проектами веб-приложений, выполните следующие действия:
 
-1. Выберите **File** (Файл), **New** (Создать), а затем — **Dynamic Web Project** (Динамический веб-проект). (Если элемента **Динамический веб-проект** нет в списке доступных проектов после выбора пунктов **Файл** и **Создать**, сделайте следующее: последовательно щелкните **Файл**, **Создать**, **Проект...** , разверните узел **Интернет**, щелкните **Dynamic Web Project** (Динамический веб-проект) и нажмите кнопку **Далее**.)
+1. В меню **Help** (Справка) выберите пункт **Install New Software** (Установить новое программное обеспечение).
 
-   ![Создание динамического веб-проекта][file-new-dynamic-web-project]
+1. В диалоговом окне **Available Software** (Доступное программное обеспечение) щелкните **Manage** (Управление) и убедитесь, что здесь выбрана последняя версия Eclipse (например, *2020-06*).
 
-2. Для целей данного учебника присвойте проекту имя **MyWebApp**. Экран будет выглядеть следующим образом:
+1. Щелкните **Apply and Close** (Применить и закрыть). Разверните раскрывающееся меню *Work with:* (Работать с), чтобы отобразить рекомендуемые сайты. Выберите сайт с последней версией Eclipse, чтобы запросить доступное программное обеспечение.
+
+1. Прокрутите список вниз и выберите элемент**Web, XML, Java EE and OSGi Enterprise Development** (Корпоративная разработка для веб-сайтов, XML, Java EE и OSGi). Щелкните **Далее**.
+
+1. В окне сведений об установке щелкните **Далее**.
+
+1. В диалоговом окне Просмотр лицензий ознакомьтесь с условиями лицензионного соглашения. Если вы принимаете условия лицензионных соглашений, установите переключатель **I accept the terms of the license agreements** (Я принимаю условия лицензионных соглашений), а затем нажмите кнопку **Готово**. 
+
+   > [!NOTE]
+   > Ход установки можно проверить в правом нижнем углу рабочей области Eclipse.
+
+1. При появлении запроса на перезапуск Eclipse для завершения установки нажмите кнопку **Перезапустить сейчас**.
+
+## <a name="creating-a-web-app-project"></a>Создание проекта веб-приложения
+
+1. В меню **File** (Файл) разверните элемент **New** (Создать), а затем щелкните **Project** (Проект). В диалоговом окне New Project (Новый проект) разверните элемент **Web** (Интернет), выберите **Dynamic Web Project** (Динамический веб-проект) и нажмите **Далее**.
+
+   > [!TIP]
+   > Если в списке доступных проектов отсутствует элемент **Web** (Интернет), выполните действия из [этого раздела](#install-required-software-optional) и проверьте, есть ли у вас необходимое программное обеспечение Eclipse.
+
+1. Для целей данного учебника присвойте проекту имя **MyWebApp**. Экран будет выглядеть следующим образом:
    
    ![Свойства нового динамического веб-проекта][dynamic-web-project-properties]
 
-3. Нажмите кнопку **Готово**.
+1. Нажмите кнопку **Готово**.
 
-4. В представлении обозревателя проектов в Eclipse разверните узел **MyWebApp**. Щелкните правой кнопкой мыши **WebContent**, выберите **Создать**, затем щелкните **JSP File** (JSP-файл).
+1. На панели обозревателя пакетов с левой стороны разверните узел **MyWebApp**. Щелкните правой кнопкой мыши элемент **WebContent**, наведите указатель мыши на **New** (Создать) и выберите **Other...** (Другое).
 
-   ![Создание файла JSP][create-new-jsp-file]
+1. Разверните узел **Web** (Интернет) и найдите в нем вариант **JSP File** (JSP-файл). Щелкните **Далее**.
 
-5. В диалоговом окне **New JSP File** (Новый JSP-файл) укажите имя файла **index.jsp**, оставьте родительскую папку **MyWebApp/WebContent** без изменений, а затем нажмите кнопку **Далее**.
+1. В диалоговом окне **New JSP File** (Новый JSP-файл) укажите имя файла **index.jsp**, оставьте родительскую папку **MyWebApp/WebContent** без изменений, а затем нажмите кнопку **Далее**.
 
    ![Диалоговое окно New JSP File (Создание JSP-файла)][new-jsp-file-dialog]
 
-6. Для нашего примера в диалоговом окне **Select JSP Template** (Выбор шаблона JSP) щелкните **New JSP File (html)** (Создать JSP-файл (html)) и нажмите кнопку **Готово**.
+1. Для нашего примера в диалоговом окне **Select JSP Template** (Выбор шаблона JSP) щелкните **New JSP File (html 5)** (Создать JSP-файл (html 5)) и нажмите кнопку **Готово**.
 
-   ![Выбор шаблона JSP][select-jsp-template]
-
-7. При открытии в Eclipse файла index.jsp добавьте код для динамического отображения фразы **Hello World!** в существующий элемент `<body>`. Обновленное содержимое элемента `<body>` должно выглядеть так:
+1. При открытии в Eclipse файла index.jsp добавьте код для динамического отображения фразы **Hello World!** в существующий элемент `<body>`. Обновленное содержимое элемента `<body>` должно выглядеть так:
    
    ```jsp
-   <body><b><% out.println("Hello World!"); %></b></body>
+   <body>
+   <b><% out.println("Hello World!"); %></b>
+   </body>
    ```
+1. Сохраните index.jsp.
 
-8. Сохраните index.jsp.
+## <a name="deploying-the-web-app-to-azure"></a>Развертывание веб-приложения в Azure
 
-## <a name="deploying-web-app-to-azure"></a>Развертывание веб-приложения в Azure
-
-1. В представлении обозревателя проектов Eclipse щелкните правой кнопкой мыши проект, выберите **Azure**, а затем — **Publish as Azure Web App** (Опубликовать как веб-приложение Azure).
+1. На панели обозревателя пакетов с левой стороны щелкните правой кнопкой мыши проект, выберите **Azure**, а затем **Publish as Azure Web App** (Опубликовать как веб-приложение Azure).
    
    ![Опубликовать как веб-приложение Azure][publish-as-azure-web-app]
 
@@ -102,37 +118,27 @@ ms.locfileid: "86378398"
 
    * Выберите существующее веб-приложение.
 
-      ![Выбор службы приложения][select-app-service]
+   * Если у вас нет существующего веб-приложения, щелкните **Create** (Создать).
 
-   * Щелкните **Create New Web App** (Создать веб-приложение).
-
-      ![Создание службы приложений][create-app-service]
+      Здесь вы можете настроить среду выполнения, группу ресурсов для плана Службы приложений и параметры приложения. При необходимости создайте новые ресурсы.
 
       В диалоговом окне **Create App Service** (Создание службы приложений) укажите требуемую информацию для веб-приложения и нажмите кнопку **Create** (Создать).
 
-      Здесь вы можете настроить среду выполнения, параметры приложения, план службы и группу ресурсов.
-
-      ![Диалоговое окно "Создание службы приложений"][create-app-service-dialog]
-
 1. Выберите веб-приложение и щелкните **Deploy** (Развернуть).
 
-   ![Развертывание службы приложений][deploy-app-service]
-
 1. Набор средств отобразит сообщение о состоянии (**Опубликовано**) на вкладке **Журнал действий Azure** при успешном развертывании веб-приложения, где будет содержаться гиперссылка с URL-адресом развернутого веб-приложения.
-
-   ![Состояние публикации][publish-status]
 
 1. Перейти к своему веб-приложению можно с помощью ссылки, предоставленной в сообщении о состоянии.
 
    ![Просмотр веб-приложения][browse-web-app]
-
-[!INCLUDE [show-azure-explorer](includes/show-azure-explorer.md)]
 
 ## <a name="cleaning-up-resources"></a>Очистка ресурсов
 
 1. Опубликовав веб-приложение в Azure, вы можете управлять им, щелкнув его правой кнопкой мыши в Azure Explorer и выбрав один из параметров контекстного меню. Например, вы можете **удалить** веб-приложение здесь, чтобы очистить ресурс для этого учебника.
 
    ![Управление службой приложений][manage-app-service]
+
+[!INCLUDE [show-azure-explorer](includes/show-azure-explorer.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -151,23 +157,10 @@ ms.locfileid: "86378398"
 [Legacy Version]: create-hello-world-web-app-legacy-version.md
 
 <!-- IMG List -->
-[I01]: media/sign-in-instructions/I01.png
-[I02]: media/sign-in-instructions/I02.png
-[I03]: media/sign-in-instructions/I03.png
-[I04]: media/sign-in-instructions/I04.png
-[I05]: media/sign-in-instructions/I05.png
 
 [browse-web-app]: media/create-hello-world-web-app/browse-web-app.png
-[file-new-dynamic-web-project]: media/create-hello-world-web-app/file-new-dynamic-web-project.png
 [dynamic-web-project-properties]: media/create-hello-world-web-app/dynamic-web-project-properties.png
-[create-new-jsp-file]: media/create-hello-world-web-app/create-new-jsp-file.png
 [new-jsp-file-dialog]: media/create-hello-world-web-app/new-jsp-file-dialog.png
-[select-jsp-template]: media/create-hello-world-web-app/select-jsp-template.png
 [publish-as-azure-web-app]: media/create-hello-world-web-app/publish-as-azure-web-app.png
-[deploy-web-app-dialog]: media/create-hello-world-web-app/deploy-web-app-dialog.png
-[select-app-service]: media/create-hello-world-web-app/select-app-service.png
-[create-app-service-dialog]: media/create-hello-world-web-app/create-app-service-dialog.png
 [publish-status]: media/create-hello-world-web-app/publish-status.png
-[create-app-service]: media/create-hello-world-web-app/create-app-service.png
-[deploy-app-service]: media/create-hello-world-web-app/deploy-app-service.png
 [manage-app-service]: media/create-hello-world-web-app/manage-app-service.png

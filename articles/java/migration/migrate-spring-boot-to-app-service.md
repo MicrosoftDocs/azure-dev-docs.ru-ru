@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: 5bd1611418cca94c5f580b085a067df35d7a1248
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: a8e9f883e76f3c79a9b5470c18907276d9262d03
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725238"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682153"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-app-service"></a>Перенос приложений Spring Boot в Службу приложений Azure
 
@@ -113,7 +113,7 @@ spring.jms.servicebus.idle-timeout=10000
 
 #### <a name="maven-applications"></a>Приложения Maven
 
-Если приложение создано на основе POM-файла Maven, [используйте подключаемый модуль веб-приложения для Maven](/azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin#configure-maven-plugin-for-azure-app-service), чтобы создать и развернуть веб-приложение.
+Если приложение создано на основе POM-файла Maven, используйте подключаемый модуль веб-приложения для Maven, чтобы создать и развернуть веб-приложение. Дополнительные сведения см. в [кратком руководстве о создании приложения Java в Службе приложений Azure](/azure/app-service/quickstart-java?tabs=javase&pivots=platform-linux).
 
 #### <a name="non-maven-applications"></a>Приложения, отличающиеся от Maven
 

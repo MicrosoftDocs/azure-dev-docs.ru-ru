@@ -5,12 +5,12 @@ keywords: Ansible, Azure, DevOps, Bash, сборник схем, виртуал�
 ms.topic: tutorial
 ms.date: 10/14/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: c214daa3f63f88711ace9d41ffb9978d20551fc9
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ad8bfca4030583e67423144dbc650eecb22e5060
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240576"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681969"
 ---
 # <a name="tutorial-create-a-vm-or-virtual-machine-scale-set-from-the-azure-shared-image-gallery-using-ansible"></a>Руководство по созданию виртуальной машины или масштабируемого набора виртуальных машин из Общей коллекции образов Azure с помощью Ansible
 
@@ -101,7 +101,7 @@ ms.locfileid: "88240576"
           version: latest
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 00-prerequisites.yml
@@ -133,7 +133,7 @@ ansible-playbook 00-prerequisites.yml
         source: "{{ source_vm_name }}"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 01a-create-generalized-image.yml
@@ -160,7 +160,7 @@ ansible-playbook 01a-create-generalized-image.yml
         description: This is the gallery description.
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 02-create-shared-image-gallery.yml
@@ -222,7 +222,7 @@ ansible-playbook 02-create-shared-image-gallery.yml
         var: output
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 03a-create-shared-image-generalized.yml
@@ -253,7 +253,7 @@ ansible-playbook 03a-create-shared-image-generalized.yml
         id: "/subscriptions/{{ lookup('env', 'AZURE_SUBSCRIPTION_ID') }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Compute/galleries/{{ shared_gallery_name }}/images/{{ shared_image_name }}/versions/{{ shared_image_version }}"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 04a-create-vm-using-generalized-image.yml
@@ -286,7 +286,7 @@ ansible-playbook 04a-create-vm-using-generalized-image.yml
         id: "/subscriptions/{{ lookup('env', 'AZURE_SUBSCRIPTION_ID') }}/resourceGroups/{{ resource_group }}/providers/Microsoft.Compute/galleries/{{ shared_gallery_name }}/images/{{ shared_image_name }}/versions/{{ shared_image_version }}"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 05a-create-vmss-using-generalized-image.yml
@@ -320,7 +320,7 @@ ansible-playbook 05a-create-vmss-using-generalized-image.yml
       name: "{{ shared_image_version }}"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 06-get-info.yml
@@ -359,7 +359,7 @@ ansible-playbook 06-get-info.yml
       state: absent
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook 07-delete-gallery.yml
@@ -367,36 +367,7 @@ ansible-playbook 07-delete-gallery.yml
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны. 
-
-Код из примера сборника схем в этом разделе используется для следующего.
-
-- Удаление двух групп ресурсов, созданных ранее.
-
-Сохраните следующий сборник схем как `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: "{{ resource_group_name }}"
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        force_delete_nonempty: yes
-        state: absent
-```
-
-Ниже приведено несколько важных примечаний, которые следует рассмотреть при работе с примером сборника схем.
-
-- Замените заполнитель `{{ resource_group_name }}` именем своей группы ресурсов.
-- Будут удалены все ресурсы в указанных группах ресурсов.
-
-Запустите сборник схем с помощью команды `ansible-playbook`.
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

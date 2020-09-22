@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, Azure App Service, Web App, sc
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 6c472db1f2d0b7cdc52694895f521c40202adaac
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 4efb39f006aac7f6928c46459cf31d1106ef2270
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240406"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681683"
 ---
 # <a name="tutorial-scale-apps-in-azure-app-service-using-ansible"></a>Руководство по масштабированию приложений в Службе приложений Azure с помощью Ansible
 
@@ -81,7 +81,7 @@ ms.locfileid: "88240406"
       var: facts.appserviceplans[0].sku
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook webapp_scaleup.yml

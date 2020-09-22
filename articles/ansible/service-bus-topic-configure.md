@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, сборник схем, служебн�
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 8dad002f52ded3baaf66d96a516a3d23dac91d56
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: a6cc84b17a5971ba487e304822de9f366826274b
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240066"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90681976"
 ---
 # <a name="tutorial-configure-topics-in-azure-service-bus-using-ansible"></a>Руководство по настройке разделов в Служебной шине Azure с помощью Ansible
 
@@ -70,7 +70,7 @@ ms.locfileid: "88240066"
           var: topic
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_topic.yml
@@ -103,7 +103,7 @@ ansible-playbook servicebus_topic.yml
 
 Сохраните следующий сборник схем как `servicebus_subscription.yml`:
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_subscription.yml
@@ -140,7 +140,7 @@ ansible-playbook servicebus_subscription.yml
           var: policy
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_topic_policy.yml
@@ -173,7 +173,7 @@ ansible-playbook servicebus_topic_policy.yml
 Перед выполнением сборника схем ознакомьтесь со следующими указаниями.
 - Значение `show_sas_policies` указывает, следует ли отображать политики SAS в указанном пространстве имен. Используется значение по умолчанию `False`, чтобы избежать дополнительных сетевых издержек.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_namespace_info.yml
@@ -220,7 +220,7 @@ ansible-playbook servicebus_namespace_info.yml
 Перед выполнением сборника схем ознакомьтесь со следующими указаниями.
 - Значение `show_sas_policies` указывает, следует ли отображать политики SAS в указанной очереди. Используется значение по умолчанию `False`, чтобы избежать дополнительных сетевых издержек.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_list.yml
@@ -249,7 +249,7 @@ ansible-playbook servicebus_list.yml
           state: absent
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook servicebus_topic_policy_delete.yml
@@ -295,7 +295,7 @@ ansible-playbook servicebus_topic_policy_delete.yml
           force_delete_nonempty: yes
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook cleanup.yml

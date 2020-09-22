@@ -4,21 +4,21 @@ titleSuffix: Azure Toolkit for IntelliJ
 description: Запуск веб-приложения Hello World в контейнере Linux и его развертывание в облаке с помощью набора средств Azure для IntelliJ.
 services: app-service\web
 documentationcenter: java
-ms.date: 12/20/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 7b6d393f44034794494f4e77a6365bf0d7bf6c1d
-ms.sourcegitcommit: 8cd0ddf1651c3b64bb72dedc2890108c2cfe3bcb
+ms.openlocfilehash: 0dd1b0202442a4af5322513f038ddcc9908a7dd1
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87334429"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534727"
 ---
 # <a name="deploy-java-app-to-azure-web-apps-for-containers-using-azure-toolkit-for-intellij"></a>Развертывание приложения Java в Веб-приложении Azure для контейнеров с помощью Azure Toolkit for IntelliJ
 
-Контейнеры [Docker] широко используются при развертывании веб-приложений. При этом разработчики могут объединить все зависимости и файлы проекта в одном пакете, а затем развернуть его на сервере. Набор средств Azure для IntelliJ упрощает этот процесс для разработчиков на языке Java, предоставляя функции для развертывания контейнеров в Microsoft Azure.
+Контейнеры [Docker] широко используются при развертывании веб-приложений. При этом разработчики могут объединить все зависимости и файлы проекта в одном пакете, а затем развернуть его на сервере. Набор средств Azure Toolkit for IntelliJ упрощает этот процесс для разработчиков на языке Java, предоставляя функции для развертывания контейнеров в Microsoft Azure.
 
 В этой статье показаны действия, необходимые для создания базового веб-приложения Hello World и его публикации в контейнере Linux в Azure с помощью набора средств Azure для IntelliJ.
 
@@ -32,29 +32,52 @@ ms.locfileid: "87334429"
 > ![Меню параметров Docker][docker-settings-menu]
 >
 
-## <a name="create-a-new-web-app-project"></a>Создание проекта веб-приложения
+## <a name="installation-and-sign-in"></a>Установка и вход
 
-1. Запустите IntelliJ и войдите в свою учетную запись Azure, следуя инструкциям по [входу для набора средств Azure для IntelliJ](sign-in-instructions.md).
+Следующие шаги описывают процесс входа в Azure в среде разработки IntelliJ.
 
-1. Щелкните меню **File** (Файл), выберите команду **New** (Создать), а затем — **Project** (Проект).
-   
-   ![Создание проекта][file-new-project]
+1. Если вы еще не установили подключаемый модуль, см. статью [Установка Azure Toolkit for IntelliJ](installation.md).
 
-1. В диалоговом окне **New Project** (Новый проект) выберите **Maven**, а затем **maven-archetype-webapp** и щелкните **Next** (Далее).
-   
-   ![Выбор веб-приложения архетипа Maven][maven-archetype-webapp]
-   
-1. Укажите значение **GroupId** (Идентификатор группы) и **ArtifactId** (Идентификатор артефакта) для веб-приложения и щелкните **Next** (Далее).
-   
-   ![Указание идентификатора группы и артефакта][groupid-and-artifactid]
+1. Чтобы войти в учетную запись Azure, перейдите к левой боковой панели **Azure Explorer**, а затем щелкните значок **входа в Azure**. Кроме того, можно открыть раздел **Средства**, развернуть пункт **Azure** и щелкнуть значок **входа в Azure**.
 
-1. Настройте любые параметры Maven или примите значения по умолчанию и щелкните **Next** (Далее).
-   
-   ![Указание параметров Maven][maven-options]
+   :::image type="content" source="media/sign-in-instructions/I01.png" alt-text="Вход в Azure из IntelliJ."::: 
 
-1. Укажите имя и расположение проекта, а затем щелкните **Finish** (Готово).
-   
-   ![Указание имени проекта][project-name]
+1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход) ([другие варианты входа](sign-in-instructions.md)).
+
+1. В диалоговом окне **Azure Device Login** (Вход на устройство Azure) щелкните **Copy&Open** (Копировать и открыть).
+
+1. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
+
+1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
+
+1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки IntelliJ. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **ОК**.
+
+## <a name="creating-a-new-web-app-project"></a>Создание проекта веб-приложения
+
+1. В меню **File** (Файл) разверните пункт **New** (Создать), а затем щелкните **Проект** (Project).
+
+1. В диалоговом окне **New Project** (Новый проект) выберите **Maven** и убедитесь, что установлен флажок **Create from Archetype** (Создать из архетипа). В списке вариантов выберите **maven-archetype-webapp**, а затем щелкните **Далее**.
+
+   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Выбор варианта maven-archetype-webapp."::: 
+
+1. Раскройте список **Artifact Coordinates** (Координаты артефакта), чтобы просмотреть все поля ввода и указать приведенные ниже сведения о новом веб-приложении, а затем щелкните **Далее**.
+
+   * **Name** (Имя). Название вашего веб-приложения. Это значение автоматически помещается в поле **ArtifactId** для веб-приложения.
+   * **GroupId** (Идентификатор группы). Имя группы артефактов. Как правило, это домен компании (например, *com.microsoft.azure*).
+   * **Версия.** Мы сохраним здесь версию по умолчанию *1.0-SNAPSHOT*.
+
+1. Настройте любые параметры Maven или примите значения по умолчанию и щелкните **Готово**.
+
+1. Перейдите к проекту на вкладке **Project** (Проект) слева и откройте файл **src/Main/webapp/WEB-INF/index.jsp**. Замените его содержимое следующим кодом и **сохраните изменения**:
+
+   ```html
+   <html>
+    <body>
+      <b><% out.println("Hello World!"); %></b>
+    </body>
+   </html>
+   ```
+   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Открытие файла index.jsp.":::
 
 ## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Создание реестра контейнеров Azure для использования в качестве частного реестра Docker
 
@@ -69,27 +92,37 @@ ms.locfileid: "87334429"
 
    После входа в свою учетную запись на портале Azure можно выполнить процедуру, описанную в статье [Создание частного реестра контейнеров Docker с помощью портала Azure], которую здесь полезно представить еще раз.
 
-1. Щелкните значок меню **+ Создать ресурс**, а затем последовательно выберите **Контейнеры** и **Реестр контейнеров**.
-   
-   ![Создание нового реестра контейнеров Azure][create-container-registry-01]
+1. Щелкните значок меню **+ Создать ресурс**, а затем щелкните категорию **Контейнеры** и выберите **Реестр контейнеров**.
 
-1. При появлении страницы **Создать реестр контейнеров** введите данные в поля **Имя реестра** и **Группа ресурсов**, выберите **Включить** для параметра **Пользователь-администратор** и нажмите кнопку **Создать**.
+1. Когда отобразится страница **Создать реестр контейнеров**, укажите следующие сведения:
 
-   ![Настройка параметров реестра контейнеров Azure][create-container-registry-02]
+   * **Подписка**: Определяет подписку Azure, которую нужно использовать для нового реестра контейнеров.
+
+   * **Группа ресурсов**. Определяет группу ресурсов для реестра контейнеров. Выберите один из следующих вариантов.
+      * **Создать**. Определяет, что нужно создать группу ресурсов.
+      * **Использовать существующую**. Определяет, что нужно выбрать группу ресурсов, связанную с учетной записью Azure.
+
+   * **Имя реестра.** Указывает имя для нового реестра контейнеров.
+
+   * **Расположение.** Указывает регион, в котором будет создан реестр контейнеров (например, "Западная часть США").
+
+   * **SKU**: Указывает уровень служб для нового реестра контейнеров. Для работы с этим учебником выберите *Базовый*. Дополнительные сведения см в статье [Уровни службы Реестра контейнеров Azure](/azure/container-registry/container-registry-skus).
+
+1. Щелкните **Проверить и создать** и убедитесь, что сведения верны. Для завершения нажмите кнопку **Создать**.
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Развертывание веб-приложения в контейнере Docker
 
-1. Щелкните правой кнопкой мыши проект в обозревателе проектов, выберите **Azure**, а затем — **Add Docker Support** (Добавление поддержки Docker).
+Ниже приведены инструкции по настройке поддержки Docker в веб-приложении и по развертыванию этого веб-приложения.
+
+1. Перейдите к проекту на вкладке **Project** (Проект) слева и щелкните проект правой кнопкой мыши. Разверните элемент **Azure** и щелкните **Add Docker Support** (Добавить поддержку Docker).
 
    Файл Docker будет автоматически создан с конфигурацией по умолчанию.
 
-   ![Добавление поддержки Docker][add-docker-support]
+   :::image type="content" source="media/hello-world-web-app-linux/docker-support-file.png" alt-text="Файл поддержки Docker.":::
 
 1. Добавив поддержку Docker, щелкните проект правой кнопкой мыши в обозревателе проектов, выберите **Azure**, а затем — **Run on Web App for Containers** (Выполнить в веб-приложении для контейнеров).
 
-   ![Выполнение в веб-приложении для контейнеров][run-on-web-app-for-containers]
-
-1. Когда отобразится диалоговое окно **Run on Web App for Containers** (Выполнение в веб-приложении для контейнеров), введите необходимые сведения:
+1. В диалоговом окне **Run on Web App for Containers** (Выполнение в веб-приложении для контейнеров) введите следующие сведения:
 
    * **Name** (Имя). Понятное имя, отображаемое в наборе средств Azure. 
 
@@ -105,11 +138,7 @@ ms.locfileid: "87334429"
 
    * **App Service Plan** (План службы приложений). Указывает, создадите ли вы план службы приложений или будете использовать существующий. 
 
-   ![Выполнение в веб-приложении для контейнеров][run-on-web-app-linux]
-
 1. Настроив перечисленные выше параметры, нажмите кнопку **Run** (Выполнить). После успешного развертывания веб-приложения его состояние будет отображаться в окне **Run** (Выполнение).
-
-   ![Веб-приложение успешно развернуто][successfully-deployed]
 
 1. После публикации веб-приложения вы можете перейти к указанному для него ранее URL-адресу, например *wingtiptoys.azurewebsites.net*.
 
@@ -119,11 +148,9 @@ ms.locfileid: "87334429"
 
 1. После публикации веб-приложения параметры будут сохранены в качестве параметров по умолчанию. Приложение можно запустить в Azure, щелкнув значок зеленой стрелки на панели инструментов. Вы можете изменить параметры, щелкнув раскрывающееся меню для веб-приложения, а затем — **Edit Configurations** (Изменить конфигурации).
 
-   ![Пункт меню Edit configuration (Изменить конфигурацию)][edit-configuration-menu]
+    :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Пункт меню "Изменить конфигурацию"":::.
 
 1. При отображении диалогового окна **Run/Debug Configurations** (Конфигурации выполнения и отладки) можно изменить любые параметры по умолчанию, а затем нажать кнопку **ОК**.
-
-   ![Диалоговое окно Edit configuration (Изменение конфигурации)][edit-configuration-dialog]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -144,18 +171,5 @@ ms.locfileid: "87334429"
 
 <!-- IMG List -->
 
-[add-docker-support]: media/hello-world-web-app-linux/add-docker-support.png
 [browsing-to-web-app]:  media/hello-world-web-app-linux/browsing-to-web-app.png
-[create-container-registry-01]: media/hello-world-web-app-linux/create-container-registry-01.png
-[create-container-registry-02]: media/hello-world-web-app-linux/create-container-registry-02.png
 [docker-settings-menu]: media/hello-world-web-app-linux/docker-settings-menu.png
-[edit-configuration-dialog]: media/hello-world-web-app-linux/edit-configuration-dialog.png
-[edit-configuration-menu]: media/hello-world-web-app-linux/edit-configuration-menu.png
-[file-new-project]: media/hello-world-web-app-linux/file-new-project.png
-[groupid-and-artifactid]: media/hello-world-web-app-linux/groupid-and-artifactid.png
-[maven-archetype-webapp]: media/hello-world-web-app-linux/maven-archetype-webapp.png
-[maven-options]: media/hello-world-web-app-linux/maven-options.png
-[project-name]: media/hello-world-web-app-linux/project-name.png
-[run-on-web-app-for-containers]: media/hello-world-web-app-linux/run-on-web-app-for-containers.png
-[run-on-web-app-linux]: media/hello-world-web-app-linux/run-on-web-app-linux.png
-[successfully-deployed]: media/hello-world-web-app-linux/successfully-deployed.png

@@ -1,16 +1,16 @@
 ---
 title: Руководство по настройке сети Azure CNI в Службе Azure Kubernetes (AKS) с помощью Ansible
-description: Узнайте, как с помощью Ansible настроить сеть Kubenet в кластере Службы Azure Kubernetes (AKS).
+description: Сведения о том, как с помощью Ansible настроить сеть Azure CNI в кластере Службы Azure Kubernetes (AKS).
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, aks, контейнер, aks, kubernetes
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: f3892b9c25b952d2d8c71e4e44857557c0a1813b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 1f58c8c5964a6e015de9cb1e3990274791037599
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239956"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682114"
 ---
 # <a name="tutorial-configure-azure-cni-networking-in-azure-kubernetes-service-aks-using-ansible"></a>Руководство по настройке сети Azure CNI в Службе Azure Kubernetes (AKS) с помощью Ansible
 
@@ -245,37 +245,7 @@ localhost                  : ok=9    changed=4    unreachable=0    failed=0    s
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны. 
-
-Код из примера сборника схем в этом разделе используется для следующего.
-
-- Удаление группы ресурсов, упомянутой в разделе `vars`.
-
-Сохраните следующий сборник схем как `cleanup.yml`:
-
-```yml
----
-- hosts: localhost
-  vars:
-      resource_group: {{ resource_group_name }}
-  tasks:
-      - name: Clean up resource group
-        azure_rm_resourcegroup:
-            name: "{{ resource_group }}"
-            state: absent
-            force: yes
-```
-
-Ниже приведено несколько важных примечаний, которые следует рассмотреть при работе с примером сборника схем.
-
-- Замените заполнитель `{{ resource_group_name }}` именем своей группы ресурсов.
-- Будут удалены все ресурсы в указанной группе ресурсов.
-
-Чтобы запустить сборник схем, выполните команду ansible-playbook.
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

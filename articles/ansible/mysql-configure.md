@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, mysql, database
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 6264ca6158017fc919e64fa2e33852076c523fc6
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 1fb753658486a0a1c8f5c44c01f6c4c33c8ecaf0
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239986"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682004"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>Руководство по настройке баз данных в Базе данных Azure для MySQL с помощью Ansible
 
@@ -57,7 +57,7 @@ ms.locfileid: "88239986"
 * Создается группа ресурсов `myResourceGroup`.
 * Группа ресурсов создается в расположении `eastus`.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook rg.yml
@@ -106,7 +106,7 @@ ansible-playbook rg.yml
 * В разделе `vars` значение `mysqlserver_name` должно быть уникальным.
 * В разделе `vars` замените `<server_admin_password>` паролем.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook mysql_create.yml
@@ -148,7 +148,7 @@ ansible-playbook mysql_create.yml
 * Подключитесь к базе данных Azure для MySQL через порт 3306. Если вы пытаетесь подключиться из корпоративной сети, исходящий трафик через порт 3306 может быть запрещен. В таком случае вы не сможете подключиться к серверу. Для этого ваш ИТ-отдел должен открыть порт 3306.
 * Сборник схем использует модуль `azure_rm_resource`, который позволяет напрямую использовать REST API.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook mysql_firewall.yml
@@ -248,7 +248,7 @@ ansible-playbook mysql_firewall.yml
         var: mysqldatabasefacts
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook mysql_query.yml
@@ -316,26 +316,7 @@ ansible-playbook mysql_query.yml
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны. 
-
-Сохраните следующий сборник схем как `cleanup.yml`:
-
-```yml
-- hosts: localhost
-  vars:
-    resource_group: myResourceGroup
-  tasks:
-    - name: Delete a resource group
-      azure_rm_resourcegroup:
-        name: "{{ resource_group }}"
-        state: absent
-```
-
-Запустите сборник схем с помощью команды `ansible-playbook`.
-
-```bash
-ansible-playbook cleanup.yml
-```
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

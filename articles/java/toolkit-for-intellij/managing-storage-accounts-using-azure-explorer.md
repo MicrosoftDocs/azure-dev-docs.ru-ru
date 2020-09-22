@@ -2,19 +2,22 @@
 title: Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
 description: Вы можете узнать, как управлять учетными записями хранения Azure с помощью Azure Explorer для IntelliJ.
 documentationcenter: java
-ms.date: 02/01/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: a692081032781a530d80c8fa2ff77792611e2673
-ms.sourcegitcommit: 300251b3d866bac9c7d2dfc3133efaaea8e0ce04
+ms.openlocfilehash: 5152b1bfedd02c821d2a9138fa3e20325b5ea086
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87438461"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534322"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
+
+> [!NOTE]
+> Функция "Учетные записи хранения " в Azure Explorer больше не рекомендуется к использованию. Вы можете использовать портал Azure для создания учетных записей хранения и контейнеров и управления ими. Краткие руководства по управлению учетными записями хранения см. в документации по [службе хранилища Azure](/azure/storage/blobs/storage-quickstart-blobs-portal).
 
 Azure Explorer, входящий в состав набора средств Azure для IntelliJ, предоставляет разработчикам на Java удобное решение для управления учетными записями хранения в их учетной записи Azure из интегрированной среды разработки IntelliJ.
 
@@ -22,7 +25,7 @@ Azure Explorer, входящий в состав набора средств Azu
 
 [!INCLUDE [show-azure-explorer](includes/show-azure-explorer.md)]
 
-## <a name="create-a-storage-account-in-intellij"></a>Создание учетной записи хранения в IntelliJ
+## <a name="create-a-storage-account"></a>Создание учетной записи хранения
 
 Чтобы создать учетную запись хранения с помощью Azure Explorer, сделайте следующее:
 
@@ -30,11 +33,7 @@ Azure Explorer, входящий в состав набора средств Azu
 
 2. В представлении **Azure Explorer** разверните узел **Azure**, щелкните правой кнопкой мыши элемент **Учетные записи хранения** и выберите **Создать учетную запись хранения**.
 
-   ![Команда "Создать учетную запись хранения"][CS01]
-
 3. В диалоговом окне **Создание учетной записи хранения** укажите следующие параметры.
-
-   ![Диалоговое окно "Создание учетной записи хранения"][CS02]
 
    * **Name** (Имя). Определяет имя для новой учетной записи хранения.
 
@@ -54,17 +53,14 @@ Azure Explorer, входящий в состав набора средств Azu
 
 4. Указав все перечисленные выше параметры, нажмите кнопку **ОК**.
 
-## <a name="delete-a-storage-account-in-intellij"></a>Удаление учетной записи хранения в IntelliJ
+## <a name="delete-a-storage-account"></a>Удаление учетной записи хранения
 
 Чтобы удалить учетную запись хранения с помощью Azure Explorer, сделайте следующее:
 
 1. В представлении **Azure Explorer** щелкните правой кнопкой мыши учетную запись хранения и выберите пункт **Удалить**.
 
-   ![Меню "Удаление учетной записи хранения"][DS01]
-
 2. В диалоговом окне подтверждения нажмите кнопку **Да**.
 
-   ![Окно подтверждения удаления учетной записи хранения][DS02]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

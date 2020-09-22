@@ -5,12 +5,12 @@ keywords: ansible, azure, разработка и операции, bash, clouds
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 8ada951f0c1e21de8e193d94fd7e7dcf35ae03be
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 53cf2e25a89081b314826cda4322e2556fc38c39
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240306"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682064"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
@@ -20,7 +20,7 @@ Ansible можно использовать для извлечения инфо
 
 > [!div class="checklist"]
 >
-> * Настройка двух тестовых виртуальных машин. 
+> * Настройка двух тестовых виртуальных машин.
 > * Добавление тега к одной из виртуальных машин.
 > * Установка Nginx на виртуальные машины с тегами.
 > * Настройка динамического списка, содержащего настроенные ресурсы Azure.
@@ -39,7 +39,7 @@ Ansible можно использовать для извлечения инфо
 
 1. Создайте группу ресурсов Azure для хранения виртуальных машин, используемых в этом руководстве.
 
-    > [!IMPORTANT]    
+    > [!IMPORTANT]
     > Имя группы ресурсов Azure, создаваемой на этом этапе, должно содержать только строчные символы. В противном случае создание динамического списка завершится ошибкой.
 
     ```azurecli-interactive
@@ -66,17 +66,17 @@ Ansible можно использовать для извлечения инфо
 
 ## <a name="tag-a-vm"></a>Добавление тега для виртуальной машины
 
-Можно [использовать теги](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#azure-cli) для организации ресурсов Azure по определенным пользователем категориям. 
+Можно [использовать теги](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-using-tags#azure-cli) для организации ресурсов Azure по определенным пользователем категориям.
 
 ### <a name="using-ansible-version--28"></a>Использование версий Ansible, предшествующих версии 2.8
-Выполните приведенную ниже команду [az resource tag](/cli/azure/resource?view=azure-cli-latest.md#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `nginx`:
+Выполните приведенную ниже команду [az resource tag](/cli/azure/resource#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `nginx`:
 
 ```azurecli-interactive
 az resource tag --tags nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
 ```
 
 ### <a name="using-ansible-version--28"></a>Если вы используете Ansible версии 2.8 и выше
-Выполните приведенную ниже команду [az resource tag](/cli/azure/resource?view=azure-cli-latest.md#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `Ansible=nginx`:
+Выполните приведенную ниже команду [az resource tag](/cli/azure/resource#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `Ansible=nginx`:
 
 ```azurecli-interactive
 az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
@@ -240,7 +240,7 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
 
 1. Сохраните файл и закройте редактор.
 
-1. Запустите сборник схем с помощью команды `ansible-playbook`.
+1. Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
    - Версия Ansible, предшествующая версии 2.8:
 
@@ -276,7 +276,7 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
 
 В этом разделе показано, как проверить Nginx, установленный на виртуальной машине.
 
-1. Извлеките IP-адрес виртуальной машины `ansible-inventory-test-vm1`, используя команду [az vm list-ip-addresses](https://docs.microsoft.com/cli/azure/vm?view=azure-cli-latest#az-vm-list-ip-addresses). Возвращаемое значение (IP-адрес виртуальной машины) затем используется как параметр команды SSH, при помощи которого устанавливается подключение к виртуальной машине.
+1. Извлеките IP-адрес виртуальной машины `ansible-inventory-test-vm1`, используя команду [az vm list-ip-addresses](https://docs.microsoft.com/cli/azure/vm#az-vm-list-ip-addresses). Возвращаемое значение (IP-адрес виртуальной машины) затем используется как параметр команды SSH, при помощи которого устанавливается подключение к виртуальной машине.
 
     ```azurecli-interactive
     ssh `az vm list-ip-addresses \
@@ -313,6 +313,10 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
     * nginx-lightTry: sudo apt install <selected package>
     tom@ansible-inventory-test-vm2:~$
     ```
+
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+[!INCLUDE [ansible-delete-resource-group.md](includes/ansible-delete-resource-group.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: c5830ab871b78e586b502e0c6e2331700fa0149d
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 2891b0c09c43b652fd7dd41e354290c2821bad46
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379958"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534579"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a>Инструкции по входу для набора средств Azure для IntelliJ
 
@@ -31,25 +31,22 @@ ms.locfileid: "86379958"
 
 1. Откройте проект с помощью IntelliJ IDEA.
 
-2. Откройте боковую панель **Azure Explorer**, а затем щелкните значок **Azure Sign In** (Вход в Azure) в верхней строке (или в меню IDEA **Tools/Azure/Azure Sign in** (Средства/Azure/Вход в Azure)).
+1. Откройте боковую панель **Azure Explorer**, а затем щелкните значок **Azure Sign In** (Вход в Azure) в верхней строке (или в меню IntelliJ, выберите **Tools/Azure/Azure Sign in** (Средства/Azure/Вход в Azure)).
 
    ![Команда Azure Sign In (Вход в Azure) в IntelliJ][I01]
 
-3. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход).
+1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход).
 
    ![Окно Azure Sign In (Вход в Azure) с выбранным именем пользователя устройства][I02]
 
-4. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
+1. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
 
-   ![Диалоговое окно входа Azure][I03]
+1. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
 
-5. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
+1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
 
-   ![Вход в систему устройства в браузере][I04]
+1. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
 
-6. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
-
-   ![Диалоговое окно выбора подписок][I05]
 
 ## <a name="sign-in-to-your-azure-account-by-service-principal"></a>Вход в учетную запись Azure с помощью субъекта-службы
 
@@ -57,8 +54,9 @@ ms.locfileid: "86379958"
 
 1. Откройте проект с помощью IntelliJ IDEA.
 
-1. Откройте боковую панель **Azure Explorer**, а затем щелкните значок **Azure Sign In** (Вход в Azure) в верхней строке (или в меню IDEA **Tools/Azure/Azure Sign in** (Средства/Azure/Вход в Azure)).
-   ![Команда Azure Sign In (Вход в Azure) в IntelliJ][A01]
+1. Откройте боковую панель **Azure Explorer**, а затем щелкните значок **Azure Sign In** (Вход в Azure) в верхней строке (или в меню IntelliJ, выберите **Tools/Azure/Azure Sign in** (Средства/Azure/Вход в Azure)).
+
+   ![Команда Azure Sign In (Вход в Azure) в IntelliJ][I01]
 
 1. В окне **Azure Sign In** (Вход в Azure) выберите **Service Principal** (Субъект-служба) и щелкните **New** (Создать).
 
@@ -66,37 +64,27 @@ ms.locfileid: "86379958"
 
 1. В диалоговом окне **Azure Device Login** (Вход в систему устройства Azure) щелкните **Copy&Open** (Копировать и открыть).
 
-   ![Диалоговое окно входа Azure][A03]
-
 1. В браузере вставьте код устройства (скопированный при нажатии **Copy&Open** (Копировать и открыть) на последнем шаге), а затем нажмите кнопку **Далее**.
 
-   ![Вход в систему устройства в браузере][A04]
+1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации. После завершения аутентификации закройте браузер и вернитесь в IntelliJ.
 
 1. В диалоговом окне **Create authentication files** (Создание файлов проверки подлинности) выберите нужные подписки, конечный каталог и нажмите кнопку **Start** (Начать).
 
-   ![Окно Create authentication files (Создание файлов проверки подлинности)][A05]
-
 1. В диалоговом окне **Service Principal Creation Status** (Состояние создания субъекта-службы) после успешного создания файлов нажмите кнопку **ОК**.
-
-   ![Диалоговое окно Service Principal Creation Status (Состояние создания субъекта-службы)][A06]
 
 1. В окне **Azure Sign In** (Вход в Azure) щелкните **Sign in** (Войти). 
 
-   ![Диалоговое окно входа в Azure][A07]
-
 1. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и нажмите кнопку **ОК**.
 
-   ![Диалоговое окно выбора подписок][A08]
-
-> Создав файл проверки подлинности субъекта-службы, вы можете перейти к шагу 8, выбрать файл проверки подлинности и выполнить вход.
+   > [!TIP]
+   > Создав файл аутентификации субъекта-службы, вы можете перейти к шагу 3, выбрать файл аутентификации и выполнить вход.
 
 ## <a name="sign-out-of-your-azure-account"></a>Выход из учетной записи Azure
 
-После настройки учетной записи путем выполнения действий, описанных в предыдущем разделе, при каждом перезапуске IntelliJ будет автоматически выполняться вход. Но если вы хотите выйти из учетной записи Azure, сделайте следующее:
+После настройки учетной записи путем выполнения действий, описанных в предыдущем разделе, при каждом перезапуске IntelliJ будет автоматически выполняться вход. 
 
-* В IntelliJ IDEA откройте боковую панель Azure Explorer, щелкните **Azure Sign Out** (Выйти из Azure) (или в меню IDEA **Tools/Azure/Azure Sign in** (Средства/Azure/Выход из Azure)).
+Но если вы хотите выйти из своей учетной записи Azure, перейдите к боковой панели Azure Explorer, щелкните значок **Azure Sign Out** (Выход из Azure) или в меню IntelliJ выберите **Tools>Azure>Azure Sign Out** (Средства>Azure>Выход из Azure).
 
-   ![Команда Azure Sign Out (Выход из Azure) в IntelliJ][L01]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -108,20 +96,6 @@ ms.locfileid: "86379958"
 
 [I01]: media/sign-in-instructions/I01.png
 [I02]: media/sign-in-instructions/I02.png
-[I03]: media/sign-in-instructions/I03.png
-[I04]: media/sign-in-instructions/I04.png
-[I05]: media/sign-in-instructions/I05.png
 
-[A01]: media/sign-in-instructions/A01.png
 [A02]: media/sign-in-instructions/A02.png
-[A03]: media/sign-in-instructions/A03.png
-[A04]: media/sign-in-instructions/A04.png
-[A05]: media/sign-in-instructions/A05.png
-[A06]: media/sign-in-instructions/A06.png
-[A07]: media/sign-in-instructions/A07.png
-[A08]: media/sign-in-instructions/A08.png
-[A09]: media/sign-in-instructions/A09.png
 
-[L01]: media/sign-in-instructions/L01.png
-[L02]: media/sign-in-instructions/L02.png
-[L03]: media/sign-in-instructions/L03.png

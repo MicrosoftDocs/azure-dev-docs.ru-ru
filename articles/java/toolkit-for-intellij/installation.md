@@ -3,17 +3,17 @@ title: Установка набора средств Azure для IntelliJ
 description: Узнайте, как установить набор средств Azure для подключаемого модуля IntelliJ, чтобы создавать и развертывать облачные приложения в Azure.
 documentationcenter: java
 ms.assetid: c6817c7b-f28c-4c06-8216-41c7a8117de3
-ms.date: 02/01/2018
+ms.date: 09/09/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 15e3bdc3f001b3fe93a96b27bf7fc44c7aaa8f3a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: fe8b07257ff3a9fc5523d13dd13e19982103ab05
+ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379928"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90534490"
 ---
 # <a name="installing-the-azure-toolkit-for-intellij"></a>Установка набора средств Azure для IntelliJ
 
@@ -53,80 +53,39 @@ Azure Toolkit for IntelliJ требует наличия следующих пр
 -->
 
 
-## <a name="to-install-the-azure-toolkit-for-intellij-from-the-settings-dialog-box"></a>Установка набора средств Azure для IntelliJ из диалогового окна параметров
+## <a name="from-the-settings-dialog-box"></a>В диалоговом окне "Параметры"
 
-1. Запустите IntelliJ IDEA.
+1. На панели инструментов IntelliJ IDEA, щелкните **Файл** и выберите **Параметры**.
 
-1. Когда откроется IntelliJ IDEA, щелкните **Файл** и выберите **Параметры**.
-   
-   ![Откройте диалоговое окно параметров IntelliJ IDEA][01a]
+1. В меню навигации слева от диалогового окна "Параметры" щелкните **Подключаемые модули**.
 
-1. В диалоговом окне "Параметры" нажмите кнопку **Подключаемые модули**, а затем **Browse repositories** (Обзор репозиториев).
-   
-   ![Диалоговое окно параметров IntelliJ IDEA][02a]
+1. В строке поиска **Marketplace** введите "Azure", чтобы отфильтровать список подключаемых модулей. Выберите **Azure Toolkit for IntelliJ** (Набор средств Azure для IntelliJ) и нажмите кнопку **Установить**. Прочитайте *примечание о конфиденциальности для сторонних подключаемых модулей* IntelliJ и щелкните **Принять**.
 
-1. В диалоговом окне **Обзор репозиториев** введите "Azure" в поле поиска. Выделите **Azure Toolkit for IntelliJ** (Набор средств Azure для IntelliJ) и нажмите кнопку **Установить**.
-   
-   ![Поиск набора средств Azure для IntelliJ][03]
-   
-   Ход установки IntelliJ IDEA отобразится в диалоговом окне.
-   
-   ![Ход установки][04]
+   :::image type="content" source="media/installation/03-intellij-search-plugin.png" alt-text="Поиск подключаемого модуля для Azure Toolkit for IntelliJ."::: 
 
-1. После завершения установки нажмите кнопку **Перезапуск IntelliJ IDEA**.
-   
-   ![Перезапуск IntelliJ IDEA][05]
+1. После завершения установки щелкните **Перезапустить IDE**.
 
-1. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно параметров.
+1. При появлении запроса на перезапуск IntelliJ IDEA нажмите кнопку **Перезагрузить**.
    
-   ![Закройте диалоговое окно параметров IntelliJ IDEA][06]
+   :::image type="content" source="media/installation/07-restart-intellij.png" alt-text="Перезапуск IntelliJ IDEA."::: 
 
-1. При появлении запроса на перезапуск или приостановку IntelliJ IDEA нажмите кнопку **Перезагрузить**.
-   
-1   ![Перезапуск IntelliJ IDEA][07]
+## <a name="from-the-start-screen"></a>На начальном экране
 
-## <a name="to-install-the-azure-toolkit-for-intellij-from-the-start-screen"></a>Установка набора средств Azure для IntelliJ с начального экрана
+1. На начальном экране IntelliJ IDEA щелкните **Настройка** и выберите **Подключаемые модули**.
 
-1. Запустите IntelliJ IDEA.
+   :::image type="content" source="media/installation/01-intellij-configure-dropdown.png" alt-text="Подключаемые модули на начальном экране."::: 
 
-1. Когда откроется начальный экран IntelliJ IDEA, нажмите кнопку **Настройка** и выберите **Подключаемые модули**.
-   
-   ![Подключаемые модули IntelliJ IDEA][01b]
+1. В строке поиска **Marketplace** введите "Azure", чтобы отфильтровать список подключаемых модулей. Выберите **Azure Toolkit for IntelliJ** (Набор средств Azure для IntelliJ) и нажмите кнопку **Установить**. Прочитайте *примечание о конфиденциальности для сторонних подключаемых модулей* IntelliJ и щелкните **Принять**.
 
-1. В диалоговом окне **Подключаемые модули** нажмите кнопку **Browse repositories** (Обзор репозиториев).
-   
-   ![Обзор репозиториев подключаемых модулей IntelliJ IDEA][02b]
+   :::image type="content" source="media/installation/01-intellij-start-screen-marketplace.png" alt-text="Marketplace с подключаемыми модулями на начальном экране.":::
 
-1. В диалоговом окне **Обзор репозиториев** введите "Azure" в поле поиска. Выделите **Azure Toolkit for IntelliJ** (Набор средств Azure для IntelliJ) и нажмите кнопку **Установить**.
-   
-   ![Поиск набора средств Azure для IntelliJ][03]
-   
-   Ход установки IntelliJ IDEA отобразится в диалоговом окне.
-   
-   ![Ход установки][04]
+1. После завершения установки щелкните **Перезапустить IDE**.
 
-1. После завершения установки нажмите кнопку **Перезапуск IntelliJ IDEA**.
+1. При появлении запроса на перезапуск IntelliJ IDEA нажмите кнопку **Перезагрузить**.
    
-   ![Перезапуск IntelliJ IDEA][05]
-
-1. При появлении запроса на перезапуск или приостановку IntelliJ IDEA нажмите кнопку **Перезагрузить**.
-   
-   ![Перезапуск IntelliJ IDEA][07]
+   :::image type="content" source="media/installation/01-intellij-start-screen-marketplace-restart.png" alt-text="Перезапуск для установки с начального экрана.":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 [!INCLUDE [additional-resources](includes/additional-resources.md)]
 
-<!-- URL List -->
-
-<!-- IMG List -->
-
-[01a]: media/installation/01-intellij-file-settings.png
-[01b]: media/installation/01-intellij-configure-dropdown.png
-[02a]: media/installation/02-intellij-settings-dialog.png
-[02b]: media/installation/02-intellij-plugins-dialog.png
-[03]: media/installation/03-intellij-browse-repositories.png
-[04]: media/installation/04-install-progress.png
-[05]: media/installation/05-restart-intellij.png
-[06]: media/installation/06-intellij-settings-dialog.png
-[07]: media/installation/07-restart-intellij.png

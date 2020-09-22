@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, networking, route, route table
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 28302e5e8fc6a46193d96c791080797559a566e9
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 6eca7aa93716e41d62ca5dae0211fa1467eec2ef
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240026"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682001"
 ---
 # <a name="tutorial-configure-azure-route-tables-using-ansible"></a>Руководство по Настройка таблицы маршрутов Azure с помощью Ansible
 
@@ -47,7 +47,7 @@ Azure автоматически направляет трафик между п
         resource_group: "{{ resource_group }}"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_table_create.yml
@@ -104,7 +104,7 @@ ansible-playbook route_table_create.yml
         route_table: "{ route_table_name }"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_table_associate.yml
@@ -133,7 +133,7 @@ ansible-playbook route_table_associate.yml
         address_prefix_cidr: "10.1.0.0/24"
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_table_dissociate.yml
@@ -166,7 +166,7 @@ ansible-playbook route_table_dissociate.yml
 * `virtual_network_gateway` определяется как `next_hop_type`. Дополнительные сведения о том, как Azure выбирает маршруты, см. в разделе [Как Azure выбирает маршрут](/azure/virtual-network/virtual-networks-udr-overview).
 * `address_prefix` определяется как `10.1.0.0/16`. Префикс не может быть продублирован в таблице маршрутов.
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_create.yml
@@ -193,7 +193,7 @@ ansible-playbook route_create.yml
         state: absent
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_delete.yml
@@ -221,7 +221,7 @@ ansible-playbook route_delete.yml
          var: query.route_tables[0]
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_table_facts.yml
@@ -250,7 +250,7 @@ ansible-playbook route_table_facts.yml
         state: absent
 ```
 
-Запустите сборник схем с помощью команды `ansible-playbook`.
+Запустите сборник схем с помощью команды [ansible-playbook](https://docs.ansible.com/ansible/latest/cli/ansible-playbook.html).
 
 ```bash
 ansible-playbook route_table_delete.yml

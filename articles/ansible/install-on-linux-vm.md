@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, сборник схем, azu
 ms.topic: quickstart
 ms.date: 08/13/2020
 ms.custom: devx-track-ansible,devx-track-cli
-ms.openlocfilehash: aa1758e6b9670640c218976f6369d9935aa6381b
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 50fbcb4d086679265d728f14061a5c4c649fa48d
+ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240166"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90682026"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cli"></a>Краткое руководство. Настройка Ansible с помощью Azure CLI
 
@@ -118,7 +118,7 @@ ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
 
 Чтобы настроить учетные данные Ansible, вам потребуется следующая информация:
 
-* идентификатор подписки Azure; 
+* идентификатор подписки Azure;
 * значения субъекта-службы.
 
 Если вы используете Ansible Tower или Jenkins, объявите значения субъекта-службы как переменные среды.
@@ -168,7 +168,11 @@ ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
     export AZURE_TENANT=<security-principal-tenant>
     ```
 
+## <a name="test-ansible-installation"></a>Проверка установки Ansible
+
 Теперь у вас есть виртуальная машина с установленным и настроенным Ansible.
+
+[!INCLUDE [ansible-test-configuration.md](includes/ansible-test-configuration.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
