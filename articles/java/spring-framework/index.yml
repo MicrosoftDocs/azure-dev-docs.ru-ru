@@ -6,12 +6,12 @@ metadata:
   description: Spring — это платформа приложений с открытым кодом, разработанная компанией VMware. Она предлагает упрощенный модульный подход к созданию приложений Java.
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: bf6e9302c0c566881be4161a632409f083f29322
-  ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+  ms.openlocfilehash: 8260997ed17f456b2307a4e2d4092104847ceb6e
+  ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/20/2020
-  ms.locfileid: "88662955"
+  ms.lasthandoff: 09/21/2020
+  ms.locfileid: "90831560"
 landingContent:
 - title: Руководство по началу работы
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: Использование API SQL для Azure Cosmos DB
       url: configure-spring-boot-starter-java-app-with-cosmos-db.md
     - text: Развертывание приложения Spring Boot
-      url: deploy-spring-boot-java-app-with-maven-plugin.md
+      url: /azure/app-service/quickstart-java?pivots=platform-linux%252cplatform-linux
     - text: Развертывание приложения в кластере в AKS
       url: deploy-spring-boot-java-app-on-kubernetes.md
     - text: Развертывание приложения в Веб-приложениях для контейнеров
