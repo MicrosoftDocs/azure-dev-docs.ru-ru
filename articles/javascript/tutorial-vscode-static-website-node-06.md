@@ -3,14 +3,15 @@ title: Очистка ресурсов после развертывания с�
 description: Руководство, часть 6. Очистка ресурсов.
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: cfc777d3e6ee4dbee51f5e580043f6950156101f
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 0c24562ff5c4b689854c29ef33557e0bfa9bee8e
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792694"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "90772585"
 ---
-# <a name="clean-up-resources"></a>Очистка ресурсов
+# <a name="part-6-clean-up-resources"></a>Часть 6. Очистка ресурсов
 
 [Предыдущий шаг. Внесение изменений и повторное развертывание](tutorial-vscode-static-website-node-05.md)
 

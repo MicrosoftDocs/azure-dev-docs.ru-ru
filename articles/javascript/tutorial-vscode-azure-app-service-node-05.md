@@ -3,14 +3,15 @@ title: Очистка ресурсов после развертывания в 
 description: Руководство, часть 5. Очистка ресурсов.
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 1c3b277270bf6f8f7cb5884b7bb56ce2c9b3368c
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: fc420d98121816157e75017ee453aa42929f68e6
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793054"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "90772897"
 ---
-# <a name="clean-up-resources"></a>Очистка ресурсов
+# <a name="part-5-clean-up-resources"></a>Часть 5. Очистка ресурсов
 
 [Предыдущий шаг. Потоковая передача журналов](tutorial-vscode-azure-app-service-node-04.md)
 
