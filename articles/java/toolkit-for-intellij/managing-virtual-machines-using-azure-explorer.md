@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 058842e8f7d50d885d2a5d28c56ee144072e637a
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: 43aa5efc8a783887c4af0e62f2da7d3b51f652fe
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534379"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831939"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>Управление виртуальными машинами с помощью Azure Explorer для IntelliJ
 
@@ -130,8 +130,8 @@ Azure Explorer, входящий в состав набора средств Azu
 <!-- URL List -->
 
 [Инструкции по входу для набора средств Azure для IntelliJ]: ./sign-in-instructions.md
-[Размеры виртуальных машин Windows в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Размеры виртуальных машин Linux в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Размеры виртуальных машин Windows в Azure]: /azure/virtual-machines/sizes
+[Размеры виртуальных машин Linux в Azure]: /azure/virtual-machines/sizes
 [Цены на виртуальные машины Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Цены на виртуальные машины Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

@@ -4,12 +4,12 @@ description: Использование библиотек управления 
 ms.date: 06/02/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: e9a08761fb9af300b5d3f2c4a9704bc7f10e1158
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: 17848311fa713fbe480609d2d49481b5f343eff4
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275127"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110539"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-database"></a>Пример Использование библиотек Azure для подготовки базы данных
 
@@ -224,7 +224,7 @@ python use_db.py
 ## <a name="6-clean-up-resources"></a>6\. Очистка ресурсов
 
 ```azurecli
-az group delete -n PythonAzureExample-DB-rg
+az group delete -n PythonAzureExample-DB-rg  --no-wait
 ```
 
 Если вам не нужны ресурсы, созданные при работе с этим примером, выполните приведенную ниже команду, чтобы не нести расходы по подписке.

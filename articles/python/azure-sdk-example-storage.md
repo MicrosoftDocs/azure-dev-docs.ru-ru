@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: b774d986b886aae528c97c4583511a8d6c0ba0a5
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: ff2064d7113e78cda69d240ca526db569c9d14e0
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275208"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110488"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Пример Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 
@@ -157,7 +157,7 @@ python provision_blob.py
 
 1. Если вы хотите использовать эти подготовленные ресурсы из кода приложения, ознакомьтесь со статьей [Пример. использования службы хранилища Azure](azure-sdk-example-storage-use.md).
 
-Дополнительные примеры того, как можно использовать библиотеку управления службы хранилища Azure, см. в статье [Начало работы с пакетом управления службой хранилища Azure для Python](https://docs.microsoft.com/samples/azure-samples/storage-python-manage/storage-python-manage/).
+Дополнительные примеры того, как можно использовать библиотеку управления службы хранилища Azure, см. в статье [Начало работы с пакетом управления службой хранилища Azure для Python](/samples/azure-samples/storage-python-manage/storage-python-manage/).
 
 ### <a name="for-reference-equivalent-azure-cli-commands"></a>Для справки: аналогичные команды Azure CLI
 
@@ -220,7 +220,7 @@ az storage container create --account-name pythonazurestorage12345 -n blob-conta
 В противном случае выполните следующую команду, чтобы избежать дополнительных расходов в своей подписке.
 
 ```azurecli
-az group delete -n PythonAzureExample-Storage-rg
+az group delete -n PythonAzureExample-Storage-rg  --no-wait
 ```
 
 Для удаления группы ресурсов с помощью кода также можно использовать метод [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-).

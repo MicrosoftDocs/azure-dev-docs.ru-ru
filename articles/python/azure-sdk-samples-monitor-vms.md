@@ -4,18 +4,18 @@ description: Проверка и настройка отчетов о метри
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.custom: devx-track-python
-ms.openlocfilehash: 53823a1709e1f1411609957569b79d10d7bdefd1
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 81cb21f3dca640f8c9db2a5556b88c82ea0ffc47
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982586"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832040"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
 Этот пример кода получает метрики ресурсов Azure (виртуальных машин и т. д.).
 
-Полный список доступных ключевых слов для фильтров см. [здесь](https://msdn.microsoft.com/library/azure/mt743622.aspx).
+Полный список доступных ключевых слов для фильтров см. [здесь](/rest/api/monitor/metrics).
 
 ```python
 import datetime

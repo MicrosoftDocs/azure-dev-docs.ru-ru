@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 0dd1b0202442a4af5322513f038ddcc9908a7dd1
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: df71e27850a467e03ab58edf6beaf085b195803b
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534727"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831980"
 ---
 # <a name="deploy-java-app-to-azure-web-apps-for-containers-using-azure-toolkit-for-intellij"></a>Развертывание приложения Java в Веб-приложении Azure для контейнеров с помощью Azure Toolkit for IntelliJ
 
@@ -162,7 +162,7 @@ ms.locfileid: "90534727"
 
 [Портал Azure]: https://portal.azure.com/
 [Создание частного реестра контейнеров Docker с помощью портала Azure]: /azure/container-registry/container-registry-get-started-portal
-[Azure for Java Developers]: /azure/developer/java
+[Azure for Java Developers]: ../index.yml
 [Java Tools for Visual Studio Team Services]: https://java.visualstudio.com/
 [Create Docker Registry using Azure CLI]: /azure/container-registry/container-registry-get-started-azure-cli
 

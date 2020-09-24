@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, devx-track-java
-ms.openlocfilehash: c8ee810df90ed9b0de12e92c336898fb700e1c67
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: 960b9c0d8606e14487dab6d505bc701968dc4b0a
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90681636"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831650"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Развертывание контейнерного приложения Spring Boot в Azure с помощью Maven для веб-приложений Azure
 
@@ -308,7 +308,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -331,7 +331,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 <!-- URL List -->
 
 [Интерфейс командной строки Azure (CLI)]: /cli/azure/overview
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [Портал Azure]: https://portal.azure.com/
 [Docker]: https://www.docker.com/
 [Подключаемый модуль Docker для Maven]: https://github.com/spotify/docker-maven-plugin
@@ -345,7 +345,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 [Spring Framework]: https://spring.io/
 [Подключаемый модуль Maven для веб-приложений Azure]: https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin
 
-[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+[Java Development Kit (JDK)]: ../fundamentals/java-jdk-long-term-support.md
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->

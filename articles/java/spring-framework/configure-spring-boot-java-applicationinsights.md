@@ -10,12 +10,12 @@ ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 687ecf87894a22e9300bf8ff4681e790db5a0d48
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 97825b81869ac6d2845576bd77a972d4573a624d
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379378"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831760"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 
@@ -268,7 +268,7 @@ ms.locfileid: "86379378"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -292,7 +292,7 @@ Application Insights поддерживает автоматический сб�
 
 <!-- URL List -->
 
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

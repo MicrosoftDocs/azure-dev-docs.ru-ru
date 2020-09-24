@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 28b0e304ee64cb24f098908e83a92d230657741f
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: e457d4fe152f9fa5fa64bafaa4f49311e8ff4475
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534624"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831890"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Управление виртуальными машинами с помощью Azure Explorer для Eclipse
 
@@ -24,7 +24,7 @@ ms.locfileid: "90534624"
 
 ## <a name="create-a-virtual-machine"></a>Создание виртуальной машины
 
-1. Войдите в свою учетную запись Azure, следуя [инструкциям по входу для набора средств Azure для Eclipse](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions).
+1. Войдите в свою учетную запись Azure, следуя [инструкциям по входу для набора средств Azure для Eclipse](./sign-in-instructions.md).
 
 1. В представлении **Azure Explorer** разверните узел **Azure**, щелкните правой кнопкой мыши **Виртуальные машины** и выберите **Создать виртуальную машину**.
 
@@ -122,8 +122,8 @@ ms.locfileid: "90534624"
 
 <!-- URL List -->
 
-[Размеры виртуальных машин Windows в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Размеры виртуальных машин Linux в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Размеры виртуальных машин Windows в Azure]: /azure/virtual-machines/sizes
+[Размеры виртуальных машин Linux в Azure]: /azure/virtual-machines/sizes
 [Цены на виртуальные машины Windows]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/
 [Цены на виртуальные машины Linux]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/
 

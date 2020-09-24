@@ -3,12 +3,13 @@ title: Развертывание контейнеров Docker в Службе 
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 816228d73ac6b21c2c3e144c3f7783de0377e73e
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: df92b27e88b750956b7e46cc944cf627e077f1dd
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792141"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "91110499"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
 

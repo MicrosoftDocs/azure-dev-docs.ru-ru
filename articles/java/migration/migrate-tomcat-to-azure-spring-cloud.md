@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 6/16/2020
-ms.openlocfilehash: 7b8a29c2769b3c4b04a40053d0470bfc6b1a0cca
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: a718c7b8b481b99f5a4b1303acac7147c88d1550
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275188"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831670"
 ---
 # <a name="migrate-a-tomcat-application-to-azure-spring-cloud"></a>Миграция приложения Tomcat в Azure Spring Cloud
 
@@ -131,7 +131,7 @@ Azure Spring Cloud поддерживает только HTTP-подключен
 
 1. Повторно создайте все остальные зависимости JNDI с помощью [объектов Spring Bean](https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-spring-beans-and-dependency-injection). Используйте идиоматические механизмы Spring, такие как [Spring JMS](https://spring.io/guides/gs/messaging-jms/) для обмена сообщениями.
 
-1. Измените область Tomcat на [Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-filters-review). Рассмотрите возможность использования Azure Active Directory для управления авторизацией с помощью [starter Spring Boot для Active Directory](/azure/developer/java/spring-framework/spring-boot-starters-for-azure#azure-active-directory).
+1. Измените область Tomcat на [Spring Security](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#servlet-filters-review). Рассмотрите возможность использования Azure Active Directory для управления авторизацией с помощью [starter Spring Boot для Active Directory](../spring-framework/spring-boot-starters-for-azure.md#azure-active-directory).
 
 1. Повторно создайте фильтры сервлета, настроенные в *web.xml* с помощью [объектов Spring Bean](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto-add-a-servlet-filter-or-listener-as-spring-bean) или [проверки путей к классам](https://docs.spring.io/spring-boot/docs/current/reference/html/howto.html#howto-add-a-servlet-filter-or-listener-using-scanning).
 

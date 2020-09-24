@@ -6,12 +6,12 @@ ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
 ms.topic: article
 ms.date: 03/30/2017
 ms.custom: devx-track-java
-ms.openlocfilehash: ae1bc0aaeaf3a53daa899580f45e932fd653c58a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: edc981189a6697ea487e44e9619b30391bc5d197
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379478"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831780"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Настройка источников развертывания в службе приложений Azure из приложений Java
 
@@ -19,7 +19,7 @@ ms.locfileid: "86379478"
 
 ## <a name="run-the-sample"></a>Запуск примера
 
-Создайте [файл проверки подлинности](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
+Создайте [файл проверки подлинности](/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
 
 ```
 git clone https://github.com/Azure-Samples/app-service-java-configure-deployment-sources-for-web-apps.git

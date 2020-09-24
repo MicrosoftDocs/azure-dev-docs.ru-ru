@@ -12,12 +12,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: b682c3b17e13f8a4491119f995fe2d21cdeda974
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 3835d51bbbc7f3226a1b77ba415d5e965ac8a609
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379338"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831920"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
 
@@ -359,4 +359,4 @@ ms.locfileid: "86379338"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)

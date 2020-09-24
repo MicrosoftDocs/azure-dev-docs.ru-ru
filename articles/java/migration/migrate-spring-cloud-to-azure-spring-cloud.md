@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 2/12/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: e07bc23a7316352017e1ea99dd87253f0639a559
-ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+ms.openlocfilehash: e4be32594940d2c207610e7d709ccb328c38ecf6
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88662985"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831700"
 ---
 # <a name="migrate-spring-cloud-applications-to-azure-spring-cloud"></a>Перенос приложений Spring Cloud в Azure Spring Cloud
 
@@ -158,7 +158,7 @@ eureka:
 
 ### <a name="migrate-spring-cloud-vault-secrets-to-azure-keyvault"></a>Миграция секретов из хранилища Spring Cloud в Azure Key Vault
 
-Вы можете внедрять секреты прямо в приложения через Spring, используя начальный набор Spring Boot для Azure Key Vault. Дополнительные сведения см. в статье [Как использовать начальное приложение Spring Boot Starter с Azure Key Vault](/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault).
+Вы можете внедрять секреты прямо в приложения через Spring, используя начальный набор Spring Boot для Azure Key Vault. Дополнительные сведения см. в статье [Как использовать начальное приложение Spring Boot Starter с Azure Key Vault](../spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault.md).
 
 > [!NOTE]
 > Возможно, для миграции придется переименовать некоторые секреты. Вместе с этим обновите код приложения.

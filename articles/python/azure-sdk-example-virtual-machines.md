@@ -4,12 +4,12 @@ description: Узнайте, как подготовить виртуальну�
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 08e055e282016db1c3cbf57b956a51f17b7a854a
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: f51bb154106a50c708d8d37a024144d7d53aec0e
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275198"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110470"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Пример использования библиотек Azure для подготовки виртуальной машины
 
@@ -293,7 +293,7 @@ az vm create -g PythonAzureExample-VM-rg -n ExampleVM -l "centralus" \
 ## <a name="6-clean-up-resources"></a>6\. Очистка ресурсов
 
 ```azurecli
-az group delete -n PythonAzureExample-VM-rg
+az group delete -n PythonAzureExample-VM-rg  --no-wait
 ```
 
 Если вам ненужны ресурсы, созданные при работе с этим примером, выполните следующую команду, чтобы не нести расходы по подписке.

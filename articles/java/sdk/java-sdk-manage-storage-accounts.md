@@ -7,12 +7,12 @@ ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
 ms.custom: devx-track-java
-ms.openlocfilehash: 92c6c6fe43fe6bd7c1932eeb64a88db87437713d
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 7a16f5c9f9c6e27a56bace08aa43aef3c4a9bdb6
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379388"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831880"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Управление учетными записями хранения Azure из приложений Java
 
@@ -20,7 +20,7 @@ ms.locfileid: "86379388"
 
 ## <a name="run-the-sample"></a>Запуск примера
 
-Создайте [файл проверки подлинности](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
+Создайте [файл проверки подлинности](/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
 
 ```
 git clone https://github.com/Azure-Samples/storage-java-manage-storage-accounts.git

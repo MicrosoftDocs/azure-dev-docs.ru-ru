@@ -4,18 +4,18 @@ description: Создание, изменение размера и обновл
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.custom: devx-track-python
-ms.openlocfilehash: 0e319d56f1391d193979c79750025a99b565134a
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: b1973276f6cf080006f61ddc3a2805c345591e89
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983246"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831530"
 ---
 # <a name="managed-disks"></a>Управляемые диски
 
 Управляемые диски Azure обеспечивают простоту управления дисками, улучшенную масштабируемость и повышенную безопасность. Теперь вы можете забыть об учетных записях хранения для дисков и выполнять масштабирование, не беспокоясь об ограничениях, связанных с этими учетными записями. В этой публикации содержатся краткие вводные сведения и справочные материалы по использованию этой службы с помощью Python.
 
-С точки зрения разработчика использование службы "Управляемые диски" с Azure CLI ничем не отличается от использования CLI в других кроссплатформенных средствах. Для администрирования управляемых дисков вы можете использовать пакеты Azure SDK для [Python](https://azure.microsoft.com/develop/python/) и [azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute). Вы также можете создать вычислительный клиент, следуя инструкциям из [этого руководства](https://docs.microsoft.com/python/api/overview/azure/virtualmachines?view=azure-python).
+С точки зрения разработчика использование службы "Управляемые диски" с Azure CLI ничем не отличается от использования CLI в других кроссплатформенных средствах. Для администрирования управляемых дисков вы можете использовать пакеты Azure SDK для [Python](https://azure.microsoft.com/develop/python/) и [azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute). Вы также можете создать вычислительный клиент, следуя инструкциям из [этого руководства](/python/api/overview/azure/virtualmachines?view=azure-python).
 
 ## <a name="standalone-managed-disks"></a>Автономные управляемые диски
 

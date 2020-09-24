@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: efe17eba034b92d771d979a896585d4d5362a11d
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: d3504137c2c9a8ee2b1af960a17deb902be95d7a
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534402"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831990"
 ---
 # <a name="tutorial-reading-a-secret-from-azure-key-vault-in-a-spring-boot-application"></a>Руководство по Считывание секрета из Azure Key Vault в приложении Spring Boot
 
@@ -34,7 +34,7 @@ ms.locfileid: "90534402"
 
 * Активная подписка Azure.
   * Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись](https://azure.microsoft.com/free/).
-* [Установите Azure CLI версии 2.0.67 или более поздней](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) и расширение Azure Spring Cloud с помощью команды `az extension add --name spring-cloud`.
+* [Установите Azure CLI версии 2.0.67 или более поздней](/cli/azure/install-azure-cli?preserve-view=true&view=azure-cli-latest) и расширение Azure Spring Cloud с помощью команды `az extension add --name spring-cloud`.
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
 * Команда `curl`.  В большинстве операционных систем из семейства UNIX эта команда уже предварительно установлена.  Клиенты для конкретных ОС можно скачать на [официальном веб-сайте curl](https://curl.haxx.se/).

@@ -1,15 +1,15 @@
 ---
 title: Схемы использования библиотек Azure для Python
 description: Общие сведения об использовании библиотек Azure SDK для Python
-ms.date: 06/09/2020
+ms.date: 09/21/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: cf44dc4458014972b6c6e16a28acab164d8f0f89
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 63cd6c85e15fa0ffb44a4da01ffcc27d4ae08f17
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983325"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831800"
 ---
 # <a name="azure-libraries-for-python-usage-patterns"></a>Библиотеки Azure для схем использования Python
 
@@ -138,7 +138,7 @@ rg_result = resource_client.resource_groups.create_or_update(
 
 Объекты также могут иметь вложенные аргументы объектов. В этом случае можно также использовать встроенную структуру данных JSON.
 
-Предположим, что у вас есть экземпляр объекта [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) и вы вызываете его метод [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). В этом случае третий аргумент имеет тип [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), который содержит аргумент типа [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). В свою очередь `VaultProperties` содержит аргументы объекта типа [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) и [`list[AccessPolicyEntry`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). `Sku` содержит объект [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python), а каждый `AccessPolicyEntry` содержит объект [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
+Предположим, что у вас есть экземпляр объекта [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) и вы вызываете его метод [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). В этом случае третий аргумент имеет тип [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), который содержит аргумент типа [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). В свою очередь `VaultProperties` содержит аргументы объекта типа [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) и [`list[AccessPolicyEntry]`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). `Sku` содержит объект [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python), а каждый `AccessPolicyEntry` содержит объект [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
 
 Для вызова `create_or_update` с внедренными объектами используется код, подобный приведенному ниже (при условии, что `tenant_id` и `object_id` уже определены). Кроме того, необходимые объекты можно создать перед вызовом функции.
 

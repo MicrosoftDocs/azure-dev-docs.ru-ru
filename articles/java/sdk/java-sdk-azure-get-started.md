@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019, devx-track-java
-ms.openlocfilehash: d8f173fca56af289fb83012a101bc5cb99e4ed12
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 9ae476b38768789eb8ecef915d3c68d93302bdc6
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379518"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831790"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
@@ -144,7 +144,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Установка Azure Toolkit for IntelliJ
 
-[Набор средств Azure](/azure/developer/java/toolkit-for-intellij/installation) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for IntelliJ](/azure/developer/java/toolkit-for-intellij/create-hello-world-web-app).
+[Набор средств Azure](../toolkit-for-intellij/installation.md) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
 
 - В меню **Файл** выберите **Параметры**.
 
@@ -154,7 +154,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Установка набора средств Azure для Eclipse
 
-[Набор средств Azure](/azure/developer/java/toolkit-for-eclipse) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for Eclipse](/azure/developer/java/toolkit-for-eclipse/create-hello-world-web-app).
+[Набор средств Azure](../toolkit-for-eclipse/index.yml) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for Eclipse](../toolkit-for-eclipse/create-hello-world-web-app.md).
 
 - В меню **Help** (Справка) выберите пункт **Install New Software** (Установка нового программного обеспечения).
 

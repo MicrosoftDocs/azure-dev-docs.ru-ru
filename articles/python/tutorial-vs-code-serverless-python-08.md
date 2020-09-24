@@ -2,14 +2,14 @@
 title: Шаг 8. Очистка ресурсов, используемых с кодом Python, в Функциях Azure
 description: 'Шаг руководства 8: очистка ресурсов Azure, позволяющая избежать постоянных расходов.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: fe4f9b0ef5789b307cbeb3c680dfde2eb46a0046
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 885ff8b79ac219d4adaf4760e31fe439d010f9d5
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473519"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832010"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Очистка ресурсов Azure для Функций Azure
 
@@ -31,7 +31,7 @@ ms.locfileid: "89473519"
 
 Изучите [обзор Функций Azure](/azure/azure-functions/functions-overview), чтобы ознакомиться с доступными для использования триггерами.
 
-См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/azure/python/?view=azure-python).
+См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](./index.yml).
 
 Для Visual Studio Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
@@ -45,6 +45,4 @@ ms.locfileid: "89473519"
 - [Средства Azure Resource Manager](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Все готово](https://docs.microsoft.com/python/azure/?view=azure-python)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.
+> [Все готово](/python/azure/?preserve-view=true&view=azure-python)

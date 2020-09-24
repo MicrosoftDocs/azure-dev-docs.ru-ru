@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 5152b1bfedd02c821d2a9138fa3e20325b5ea086
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: a209f532069741e9c6302bca97dc8c72cde0e396
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534322"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831950"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
 
@@ -86,8 +86,8 @@ Azure Explorer, входящий в состав набора средств Azu
 [Целевые показатели масштабируемости и производительности службы хранилища Azure]: /azure/storage/storage-scalability-targets
 [Naming and referencing containers, blobs, and metadata]: https://go.microsoft.com/fwlink/?LinkId=255555
 
-[Размеры учетных записей хранения Windows в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
-[Размеры учетных записей хранения Linux в Azure]: https://docs.microsoft.com/azure/virtual-machines/sizes
+[Размеры учетных записей хранения Windows в Azure]: /azure/virtual-machines/sizes
+[Размеры учетных записей хранения Linux в Azure]: /azure/virtual-machines/sizes
 [Windows storage-account pricing]: https://azure.microsoft.com/pricing/details/virtual-machines/windows/ (Цены на учетные записи хранения Windows)
 [Linux storage-account pricing]: https://azure.microsoft.com/pricing/details/virtual-machines/linux/ (Цены на учетные записи хранения Linux)
 

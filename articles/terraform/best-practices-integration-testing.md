@@ -4,12 +4,12 @@ description: Сведения об интеграционном тестиров
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: ced6dc9a3ff40ceee3ac37daea3ab6300a529e0e
-ms.sourcegitcommit: 62f78d529c02c7d7895d32ec8ed415bf0946d056
+ms.openlocfilehash: d6c8f9c419070d734c3c848163c52e6255d5512a
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557557"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832000"
 ---
 # <a name="tutorial-configure-integration-tests-for-terraform-projects-in-azure"></a>Руководство по Настройка интеграционного тестирования для проектов Terraform в Azure
 
@@ -30,9 +30,9 @@ ms.locfileid: "89557557"
 ## <a name="prerequisites"></a>Предварительные условия
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Организация и проект Azure DevOps.** Если у вас нет организации Azure DevOps, [создайте ее](https://docs.microsoft.com/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=preview-page).
+- **Организация и проект Azure DevOps.** Если у вас нет организации Azure DevOps, [создайте ее](/azure/devops/organizations/projects/create-project?tabs=preview-page&view=azure-devops).
 - **Расширение сборки и выпуска Terraform.** [Установите расширение сборки и выпуска Terraform](https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-tasks-terraform) в организации Azure DevOps.
-- **Доступ Azure DevOps к подписке Azure.** Создайте [подключение службы Azure](https://docs.microsoft.com/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) с именем `terraform-basic-testing-azure-connection`, чтобы разрешить Azure Pipelines подключаться к подпискам Azure.
+- **Доступ Azure DevOps к подписке Azure.** Создайте [подключение службы Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) с именем `terraform-basic-testing-azure-connection`, чтобы разрешить Azure Pipelines подключаться к подпискам Azure.
 - **Наличие Terraform.** [Скачайте и установите версию Terraform](https://www.terraform.io/downloads.html), которая соответствует вашей среде.
 - **Вилка примеров тестирования.** Создайте вилку [примера проекта Terraform на GitHub](https://github.com/Azure/terraform) и клонируйте его на локальный компьютер разработки и тестирования.
 

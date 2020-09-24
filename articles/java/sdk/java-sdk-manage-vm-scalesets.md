@@ -7,12 +7,12 @@ ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
 ms.custom: devx-track-java
-ms.openlocfilehash: 4b4d5c7b1090a5368529b83e21ec2a176b95dc94
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 9c1bfeff4b0a9be29fb71b13407f0207c172b465
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379368"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831860"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Управление масштабируемыми наборами виртуальных машин Azure из приложений Java
 
@@ -20,7 +20,7 @@ ms.locfileid: "86379368"
 
 ## <a name="run-the-sample"></a>Запуск примера
 
-Создайте [файл проверки подлинности](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
+Создайте [файл проверки подлинности](/azure/java/java-sdk-azure-authenticate#mgmt-file), задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу на компьютере. Далее выполните:
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets.git

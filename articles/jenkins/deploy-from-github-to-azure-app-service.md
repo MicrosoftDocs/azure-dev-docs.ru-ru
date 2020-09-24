@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, app service
 ms.topic: tutorial
 ms.date: 08/10/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: dea9ebe0976b45332f166034f3ff5c92ca4cfe99
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: ef404f1d2e3d1ed042a99eccd2469fdd112e931b
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725208"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90832020"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-app-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе приложений Azure с помощью Jenkins
 
@@ -273,11 +273,11 @@ az ad sp create-for-rbac
 
    Дополнительные сведения об этих командах Azure CLI см. в соответствующих статьях:
 
-   * [**`az group create`**](https://docs.microsoft.com/cli/azure/group?view=azure-cli-latest#az-group-create)
+   * [**`az group create`**](/cli/azure/group?view=azure-cli-latest#az-group-create)
 
-   * [**`az appservice plan create`**](https://docs.microsoft.com/cli/azure/appservice/plan?view=azure-cli-latest#az-appservice-plan-create)
+   * [**`az appservice plan create`**](/cli/azure/appservice/plan?view=azure-cli-latest#az-appservice-plan-create)
 
-   * [**`az webapp create`**](https://docs.microsoft.com/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
+   * [**`az webapp create`**](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
 
 1. В Jenkins выберите задание конвейера и щелкните **Build Now** (Начать сборку).
 
