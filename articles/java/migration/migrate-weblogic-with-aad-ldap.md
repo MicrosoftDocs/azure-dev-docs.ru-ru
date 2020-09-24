@@ -5,12 +5,12 @@ author: edburns
 ms.author: edburns
 ms.topic: tutorial
 ms.date: 08/10/2020
-ms.openlocfilehash: b1437362601e990b560dc0385420605ef01a426a
-ms.sourcegitcommit: 4049dc6109600a8308ba5617cc122a5b32cc4ca1
+ms.openlocfilehash: 2ee3e7c03d0fd7f7048037fb27f2cfacfe39671d
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89056287"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831390"
 ---
 # <a name="end-user-authorization-and-authentication-for-migrating-java-apps-on-weblogic-server-to-azure"></a>Авторизация и аутентификация пользователей для переноса приложений Java в WebLogic Server в Azure
 
@@ -209,4 +209,4 @@ az resource update --ids $AADDS_ID --set properties.domainSecuritySettings.tlsV1
 Изучите другие аспекты миграции приложений WebLogic Server в Azure.
 
 > [!div class="nextstepaction"]
-> [Миграция приложений WebLogic в Виртуальные машины Azure](/azure/developer/java/migration/migrate-weblogic-to-virtual-machines)
+> [Миграция приложений WebLogic в Виртуальные машины Azure](./migrate-weblogic-to-virtual-machines.md)

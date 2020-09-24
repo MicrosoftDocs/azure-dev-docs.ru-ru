@@ -4,12 +4,12 @@ description: Шаг руководства 5. Очистка ресурсов A
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: cc5540570bc914d39a17bd102dc0f86f6674025a
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 9140f5b695fe4b20e1e9417fe1d5e6ad115bb4eb
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473529"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831420"
 ---
 # <a name="5-clean-up-azure-resources"></a>5: Очистка ресурсов Azure
 
@@ -23,7 +23,7 @@ ms.locfileid: "89473529"
 
 См. сведения о расширениях Docker и Службы приложений в соответствующих репозиториях на сайте GitHub: [vscode-docker](https://github.com/Microsoft/vscode-docker) и [vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice). Мы будем рады любым предложениям и сообщениям о проблемах.
 
-См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](https://docs.microsoft.com/python/azure/?view=azure-python).
+См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/python/azure/?preserve-view=true&view=azure-python).
 
 Для VS Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
@@ -37,6 +37,4 @@ ms.locfileid: "89473529"
 - [Средства Azure Resource Manager](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Все готово](https://docs.microsoft.com/python/azure/?view=azure-python)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.
+> [Все готово](/python/azure/?preserve-view=true&view=azure-python)

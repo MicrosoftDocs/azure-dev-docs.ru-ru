@@ -4,12 +4,12 @@ description: Руководство по использованию функци
 ms.topic: article
 ms.date: 08/19/2019
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
-ms.openlocfilehash: 8b0fa5aac45d95780da4327d72cea6b6533c971e
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: 5f69fa073647527516452e7a5cdf77d6b5a8caa8
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218613"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772957"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Использование Функций Azure для написания бессерверного кода Node.js в Azure
 
@@ -31,7 +31,7 @@ ms.locfileid: "88218613"
 
 Здесь вы можете ознакомиться с другими ресурсами, которые помогут вам более подробно изучить бессерверный код:
 
-- Модуль Microsoft Learn: [Обеспечение автоматических обновлений в веб-приложении с помощью Функций Azure и службы SignalR](https://docs.microsoft.com/learn/modules/automatic-update-of-a-webapp-using-azure-functions-and-signalr/)
+- Модуль Microsoft Learn: [Обеспечение автоматических обновлений в веб-приложении с помощью Функций Azure и службы SignalR](/learn/modules/automatic-update-of-a-webapp-using-azure-functions-and-signalr/)
 
 - Сведения об использовании различных триггеров для выполнения бессерверного кода:
 

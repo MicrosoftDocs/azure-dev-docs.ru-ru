@@ -7,12 +7,12 @@ ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 028d3c9d0270a69ac9894b3176eda305b02a6abc
-ms.sourcegitcommit: e451e4360d9c5956cc6a50880b3a7a55aa4efd2f
+ms.openlocfilehash: f1e47353fdf2e09ceaa1b8ac339f4fc23368574d
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87478424"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830230"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
 
@@ -30,12 +30,12 @@ ms.locfileid: "87478424"
 
 - Чтобы развернуть веб-приложение Java в облаке, требуется подписка Azure. Если у вас нет подписки Azure, вы можете активировать [преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure](https://azure.microsoft.com/pricing/free-trial/).
 - [Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest)
-- [JDK Java 8](/azure/developer/java/fundamentals/java-jdk-install)
+- [JDK Java 8](../fundamentals/java-jdk-install.md)
 - [Maven 3](http://maven.apache.org/)
 
 ## <a name="clone-the-sample-java-web-app-repository"></a>Клонирование примера репозитория для веб-приложения Java
 
-В этом упражнении вы будете использовать приложение Spring Todo, которое представляет собой приложение Java, созданное с помощью [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data для Cosmos DB](/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-cosmos-db) и [Azure Cosmos DB](/azure/cosmos-db/sql-api-introduction).
+В этом упражнении вы будете использовать приложение Spring Todo, которое представляет собой приложение Java, созданное с помощью [Spring Boot](https://spring.io/projects/spring-boot), [Spring Data для Cosmos DB](./configure-spring-boot-starter-java-app-with-cosmos-db.md) и [Azure Cosmos DB](/azure/cosmos-db/sql-api-introduction).
 1. Клонируйте приложение Spring Todo и скопируйте содержимое папки **.prep** для инициализации проекта:
 
     Для Bash:
@@ -303,10 +303,10 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Руководство разработчика для Java для службы приложений в Linux](/azure/app-service/containers/app-service-linux-java).
-- [Azure для разработчиков Java](/azure/developer/java/). Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
+- [Azure для разработчиков Java](../index.yml). Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -323,7 +323,7 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
 <!-- URL List -->
 
 [Azure Cosmos DB Documentation]: /azure/cosmos-db/
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java 
 [Spring Data for Azure Cosmos DB SQL API]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/

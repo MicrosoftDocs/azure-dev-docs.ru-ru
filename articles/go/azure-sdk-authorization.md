@@ -3,12 +3,12 @@ title: Аутентификация с помощью пакета Azure SDK д�
 description: Сведения о методах аутентификации, доступных в пакете Azure SDK для Go, и способах их использования.
 ms.date: 09/05/2018
 ms.topic: conceptual
-ms.openlocfilehash: b4bf09dbb3f59c77c2914ae9c9091dc0af31b093
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 61353f2b7f2c13764f4e736105b15127d1355e29
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80319681"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831320"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Методы аутентификации в пакете Azure SDK для Go
 
@@ -111,7 +111,7 @@ authorizer, err := auth.NewAuthorizerFromEnvironment()
 | Комплект разработки | `https://management.local.azurestack.external/` |
 | Интегрированные системы | `https://management.(region).ext-(machine-name).(FQDN)` |
 
-Дополнительные сведения о том, как использовать пакет Azure SDK для Go в Azure Stack, см. в руководстве по [использованию профилей версий API и Go в Azure Stack](https://docs.microsoft.com/azure/azure-stack/user/azure-stack-version-profiles-go).
+Дополнительные сведения о том, как использовать пакет Azure SDK для Go в Azure Stack, см. в руководстве по [использованию профилей версий API и Go в Azure Stack](/azure/azure-stack/user/azure-stack-version-profiles-go).
 
 ## <a name="use-file-based-authentication"></a>Использование аутентификации на основе файла
 

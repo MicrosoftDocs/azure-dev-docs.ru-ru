@@ -4,18 +4,18 @@ description: Руководство, часть 2. Создание прило�
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 2aca9c53e254eca7c8a070cc50a88426d3886cdd
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: 7ea1b39086a6cd824084e9bbb3839ab41a24eaad
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218390"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772627"
 ---
 # <a name="create-the-local-functions-app"></a>Создание локального приложения в службе "Функции"
 
 [Предыдущий шаг. Общие сведения и предварительные требования](tutorial-vscode-serverless-node-01.md)
 
-На этом этапе вы создадите в Функциях Azure локальное приложение, которое содержит функцию с [триггером HTTP](https://docs.microsoft.com/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Приложение Функций Azure может содержать несколько функций с [разными триггерами](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings). В частности, HTTP-триггер обрабатывает входящий трафик HTTP.
+На этом этапе вы создадите в Функциях Azure локальное приложение, которое содержит функцию с [триггером HTTP](/azure/azure-functions/functions-reference-node#http-triggers-and-bindings). Приложение Функций Azure может содержать несколько функций с [разными триггерами](/azure/azure-functions/functions-triggers-bindings). В частности, HTTP-триггер обрабатывает входящий трафик HTTP.
 
 1. В окне терминала или командной строки запустите Visual Studio Code из соответствующей папки проекта:
 

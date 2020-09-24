@@ -11,12 +11,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: 9770720ccf5cfd396c4f478b98b7e47c786ebf6e
-ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
+ms.openlocfilehash: 569b4b1744e1f0ddad18c9553bc7fc3879c39260
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614313"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831290"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 
@@ -405,7 +405,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -432,7 +432,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 <!-- URL List -->
 
 [Документация по Azure Cosmos DB]: /azure/cosmos-db/
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java
 [Spring Data для API SQL для Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
 [Начальное приложение Spring Boot CosmosDB для Azure]: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-starter-cosmosdb

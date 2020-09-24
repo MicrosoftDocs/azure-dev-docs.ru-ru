@@ -4,12 +4,12 @@ description: Azure предлагает несколько разных баз �
 ms.topic: article
 ms.date: 08/20/2019
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 3e38e3edca5022eb87f090cb8f951d65f36dcb60
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: efee87ce711616de35979a696539e47784c1868c
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218622"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772967"
 ---
 # <a name="how-to-integrate-azure-databases-in-nodejs-apps"></a>Интеграция базы данных Azure в приложения Node.js
 
@@ -17,10 +17,10 @@ ms.locfileid: "88218622"
 
 | Служба | Краткое руководство | Примеры |
 | --- | --- | --- |
-| **База данных Cosmos** | [Создание веб-приложения Node.js с использованием Azure Cosmos DB](/azure/cosmos-db/create-sql-api-nodejs) | [Примеры](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-cosmos-db) |
-| **MongoDB** | [Разработка веб-приложения на основе Node.js и MongoDB в Azure](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [Примеры](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&term=Mongo%20DB) |
+| **База данных Cosmos** | [Создание веб-приложения Node.js с использованием Azure Cosmos DB](/azure/cosmos-db/create-sql-api-nodejs) | [Примеры](/samples/browse/?languages=javascript%252cnodejs&products=azure-cosmos-db) |
+| **MongoDB** | [Разработка веб-приложения на основе Node.js и MongoDB в Azure](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [Примеры](/samples/browse/?languages=javascript%252cnodejs&term=Mongo%2bDB) |
 | **Кэш Redis** | [Использование кэша Redis для Azure с Node.js](/azure/redis-cache/cache-nodejs-get-started) | |
-| **База данных SQL Azure** | [Использование Node.js для создания запросов и базы данных SQL Azure](/azure/sql-database/sql-database-connect-query-nodejs) | [Примеры](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-sql-database) | |
+| **База данных SQL Azure** | [Использование Node.js для создания запросов и базы данных SQL Azure](/azure/sql-database/sql-database-connect-query-nodejs) | [Примеры](/samples/browse/?languages=javascript%252cnodejs&products=azure-sql-database) | |
 | **MySQL** | [Подключение и обращение к данным с помощью Node.js](/azure/mysql/connect-nodejs) | |
 | **PostgreSQL** | [Подключение и обращение к данным с помощью Node.js](/azure/postgresql/connect-nodejs) | |
 

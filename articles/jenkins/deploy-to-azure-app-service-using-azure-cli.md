@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
 ms.date: 08/08/2020
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 9c5f3b30507cda764dd29f0c133d4997dbc2bb53
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 4a6fde1eb8830c897c438fa89e7da6fe93b5a3a8
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240956"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831340"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 
@@ -47,7 +47,7 @@ sudo apt-get install -y maven
 Для выполнения Azure CLI необходимы учетные данные Azure.
 
 * На панели мониторинга Jenkins выберите **Credentials -> System ->**(Учетные данные -> Система). Щелкните **Global credentials (unrestricted)** (Глобальные учетные данные (неограниченные)).
-* Щелкните **Add Credentials** (Добавить учетные данные), чтобы добавить [субъект-службу Microsoft Azure](https://docs.microsoft.com/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager%2ftoc.json) путем ввода следующих значений: идентификатор подписки, идентификатор клиента, секрет клиента и конечная точка маркера OAuth 2.0. Укажите идентификатор, который будет использоваться в следующем шаге.
+* Щелкните **Add Credentials** (Добавить учетные данные), чтобы добавить [субъект-службу Microsoft Azure](/cli/azure/create-an-azure-service-principal-azure-cli?toc=%252fazure%252fazure-resource-manager%252ftoc.json) путем ввода следующих значений: идентификатор подписки, идентификатор клиента, секрет клиента и конечная точка маркера OAuth 2.0. Укажите идентификатор, который будет использоваться в следующем шаге.
 
 ![Добавить учетные данные](./media/deploy-to-azure-app-service-using-azure-cli/add-credentials.png)
 

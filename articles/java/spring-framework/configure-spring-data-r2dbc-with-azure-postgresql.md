@@ -8,12 +8,12 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 281ce33914c4f8aa4116721020f1e14a41868930
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: cdda538a986dde8b2a436980298e98a914ef1bb0
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378728"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831350"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-postgresql"></a>Использование R2DBC Spring Data с Базой данных Azure для PostgreSQL
 
@@ -119,4 +119,4 @@ CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARC
 
 См. сведения о Spring Data R2DBC в [справочной документации по Spring](https://docs.spring.io/spring-data/r2dbc/docs/current/reference/html/#reference).
 
-См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](../index.yml) и [Azure DevOps и Java](/azure/devops/).

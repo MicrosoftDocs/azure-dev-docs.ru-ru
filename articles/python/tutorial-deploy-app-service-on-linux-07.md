@@ -4,12 +4,12 @@ description: Шаг руководства 7. Очистка ресурсов A
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: ba8d4b3ae6411b2bced31689513b17ee1bad9efd
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: cc1acdd316406d9269c97a4f5b25f465d0303509
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501439"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831480"
 ---
 # <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -25,7 +25,7 @@ ms.locfileid: "88501439"
 
 Как мы уже упоминали, вы можете узнать о расширении Службы приложений в репозитории [vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice) на сайте GitHub. Мы будем рады любым предложениям и сообщениям о проблемах.
 
-См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](https://docs.microsoft.com/python/azure/?view=azure-python).
+См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/python/azure/?view=azure-python).
 
 Для VS Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
@@ -39,6 +39,6 @@ ms.locfileid: "88501439"
 - [Средства Azure Resource Manager (ARM)](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Все готово](https://docs.microsoft.com/python/azure/?view=azure-python) 
+> [Все готово](/python/azure/?view=azure-python) 
 
 [Возникли проблемы? Сообщите нам!](https://aka.ms/FlaskVSCQuickstartHelp)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8f757c030849cb89eea36d74b55867dcc2ff98a6
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 4215099ae39963448b7a94d389ded0c9096b1c67
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "80441359"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772685"
 ---
 Группу ресурсов можно удалить с помощью [портала Azure](https://portal.azure.com) или Azure CLI.
 
@@ -13,5 +13,5 @@ ms.locfileid: "80441359"
 - Выполните следующую команду Azure CLI (локально или с помощью [Cloud Shell](/azure/cloud-shell/overview)), заменив `<resource_group>` именем группы, используемой в этом руководстве.
 
     ```azurecli
-    az group delete --name <resource_group>
+    az group delete --no-wait --name <resource_group>
     ```

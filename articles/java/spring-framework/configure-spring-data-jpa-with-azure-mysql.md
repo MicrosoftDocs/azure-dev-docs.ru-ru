@@ -8,16 +8,16 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: c76dd7a91340c603bdb4ce921457013229a26c4c
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 6e4371e4d375c663f61f59707c553ac0e2d6e237
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378878"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831230"
 ---
 # <a name="use-spring-data-jpa-with-azure-database-for-mysql"></a>Использование JPA Spring Data с Базой данных Azure для MySQL
 
-В этой статье описано создание примера приложения, которое использует [JPA Spring Data](https://spring.io/projects/spring-data-jpa) для сохранения данных в [Базе данных Azure для MySQL](https://docs.microsoft.com/azure/mysql/) и их извлечения из нее.
+В этой статье описано создание примера приложения, которое использует [JPA Spring Data](https://spring.io/projects/spring-data-jpa) для сохранения данных в [Базе данных Azure для MySQL](/azure/mysql/) и их извлечения из нее.
 
 [Java Persistence API (JPA)](https://en.wikipedia.org/wiki/Java_Persistence_API) — это стандартный API Java для объектно-реляционного сопоставления.
 
@@ -86,4 +86,4 @@ spring.jpa.hibernate.ddl-auto=create-drop
 
 Дополнительные сведения о JPA для Spring Data см. в [справочной документации по Spring](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference).
 
-См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](../index.yml) и [Azure DevOps и Java](/azure/devops/).

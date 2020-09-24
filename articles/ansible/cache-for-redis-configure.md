@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, playbook, cache, redis
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 66da31edef14a09a903b3a78d97e1067856098ef
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: 4ef0738abc496df576da4906149eb8447ed5f000
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90681733"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831400"
 ---
 # <a name="tutorial-configure-caches-in-azure-cache-for-redis-using-ansible"></a>Руководство по Настройка кэшей в Кэше Azure для Redis с использованием Ansible
 
@@ -328,4 +328,4 @@ Tuesday 12 March 2019  16:44:14 +0800 (0:00:06.217)       0:23:08.626
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"] 
-> [Документация по Ansible в Azure](https://docs.microsoft.com/azure/ansible/)
+> [Документация по Ansible в Azure](/azure/ansible/)

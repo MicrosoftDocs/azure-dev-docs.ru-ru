@@ -2,14 +2,14 @@
 title: Шаг 3. Изучение файлов кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 3: основные сведения о шаблоне кода Python, который предоставляется в Функциях Azure.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 29802cf346a53d7230a2b6f46e8f39127be70d0a
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 1734a89ed2c71604fba5583020e0e93810c900a0
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473539"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772527"
 ---
 # <a name="3-examine-the-python-code-files-in-visual-studio-code"></a>3: Изучение файлов кода на Python в Visual Studio Code
 
@@ -86,11 +86,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 Ниже описаны важные части этого кода.
 
 - Необходимо импортировать модуль `azure.functions`; импорт модуля журналов рекомендуется, но не является обязательным.
-- Обязательная функция Python `main` получает объект `func.HttpRequest` с именем `req` и возвращает значение с типом `func.HttpResponse`. Дополнительные сведения о возможностях этих объектов см. в документации [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python) и [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python).
+- Обязательная функция Python `main` получает объект `func.HttpRequest` с именем `req` и возвращает значение с типом `func.HttpResponse`. Дополнительные сведения о возможностях этих объектов см. в документации [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python&preserve-view=true) и [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python&preserve-view=true).
 - Текст `main` обрабатывает сообщение и генерирует ответ. В нашем случае код ищет в URL-адресе параметр `name`. Если его нет, он проверяет наличие JSON в тексте запроса (с помощью `func.HttpRequest.get_json`) и наличие значения `name` в этом коде JSON (с помощью метода `get` из объекта JSON, который возвращает `get_json`).
 - Если имя найдено, код возвращает строку Hello с найденным именем; в противном случае он возвращает типовое сообщение.
 
 > [!div class="nextstepaction"]
 > [Файлы кода изучены — перейти к шагу 4 >>>](tutorial-vs-code-serverless-python-04.md)
 
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

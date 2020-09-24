@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kube
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 505ee15ab181e63576f1bb2c276ac317d8372164
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 39a730507df89186b8934d4ded7d2ff92c07b420
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240856"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831380"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
@@ -38,7 +38,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 * [Установленное средство Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) версии 2.0.43 или выше.
 
-* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из  [этого краткого руководства](https://docs.microsoft.com/azure/jenkins/install-jenkins-solution-template). 
+* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из  [этого краткого руководства](/azure/jenkins/install-jenkins-solution-template). 
 
 * На сервере Jenkins нужно установить Helm и kubectl, а также предоставить учетной записи Jenkins доступ к ним, как описано далее в этом руководстве.
 
@@ -50,8 +50,8 @@ Azure Dev Spaces позволяет тестировать и итеративн
 В этом разделе показано, как создать следующие ресурсы Azure:
 
 * группу ресурсов, вмещающую в себя все необходимые ресурсами для работы с этим руководством;
-* кластер [Службы Azure Kubernetes](https://docs.microsoft.com/azure/aks/) (AKS);
-* [реестр контейнеров Azure](https://docs.microsoft.com/azure/container-registry/) (ACR) для сборки (с помощью задач ACR) и хранения образов Docker.
+* кластер [Службы Azure Kubernetes](/azure/aks/) (AKS);
+* [реестр контейнеров Azure](/azure/container-registry/) (ACR) для сборки (с помощью задач ACR) и хранения образов Docker.
 
 1. Создайте группу ресурсов.
 
@@ -82,7 +82,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 В этом разделе показано, как настроить пространство разработки и развернуть пример приложения в кластере AKS, который вы создали ранее. Наше приложение состоит из двух частей: *webfrontend* и *mywebapi*. Оба компонента развертываются в пространстве разработки. Позже вы отправите запрос на вытягивание в интерфейс mywebapi, который запустит в Jenkins конвейер непрерывной интеграции.
 
-Дополнительные сведения об использовании Azure Dev Spaces и систем с несколькими службами в Azure Dev Spaces вы найдете в статьях [Начало работы в Azure Dev Spaces с использованием Java](https://docs.microsoft.com/azure/dev-spaces/get-started-java) и [Разработка с использованием нескольких служб с помощью Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/multi-service-java). Эти руководства содержат дополнительные базовые сведения, которые здесь не приводятся.
+Дополнительные сведения об использовании Azure Dev Spaces и систем с несколькими службами в Azure Dev Spaces вы найдете в статьях [Начало работы в Azure Dev Spaces с использованием Java](/azure/dev-spaces/get-started-java) и [Разработка с использованием нескольких служб с помощью Azure Dev Spaces](/azure/dev-spaces/multi-service-java). Эти руководства содержат дополнительные базовые сведения, которые здесь не приводятся.
 
 1. Скачайте репозиторий https://github.com/Azure/dev-spaces с сайта GitHub.
 
@@ -132,7 +132,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     * В [диаграмме Helm](https://helm.sh/docs/topics/charts/) в разделе `./charts/webfrontend` описано, как развернуть контейнер в Kubernetes.
     * `./azds.yaml` выполняет роль файла конфигурации для Azure Dev Spaces.
 
-    Дополнительные сведения см. в статье о [принципах работы и настройки Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works).
+    Дополнительные сведения см. в статье о [принципах работы и настройки Azure Dev Spaces](/azure/dev-spaces/how-dev-spaces-works).
 
 6. Скомпилируйте и выполните приложение в AKS, запустив команду `azds up`:
 

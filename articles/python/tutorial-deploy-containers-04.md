@@ -4,12 +4,12 @@ description: Шаг руководства 4. Просмотр журналов
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 92af617452aa8892f61e110a69be53a9208f3883
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 47316324010d5a74568bb55be508128917702780
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473509"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772647"
 ---
 # <a name="4-stream-logs-from-azure-app-service-for-a-container"></a>4: Потоковая передача журналов из Службы приложений Azure для контейнера
 
@@ -41,4 +41,3 @@ ms.locfileid: "89473509"
 > [!div class="nextstepaction"]
 > [Журналы отображаются — перейти к шагу 5 >>>](tutorial-deploy-containers-05.md)
 
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

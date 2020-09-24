@@ -4,12 +4,12 @@ description: 'Шаг руководства 3: простой процесс п�
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 6a2c09e861da9fedaa90f1229f212f02f95a349e
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 79498685492d57a22884b30c551c3a28b6e0fe15
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473498"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772637"
 ---
 # <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: Повторное развертывание контейнера в Службе приложений Azure после внесения изменений
 
@@ -31,5 +31,3 @@ ms.locfileid: "89473498"
 
 > [!div class="nextstepaction"]
 > [Изменения внесены, повторное развертывание выполнено — перейти к шагу 4 >>>](tutorial-deploy-containers-04.md)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

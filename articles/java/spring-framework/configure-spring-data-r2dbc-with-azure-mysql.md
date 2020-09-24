@@ -8,16 +8,16 @@ ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 159f009725d803341e46513bd699d7e3826d6199
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 84dffb21916498e9e80f458512d83251815306c0
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378768"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831240"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Использование R2DBC Spring Data с Базой данных Azure для MySQL
 
-В этом разделе показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](https://docs.microsoft.com/azure/mysql/) и ее извлечения с помощью [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc), используя реализацию R2DBC для MySQL из [репозитория GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
+В этом разделе показано, как создать пример приложения для хранения информации в [Базе данных Azure для MySQL](/azure/mysql/) и ее извлечения с помощью [Spring Data R2DBC](https://spring.io/projects/spring-data-r2dbc), используя реализацию R2DBC для MySQL из [репозитория GitHub r2dbc-mysql](https://github.com/mirromutth/r2dbc-mysql).
 
 [R2DBC](https://r2dbc.io/) приносит реактивные API к традиционным реляционным базам данных. Вы можете применять это решение со Spring WebFlux для создания полностью реактивных приложений Spring Boot, которые используют неблокирующие API. Оно обеспечивает улучшенную масштабируемость по сравнению с классическим подходом "один поток на подключение".
 
@@ -119,4 +119,4 @@ CREATE TABLE todo (id SERIAL PRIMARY KEY, description VARCHAR(255), details VARC
 
 См. сведения о Spring Data R2DBC в [справочной документации по Spring](https://docs.spring.io/spring-data/r2dbc/docs/current/reference/html/#reference).
 
-См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](/azure/developer/java/) и [Azure DevOps и Java](/azure/devops/).
+См. сведения об использовании Java в Azure в руководствах по использованию [Azure для разработчиков Java](../index.yml) и [Azure DevOps и Java](/azure/devops/).

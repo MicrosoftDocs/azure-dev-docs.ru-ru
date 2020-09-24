@@ -1,13 +1,13 @@
 ---
-author: mriem
+author: mnriem
 ms.author: manriem
 ms.date: 2/28/2020
-ms.openlocfilehash: 1c7059df89281156861a935d451aca4db6f44418
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: f2efcb620b570c57c3907ba2a682c65078e84790
+ms.sourcegitcommit: 850856d3fa2ddd8f96616ee6a1f092d8e0aedab3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82109515"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738411"
 ---
 ### <a name="build-and-push-the-docker-image-to-azure-container-registry"></a>Сборка и передача образа Docker в Реестр контейнеров Azure
 

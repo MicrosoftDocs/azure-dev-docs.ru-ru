@@ -5,12 +5,12 @@ keywords: azure devops terraform установка настройка windows i
 ms.topic: quickstart
 ms.date: 08/18/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: e58c53876ed05416f16a40d0ee23344bcde43b39
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 401a6c4cc8827e48858a936a10c9c7f62af15aab
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614521"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830060"
 ---
 # <a name="quickstart-configure-terraform-using-azure-powershell"></a>Краткое руководство. Настройка Terraform с помощью Azure PowerShell
  
@@ -39,13 +39,13 @@ ms.locfileid: "88614521"
 
 ## <a name="configure-your-environment"></a>Настройка среды
 
-1. Последний модуль PowerShell, который позволяет взаимодействовать с ресурсами Azure, называется [модулем Az для Azure PowerShell](https://docs.microsoft.com/powershell/azure/new-azureps-module-az). При использовании модуля Az для Azure PowerShell для всех платформ рекомендуется наличие версии PowerShell 7 (или более поздней). Если среда PowerShell уже установлена, версию можно проверить с помощью следующей команды в командной строке PowerShell.
+1. Последний модуль PowerShell, который позволяет взаимодействовать с ресурсами Azure, называется [модулем Az для Azure PowerShell](/powershell/azure/new-azureps-module-az). При использовании модуля Az для Azure PowerShell для всех платформ рекомендуется наличие версии PowerShell 7 (или более поздней). Если среда PowerShell уже установлена, версию можно проверить с помощью следующей команды в командной строке PowerShell.
 
     ```powershell
     $PSVersionTable.PSVersion
     ```
 
-1. [Установите PowerShell.](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) Эта демонстрация была протестирована с использованием PowerShell 7.0.2 в Windows 10.
+1. [Установите PowerShell.](/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7) Эта демонстрация была протестирована с использованием PowerShell 7.0.2 в Windows 10.
 
 1. Чтобы разрешить [Terraform выполнять аутентификацию в Azure](https://www.terraform.io/docs/providers/azurerm/guides/azure_cli.html), вам нужно [установить Azure CLI](/cli/azure/install-azure-cli-windows?view=azure-cli-latest). Эта демонстрация была протестирована с использованием Azure CLI версии 2.9.1.
 
@@ -70,9 +70,9 @@ ms.locfileid: "88614521"
 
 Чтобы войти в подписку Azure с помощью субъекта-службы, сначала необходимо получить доступ к этому субъекту-службе. Если у вас уже есть субъект-служба, можете пропустить этот раздел.
 
-Есть множество способов [создать субъект-службу с помощью PowerShell](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps). В рамках этой статьи мы создадим субъект-службу с ролью **участника**. Роль **Участник** (роль по умолчанию) предоставляет полные разрешения на чтение и запись в учетной записи Azure. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
+Есть множество способов [создать субъект-службу с помощью PowerShell](/powershell/azure/create-azure-service-principal-azureps). В рамках этой статьи мы создадим субъект-службу с ролью **участника**. Роль **Участник** (роль по умолчанию) предоставляет полные разрешения на чтение и запись в учетной записи Azure. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
 
-Вызов [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/Az.Resources/New-AzADServicePrincipal) позволяет создать субъект-службу для указанной подписки. После успешного завершения отображаются сведения о созданном субъекте-службе, например имена и отображаемое имя субъекта-службы. При вызове `New-AzADServicePrincipal` без указания учетных данных для проверки подлинности пароль создается автоматически. Но этот пароль не отображается, так как он возвращается в типе `SecureString`. Поэтому вам нужно при вызове `New-AzADServicePrincipal` направить результаты в переменную. Затем вы сможете преобразовать переменную в обычный текст для ее отображения.
+Вызов [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) позволяет создать субъект-службу для указанной подписки. После успешного завершения отображаются сведения о созданном субъекте-службе, например имена и отображаемое имя субъекта-службы. При вызове `New-AzADServicePrincipal` без указания учетных данных для проверки подлинности пароль создается автоматически. Но этот пароль не отображается, так как он возвращается в типе `SecureString`. Поэтому вам нужно при вызове `New-AzADServicePrincipal` направить результаты в переменную. Затем вы сможете преобразовать переменную в обычный текст для ее отображения.
 
 1. Получите идентификатор подписки Azure, которую вы хотите использовать. Если вы не знаете идентификатор подписки, это значение можно получить на [портале Azure](https://portal.azure.com/).
 
@@ -82,7 +82,7 @@ ms.locfileid: "88614521"
 
 1. Запустите PowerShell.
 
-1. Создайте новый субъект-службу с помощью командлета [New-AzADServicePrincipal](https://docs.microsoft.com/powershell/module/az.resources/new-azadserviceprincipal). Замените `<azure_subscription_id>` идентификатором подписки Azure, которую вы хотите использовать.
+1. Создайте новый субъект-службу с помощью командлета [New-AzADServicePrincipal](/powershell/module/az.resources/new-azadserviceprincipal). Замените `<azure_subscription_id>` идентификатором подписки Azure, которую вы хотите использовать.
 
     ```powershell
     $sp = New-AzADServicePrincipal -Scope /subscriptions/<azure_subscription_id>
@@ -94,7 +94,7 @@ ms.locfileid: "88614521"
     $sp.ServicePrincipalNames
     ```
 
-1. Отобразите автоматически созданный пароль в виде текста с помощью командлета [ConvertFrom-SecureString](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/convertfrom-securestring).
+1. Отобразите автоматически созданный пароль в виде текста с помощью командлета [ConvertFrom-SecureString](/powershell/module/microsoft.powershell.security/convertfrom-securestring).
 
     ```powershell
     $UnsecureSecret = ConvertFrom-SecureString -SecureString $sp.Secret -AsPlainText
@@ -103,17 +103,17 @@ ms.locfileid: "88614521"
 **Примечания**
 
 - Имена субъектов-служб и пароли нужны для входа в подписку с вашим субъектом-службой.
-- Пароль невозможно извлечь, если он утерян. Следовательно, пароль нужно хранить в надежном месте. Если вы забыли пароль, потребуется [сбросить учетные данные субъекта-службы](https://docs.microsoft.com/powershell/azure/create-azure-service-principal-azureps#reset-credentials).
+- Пароль невозможно извлечь, если он утерян. Следовательно, пароль нужно хранить в надежном месте. Если вы забыли пароль, потребуется [сбросить учетные данные субъекта-службы](/powershell/azure/create-azure-service-principal-azureps#reset-credentials).
 
 ## <a name="log-in-to-azure-using-a-service-principal"></a>Вход в Azure с помощью субъекта-службы
 
-Чтобы войти в подписку Azure с помощью субъекта-службы, вызовите [Connect-AzAccount](https://docs.microsoft.com/powershell/module/az.accounts/Connect-AzAccount) и укажите объект с типом [PsCredential](https://docs.microsoft.com/dotnet/api/system.management.automation.pscredential).
+Чтобы войти в подписку Azure с помощью субъекта-службы, вызовите [Connect-AzAccount](/powershell/module/az.accounts/Connect-AzAccount) и укажите объект с типом [PsCredential](/dotnet/api/system.management.automation.pscredential).
 
 1. Запустите PowerShell.
 
-1. Получите объект [PsCredential](https://docs.microsoft.com/dotnet/api/system.management.automation.pscredential) с помощью одного из следующих способов.
+1. Получите объект [PsCredential](/dotnet/api/system.management.automation.pscredential) с помощью одного из следующих способов.
 
-    1. Вызовите [Get-Credential](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/get-credential) и введите имя субъекта-службы и пароль по запросу.
+    1. Вызовите [Get-Credential](/powershell/module/microsoft.powershell.security/get-credential) и введите имя субъекта-службы и пароль по запросу.
 
         ```powershell
         $spCredential = Get-Credential
@@ -213,7 +213,7 @@ $env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
     terraform apply QuickstartTerraformTest.tfplan
     ```
 
-1. После применения плана выполнения вы можете проверить, создана ли группа ресурсов, выполнив командлет [Get-AzResourceGroup](https://docs.microsoft.com/powershell/module/az.resources/Get-AzResourceGroup).
+1. После применения плана выполнения вы можете проверить, создана ли группа ресурсов, выполнив командлет [Get-AzResourceGroup](/powershell/module/az.resources/Get-AzResourceGroup).
 
     ```powershell
     Get-AzResourceGroup -Name QuickstartTerraformTest-rg
@@ -245,7 +245,7 @@ $env:ARM_TENANT_ID="<azure_subscription_tenant_id>"
     terraform apply QuickstartTerraformTest.destroy.tfplan
     ```
 
-1. Убедитесь, что группа ресурсов была удалена, выполнив командлет [Get-AzResourceGroup](https://docs.microsoft.com/powershell/module/az.resources/Get-AzResourceGroup).
+1. Убедитесь, что группа ресурсов была удалена, выполнив командлет [Get-AzResourceGroup](/powershell/module/az.resources/Get-AzResourceGroup).
 
     ```powershell
     Get-AzResourceGroup -Name QuickstartTerraformTest-rg

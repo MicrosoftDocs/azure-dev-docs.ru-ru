@@ -4,16 +4,16 @@ description: Список материалов по началу работы в
 ms.date: 04/09/2020
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: 35a36123ec264da7a509d82075f6ecd752652f8a
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 0cc2778c72cfbe64cf2e426c9349eec39d22a8af
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379668"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831300"
 ---
 # <a name="caching-for-java-apps-on-azure"></a>Кэширование для приложений Java в Azure
 
 Следующие статьи помогут вам приступить к работе с различными вариантами кэширования в Azure:
 
 - [Redis — кэш приложений](/azure/azure-cache-for-redis/cache-java-get-started)
-- [Redis — Spring Data Reactive Redis](/azure/developer/java/spring-framework/configure-spring-boot-initializer-java-app-with-redis-cache)
+- [Redis — Spring Data Reactive Redis](../spring-framework/configure-spring-boot-initializer-java-app-with-redis-cache.md)

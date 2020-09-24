@@ -5,12 +5,12 @@ keywords: azure, chef, devops, virtual machines, overview, automate
 ms.date: 02/22/2020
 ms.topic: article
 ms.custom: devx-track-chef
-ms.openlocfilehash: 86678436612f97e2928228ec9dd47ac9185d9b72
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 2c24bba7d3da9976d5bd21a7a10bbb0de0887667
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240927"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831440"
 ---
 # <a name="using-chef-with-azure"></a>Использование Chef в Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "88240927"
 
 ## <a name="chef-extension-on-azure"></a>Расширение Azure для Chef
 
-Подготовьте виртуальную машину с помощью клиента Chef, который работает в качестве фоновой службы с [расширением Chef](https://docs.microsoft.com/azure/chef/chef-extension-portal) на [портале Azure](https://go.microsoft.com/fwlink/p/?LinkID=525040). После этого эти виртуальные машины готовы к управлению сервером Chef.
+Подготовьте виртуальную машину с помощью клиента Chef, который работает в качестве фоновой службы с [расширением Chef](/azure/chef/chef-extension-portal) на [портале Azure](https://go.microsoft.com/fwlink/p/?LinkID=525040). После этого эти виртуальные машины готовы к управлению сервером Chef.
 
 ## <a name="chef-cloud-shell"></a>Cloud Shell Chef
 

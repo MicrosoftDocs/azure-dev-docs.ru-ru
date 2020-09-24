@@ -4,12 +4,12 @@ description: Создание и публикация в Azure простой ф
 ms.topic: quickstart
 ms.date: 03/26/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 1260d5cbaec821149468ef524af35e081c06ec52
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: b27655657d763e295a1817acf200a67c090ff67d
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379968"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831410"
 ---
 # <a name="quickstart-create-an-azure-functions-project-using-intellij-idea"></a>Краткое руководство. Создание проекта Функций Azure с помощью IntelliJ IDEA
 
@@ -20,7 +20,7 @@ ms.locfileid: "86379968"
 Перед началом работы убедитесь, что выполнены следующие предварительные требования.
 
 + Учетная запись Azure с активной подпиской. [Создайте учетную запись](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) бесплатно.
-+ Поддерживаемый [пакет средств разработки Java для Azure(JDK)](https://aka.ms/azure-jdks) для Java 8
++ Поддерживаемый [пакет средств разработки Java для Azure(JDK)](../fundamentals/java-jdk-long-term-support.md) для Java 8
 + Установленный [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition или Community Edition.
 + [Maven 3.5.0+](https://maven.apache.org/download.cgi)
 + Последняя версия [Function Core Tools](https://github.com/Azure/azure-functions-core-tools)

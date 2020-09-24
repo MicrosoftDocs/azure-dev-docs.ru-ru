@@ -6,12 +6,12 @@ ms.author: kuthapar
 ms.topic: conceptual
 ms.date: 1/9/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: 119a2b3ff761778e111500a9fe0cf33d2dc6b080
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: f2fb9a1af0634e0cecb3b6d990ae423b31da6210
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378448"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90829990"
 ---
 # <a name="spring-data-azure-cosmos-db-developers-guide"></a>Руководство для разработчиков Spring Data Azure Cosmos DB
 
@@ -19,9 +19,9 @@ ms.locfileid: "86378448"
 
 [Azure Cosmos DB](/azure/cosmos-db/introduction) — это глобально распределенная служба базы данных, предоставляющая разработчикам возможность работать с данными с помощью разных стандартных API. Пакет SDK для Spring Data Cosmos DB основан на платформе [Spring Data](https://spring.io/projects/spring-data). Он обеспечивает интеграцию с Azure Cosmos DB с помощью API SQL. Сведения о поддержке других API можно найти в следующих разделах:
 
-- [Как использовать API MongoDB Spring Data с Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-mongodb-with-cosmos-db)
-- [Как использовать API Apache Cassandra Spring Data с Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-apache-cassandra-with-cosmos-db)
-- [Как использовать начальное приложение Spring Data Gremlin с API SQL для Azure Cosmos DB](/azure/developer/java/spring-framework/configure-spring-data-gremlin-java-app-with-cosmos-db)
+- [Как использовать API MongoDB Spring Data с Azure Cosmos DB](./configure-spring-data-mongodb-with-cosmos-db.md)
+- [Как использовать API Apache Cassandra Spring Data с Azure Cosmos DB](./configure-spring-data-apache-cassandra-with-cosmos-db.md)
+- [Как использовать начальное приложение Spring Data Gremlin с API SQL для Azure Cosmos DB](./configure-spring-data-gremlin-java-app-with-cosmos-db.md)
 
 Пакет SDK для Spring Data Cosmos DB доступен на сайте GitHub в репозитории [spring-data-cosmosdb](https://github.com/microsoft/spring-data-cosmosdb) как ПО с открытым кодом. В этом репозитории доступен активный список [Issues](https://github.com/microsoft/spring-data-cosmosdb/issues) (Проблемы), в который можно внести ошибки или проверить наличие решений для проблем, которые уже внесены. Можно также просмотреть список [Releases](https://github.com/microsoft/spring-data-cosmosdb/releases) (Выпуски), чтобы узнать, устранена ли проблема в более новой версии. Цепочка выпусков пакета SDK для Spring Data Cosmos DB версии 2.2.x поддерживает spring-data-commons версии 2.2.0.RELEASE, а цепочка выпусков этого пакета SDK версии 2.1.x поддерживает spring-data-commons версии 2.1.0.RELEASE.
 

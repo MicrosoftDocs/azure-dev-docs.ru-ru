@@ -1,17 +1,17 @@
 ---
 title: Перенос приложений WildFly в WildFly в Службе Azure Kubernetes
 description: Из этого руководства вы узнаете, что следует учитывать при переносе приложения WildFly для запуска в WildFly в контейнере Службы Azure Kubernetes.
-author: mriem
+author: mnriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 3/16/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: cf056d9d961662e20f4fa4112a153150bf05460f
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 701e1f1a8db4148837b793227ee3e91ef8ef97d5
+ms.sourcegitcommit: 850856d3fa2ddd8f96616ee6a1f092d8e0aedab3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379698"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738409"
 ---
 # <a name="migrate-wildfly-applications-to-wildfly-on-azure-kubernetes-service"></a>Перенос приложений WildFly в WildFly в Службе Azure Kubernetes
 

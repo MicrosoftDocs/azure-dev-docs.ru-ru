@@ -10,12 +10,12 @@ ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 5cfdbb3542222a7ff9547b25836237d5d0991ddb
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: e126e56784b2f680cb69b9c3e0533831340a0f10
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378478"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90830050"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Начало работы с функцией Spring Cloud в Azure
 
@@ -27,7 +27,7 @@ ms.locfileid: "86378478"
 
 Для разработки функций с помощью Java, должны быть установлены следующие компоненты:
 
-- [Java Developer Kit (JDK)](https://aka.ms/azure-jdks) версии 8.
+- [Java Developer Kit (JDK)](../fundamentals/java-jdk-long-term-support.md) версии 8.
 - [Apache Maven](https://maven.apache.org) 3.0 или более поздней версии.
 - [Azure CLI](/cli/azure)
 - [Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) 2.7.1158 или более поздней версии.

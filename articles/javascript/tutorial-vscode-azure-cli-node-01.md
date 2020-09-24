@@ -4,27 +4,27 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 51fb29a80ba69dd59ca18dd94eaaeb6f09e53074
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: e720cd1ca6f29a42bfd9bf6c79c6184338c2621a
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218069"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772887"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 
-При работе с этим руководством вы развернете приложение Node.js в Службе приложений Azure с помощью [интерфейса командной строки (CLI) Azure](https://docs.microsoft.com/cli/azure/overview?view=azure-cli-latest), который работает во всех операционных системах. С помощью этого CLI вы можете создавать ресурсы Azure, настраивать конвейер развертывания из репозитория Git в Azure и просматривать выходные данные приложения `console.log`.
+При работе с этим руководством вы развернете приложение Node.js в Службе приложений Azure с помощью [интерфейса командной строки (CLI) Azure](/cli/azure/overview?view=azure-cli-latest), который работает во всех операционных системах. С помощью этого CLI вы можете создавать ресурсы Azure, настраивать конвейер развертывания из репозитория Git в Azure и просматривать выходные данные приложения `console.log`.
 
 ## <a name="prerequisites"></a>предварительные требования
 
 - [Подписка Azure](#azure-subscription).
 - [Node.js и npm 6.x или более поздней версии](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 - [Git](https://git-scm.com/downloads), для которого с помощью команды `git --version` отображается номер версии.
-- [Интерфейс командной строки Azure](https://docs.microsoft.com/cli/azure/install-azure-cli).
+- [Интерфейс командной строки Azure](/cli/azure/install-azure-cli).
 
 Кроме того, вы можете использовать [расширение Azure CLI для Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). Она поддерживает раскраску кода, дополнение ввода IntelliSense и фрагменты кода при работе со скриптами Azure CLI.
 
-Вторая альтернатива — [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview). Эту службу можно использовать из Visual Studio Code с помощью [расширения для учетных записей Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
+Вторая альтернатива — [Azure Cloud Shell](/azure/cloud-shell/overview). Эту службу можно использовать из Visual Studio Code с помощью [расширения для учетных записей Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 

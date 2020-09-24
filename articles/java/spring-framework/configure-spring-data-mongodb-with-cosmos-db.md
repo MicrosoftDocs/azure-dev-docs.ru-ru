@@ -8,12 +8,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: f3b7f08bd8fe0db177ac9989e49c5b3f5cca69c7
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 529fab3977f0398014d74140abcbd807ac129fa5
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378818"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831430"
 ---
 # <a name="how-to-use-spring-data-mongodb-api-with-azure-cosmos-db"></a>Как использовать API MongoDB Spring Data с Azure Cosmos DB
 
@@ -137,7 +137,7 @@ ms.locfileid: "86378818"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -145,7 +145,7 @@ ms.locfileid: "86378818"
 
 <!-- URL List -->
 
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/

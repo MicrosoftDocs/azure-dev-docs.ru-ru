@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 7bfd7edbdabd2298c84b3480292949e1fb351913
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 0d4615b3d6b05ee54538befdf6a7a7d220e77917
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378438"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831010"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Начальные приложения Spring Boot для Azure
 
@@ -224,7 +224,7 @@ ms.locfileid: "86378438"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -236,10 +236,10 @@ ms.locfileid: "86378438"
 
 <!-- URL List -->
 
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Spring Boot]: http://projects.spring.io/spring-boot/
-[Spring в Azure]: /azure/developer/java/spring-framework/
+[Spring в Azure]: ./index.yml
 [Spring Framework]: https://spring.io/
 [Spring Initializr]: https://start.spring.io/
 

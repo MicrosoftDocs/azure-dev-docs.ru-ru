@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, портал, Linux, виртуальная м
 ms.topic: quickstart
 ms.date: 08/21/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 4e2250e6ca76c804f08a4f6ab4715ae4fc094570
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: 7e7c8de6353a29af949231709675a4d2785405c3
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725218"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831370"
 ---
 # <a name="quickstart-configure-jenkins-using-azure-cli"></a>Краткое руководство. Настройка Jenkins с помощью Azure CLI
 
@@ -216,4 +216,4 @@ ms.locfileid: "88725218"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
-> [Jenkins в Azure](/azure/developer/jenkins)
+> [Jenkins в Azure](./index.yml)

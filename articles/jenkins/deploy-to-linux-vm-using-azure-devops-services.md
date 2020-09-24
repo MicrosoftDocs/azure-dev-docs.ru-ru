@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, виртуальная машина, CI/CD, Az
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 458acc31d4cb56215dff036bd3952090052eb5a1
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 3eedcc72a7c272f1cacf97b9071e750aab5a446e
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241076"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831330"
 ---
 # <a name="tutorial-deploy-to-linux-virtual-machine-using-jenkins-and-azure-devops-services"></a>Руководство по Развертывание виртуальной машины Linux с помощью Jenkins и Azure DevOps Services
 
@@ -18,7 +18,7 @@ ms.locfileid: "88241076"
 
 В этом руководстве для создания веб-приложения Node.js используется Jenkins. Затем вы развернете его с помощью DevOps
 
-в [группе развертывания](https://docs.microsoft.com/azure/devops/pipelines/release/deployment-groups/index?view=vsts), состоящей из виртуальных машин Linux. Вы узнаете, как выполнять следующие задачи:
+в [группе развертывания](/azure/devops/pipelines/release/deployment-groups/index?view=vsts), состоящей из виртуальных машин Linux. Вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * Получение примера приложения.
@@ -32,17 +32,17 @@ ms.locfileid: "88241076"
 
 ## <a name="before-you-begin"></a>Перед началом
 
-* Вам нужен доступ к серверу Jenkins. Если вы еще не создали сервер Jenkins, см. сведения в статье [Создание сервера Jenkins на виртуальной машине Azure под управлением Linux на портале Azure](https://docs.microsoft.com/azure/jenkins/install-jenkins-solution-template). 
+* Вам нужен доступ к серверу Jenkins. Если вы еще не создали сервер Jenkins, см. сведения в статье [Создание сервера Jenkins на виртуальной машине Azure под управлением Linux на портале Azure](/azure/jenkins/install-jenkins-solution-template). 
 
 * Войдите в вашу организацию Azure DevOps Services (**https://{имя_организации}.visualstudio.com**). 
   Вы можете получить [бесплатную организацию Azure DevOps Services](https://go.microsoft.com/fwlink/?LinkId=307137&clcid=0x409&wt.mc_id=o~msft~vscom~home-vsts-hero~27308&campaign=o~msft~vscom~home-vsts-hero~27308).
 
   > [!NOTE]
-  > Дополнительные сведения см. в статье [о подключении к Azure DevOps Services](https://docs.microsoft.com/azure/devops/organizations/projects/connect-to-projects?view=vsts).
+  > Дополнительные сведения см. в статье [о подключении к Azure DevOps Services](/azure/devops/organizations/projects/connect-to-projects?view=vsts).
 
-*  Для целевого развертывания понадобится виртуальная машина Linux.  Для получения дополнительной информации см. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm).
+*  Для целевого развертывания понадобится виртуальная машина Linux.  Для получения дополнительной информации см. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
-*  Откройте входящий порт 80 для виртуальной машины. Дополнительные сведения см. в статье [Создание групп безопасности сети с помощью портала Azure](https://docs.microsoft.com/azure/virtual-network/tutorial-filter-network-traffic).
+*  Откройте входящий порт 80 для виртуальной машины. Дополнительные сведения см. в статье [Создание групп безопасности сети с помощью портала Azure](/azure/virtual-network/tutorial-filter-network-traffic).
 
 ## <a name="get-the-sample-app"></a>Получение примера приложения
 
@@ -90,7 +90,7 @@ ms.locfileid: "88241076"
  
 1.  Создайте личный маркер доступа в организации Azure DevOps Services, если у вас его нет. Эти данные требуются Jenkins для доступа к организации Azure DevOps Services. Убедитесь, что данные маркера безопасности для будущих шагов хранятся в этом разделе.
   
-    Чтобы узнать, как создать такой маркер, прочтите статью [Authenticate access with personal access tokens for Azure DevOps Services and TFS](https://docs.microsoft.com/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) (Аутентификация доступа с помощью личных маркеров доступа для Azure DevOps и TFS).
+    Чтобы узнать, как создать такой маркер, прочтите статью [Authenticate access with personal access tokens for Azure DevOps Services and TFS](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) (Аутентификация доступа с помощью личных маркеров доступа для Azure DevOps и TFS).
 2. На вкладке **Post-build Actions** (Действия после сборки) выберите **Add post-build action** (Добавить действие после сборки). Выберите **Archive the artifacts** (Архивировать артефакты).
 3. Для **Files to archive** (Файлы для архивации) введите `**/*`, чтобы включить в архив все файлы.
 4. Чтобы создать другое действие, выберите **Add post-build action** (Добавить действие после сборки).
@@ -177,7 +177,7 @@ ms.locfileid: "88241076"
 > * Создание группы развертывания для виртуальных машин Azure.
 > * Создание конвейера Azure для настройки виртуальных машин и развертывания приложения.
 
-Дополнительные сведения об использовании Azure Pipelines на этапах сборки выпуска см. [здесь](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-linuxvm-deploygroups).
+Дополнительные сведения об использовании Azure Pipelines на этапах сборки выпуска см. [здесь](/azure/devops/pipelines/apps/cd/deploy-linuxvm-deploygroups).
 
 Сведения о том, как создать конвейер CI/CD на основе YAML для развертывания на виртуальных машинах, см. в следующем руководстве.
 

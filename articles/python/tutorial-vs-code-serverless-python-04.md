@@ -2,14 +2,14 @@
 title: Шаг 4. Локальная отладка кода Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: f96e2065f4864423470c1eda9ad48cad086e0fe6
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 4a5cb6bb8eedca93ce1e7675d3e7e1959ca066f6
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473589"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90773035"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 
@@ -29,7 +29,9 @@ ms.locfileid: "89473589"
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
     </pre>
 
-1. Щелчком мыши по URL-адресу при нажатой клавише **Ctrl** (или **Cmd**) в окне **Вывод** Visual Studio Code вы можете открыть этот адрес в браузере. Также можно перейти в браузер вручную и вставить в адресную строку этот URL-адрес. В обоих случаях используется конечная точка `api/<function_name>`, в нашем примере это `api/HttpExample`. Но поскольку этот URL-адрес не содержит параметра name (имя), в окне браузера отобразится текст "Please pass a name on the query string or in the request body" (Передайте имя в строке запроса или в тексте запроса), как требует соответствующий участок кода.
+1. Щелчком мыши по URL-адресу при нажатой клавише **Ctrl** (или **Cmd**) в окне **Вывод** Visual Studio Code вы можете открыть этот адрес в браузере. Также можно перейти в браузер вручную и вставить в адресную строку этот URL-адрес.
+
+    В обоих случаях используется конечная точка `api/<function_name>`, в нашем примере это `api/HttpExample`. Но поскольку этот URL-адрес не содержит параметра name (имя), в окне браузера отобразится текст "Please pass a name on the query string or in the request body" (Передайте имя в строке запроса или в тексте запроса), как требует соответствующий участок кода.
 
     > [!TIP]
     > Если вы не можете получить доступ к URL-адресу и процессы выполняются за корпоративным прокси-сервером (вероятнее всего, с заданными переменными среды `HTTP_PROXY` и `HTTPS_PROXY`), задайте для переменной среды с именем `NO_PROXY` значение `localhost,127.0.0.1` и повторите попытку.
@@ -47,7 +49,7 @@ ms.locfileid: "89473589"
         --data {"""name""":"""Visual Studio Code"""} http://localhost:7071/api/HttpExample
     ```
 
-    В PowerShell также можно использовать командлет [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+    В PowerShell также можно использовать командлет [Invoke-WebRequest](/powershell/module/microsoft.powershell.utility/invoke-webrequest).
 
     # <a name="bash"></a>[bash](#tab/bash)
 
@@ -61,7 +63,11 @@ ms.locfileid: "89473589"
 
     Также вы можете создать файл, например *data.json*, который содержит `{"name":"Visual Studio Code"}`, и выполнить команду `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample`.
 
-1. Чтобы проверить отладку функции, установите точку останова в строке с текстом `name = req.params.get('name')` и снова выполните запрос к URL-адресу. Отладчик Visual Studio Code должен остановиться на указанной строке, что позволит вам проверять переменные и выполнить код по шагам. (Краткое пошаговое руководство по базовым возможностям отладки см. в [учебнике для Visual Studio Code по настройке и запуску отладчика](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
+1. Чтобы проверить отладку функции, установите точку останова в строке с текстом `name = req.params.get('name')` и снова выполните запрос к URL-адресу.
+
+    Отладчик Visual Studio Code должен остановиться на указанной строке, что позволит вам проверять переменные и выполнить код по шагам.
+
+    (Краткое пошаговое руководство по базовым возможностям отладки см. в [учебнике для Visual Studio Code по настройке и запуску отладчика](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
 
 1. Когда вы будете полностью удовлетворены результатами локального тестирования функции, закройте отладчик (с помощью команды меню **Отладка** > **Остановить отладку** или команды **Отключить** на панели инструментов отладки).
 
@@ -73,4 +79,3 @@ ms.locfileid: "89473589"
 > [!div class="nextstepaction"]
 > [Локальная работа с отладчиком завершена — перейти к шагу 5 >>>](tutorial-vs-code-serverless-python-05.md)
 
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.
