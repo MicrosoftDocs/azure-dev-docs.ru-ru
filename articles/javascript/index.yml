@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign
-  ms.openlocfilehash: 85f5a27eb61c90ee3cdafd034daf072b571cea47
-  ms.sourcegitcommit: 53972873f4976a050b67c26eccab9bbe14293743
+  ms.openlocfilehash: a3c909c3cd4202f2a32caa8e0a6044b27dca5d0f
+  ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90990457"
+  ms.lasthandoff: 09/25/2020
+  ms.locfileid: "91364997"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -82,7 +82,7 @@ landingContent:
     - text: Преобразование речи в текст
       url: /azure/cognitive-services/speech-service/quickstarts/speech-to-text-from-file?tabs=linux%2Cbrowser%2Cwindowsinstall&pivots=programming-language-javascript
     - text: Перевод текста
-      url: /azure/cognitive-services/translator/quickstart-translate?pivots=programming-language-javascript
+      url: /azure/cognitive-services/translator/quickstart-translator?pivots=programming-language-javascript
     - text: Определение объектов на изображении
       url: /azure/cognitive-services/computer-vision/quickstarts-sdk/client-library?pivots=programming-language-javascript
 - title: Безопасность, обмен сообщениями и журналы
