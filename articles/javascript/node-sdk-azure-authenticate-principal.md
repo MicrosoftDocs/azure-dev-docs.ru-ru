@@ -4,14 +4,14 @@ description: Узнайте, как использовать проверку п
 ms.topic: article
 ms.date: 06/17/2017
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 9343d1bfaa48e5b2307c5f442107b91613663e94
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.openlocfilehash: 156892d9fd8e8014e3dacaae2492126ac9bf5836
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218886"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110438"
 ---
-# <a name="create-an-azure-service-principal-with-nodejs"></a>Создание субъекта-службы Azure с помощью Node.js 
+# <a name="create-an-azure-service-principal-for-nodejs"></a>Создание субъекта-службы Azure для Node.js
 
 Если у вас есть приложение, которому нужно предоставить доступ к ресурсам, вы можете настроить для такого приложения удостоверение и выполнить для него аутентификацию с помощью собственных учетных данных. Такое удостоверение называется *субъект-служба*. По сути, вы создаете ключи для учетной записи Azure Active Directory, которые затем предоставляете пакету SDK для аутентификации. При этом пользователю не нужно вводить имя пользователя и пароль.
 
@@ -29,7 +29,7 @@ ms.locfileid: "88218886"
 
 ## <a name="create-a-service-principal-using-the-azure-portal"></a>Создание субъекта-службы с помощью портала Azure
 
-Чтобы создать субъект-службу, выполните инструкции из руководства по [созданию приложения Azure Active Directory и субъекта-службы с доступом к ресурсам с помощью портала](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/).
+Чтобы создать субъект-службу, выполните инструкции из руководства по [созданию приложения Azure Active Directory и субъекта-службы с доступом к ресурсам с помощью портала](/azure/active-directory/develop/howto-create-service-principal-portal).
 
 ## <a name="create-a-service-principal-using-the-azure-cli-20"></a>Создание субъекта-службы с помощью Azure CLI 2.0
 
@@ -45,7 +45,8 @@ ms.locfileid: "88218886"
     $ az login
     ```
 
-4. Вызов команды `az login` возвращает URL-адрес и код. Откройте указанный URL-адрес, введите код и войдите с помощью удостоверения Azure (это может произойти автоматически, если вы уже выполняли такой вход). У вас появится доступ к учетной записи через интерфейс командной строки.
+4. Вызов команды `az login` возвращает URL-адрес и код. Откройте указанный URL-адрес, введите код и войдите с помощью удостоверения Azure (это может произойти автоматически, если вы уже выполняли такой вход).
+У вас появится доступ к учетной записи через интерфейс командной строки.
 
 5. Получите идентификатор подписки и арендатора:
 
@@ -93,7 +94,7 @@ ms.locfileid: "88218886"
 
     **Запишите значения клиента, имени и пароля, так как они будут использоваться на шаге 7.**
 
-7. Настройте переменные среды. Для этого замените заполнители &lt;subscriptionId>, &lt;tenant>, &lt;name> и &lt;password> значениями, полученными на шагах 4 и 5. 
+7. Настройте переменные среды. Для этого замените заполнители &lt;subscriptionId>, &lt;tenant>, &lt;name> и &lt;password> значениями, полученными на шагах 4 и 5.
 
     **Использование Bash**
 
@@ -115,7 +116,7 @@ ms.locfileid: "88218886"
 
 ## <a name="create-a-service-principal-using-the-azure-sdk-for-nodejs"></a>Создание субъекта-службы с помощью пакета Azure SDK для Node.js
 
-Чтобы создать субъект-службу с помощью программных средства JavaScript, используйте [скрипт ServicePrincipal](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal).   
+Чтобы создать субъект-службу с помощью программных средства JavaScript, используйте [скрипт ServicePrincipal](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal).
 
 ## <a name="using-the-service-principal"></a>Использование субъекта-службы
 
@@ -138,3 +139,7 @@ MsRest.loginWithServicePrincipalSecret(
   }
 );
 ```
+
+## <a name="next-steps"></a>Следующие шаги
+
+* [Аутентификация с использованием модулей Azure для Node.js](node-sdk-azure-authenticate.md)

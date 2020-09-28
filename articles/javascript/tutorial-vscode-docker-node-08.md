@@ -3,14 +3,15 @@ title: Очистка ресурсов после развертывания к�
 description: Руководство, часть 8. Очистка ресурсов.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: dd71ec5affdd1696544ec166ad8517b376958cab
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: d05766092022772c96fa745f9a52aa4901b27f82
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792897"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "90772707"
 ---
-# <a name="clean-up-resources"></a>Очистка ресурсов
+# <a name="part-8-clean-up-resources"></a>Часть 8. Очистка ресурсов
 
 [Предыдущий шаг. Потоковая передача журналов](tutorial-vscode-docker-node-07.md)
 

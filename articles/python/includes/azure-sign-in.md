@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: cbcc292bf0b59adf35789bbd24ca37b0301a2ad7
-ms.sourcegitcommit: efab6be74671ea4300162e0b30aa8ac134d3b0a9
+ms.openlocfilehash: 1e6e3f46fc7dd2f4ddf708be65941deb9ca18096
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84268913"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772616"
 ---
 Установив расширение Azure, войдите в свою учетную запись Azure. Для этого перейдите в обозреватель **Azure**, выберите **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).
 
 ![Вход в Azure с помощью VS Code](../media/deploy-azure/sign-in-to-azure-through-visual-studio-code.png)
 
-Выполнив вход, убедитесь, что адрес электронной почты учетной записи Azure или состояние "Вход выполнен" отображается в строке состояния, а ваши подписки — в обозревателе **Azure**.
+После входа убедитесь, что в строке состояния указано **Azure: вход выполнен** и ваши подписки отображаются в обозревателе **Azure**.
 
 ![Строка состояния Visual Studio Code, в которой отображается учетная запись Azure](../media/deploy-azure/azure-account-status-bar-in-visual-studio-code.png)
 

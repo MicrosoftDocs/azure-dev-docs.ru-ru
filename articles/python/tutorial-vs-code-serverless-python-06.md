@@ -2,14 +2,14 @@
 title: Шаг 6. Добавление второй функции Python в Функциях Azure с помощью VS Code
 description: 'Шаг руководства 6: расширение проекта Функций Azure путем добавления второй функции.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 29d625d40868ab761037c1a4a049f7e95e63df26
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: f60bd70a8c67a3b33140b11731906e0f205e98f7
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473579"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772877"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 
@@ -118,5 +118,3 @@ ms.locfileid: "89473579"
 
 > [!div class="nextstepaction"]
 > [Вторая функция добавлена — перейти к шагу 7 >>>](tutorial-vs-code-serverless-python-07.md)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

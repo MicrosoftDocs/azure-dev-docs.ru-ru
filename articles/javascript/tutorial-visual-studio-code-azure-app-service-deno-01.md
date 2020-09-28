@@ -3,14 +3,15 @@ title: Развертывание приложений Deno в Службе пр
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 06/01/2020
-ms.openlocfilehash: 817efd11f5eaf072d10a54efa083823e9b73e356
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 0a725c0c1f59f01fd75e76e68ac533c7918a429b
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792567"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "90772937"
 ---
-# <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Развертывание в Службе приложений Azure с помощью Visual Studio Code
+# <a name="deploy-deno-to-azure-app-service-using-visual-studio-code"></a>Развертывание Deno в Службе приложений Azure с помощью Visual Studio Code
 
 В этом руководстве объясняется, как развернуть приложение Deno в Службе приложений Azure (в Linux или Windows) с помощью Azure CLI.
 

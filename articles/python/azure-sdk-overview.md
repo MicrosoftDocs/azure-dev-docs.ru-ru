@@ -1,15 +1,15 @@
 ---
 title: Использование библиотек Azure (пакет SDK) для Python
 description: Обзор функций и возможностей библиотек Azure для Python, которые позволяют повысить продуктивность разработчиков при подготовке, использовании и администрировании ресурсов Azure.
-ms.date: 05/26/2020
+ms.date: 09/19/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: dce4485a65da75d0918805ef55fafe71d55ce0a6
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 6dab8085cd9d18f34ea1dc307a414fa18cdbcb83
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983286"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90829960"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Использование библиотек Azure (пакет SDK) для Python
 
@@ -63,15 +63,15 @@ ms.locfileid: "87983286"
 
 Библиотеки *управления* (или "плоскости управления") из пакета SDK, имена которых начинаются с `azure-mgmt-`, предназначены для создания, подготовки и администрирования ресурсов Azure из скриптов Python. У каждой службы Azure есть своя библиотека управления.
 
-С помощью библиотек управления можно создавать скрипты конфигурации и развертывания для выполнения тех же задач, которые можно выполнять на [портале Azure](https://portal.azure.com) или с помощью [Azure CLI](/cli/azure/install-azure-cli). (Как отмечалось ранее, интерфейс командной строки Azure написан на Python и использует библиотеки управления для реализации различных команд.)
+С помощью библиотек управления можно создавать скрипты конфигурации и развертывания для выполнения тех же задач, которые можно реализовать на [портале Azure](https://portal.azure.com) или с помощью [Azure CLI](/cli/azure/install-azure-cli). (Как отмечалось ранее, интерфейс командной строки Azure написан на Python и использует библиотеки управления для реализации различных команд.)
 
-Дополнительные сведения о работе с каждой библиотекой управления см. в файле *README.md* или *README.rst*, расположенном в папке проекта библиотеки в [репозитории GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) пакета SDK. Дополнительные фрагменты кода также можно найти в [справочной документации](/python/api?view=azure-python) и в разделе с [примерами для Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+Дополнительные сведения о работе с каждой библиотекой управления см. в файле *README.md* или *README.rst*, расположенном в папке проекта библиотеки в [репозитории GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) пакета SDK. Дополнительные фрагменты кода также можно найти в [справочной документации](/python/api?view=azure-python) и в разделе с [примерами для Azure](/samples/browse/?languages=python&products=azure).
 
 ## <a name="connect-to-and-use-azure-resources-with-client-libraries"></a>Подключение к ресурсам Azure и работа с ними с помощью клиентских библиотек
 
 С помощью *клиентских* библиотек (или библиотеки "плоскости данных") из пакета SDK можно создавать код приложений Python для взаимодействия с уже подготовленными службами. Клиентские библиотеки доступны только для тех служб, которые поддерживают API клиента.
 
-Дополнительные сведения о работе с каждой клиентской библиотекой см. в файле *README.md* или *README.rst*, расположенном в папке проекта библиотеки в [репозитории GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) пакета SDK. Дополнительные фрагменты кода также можно найти в [справочной документации](/python/api?view=azure-python) и в разделе с [примерами для Azure](https://docs.microsoft.com/samples/browse/?languages=python&products=azure).
+Дополнительные сведения о работе с каждой клиентской библиотекой см. в файле *README.md* или *README.rst*, расположенном в папке проекта библиотеки в [репозитории GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) пакета SDK. Дополнительные фрагменты кода также можно найти в [справочной документации](/python/api?view=azure-python) и в разделе с [примерами для Azure](/samples/browse/?languages=python&products=azure).
 
 ## <a name="get-help-and-connect-with-the-sdk-team"></a>Получение справки и связь с разработчиками SDK
 

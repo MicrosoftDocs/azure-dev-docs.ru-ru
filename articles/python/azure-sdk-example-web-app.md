@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотек упр�
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 9db37e1cc496333c825789cc850ed6750907fa88
-ms.sourcegitcommit: 2f98cf2a394d4fd82ddc917ac1041c1dc08473b6
+ms.openlocfilehash: 03a2f8b8f8830916243db0778d16650da1892b04
+ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89275178"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91110468"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-and-deploy-a-web-app"></a>Пример использования библиотек Azure для подготовки и развертывания веб-приложения
 
@@ -144,7 +144,7 @@ print(f"Provisioned web app {web_app_result.name} at {web_app_result.default_hos
 #
 # You can call this method again to change the repo.
 
-REPO_URL = 'https://github.com/kraigb/python-docs-hello-world'
+REPO_URL = 'https://github.com/<your_fork>/python-docs-hello-world'
 
 poller = app_service_client.web_apps.create_or_update_source_control(RESOURCE_GROUP_NAME,
     WEB_APP_NAME,
@@ -185,14 +185,14 @@ python provision_deploy_web_app.py
 
     Замените PythonAzureExample-WebApp-12345 именем своего веб-приложения.
 
-    Вы должны увидеть текст "Hello World!" в браузере.
+    Вы должны увидеть текст "Hello, World!" в браузере.
 
 1. На [портале Azure](https://portal.azure.com) перейдите в раздел **Группы ресурсов** и проверьте, есть ли там группа ресурсов PythonAzureExample-WebApp-rg. Откройте ее и проверьте, присутствуют ли там требуемые ресурсы (план и экземпляр Службы приложений).
 
 ## <a name="7-clean-up-resources"></a>7: Очистка ресурсов
 
 ```azurecli
-az group delete -n PythonAzureExample-WebApp-rg
+az group delete -n PythonAzureExample-WebApp-rg --no-wait
 ```
 
 Если вам не нужны ресурсы, созданные при работе с этим примером, выполните приведенную ниже команду, чтобы не нести расходы по подписке.

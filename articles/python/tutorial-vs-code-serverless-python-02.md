@@ -2,18 +2,18 @@
 title: Шаг 2. Создание функции Python в Функциях Azure с помощью VS Code
 description: 'Руководство, шаг 2: использование расширения "Функции Azure" для VS Code.'
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 08f301ef4596ae8aac96051a13fd680917bd79be
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: cc0d8f5241cafceb9e087557104a624f5f7adb92
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473569"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90773065"
 ---
 # <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"
 
-[Предыдущий шаг: предварительные требования](tutorial-vs-code-serverless-python-01.md)
+[Предыдущий шаг: настройка среды](tutorial-vs-code-serverless-python-01.md)
 
 Узнайте, как создать функцию Python в Функциях Azure с помощью Visual Studio Code. Код для Функций Azure управляется через соответствующий _проект_, который создается перед началом работы с кодом.
 
@@ -27,7 +27,7 @@ ms.locfileid: "89473569"
     | --- | --- | --- |
     | Укажите каталог для проекта. | Текущая открытая папка | Папка, в которой будет создаваться проект. Возможно, вы захотите создать проект во вложенной папке. |
     | Select a language for your function app project (Выберите язык для проекта приложения-функции) | **Python** | Язык, используемый для функции, от которого зависит шаблон для кода. |
-    | Выбор интерпретатора Python | (Используйте указанный путь по умолчанию.) | Интерпретатор Python, используемый для виртуальной среды. |
+    | Select Python interpreter to create a virtual environment (Выберите интерпретатор Python для создания виртуальной среды) | (Используйте путь по умолчанию или вручную введите путь к подходящему интерпретатору, если он не указан.) | Интерпретатор Python, используемый для виртуальной среды. |
     | Select a template for your project's first function (Выберите шаблон для первой функции вашего проекта) | **триггером HTTP** | Функция, которая использует триггер HTTP, выполняется при каждом получении HTTP-запроса к конечной точке функции. (Для Функций Azure существует много других триггеров. Подробнее см. статью [Что можно сделать с помощью Функций](/azure/azure-functions/functions-overview#what-can-i-do-with-functions).) |
     | Provide a function name (Укажите имя функции) | HttpExample | Имя применяется к вложенной папке, которая содержит код функции и данные конфигурации, а также определяет имя конечной точки HTTP. Укажите HttpExample вместо предложенного по умолчанию варианта HTTPTrigger1, чтобы вы могли отличать функцию от триггера. |
     | Уровень авторизации | **Анонимный** | Анонимная авторизация делает функцию общедоступной для всех. |
@@ -48,4 +48,3 @@ ms.locfileid: "89473569"
 > [!div class="nextstepaction"]
 > [Функция создана —перейти к шагу 3 >>>](tutorial-vs-code-serverless-python-03.md)
 
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

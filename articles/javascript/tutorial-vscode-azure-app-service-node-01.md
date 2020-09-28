@@ -3,14 +3,15 @@ title: Развертывание приложений Node.js в Службе �
 description: Руководство, часть 1. Общие сведения и предварительные требования.
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 7427292a3f0546c462ecd621fa3f66546beb2726
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 427cce426429c9fb1ce924438ead9cfe44be350c
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792447"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "91110324"
 ---
-# <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Развертывание в Службе приложений Azure с помощью Visual Studio Code
+# <a name="deploy-nodejs-to-azure-app-service-using-visual-studio-code"></a>РазвертываниеNode.js в Службе приложений Azure с помощью Visual Studio Code
 
 В этом руководстве объясняется, как развернуть приложение Node.js в Службе приложений Azure (в Linux или Windows) с помощью [расширения Службы приложений](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 

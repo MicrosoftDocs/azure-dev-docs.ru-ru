@@ -1,25 +1,25 @@
 ---
 title: Руководство по Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
-description: 'Руководство, шаг 1: работа с контейнерами, общие сведения и предварительные требования.'
+description: Шаг 1 руководства по настройке среды для контейнеров.
 ms.topic: conceptual
-ms.date: 09/12/2019
+ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: f0fb983a596ca1828809d1d829af5517e8af66df
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 447643662ef3c839823d81d29cfb55cc2ee442b2
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473559"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772615"
 ---
 # <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>Руководство по Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
 
 В этой статье описано, как в [Службе приложений Azure](/azure/app-service/) развернуть образ контейнера из реестра контейнеров с помощью Visual Studio Code.
 
-Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте ссылку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
+Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку обратной связи **Эта страница**, которую можно найти в конце каждой статьи.
 
 Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=t79HDLC5kQA&feature=youtu.be&ocid=AID3006292" target="_blank">Приложения Django в контейнерах разработки VS Code</a> (YouTube.com).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="configure-your-environment"></a>Настройка среды
 
 - [учетная запись Azure](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-docker-extension&mktingSource=vscode-tutorial-docker-extension);
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -33,5 +33,3 @@ ms.locfileid: "89473559"
 
 > [!div class="nextstepaction"]
 > [Вход в Azure выполнен — перейти к шагу 2 >>>](tutorial-deploy-containers-02.md)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

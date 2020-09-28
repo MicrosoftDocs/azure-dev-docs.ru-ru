@@ -1,14 +1,15 @@
 ---
-title: Создание экземпляра Службы приложений Azure с помощью Visual Studio Code
+title: Создание приложения Deno в Службе приложений Azure с помощью Visual Studio Code
 description: Руководство, часть 2. Создание приложения Deno и его запуск в локальной среде
 ms.topic: conceptual
 ms.date: 06/01/2020
-ms.openlocfilehash: 32bd9e1f2b30d57ad573eb9be3fa22b9e246b0e9
-ms.sourcegitcommit: 553da4e9aa988e5bb823364244ea81961cee5bc7
+ms.custom: devx-track-javascript
+ms.openlocfilehash: 6440f75d11bd4eb68dfbcf4e1dcf6b2b27c0496f
+ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85792537"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "90772927"
 ---
 # <a name="test-local-deno-apps"></a>Тестирование локальных приложений Deno
 

@@ -1,15 +1,15 @@
 ---
 title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
-description: 'Руководство, шаг 1: работа с Функциями Azure, общие сведения и предварительные требования.'
+description: Шаг 1 руководства по настройке локальной среды для Функций Azure.
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 740a64785c57694be34f37ef6aa6571b0b3304b7
-ms.sourcegitcommit: 9e282fc2ec967bee181c3034e7e70b28ae308905
+ms.openlocfilehash: 8d7b3d29b1bd8860d87505fd6f3b09a20702f904
+ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89473609"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90772769"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -17,11 +17,11 @@ ms.locfileid: "89473609"
 
 Функции Azure выполняют код в бессерверной среде без необходимости создавать виртуальную машину или публиковать веб-приложение. Расширение "Функции Azure" для Visual Studio Code значительно упрощает процесс использования функций, автоматически обрабатывая многие вопросы конфигурации.
 
-Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку **У меня есть проблема** в конце каждой статьи, чтобы отправить отзыв.
+Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку обратной связи **Эта страница**, которую можно найти в конце каждой статьи.
 
 Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=9bMsdBYy-D0&feature=youtu.be&ocid=AID3006292" target="_blank">Создание Функций Azure с помощью VS Code</a> (YouTube.com). Вам также может быть интересен более длинный доклад: <a href="https://www.youtube.com/watch?v=PV7iy6FPjAY&feature=youtu.be&t=13&ocid=AID3006292" target="_blank">Простая обработка данных с помощью Функций Azure</a> (YouTube.com). 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="configure-your-environment"></a>Настройка среды
 
 - [Подписка Azure](#azure-subscription).
 - [Основные инструменты службы "Функции Azure"](#azure-functions-core-tools).
@@ -54,9 +54,19 @@ ms.locfileid: "89473609"
 
 ### <a name="sign-in-to-azure"></a>Вход в Azure
 
-[!INCLUDE [azure-sign-in](includes/azure-sign-in.md)]
+Установив расширение Azure, войдите в свою учетную запись Azure. Для этого перейдите в обозреватель **Azure**, в разделе **Функции** выберите **Войти в Azure** и следуйте инструкциям в браузере.
 
-### <a name="verify-prerequisites"></a>проверка предварительных требований;
+![Вход в Azure с помощью VS Code](media/tutorial-vs-code-serverless-python/azure-sign-in.png)
+
+После входа убедитесь, что в строке состояния указано **Azure: вход выполнен** и ваши подписки отображаются в обозревателе **Azure**.
+
+![Строка состояния Visual Studio Code, в которой отображается учетная запись Azure](media/tutorial-vs-code-serverless-python/azure-account-status-bar.png)
+
+![Обозреватель Службы приложений Azure Visual Studio Code с отображаемой подпиской](media/tutorial-vs-code-serverless-python/azure-subscription-view.png)
+
+[!INCLUDE [proxy-config](includes/proxy-config.md)]
+
+### <a name="verify-your-environment"></a>Проверка окружения
 
 Чтобы убедиться, что набор средств Azure Functions Core Tools установлен, откройте палитру команд Visual Studio Code (клавишей **F1**) и выберите команду **Терминал: Создание нового интегрированного терминала**. Когда откроется терминал, выполните команду `func`.
 
@@ -70,5 +80,3 @@ ms.locfileid: "89473609"
 
 > [!div class="nextstepaction"]
 > [Вход в Azure выполнен — перейти к шагу 2 >>>](tutorial-vs-code-serverless-python-02.md)
-
-Проблемы? Сообщите о проблеме через сайт GitHub, используя кнопку "Эта страница" в разделе "Обратная связь" внизу этой страницы.

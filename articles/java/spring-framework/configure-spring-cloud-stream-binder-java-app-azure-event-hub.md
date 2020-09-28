@@ -3,17 +3,17 @@ title: Создание приложения Spring Cloud Stream Binder с по�
 description: Настройка приложения Spring Cloud Stream Binder на основе Java, созданного с помощью Spring Boot Initializr и Центров событий Azure.
 services: event-hubs
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 09/11/2020
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 50b6046e8b4435d8e75af1bb8df360be018eb8ec
-ms.sourcegitcommit: 5ab6e90e20a87f9a8baea652befc74158a9b6613
+ms.openlocfilehash: f19f3a8d3e101b6cd8d6e9173e2dd99eae590ef9
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89614300"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831280"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Создание приложения Spring Cloud Stream Binder с помощью Центров событий Azure
 
@@ -40,38 +40,41 @@ ms.locfileid: "89614300"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
-1. Щелкните **+Создать ресурс** и выполните поиск по запросу *Центры событий**.
+1. Выберите **+ Создать ресурс** и выполните поиск по фразе *Центры событий*.
 
-1. Нажмите кнопку **Создать**.
+1. Выберите **Создать**.
 
-   ![Создание пространства имен концентратора событий Azure][IMG01]
+   >[!div class="mx-imgBorder"]
+   >![Создание пространства имен концентратора событий Azure][IMG01]
 
 1. На странице **Создание пространства имен** введите такую информацию:
 
-   * Уникальное **имя**, которое станет частью URI для пространства имен концентратора событий. Например, если вы зададите **wingtiptoys** в качестве **имени**, URI примет вид *wingtiptoys.servicebus.windows.net*.
-   * Ценовая категория.
    * Выберите **подписку** для пространства имен.
    * Укажите, следует ли создать новую **группу ресурсов** для пространства имен или использовать существующую.
+   * Уникальное **имя пространства имен**, которое станет частью URI для пространства имен концентратора событий. Например, если в поле **Имя пространства имен** вы укажете *wingtiptoys-space*, URI примет вид `wingtiptoys-space.servicebus.windows.net`.
    * Укажите **расположение** для пространства имен Центров событий.
+   * Ценовая категория.
    * Можно также указать **единицы пропускной способности** для пространства имен.
+   
+   >[!div class="mx-imgBorder"]
+   >![Создание пространства имен для концентратора событий Azure][IMG02]
 
-   ![Создание пространства имен для концентратора событий Azure][IMG02]
-
-1. Указав эти параметры, щелкните **Создать**, чтобы создать пространство имен.
+1. Указав приведенные выше параметры, выберите **Просмотр и создание**, проверьте спецификации и щелкните **Создать**, чтобы создать пространство имен.
 
 ## <a name="create-an-azure-event-hub-in-your-namespace"></a>Создание концентратора событий Azure в пространстве имен
 
-Развернув пространство имен, можно создать в нем концентратор событий.
+После развертывания пространства имен выберите **Перейти к ресурсу**, чтобы открыть страницу **Пространство имен Центров событий**, где можно создать концентратор событий в пространстве имен.
 
-1. Перейдите к пространству имен, созданному на предыдущем шаге.
+1. Перейдите к пространству имен, созданному по инструкциям из предыдущего раздела.
 
-1. Щелкните **+Концентратор событий** в строке меню сверху.
+1. Выберите **+ Центры событий** в строке меню вверху.
 
 1. Присвойте имя концентратору событий.
 
-1. Нажмите кнопку **Создать**.
+1. Выберите **Создать**.
 
-   ![Создание концентратора событий][IMG05]
+   >[!div class="mx-imgBorder"]
+   >![Создание концентратора событий][IMG05]
 
 ### <a name="create-an-azure-storage-account-for-your-event-hub-checkpoints"></a>Создание учетной записи хранения для контрольных точек концентратора событий
 
@@ -79,7 +82,7 @@ ms.locfileid: "89614300"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/>.
 
-1. Щелкните **+Создать**, **Служба хранилища**, **Учетная запись хранения**.
+1. Выберите **+ Создать ресурс**, **Хранилище** и **Учетная запись хранения**.
 
 1. На странице **Создание учетной записи хранения** введите следующие сведения:
 
@@ -87,10 +90,11 @@ ms.locfileid: "89614300"
    * Укажите, следует ли создать новую **группу ресурсов** для учетной записи хранения или использовать существующую.
    * Введите уникальное **имя** учетной записи хранения.
    * Укажите **расположение** для учетной записи хранения.
+   
+   >[!div class="mx-imgBorder"]
+   >![Создание учетной записи хранения Azure][IMG08]
 
-   ![Создание учетной записи хранения Azure][IMG08]
-
-1. Указав эти параметры, щелкните **Просмотр и создание**, чтобы создать учетную запись хранения.
+1. Указав эти параметры, выберите **Просмотр и создание**, чтобы создать учетную запись хранения.
 
 1. Проверьте спецификации и щелкните **Создать**.  Развертывание займет несколько минут.
 
@@ -103,18 +107,19 @@ ms.locfileid: "89614300"
 1. Задайте такие параметры:
 
    * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.
-   * Выберите версию **Spring Boot** не ниже версии 2.0.
+   * Выберите для **Spring Boot** версию не ниже 2.2.
    * Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
-   * Добавьте зависимость **Web** (Веб).
+   * Добавьте зависимость *Web* (Веб).
 
-      ![Основные параметры Spring Initializr][SI01]
+   >[!div class="mx-imgBorder"]
+   >![Основные параметры Spring Initializr][SI01]
 
    > [!NOTE]
    >
-   > Spring Initializr использует имена в полях **Group** (Группа) и **Artifact** (Артефакт) для создания имени пакета, например *com.example.wintiptoys*.
+   > Spring Initializr использует имена в полях **Group** (Группа) и **Artifact** (Артефакт) для создания имени пакета, например *com.contoso.eventhubs.sample*.
    >
 
-1. Указав эти параметры, щелкните **Generate Project** (Создать проект).
+1. Указав описанные выше параметры, щелкните **GENERATE CTRL+** (Создать).
 
 1. При появлении запроса скачайте проект на локальный компьютер.
 
@@ -124,11 +129,11 @@ ms.locfileid: "89614300"
 
 1. Найдите файл *pom.xml* в корневой папке приложения, например так:
 
-   `C:\SpringBoot\eventhub\pom.xml`
+   *C:\SpringBoot\eventhubs-sample\pom.xml*
 
    -или-
 
-   `/users/example/home/eventhub/pom.xml`
+   */users/example/home/eventhubs-sample/pom.xml*
 
 1. Откройте файл *pom.xml* в текстовом редакторе и добавьте начальное приложение Spring Cloud Stream Binder для концентратора событий Azure в список `<dependencies>`:
 
@@ -148,14 +153,14 @@ ms.locfileid: "89614300"
 
 1. Перейдите к каталогу *resources* приложения Spring Boot, например так:
 
-   ```shell
-   cd C:\SpringBoot\eventhub\src\main\resources
+   ```bash
+   cd C:\SpringBoot\eventhubs-sample\src\main\resources
    ```
 
    -или-
 
-   ```shell
-   cd /users/example/home/eventhub/src/main/resources
+   ```bash
+   cd /users/example/home/eventhubs-sample/src/main/resources
    ```
 
 1. Вход в учетную запись Azure:
@@ -181,7 +186,7 @@ ms.locfileid: "89614300"
        "state": "Enabled",
        "tenantId": "22222222-2222-2222-2222-222222222222",
        "user": {
-         "name": "gena.soto@wingtiptoys.com",
+         "name": "user@contoso.com",
          "type": "user"
        }
      }
@@ -221,11 +226,11 @@ ms.locfileid: "89614300"
 
 1. Найдите файл *application.properties* в каталоге *resources* приложения, например так:
 
-   `C:\SpringBoot\eventhub\src\main\resources\application.properties`
+   *C:\SpringBoot\eventhubs-sample\src\main\resources\application.properties*
 
    -или-
 
-   `/users/example/home/eventhub/src/main/resources/application.properties`
+   */users/example/home/eventhubs-sample/src/main/resources/application.properties*
 
 2. Откройте файл *application.properties* в текстовом редакторе, добавьте следующие строки и замените примеры значений соответствующими параметрами концентратора событий:
 
@@ -242,7 +247,7 @@ ms.locfileid: "89614300"
    ```
    Где:
 
-   |                          Поле                           |                                                                                   Description                                                                                    |
+   |                          Поле                           |                                                                                   Описание                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        `spring.cloud.azure.credential-file-path`         |                                                    Определяет файл учетных данных Azure, который был создан ранее в этом примере.                                                    |
    |           `spring.cloud.azure.resource-group`            |                                                      Определяет группу ресурсов Azure, которая содержит концентратор событий Azure.                                                      |
@@ -263,26 +268,28 @@ ms.locfileid: "89614300"
 
 1. Найдите файл основного приложения Java в каталоге пакета приложения, например:
 
-   `C:\SpringBoot\eventhub\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java`
+   *C:\SpringBoot\eventhubs-sample\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java*
 
    -или-
 
-   `/users/example/home/eventhub/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java`
+   */users/example/home/eventhubs-sample/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java*
 
 1. Откройте файл основного приложения Java в текстовом редакторе и добавьте в него следующие строки:
 
    ```java
-   package com.wingtiptoys.eventhub;
-
-   import org.springframework.boot.SpringApplication;
-   import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-   @SpringBootApplication
-   public class EventhubApplication {
-      public static void main(String[] args) {
-         SpringApplication.run(EventhubApplication.class, args);
-      }
-   }
+    package com.contoso.eventhubs.sample;
+    
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    
+    @SpringBootApplication
+    public class EventhubsSampleApplication {
+    
+        public static void main(String[] args) {
+            SpringApplication.run(EventhubsSampleApplication.class, args);
+        }
+    
+    }
    ```
 
 1. Сохраните и закройте файл основного приложения Java.
@@ -291,31 +298,31 @@ ms.locfileid: "89614300"
 
 1. В каталоге пакета приложения создайте файл Java с именем *EventhubSource.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
-   ```java
-   package com.wingtiptoys.eventhub;
-
-   import org.springframework.beans.factory.annotation.Autowired;
-   import org.springframework.cloud.stream.annotation.EnableBinding;
-   import org.springframework.cloud.stream.messaging.Source;
-   import org.springframework.messaging.support.GenericMessage;
-   import org.springframework.web.bind.annotation.PostMapping;
-   import org.springframework.web.bind.annotation.RequestBody;
-   import org.springframework.web.bind.annotation.RestController;
-
-   @EnableBinding(Source.class)
-   @RestController
-   public class EventhubSource {
-
-      @Autowired
-      private Source source;
-
-      @PostMapping("/messages")
-      public String postMessage(@RequestBody String message) {
-         this.source.output().send(new GenericMessage<>(message));
-         return message;
-      }
-   }
-   ```
+    ```java
+    package com.contoso.eventhubs.sample;
+    
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.cloud.stream.annotation.EnableBinding;
+    import org.springframework.cloud.stream.messaging.Source;
+    import org.springframework.messaging.support.GenericMessage;
+    import org.springframework.web.bind.annotation.PostMapping;
+    import org.springframework.web.bind.annotation.RequestBody;
+    import org.springframework.web.bind.annotation.RestController;
+    
+    @EnableBinding(Source.class)
+    @RestController
+    public class EventhubSource {
+    
+        @Autowired
+        private Source source;
+    
+        @PostMapping("/messages")
+        public String postMessage(@RequestBody String message) {
+            this.source.output().send(new GenericMessage<>(message));
+            return message;
+        }
+    }
+    ```
 1. Сохраните и закройте файл *EventhubSource.java*.
 
 ### <a name="create-a-new-class-for-the-sink-connector"></a>Создание класса для соединителя приемника
@@ -323,10 +330,10 @@ ms.locfileid: "89614300"
 1. В каталоге пакета приложения создайте файл Java с именем *EventhubSink.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
    ```java
-   package com.wingtiptoys.eventhub;
+   package com.contoso.eventhubs.sample;
 
    import com.microsoft.azure.spring.integration.core.AzureHeaders;
-   import com.microsoft.azure.spring.integration.core.api.Checkpointer;
+   import com.microsoft.azure.spring.integration.core.api.reactor.Checkpointer;
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
    import org.springframework.cloud.stream.annotation.EnableBinding;
@@ -360,29 +367,32 @@ ms.locfileid: "89614300"
 
 1. Откройте командную строку и перейдите из каталога в папку с файлом *pom.xml*, например:
 
-   `cd C:\SpringBoot\eventhub`
-
+   ```bash
+    cd C:\SpringBoot\eventhubs-sample
+   ```
    -или-
 
-   `cd /users/example/home/eventhub`
+   ```bash
+   cd /users/example/home/eventhubs-sample
+   ```
 
 1. Создайте приложение Spring Boot с помощью Maven и запустите его, например, следующим образом:
 
-   ```shell
-   mvn clean package
+   ```bash
+   mvn clean package -Dmaven.test.skip=true
    mvn spring-boot:run
    ```
 
-1. После запуска приложения можно использовать средство *curl*, чтобы протестировать приложение, например:
+1. После запуска приложения можно использовать средство `curl`, чтобы протестировать приложение, например:
 
-   ```shell
+   ```bash
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
    В журналах приложения должна появиться запись "hello". Пример:
 
-   ```shell
-   [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'
-   [pool-10-thread-7] INFO com.wingtiptoys.eventhub.EventhubSink - Message 'hello' successfully checkpointed
+   ```text
+   2020-09-11 15:11:12.138  INFO 7616 --- [      elastic-4] c.contoso.eventhubs.sample.EventhubSink  : New message received: 'hello'
+   2020-09-11 15:11:12.406  INFO 7616 --- [ctor-http-nio-1] c.contoso.eventhubs.sample.EventhubSink  : Message 'hello' successfully checkpointed
    ```
 
 ## <a name="next-steps"></a>Дальнейшие действия
@@ -390,7 +400,7 @@ ms.locfileid: "89614300"
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Spring в Azure](/azure/developer/java/spring-framework)
+> [Spring в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -409,7 +419,7 @@ ms.locfileid: "89614300"
 <!-- URL List -->
 
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
-[Azure для разработчиков Java]: /azure/developer/java/
+[Azure для разработчиков Java]: ../index.yml
 [Working with Azure DevOps and Java]: /azure/devops/ (Работа с Azure DevOps и Java)
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
@@ -420,13 +430,7 @@ ms.locfileid: "89614300"
 
 [IMG01]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-01.png
 [IMG02]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-02.png
-[IMG03]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-03.png
-[IMG04]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-04.png
 [IMG05]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-05.png
-[IMG06]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-06.png
-[IMG07]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-07.png
 [IMG08]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-event-hub-08.png
 
 [SI01]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-project-01.png
-[SI02]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-project-02.png
-[SI03]: media/configure-spring-cloud-stream-binder-java-app-azure-event-hub/create-project-03.png

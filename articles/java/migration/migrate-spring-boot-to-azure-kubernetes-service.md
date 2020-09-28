@@ -1,17 +1,17 @@
 ---
 title: Перенос приложений Spring Boot для выполнения в Службе Azure Kubernetes
 description: Сведения о том, что важно учитывать при переносе существующего приложения Spring Boot для выполнения в контейнере Службы Azure Kubernetes.
-author: mriem
+author: mnriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 4/10/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 84e7bc49d8e52081465ce18b90c3ffe14d41f75c
-ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+ms.openlocfilehash: 4d3da50042074b724f614b718ceb0edc7fb83077
+ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88662995"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90831710"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-kubernetes-service"></a>Перенос приложений Spring Boot в Службу Azure Kubernetes
 
@@ -125,9 +125,9 @@ cf env <Application Name>
 
 Затем вы можете выполнить действия, описанные в следующих разделах, насколько они применимы. В качестве отправной точки для работы с приложением Spring Boot можно использовать [репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart).
 
-#### <a name="configure-keyvault-flexvolume"></a>Настройка хранилища ключей FlexVolume
+#### <a name="configure-azure-key-vault-provider-for-secrets-store-csi-driver"></a>Настройка поставщика услуг Azure Key Vault для драйвера CSI хранилища секретов
 
-Создайте хранилище ключей в Azure и укажите все необходимые секреты. Дополнительные сведения см. в [кратком руководстве Настройка и получение секрета из Azure Key Vault с помощью Azure CLI](/azure/key-vault/quick-create-cli). Затем настройте [хранилище ключей FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol/blob/master/README.md), чтобы сделать эти секреты доступными для групп pod.
+Создайте хранилище ключей в Azure и укажите все необходимые секреты. Дополнительные сведения см. в [кратком руководстве Настройка и получение секрета из Azure Key Vault с помощью Azure CLI](/azure/key-vault/quick-create-cli). Затем настройте [поставщик Azure Key Vault для драйвера CSI хранилища секретов](https://github.com/Azure/secrets-store-csi-driver-provider-azure), чтобы сделать эти секреты доступными для объектов pod.
 
 Кроме того, потребуется обновить скрипт запуска, который выполняет начальную загрузку приложения Spring Boot. Этот скрипт должен перед запуском приложения импортировать сертификаты в хранилище ключей, используемое для Spring Boot.
 
@@ -187,11 +187,11 @@ docker push ${MY_ACR}.azurecr.io/${MY_APP_NAME}
 
 Более подробные сведения о создании и хранении образов контейнеров в Azure см. в модуле [Создание и хранение образов контейнеров с помощью службы "Реестр контейнеров Azure"](/learn/modules/build-and-store-container-images/).
 
-Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете включить в развертывание настраиваемое хранилище ключей, которое добавляется в виртуальную машину Java при запуске. Оно будет добавляться автоматически, если вы разместите файл хранилища ключей в каталог */opt/spring-boot/mycert.crt*. Для этого файл можно добавить непосредственно в Dockerfile или применить Key Vault FlexVolume, как упоминалось ранее.
+Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете включить в развертывание настраиваемое хранилище ключей, которое добавляется в виртуальную машину Java при запуске. Оно будет добавляться автоматически, если вы разместите файл хранилища ключей в каталог */opt/spring-boot/mycert.crt*. Для этого файл можно добавить непосредственно в Dockerfile или применить поставщик Azure Key Vault для драйвера CSI хранилища секретов, как упоминалось ранее.
 
 Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете также включить Application Insights, указав переменную среды `APPLICATIONINSIGHTS_CONNECTION_STRING` в файле развертывания Kubernetes со следующим значением: `InstrumentationKey=00000000-0000-0000-0000-000000000000`. Дополнительные сведения см. в статье [Мониторинг приложений Java без написания кода (Azure Monitor Application Insights)](/azure/azure-monitor/app/java-in-process-agent).
 
-Если вам не требуется настраивать образ Docker, можно изучить применение [подключаемого модуля Maven Jib](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) или развертывание в AKS. Дополнительные сведения см. в статье [Развертывание приложения Spring Boot Application в Службе Azure Kubernetes](/azure/developer/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes).
+Если вам не требуется настраивать образ Docker, можно изучить применение [подключаемого модуля Maven Jib](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) или развертывание в AKS. Дополнительные сведения см. в статье [Развертывание приложения Spring Boot Application в Службе Azure Kubernetes](../spring-framework/deploy-spring-boot-java-app-on-kubernetes.md).
 
 [!INCLUDE [provision-a-public-ip-address](includes/provision-a-public-ip-address.md)]
 
