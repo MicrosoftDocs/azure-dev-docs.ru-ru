@@ -13,6 +13,10 @@
       href: get-started-powershell.md
 - name: Практические руководства
   items:
+    - name: Установка и настройка
+      items:
+        - name: Хранение состояния Terraform в службе хранилища Azure
+          href: store-state-in-azure-storage.md
     - name: Служба приложений
       items:
         - name: Слоты развертывания поставщика Azure и Terraform
@@ -37,7 +41,7 @@
       items:
         - name: Виртуальная машина с инфраструктурой
           href: create-linux-virtual-machine-with-infrastructure.md
-        - name: Кластер виртуальной машины с модулями Terraform
+        - name: Настройка кластера виртуальной машины
           href: create-vm-cluster-module.md
         - name: Кластер виртуальной машины с Terraform и HCL
           href: create-vm-cluster-with-infrastructure.md
@@ -47,10 +51,6 @@
           href: create-vm-scaleset-network-disks-using-packer-hcl.md
 - name: Учебники
   items:
-    - name: Установка и настройка
-      items:
-        - name: Хранение состояния Terraform в службе хранилища Azure
-          href: store-state-in-azure-storage.md
     - name: Сети
       items:
         - name: Звездообразная топология
