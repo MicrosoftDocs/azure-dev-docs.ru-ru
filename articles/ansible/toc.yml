@@ -109,7 +109,7 @@
     - name: Выпуски и компоненты
       href: module-version-matrix.md
     - name: Все модули для Azure
-      href: 'https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules#azure'
+      href: 'https://docs.ansible.com/ansible/2.9/modules/list_of_cloud_modules.html#azure'
 - name: Ресурсы
   items:
     - name: Расширение Visual Studio Code для Ansible
