@@ -10,12 +10,12 @@ ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 97825b81869ac6d2845576bd77a972d4573a624d
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: ee48999f7d83857c4992e74ad4dc4b248bfe195b
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831760"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365217"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 
@@ -102,7 +102,7 @@ ms.locfileid: "90831760"
    spring.application.name=[your app name]
    ```
 
-   См. подробнее о точной настройке Application Insights в [файле сведений для начального набора Spring Boot в Application Insights](https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md).
+   См. подробнее о точной настройке Application Insights в [файле сведений для начального набора Spring Boot в Application Insights](https://github.com/MicrosoftDocs/azure-dev-docs/blob/master/articles/java/spring-framework/spring-boot-starters-for-azure.md).
 
    > [!NOTE]
    > 
@@ -282,7 +282,7 @@ Application Insights поддерживает автоматический сб�
 
 См. подробнее о **[Application Insights]** .
 
-Дополнительные сведения о других настройках начального приложения Spring Boot для Application Insights см. по [этой ссылке](https://github.com/Microsoft/ApplicationInsights-Java/blob/master/azure-application-insights-spring-boot-starter/README.md).
+Дополнительные сведения о других настройках начального приложения Spring Boot для Application Insights см. по [этой ссылке](https://github.com/MicrosoftDocs/azure-dev-docs/blob/master/articles/java/spring-framework/spring-boot-starters-for-azure.md).
 
 Запросы на новые функции и сообщения о потенциальных ошибках оставляйте в нашем репозитории [GitHub](https://github.com/Microsoft/ApplicationInsights-Java/issues).
 

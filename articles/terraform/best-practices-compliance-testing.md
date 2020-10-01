@@ -4,12 +4,12 @@ description: Узнайте, как применить проверку соот
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 7abb4072d923d4d5ec4fa3df6251f07576dba3bc
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 26b32beabaa4526a79c28639fd6f7c68b7a7d49d
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241316"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401694"
 ---
 # <a name="tutorial-compliance-testing-with-terraform-and-azure"></a>Руководство по тестированию соответствия с помощью Terraform и Azure
 
@@ -20,8 +20,6 @@ ms.locfileid: "88241316"
 > [!div class="checklist"]
 > * Узнайте, когда следует использовать тестирование соответствия
 > * Узнайте, как выполнять тестирование соответствия.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные условия
 
@@ -196,6 +194,8 @@ Scenario Outline: Ensure that specific tags are defined
     ```
 
     ![Пример успешного прохождения теста](media/best-practices-compliance-testing/best-practices-compliance-testing-tagging-succeed.png)
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие шаги
 

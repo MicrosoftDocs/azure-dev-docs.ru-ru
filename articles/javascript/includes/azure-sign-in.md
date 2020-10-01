@@ -1,11 +1,11 @@
 ---
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 45c027d261a091e6c5e2abaa1ea1d4f55f5ad23f
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 659f538569d2e2155c0eccd3c08684ee835e7449
+ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "90773095"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91208785"
 ---
 Установив расширение Azure, войдите в свою учетную запись Azure в VS Code. Для этого перейдите в обозреватель **Azure**, щелкните **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).
 

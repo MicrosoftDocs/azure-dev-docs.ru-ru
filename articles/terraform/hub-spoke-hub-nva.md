@@ -4,12 +4,12 @@ description: В этом руководстве описывается, как �
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 1bc9b2b899157985394165171adc76d988fe7e6a
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: b7276d3807f00e828c89ee00ffcde2e6e2f0b9a5
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241136"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401463"
 ---
 # <a name="tutorial-create-a-hub-virtual-network-appliance-in-azure-using-terraform"></a>Руководство по Создание устройства виртуальной сети концентратора в Azure с помощью Terraform
 
@@ -24,8 +24,6 @@ Azure поддерживает большое количество виртуа�
 > * создание виртуальной машины сети-концентратора, которая выступает как устройство, с помощью Terraform;
 > * включение маршрутов с использованием расширений CustomScript с помощью Terraform;
 > * создание таблицы маршрутов шлюзов со звездообразной топологией с помощью Terraform.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -270,6 +268,8 @@ Azure поддерживает большое количество виртуа�
     ```
 
 1. Сохраните файл и закройте редактор.
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

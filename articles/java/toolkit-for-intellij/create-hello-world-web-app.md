@@ -13,12 +13,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java
-ms.openlocfilehash: b340802d861ad1dbe1b4f118734e527cdefeec21
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: af85a31f39f87c38e378fc1cf4254053447b9dbd
+ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831618"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586177"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью IntelliJ
 
@@ -61,7 +61,7 @@ ms.locfileid: "90831618"
 
 1. В диалоговом окне **New Project** (Новый проект) выберите **Maven** и убедитесь, что установлен флажок **Create from Archetype** (Создать из архетипа). В списке вариантов выберите **maven-archetype-webapp**, а затем щелкните **Далее**.
 
-   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Выбор варианта maven-archetype-webapp."::: 
+   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Вход в Azure из IntelliJ."::: 
 
 1. Раскройте список **Artifact Coordinates** (Координаты артефакта), чтобы просмотреть все поля ввода и указать приведенные ниже сведения о новом веб-приложении, а затем щелкните **Далее**.
 
@@ -80,7 +80,7 @@ ms.locfileid: "90831618"
     </body>
    </html>
    ```
-   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Открытие файла index.jsp.":::
+   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Вход в Azure из IntelliJ.":::
 
 ## <a name="deploying-web-app-to-azure"></a>Развертывание веб-приложения в Azure
 
@@ -90,7 +90,7 @@ ms.locfileid: "90831618"
 
    a. Щелкните **No available webapp, click to create a new one** (Нет доступных веб-приложений, щелкните для создания нового), чтобы создать веб-приложение. Также можно выбрать действие **Create New WebApp** (Создать веб-приложение) из раскрывающегося списка веб-приложений, если в подписке есть существующие веб-приложения.
 
-      :::image type="content" source="media/create-hello-world-web-app/deploy-to-azure-webapps.png" alt-text="Диалоговое окно развертывания в Azure.":::
+      :::image type="content" source="media/create-hello-world-web-app/deploy-to-azure-webapps.png" alt-text="Вход в Azure из IntelliJ.":::
 
    Во всплывающем окне **Create WebApp** (Создание веб-приложения) укажите следующие сведения и щелкните **ОК**: 
 
@@ -107,7 +107,7 @@ ms.locfileid: "90831618"
 
 1. Перейти к своему веб-приложению можно с помощью ссылки, предоставленной в сообщении о состоянии.
 
-   :::image type="content" source="media/create-hello-world-web-app/browse-web-app.png" alt-text="Просмотр веб-приложения.":::
+   :::image type="content" source="media/create-hello-world-web-app/browse-web-app.png" alt-text="Вход в Azure из IntelliJ.":::
 
 ## <a name="managing-deploy-configurations"></a>Управление конфигурациями развертывания
 
@@ -116,7 +116,7 @@ ms.locfileid: "90831618"
 
 1. Перед началом развертывания веб-приложения вы можете изменить предложенные по умолчанию параметры, щелкнув раскрывающееся меню веб-приложения и выбрав **Edit Configurations** (Изменить конфигурации).
 
-   :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Пункт меню "Изменить конфигурацию"":::.
+   :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Вход в Azure из IntelliJ.":::.
 
 1. В диалоговом окне **Run/Debug Configurations** (Конфигурации выполнения и отладки) можно изменить любые параметры по умолчанию. Нажмите кнопку **ОК**, чтобы сохранить настройки.
 
@@ -145,7 +145,6 @@ ms.locfileid: "90831618"
 [Обзор веб-приложений]: /azure/app-service/app-service-web-overview
 [Apache Tomcat]: http://tomcat.apache.org/
 [Jetty]: http://www.eclipse.org/jetty/
-[Legacy Version]: create-hello-world-web-app-legacy-version.md
 [intelliJ-sign-in-instructions]: sign-in-instructions.md
 
 <!-- IMG List -->

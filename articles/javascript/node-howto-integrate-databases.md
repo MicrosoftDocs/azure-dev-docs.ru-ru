@@ -1,15 +1,15 @@
 ---
 title: Использование баз данных Azure с приложениями Node.js
 description: Azure предлагает несколько разных баз данных для использования с веб-приложениями и другими приложениям Node.js.
-ms.topic: article
+ms.topic: how-to
 ms.date: 08/20/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: efee87ce711616de35979a696539e47784c1868c
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: devx-track-js
+ms.openlocfilehash: cc104e09cfcdebc221220769d1b1c33fa9ce173e
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772967"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364927"
 ---
 # <a name="how-to-integrate-azure-databases-in-nodejs-apps"></a>Интеграция базы данных Azure в приложения Node.js
 

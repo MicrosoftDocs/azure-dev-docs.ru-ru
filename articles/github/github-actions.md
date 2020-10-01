@@ -6,12 +6,12 @@ ms.author: ushan
 ms.topic: conceptual
 ms.service: azure
 ms.date: 05/05/2020
-ms.openlocfilehash: 29d6f40a54cf503d12b8b7b87b908e7d05a8857d
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: f3245aa3d75510352d89d26c1c61825dbac1e2c8
+ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982566"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493094"
 ---
 # <a name="deploy-to-azure-using-github-actions"></a>Развертывание в Azure с помощью GitHub Actions
 
@@ -75,7 +75,7 @@ GitHub Actions содержат предварительно настроенн�
 - [Действие Azure/webapps-deploy](https://github.com/Azure/webapps-deploy)
 
 Развертывание статического веб-приложения
-- [Azure/static-web-apps-deploy](https://docs.microsoft.com/azure/static-web-apps/getting-started?tabs=angular)
+- [Azure/static-web-apps-deploy](/azure/static-web-apps/getting-started?tabs=angular)
 
 
 Настройте параметры приложения и строки подключения с помощью действий:

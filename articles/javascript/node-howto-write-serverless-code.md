@@ -1,15 +1,15 @@
 ---
 title: Запись бессерверного кода Node.js с помощью функций Azure
 description: Руководство по использованию функций Azure для создания и развертывания бессерверного кода с помощью функций Azure.
-ms.topic: article
+ms.topic: how-to
 ms.date: 08/19/2019
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
-ms.openlocfilehash: 5f69fa073647527516452e7a5cdf77d6b5a8caa8
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
+ms.openlocfilehash: f967f97650b13ca3f491aec4fe9d63befbeea0aa
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772957"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365267"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Использование Функций Azure для написания бессерверного кода Node.js в Azure
 

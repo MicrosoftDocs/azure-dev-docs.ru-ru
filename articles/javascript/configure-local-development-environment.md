@@ -3,13 +3,13 @@ title: Настройка локальной среды JavaScript для раз
 description: Сведения о настройке локальной среды разработки JavaScript для работы с Azure, включая редактор, библиотеки Azure SDK, дополнительные средства и необходимые учетные данные для аутентификации библиотек.
 ms.date: 09/22/2020
 ms.topic: conceptual
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 93d76b4268d9d9b1533599ce474fe0c554723e28
-ms.sourcegitcommit: 823d5e5b8bbac36fa08a578a0eb2efaa0239bfb7
+ms.custom: devx-track-js
+ms.openlocfilehash: 6d9f86b026a7104e79228d78d5ac27649049a8a4
+ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91128953"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91208685"
 ---
 # <a name="configure-your-local-javascript-dev-environment-for-azure"></a>Настройка локальной среды разработки JavaScript для Azure
 

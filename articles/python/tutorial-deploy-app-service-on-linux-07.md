@@ -4,12 +4,12 @@ description: Шаг руководства 7. Очистка ресурсов A
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: cc1acdd316406d9269c97a4f5b25f465d0303509
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 523a1bb305fbaf566181f87c4affa0dd251e93a5
+ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831480"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91209378"
 ---
 # <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -29,7 +29,7 @@ ms.locfileid: "90831480"
 
 Для VS Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
-![Расширения Azure для Visual Studio Code](media/deploy-containers/azure-extensions-for-visual-studio-code.png)
+![Расширения Azure для Visual Studio Code](media/deploy-azure/azure-extensions-for-visual-studio-code.png)
 
 Некоторые популярные расширения:
 

@@ -4,12 +4,12 @@ description: Узнайте, как с помощью Terratest тестиров
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: f174c6c3a4a91fe47ded8ade8826ce9c4c09af65
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ec42182fd20ce073f727b8096d15e2a87a3c1207
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241066"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401704"
 ---
 # <a name="tutorial-test-terraform-modules-in-azure-using-terratest"></a>Руководство по Тестирование модулей Terraform в Azure с помощью Terratest
 
@@ -27,14 +27,12 @@ ms.locfileid: "88241066"
 - **Тестовые случаи написаны на языке Go.** Большинство разработчиков, использующих Terraform, работают с Go. Если это ваш случай, вам не нужно осваивать еще один язык для использования Terratest.
 - **Расширяемая инфраструктура**. Вы можете расширить дополнительные функции, включая связанные с Azure, на Terratest.
 
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
-
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 - **Язык программирования Go**. Тестовые случаи Terraform написаны на языке [Go](https://golang.org/dl/).
 - **dep**. [dep](https://github.com/golang/dep#installation) — это средство управления зависимостями для Go.
-- **Azure CLI.** [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) — это программа командной строки, которую можно использовать для управления ресурсами Azure. (Terraform поддерживает проверку подлинности в Azure с помощью субъекта-службы или [через Azure CLI](https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html).)
+- **Azure CLI.** [Azure CLI](/cli/azure/install-azure-cli) — это программа командной строки, которую можно использовать для управления ресурсами Azure. (Terraform поддерживает проверку подлинности в Azure с помощью субъекта-службы или [через Azure CLI](https://www.terraform.io/docs/providers/azurerm/authenticating_via_azure_cli.html).)
 - **mage**. Мы используем [исполняемый файл mage](https://github.com/magefile/mage/releases), чтобы показать, как упростить выполнение случаев Terratest. 
 
 ## <a name="create-a-static-webpage-module"></a>Создание модуля статической веб-страницы
@@ -521,6 +519,8 @@ mage
 **Необязательно. Установка переменных среды субъекта-службы для выполнения тестов приемки**
  
 Вместо выполнения команды `az login` перед тестом проверку подлинности Azure можно выполнить, задав переменные среды субъекта-службы. Terraform выводит [список имен переменных среды](https://www.terraform.io/docs/providers/azurerm/index.html#testing). (Требуются только первые четыре переменных среды.) Terraform также выводит подробные инструкции о том, как [получить значение этих переменных среды](https://www.terraform.io/docs/providers/azurerm/authenticating_via_service_principal.html).
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

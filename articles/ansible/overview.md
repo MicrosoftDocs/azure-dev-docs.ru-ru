@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, overview, cloud provision, configuration manag
 ms.topic: overview
 ms.date: 08/13/2020
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 2bd996a93952df1f52c2a007d73f7f37e4e0f132
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 9eb90921a0d44e138c331eb716700feb85e8aa9d
+ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88239966"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586105"
 ---
 # <a name="using-ansible-with-azure"></a>Использование Ansible с Azure
 
@@ -24,9 +24,9 @@ ms.locfileid: "88239966"
 
 ## <a name="ansible-modules"></a>Модули Ansible
 
-Ansible содержит набор [модулей Ansible](https://docs.ansible.com/ansible/latest/modules_by_category.html), которые можно выполнять непосредственно на удаленных узлах или с помощью [сборников схем](https://docs.ansible.com/ansible/latest/playbooks.html). Пользователи могут создавать собственные модули. Модули можно использовать для управления системными ресурсами, например службами, пакетами или файлами, или для выполнения системных команд.
+Ansible содержит набор [модулей Ansible](https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html), которые можно выполнять непосредственно на удаленных узлах или с помощью [сборников схем](https://docs.ansible.com/ansible/latest/playbooks.html). Пользователи могут создавать собственные модули. Модули можно использовать для управления системными ресурсами, например службами, пакетами или файлами, или для выполнения системных команд.
 
-Для взаимодействия со службами Azure в Ansible есть набор [облачных модулей Ansible](https://docs.ansible.com/ansible/list_of_cloud_modules.html#azure). Эти модули позволяют создавать и координировать инфраструктуру в Azure. 
+Для взаимодействия со службами Azure в Ansible есть набор [облачных модулей Ansible](https://docs.ansible.com/ansible/2.9/modules/list_of_cloud_modules.html#azure). Эти модули позволяют создавать и координировать инфраструктуру в Azure. 
 
 ## <a name="migrate-existing-workload-to-azure"></a>Миграция существующей рабочей нагрузки в Azure
 

@@ -5,12 +5,12 @@ keywords: Azure DevOps, Terraform, AKS, Kubernetes
 ms.topic: how-to
 ms.date: 03/09/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 726f4544f4c417792d784dfaddf93a3d79eaec9e
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ccf5855f414b233f97642f60a4f52c99848b34cd
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241256"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401654"
 ---
 # <a name="create-a-kubernetes-cluster-with-azure-kubernetes-service-using-terraform"></a>созданию кластера Kubernetes с помощью Службы Azure Kubernetes и Terraform
 
@@ -23,15 +23,13 @@ ms.locfileid: "88241256"
 > * создание кластера Kubernetes с помощью AKS и Terraform;
 > * проверка доступности кластера Kubernetes с помощью средства kubectl.
 
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
-
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
 - **Настройка Terraform.** Следуйте указаниям в статье [Terraform и настройка доступа к Azure](get-started-cloud-shell.md).
 
-- **Субъект-служба Azure.** Следуйте инструкциям по **созданию субъекта-службы** в руководстве по [созданию субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Запишите значения для `appId`, `displayName`, `password` и `tenant`.
+- **Субъект-служба Azure.** Следуйте инструкциям по **созданию субъекта-службы** в руководстве по [созданию субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli). Запишите значения для `appId`, `displayName`, `password` и `tenant`.
 
 ## <a name="create-the-directory-structure"></a>Создание структуры каталога
 
@@ -401,6 +399,8 @@ Terraform отслеживает состояние локально через 
 ## <a name="monitor-health-and-logs"></a>Мониторинг работоспособности и журналов
 
 После создания кластера AKS для сбора метрик работоспособности узлов кластера и модулей pod включается мониторинг. Эти метрики работоспособности доступны на портале Azure. Дополнительные сведения о мониторинге работоспособности контейнеров см. в разделе [Включение мониторинга для существующих управляемых кластеров](/azure/azure-monitor/insights/container-insights-overview).
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

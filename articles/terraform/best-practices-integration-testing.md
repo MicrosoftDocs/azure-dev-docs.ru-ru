@@ -4,12 +4,12 @@ description: Сведения об интеграционном тестиров
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: d6c8f9c419070d734c3c848163c52e6255d5512a
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 73f7c279948101af509ba5e3120b1af650f38ca1
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832000"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401734"
 ---
 # <a name="tutorial-configure-integration-tests-for-terraform-projects-in-azure"></a>Руководство по Настройка интеграционного тестирования для проектов Terraform в Azure
 
@@ -25,14 +25,12 @@ ms.locfileid: "90832000"
 > * Выполните `terraform plan`, чтобы проверить файлы конфигурации Terraform с точки зрения удаленных служб.
 > * Примените конвейер Azure для автоматизации непрерывной интеграции.
 
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
-
 ## <a name="prerequisites"></a>Предварительные условия
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-- **Организация и проект Azure DevOps.** Если у вас нет организации Azure DevOps, [создайте ее](/azure/devops/organizations/projects/create-project?tabs=preview-page&view=azure-devops).
+- **Организация и проект Azure DevOps.** Если у вас нет организации Azure DevOps, [создайте ее](/azure/devops/organizations/projects/create-project).
 - **Расширение сборки и выпуска Terraform.** [Установите расширение сборки и выпуска Terraform](https://marketplace.visualstudio.com/items?itemName=charleszipp.azure-pipelines-tasks-terraform) в организации Azure DevOps.
-- **Доступ Azure DevOps к подписке Azure.** Создайте [подключение службы Azure](/azure/devops/pipelines/library/connect-to-azure?view=azure-devops) с именем `terraform-basic-testing-azure-connection`, чтобы разрешить Azure Pipelines подключаться к подпискам Azure.
+- **Доступ Azure DevOps к подписке Azure.** Создайте [подключение службы Azure](/azure/devops/pipelines/library/connect-to-azure) с именем `terraform-basic-testing-azure-connection`, чтобы разрешить Azure Pipelines подключаться к подпискам Azure.
 - **Наличие Terraform.** [Скачайте и установите версию Terraform](https://www.terraform.io/downloads.html), которая соответствует вашей среде.
 - **Вилка примеров тестирования.** Создайте вилку [примера проекта Terraform на GitHub](https://github.com/Azure/terraform) и клонируйте его на локальный компьютер разработки и тестирования.
 
@@ -195,7 +193,7 @@ terraform plan
 
     ![Где ваш код?](media/best-practices-integration-testing/new-pipeline-where-github-yaml.png)
 
-1. На этом этапе, возможно, потребуется авторизовать для Azure DevOps доступ к вашей организации. Дополнительные сведения на эту тему см. в статье [Создание репозиториев GitHub](/azure/devops/pipelines/repos/github?view=azure-devops&tabs=yaml).
+1. На этом этапе, возможно, потребуется авторизовать для Azure DevOps доступ к вашей организации. Дополнительные сведения на эту тему см. в статье [Создание репозиториев GitHub](/azure/devops/pipelines/repos/github).
 
 1. В списке репозиториев выберите вилку репозитория, которую вы создали в своей организации GitHub.
 
@@ -222,6 +220,8 @@ terraform plan
 После завершения этого этапа изучите представленные в Azure DevOps сведения и убедитесь, что все выполнено правильно.
 
 ![Зеленый конвейер Azure DevOps](media/best-practices-integration-testing/azure-devops-green-pipeline.png)
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие шаги
 

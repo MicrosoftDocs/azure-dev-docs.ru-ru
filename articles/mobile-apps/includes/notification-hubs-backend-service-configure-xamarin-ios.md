@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: 28b1db01e2b509198a837f96dcb19f119cf09335
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: 7be758e9f1116f933fbb415e6cff7a1c73ffee9f
+ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401632"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493277"
 ---
 ### <a name="configure-infoplist-and-entitlementsplist"></a>Настройка Info.plist и Entitlements.plist
 
@@ -96,7 +96,7 @@ ms.locfileid: "87401632"
     ```
 
     > [!NOTE]
-    > Этот класс предоставляет уникальный идентификатор (с использованием значения [UIDevice.IdentifierForVendor](https://docs.microsoft.com/dotnet/api/uikit.uidevice.identifierforvendor?view=xamarin-ios-sdk-12)) и полезные данные для регистрации в центре уведомлений.
+    > Этот класс предоставляет уникальный идентификатор (с использованием значения [UIDevice.IdentifierForVendor](/dotnet/api/uikit.uidevice.identifierforvendor?view=xamarin-ios-sdk-12)) и полезные данные для регистрации в центре уведомлений.
 
 1. Добавьте в проект **PushDemo.iOS** новую папку с именем *Extensions*. Затем добавьте в эту папку **пустой класс** с именем *NSDataExtensions.cs* и вставьте в него указанную ниже реализацию.
 

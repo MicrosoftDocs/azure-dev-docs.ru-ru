@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: 85b8bbc6e0a84e7da47b11eef4f22714912af72f
-ms.sourcegitcommit: b224b276a950b1d173812f16c0577f90ca2fbff4
+ms.openlocfilehash: f173f8431cc7bed0ae56bf14cfc6efcf37dcf230
+ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87810667"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493278"
 ---
 # <a name="tutorial-send-push-notifications-to-xamarinforms-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по отправке push-уведомлений в приложения Xamarin.Forms с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -23,7 +23,7 @@ ms.locfileid: "87810667"
 > * [Flutter](notification-hubs-backend-service-flutter.md)
 > * [React Native](notification-hubs-backend-service-react-native.md)
 
-В этом руководстве вы примените [Центры уведомлений Azure](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview) для отправки push-уведомлений в приложение [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms), нацеленное на платформы **Android** и **iOS**.  
+В этом руководстве вы примените [Центры уведомлений Azure](/azure/notification-hubs/notification-hubs-push-notification-overview) для отправки push-уведомлений в приложение [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms), нацеленное на платформы **Android** и **iOS**.  
 
 [!INCLUDE [Notification Hubs Backend Service Introduction](includes/notification-hubs-backend-service-introduction.md)]
 
@@ -62,9 +62,9 @@ ms.locfileid: "87810667"
 Вам не потребуется наличие опыта для выполнения действий, которые описаны в этом примере демонстрации общих концепций. Но знакомство со следующими аспектами может оказаться полезным.
 
 * [Портал разработчиков Azure](https://developer.apple.com)
-* [ASP.NET Core](https://docs.microsoft.com/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
+* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
-* [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](https://docs.microsoft.com/azure/notification-hubs/ios-sdk-get-started)
+* [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started)
 * [Xamarin](https://dotnet.microsoft.com/apps/xamarin) и [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
 
 Здесь приводятся действия для [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/), но весь процесс можно выполнить и с помощью [Visual Studio 2019](https://visualstudio.microsoft.com/vs).
@@ -85,7 +85,7 @@ ms.locfileid: "87810667"
 
 ## <a name="create-an-aspnet-core-web-api-backend-application"></a>Создание внутреннего приложения веб-API на ASP.NET Core
 
-В этом разделе объясняется, как создать внутреннюю часть [веб-API ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) для управления [регистрацией устройств](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management#what-is-device-registration) и отправки уведомлений в мобильное приложение Xamarin.Forms.
+В этом разделе объясняется, как создать внутреннюю часть [веб-API ASP.NET Core](https://dotnet.microsoft.com/apps/aspnet/apis) для управления [регистрацией устройств](/azure/notification-hubs/notification-hubs-push-notification-registration-management#what-is-device-registration) и отправки уведомлений в мобильное приложение Xamarin.Forms.
 
 [!INCLUDE [Create an ASP.NET Core Web API backend application](includes/notification-hubs-backend-service-web-api.md)]
 
@@ -117,15 +117,15 @@ ms.locfileid: "87810667"
 
 ## <a name="related-links"></a>Связанные ссылки
 
-* [Общие сведения о Центрах уведомлений Azure](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-overview)
-* [Установка Visual Studio для Mac](https://docs.microsoft.com/visualstudio/mac/installation?view=vsmac-2019)
-* [Установка Xamarin в Windows](https://docs.microsoft.com/xamarin/get-started/installation/windows)
+* [Общие сведения о Центрах уведомлений Azure](/azure/notification-hubs/notification-hubs-push-notification-overview)
+* [Установка Visual Studio для Mac](/visualstudio/mac/installation?view=vsmac-2019)
+* [Установка Xamarin в Windows](/xamarin/get-started/installation/windows)
 * [Пакет средств разработки Центров уведомлений для операций серверной части](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
 * [Пакет средств разработки для Центров уведомлений на GitHub](https://github.com/Azure/azure-notificationhubs)
-* [Регистрация в серверной части приложения](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification)
-* [Управление регистрацией](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-registration-management)
-* [Работа с тегами](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-tags-segment-push-message)
-* [Работа с пользовательскими шаблонами](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages)
+* [Регистрация в серверной части приложения](/azure/notification-hubs/notification-hubs-ios-aspnet-register-user-from-backend-to-push-notification)
+* [Управление регистрацией](/azure/notification-hubs/notification-hubs-push-notification-registration-management)
+* [Работа с тегами](/azure/notification-hubs/notification-hubs-tags-segment-push-message)
+* [Работа с пользовательскими шаблонами](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

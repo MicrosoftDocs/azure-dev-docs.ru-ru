@@ -4,20 +4,18 @@ description: Узнайте о различных вариантах тести�
 ms.topic: overview
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 29f128361030b64da38124f7f7d723619306f582
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 6c782b2a6fed14698aede5a7dbfb6eae5ff9cf4a
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241276"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401674"
 ---
 # <a name="tutorial-terraform-testing-overview"></a>Руководство по Общие сведения о тестировании Terraform
 
 [!INCLUDE [terraform-intro.md](includes/terraform-intro.md)]
 
 Terraform — это инструмент в формате "инфраструктура как код" (IaC). Это означает, что файлы Terraform и других инструментов такого формата обрабатываются как исходный код проекта. В частности, к ним применяются управление версиями и управление исходным кодом. Кроме того, частью процесса также должно быть тестирование. В этой статье приводятся общие сведения о разных типах тестов, которые можно выполнять для проекта Terraform.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="integration-testing"></a>Интеграционное тестирование
 
@@ -59,3 +57,5 @@ Terraform — это инструмент в формате "инфрастру
 
 > [!div class="nextstepaction"]
 > [Дополнительные сведения о комплексном тестировании](best-practices-end-to-end-testing.md)
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]

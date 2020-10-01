@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
 ms.date: 09/01/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: 7c6b9d526b2fe42a0210daf70ec8ba919641ced9
-ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
+ms.openlocfilehash: 7b8eaf783e909e9291dc7b0e6781bf4e8cb0d4c3
+ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89374565"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586139"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
@@ -43,19 +43,19 @@ ms.locfileid: "89374565"
 
 1. Установите расширение Azure Spring Cloud.
 
-    ```Azure CLI
+    ```azurecli
     az extension add --name spring-cloud
     ```
 
 1. Создайте группу ресурсов, которая будет содержать службу Azure Spring Cloud.
 
-    ```Azure CLI
+    ```azurecli
     az group create --location eastus --name <resource group name>
     ```
 
 1. Подготовьте к работе экземпляр Azure Spring Cloud.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud create -n <service name> -g <resource group name>
     ```
 
@@ -68,7 +68,7 @@ ms.locfileid: "89374565"
 
 1. Настройте сервер конфигурации. Не забудьте заменить заполнитель &lt;your GitHub id&gt; реальным значением идентификатора GitHub.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud config-server git set -n <your-service-name> --uri https://github.com/<your GitHub id>/piggymetrics --label config
     ```
 
@@ -81,7 +81,7 @@ ms.locfileid: "89374565"
 
 1. Создайте три микрослужбы: **gateway**, **auth-service** и **account-service**.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud app create --n gateway -s <service name> -g <resource group name>
     az spring-cloud app create --n auth-service -s <service name> -g <resource group name>
     az spring-cloud app create --n account-service -s <service name> -g <resource group name>
@@ -89,7 +89,7 @@ ms.locfileid: "89374565"
 
 1. Разверните приложение.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud app deploy -n gateway -s <service name> -g <resource group name> --jar-path ./gateway/target/gateway.jar
     az spring-cloud app deploy -n account-service -s <service name> -g <resource group name> --jar-path ./account-service/target/account-service.jar
     az spring-cloud app deploy -n auth-service -s <service name> -g <resource group name> --jar-path ./auth-service/target/auth-service.jar
@@ -97,13 +97,13 @@ ms.locfileid: "89374565"
 
 1. Назначьте шлюзу общедоступную конечную точку.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud app update -n gateway -s <service name> -g <resource group name> --is-public true
     ```
 
 1. Отправьте приложению шлюза запрос на получение URL-адреса и убедитесь, что приложение успешно работает.
 
-    ```Azure CLI
+    ```azurecli
     az spring-cloud app show --name gateway | grep url
     ```
     

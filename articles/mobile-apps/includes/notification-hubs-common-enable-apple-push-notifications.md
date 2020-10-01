@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: f83e5ae060ee6b13523af8dbb271906dff02e027
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: 07778fad0d390b297850a10b544f08d9e5ec3569
+ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401699"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493167"
 ---
 ### <a name="register-your-ios-app-for-push-notifications"></a>Регистрация приложения iOS для работы с push-уведомлениями
 
@@ -51,7 +51,7 @@ ms.locfileid: "87401699"
 
 1. [создание сертификата p8, который можно использовать для проверки подлинности на основе токена](#option-2-creating-a-p8-certificate-that-can-be-used-for-token-based-authentication) (*более новый и на данный момент рекомендуемый подход*).
 
-Новый подход имеет ряд преимуществ, которые описаны в документе о [проверке подлинности на основе токена (HTTP/2) для APNs](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-push-notification-http2-token-authentification). Хотя при этом требуется меньше шагов, в некоторых сценариях этот подход является обязательным. Но здесь мы опишем процедуры для обоих подходов, так как для работы с этим руководством можно применить любой из них.
+Новый подход имеет ряд преимуществ, которые описаны в документе о [проверке подлинности на основе токена (HTTP/2) для APNs](/azure/notification-hubs/notification-hubs-push-notification-http2-token-authentification). Хотя при этом требуется меньше шагов, в некоторых сценариях этот подход является обязательным. Но здесь мы опишем процедуры для обоих подходов, так как для работы с этим руководством можно применить любой из них.
 
 ##### <a name="option-1-creating-a-p12-push-certificate-that-can-be-uploaded-directly-to-notification-hub"></a>Вариант 1. Создание сертификата p12 службы push-уведомлений, который можно отправить прямо в концентратор уведомлений
 
@@ -168,7 +168,7 @@ ms.locfileid: "87401699"
 1. В окне **Select certificates** (Выбор сертификатов) выберите сертификат для разработки, используемый для подписывания кода, и нажмите кнопку **Continue** (Продолжить).
 
     > [!NOTE]
-    > Это не тот сертификат push-уведомлений, который вы создали на [предыдущем шаге](#creating-a-certificate-for-notification-hubs). Это ваш сертификат разработки. Если он не существует, его необходимо создать, так как это [необходимое условие](#prerequisites) для работы с этим руководством. Сертификаты разработчика можно создавать на [Портале разработчика Apple](https://developer.apple.com)с помощью [Xcode](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/YourFirstAppStoreSubmission/ProvisionYourDevicesforDevelopment/ProvisionYourDevicesforDevelopment.html) или в [Visual Studio](https://docs.microsoft.com/xamarin/ios/get-started/installation/device-provisioning/).
+    > Это не тот сертификат push-уведомлений, который вы создали на [предыдущем шаге](#creating-a-certificate-for-notification-hubs). Это ваш сертификат разработки. Если он не существует, его необходимо создать, так как это [необходимое условие](#prerequisites) для работы с этим руководством. Сертификаты разработчика можно создавать на [Портале разработчика Apple](https://developer.apple.com)с помощью [Xcode](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/YourFirstAppStoreSubmission/ProvisionYourDevicesforDevelopment/ProvisionYourDevicesforDevelopment.html) или в [Visual Studio](/xamarin/ios/get-started/installation/device-provisioning/).
 
 1. Вернитесь на страницу **Certificates, Identifiers & Profiles** (Сертификаты, идентификаторы и профили), нажмите **Profiles** (Профили) в меню слева, а затем **+** , чтобы создать новый профиль. Откроется окно **Register a New Provisioning Profile** (Зарегистрировать новый профиль подготовки).
 

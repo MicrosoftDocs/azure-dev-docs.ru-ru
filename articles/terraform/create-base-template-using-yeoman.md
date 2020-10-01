@@ -4,12 +4,12 @@ description: Здесь вы узнаете, как создать базовы�
 ms.topic: how-to
 ms.date: 05/25/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: aa71698735d96bd591b15d6804fd2d142602d326
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: f125f6d1fd5b37fc023343dc045a70dd92084840
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241286"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401724"
 ---
 # <a name="create-a-terraform-base-template-in-azure-using-yeoman"></a>Создание базового шаблона Terraform в Azure с использованием Yeoman
 
@@ -21,8 +21,6 @@ ms.locfileid: "88241286"
 > * Тестирование шаблона Terraform с помощью двух различных методов.
 > * Запуск модуля Terraform с помощью файла Docker.
 > * Запуск модуля Terraform в собственном режиме в Azure Cloud Shell.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -290,6 +288,8 @@ yo --version
     ```
 
     ![Тест — результаты теста](media/create-a-base-template-using-yeoman/ymg-pass.png)
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

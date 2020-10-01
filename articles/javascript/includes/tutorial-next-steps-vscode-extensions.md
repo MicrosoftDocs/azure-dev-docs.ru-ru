@@ -1,13 +1,13 @@
 ---
 ms.topic: include
 ms.date: 03/31/2020
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 37e412017b8673cba80742e1da3f5a771681579d
-ms.sourcegitcommit: 850856d3fa2ddd8f96616ee6a1f092d8e0aedab3
+ms.custom: devx-track-js
+ms.openlocfilehash: ed743c1caec99674a6efe88fcda1f0cd86dadeb3
+ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738042"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91209328"
 ---
 ## <a name="learn-more-about-other-visual-studio-code-extensions"></a>Дополнительные сведения о других расширениях Visual Studio Code
 

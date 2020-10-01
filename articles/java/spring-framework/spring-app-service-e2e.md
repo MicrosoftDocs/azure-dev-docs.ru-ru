@@ -7,12 +7,12 @@ ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 22455b8f8215e0c3bfb9d4e9d8f75788cb56d844
-ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.openlocfilehash: 10d08226e0d97622c492f0e87a1fd0b175c76c4a
+ms.sourcegitcommit: f80537193d3e22eb24cce4a0a5464a996d1e63eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405635"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91409966"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -182,13 +182,13 @@ set REGION=<region>
 
 Maven будет использовать эти значения для создания ресурсов Azure с предоставленными вами именами. С помощью переменных среды можно хранить секреты учетной записи отдельно от файлов проекта.
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.9.1` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.9.1</version>
+    <version>1.11.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -197,7 +197,7 @@ Maven будет использовать эти значения для соз�
         <region>${REGION}</region>
         <runtime>
             <os>linux</os>
-            <javaVersion>jre8</javaVersion>            
+            <javaVersion>jre8</javaVersion>
             <webContainer>TOMCAT 9.0</webContainer>
         </runtime>
         <deployment>
@@ -390,13 +390,13 @@ show databases;
 </profile>
 ```
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.9.1` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.9.1</version>
+    <version>1.11.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -405,7 +405,7 @@ show databases;
         <region>${REGION}</region>
         <runtime>
             <os>linux</os>
-            <javaVersion>jre8</javaVersion>            
+            <javaVersion>jre8</javaVersion>
             <webContainer>TOMCAT 9.0</webContainer>
         </runtime>
         <appSettings>

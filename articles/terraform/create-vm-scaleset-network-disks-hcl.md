@@ -4,12 +4,12 @@ description: Узнайте, как использовать Terraform для н
 ms.topic: how-to
 ms.date: 11/07/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: e6f83d6f4f138b92576e44cadb65c3e4d018dc66
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d261a5c9ca76dd66c5c79333186079b92ea54bae
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241246"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401634"
 ---
 # <a name="create-an-azure-virtual-machine-scale-set-using-terraform"></a>созданию масштабируемого набора виртуальных машин Azure с помощью Terraform
 
@@ -26,8 +26,6 @@ ms.locfileid: "88241246"
 
 > [!NOTE]
 > Последнюю версию файлов конфигурации Terraform, используемых в этой статье, можно скачать из [репозитория Awesome Terraform на GitHub](https://github.com/Azure/awesome-terraform/tree/master/codelab-vmss).
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -395,10 +393,6 @@ ms.locfileid: "88241246"
     terraform apply
     ```
 
-    Выходные данные этой команды должны быть приблизительно такие, как на снимке экрана ниже.
-
-    ![Группа ресурсов масштабируемого набора виртуальных машин Terraform](./media/create-vm-scaleset-network-disks-hcl/resource-group-contents.png)
-
 1. Откройте браузер и подключитесь к полному доменному имени, которое было возвращено командой.
 
     ![Результаты перехода по полному доменному имени](./media/create-vm-scaleset-network-disks-hcl/browser-fqdn.png)
@@ -504,12 +498,9 @@ ms.locfileid: "88241246"
    terraform apply
    ```
 
-По завершении развертывания содержимое группы ресурсов выглядит, как показано на снимке экрана ниже.
+**Примечания**
 
-![Группа ресурсов масштабируемого набора виртуальных машин Terraform](./media/create-vm-scaleset-network-disks-hcl/resource-group-contents-final.png)
-
-> [!NOTE]
-> Возможность выполнения входа с указанием пароля отключена в точке перехода и в развернутом вами масштабируемом наборе виртуальных машин. Чтобы получить доступ к виртуальным машинам, выполните вход с помощью SSH.
+- Возможность выполнения входа с указанием пароля отключена в точке перехода и в развернутом вами масштабируемом наборе виртуальных машин. Чтобы получить доступ к виртуальным машинам, выполните вход с помощью SSH.
 
 ## <a name="environment-cleanup"></a>Очистка среды
 
@@ -520,6 +511,8 @@ terraform destroy
 ```
 
 Процесс удаления может занять несколько минут.
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

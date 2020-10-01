@@ -4,12 +4,12 @@ description: Узнайте, как создать центральную вир
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 0833497301865506592639838c7d6075813bcf6e
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ee75fe6c7fe49463137f9e0a68e518290f78acce
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241146"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401514"
 ---
 # <a name="tutorial-create-a-hub-virtual-network-in-azure-by-using-terraform"></a>Руководство по созданию виртуальной сети концентратора в Azure с помощью Terraform
 
@@ -22,8 +22,6 @@ ms.locfileid: "88241146"
 > * создание виртуальной машины концентратора, которая будет использоваться в качестве места перехода, с помощью Terraform;
 > * создание шлюза виртуальной частной сети концентратора с помощью Terraform;
 > * создание подключений к концентратору и локальному шлюзу с помощью Terraform.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -227,6 +225,8 @@ ms.locfileid: "88241146"
     ```
     
 3. Сохраните файл и закройте редактор.
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

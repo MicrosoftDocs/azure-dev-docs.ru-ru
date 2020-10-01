@@ -5,12 +5,12 @@ keywords: Azure DevOps, Terraform, Шлюз приложений, входящи
 ms.topic: how-to
 ms.date: 03/09/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 4d83e6720958ff76126c7e71e8cfbbcfb13c666a
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 10e52f4cc05bfa4127ee519ed265f0607d4745be
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241266"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401664"
 ---
 # <a name="create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes
 
@@ -27,8 +27,6 @@ ms.locfileid: "88241266"
 > * Создание кластера Kubernetes с помощью AKS и Terraform.
 > * Проверка доступности кластера Kubernetes с помощью средства kubectl.
 
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
-
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "88241266"
 
 - **Группа ресурсов Azure**. Если у вас нет группы ресурсов Azure, которую можно использовать для демонстрационной версии, [создайте группу ресурсов Azure](/azure/azure-resource-manager/manage-resource-groups-portal#create-resource-groups). Запишите имя и расположение группы ресурсов, так как эти значения используются в демонстрационной версии.
 
-- **Субъект-служба Azure.** Следуйте указаниям, приведенным в разделе **Создание субъекта-службы** статьи [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest). Запишите значения для `appId`, `displayName` и `password`.
+- **Субъект-служба Azure.** Следуйте указаниям, приведенным в разделе **Создание субъекта-службы** статьи [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli). Запишите значения для `appId`, `displayName` и `password`.
 
 - **Получите идентификатор объекта субъекта-службы**: Выполните следующую команду в Cloud Shell: `az ad sp list --display-name <displayName>`.
 
@@ -774,6 +772,8 @@ kubectl create -f https://raw.githubusercontent.com/Azure/aad-pod-identity/maste
 ```azurecli
 az group delete -n <resource-group>
 ```
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

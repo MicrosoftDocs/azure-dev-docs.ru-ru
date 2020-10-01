@@ -4,12 +4,12 @@ description: Сведения о реализации двух перифери�
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 236665b205a602466244a2c5d5cfee5800c51317
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 265c410d8fc8bdb51803406cc8003e6e349014d9
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241096"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401484"
 ---
 # <a name="tutorial-create-a-spoke-network-in-azure-using-terraform"></a>Руководство по Создание периферийной сети с помощью Terraform в Azure
 
@@ -21,8 +21,6 @@ ms.locfileid: "88241096"
 > * реализация периферийных виртуальных сетей в звездообразной топологии с помощью языка HCL;
 > * создание виртуальных машин в периферийных сетях с помощью Terraform;
 > * установление пиринговых связей виртуальной сети с сетями-концентраторами с помощью Terraform.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -303,6 +301,8 @@ ms.locfileid: "88241096"
      
 1. Сохраните файл и закройте редактор.
   
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
+
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"] 

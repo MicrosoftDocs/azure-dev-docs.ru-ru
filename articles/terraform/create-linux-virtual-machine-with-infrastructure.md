@@ -5,18 +5,16 @@ keywords: Azure DevOps, Terraform, виртуальная машина Linux, в
 ms.topic: how-to
 ms.date: 06/14/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 387f53b9fb1a78a66b9628346564132002b77fb0
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 13c519aeabfdd5a432dc16188e8d61241391c742
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241226"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401624"
 ---
 # <a name="create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
 Terraform позволяет определить и создать развертывания комплексной инфраструктуры в Azure. Шаблоны Terraform нужно создавать в понятном формате, чтобы их можно было использовать для создания и настройки ресурсов Azure в согласованном и воспроизводимом виде. В этой статье показано, как создать готовую среду Linux и вспомогательные ресурсы с помощью Terraform. Вы также узнаете, как [установить и настроить Terraform](get-started-cloud-shell.md).
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -435,8 +433,6 @@ terraform plan
 Refreshing Terraform state in-memory prior to plan...
 The refreshed state will be used to calculate this plan, but will not be
 persisted to local or remote state storage.
-
-
 ...
 
 Note: You didn't specify an "-out" parameter to save this plan, so when
@@ -475,6 +471,8 @@ az vm show --resource-group myResourceGroup --name myVM -d --query [publicIps] -
 ```bash
 ssh azureuser@<publicIps>
 ```
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
