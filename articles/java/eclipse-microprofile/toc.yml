@@ -6,10 +6,17 @@
     - name: Учебники
       expanded: true
       items:
-        - name: Развертывание в службу "Экземпляры контейнеров Azure"
-          href: deploy-microprofile-to-container-instances.md
-        - name: Развертывание с помощью функции Azure "Веб-приложения"
-          href: deploy-microprofile-to-web-app-for-containers.md
+        - name: Развертывание в Службе приложений Azure с помощью Maven
+          expanded: false
+          items:
+            - name: Развертывание Quarkus
+              href: deploy-microprofile-quarkus-java-app-with-maven-plugin.md
+            - name: Развертывание Helidon
+              href: deploy-microprofile-helidon-java-app-with-maven-plugin.md
+            - name: Развертывание Payara Micro
+              href: deploy-microprofile-payara-micro-java-app-with-maven-plugin.md
+            - name: Развертывание KumuluzEE
+              href: deploy-microprofile-kumuluzee-java-app-with-maven-plugin.md
         - name: Источник конфигурации для Azure Key Vault
           href: configure-microprofile-with-keyvault.md
         - name: Реализация CI/CD для приложений MicroProfile с помощью Azure Pipelines

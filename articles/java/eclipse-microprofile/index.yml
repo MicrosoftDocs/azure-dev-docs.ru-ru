@@ -3,17 +3,17 @@ title: Документация по Eclipse MicroProfile в Azure
 summary: MicroProfile — это проект Eclipse Foundation, который предназначен для использования и развития технологий Enterprise Java, таких как Java EE, в направлении архитектуры распределенных микрослужб, внедрения инноваций в нескольких реализациях и совместной работы в общей сфере интересов с целью стандартизации.
 metadata:
   title: Документация по Eclipse MicroProfile в Azure
-  description: Воспользуйтесь Eclipse MicroProfile для разработки приложений в Azure с помощью технологий Enterprise Java.
-  author: brborges
-  ms.author: brborges
-  ms.date: 03/13/2020
+  description: Начало разработки приложений в Azure с помощью Eclipse MicroProfile.
+  author: yoshioterada
+  ms.author: yoterada
+  ms.date: 06/29/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 0b0bb28c4ec0751b1a6d29ff89fadaf53fe57ccd
-  ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+  ms.openlocfilehash: 2c478ff485c5a003aef47f2ffeb26bc75d3fdfb2
+  ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/14/2020
-  ms.locfileid: "88240916"
+  ms.lasthandoff: 09/28/2020
+  ms.locfileid: "91401204"
 landingContent:
 - title: Руководство по началу работы
   linkLists:
@@ -21,12 +21,22 @@ landingContent:
     links:
     - text: Развертывание в службу "Экземпляры контейнеров Azure"
       url: deploy-microprofile-to-container-instances.md
-    - text: Развертывание с помощью функции Azure "Веб-приложения"
-      url: deploy-microprofile-to-web-app-for-containers.md
     - text: Источник конфигурации для Azure Key Vault
       url: configure-microprofile-with-keyvault.md
     - text: CI/CD для приложений MicroProfile с использованием Azure DevOps
       url: cicd-microprofile.md
+- title: Развертывание в Службе приложений Azure с помощью Maven
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Развертывание Quarkus
+      url: deploy-microprofile-quarkus-java-app-with-maven-plugin.md
+    - text: Развертывание Helidon
+      url: deploy-microprofile-helidon-java-app-with-maven-plugin.md
+    - text: Развертывание Payara Micro
+      url: deploy-microprofile-payara-micro-java-app-with-maven-plugin.md
+    - text: Развертывание KumuluzEE
+      url: deploy-microprofile-kumuluzee-java-app-with-maven-plugin.md
 - title: Примеры кода
   linkLists:
   - linkListType: sample
