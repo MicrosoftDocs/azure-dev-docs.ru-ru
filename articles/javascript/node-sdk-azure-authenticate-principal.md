@@ -1,15 +1,15 @@
 ---
 title: Создание субъекта-службы Azure с помощью Node.js
 description: Узнайте, как использовать проверку подлинности субъекта-службы в Azure с помощью Node.js и JavaScript.
-ms.topic: article
+ms.topic: how-to
 ms.date: 06/17/2017
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 156892d9fd8e8014e3dacaae2492126ac9bf5836
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.custom: devx-track-js
+ms.openlocfilehash: 40992b00ff9c0e04bf2b475fadf2d65dd3bd29d5
+ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110438"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586124"
 ---
 # <a name="create-an-azure-service-principal-for-nodejs"></a>Создание субъекта-службы Azure для Node.js
 
@@ -23,7 +23,6 @@ ms.locfileid: "91110438"
 
 - Портал Azure
 - Azure CLI 2.0
-- Пакет Azure SDK для Node.js
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
@@ -37,24 +36,11 @@ ms.locfileid: "91110438"
 
 1. Загрузите [Azure CLI 2.0](/cli/azure/install-az-cli2).
 
-2. Откройте окно терминала.
+2. Откройте окно терминала и введите команду `az login`, чтобы начать вход.
 
-3. Введите следующую команду, чтобы начать процесс входа:
+3. Вызов команды `az login` возвращает URL-адрес и код. Откройте указанный URL-адрес, введите код и войдите с помощью удостоверения Azure (это может произойти автоматически, если вы уже выполняли такой вход). У вас появится доступ к учетной записи через интерфейс командной строки.
 
-    ```shell
-    $ az login
-    ```
-
-4. Вызов команды `az login` возвращает URL-адрес и код. Откройте указанный URL-адрес, введите код и войдите с помощью удостоверения Azure (это может произойти автоматически, если вы уже выполняли такой вход).
-У вас появится доступ к учетной записи через интерфейс командной строки.
-
-5. Получите идентификатор подписки и арендатора:
-
-    ```shell
-    $ az account list
-    ```
-
-    Ниже приведен пример выходных данных:
+4. Получите свою подписку и идентификатор арендатора с помощью команды `az account list`. Эти данные понадобятся вам при работе с любыми пакетами Azure. Ниже приведен пример выходных данных этой команды:
 
     ```shell
     {
@@ -72,74 +58,9 @@ ms.locfileid: "91110438"
     }
     ```
 
-    **Запишите идентификатор подписки, так как он понадобится на шаге 7.**
+5. Выполните действия, описанные в статье [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli), чтобы создать субъект-службу. Объект JSON в выходных данных будет содержать сведения, требуемые для аутентификации в Azure.
 
-6. Создайте субъект-службу, чтобы получить объект JSON, который содержит другие сведения, необходимые для аутентификации в Azure.
-
-    ```shell
-    $ az ad sp create-for-rbac
-    ```
-
-    Ниже приведен пример выходных данных:
-
-    ```shell
-    {
-    "appId": "<appId>",
-    "displayName": "<displayName>",
-    "name": "<name>",
-    "password": "<password>",
-    "tenant": "<tenant>"
-    }
-    ```
-
-    **Запишите значения клиента, имени и пароля, так как они будут использоваться на шаге 7.**
-
-7. Настройте переменные среды. Для этого замените заполнители &lt;subscriptionId>, &lt;tenant>, &lt;name> и &lt;password> значениями, полученными на шагах 4 и 5.
-
-    **Использование Bash**
-
-    ```shell
-    export azureSubId='<subscriptionId>'
-    export azureServicePrincipalTenantId='<tenant>'
-    export azureServicePrincipalClientId='<name>'
-    export azureServicePrincipalPassword='<password>'
-    ```
-
-    **PowerShell**
-
-    ```shell
-    $env:azureSubId='<subscriptionId>'
-    $env:azureServicePrincipalTenantId='<tenant>'
-    $env:azureServicePrincipalClientId='<name>'
-    $env:azureServicePrincipalPassword='<password>'
-    ```
-
-## <a name="create-a-service-principal-using-the-azure-sdk-for-nodejs"></a>Создание субъекта-службы с помощью пакета Azure SDK для Node.js
-
-Чтобы создать субъект-службу с помощью программных средства JavaScript, используйте [скрипт ServicePrincipal](https://github.com/Azure/azure-sdk-for-node/tree/master/Documentation/ServicePrincipal).
 
 ## <a name="using-the-service-principal"></a>Использование субъекта-службы
 
-Когда вы создадите субъект-службу, вы сможете использовать ключи субъекта-службы для аутентификации с помощью пакета Azure SDK для Node.js, как показано в следующем фрагменте кода JavaScript. Замените следующие заполнители: &lt;clientId or appId>, &lt;secret or password> и &lt;domain or tenant>:
-
-```javascript
-const Azure = require('azure');
-const MsRest = require('ms-rest-azure');
-
-MsRest.loginWithServicePrincipalSecret(
-  <clientId or appId>,
-  <secret or password>,
-  <domain or tenant>,
-  (err, credentials) => {
-    if (err) throw err
-
-    let storageClient = Azure.createARMStorageManagementClient(credentials, '<azure-subscription-id>');
-
-    // ..use the client instance to manage service resources.
-  }
-);
-```
-
-## <a name="next-steps"></a>Следующие шаги
-
-* [Аутентификация с использованием модулей Azure для Node.js](node-sdk-azure-authenticate.md)
+Получив субъект-службу, выполните действия, отписанные в статье [Аутентификация с использованием модулей Azure для Node.js](./node-sdk-azure-authenticate.md), чтобы создать объект учетных данных, который можно использовать для аутентификации клиента с помощью Azure Active Directory.

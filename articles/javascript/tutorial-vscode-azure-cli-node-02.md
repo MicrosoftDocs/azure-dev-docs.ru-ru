@@ -1,15 +1,15 @@
 ---
 title: Создание приложения Node.js для развертывания в Azure с помощью Azure CLI
-description: Руководство, часть 2. Создание кода приложения
-ms.topic: conceptual
+description: Руководство, часть 2. Создание кода приложения с помощью Azure CLI
+ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: c4efa8f2c9e467e0bddeb43dd227eb9b9ecb6f99
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 6d11f21dfda82a5881e177908c5f16c948df78cf
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217917"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365197"
 ---
 # <a name="create-the-app-code-using-express"></a>Создание кода приложения с помощью Express
 

@@ -1,15 +1,15 @@
 ---
 title: Развертывание контейнерного приложения Node.js с помощью VS Code и Azure
 description: Полное руководство, в котором объясняется, как создать приложение Node.js, поместить его в контейнер и развернуть в Azure.
-ms.topic: article
+ms.topic: how-to
 ms.date: 06/25/2017
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
-ms.openlocfilehash: c036adcd759f26dfafda5126f475e251b503a831
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
+ms.openlocfilehash: 9d23e9dc578b89058c0fadeb98978de96712cab6
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218927"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364907"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Разработка и развертывание контейнерного приложения Node.js с помощью Visual Studio Code и Azure
 
@@ -114,7 +114,7 @@ ms.locfileid: "88218927"
 
 Обратите внимание: если при вводе кода вручную (вместо копирования и вставки) поставить точку после `process`, Visual Studio Code отобразит список доступных элементов глобального API process Node.js.
 
-![Автозаполнение автоматически отображает элементы API](./media/node-howto-e2e/visual-studio-code-process-env.png)
+![VS Code: переменные среды с process.env](./media/node-howto-e2e/visual-studio-code-process-env.png)
 
 Автозаполнение работает, потому что Visual Studio Code использует TypeScript в фоновом режиме (даже для JavaScript), чтобы передавать информацию о вводе, которая может передаваться в список завершения при вводе. Visual Studio Code может определить, что проект является проектом Node.js, и автоматически скачать файл вводимых элементов TypeScript для [Node.js из NPM](https://www.npmjs.com/package/@types/node). Файл вводимых элементов позволяет получить автозаполнение для других глобальных значений Node.js, например `Buffer` и `setTimeout`, а также все встроенные модули, такие как `fs` и `http`.
 

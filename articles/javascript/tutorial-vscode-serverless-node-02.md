@@ -1,15 +1,15 @@
 ---
 title: Создание приложения Функций Azure в Visual Studio Code
-description: Руководство, часть 2. Создание приложения Функций Azure
-ms.topic: conceptual
+description: Руководство по бессерверным вычислениям, часть 2. Создание приложения Функций Azure
+ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 7ea1b39086a6cd824084e9bbb3839ab41a24eaad
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: devx-track-js
+ms.openlocfilehash: 39481fc2b5472bd2f9e54946d3ab1dd6051f00d1
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772627"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365117"
 ---
 # <a name="create-the-local-functions-app"></a>Создание локального приложения в службе "Функции"
 
@@ -42,7 +42,7 @@ ms.locfileid: "90772627"
 
 1. По запросу выберите для параметра **Authorization Level** (Уровень авторизации) вариант **Anonymous** (Анонимный):
 
-    ![Ввод имени функции](media/functions-extension/create-function-anonymous-auth.png)
+    ![ По запросу выберите для параметра "Уровень авторизации" вариант "Анонимный".](media/functions-extension/create-function-anonymous-auth.png)
 
 1. Через несколько секунд в VS Code завершится создание проекта. Теперь у вас есть папка с именем, совпадающим с именем функции (*HttpExample*) и тремя файлами.
 

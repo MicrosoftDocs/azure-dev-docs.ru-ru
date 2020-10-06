@@ -1,15 +1,15 @@
 ---
 title: Очистка ресурсов после развертывания приложения в решении "Функции Azure"
-description: 'Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши приложение-функцию в обозревателе Azure: Функции и выберите действие Delete Function App (Удалить приложение-функцию).'
-ms.topic: conceptual
+description: 'Бессерверные вычисления. Чтобы очистить эти ресурсы, щелкните правой кнопкой мыши приложение-функцию в обозревателе "Azure: Функции" и выберите "Удалить приложение-функцию".'
+ms.topic: tutorial
 ms.date: 08/31/2020
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 7348f367547f0e61daf91f68d6e11b83a1b1a4bc
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: devx-track-js
+ms.openlocfilehash: 30ce0f0f5d79c6fd7a69172fbdfbeb27d12c7a81
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90773116"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364577"
 ---
 # <a name="tutorial-for-azure-functions-clean-up-resources"></a>Руководство по решению "Функции Azure". Очистка ресурсов
 

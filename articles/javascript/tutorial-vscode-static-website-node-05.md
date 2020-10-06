@@ -1,16 +1,16 @@
 ---
 title: Развертывание изменений для статического веб-сайта Node.js с помощью Visual Studio Code
-description: Руководство, часть 5. Внесение изменений и повторное развертывание
-ms.topic: conceptual
+description: Руководство по статическим веб-приложениям, часть 5. Внесение изменений и повторное развертывание
+ms.topic: tutorial
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 918f96376a03d17792c7a462d37ea47330e60d39
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 5d7a2af9dca7a775ee812b457012fa432c461d9a
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218319"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365287"
 ---
 # <a name="part-5-make-changes-and-redeploy"></a>Часть 5. Внесение изменений и повторное развертывание
 
@@ -32,7 +32,7 @@ ms.locfileid: "88218319"
 
 1. Когда развертывание завершится, обновите сайт в браузере, чтобы увидеть изменения:
 
-    ![Изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-angular.png)
+    ![Angular — когда развертывание завершится, обновите сайт в браузере, чтобы увидеть изменения](media/static-website/updated-azure-app-angular.png)
 
 # <a name="react"></a>[React](#tab/react)
 
@@ -48,7 +48,7 @@ ms.locfileid: "88218319"
 
 1. Когда развертывание завершится, обновите сайт в браузере, чтобы увидеть изменения:
 
-    ![Изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-react.png)
+    ![React — изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-react.png)
 
 # <a name="vue"></a>[Vue](#tab/vue)
 
@@ -64,7 +64,7 @@ ms.locfileid: "88218319"
 
 1. Когда развертывание завершится, обновите сайт в браузере, чтобы увидеть изменения:
 
-    ![Изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-vue.png)
+    ![Vue — изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-vue.png)
 
 # <a name="svelte"></a>[Svelte](#tab/svelte)
 
@@ -95,7 +95,7 @@ ms.locfileid: "88218319"
 
 1. Когда развертывание завершится, обновите сайт в браузере, чтобы увидеть изменения:
 
-    ![Изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-svelte.png)
+    ![Svelte — изменения в приложении после повторного развертывания](media/static-website/updated-azure-app-svelte.png)
 
 ---
 

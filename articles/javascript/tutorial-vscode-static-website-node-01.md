@@ -1,15 +1,15 @@
 ---
 title: Развертывание статического веб-сайта Node.js в Azure из Visual Studio Code
-description: Руководство, часть 1. Общие сведения и предварительные требования.
-ms.topic: conceptual
+description: Руководство по статическим веб-приложениям, часть 1. Общие сведения и предварительные требования.
+ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: d2c66383e654624cf7edce542461340cc248ba62
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: devx-track-js
+ms.openlocfilehash: bb3c0c552a25729e569abeba86d29d75570bb5e6
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90773096"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365087"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Развертывание статического веб-сайта в Azure из Visual Studio Code
 

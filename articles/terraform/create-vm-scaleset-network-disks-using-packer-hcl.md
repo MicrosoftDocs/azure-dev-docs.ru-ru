@@ -4,12 +4,12 @@ description: Узнайте, как использовать Terraform для н
 ms.topic: how-to
 ms.date: 11/07/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: de8f22311edefcef1f25571731f17e5e5bc96348
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 7d81c80f1051b615dcfd089205f8c685ecaf1589
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241196"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401604"
 ---
 # <a name="create-an-azure-virtual-machine-scale-set-from-a-packer-custom-image-by-using-terraform"></a>созданию масштабируемого набора виртуальных машин Azure из пользовательского образа Packer с помощью Terraform
 
@@ -24,8 +24,6 @@ ms.locfileid: "88241196"
 > * создание пользовательского образа виртуальной машины с помощью Packer;
 > * создание и развертывание масштабируемого набора виртуальных машин с помощью пользовательского образа;
 > * создание и развертывание jumpbox.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -329,12 +327,7 @@ terraform plan
 terraform apply 
 ```
 
-Содержимое группы ресурсов выглядит примерно следующим образом:
-
-![Группа ресурсов масштабируемого набора виртуальных машин Terraform](./media/create-vm-scaleset-network-disks-using-packer-hcl/tf-create-vmss-step6-apply.png)
-
-Откройте браузер и подключитесь к полному доменному имени, которое было возвращено командой. 
-
+Откройте браузер и подключитесь к полному доменному имени, которое было возвращено командой.
 
 ## <a name="add-a-jumpbox-to-the-existing-network"></a>Добавление jumpbox в имеющуюся сеть 
 
@@ -434,12 +427,9 @@ output "jumpbox_public_ip" {
 terraform apply 
 ```
 
-После развертывания содержимое группы ресурсов выглядит как на картинке ниже:
+**Примечания**
 
-![Группа ресурсов масштабируемого набора виртуальных машин Terraform](./media/create-vm-scaleset-network-disks-using-packer-hcl/tf-create-create-vmss-step8.png)
-
-> [!NOTE]
-> Вход с паролем отключен в jumpbox и развернутом масштабируемом наборе виртуальных машин. Войдите с помощью SSH, чтобы получить доступ к виртуальным машинам.
+- Вход с паролем отключен в jumpbox и развернутом масштабируемом наборе виртуальных машин. Войдите с помощью SSH, чтобы получить доступ к виртуальным машинам.
 
 ## <a name="clean-up-the-environment"></a>Очистка среды
 
@@ -450,6 +440,8 @@ terraform destroy
 ```
 
 Введите *yes* для подтверждения операции удаления группы ресурсов. Процесс удаления может занять несколько минут.
+
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

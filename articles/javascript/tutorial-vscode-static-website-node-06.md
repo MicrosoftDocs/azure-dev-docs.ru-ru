@@ -1,15 +1,15 @@
 ---
 title: Очистка ресурсов после развертывания статического веб-сайта Node.js в Azure
-description: Руководство, часть 6. Очистка ресурсов.
-ms.topic: conceptual
+description: Руководство по статическим веб-приложениям, часть 6. Очистка ресурсов
+ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 0c24562ff5c4b689854c29ef33557e0bfa9bee8e
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: e0cbbbe0471080fc4ca0a3eb46eb9f22e8ecf013
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "90772585"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365277"
 ---
 # <a name="part-6-clean-up-resources"></a>Часть 6. Очистка ресурсов
 

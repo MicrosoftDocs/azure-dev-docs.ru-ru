@@ -1,67 +1,55 @@
 ---
 title: Аутентификация с использованием модулей управления Azure для Node.js
 description: Аутентификация с помощью субъекта-службы в модулях управления Azure для Node.js
-ms.topic: article
+ms.topic: how-to
 ms.date: 06/17/2017
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 1d3f0d2930d397c24177f0cee7a9e276c4df9d67
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.custom: devx-track-js
+ms.openlocfilehash: 150b00c4dbb21d0514d1d7c7d34813272bbf06e1
+ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110426"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91586125"
 ---
-# <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Аутентификация с использованием модулей Azure для Node.js
+# <a name="authenticate-with-the-azure-management-modules-for-javascript"></a>Проверка подлинности с использованием модулей управления Azure для JavaScript
 
-Все API-интерфейсы служб, для которых создаются экземпляры, должны пройти аутентификацию с использованием объекта `credentials`. Существует три способа аутентификации и создания необходимых учетных данных с использованием пакета Azure SDK для Node.js:
+Существует два набора пакетов управления для служб Azure, которые используются для управления ресурсами.
+- Пакет Azure SDK для Node.js
+- Пакет Azure SDK для JavaScript
 
-- обычная проверка подлинности
-- Интерактивный вход
-- Проверка подлинности субъекта-службы
+Пакет Azure SDK для Node.js — это старый набор пакетов управления для служб Azure, которые: 
+- можно использовать только в Node.js, а не в браузерах;
+- написаны на языке JavaScript с файлами объявлений типа, написанными вручную;
+- не находятся в активной разработке и являются устаревшими, вместо которых используется пакет Azure SDK для пакетов JavaScript;
+- содержат имена пакетов, которые начинаются с `azure-arm-`;
+- требуют пакет [ms-rest-azure](https://www.npmjs.com/package/ms-rest-azure), чтобы создать учетные данные, которые затем можно передать в классы клиента в пакетах для проверки подлинности с помощью Azure Active Directory;
+- существуют в репозитории https://github.com/Azure/azure-sdk-for-node.
+
+Пакет Azure SDK для JavaScript — это более новый набор пакетов управления для служб Azure, которые:
+- можно использовать в Node.js и в браузерах;
+- написаны на языке TypeScript и могут использоваться в проектах JavaScript и TypeScript;
+- находятся в активной разработке и получают обновления по мере того, как службы Azure обновляют API управления ресурсами;
+- содержат имена пакетов, которые начинаются с `@azure/arm-`;
+- требуют пакет [@azure/ms-rest-nodeauth](https://www.npmjs.com/package/@azure/ms-rest-nodeauth), чтобы создать учетные данные, которые затем можно передать в классы клиента в пакетах для проверки подлинности с помощью Azure Active Directory (если приложение выполняется в браузере, вместо приведенного выше пакета используйте [@azure/ms-rest-browserauth](https://www.npmjs.com/package/@azure/ms-rest-browserauth));
+- существуют в репозитории https://github.com/Azure/azure-sdk-for-js.
+
+Простой способ различить эти два набора пакетов — взглянуть на их имена.
+
+Все API-интерфейсы служб, для которых создаются экземпляры, должны пройти аутентификацию с использованием объекта `credentials`. Существует несколько способов выполнить проверку подлинности и создать необходимые учетные данные для пакетов Azure SDK для Node.js и Azure SDK для JavaScript.
+
+Ниже перечислены некоторые из них.
+
+- Обычная проверка подлинности с использованием имени пользователя и пароля
+- Интерактивный вход, который является самым простым способом проверки подлинности, но для него требуется войти с помощью учетной записи пользователя.
+- Проверка подлинности на основе субъекта-службы В руководстве по [созданию субъекта-службы Azure с помощью Node.js](./node-sdk-azure-authenticate-principal.md) описаны разные способы создания субъекта-службы. 
+
+В файле сведений для каждого приведенного ниже пакета содержатся данные о различных способах получения объекта учетных данных.
+- [@azure/ms-rest-nodeauth](https://www.npmjs.com/package/@azure/ms-rest-nodeauth) при использовании любого пакета управления в Azure SDK для JavaScript в Node.js.
+- [@azure/ms-rest-browserauth](https://www.npmjs.com/package/@azure/ms-rest-browserauth) при использовании любого пакета управления в Azure SDK для JavaScript в браузере.
+- [ms-rest-azure](https://www.npmjs.com/package/ms-rest-azure) при использовании любого пакета управления в старом пакете Azure SDK для Node.js.
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
-## <a name="basic-authentication"></a>обычная проверка подлинности
-
-Чтобы выполнить аутентификацию программными средствами с помощью учетных данных учетной записи Azure, используйте функцию `loginWithUsernamePassword`. В следующем фрагменте кода JavaScript показано, как выполнять обычную аутентификацию с использованием учетных данных, которые хранятся как переменные среды.
-
-```javascript
-const Azure = require('azure');
-const MsRest = require('ms-rest-azure');
-
-MsRest.loginWithUsernamePassword(process.env.AZURE_USER,
-                                 process.env.AZURE_PASS,
-                                 (err, credentials) => {
-  if (err) throw err;
-
-  let storageClient = Azure.createARMStorageManagementClient(credentials,
-                                                             '<azure-subscription-id>');
-
-  // ..use the client instance to manage service resources.
-});
-```
-
-## <a name="interactive-login"></a>Интерактивный вход
-
-При интерактивном входе предоставляются ссылки и код, что позволяет пользователю выполнять аутентификацию в браузере. Применяйте этот метод, если в одном скрипте используется несколько учетных записей или если требуется вмешательство пользователя.
-
-```javascript
-const Azure = require('azure');
-const MsRest = require('ms-rest-azure');
-
-MsRest.interactiveLogin((err, credentials) => {
-  if (err) throw err;
-
-  let storageClient = Azure.createARMStorageManagementClient(credentials, '<azure-subscription-id>');
-
-  // ..use the client instance to manage service resources.
-});
-```
-
-## <a name="service-principal-authentication"></a>Проверка подлинности субъекта-службы
-
-[Интерактивный вход](#interactive-login) — самый простой способ аутентификации. Но при использовании пакета SDK для Node.js может потребоваться использовать обычную аутентификацию субъекта-службы, а не предоставлять учетные данные учетной записи. В руководстве по [созданию субъекта-службы Azure с помощью Node.js](./node-sdk-azure-authenticate-principal.md) описаны разные способы создания и использования субъекта-службы.
-
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие действия   
 
 * [Развертывание статического веб-сайта в Azure из Visual Studio Code](tutorial-vscode-static-website-node-01.md)

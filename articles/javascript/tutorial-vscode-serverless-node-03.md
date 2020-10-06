@@ -1,15 +1,15 @@
 ---
 title: Локальное выполнение приложения Функций Azure в Visual Studio Code
-description: Руководство, часть 3. Локальный запуск приложения для тестирования.
-ms.topic: conceptual
+description: Руководство по бессерверным вычислениям, часть 3. Локальный запуск приложения для тестирования.
+ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 2dbc9001da2cef09eb7625b472359d22406ca6a9
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.custom: devx-track-js
+ms.openlocfilehash: 94b646d29b7459b2a74a1dbdaafde4a98a348f6b
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240886"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364587"
 ---
 # <a name="test-the-function-locally"></a>Локальное тестирование функции
 

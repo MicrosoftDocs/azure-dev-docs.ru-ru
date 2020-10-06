@@ -1,15 +1,15 @@
 ---
 title: Развертывание приложений Node.js в Службе приложений Azure с помощью Azure CLI
-description: Руководство, часть 1. Общие сведения и предварительные требования.
-ms.topic: conceptual
+description: Руководство, часть 1. Общие сведения и предварительные требования для работы с Azure CLI
+ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: e720cd1ca6f29a42bfd9bf6c79c6184338c2621a
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.custom: devx-track-js
+ms.openlocfilehash: 4ca11ffff1889d69ef8a1ee7fbca991b714f2163
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772887"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365207"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 

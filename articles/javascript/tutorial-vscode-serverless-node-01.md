@@ -1,15 +1,15 @@
 ---
 title: Развертывание Функций Azure в Node.js с помощью Visual Studio Code
-description: Руководство, часть 1. Общие сведения и предварительные требования.
-ms.topic: conceptual
+description: Руководство по бессерверным вычислениям, часть 1. Общие сведения и предварительные требования
+ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 00039e7320e603b025b00887ec548c534a1f1612
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 1d0c1795b7bec0138507ceadea966c421ca12a13
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "91110510"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364647"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Развертывание Функций Azure с помощью Visual Studio
 

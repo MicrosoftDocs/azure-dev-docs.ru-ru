@@ -4,12 +4,12 @@ description: Сведения о том, как установить и испо
 ms.topic: how-to
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: dbb76f2bcdce12ebb55d9ae6002747701858751e
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: ac8c5c765237a065fbb2531f71de7f39644b70dc
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241326"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401764"
 ---
 # <a name="configure-the-azure-terraform-visual-studio-code-extension"></a>Настройка расширения Visual Studio Code для Azure Terraform
 
@@ -20,8 +20,6 @@ ms.locfileid: "88241326"
 > * автоматизация подготовки служб Azure с помощью Terraform;
 > * установка и использование расширения Visual Studio Code Terraform для служб Azure;
 > * использование Visual Studio Code для разработки, проектирования и выполнения планов Terraform.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -137,8 +135,6 @@ ms.locfileid: "88241326"
 1. В строке меню выберите **Просмотр > Палитра команд... > Azure Terraform: init**.
 
 1. Когда появится запрос на подтверждение, щелкните **ОК**.
-
-    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloud-shell.png)
 
 1. При первом запуске Cloud Shell из новой папки вам будет предложено создать веб-приложение. Щелкните **Open**(Открыть).
 
@@ -270,11 +266,9 @@ ms.locfileid: "88241326"
 
 1. В списке вариантов типа теста выберите **lint**.
 
-    ![Выбор типа теста](media/configure-vs-code-extension-for-terraform/tf-select-type-of-test-lint.png)
+    ![Выберите lint в качестве типа теста.](media/configure-vs-code-extension-for-terraform/tf-select-type-of-test-lint.png)
 
 1. Когда появится запрос на подтверждение, щелкните **ОК** и следуйте инструкциям на экране.
-
-    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >При выполнении тестов **lint** или **end-to-end** Azure с использованием службы контейнеров подготавливает тестовый компьютер к выполнению реального теста. Это означает, что результаты тестов обычно возвращаются только через несколько минут.
@@ -289,11 +283,9 @@ ms.locfileid: "88241326"
 
 1. В списке вариантов типа теста выберите **end-to-end**.
 
-    ![Выбор типа теста](media/configure-vs-code-extension-for-terraform/tf-select-type-of-test-end-to-end.png)
+    ![Выберите end to end в качестве типа теста.](media/configure-vs-code-extension-for-terraform/tf-select-type-of-test-end-to-end.png)
 
 1. Когда появится запрос на подтверждение, щелкните **ОК** и следуйте инструкциям на экране.
-
-    ![Диалоговое окно подтверждения открытия Cloud Shell](media/configure-vs-code-extension-for-terraform/tf-do-you-want-to-open-cloudshell-small.png)
 
 >[!NOTE]
 >При выполнении тестов **lint** или **end-to-end** Azure с использованием службы контейнеров подготавливает тестовый компьютер к выполнению реального теста. Это означает, что результаты тестов обычно возвращаются только через несколько минут.
@@ -302,6 +294,9 @@ ms.locfileid: "88241326"
 
 ![Результаты проверки](media/configure-vs-code-extension-for-terraform/tf-end-to-end-test-results.png)
 
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
+
 ## <a name="next-steps"></a>Дальнейшие действия
+
 > [!div class="nextstepaction"]
 > [Список модулей Terraform, доступных для Azure и других поддерживаемых поставщиков](https://registry.terraform.io/)

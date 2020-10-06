@@ -1,15 +1,15 @@
 ---
 title: Развертывание образа контейнера для приложения Node.js в Visual Studio Code
-description: Руководство, часть 5. Развертывание образа в Службе приложений Azure
-ms.topic: conceptual
+description: Руководство по Docker, часть 5. Развертывание образа в Службе приложений Azure
+ms.topic: tutorial
 ms.date: 09/20/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: f9809deacac828cac6ba4a89b5eb08968de1d012
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 996a3ed71fb23e179f80364813ad7df0710e8402
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218446"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364677"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Развертывание образа в Службе приложений Azure
 

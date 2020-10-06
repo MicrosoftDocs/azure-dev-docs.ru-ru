@@ -1,111 +1,72 @@
 ---
-title: Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
+title: Настройка кластера виртуальных машин Azure с помощью Terraform
 description: Узнайте, как использовать модули Terraform для создания кластера виртуальных машин Windows в Azure.
 keywords: Azure DevOps, Terraform, виртуальная машина, кластер виртуальных машин, реестр модулей
 ms.topic: how-to
-ms.date: 03/09/2020
+ms.date: 09/27/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 794551aea159318b37426bb5d5dd7e1a13cca3d1
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 73f375090a2178b38b0fc7e0afd4eb8c6b514672
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241236"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401592"
 ---
-# <a name="create-an-azure-vm-cluster-with-terraform-using-the-module-registry"></a>Создание кластера виртуальных машин Azure с помощью Terraform и реестра модулей
+# <a name="configure-an-azure-vm-cluster-using-terraform"></a>Настройка кластера виртуальных машин Azure с помощью Terraform
 
-В этой статье описывается создание небольшого кластера виртуальных машин с помощью [модуля вычислений Azure](https://registry.terraform.io/modules/Azure/compute/azurerm/1.0.2) Terraform. В этой статье раскрываются следующие темы:
-
-> [!div class="checklist"]
-> * настройка аутентификации в Azure;
-> * создание шаблона Terraform;
-> * визуализация изменений с планом;
-> * применение конфигурации для создания кластера виртуальных машин.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
+В этой статье показан пример кода Terraform для создания кластера виртуальных машин в Azure.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
-## <a name="set-up-authentication-with-azure"></a>настройка аутентификации в Azure;
+[!INCLUDE [terraform-configure-environment.md](includes/terraform-configure-environment.md)]
 
-> [!TIP]
-> Пропустите этот шаг, если вы [используете переменные среды Terraform](get-started-cloud-shell.md) или выполняете этот пример в [Azure Cloud Shell](/azure/cloud-shell/overview).
-
- Просмотрите статью об [установке Terraform и настройке доступа к Azure](get-started-cloud-shell.md), чтобы создать субъект-службу Azure. Используйте этот субъект-службу для заполнения нового файла `azureProviderAndCreds.tf` в пустом каталоге с помощью следующего кода:
+## <a name="configure-an-azure-vm-cluster"></a>Настройка кластера виртуальных машин Azure
 
 ```hcl
-variable subscription_id {}
-variable tenant_id {}
-variable client_id {}
-variable client_secret {}
-
-provider "azurerm" {
-    version = "~>1.40"
-
-    subscription_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    tenant_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_id = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-    client_secret = "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
-}
-```
-
-## <a name="create-the-template"></a>Создание шаблона
-
-Создайте шаблон Terraform с именем `main.tf` со следующим кодом:
-
-```hcl
-module mycompute {
-    source = "Azure/compute/azurerm"
-    resource_group_name = "myResourceGroup"
-    location = "East US 2"
-    admin_password = "ComplxP@assw0rd!"
-    vm_os_simple = "WindowsServer"
-    is_windows_image = "true"
-    remote_port = "3389"
-    nb_instances = 2
-    public_ip_dns = ["unique_dns_name"]
-    vnet_subnet_id = module.network.vnet_subnets[0]
+module "windowsservers" {
+  source              = "Azure/compute/azurerm"
+  resource_group_name = azurerm_resource_group.rg.name
+  is_windows_image    = true
+  vm_hostname         = "mywinvm"                         // Line can be removed if only one VM module per resource group
+  admin_password      = "ComplxP@ssw0rd!"                 // See note following code about storing passwords in config files
+  vm_os_simple        = "WindowsServer"
+  public_ip_dns       = ["winsimplevmips"]                // Change to a unique name per data center region
+  vnet_subnet_id      = module.network.vnet_subnets[0]
+    
+  depends_on = [azurerm_resource_group.rg]
 }
 
 module "network" {
-    source = "Azure/network/azurerm"
-    location = "East US 2"
-    resource_group_name = "myResourceGroup"
+  source              = "Azure/network/azurerm"
+  resource_group_name = azurerm_resource_group.rg.name
+  subnet_prefixes     = ["10.0.1.0/24"]
+  subnet_names        = ["subnet1"]
+
+  depends_on = [azurerm_resource_group.rg]
 }
 
-output "vm_public_name" {
-    value = module.mycompute.public_ip_dns_name
+output "windows_vm_public_name" {
+  value = module.windowsservers.public_ip_dns_name
 }
 
 output "vm_public_ip" {
-    value = module.mycompute.public_ip_address
+  value = module.windowsservers.public_ip_address
 }
 
 output "vm_private_ips" {
-    value = module.mycompute.network_interface_private_ip
+  value = module.windowsservers.network_interface_private_ip
 }
 ```
 
-Выполните `terraform init` в каталоге конфигурации. При использовании версии Terraform не менее 0.10.6 будут показаны следующие выходные данные:
+**Примечания**
 
-![Terraform Init](media/create-vm-cluster-module/terraform-init-with-modules.png)
+- В предыдущем примере кода переменной `admin_password` присваивается литеральное значение для простоты. Есть много способов хранения конфиденциальных данных, таких как пароли. Решение о том, как вы хотите защитить свои данные, сводится к индивидуальному выбору с учетом вашей конкретной среды и уровня комфорта при раскрытии этих данных. В качестве примера риска хранение такого файла в системе управления версиями может привести к тому, что пароль увидят другие. Дополнительные сведения по этой теме: HashiCorp предоставляет разные способы [объявления входных переменных](https://www.terraform.io/docs/configuration/variables.html) и методы [управления конфиденциальными данными (например, паролями)](https://www.terraform.io/docs/state/sensitive-data.html).
 
-## <a name="visualize-the-changes-with-plan"></a>визуализация изменений с планом;
-
-Выполните команду `terraform plan` для предварительного просмотра инфраструктуры виртуальных машин, созданной шаблоном.
-
-![План Terraform](media/create-vm-cluster-with-infrastructure/terraform-plan.png)
-
-
-## <a name="create-the-virtual-machines-with-apply"></a>Создание виртуальных машин с применением
-
-Запустите `terraform apply` для подготовки виртуальных машин в Azure.
-
-![Применение Terraform](media/create-vm-cluster-with-infrastructure/terraform-apply.png)
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"] 
-> [Просмотрите список модулей Azure Terraform](https://registry.terraform.io/modules/Azure)
+> [Документация по Terraform в Azure](/azure/terraform)

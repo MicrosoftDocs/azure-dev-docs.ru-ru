@@ -1,15 +1,15 @@
 ---
 title: Развертывание кода приложения в Службе приложений Azure с помощью Azure CLI
-description: Руководство, часть 4. Развертывание веб-сайта
-ms.topic: conceptual
+description: Руководство, часть 4. Развертывание веб-сайта с помощью Azure CLI
+ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: e794388280c537261e428195ac3943379f04866b
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: 8e6075b8a1e526f916ab43c9a1f52ef1b66e8614
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88217944"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364787"
 ---
 # <a name="deploy-the-app-to-app-service"></a>Развертывание приложения в Службе приложений
 

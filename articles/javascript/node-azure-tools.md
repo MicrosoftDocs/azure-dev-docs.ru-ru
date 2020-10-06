@@ -1,15 +1,15 @@
 ---
 title: Средства Azure для разработчиков JavaScript
 description: Установка отдельных средств для разработки приложений Node.js и JavaScript в Azure
-ms.topic: article
+ms.topic: reference
 ms.date: 11/07/2017
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-javascript
-ms.openlocfilehash: 3de364d2bf2cb44dee0b7d08ee79dfbffb161300
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
+ms.openlocfilehash: 5ccbe3373e0c90f1abdfc97b4de8c0173b7f60e2
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218784"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365043"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.
@@ -35,10 +35,10 @@ Azure CLI оптимизирован для управления ресурса�
 
 | Инструмент | Description  |
 |:---------:|---------|
-| [Функции Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Средства Функций Azure](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Создание, администрирование, просмотр, отладка и развертывание функций|
-| [Служба приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![Средства службы приложений](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Навигация по сайтам и порталу Azure, создание сайтов и развертывание в слоты |
-| [Cosmos DB ](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)  <br> [![Средства Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Создание, просмотр и обновление распределенных многомодельных баз данных в Azure |
-| [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Средства Cosmos DB](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Управление контейнерами Docker и образами, Docker Hub и реестром контейнеров Azure |
+| [Функции Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions "Ссылка на расширение Функций Azure") <br> [![Средства Функций Azure](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | Создание, администрирование, просмотр, отладка и развертывание функций|
+| [Служба приложений Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice "Ссылка на расширение Службы приложений Azure") <br> [![Средства службы приложений](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | Навигация по сайтам и порталу Azure, создание сайтов и развертывание в слоты |
+| [База данных Cosmos](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb "Ссылка на расширение Cosmos DB" )  <br> [![Средства Cosmos DB](media/node-azure-tools/icon-cosmos-db.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-cosmosdb)| Создание, просмотр и обновление распределенных многомодельных баз данных в Azure |
+| [Docker](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)   <br> [![Docker](media/node-azure-tools/icon-docker.png)](https://marketplace.visualstudio.com/items?itemName=formulahendry.docker-explorer)| Управление контейнерами Docker и образами, Docker Hub и реестром контейнеров Azure |
 
 > [!div class="nextstepaction"]
 > [Получите больше расширений Azure в Visual Studio Code Marketplace](https://marketplace.visualstudio.com/search?term=azure&target=VSCode&category=All%20categories&sortBy=Relevance)

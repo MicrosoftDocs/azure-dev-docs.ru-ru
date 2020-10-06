@@ -1,15 +1,15 @@
 ---
 title: Повторное развертывание контейнера в Службе приложений Azure с помощью Visual Studio Code после внесения изменений
-description: Руководство, шаг 6. Простой процесс повторного создания и развертывания образа контейнера.
-ms.topic: conceptual
+description: Руководство по Docker, шаг 6. Простой процесс повторного создания и развертывания образа контейнера
+ms.topic: tutorial
 ms.date: 09/20/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 27bfc943ee64cbf6708fc2665ad9593b0fb28647
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.custom: devx-track-js
+ms.openlocfilehash: 29f07936d69d971c9ea139b019ac4ee272871342
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501409"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365107"
 ---
 # <a name="make-changes-and-redeploy-a-container-using-visual-studio-code"></a>Изменение и повторное развертывание контейнера с помощью Visual Studio Code
 

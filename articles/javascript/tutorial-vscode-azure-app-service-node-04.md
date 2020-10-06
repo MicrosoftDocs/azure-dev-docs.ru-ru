@@ -1,15 +1,15 @@
 ---
 title: Потоковая передача журналов из Службы приложений Azure с помощью Visual Studio Code
-description: Руководство, часть 4. Просмотр журнала или вывод его последнего фрагмента
-ms.topic: conceptual
+description: Руководство по Node.js, часть 4. Просмотр журнала или вывод его последнего фрагмента
+ms.topic: tutorial
 ms.date: 03/04/2020
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 6bc01b7691bf4881d610453707dd3c97654554be
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: eed2663f32571dc40fb402553424c1303d43f7b9
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218329"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91365237"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Потоковая передача журналов из Службы приложений Azure
 

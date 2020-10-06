@@ -1,16 +1,16 @@
 ---
 title: Краткое руководство. Настройка Terraform с помощью Azure Cloud Shell
-description: Из этого краткого руководства можно узнать, как установить и настроить Terraform для создания ресурсов Azure.
+description: В этом кратком руководстве показано, как установить и настроить Terraform с помощью Azure Cloud Shell.
 keywords: azure devops terraform установка настройка cloud shell init план применение выполнение вход портал rbac субъект-служба автоматизированный сценарий
 ms.topic: quickstart
-ms.date: 08/08/2020
+ms.date: 09/27/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: d8cec2954357269b5605a7b35c96030b8e8b5fa0
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: f5b1b242479ede712cccb178a8ee25b0b557173c
+ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241176"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91401614"
 ---
 # <a name="quickstart-configure-terraform-using-azure-cloud-shell"></a>Краткое руководство. Настройка Terraform с помощью Azure Cloud Shell
  
@@ -20,15 +20,13 @@ ms.locfileid: "88241176"
 
 Вы узнаете, как выполнять следующие задачи:
 > [!div class="checklist"]
-> * аутентификация в Azure с помощью команды `az login`;
+> * Проверка подлинности в Azure
 > * создание субъекта-службы Azure с помощью Azure CLI;
 > * аутентификация в Azure с помощью субъекта-службы;
 > * настройка текущей подписки Azure для использования, если у вас несколько подписок;
-> * написание скрипта Terraform для создания группы ресурсов Azure;
+> * создание базового файла конфигурации Terraform;
 > * Создание и применение плана выполнения Terraform
-> * использование флага `terraform plan -destroy` для отмены плана выполнения.
-
-[!INCLUDE [hashicorp-support.md](includes/hashicorp-support.md)]
+> * отмена плана выполнения.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -122,134 +120,15 @@ az login --service-principal -u <service_principal_name> -p "<service_principal_
 
     - При вызове `az account set` не отобразятся результаты переключения на указанную подписку Azure. Однако с помощью `az account show` можно убедиться, что текущая подписка Azure изменилась.
 
-## <a name="create-a-terraform-configuration-file"></a>Создание файла конфигурации Terraform
+[!INCLUDE [terraform-create-base-config-file.md](includes/terraform-create-base-config-file.md)]
 
-Из этого раздела вы узнаете, как создать файл конфигурации Terraform, который позволяет создать группу ресурсов Azure.
+[!INCLUDE [terraform-create-and-apply-execution-plan.md](includes/terraform-create-and-apply-execution-plan.md)]
 
-1. Измените каталоги на подключенную общую папку, где сохраняется ваша работа в Cloud Shell. Дополнительные сведения о том, как Cloud Shell сохраняет файлы, см. в разделе [Подключение хранилища файлов Microsoft Azure](/azure/cloud-shell/overview#connect-your-microsoft-azure-files-storage).
+[!INCLUDE [terraform-reverse-execution-plan.md](includes/terraform-reverse-execution-plan.md)]
 
-    ```bash
-    cd clouddrive
-    ```
-
-1. Создайте каталог для хранения файлов Terraform для этой демонстрации.
-
-    ```bash
-    mkdir QuickstartTerraformTest
-    ```
-
-1. Перейдите в каталог демонстрации.
-
-    ```bash
-    cd QuickstartTerraformTest
-    ```
-
-1. С помощью своего редактора создайте файл конфигурации Terraform. Для инструкций из этой статьи используется встроенный [редактор Cloud Shell](/azure/cloud-shell/using-cloud-shell-editor).
-
-    ```bash
-    code QuickstartTerraformTest.tf
-    ```
- 
-1. Скопируйте приведенный ниже код HCL и вставьте его в новый файл.
-
-    ```hcl
-    provider "azurerm" {
-      # The "feature" block is required for AzureRM provider 2.x.
-      # If you are using version 1.x, the "features" block is not allowed.
-      version = "~>2.0"
-      features {}
-    }
-    resource "azurerm_resource_group" "rg" {
-            name = "QuickstartTerraformTest-rg"
-            location = "eastus"
-    }
-    ```
-
-    **Примечания**
-
-    - Блок `provider` указывает, что используется [поставщик Azure (`azurerm`)](https://www.terraform.io/docs/providers/azurerm/index.html).
-    - В блоке поставщика `azurerm` заданы атрибуты `version` и `features`. Как указано в комментариях, их использование зависит от конкретной версии. Дополнительные сведения о настройке этих атрибутов для среды см. в разделе [Поставщик AzureRM версии 2.0](https://www.terraform.io/docs/providers/azurerm/guides/2.0-upgrade-guide.html).
-    - Только [объявление ресурса](https://www.terraform.io/docs/configuration/resources.html) предназначено для типа ресурса [azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html). Два обязательных аргумента для `azure_resource_group`: `name` и `location`.
-
-1. Сохраните файл ( **&lt;CTRL+S**).
-
-1. Выйдите из редактора ( **&lt;CTRL+Q**).
-
-## <a name="create-and-apply-a-terraform-execution-plan"></a>Создание и применение плана выполнения Terraform
-
-В этом разделе описывается, как создать *план выполнения* и применить его к облачной инфраструктуре.
-
-1. Инициализируйте развертывание Terraform с помощью команды [terraform init](https://www.terraform.io/docs/commands/init.html). На этом шаге загружаются модули Azure, необходимые для создания группы ресурсов Azure.
-
-    ```bash
-    terraform init
-    ```
-
-1. Выполните команду [terraform plan](https://www.terraform.io/docs/commands/plan.html), чтобы создать план выполнения из файла конфигурации Terraform.
-
-    ```bash
-    terraform plan -out QuickstartTerraformTest.tfplan
-    ```
-
-    **Примечания.**
-    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации. Этот шаблон позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вы начнете вносить изменения в фактические ресурсы.
-    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Использование параметра `-out` гарантирует, что проверяемый план полностью соответствует применяемому.
-    - Дополнительные сведения о сохранении планов выполнения и обеспечении безопасности см. в разделе о [предупреждениях безопасности](https://www.terraform.io/docs/commands/plan.html#security-warning).
-
-1. Выполните команду [terraform apply](https://www.terraform.io/docs/commands/apply.html), чтобы применить план выполнения.
-
-    ```bash
-    terraform apply QuickstartTerraformTest.tfplan
-    ```
-
-1. После применения плана выполнения вы можете проверить, создана ли группа ресурсов, выполнив команду [az group show](/cli/azure/group?#az-group-show).
-
-    ```azurecli
-    az group show -n "QuickstartTerraformTest-rg"
-    ```
-
-    **Примечания**
-
-    - В случае успеха `az group show` отображает различные свойства только что созданной группы ресурсов.
-
-## <a name="clean-up-resources"></a>Очистка ресурсов
-
-Удалите ресурсы Azure, созданные в рамках этой статьи, если они вам больше не нужны.
-
-1. Выполните команду [terraform plan](https://www.terraform.io/docs/commands/plan.html), чтобы создать план выполнения для удаления ресурсов, указанных в файле конфигурации Terraform.
-
-    ```bash
-    terraform plan -destroy -out QuickstartTerraformTest.destroy.tfplan
-    ```
-
-    **Примечания**
-    - Команда `terraform plan` создает план выполнения, но не выполняет его. Вместо этого она определяет, какие действия необходимы для создания конфигурации, заданной в файлах конфигурации. Этот шаблон позволяет проверить, соответствует ли план выполнения вашим ожиданиям, прежде чем вы начнете вносить изменения в фактические ресурсы.
-    - Параметр `-destroy` создает план для удаления ресурсов.
-    - Необязательный параметр `-out` позволяет указать выходной файл для плана. Использование параметра `-out` гарантирует, что проверяемый план полностью соответствует применяемому.
-    - Дополнительные сведения о сохранении планов выполнения и обеспечении безопасности см. в разделе о [предупреждениях безопасности](https://www.terraform.io/docs/commands/plan.html#security-warning).
-
-1. Выполните команду [terraform apply](https://www.terraform.io/docs/commands/apply.html), чтобы применить план выполнения.
-
-    ```bash
-    terraform apply QuickstartTerraformTest.destroy.tfplan
-    ```
-
-1. Убедитесь, что группа ресурсов была удалена, с помощью команды [az group show](/cli/azure/group?#az-group-show).
-
-    ```azurecli
-    az group show -n "QuickstartTerraformTest-rg"
-    ```
-
-    **Примечания**
-    - При успешном удалении `az group show` отобразит сведения о том, что группа ресурсов не существует.
-
-1. Перейдите в родительский каталог и удалите демонстрационный каталог. Параметр `-r` удаляет содержимое каталога перед удалением самого каталога. Среди содержимого каталога: файл конфигурации, созданный ранее, и файлы состояния Terraform.
-
-    ```bash
-    cd .. && rm -r QuickstartTerraformTest
-    ```
+[!INCLUDE [terraform-troubleshooting.md](includes/terraform-troubleshooting.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
-> [Создание готовой инфраструктуры виртуальных машин Linux в Azure с помощью Terraform](create-linux-virtual-machine-with-infrastructure.md)
+> [Создание виртуальной машины Linux с помощью Terraform](create-linux-virtual-machine-with-infrastructure.md)

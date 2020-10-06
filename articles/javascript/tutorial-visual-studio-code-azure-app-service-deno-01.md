@@ -1,15 +1,15 @@
 ---
 title: Развертывание приложений Deno в Службе приложений Azure с помощью Azure CLI
-description: Руководство, часть 1. Общие сведения и предварительные требования.
-ms.topic: conceptual
+description: Руководство по Deno, часть 1. Общие сведения и предварительные требования
+ms.topic: tutorial
 ms.date: 06/01/2020
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 0a725c0c1f59f01fd75e76e68ac533c7918a429b
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: e4c521edd2f23576842d90979813f96a1812f0ec
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "90772937"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364947"
 ---
 # <a name="deploy-deno-to-azure-app-service-using-visual-studio-code"></a>Развертывание Deno в Службе приложений Azure с помощью Visual Studio Code
 

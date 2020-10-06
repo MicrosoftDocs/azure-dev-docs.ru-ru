@@ -1,16 +1,16 @@
 ---
 title: Создание статического приложения Node.js с помощью Visual Studio Code
-description: Руководство, часть 2. Создание примера приложения
-ms.topic: conceptual
+description: Руководство по статическим веб-приложениям, часть 2. Создание примера приложения
+ms.topic: tutorial
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.custom: devx-track-javascript
-ms.openlocfilehash: 4d35a46323639aa42e7f220b8609f913f57d9027
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: a46fd8c35cf76de65e60a175fb3ccd70767a5dc4
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88218219"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364637"
 ---
 # <a name="create-the-app"></a>Создайте приложение
 
@@ -140,7 +140,7 @@ ms.locfileid: "88218219"
 
 1. Откройте в браузере страницу по адресу `http://localhost:5000`, чтобы проверить работу приложения:
 
-    ![Работающий пример приложения Vue](media/static-website/local-app-svelte.png)
+    ![Работающий пример приложения Svelte](media/static-website/local-app-svelte.png)
 
 1. Чтобы отключить сервер, нажмите клавиши **CTRL**+**C** в окне терминала или в командной строке.
 

@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: 9d7db7db5a1b7323bd10e7e9cc87ca3b9a95826a
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: 06fc0e0986a41b2d37aa38d5557b0efbae08994e
+ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87401675"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91493171"
 ---
 ### <a name="create-a-web-project"></a>Создание веб-проекта
 
@@ -36,9 +36,7 @@ ms.locfileid: "87401675"
 
 1. Удалите класс **WeatherForecast.cs**.
 
-1. **CTRL** + **щелчок** по проекту **PushDemoApi**, а затем выберите **Создать файл...** в меню **Добавить**.
-
-1. Настройте значения локальной конфигурации с помощью средства [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux#secret-manager) (Диспетчер секретов). Отделение секретов от решения гарантирует, что они не будут находиться в системе управления версиями. Откройте **терминал**, перейдите в каталог файла проекта и выполните следующие команды:
+1. Настройте значения локальной конфигурации с помощью средства [Secret Manager](/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux#secret-manager) (Диспетчер секретов). Отделение секретов от решения гарантирует, что они не будут находиться в системе управления версиями. Откройте **терминал**, перейдите в каталог файла проекта и выполните следующие команды:
 
     ```bash
     dotnet user-secrets init
@@ -59,7 +57,7 @@ ms.locfileid: "87401675"
 
 ### <a name="authenticate-clients-using-an-api-key-optional"></a>Проверка подлинности клиентов с помощью ключа API (необязательно)
 
-Ключи API не так безопасны, как токены, но этого вполне достаточно для целей данного учебника. Ключ API можно легко настроить с помощью [ПО промежуточного слоя ASP.NET](https://docs.microsoft.com/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.1).
+Ключи API не так безопасны, как токены, но этого вполне достаточно для целей данного учебника. Ключ API можно легко настроить с помощью [ПО промежуточного слоя ASP.NET](/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.1).
 
 1. Добавьте **ключ API** к значениям локальной конфигурации.
 
@@ -150,7 +148,7 @@ ms.locfileid: "87401675"
     ```
 
     > [!NOTE]
-    > [Authentication Handler](https://docs.microsoft.com/aspnet/core/security/authentication/?view=aspnetcore-3.1#authentication-handler) — это тип, который реализует поведение схемы, в данном случае настраиваемую схему ключей API.
+    > [Authentication Handler](/aspnet/core/security/authentication/?view=aspnetcore-3.1#authentication-handler) — это тип, который реализует поведение схемы, в данном случае настраиваемую схему ключей API.
 
 1. Добавьте еще один **Пустой класс** в папку **Authentication** с именем *ApiKeyAuthenticationBuilderExtensions.cs*, а затем добавьте следующую реализацию.
 
@@ -181,6 +179,8 @@ ms.locfileid: "87401675"
 1. В **Startup.cs** обновите метод **ConfigureServices**, чтобы настроить проверку подлинности ключа API ниже вызова метода **services.AddControllers**.
 
     ```csharp
+    using PushDemoApi.Authentication;
+    
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddControllers();
@@ -223,7 +223,7 @@ ms.locfileid: "87401675"
 
 ### <a name="add-dependencies-and-configure-services"></a>Добавление зависимостей и настройка служб
 
-ASP.NET Core поддерживает шаблон разработки программного обеспечения с [внедрением зависимостей (DI)](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1), который является приемом [инверсии управления (IoC)](https://docs.microsoft.com/dotnet/standard/modern-web-apps-azure-architecture/architectural-principles#dependency-inversion) между классами и их зависимостями.  
+ASP.NET Core поддерживает шаблон разработки программного обеспечения с [внедрением зависимостей (DI)](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1), который является приемом [инверсии управления (IoC)](/dotnet/standard/modern-web-apps-azure-architecture/architectural-principles#dependency-inversion) между классами и их зависимостями.  
 
 Использование Центра уведомлений и [пакета средств разработки Центров уведомлений для операций серверной части](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/) инкапсулированы в службе. Служба регистрируется и становится доступной через подходящую абстракцию.
 
@@ -260,9 +260,9 @@ ASP.NET Core поддерживает шаблон разработки прог
     ```
 
     > [!NOTE]
-    > Этот класс содержит полезные данные уведомления токена для универсальных и автоматических уведомлений, необходимых в этом сценарии. Полезные данные определяются вне папки [Installation](https://docs.microsoft.com/dotnet/api/microsoft.azure.notificationhubs.installation?view=azure-dotnet), чтобы разрешить эксперименты без необходимости обновлять существующие установки через службу. Обработка изменений в установках таким образом выходит за рамки этого учебника. В рабочей среде рекомендуем использовать [пользовательские шаблоны](https://docs.microsoft.com/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
+    > Этот класс содержит полезные данные уведомления токена для универсальных и автоматических уведомлений, необходимых в этом сценарии. Полезные данные определяются вне папки [Installation](/dotnet/api/microsoft.azure.notificationhubs.installation?view=azure-dotnet), чтобы разрешить эксперименты без необходимости обновлять существующие установки через службу. Обработка изменений в установках таким образом выходит за рамки этого учебника. В рабочей среде рекомендуем использовать [пользовательские шаблоны](/azure/notification-hubs/notification-hubs-templates-cross-platform-push-messages).
 
-1. Выберите **Общие** > **Пустой класс**, введите *DeviceInstallation.cs* в поле **Имя** и щелкните **Создать**, чтобы добавить следующую реализацию.
+1. Добавьте еще один **пустой класс** в папку **Models** с именем *DeviceInstallation.cs*, а затем добавьте следующую реализацию.
 
     ```csharp
     using System.Collections.Generic;
@@ -326,6 +326,7 @@ ASP.NET Core поддерживает шаблон разработки прог
 1. Добавьте **Пустой интерфейс** в папку **Services** и присвойте ему имя *INotificationService.cs*, а затем добавьте следующую реализацию.
 
     ```csharp
+    using System.Threading;
     using System.Threading.Tasks;
     using PushDemoApi.Models;
 
@@ -510,7 +511,7 @@ ASP.NET Core поддерживает шаблон разработки прог
     ```
 
     > [!NOTE]
-    > Выражение тега, предоставленное для **SendTemplateNotificationAsync**, ограничено 20 тегами. Для большинства операторов ограничение составляет 6, но в данном случае выражение содержит только операторы OR (||). Если в запросе более 20 тегов, они должны быть разделены на несколько запросов. Дополнительные сведения см. в документации [Маршрутизация и выражения тегов](https://msdn.microsoft.com/library/azure/Dn530749.aspx?f=255&MSPPError=-2147217396).
+    > Выражение тега, предоставленное для **SendTemplateNotificationAsync**, ограничено 20 тегами. Для большинства операторов ограничение составляет 6, но в данном случае выражение содержит только операторы OR (||). Если в запросе более 20 тегов, они должны быть разделены на несколько запросов. Дополнительные сведения см. в документации [Маршрутизация и выражения тегов](/previous-versions/azure/azure-services/dn530749(v=azure.100)?f=255&MSPPError=-2147217396).
 
 1. В **Startup.cs** обновите метод **ConfigureServices**, чтобы добавить **NotificationHubsService** в качестве отдельной реализации **INotificationService**.
 
@@ -606,7 +607,7 @@ ASP.NET Core поддерживает шаблон разработки прог
     >
     > При получении предупреждения **Проверка SSL-сертификата** можно выключить запрос на проверку SSL-сертификата **[Postman](https://www.postman.com/downloads)** в разделе **Параметры**.
 
-1. Замените методы шаблонного класса следующим кодом.
+1. Замените методы шаблонного класса в **NotificationsController.cs** следующим кодом.
 
     ```csharp
     [HttpPut]
@@ -669,7 +670,7 @@ ASP.NET Core поддерживает шаблон разработки прог
 
 ### <a name="create-the-api-app"></a>Создание приложения API
 
-Теперь вы создадите [приложение API](https://azure.microsoft.com/services/app-service/api/) в [Службе приложений Azure](https://docs.microsoft.com/azure/app-service/) для размещения серверной службы.  
+Теперь вы создадите [приложение API](https://azure.microsoft.com/services/app-service/api/) в [Службе приложений Azure](/azure/app-service/) для размещения серверной службы.  
 
 1. Войдите на [портал Azure](https://portal.azure.com).
 

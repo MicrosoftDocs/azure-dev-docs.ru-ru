@@ -1,15 +1,15 @@
 ---
 title: Развертывание контейнеров Docker в Службе приложений Azure с помощью Visual Studio Code
-description: Руководство, часть 1. Общие сведения и предварительные требования.
-ms.topic: conceptual
+description: Руководство по Docker, часть 1. Общие сведения и предварительные требования
+ms.topic: tutorial
 ms.date: 09/20/2019
-ms.custom: devx-track-javascript
-ms.openlocfilehash: df92b27e88b750956b7e46cc944cf627e077f1dd
-ms.sourcegitcommit: 0699b984b85782b1c441289fa756f285eae853c3
+ms.custom: devx-track-js
+ms.openlocfilehash: fd9a819b402cba9bed214ac66fd8cf0cdce8a276
+ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "91110499"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364767"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Развертывание веб-приложения в Службу приложений Azure
 
