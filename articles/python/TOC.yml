@@ -108,8 +108,6 @@
       items:
         - name: Аутентификация приложений с помощью Azure
           href: azure-sdk-authenticate.md
-        - name: Назначение субъектам безопасности разрешений ролей
-          href: how-to-assign-role-permissions.md
         - name: Управление субъектами-службами
           href: how-to-manage-service-principals.md
         - name: Пошаговое руководство
