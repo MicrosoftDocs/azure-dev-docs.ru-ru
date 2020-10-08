@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
 ms.custom: seo-java-august2019, seo-java-september2019, devx-track-java
-ms.openlocfilehash: 585cb33b6eabc5e353ddda37f687bcf0bacc6901
-ms.sourcegitcommit: c6642cae6fdb5e3025ed66fcd4ef89792c3b436a
+ms.openlocfilehash: 1fd24b0b6f8b0bc47dd763428a6fbfed8e1872f4
+ms.sourcegitcommit: 8fcb6c2d17be63064090f801f46c9c754821f979
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405705"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91805955"
 ---
 # <a name="azure-management-libraries-for-java---web-app-samples"></a>Библиотеки управления Azure для Java — примеры веб-приложений 
 
@@ -35,6 +35,6 @@ ms.locfileid: "86405705"
 [1]: java-sdk-configure-webapp-sources.md
 [2]: https://github.com/Azure-Samples/app-service-java-manage-staging-and-production-slots-for-web-apps/
 [3]: https://github.com/Azure-Samples/app-service-java-manage-web-apps-with-custom-domains/
-[4]: https://azure.microsoft.com/resources/samples/app-service-java-scale-web-apps-on-linux/
+[4]: https://github.com/Azure-Samples/app-service-java-scale-web-apps-on-linux
 [5]: https://github.com/Azure-Samples/app-service-java-manage-storage-connections-for-web-apps/
 [6]: https://github.com/Azure-Samples/app-service-java-manage-data-connections-for-web-apps/

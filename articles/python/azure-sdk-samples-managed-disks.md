@@ -4,18 +4,18 @@ description: Создание, изменение размера и обновл
 ms.topic: conceptual
 ms.date: 6/15/2017
 ms.custom: devx-track-python
-ms.openlocfilehash: 53f93098840c2635b388df2c2fd97fe6b3c8af48
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: b81f9cb848e1b3505e50cd3fde35e1afff16d493
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493065"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764512"
 ---
 # <a name="managed-disks"></a>Управляемые диски
 
 Управляемые диски Azure обеспечивают простоту управления дисками, улучшенную масштабируемость и повышенную безопасность. Теперь вы можете забыть об учетных записях хранения для дисков и выполнять масштабирование, не беспокоясь об ограничениях, связанных с этими учетными записями. В этой публикации содержатся краткие вводные сведения и справочные материалы по использованию этой службы с помощью Python.
 
-С точки зрения разработчика использование службы "Управляемые диски" с Azure CLI ничем не отличается от использования CLI в других кроссплатформенных средствах. Для администрирования управляемых дисков вы можете использовать пакеты Azure SDK для [Python](https://azure.microsoft.com/develop/python/) и [azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute). Вы также можете создать вычислительный клиент, следуя инструкциям из [этого руководства](/python/api/overview/azure/virtualmachines?view=azure-python).
+С точки зрения разработчика использование службы "Управляемые диски" с Azure CLI ничем не отличается от использования CLI в других кроссплатформенных средствах. Для администрирования управляемых дисков вы можете использовать пакеты Azure SDK для [Python](https://azure.microsoft.com/develop/python/) и [azure-mgmt-compute 0.33.0](https://pypi.python.org/pypi/azure-mgmt-compute). Вы также можете создать вычислительный клиент, следуя инструкциям из [этого руководства](/python/api/overview/azure/virtualmachines).
 
 ## <a name="standalone-managed-disks"></a>Автономные управляемые диски
 

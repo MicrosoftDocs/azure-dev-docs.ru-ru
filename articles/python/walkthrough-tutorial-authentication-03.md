@@ -4,12 +4,12 @@ description: В этой части рассматривается пример 
 ms.date: 08/24/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 84078a455843cb28f80a633bb5344bc5ab645ac7
-ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
+ms.openlocfilehash: 7c0098988265fef5b6b0f5e4a654f54c9bed4594
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379536"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764497"
 ---
 # <a name="part-3-example-third-party-api-implementation"></a>Часть 3. Пример реализации стороннего API
 
@@ -42,9 +42,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 Скрипт подготовки примера отвечает за следующие действия для развертывания кода:
 
-1. Создание резервной учетной записи хранения для Функций Azure с помощью команды Azure CLI [`az storage account create`](/cli/azure/storage/account?view=azure-cli-latest#az-storage-account-create).
+1. Создание резервной учетной записи хранения для Функций Azure с помощью команды Azure CLI [`az storage account create`](/cli/azure/storage/account#az-storage-account-create).
 
-1. Создание приложения-функции Функций Azure с помощью команды [`az function app create`](/cli/azure/functionapp?view=azure-cli-latest#az-functionapp-create).
+1. Создание приложения-функции Функций Azure с помощью команды [`az function app create`](/cli/azure/functionapp#az-functionapp-create).
 
 1. Развертывание кода с помощью такой команды [Azure Functions Core Tools](/azure/azure-functions/functions-run-local?tabs=linux%2Ccsharp%2Cbash), как [`func azure functionapp publish`](/azure/azure-functions/functions-run-local?tabs=linux%2Ccsharp%2Cbash#project-file-deployment), после паузы в 60 секунд, необходимой для завершения подготовки узла.
 

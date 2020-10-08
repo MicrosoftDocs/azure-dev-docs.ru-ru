@@ -4,12 +4,12 @@ description: Общие сведения об использовании биб�
 ms.date: 09/21/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 63cd6c85e15fa0ffb44a4da01ffcc27d4ae08f17
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: ae51bee0aea2717c09242f8928a617bf8211f372
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831800"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764779"
 ---
 # <a name="azure-libraries-for-python-usage-patterns"></a>Библиотеки Azure для схем использования Python
 
@@ -37,9 +37,9 @@ pip install azure-storage-blob
 
 ## <a name="asynchronous-operations"></a>Асинхронные операции
 
-Многие операции, которые вызываются через объекты клиента и клиента управления (например, [`WebSiteManagementClient.web_apps.create_or_update`](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.operations.webappsoperations?view=azure-python#create-or-update-resource-group-name--name--site-envelope--custom-headers-none--raw-false--polling-true----operation-config-)), возвращают объект с типом `AzureOperationPoller[<type>]`, где `<type>` зависит от конкретной операции.
+Многие операции, которые вызываются через объекты клиента и клиента управления (например, [`WebSiteManagementClient.web_apps.create_or_update`](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.operations.webappsoperations#create-or-update-resource-group-name--name--site-envelope--custom-headers-none--raw-false--polling-true----operation-config-)), возвращают объект с типом `AzureOperationPoller[<type>]`, где `<type>` зависит от конкретной операции.
 
-Тип возвращаемого значения [`AzureOperationPoller`](/python/api/msrestazure/msrestazure.azure_operation.azureoperationpoller?view=azure-python) означает, что операция является асинхронной. Соответственно, вам нужно вызвать метод `result` этого модуля опроса, чтобы дождаться фактического результата операции.
+Тип возвращаемого значения [`AzureOperationPoller`](/python/api/msrestazure/msrestazure.azure_operation.azureoperationpoller) означает, что операция является асинхронной. Соответственно, вам нужно вызвать метод `result` этого модуля опроса, чтобы дождаться фактического результата операции.
 
 Следующий код взят из примера [ Подготовка и развертывание веб-приложения](azure-sdk-example-web-app.md), где показано, как использовать модуль опроса, чтобы дождаться результата.
 
@@ -58,7 +58,7 @@ poller = app_service_client.web_apps.create_or_update(RESOURCE_GROUP_NAME,
 web_app_result = poller.result()
 ```
 
-В нашем примере возвращаемое значение `create_or_update` имеет тип `AzureOperationPoller[Site]`, а значит возвращаемое значение `poller.result()` является объектом [Site](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.models.site?view=azure-python).
+В нашем примере возвращаемое значение `create_or_update` имеет тип `AzureOperationPoller[Site]`, а значит возвращаемое значение `poller.result()` является объектом [Site](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.models.site).
 
 ## <a name="exceptions"></a>Исключения
 
@@ -112,7 +112,7 @@ web_app_result = poller.result()
 
 Библиотеки Azure позволяют выражать аргументы объектов в виде отдельных объектов или как встроенную структуру данных JSON.
 
-Предположим, что существует объект [`ResourceManagementClient`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.resourcemanagementclient?view=azure-python), который создает группу ресурсов с помощью метода [`create_or_update`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#create-or-update-resource-group-name--parameters--custom-headers-none--raw-false----operation-config-). Второй аргумент для этого метода имеет тип [`ResourceGroup`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.models.resourcegroup?view=azure-python).
+Предположим, что существует объект [`ResourceManagementClient`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.resourcemanagementclient), который создает группу ресурсов с помощью метода [`create_or_update`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations#create-or-update-resource-group-name--parameters--custom-headers-none--raw-false----operation-config-). Второй аргумент для этого метода имеет тип [`ResourceGroup`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.models.resourcegroup).
 
 Для вызова `create_or_update` можно создать отдельный экземпляр `ResourceGroup`, непосредственно указав его обязательные аргументы (в нашем случае `location`):
 
@@ -138,7 +138,7 @@ rg_result = resource_client.resource_groups.create_or_update(
 
 Объекты также могут иметь вложенные аргументы объектов. В этом случае можно также использовать встроенную структуру данных JSON.
 
-Предположим, что у вас есть экземпляр объекта [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient?view=azure-python) и вы вызываете его метод [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations?view=azure-python#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). В этом случае третий аргумент имеет тип [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters?view=azure-python), который содержит аргумент типа [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties?view=azure-python). В свою очередь `VaultProperties` содержит аргументы объекта типа [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku?view=azure-python) и [`list[AccessPolicyEntry]`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry?view=azure-python). `Sku` содержит объект [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname?view=azure-python), а каждый `AccessPolicyEntry` содержит объект [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions?view=azure-python).
+Предположим, что у вас есть экземпляр объекта [`KeyVaultManagementClient`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.keyvaultmanagementclient) и вы вызываете его метод [`create_or_update`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.operations.vaultsoperations#create-or-update-resource-group-name--vault-name--parameters--custom-headers-none--raw-false--polling-true----operation-config-). В этом случае третий аргумент имеет тип [`VaultCreateOrUpdateParameters`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultcreateorupdateparameters), который содержит аргумент типа [`VaultProperties`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.vaultproperties). В свою очередь `VaultProperties` содержит аргументы объекта типа [`Sku`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.sku) и [`list[AccessPolicyEntry]`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.accesspolicyentry). `Sku` содержит объект [`SkuName`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.skuname), а каждый `AccessPolicyEntry` содержит объект [`Permissions`](/python/api/azure-mgmt-keyvault/azure.mgmt.keyvault.v2019_09_01.models.permissions).
 
 Для вызова `create_or_update` с внедренными объектами используется код, подобный приведенному ниже (при условии, что `tenant_id` и `object_id` уже определены). Кроме того, необходимые объекты можно создать перед вызовом функции.
 

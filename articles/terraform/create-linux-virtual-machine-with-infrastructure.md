@@ -5,12 +5,12 @@ keywords: Azure DevOps, Terraform, виртуальная машина Linux, в
 ms.topic: how-to
 ms.date: 06/14/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 13c519aeabfdd5a432dc16188e8d61241391c742
-ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+ms.openlocfilehash: 2beb9a98644d19c556342ee98e72c0b8b04ef355
+ms.sourcegitcommit: bf911950c432bdce257f9968b294a1c33e74c5f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91401624"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91717467"
 ---
 # <a name="create-a-linux-vm-with-infrastructure-in-azure-using-terraform"></a>Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform
 
@@ -107,7 +107,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
     name                = "myNetworkSecurityGroup"
     location            = "eastus"
     resource_group_name = azurerm_resource_group.myterraformgroup.name
-    
+
     security_rule {
         name                       = "SSH"
         priority                   = 1001
@@ -125,7 +125,6 @@ resource "azurerm_network_security_group" "myterraformnsg" {
     }
 }
 ```
-
 
 ## <a name="create-virtual-network-interface-card"></a>Создание виртуальных сетевых адаптеров
 
@@ -166,7 +165,7 @@ resource "random_id" "randomId" {
         # Generate a new ID only when a new resource group is defined
         resource_group = azurerm_resource_group.myterraformgroup.name
     }
-    
+
     byte_length = 8
 }
 ```
@@ -187,10 +186,9 @@ resource "azurerm_storage_account" "mystorageaccount" {
 }
 ```
 
-
 ## <a name="create-virtual-machine"></a>Создание виртуальной машины
 
-Последним шагом является создание виртуальной машины и использование всех созданных ресурсов. В рамках следующего раздела создается виртуальная машина с именем `myVM` и подключается виртуальный сетевой адаптер с именем `myNIC`. Используется образ последней версии `Ubuntu 16.04-LTS`, а пользователь с именем `azureuser` создается с отключенной проверкой подлинности по паролю.
+Последним шагом является создание виртуальной машины и использование всех созданных ресурсов. В рамках следующего раздела создается виртуальная машина с именем `myVM` и подключается виртуальный сетевой адаптер с именем `myNIC`. Используется образ последней версии `Ubuntu 18.04-LTS`, а пользователь с именем `azureuser` создается с отключенной проверкой подлинности по паролю.
 
  Данные ключа SSH предоставлены в разделе `ssh_keys`. Укажите открытый ключ SSH в поле `key_data`.
 
@@ -200,7 +198,7 @@ resource "tls_private_key" "example_ssh" {
   rsa_bits = 4096
 }
 
-output "tls_private_key" { value = "tls_private_key.example_ssh.private_key_pem" }
+output "tls_private_key" { value = tls_private_key.example_ssh.private_key_pem }
 
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
     name                  = "myVM"
@@ -218,14 +216,14 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     source_image_reference {
         publisher = "Canonical"
         offer     = "UbuntuServer"
-        sku       = "16.04.0-LTS"
+        sku       = "18.04-LTS"
         version   = "latest"
     }
 
     computer_name  = "myvm"
     admin_username = "azureuser"
     disable_password_authentication = true
-        
+
     admin_ssh_key {
         username       = "azureuser"
         public_key     = tls_private_key.example_ssh.public_key_openssh
@@ -301,7 +299,7 @@ resource "azurerm_network_security_group" "myterraformnsg" {
     name                = "myNetworkSecurityGroup"
     location            = "eastus"
     resource_group_name = azurerm_resource_group.myterraformgroup.name
-    
+
     security_rule {
         name                       = "SSH"
         priority                   = 1001
@@ -349,7 +347,7 @@ resource "random_id" "randomId" {
         # Generate a new ID only when a new resource group is defined
         resource_group = azurerm_resource_group.myterraformgroup.name
     }
-    
+
     byte_length = 8
 }
 
@@ -371,7 +369,7 @@ resource "tls_private_key" "example_ssh" {
   algorithm = "RSA"
   rsa_bits = 4096
 }
-output "tls_private_key" { value = "${tls_private_key.example_ssh.private_key_pem}" }
+output "tls_private_key" { value = tls_private_key.example_ssh.private_key_pem }
 
 # Create virtual machine
 resource "azurerm_linux_virtual_machine" "myterraformvm" {
@@ -390,14 +388,14 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
     source_image_reference {
         publisher = "Canonical"
         offer     = "UbuntuServer"
-        sku       = "16.04.0-LTS"
+        sku       = "18.04-LTS"
         version   = "latest"
     }
 
     computer_name  = "myvm"
     admin_username = "azureuser"
     disable_password_authentication = true
-        
+
     admin_ssh_key {
         username       = "azureuser"
         public_key     = tls_private_key.example_ssh.public_key_openssh

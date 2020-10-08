@@ -4,12 +4,12 @@ description: Шаг руководства 7. Очистка ресурсов A
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 523a1bb305fbaf566181f87c4affa0dd251e93a5
-ms.sourcegitcommit: 4af22924a0eaf01e6902631c0714045c02557de4
+ms.openlocfilehash: cbecb9771a1b4dcc8460b7c7296ae06928930a34
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91209378"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764754"
 ---
 # <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Очистка ресурсов после развертывания в Службе приложений Azure в Linux с помощью Visual Studio Code
 
@@ -25,7 +25,7 @@ ms.locfileid: "91209378"
 
 Как мы уже упоминали, вы можете узнать о расширении Службы приложений в репозитории [vscode-azureappservice](https://github.com/Microsoft/vscode-azureappservice) на сайте GitHub. Мы будем рады любым предложениям и сообщениям о проблемах.
 
-См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/python/azure/?view=azure-python).
+См. сведения о службах Azure, которые можно использовать с Python, в том числе о хранилище данных, ИИ и Машинном обучении, в [центре разработчиков Azure на Python](/python/azure/).
 
 Для VS Code существуют и другие расширения Azure, которые могут оказаться полезными. Выполните поиск по запросу "Azure" в обозревателе расширений:
 
@@ -39,6 +39,6 @@ ms.locfileid: "91209378"
 - [Средства Azure Resource Manager (ARM)](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [Все готово](/python/azure/?view=azure-python) 
+> [Все готово](/python/azure/) 
 
 [Возникли проблемы? Сообщите нам!](https://aka.ms/FlaskVSCQuickstartHelp)

@@ -4,12 +4,12 @@ description: В этой части описаны основные зависи
 ms.date: 08/24/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 2da18ac4b1d27e976d0713fba16dbfc0ba644168
-ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
+ms.openlocfilehash: 9c6204afd17d86cd8677022a59641e5343c6a543
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89379517"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764729"
 ---
 # <a name="part-5-main-app-dependencies-import-statements-and-environment-variables"></a>Часть 5. Основные зависимости приложения, операторы импорта и переменные среды
 
@@ -19,7 +19,7 @@ ms.locfileid: "89379517"
 
 ## <a name="dependencies-and-import-statements"></a>Зависимости и операторы импорта
 
-Коду приложения необходимы несколько библиотек: Flask, стандартная библиотека HTTP-запросов, а также библиотеки Azure для Active Directory ([azure.identity](/python/api/overview/azure/identity-readme?view=azure-python)), Key Vault ([azure.keyvault.secrets](/python/api/overview/azure/keyvault-secrets-readme?view=azure-python)) и Хранилища очередей ([azure.storage.queue](/python/api/overview/azure/storage-queue-readme?view=azure-python)). Эти библиотеки включены в файл приложения *requirements.txt*:
+Коду приложения необходимы несколько библиотек: Flask, стандартная библиотека HTTP-запросов, а также библиотеки Azure для Active Directory ([azure.identity](/python/api/overview/azure/identity-readme)), Key Vault ([azure.keyvault.secrets](/python/api/overview/azure/keyvault-secrets-readme)) и Хранилища очередей ([azure.storage.queue](/python/api/overview/azure/storage-queue-readme)). Эти библиотеки включены в файл приложения *requirements.txt*:
 
 ```txt
 flask
@@ -57,7 +57,7 @@ from azure.storage.queue import QueueClient
 
 Но при развертывании в Службе приложений Azure у вас нет доступа к серверу. В этом случае вы создаете *параметры приложения* с такими же именами, которые выступают в роли переменных среды для приложения. 
 
-В рамках скриптов подготовки эти параметры создаются с помощью команды Azure CLI [`az webapp config appsettings set`](/cli/azure/webapp/config/appsettings?view=azure-cli-latest#az-webapp-config-appsettings-set). Все четыре переменные задаются с помощью одной команды.
+В рамках скриптов подготовки эти параметры создаются с помощью команды Azure CLI [`az webapp config appsettings set`](/cli/azure/webapp/config/appsettings#az-webapp-config-appsettings-set). Все четыре переменные задаются с помощью одной команды.
 
 Сведения о создании параметров приложения на портале Azure см. в статье [Настройка приложения Службы приложений на портале Azure](/azure/app-service/configure-common).
 

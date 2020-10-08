@@ -4,12 +4,12 @@ description: Руководство, шаг 4. Инструкции по нас
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 45c24711131f03c2475d3ecb2a5538cadd6e7c56
-ms.sourcegitcommit: 815cf2acff71e849735f7afce54723f03ffa5df3
+ms.openlocfilehash: 6aa1f03b562eeea01e6e71441e8a12339eeaad26
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88501429"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764798"
 ---
 # <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Настройка пользовательского файла с командой запуска для приложений Python в Службе приложений Azure
 
@@ -48,7 +48,7 @@ ms.locfileid: "88501429"
 
 1. Служба приложений перезапускается при сохранении изменений. Но вы пока еще не развернули код приложения, поэтому при входе на веб-сайт пока будете получать ошибку, связанную с работой приложения. Такое сообщение означает, что сервер Gunicorn запущен, но не может найти приложение, то есть HTTP-запросы не обрабатываются. Код приложения вы развернете на следующем шаге.
 
-Кроме того, вы можете указать команду запуска с помощью [команды `az webapp create`](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) Azure CLI с аргументом `--startup-file`.
+Кроме того, вы можете указать команду запуска с помощью [команды `az webapp create`](/cli/azure/webapp#az-webapp-create) Azure CLI с аргументом `--startup-file`.
 
 ## <a name="django-startup-commands"></a>Команды запуска Django
 
