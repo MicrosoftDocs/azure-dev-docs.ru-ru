@@ -10,118 +10,118 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: 60455122c0ab21dc646938661c4f9489c969bd0d
-  ms.sourcegitcommit: 6e4c1b2d960b3089b8b4537a7e754ed41751ceca
+  ms.openlocfilehash: ed689388bddd3083b1718e05d6d8ad6eccc055f2
+  ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 07/28/2020
-  ms.locfileid: "87260391"
+  ms.lasthandoff: 10/08/2020
+  ms.locfileid: "91846665"
 productDirectory:
   items:
   - title: Python
     imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
     links:
-    - url: https://docs.microsoft.com/en-us/azure/developer/python/tutorial-vs-code-serverless-python-01
+    - url: ./python/tutorial-vs-code-serverless-python-01.md
       text: Развертывание бессерверных приложений Python в Функциях Azure
-    - url: https://docs.microsoft.com/azure/developer/python/tutorial-deploy-app-service-on-linux-01
+    - url: ./python/tutorial-deploy-app-service-on-linux-01.md
       text: Развертывание приложений Python в Службе приложений Azure
-    - url: https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-python
+    - url: /azure/storage/blobs/storage-quickstart-blobs-python
       text: Управление BLOB-объектами хранилища с помощью пакета Azure SDK для Python
-    - url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python
+    - url: /azure/sql-database/sql-database-connect-query-python
       text: Использование Python для создания запросов к Базе данных SQL Azure
-    - url: https://docs.microsoft.com/azure/data-factory/quickstart-create-data-factory-python
+    - url: /azure/data-factory/quickstart-create-data-factory-python
       text: Создание Фабрики данных Azure с помощью Python
-    - url: https://docs.microsoft.com/azure/developer/python/
+    - url: ./python/index.yml
       text: Узнайте больше в Центре разработчиков Python
   - title: JavaScript
     imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
     links:
-    - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-static-website-node-01?tabs=bash
+    - url: ./javascript/tutorial-vscode-static-website-node-01.md?tabs=bash
       text: Разработка статического веб-сайта
-    - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-azure-app-service-node-01?tabs=bash
+    - url: ./javascript/tutorial-vscode-azure-app-service-node-01.md?tabs=bash
       text: Развертывание в Службе приложений Azure
-    - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-serverless-node-01?tabs=bash
+    - url: ./javascript/tutorial-vscode-serverless-node-01.md?tabs=bash
       text: Развертывание бессерверного приложения
-    - url: https://docs.microsoft.com/azure/developer/javascript/tutorial-vscode-docker-node-01?tabs=bash
+    - url: ./javascript/tutorial-vscode-docker-node-01.md?tabs=bash
       text: Развертывание контейнеров Docker
-    - url: https://docs.microsoft.com/azure/cosmos-db/create-mongodb-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+    - url: /azure/cosmos-db/create-mongodb-nodejs?bc=%252fazure%252fdeveloper%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fdeveloper%252fjavascript%252ftoc.json
       text: Перенос приложения MongoDB в Azure Cosmos DB
-    - url: https://docs.microsoft.com/azure/developer/javascript/
+    - url: ./javascript/index.yml
       text: Дополнительные сведения см. в центре разработки
   - title: Java
     imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
     links:
-    - url: https://docs.microsoft.com/azure/developer/java/fundamentals/java-jdk-install
+    - url: ./java/fundamentals/java-jdk-install.md
       text: Установка JDK для Azure и Azure Stack
-    - url: https://docs.microsoft.com/azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
       text: Развертывание приложения Azure Spring Cloud с использованием портала Azure
-    - url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-java
+    - url: /azure/app-service/app-service-web-get-started-java
       text: Создание приложения Java в Службе приложений Azure
-    - url: https://docs.microsoft.com/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-active-directory
+    - url: ./java/spring-framework/configure-spring-boot-starter-java-app-with-azure-active-directory.md
       text: Использование начального приложения Spring Boot для Azure Active Directory
-    - url: https://docs.microsoft.com/azure/developer/java/migration/migration-overview
+    - url: ./java/migration/migration-overview.md
       text: Перенос приложений Java в Azure
-    - url: https://docs.microsoft.com/azure/developer/java/
+    - url: ./java/index.yml
       text: Узнайте больше в Центре разработчиков Java
   - title: .NET
     imageSrc: https://docs.microsoft.com/azure/media/index/net-logo.svg
     links:
-    - url: https://docs.microsoft.com/dotnet/azure/sdk/
+    - url: /dotnet/azure/sdk/
       text: Azure SDK для .NET
-    - url: https://docs.microsoft.com/dotnet/azure/intro
+    - url: /dotnet/azure/intro
       text: Введение в Azure и .NET
-    - url: https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet
+    - url: /azure/app-service/app-service-web-get-started-dotnet
       text: Развертывание веб-приложения ASP.NET
-    - url: https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio
+    - url: /azure/azure-functions/functions-create-your-first-function-visual-studio
       text: Создание бессерверной функции
-    - url: https://docs.microsoft.com/visualstudio/containers/container-tools?view=vs-2019
+    - url: /visualstudio/containers/container-tools?view=vs-2019
       text: ASP.NET Core и Docker
-    - url: https://docs.microsoft.com/dotnet/azure/
+    - url: /dotnet/azure/
       text: Узнайте больше в Центре разработчиков .NET
   - title: Azure PowerShell
     imageSrc: https://docs.microsoft.com/media/logos/logo_powershell.svg
     links:
-    - url: https://docs.microsoft.com/powershell/azure/new-azureps-module-az
+    - url: /powershell/azure/new-azureps-module-az
       text: Сведения о новом модуле Az
-    - url: https://docs.microsoft.com/powershell/azure/migrate-from-azurerm-to-az
+    - url: /powershell/azure/migrate-from-azurerm-to-az
       text: Миграция из AzureRM в Az
-    - url: https://docs.microsoft.com/powershell/azure/install-az-ps
+    - url: /powershell/azure/install-az-ps
       text: Установка
-    - url: https://docs.microsoft.com/powershell/azure/authenticate-azureps
+    - url: /powershell/azure/authenticate-azureps
       text: Вход
-    - url: https://docs.microsoft.com/powershell/azure/context-persistence
+    - url: /powershell/azure/context-persistence
       text: Сохранение контекстов для учетных данных
-    - url: https://docs.microsoft.com/powershell/azure/
+    - url: /powershell/azure/
       text: Узнайте больше в Центре разработчиков Azure PowerShell
   - title: Azure CLI
     imageSrc: https://docs.microsoft.com/media/logos/logo_CLIgeneric.svg
     links:
-    - url: https://docs.microsoft.com/cli/azure/get-started-with-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/get-started-with-azure-cli?view=azure-cli-latest
       text: Начало работы
-    - url: https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/install-azure-cli?view=azure-cli-latest
       text: Установка
-    - url: https://docs.microsoft.com/cli/azure/authenticate-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/authenticate-azure-cli?view=azure-cli-latest
       text: Вход
-    - url: https://docs.microsoft.com/en-us/cli/azure/query-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/query-azure-cli?view=azure-cli-latest
       text: Выполнение запроса для получения выходных данных команды CLI
-    - url: https://docs.microsoft.com/en-us/cli/azure/azure-cli-vm-tutorial?view=azure-cli-latest
+    - url: /cli/azure/azure-cli-vm-tutorial?view=azure-cli-latest
       text: Создание виртуальной машины
-    - url: https://docs.microsoft.com/cli/azure/
+    - url: /cli/azure/
       text: Узнайте больше в Центре разработчиков Azure CLI
   - title: Мобильные приложения
     imageSrc: https://static.docs.com/ui/media/product/azure/devices.svg
     links:
-    - url: https://docs.microsoft.com/azure/developer/mobile-apps/serverless-compute
+    - url: ./mobile-apps/serverless-compute.md
       text: Создание бессерверного мобильного приложения
-    - url: https://docs.microsoft.com/azure/cosmos-db/create-sql-api-xamarin-dotnet
+    - url: /azure/cosmos-db/create-sql-api-xamarin-dotnet
       text: Сохранение данных с помощью Azure Cosmos DB
-    - url: https://docs.microsoft.com/azure/developer/mobile-apps/push-notifications
+    - url: ./mobile-apps/push-notifications.md
       text: Отправка push-уведомлений для привлечения пользователей
-    - url: https://docs.microsoft.com/azure/developer/mobile-apps/authentication
+    - url: ./mobile-apps/authentication.md
       text: Добавление аутентификации и управление удостоверениями пользователей
-    - url: https://docs.microsoft.com/azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops
+    - url: /azure/devops/pipelines/get-started/key-pipelines-concepts?view=azure-devops
       text: Основные понятия для новых пользователей Azure Pipelines
-    - url: https://docs.microsoft.com/azure/developer/mobile-apps
+    - url: ./mobile-apps/index.yml
       text: Узнайте больше в Центре разработчиков мобильных приложений
 additionalContent:
   sections:
@@ -132,34 +132,34 @@ additionalContent:
       url: https://code.visualstudio.com/docs/azure/extensions
     - title: REST API
       summary: Используйте REST API для доступа к ресурсам службы с помощью операций HTTP.
-      url: https://docs.microsoft.com/rest/api/
+      url: /rest/api/
     - title: Шаблоны ARM
       summary: Применяйте шаблоны Azure Resource Manager для определения и настройки проектов с помощью файлов JSON.
-      url: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/
+      url: /azure/azure-resource-manager/templates/
     - title: Azure DevOps
       summary: Используйте Azure DevOps для планирования работы, совместной разработки кода, а также для создания и развертывания приложений.
-      url: https://docs.microsoft.com/azure/devops/?view=azure-devops
+      url: /azure/devops/?view=azure-devops
     - title: Интеграция Azure с GitHub
       summary: Автоматизируйте, настраивайте и выполняйте рабочие процессы разработки программного обеспечения в репозитории с помощью GitHub и GitHub Actions.
-      url: https://docs.microsoft.com/azure/developer/github
+      url: ./github/index.yml
     - title: Jenkins
       summary: Используйте Jenkins для автоматизации непрерывной интеграции и доставки (CI/CD) для проектов программного обеспечения.
-      url: https://docs.microsoft.com/azure/jenkins/
+      url: /azure/jenkins/
     - title: Terraform
       summary: Подготавливайте облачную инфраструктуру и управляйте ею с помощью HashiCorp Terraform.
-      url: https://docs.microsoft.com/azure/terraform/
+      url: /azure/terraform/
     - title: Ansible
       summary: Используйте Ansible для автоматизированной подготовки облачных решений, управления конфигурацией и развертывания приложений.
-      url: https://docs.microsoft.com/azure/developer/ansible/
+      url: ./ansible/index.yml
     - title: Chef
       summary: Преобразуйте инфраструктуру виртуальных машин в Azure в код с помощью Chef.
-      url: https://docs.microsoft.com/azure/developer/chef/
+      url: ./chef/index.yml
     - title: Maven
       summary: Применяйте Maven для автоматизированного создания проектов Java и управления ими. Также поддерживаются другие языки.
       url: https://github.com/Microsoft/azure-maven-plugins#readme
     - title: Набор средств Azure для IntelliJ
       summary: Создавайте, разрабатывайте, тестируйте и развертывайте приложения Azure в интегрированной среде разработки IntelliJ с помощью Azure Toolkit for IntelliJ.
-      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-intellij/
+      url: ./java/toolkit-for-intellij/index.yml
     - title: Набор средств Azure для Eclipse
       summary: Создавайте, разрабатывайте, тестируйте и развертывайте приложения Azure в интегрированной среде разработки Eclipse с помощью Azure Toolkit for Eclipse.
-      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-eclipse/
+      url: ./java/toolkit-for-eclipse/index.yml
