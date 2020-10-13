@@ -1,21 +1,22 @@
 ---
 title: Справочник по API библиотеки Azure SDK для Python
+description: Указатели на справочную документацию по API Python
 ms.date: 05/26/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: aa5462ae28153a631562c6703880a872b51dd048
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: f1a30c02059179f21694d716bcb5e063ae20956d
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87982866"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764821"
 ---
 # <a name="azure-libraries-for-python-api-reference"></a>Справочник по библиотекам Azure для API Python
 
 Полный справочник по всем службам:
 
 > [!div class="nextstepaction"]
-> [Браузер API Python >>>](/python/api/?view=azure-python)
+> [Браузер API Python >>>](/python/api/)
 
 Мы реализуем новые разделы со справкой по отдельным службам, начиная со службы хранения (BLOB-объекты, файлы, очереди). Мы просим вас [поделиться][1] своими впечатлениями.
 

@@ -1,15 +1,15 @@
 ---
 title: Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 description: Узнайте, как с помощью библиотек из пакета Azure SDK для Python подготовить контейнер больших двоичных объектов в учетной записи хранения Azure, а затем передать файл в этот контейнер.
-ms.date: 05/29/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: ff2064d7113e78cda69d240ca526db569c9d14e0
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.openlocfilehash: 82d7f83a426e56e4e235d1d4bfcfb8c73042e053
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110488"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764555"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Пример Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 
@@ -17,7 +17,7 @@ ms.locfileid: "91110488"
 
 После подготовки ресурсов см. [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md), чтобы использовать клиентские библиотеки Azure в коде приложения Python для отправки файла в контейнер хранилища больших двоичных объектов.
 
-Все описанные в этой статье команды работают одинаково как в Bash для macOS или Linux, так и в командных оболочках для Windows, если не указано иное.
+Все описанные в этой статье команды работают одинаково как в Bash для Linux или macOS, так и в командных оболочках для Windows, если не указано иное.
 
 ## <a name="1-set-up-your-local-development-environment"></a>1: настройка локальной среды разработки;
 
@@ -32,7 +32,7 @@ ms.locfileid: "91110488"
     ```txt
     azure-mgmt-resource
     azure-mgmt-storage
-    azure-cli-core
+    azure-identity
     ```
 
 1. В окне терминала с активированной виртуальной средой установите необходимые компоненты.
@@ -52,12 +52,18 @@ import os, random
 
 # Import the needed management objects from the libraries. The azure.common library
 # is installed automatically with the other libraries.
-from azure.common.client_factory import get_client_from_cli_profile
+from azure.identity import AzureCliCredential
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.storage import StorageManagementClient
 
-# Obtain the management object for resources, using the credentials from the CLI login.
-resource_client = get_client_from_cli_profile(ResourceManagementClient)
+# Acquire a credential object using CLI-based authentication.
+credential = AzureCliCredential()
+
+# Retrieve subscription ID from environment variable.
+subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
+
+# Obtain the management object for resources.
+resource_client = ResourceManagementClient(credential, subscription_id)
 
 # Constants we need in multiple places: the resource group name and the region
 # in which we provision resources. You can change these values however you want.
@@ -65,6 +71,7 @@ RESOURCE_GROUP_NAME = "PythonAzureExample-Storage-rg"
 LOCATION = "centralus"
 
 # Step 1: Provision the resource group.
+
 rg_result = resource_client.resource_groups.create_or_update(RESOURCE_GROUP_NAME,
     { "location": LOCATION })
 
@@ -73,9 +80,10 @@ print(f"Provisioned resource group {rg_result.name}")
 # For details on the previous code, see Example: Provision a resource group
 # at https://docs.microsoft.com/azure/developer/python/azure-sdk-example-resource-group
 
+
 # Step 2: Provision the storage account, starting with a management object.
 
-storage_client = get_client_from_cli_profile(StorageManagementClient)
+storage_client = StorageManagementClient(credential, subscription_id)
 
 # This example uses the CLI profile credentials because we assume the script
 # is being used to provision the resource in the same way the Azure CLI would be used.
@@ -89,14 +97,16 @@ STORAGE_ACCOUNT_NAME = f"pythonazurestorage{random.randint(1,100000):05}"
 
 # Check if the account name is available. Storage account names must be unique across
 # Azure because they're used in URLs.
-availability_result = storage_client.storage_accounts.check_name_availability(STORAGE_ACCOUNT_NAME)
+availability_result = storage_client.storage_accounts.check_name_availability(
+    { "name": STORAGE_ACCOUNT_NAME }
+)
 
 if not availability_result.name_available:
     print(f"Storage name {STORAGE_ACCOUNT_NAME} is already in use. Try another name.")
     exit()
 
 # The name is available, so provision the account
-poller = storage_client.storage_accounts.create(RESOURCE_GROUP_NAME, STORAGE_ACCOUNT_NAME,
+poller = storage_client.storage_accounts.begin_create(RESOURCE_GROUP_NAME, STORAGE_ACCOUNT_NAME,
     {
         "location" : LOCATION,
         "kind": "StorageV2",
@@ -108,6 +118,7 @@ poller = storage_client.storage_accounts.create(RESOURCE_GROUP_NAME, STORAGE_ACC
 # waits for completion.
 account_result = poller.result()
 print(f"Provisioned storage account {account_result.name}")
+
 
 # Step 3: Retrieve the account's primary access key and generate a connection string.
 keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP_NAME, STORAGE_ACCOUNT_NAME)
@@ -128,14 +139,12 @@ container = storage_client.blob_containers.create(RESOURCE_GROUP_NAME, STORAGE_A
 print(f"Provisioned blob container {container.name}")
 ```
 
-Этот код использует методы проверки подлинности на основе CLI (`get_client_from_cli_profile`), так как в нем демонстрируются действия, которые можно выполнить непосредственно в Azure CLI. В обоих случаях для проверки подлинности используется одно и то же удостоверение.
-
-Чтобы применить такой код в рабочем скрипте, лучше использовать `DefaultAzureCredential` (рекомендуется) или метод на основе субъекта-службы, как описано в статье [Проверка подлинности с использованием библиотек управления Azure для Python](azure-sdk-authenticate.md).
+[!INCLUDE [cli-auth-note](includes/cli-auth-note.md)]
 
 ### <a name="reference-links-for-classes-used-in-the-code"></a>Ссылки на справку о классах, используемых в коде
 
-- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient?view=azure-python)
-- [StorageManagementClient (azure.mgmt.storage)](/python/api/azure-mgmt-storage/azure.mgmt.storage.storagemanagementclient?view=azure-python)
+- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient)
+- [StorageManagementClient (azure.mgmt.storage)](/python/api/azure-mgmt-storage/azure.mgmt.storage.storagemanagementclient)
 
 ## <a name="4-run-the-script"></a>4. Выполнение скрипта
 
@@ -223,7 +232,7 @@ az storage container create --account-name pythonazurestorage12345 -n blob-conta
 az group delete -n PythonAzureExample-Storage-rg  --no-wait
 ```
 
-Для удаления группы ресурсов с помощью кода также можно использовать метод [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-).
+[!INCLUDE [resource_group_begin_delete](includes/resource-group-begin-delete.md)]
 
 ## <a name="see-also"></a>См. также раздел
 

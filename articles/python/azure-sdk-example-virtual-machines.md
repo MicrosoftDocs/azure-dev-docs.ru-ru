@@ -1,24 +1,24 @@
 ---
 title: Подготовка виртуальной машины с помощью библиотек пакета Azure SDK для Python
 description: Узнайте, как подготовить виртуальную машину Azure с помощью Python и библиотек управления Azure SDK.
-ms.date: 05/29/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: f51bb154106a50c708d8d37a024144d7d53aec0e
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.openlocfilehash: 134b3bc14fa8fafe2ee3953ab6a7c713853d9398
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110470"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764477"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Пример использования библиотек Azure для подготовки виртуальной машины
 
 В этом примере показано, как использовать библиотеки управления Azure SDK в скрипте Python для создания группы ресурсов, содержащей виртуальную машину Linux. ([Эквивалентные команды Azure CLI](#for-reference-equivalent-azure-cli-commands) приведены далее в этой статье. Если вы предпочитаете использовать портал Azure, см. статью [Создание виртуальной машины Linux](/azure/virtual-machines/linux/quick-create-portal) и [Создания виртуальной машины Windows](/azure/virtual-machines/windows/quick-create-portal).)
 
-Все описанные в этой статье команды работают одинаково как в Bash для macOS или Linux, так и в командных оболочках для Windows, если не указано иное.
+Все описанные в этой статье команды работают одинаково как в Bash для Linux или macOS, так и в командных оболочках для Windows, если не указано иное.
 
 > [!NOTE]
-> Подготовка виртуальной машины с помощью кода — это многоэтапный процесс, предполагающий подготовку ряда других ресурсов, необходимых виртуальной машине. Если вы выполняете код из командной строки, проще будет использовать команду [`az vm create`](/cli/azure/vm?view=azure-cli-latest#az-vm-create), которая автоматически подготавливает эти вспомогательные ресурсы, задавая значения по умолчанию всем параметрам, которые вы не указываете. Единственными обязательными аргументами являются группа ресурсов, имя виртуальной машины, имя образа и учетные данные для входа. Дополнительные сведения см. в статье [Быстрое создание виртуальной машины с помощью Azure CLI](/azure/virtual-machines/scripts/virtual-machines-windows-cli-sample-create-vm-quick-create).
+> Подготовка виртуальной машины с помощью кода — это многоэтапный процесс, предполагающий подготовку ряда других ресурсов, необходимых виртуальной машине. Если вы выполняете код из командной строки, проще будет использовать команду [`az vm create`](/cli/azure/vm#az-vm-create), которая автоматически подготавливает эти вспомогательные ресурсы, задавая значения по умолчанию всем параметрам, которые вы не указываете. Единственными обязательными аргументами являются группа ресурсов, имя виртуальной машины, имя образа и учетные данные для входа. Дополнительные сведения см. в статье [Быстрое создание виртуальной машины с помощью Azure CLI](/azure/virtual-machines/scripts/virtual-machines-windows-cli-sample-create-vm-quick-create).
 
 ## <a name="1-set-up-your-local-development-environment"></a>1: настройка локальной среды разработки;
 
@@ -32,9 +32,9 @@ ms.locfileid: "91110470"
 
     ```txt
     azure-mgmt-resource
-    azure-mgmt-network
     azure-mgmt-compute
-    azure-cli-core
+    azure-mgmt-network
+    azure-identity
     ```
 
 1. В окне терминала или в командной строке с активированной виртуальной средой установите библиотеки управления, указанные в файле *requirements.txt*.
@@ -48,19 +48,26 @@ ms.locfileid: "91110470"
 Создайте файл Python с именем *provision_vm.py* с приведенным ниже кодом. Подробные объяснения даны в комментариях:
 
 ```python
-# Import the needed management objects from the libraries. The azure.common library
-# is installed automatically with the other libraries.
-from azure.common.client_factory import get_client_from_cli_profile
+# Import the needed credential and management objects from the libraries.
+from azure.identity import AzureCliCredential
 from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.network import NetworkManagementClient
 from azure.mgmt.compute import ComputeManagementClient
+import os
 
 print(f"Provisioning a virtual machine...some operations might take a minute or two.")
+
+# Acquire a credential object using CLI-based authentication.
+credential = AzureCliCredential()
+
+# Retrieve subscription ID from environment variable.
+subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
+
 
 # Step 1: Provision a resource group
 
 # Obtain the management object for resources, using the credentials from the CLI login.
-resource_client = get_client_from_cli_profile(ResourceManagementClient)
+resource_client = ResourceManagementClient(credential, subscription_id)
 
 # Constants we need in multiple places: the resource group name and the region
 # in which we provision resources. You can change these values however you want.
@@ -80,6 +87,7 @@ print(f"Provisioned resource group {rg_result.name} in the {rg_result.location} 
 # For details on the previous code, see Example: Provision a resource group
 # at https://docs.microsoft.com/azure/developer/python/azure-sdk-example-resource-group
 
+
 # Step 2: provision a virtual network
 
 # A virtual machine requires a network interface client (NIC). A NIC requires
@@ -95,10 +103,10 @@ IP_CONFIG_NAME = "python-example-ip-config"
 NIC_NAME = "python-example-nic"
 
 # Obtain the management object for networks
-network_client = get_client_from_cli_profile(NetworkManagementClient)
+network_client = NetworkManagementClient(credential, subscription_id)
 
 # Provision the virtual network and wait for completion
-poller = network_client.virtual_networks.create_or_update(RESOURCE_GROUP_NAME,
+poller = network_client.virtual_networks.begin_create_or_update(RESOURCE_GROUP_NAME,
     VNET_NAME,
     {
         "location": LOCATION,
@@ -113,7 +121,7 @@ vnet_result = poller.result()
 print(f"Provisioned virtual network {vnet_result.name} with address prefixes {vnet_result.address_space.address_prefixes}")
 
 # Step 3: Provision the subnet and wait for completion
-poller = network_client.subnets.create_or_update(RESOURCE_GROUP_NAME, 
+poller = network_client.subnets.begin_create_or_update(RESOURCE_GROUP_NAME, 
     VNET_NAME, SUBNET_NAME,
     { "address_prefix": "10.0.0.0/24" }
 )
@@ -122,7 +130,7 @@ subnet_result = poller.result()
 print(f"Provisioned virtual subnet {subnet_result.name} with address prefix {subnet_result.address_prefix}")
 
 # Step 4: Provision an IP address and wait for completion
-poller = network_client.public_ip_addresses.create_or_update(RESOURCE_GROUP_NAME,
+poller = network_client.public_ip_addresses.begin_create_or_update(RESOURCE_GROUP_NAME,
     IP_NAME,
     {
         "location": LOCATION,
@@ -137,7 +145,7 @@ ip_address_result = poller.result()
 print(f"Provisioned public IP address {ip_address_result.name} with address {ip_address_result.ip_address}")
 
 # Step 5: Provision the network interface client
-poller = network_client.network_interfaces.create_or_update(RESOURCE_GROUP_NAME,
+poller = network_client.network_interfaces.begin_create_or_update(RESOURCE_GROUP_NAME,
     NIC_NAME, 
     {
         "location": LOCATION,
@@ -156,7 +164,7 @@ print(f"Provisioned network interface client {nic_result.name}")
 # Step 6: Provision the virtual machine
 
 # Obtain the management object for virtual machines
-compute_client = get_client_from_cli_profile(ComputeManagementClient)
+compute_client = ComputeManagementClient(credential, subscription_id)
 
 VM_NAME = "ExampleVM"
 USERNAME = "azureuser"
@@ -167,7 +175,7 @@ print(f"Provisioning virtual machine {VM_NAME}; this operation might take a few 
 # Provision the VM specifying only minimal arguments, which defaults to an Ubuntu 18.04 VM
 # on a Standard DS1 v2 plan with a public IP address and a default virtual network/subnet.
 
-poller = compute_client.virtual_machines.create_or_update(RESOURCE_GROUP_NAME, VM_NAME,
+poller = compute_client.virtual_machines.begin_create_or_update(RESOURCE_GROUP_NAME, VM_NAME,
     {
         "location": LOCATION,
         "storage_profile": {
@@ -199,15 +207,13 @@ vm_result = poller.result()
 print(f"Provisioned virtual machine {vm_result.name}")
 ```
 
-Этот код использует методы проверки подлинности на основе CLI (`get_client_from_cli_profile`), так как в нем демонстрируются действия, которые можно выполнить непосредственно в Azure CLI. В обоих случаях для проверки подлинности используется одно и то же удостоверение.
-
-Чтобы применить такой код в рабочем скрипте (например, для автоматизации управления виртуальной машиной), используйте `DefaultAzureCredential` (рекомендуется) или метод на основе субъекта-службы, как описано в статье [Проверка подлинности приложений Python с помощью служб Azure](azure-sdk-authenticate.md).
+[!INCLUDE [cli-auth-note](includes/cli-auth-note.md)]
 
 ### <a name="reference-links-for-classes-used-in-the-code"></a>Ссылки на справку о классах, используемых в коде
 
-- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient?view=azure-python)
-- [NetworkManagementClient (azure.mgmt.network)](/python/api/azure-mgmt-network/azure.mgmt.network.networkmanagementclient?view=azure-python)
-- [ComputeManagementClient (azure.mgmt.compute)](/python/api/azure-mgmt-compute/azure.mgmt.compute.computemanagementclient?view=azure-python)
+- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient)
+- [NetworkManagementClient (azure.mgmt.network)](/python/api/azure-mgmt-network/azure.mgmt.network.networkmanagementclient)
+- [ComputeManagementClient (azure.mgmt.compute)](/python/api/azure-mgmt-compute/azure.mgmt.compute.computemanagementclient)
 
 ## <a name="4-run-the-script"></a>4. Выполнение скрипта
 
@@ -297,6 +303,8 @@ az group delete -n PythonAzureExample-VM-rg  --no-wait
 ```
 
 Если вам ненужны ресурсы, созданные при работе с этим примером, выполните следующую команду, чтобы не нести расходы по подписке.
+
+[!INCLUDE [resource_group_begin_delete](includes/resource-group-begin-delete.md)]
 
 ## <a name="see-also"></a>См. также раздел
 

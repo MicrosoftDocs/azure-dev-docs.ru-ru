@@ -4,18 +4,18 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 161e27f1323053b45c687e60ade90e863ce71c64
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.openlocfilehash: ee9469b4b400879ee5a0b66d16572bc22686ba54
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110491"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764452"
 ---
 # <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Пример Доступ к службе хранилища Azure с помощью библиотек Azure для Python
 
 Здесь показано, как использовать клиентские библиотеки Azure в коде приложения Python для отправки файла в контейнер хранилища больших двоичных объектов. В примере предполагается, что у вас подготовлены ресурсы, показанные в разделе [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md).
 
-Все описанные в этой статье команды работают одинаково как в Bash для macOS или Linux, так и в командных оболочках для Windows, если не указано иное.
+Все описанные в этой статье команды работают одинаково как в Bash для Linux или macOS, так и в командных оболочках для Windows, если не указано иное.
 
 ## <a name="1-set-up-your-local-development-environment"></a>1: настройка локальной среды разработки;
 
@@ -115,8 +115,8 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
     ```
 
     Ссылки для справки:
-      - [DefaultAzureCredential (azure.identity)](/python/api/azure-identity/azure.identity.defaultazurecredential?view=azure-python)
-      - [BlobClient (azure.storage.blob)](/python/api/azure-storage-blob/azure.storage.blob.blobclient?view=azure-python)
+      - [DefaultAzureCredential (azure.identity)](/python/api/azure-identity/azure.identity.defaultazurecredential)
+      - [BlobClient (azure.storage.blob)](/python/api/azure-storage-blob/azure.storage.blob.blobclient)
 
 1. Попытайтесь выполнить код (что должно завершиться сбоем):
 
@@ -126,7 +126,7 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
     Так как ваша локальная субъект-служба не имеет разрешения на доступ к контейнеру больших двоичных объектов, поступит сообщение об ошибке со сведениями о том, что у вызывающей стороны нет прав на выполнение этой операции.
 
-1. Предоставьте контейнеру разрешения на доступ к субъекту-службе, выполнив команду Azure CLI [az role assignment create](/cli/azure/role/assignment?view=azure-cli-latest#az-role-assignment-create) (в которой довольно много текста).
+1. Предоставьте контейнеру разрешения на доступ к субъекту-службе, выполнив команду Azure CLI [az role assignment create](/cli/azure/role/assignment#az-role-assignment-create) (в которой довольно много текста).
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
@@ -154,7 +154,7 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
 1. Подождите 1–2 минуты, пока роль не будет назначена, и снова запустите код, чтобы убедиться, что он работает. Если ошибка прав доступа происходит снова, подождите еще и повторите попытку.
 
-Дополнительные сведения см. в статье [Как назначить разрешения ролей удостоверению приложения или субъекту-службе](how-to-assign-role-permissions.md).
+Дополнительные сведения о назначении ролей см. в статье о [назначении разрешений ролей с помощью Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ### <a name="4b-use-blob-storage-with-a-connection-string"></a>4б. Доступ к хранилищу BLOB-объектов с помощью строки подключения
 
@@ -202,7 +202,7 @@ az group delete -n PythonAzureExample-Storage-rg  --no-wait
 
 Если вам не нужны ресурсы, созданные при работе с этим примером, выполните приведенную ниже команду, чтобы не нести расходы по подписке.
 
-Для удаления группы ресурсов с помощью кода также можно использовать метод [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-).
+[!INCLUDE [resource_group_begin_delete](includes/resource-group-begin-delete.md)]
 
 ## <a name="see-also"></a>См. также раздел
 

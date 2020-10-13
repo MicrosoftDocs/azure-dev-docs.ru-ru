@@ -1,21 +1,21 @@
 ---
 title: Подготовка группы ресурсов с помощью библиотек Azure для Python
 description: Узнайте, как с помощью библиотеки управления ресурсами из пакета Azure SDK для Python создать группу ресурсов, используя код на Python.
-ms.date: 05/29/2020
+ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 992232c23368f3f7dcd173f1f711e6c69650bdb6
-ms.sourcegitcommit: b03cb337db8a35e6e62b063c347891e44a8a5a13
+ms.openlocfilehash: 8a3eb230e40954d25a890db53d33382c07899b7d
+ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91110521"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91764631"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Пример использования библиотек Azure для подготовки группы ресурсов
 
 В этом примере показано, как использовать библиотеки управления пакета Azure SDK в скрипте Python для подготовки группы ресурсов. ([Эквивалентная команда Azure CLI](#for-reference-equivalent-azure-cli-commands) приведена далее в этой статье. Если вы предпочитаете использовать портал Azure, см. раздел [Создание групп ресурсов](/azure/azure-resource-manager/management/manage-resource-groups-portal).)
 
-Все описанные в этой статье команды работают одинаково как в Bash для macOS или Linux, так и в командных оболочках для Windows, если не указано иное.
+Все описанные в этой статье команды работают одинаково как в Bash для Linux или macOS, так и в командных оболочках для Windows, если не указано иное.
 
 ## <a name="1-set-up-your-local-development-environment"></a>1: настройка локальной среды разработки;
 
@@ -29,7 +29,7 @@ ms.locfileid: "91110521"
 
 ```text
 azure-mgmt-resource
-azure-cli-core
+azure-identity
 ```
 
 В окне терминала или в командной строке с активированной виртуальной средой установите необходимые компоненты.
@@ -43,17 +43,23 @@ pip install -r requirements.txt
 Создайте файл Python с именем *provision_rg.py* с приведенным ниже содержимым. Подробные объяснения даны в комментариях:
 
 ```python
-# Import the needed management objects from the libraries. The azure.common library
-# is installed automatically with the other libraries.
-from azure.common.client_factory import get_client_from_cli_profile
+# Import the needed credential and management objects from the libraries.
 from azure.mgmt.resource import ResourceManagementClient
+from azure.identity import AzureCliCredential
+import os
 
-# Obtain the management object for resources, using the credentials from the CLI login.
-resource_client = get_client_from_cli_profile(ResourceManagementClient)
+# Acquire a credential object using CLI-based authentication.
+credential = AzureCliCredential()
+
+# Retrieve subscription ID from environment variable.
+subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
+
+# Obtain the management object for resources.
+resource_client = ResourceManagementClient(credential, subscription_id)
 
 # Provision the resource group.
 rg_result = resource_client.resource_groups.create_or_update(
-    "PythonAzureExample-ResourceGroup-rg",
+    "PythonAzureExample-rg",
     {
         "location": "centralus"
     }
@@ -75,17 +81,16 @@ print(f"Provisioned resource group {rg_result.name} in the {rg_result.location} 
 # new group. In this case the call is synchronous: the resource group has been
 # provisioned by the time the call returns.
 
-# Optional line to delete the resource group
-#resource_client.resource_groups.delete("PythonAzureExample-ResourceGroup-rg")
+# Optional lines to delete the resource group. begin_delete is asynchronous.
+# poller = resource_client.resource_groups.begin_delete(rg_result.name)
+# result = poller.result()
 ```
 
-Этот код использует методы проверки подлинности на основе CLI (`get_client_from_cli_profile`), так как в нем демонстрируются действия, которые можно выполнить непосредственно в Azure CLI. В обоих случаях для проверки подлинности используется одно и то же удостоверение.
-
-Чтобы применить такой код в рабочем скрипте, лучше использовать `DefaultAzureCredential` (рекомендуется) или метод на основе субъекта-службы, как описано в статье [Проверка подлинности с использованием библиотек управления Azure для Python](azure-sdk-authenticate.md).
+[!INCLUDE [cli-auth-note](includes/cli-auth-note.md)]
 
 ### <a name="reference-links-for-classes-used-in-the-code"></a>Ссылки на справку о классах, используемых в коде
 
-- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient?view=azure-python)
+- [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient)
 
 ## <a name="4-run-the-script"></a>4: Выполнение скрипта
 
@@ -102,25 +107,25 @@ python provision_rg.py
 - В Azure CLI выполните следующую команду:
 
     ```azurecli
-    az group show -n PythonAzureExample-ResourceGroup-rg
+    az group show -n PythonAzureExample-rg
     ```
 
 ## <a name="6-clean-up-resources"></a>6\. Очистка ресурсов
 
 ```azurecli
-az group delete -n PythonAzureExample-ResourceGroup-rg  --no-wait
+az group delete -n PythonAzureExample-rg  --no-wait
 ```
 
-Если созданная в этом примере группа ресурсов вам не нужна, выполните приведенную ниже команду. Создание групп ресурсов не влечет за собой расходов по подписке. Но рекомендуется удалять неиспользуемые группы.
+Если созданная в этом примере группа ресурсов вам не нужна, выполните приведенную ниже команду. Создание групп ресурсов не влечет за собой расходов по подписке. Но рекомендуется удалять неиспользуемые группы. Аргумент `--no-wait` позволяет команде выполнять возврат без задержки, не ожидая завершения операции.
 
-Для удаления группы ресурсов с помощью кода также можно использовать метод [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations?view=azure-python#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-).
+Для удаления группы ресурсов с помощью кода также можно использовать метод [`ResourceManagementClient.resource_groups.delete`](/python/api/azure-mgmt-resource/azure.mgmt.resource.resources.v2019_10_01.operations.resourcegroupsoperations#delete-resource-group-name--custom-headers-none--raw-false--polling-true----operation-config-).
 
 ### <a name="for-reference-equivalent-azure-cli-commands"></a>Для справки: аналогичные команды Azure CLI
 
 С помощью следующих команд Azure CLI выполняются такие же действия по подготовке, как и в сценарии Python:
 
 ```azurecli
-az group create -n PythonAzureExample-ResourceGroup-rg -l centralus
+az group create -n PythonAzureExample-rg -l centralus
 ```
 
 ## <a name="see-also"></a>См. также раздел
