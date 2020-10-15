@@ -3,21 +3,19 @@ title: Как использовать API MongoDB Spring Data с Azure Cosmos D
 description: Узнайте, как использовать API MongoDB Spring Data с Azure Cosmos DB.
 services: cosmos-db
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 10/10/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 529fab3977f0398014d74140abcbd807ac129fa5
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 1d710c6146568011214a330ae0ce4957c6134b3b
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831430"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92009955"
 ---
 # <a name="how-to-use-spring-data-mongodb-api-with-azure-cosmos-db"></a>Как использовать API MongoDB Spring Data с Azure Cosmos DB
-
-## <a name="overview"></a>Обзор
 
 В этой статье показано создание примера приложения, использующего [Spring Data] для хранения и извлечения информации с помощью [API MongoDB для Azure Cosmos DB](/azure/cosmos-db/mongodb-introduction).
 
@@ -27,7 +25,7 @@ ms.locfileid: "90831430"
 
 * Подписка Azure. Если у вас ее еще нет, вы можете активировать [Преимущества для подписчиков MSDN] или зарегистрироваться для получения [бесплатной учетной записи Azure].
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
-* [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
+* [Apache Maven](http://maven.apache.org/) версии 3.0 и выше.
 * Клиент [Git](https://git-scm.com/downloads).
 
 ## <a name="create-an-azure-cosmos-db-account"></a>создание учетной записи Azure Cosmos DB;
@@ -128,9 +126,13 @@ ms.locfileid: "90831430"
    Customer[id=5c1b4ae4d0b5080ac105cc14, firstName='Bob', lastName='Smith']
    ```
 
-## <a name="summary"></a>Сводка
+## <a name="summary"></a>Итоги
 
 С помощью этого руководства вы создали пример приложения Java, использующий Spring Data для хранения и извлечения информации с помощью API MongoDB для Azure Cosmos DB.
+
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+Если они больше не нужны, используйте [портал Azure](https://portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -151,7 +153,6 @@ ms.locfileid: "90831430"
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Data]: https://spring.io/projects/spring-data
-[Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
 
 <!-- IMG List -->

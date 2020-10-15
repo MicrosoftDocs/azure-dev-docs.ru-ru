@@ -10,12 +10,12 @@ ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: e126e56784b2f680cb69b9c3e0533831340a0f10
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: f4fa9df0edf0fbb6b748f9bf3010be9115ad1ffd
+ms.sourcegitcommit: d5dabc6dde727ed167a9dc8a4eaaf21025b3efa8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90830050"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91947529"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Начало работы с функцией Spring Cloud в Azure
 
@@ -65,7 +65,7 @@ ms.locfileid: "90830050"
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <azure.functions.maven.plugin.version>1.6.0</azure.functions.maven.plugin.version>
+    <azure.functions.maven.plugin.version>1.9.0</azure.functions.maven.plugin.version>
     <functionAppName>my-spring-function</functionAppName>
     <functionAppRegion>westus</functionAppRegion>
     <stagingDirectory>${project.build.directory}/azure-functions/${functionAppName}</stagingDirectory>

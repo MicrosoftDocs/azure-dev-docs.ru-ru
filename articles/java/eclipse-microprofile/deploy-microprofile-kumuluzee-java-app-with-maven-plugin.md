@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.service: app-service
 ms.topic: article
 ms.custom: ''
-ms.openlocfilehash: 4ccf7e21aed1ac16782a4521f5ee80538997b07d
-ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+ms.openlocfilehash: bafc670e22838e7fe28965f993be9fa7aa343f12
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91401915"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846635"
 ---
 # <a name="deploy-a-kumuluzee-web-app-to-azure-app-service-with-maven"></a>Развертывание веб-приложения KumuluzEE в Службе приложений Azure с помощью Maven
 
@@ -284,7 +284,7 @@ az login
 Дополнительные сведения о MicroProfile и Azure см. в центре документации об использовании MicroProfile в Azure.
 
 > [!div class="nextstepaction"]
-> [Документация по Eclipse MicroProfile в Azure](/azure/developer/java/eclipse-microprofile)
+> [Документация по Eclipse MicroProfile в Azure](./index.yml)
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -299,7 +299,7 @@ az login
 <!-- URL List -->
 
 [Azure Command-Line Interface (CLI)]: /cli/azure/overview
-[Azure for Java Developers]: /azure/developer/java/
+[Azure for Java Developers]: ../index.yml
 [Портал Azure]: https://portal.azure.com/
 [free Azure account]: https://azure.microsoft.com/pricing/free-trial/
 [Git]: https://github.com/
@@ -308,7 +308,7 @@ az login
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Подключаемый модуль Maven для веб-приложений Azure]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
 
-[Java Development Kit (JDK)]: https://aka.ms/azure-jdks
+[Java Development Kit (JDK)]: ../fundamentals/java-jdk-long-term-support.md
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- IMG List -->

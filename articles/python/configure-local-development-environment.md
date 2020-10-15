@@ -4,12 +4,12 @@ description: Сведения о настройке локальной сред�
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 14955bc63ab44884254e2304b0e5ceb97e7bcb0d
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: e3ddedf44c339aaf4f30933d99d5b27052f1aea3
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764808"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846755"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Настройка локальной среды разработки Python для Azure
 
@@ -193,13 +193,15 @@ Azure CLI обычно поддерживает вход в разные сеа�
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
     ```bash
-    python -m venv .venv
+    # py -3 uses the global python interpreter. You can also use python -m venv .venv.
+    py -3 -m venv .venv
     ```
 
     # <a name="bash"></a>[bash](#tab/bash)
 
     ```bash
-    python -m venv .venv
+    # On Windows, use py -3 -m venv .venv
+    python3 -m venv .venv
     ```
 
     ---

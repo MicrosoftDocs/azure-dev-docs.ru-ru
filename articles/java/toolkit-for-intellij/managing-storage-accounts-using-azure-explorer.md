@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: a209f532069741e9c6302bca97dc8c72cde0e396
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 2c0de20cd28725d8cf9b482841978640c8a37ee8
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831950"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846785"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>Управление учетными записями хранения с помощью Azure Explorer для IntelliJ
 
@@ -84,7 +84,7 @@ Azure Explorer, входящий в состав набора средств Azu
 [Об учетных записях хранения Azure]: /azure/storage/storage-create-storage-account
 [Репликация службы хранилища Azure]: /azure/storage/storage-redundancy
 [Целевые показатели масштабируемости и производительности службы хранилища Azure]: /azure/storage/storage-scalability-targets
-[Naming and referencing containers, blobs, and metadata]: https://go.microsoft.com/fwlink/?LinkId=255555
+[Naming and referencing containers, blobs, and metadata]: /rest/api/storageservices/Naming-and-Referencing-Containers--Blobs--and-Metadata
 
 [Размеры учетных записей хранения Windows в Azure]: /azure/virtual-machines/sizes
 [Размеры учетных записей хранения Linux в Azure]: /azure/virtual-machines/sizes

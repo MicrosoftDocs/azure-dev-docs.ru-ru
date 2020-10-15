@@ -4,12 +4,12 @@ description: Руководство по Node.js, часть 2. Создани�
 ms.topic: tutorial
 ms.date: 03/04/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 7d627d97987ed41f90972362ab38d436a6157d33
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.openlocfilehash: aceeb9016e098cc707f176e3d767cf7bf72a35a2
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365247"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846705"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>Создание и запуск локального приложения Node.js
 
@@ -22,7 +22,7 @@ ms.locfileid: "91365247"
 1. Выполните приведенную ниже команду, чтобы с помощью генератора Express создать приложение Express с именем *expressApp1*. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
 
     ```bash
-    npx express-generator expressApp1 --view pug -–git
+    npx express-generator expressApp1 -–git --view pug 
     ```
 
 1. Перейдите в папку приложения:

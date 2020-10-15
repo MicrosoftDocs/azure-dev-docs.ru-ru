@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f8efc740f9641b72e8aaf1af29bf0b2620457fdd
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 069524ad8c17db20f90114b1c6c630dce6866290
+ms.sourcegitcommit: 8fcb6c2d17be63064090f801f46c9c754821f979
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "81674230"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91829134"
 ---
 |Образец   |Description  |
 |---------|---------|
@@ -14,6 +14,6 @@ ms.locfileid: "81674230"
 | [Управление базами данных SQL в эластичных пулах][3] | Создавайте, удаляйте и перемещайте базы данных SQL в эластичные пулы и из них. | 
 
 [1]: https://github.com/Azure-Samples/sql-database-java-manage-db/
-[2]: https://azure.microsoft.com/resources/samples/sql-database-java-manage-sql-databases-across-regions/
+[2]: https://github.com/Azure-Samples/sql-database-java-manage-sql-databases-across-regions
 [3]: ../java-sdk-manage-sql-elastic-pools.md
 [4]: /azure/sql-database/sql-database-connect-query-java

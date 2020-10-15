@@ -2,14 +2,14 @@
 title: Создание субъекта-службы Azure с помощью Node.js
 description: Узнайте, как использовать проверку подлинности субъекта-службы в Azure с помощью Node.js и JavaScript.
 ms.topic: how-to
-ms.date: 06/17/2017
+ms.date: 09/30/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 40992b00ff9c0e04bf2b475fadf2d65dd3bd29d5
-ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
+ms.openlocfilehash: 4384582d0c24209927bef971a1bc76d8322c18c0
+ms.sourcegitcommit: 0b1c751c5a4a837977fec1c777bca5ad15cf2fc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91586124"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91621660"
 ---
 # <a name="create-an-azure-service-principal-for-nodejs"></a>Создание субъекта-службы Azure для Node.js
 

@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: b9032685e00798f6a1600909b266b88674920e99
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: 413b4b75e1eb22fb0a6f6a8fc1cd90a52a1de0e0
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86378198"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010198"
 ---
 # <a name="managing-redis-caches-using-the-azure-explorer-for-eclipse"></a>Управление кэшами Redis с помощью Azure Explorer для Eclipse
 
@@ -54,7 +54,7 @@ ms.locfileid: "86378198"
 
 После создания кэш Redis отобразится в Azure Explorer.
 
-   ![Кэш Redis в Azure Explorer][CR03]
+      ![Redis Cache in Azure Explorer][CR03]
 
 > [!NOTE]
 >
