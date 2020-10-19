@@ -3,18 +3,18 @@ title: Развертывание веб-приложения Spring Boot в С�
 description: В этом руководстве содержатся пошаговые инструкции по развертыванию приложения Spring Boot в качестве веб-приложения Linux в Microsoft Azure.
 services: azure app service
 documentationcenter: java
-ms.date: 12/31/2019
+ms.date: 10/06/2020
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc, devx-track-java
-ms.openlocfilehash: 97f6ef6e1d53b8923a8d29aa7747442ee6ac7efc
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: ec24ba4ab6b10bd615af06c2cdbd37397d0b2a83
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90830070"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846455"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Развертывание приложения Spring Boot в службе приложений Azure на платформе Linux
 
@@ -174,7 +174,7 @@ ms.locfileid: "90830070"
 
    * Щелкните **Далее: Docker** (Далее: Docker).
 
-   ![Настройка параметров веб-приложения][LX02]
+   ![Щелкните "Далее: Docker", чтобы продолжить.][LX02]
 
       На странице **Веб-приложение** выберите **Docker** и введите следующие сведения:
 
@@ -190,7 +190,7 @@ ms.locfileid: "90830070"
 
    После ввода всех этих данных щелкните **Просмотр и создание**.
 
-   ![Настройка параметров веб-приложения][LX02-A]
+   ![Для завершения щелкните "Просмотр и создание".][LX02-A]
 
    * Щелкните **Review + create** (Просмотреть и создать).
 
@@ -248,8 +248,7 @@ The embedded Tomcat server in the sample Spring Boot application is configured t
 
 Дополнительные сведения об использовании приложений Spring Boot в Azure см. в следующих статьях:
 
-* [Развертывание приложения Spring Boot Application в службе приложений Azure](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
-* [Развертывание приложения Spring Boot в кластере Kubernetes в службе контейнеров Azure](deploy-spring-boot-java-app-on-kubernetes.md)
+* [Развертывание приложения Spring Boot в кластере Kubernetes в Службе контейнеров Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
 Дополнительные сведения об использовании Java в Azure см. в статьях [Azure для разработчиков Java] и [Working with Azure DevOps and Java] (Работа с Azure DevOps и Java).
 

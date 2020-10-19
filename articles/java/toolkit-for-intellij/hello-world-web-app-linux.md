@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: df71e27850a467e03ab58edf6beaf085b195803b
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 2b6e4e6e40d5fe7904e43b36edacd14494e92b0f
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831980"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010098"
 ---
 # <a name="deploy-java-app-to-azure-web-apps-for-containers-using-azure-toolkit-for-intellij"></a>Развертывание приложения Java в Веб-приложении Azure для контейнеров с помощью Azure Toolkit for IntelliJ
 
@@ -50,7 +50,7 @@ ms.locfileid: "90831980"
 
 1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
 
-1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки IntelliJ. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **ОК**.
+1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки IntelliJ. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **Select** (Выбрать).
 
 ## <a name="creating-a-new-web-app-project"></a>Создание проекта веб-приложения
 
@@ -58,7 +58,7 @@ ms.locfileid: "90831980"
 
 1. В диалоговом окне **New Project** (Новый проект) выберите **Maven** и убедитесь, что установлен флажок **Create from Archetype** (Создать из архетипа). В списке вариантов выберите **maven-archetype-webapp**, а затем щелкните **Далее**.
 
-   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Выбор варианта maven-archetype-webapp."::: 
+   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Вход в Azure из IntelliJ."::: 
 
 1. Раскройте список **Artifact Coordinates** (Координаты артефакта), чтобы просмотреть все поля ввода и указать приведенные ниже сведения о новом веб-приложении, а затем щелкните **Далее**.
 
@@ -68,7 +68,7 @@ ms.locfileid: "90831980"
 
 1. Настройте любые параметры Maven или примите значения по умолчанию и щелкните **Готово**.
 
-1. Перейдите к проекту на вкладке **Project** (Проект) слева и откройте файл **src/Main/webapp/WEB-INF/index.jsp**. Замените его содержимое следующим кодом и **сохраните изменения**:
+1. Перейдите к проекту на вкладке **Project** (Проект) слева и откройте файл **src/main/webapp/index.jsp**. Замените его содержимое следующим кодом и **сохраните изменения**:
 
    ```html
    <html>
@@ -77,7 +77,7 @@ ms.locfileid: "90831980"
     </body>
    </html>
    ```
-   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Открытие файла index.jsp.":::
+   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Вход в Azure из IntelliJ.":::
 
 ## <a name="create-an-azure-container-registry-to-use-as-a-private-docker-registry"></a>Создание реестра контейнеров Azure для использования в качестве частного реестра Docker
 
@@ -112,13 +112,13 @@ ms.locfileid: "90831980"
 
 ## <a name="deploy-your-web-app-in-a-docker-container"></a>Развертывание веб-приложения в контейнере Docker
 
-Ниже приведены инструкции по настройке поддержки Docker в веб-приложении и по развертыванию этого веб-приложения.
+Ниже приведены инструкции по настройке поддержки Docker в веб-приложении и развертыванию этого веб-приложения в контейнере Docker.
 
 1. Перейдите к проекту на вкладке **Project** (Проект) слева и щелкните проект правой кнопкой мыши. Разверните элемент **Azure** и щелкните **Add Docker Support** (Добавить поддержку Docker).
 
    Файл Docker будет автоматически создан с конфигурацией по умолчанию.
 
-   :::image type="content" source="media/hello-world-web-app-linux/docker-support-file.png" alt-text="Файл поддержки Docker.":::
+   :::image type="content" source="media/hello-world-web-app-linux/docker-support-file.png" alt-text="Вход в Azure из IntelliJ.":::
 
 1. Добавив поддержку Docker, щелкните проект правой кнопкой мыши в обозревателе проектов, выберите **Azure**, а затем — **Run on Web App for Containers** (Выполнить в веб-приложении для контейнеров).
 
@@ -148,7 +148,7 @@ ms.locfileid: "90831980"
 
 1. После публикации веб-приложения параметры будут сохранены в качестве параметров по умолчанию. Приложение можно запустить в Azure, щелкнув значок зеленой стрелки на панели инструментов. Вы можете изменить параметры, щелкнув раскрывающееся меню для веб-приложения, а затем — **Edit Configurations** (Изменить конфигурации).
 
-    :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Пункт меню "Изменить конфигурацию"":::.
+    :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Вход в Azure из IntelliJ.":::.
 
 1. При отображении диалогового окна **Run/Debug Configurations** (Конфигурации выполнения и отладки) можно изменить любые параметры по умолчанию, а затем нажать кнопку **ОК**.
 

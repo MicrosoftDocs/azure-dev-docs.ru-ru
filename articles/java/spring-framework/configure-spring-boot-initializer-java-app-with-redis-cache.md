@@ -3,17 +3,17 @@ title: Создание приложения Spring Boot Initializer с испо
 description: Настройка приложения Spring Boot, созданного с помощью Spring Initializr, для использования в облаке кэша Redis для Azure.
 services: redis-cache
 documentationcenter: java
-ms.date: 02/06/2020
+ms.date: 10/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: 330f0b3b1cfa5e92a4e876121b966c3a0b174f02
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: cd8dd2a841a1ccf43f18374f34963c23f1369658
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90830210"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846605"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Настройка приложения Spring Boot Initializr для использования в облаке кэша Redis для Azure
 
@@ -57,7 +57,7 @@ ms.locfileid: "90830210"
 
 1. Выберите **База данных**, а затем — **Кэш Redis**.
 
-   ![Портал Azure][AZ02]
+   ![Выбор Кэша Redis на портале Azure][AZ02]
 
 1. На странице **Новый кэш Redis** укажите следующие сведения:
 
@@ -72,15 +72,15 @@ ms.locfileid: "90830210"
 
    Указав эти параметры, щелкните **Создать**, чтобы создать кэш.
 
-   ![Портал Azure][AZ03]
+   ![Создание кэша на портале Azure][AZ03]
 
 1. После создания кэша он появится в списке на **информационной панели** Azure, а также на страницах **Все ресурсы** и **Кэш Redis**. Вы можете выбрать свой кэш в любом из этих расположений, чтобы открыть страницу свойств кэша.
 
-   ![Портал Azure][AZ04]
+   ![Ресурс, подготовленный в портал Azure][AZ04]
 
 1. Когда отобразится страница, содержащая список свойств кэша, щелкните **Ключи доступа** и скопируйте ключи доступа для кэша.
 
-   ![Портал Azure][AZ05]
+   ![Скопируйте ключи доступа в разделе "Ключи доступа".][AZ05]
 
 ## <a name="configure-your-custom-spring-boot-to-use-your-redis-cache"></a>Настройка пользовательского приложения Spring Boot для использования кэша Redis
 
@@ -198,7 +198,7 @@ ms.locfileid: "90830210"
 
 Дополнительные сведения об использовании приложений Spring Boot в Azure см. в следующих статьях:
 
-* [Развертывание приложения Spring Boot Application в службе приложений Azure](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
+* [Развертывание приложения Spring Boot в Службе приложений Azure в Linux](deploy-spring-boot-java-app-on-linux.md)
 
 * [Запуск приложения Spring Boot в кластере Kubernetes в Службе контейнеров Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 

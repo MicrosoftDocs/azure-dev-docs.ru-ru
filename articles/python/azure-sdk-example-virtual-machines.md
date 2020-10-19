@@ -4,12 +4,12 @@ description: Узнайте, как подготовить виртуальну�
 ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 134b3bc14fa8fafe2ee3953ab6a7c713853d9398
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: e01121047d42200e956345df611f82706b1e081e
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764477"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010227"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-virtual-machine"></a>Пример использования библиотек Azure для подготовки виртуальной машины
 
@@ -211,6 +211,7 @@ print(f"Provisioned virtual machine {vm_result.name}")
 
 ### <a name="reference-links-for-classes-used-in-the-code"></a>Ссылки на справку о классах, используемых в коде
 
+- [AzureCliCredential (azure.identity)](/python/api/azure-identity/azure.identity.azureclicredential)
 - [ResourceManagementClient (azure.mgmt.resource)](/python/api/azure-mgmt-resource/azure.mgmt.resource.resourcemanagementclient)
 - [NetworkManagementClient (azure.mgmt.network)](/python/api/azure-mgmt-network/azure.mgmt.network.networkmanagementclient)
 - [ComputeManagementClient (azure.mgmt.compute)](/python/api/azure-mgmt-compute/azure.mgmt.compute.computemanagementclient)
@@ -309,6 +310,7 @@ az group delete -n PythonAzureExample-VM-rg  --no-wait
 ## <a name="see-also"></a>См. также раздел
 
 - [Пример. Подготовка группы ресурсов к работе](azure-sdk-example-resource-group.md)
+- [Пример. Перечисление групп ресурсов в подписке](azure-sdk-example-list-resource-groups.md)
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
 - [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)

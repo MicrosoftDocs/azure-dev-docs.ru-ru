@@ -6,22 +6,20 @@ documentationcenter: java
 author: panli
 manager: kevinzha
 ms.author: edburns
-ms.date: 06/04/2020
+ms.date: 10/10/2020
 ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 3835d51bbbc7f3226a1b77ba415d5e965ac8a609
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: df9b9f659d504c18c9dfd9afb3b5f201448d4866
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831920"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010140"
 ---
-# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство по защите приложения Java с использованием начального приложения Spring Boot для Azure Active Directory B2C.
-
-## <a name="overview"></a>Обзор
+# <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство. Защита приложения Java с использованием starter Spring Boot для Azure Active Directory B2C
 
 В этой статье описывается, как с помощью [Spring Initializr](https://start.spring.io/) создать начальное приложение Java Spring Boot для Azure Active Directory (Azure AD).
 
@@ -49,11 +47,15 @@ ms.locfileid: "90831920"
 
     * В поле **Project** (Проект) выберите элемент **Maven Project** (Проект Maven).
     * В поле **Language** (Язык) выберите элемент **Java**.
-    * В поле **Spring Boot** выберите версию **2.2.7**.
+    * В поле **Spring Boot** выберите **2.3.4**.
     * В полях **Group** (Группа), **Artifact** (Артефакт) и **Name** (Имя) введите одно и то же строковое значение с кратким описанием проекта. Возможно, пользовательский интерфейс автоматически заполнит часть этих значений по мере ввода.
     * На панели **Dependencies** (Зависимости) выберите элемент **Add Dependencies** (Добавить зависимости). Через предоставленный пользовательский интерфейс добавьте зависимости **Spring Web** и **Spring Security**.
 
-   ![Заполнение значений для создания проекта](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/si-n.png)
+   ![Заполнение значений для создания проекта](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/fill-in-the-values-to-generate-the-project.png)
+
+    > [!NOTE]
+    > Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
+
 
 3. Щелкните элемент **Generate Project** (Создать проект), затем скачайте проект в папку на локальном компьютере. Переместите скачанный файл в каталог, имя которого совпадает с именем проекта, и распакуйте этот файл. Макет файла должен быть похож на представленный ниже пример, но с указанным вами значением для параметра **Group** (Группа) вместо указанного здесь `yourProject`.
 
@@ -152,11 +154,11 @@ ms.locfileid: "90831920"
 
     Выполните все действия, описанные в статье [Руководство. Создание потоков пользователей в Azure Active Directory B2C](/azure/active-directory-b2c/tutorial-create-user-flows), чтобы создать потоки пользователей "Регистрация и входа", "Изменение профиля" и "Сброс пароля".
 
-    AAD B2C поддерживает локальные учетные записи, а также поставщики удостоверений социальных сетей. Пример создания поставщика удостоверений GitHub см. в статье [Настройка регистрации и входа с учетной записью GitHub через Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
+    Azure AD B2C поддерживает локальные учетные записи, а также поставщики удостоверений социальных сетей. Пример создания поставщика удостоверений GitHub см. в статье [Настройка регистрации и входа с учетной записью GitHub через Azure Active Directory B2C](/azure/active-directory-b2c/identity-provider-github).
 
 ## <a name="configure-and-compile-your-app"></a>Настройка и компиляция приложения
 
-Итак, вы создали экземпляр AAD B2C и несколько потоков пользователей, которые позволят вам подключить приложение Spring к этому экземпляру AAD B2C.
+Итак, вы создали экземпляр Azure AD B2C и несколько потоков пользователей, которые позволят вам подключить приложение Spring к этому экземпляру Azure AD B2C.
 
 1. В сеансе командной строки перейдите с помощью команды cd в каталог, куда вы распаковали содержимое ZIP-файла, скачанного из Spring Initializr.
 
@@ -182,9 +184,9 @@ ms.locfileid: "90831920"
     </dependency>
     ```
 
-    Для параметра `azure-active-directory-b2c-spring-boot-starter` укажите последнюю доступную версию. Вы можете найти ее на сайте [mvnrepository.com](https://mvnrepository.com/ artifact/com.microsoft.azure/azure-active-directory-spring-boot-starter). На момент написания этой статьи последняя версия имела номер `2.2.4`.
+    Для параметра `azure-active-directory-b2c-spring-boot-starter` укажите последнюю доступную версию. Вы можете найти ее на сайте [mvnrepository.com](https://mvnrepository.com/ artifact/com.microsoft.azure/azure-active-directory-spring-boot-starter). На момент этого обновления последняя версия имела номер `2.3.5`.
 
-    Для параметра `spring-boot-starter-thymeleaf` укажите версию, которая соответствует выбранной версии Spring Boot, например `2.2.7.RELASE`.
+    Для параметра `spring-boot-starter-thymeleaf` укажите версию, которая соответствует выбранной версии Spring Boot, например `2.3.4.RELASE`.
 
     Для параметра `thymeleaf-extras-springsecurity5` укажите последнюю доступную версию. Вы можете найти ее на сайте [mvnrepository.com](https://mvnrepository.com/artifact/org.thymeleaf.extras/thymeleaf-extras-springsecurity5). На момент написания этой статьи последняя версия имела номер `3.0.4.RELEASE`.
 
@@ -353,6 +355,10 @@ ms.locfileid: "90831920"
 ## <a name="summary"></a>Сводка
 
 В рамках этого руководства вы создали веб-приложение Java с использованием начального приложения Spring для Azure Active Directory B2C, настроили клиент Azure AD B2C, зарегистрировали в нем созданное приложение, а затем настроили это приложение для использования аннотаций и классов Spring для защиты веб-приложения.
+
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+Если они больше не нужны, используйте [портал Azure](https://portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

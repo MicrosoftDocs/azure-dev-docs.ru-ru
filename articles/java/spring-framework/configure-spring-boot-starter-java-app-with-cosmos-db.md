@@ -5,18 +5,18 @@ services: cosmos-db
 documentationcenter: java
 author: KarlErickson
 ms.author: karler
-ms.date: 10/02/2019
+ms.date: 10/06/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: 800e4d45417c7842d12e92c6e18dfdd6a1bc567f
-ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
+ms.openlocfilehash: bc7754cf3f35bf8d6bc0d0a427dc1c532ff6e834
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91586191"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846535"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 
@@ -37,7 +37,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 1. Щелкните **Базы данных** и **Azure Cosmos DB**.
 
-    ![Портал Azure][AZ02]
+    ![Выбор Azure Cosmos DB на портале Azure][AZ02]
 
 1. На странице **Azure Cosmos DB** введите следующие сведения.
 
@@ -49,13 +49,13 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     Указав эти параметры, щелкните **Просмотреть и создать**, чтобы проверить спецификации. Затем щелкните **Создать**.
 
-    ![Портал Azure][AZ03]
+    ![Выберите "Просмотр и создание", чтобы продолжить.][AZ03]
 
 1. При создании база данных указывается на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB**. Вы можете выбрать свою базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
 
 1. Когда откроется страница свойств базы данных, щелкните **Ключи** и скопируйте URI и ключи доступа для базы данных. Эти значения будут использоваться в приложении Spring Boot.
 
-    ![Портал Azure][AZ05]
+    ![Скопируйте URI и ключи доступа в разделе "Ключи".][AZ05]
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
 
@@ -421,7 +421,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 * [Начальное приложение Spring Boot CosmosDB для Azure]
 
-* [Развертывание приложения Spring Boot Application в службе приложений Azure](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
+* [Развертывание приложения Spring Boot в Службе приложений Azure в Linux](deploy-spring-boot-java-app-on-linux.md)
 
 * [Запуск приложения Spring Boot в кластере Kubernetes в Службе контейнеров Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 

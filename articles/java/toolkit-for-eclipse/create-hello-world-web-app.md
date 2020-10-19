@@ -13,12 +13,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java
-ms.openlocfilehash: 57cb6f2b731ee6d9522787d70efbaf35e029c632
-ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
+ms.openlocfilehash: a318d5aa7f411add20ee201d48d3640983efefee
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91586152"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010257"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью Eclipse
 
@@ -53,7 +53,7 @@ ms.locfileid: "91586152"
 
 1. Выберите нужную учетную запись Azure и выполните все необходимые для входа процедуры аутентификации.
 
-1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки Eclipse. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **ОК**.
+1. Завершив вход, закройте браузер и вернитесь в интегрированную среду разработки Eclipse. В диалоговом окне **Select Subscriptions** (Выбор подписок) выберите нужные подписки и щелкните **Select** (Выбрать).
 
 ### <a name="install-required-software-optional"></a>Установка необходимого программного обеспечения *(необязательно)*
 

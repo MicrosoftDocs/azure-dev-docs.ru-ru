@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 23a16188b7f24265ca4045f684c9e08304788ea1
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: e85231fcd71a2fbc1f43bf1fee74f8ce3ac9e314
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831617"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010248"
 ---
 ## <a name="prerequisites"></a>предварительные требования
 
-Для выполнения описанных в статье шагов необходимо установить набор средств Azure для IntelliJ. Для этого требуются следующие компоненты:
+Для выполнения описанных в статье шагов необходимо установить Azure Toolkit for IntelliJ. Для этого требуются следующие компоненты:
 
 * Поддерживаемый [пакет средств разработки Java для Azure(JDK)](../../fundamentals/java-jdk-long-term-support.md).
 * Установленный [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) Ultimate Edition или Community Edition.

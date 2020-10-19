@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 2891b0c09c43b652fd7dd41e354290c2821bad46
-ms.sourcegitcommit: a139e25190960ba89c9e31f861f0996a6067cd6c
+ms.openlocfilehash: 27442efda23ba24abe6b40f20f7685f6ac7a524e
+ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90534579"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92010251"
 ---
 # <a name="sign-in-instructions-for-the-azure-toolkit-for-intellij"></a>Инструкции по входу для набора средств Azure для IntelliJ
 
@@ -50,7 +50,7 @@ ms.locfileid: "90534579"
 
 ## <a name="sign-in-to-your-azure-account-by-service-principal"></a>Вход в учетную запись Azure с помощью субъекта-службы
 
-В этом разделе показано, как создать файл учетных данных, содержащий данные субъекта-службы. После выполнения этого процесса IntelliJ использует файл учетных данных для автоматического входа в Azure при открытии проекта.
+В этом разделе показано, как создать файл учетных данных, содержащий данные субъекта-службы. После завершения этого процесса IntelliJ использует файл учетных данных для выполнения автоматического входа в Azure при открытии проекта.
 
 1. Откройте проект с помощью IntelliJ IDEA.
 

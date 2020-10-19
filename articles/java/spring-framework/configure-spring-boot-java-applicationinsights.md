@@ -5,17 +5,17 @@ services: Application-Insights
 documentationcenter: java
 author: dhaval24
 ms.author: dhdoshi
-ms.date: 11/29/2019
+ms.date: 10/06/2020
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: ee48999f7d83857c4992e74ad4dc4b248bfe195b
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.openlocfilehash: 59600fa46f463d4fef78de8ebf335c530f26b81e
+ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365217"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91846555"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Настройка Application Insights в инициализаторе Spring Boot
 
@@ -67,7 +67,7 @@ ms.locfileid: "91365217"
 
    Указав эти параметры, щелкните **Просмотр и создание**.
 
-   ![Azure][AZ03]
+   !["Просмотр и создание", Application Insights][AZ03]
 
 * Проверьте спецификации и щелкните **Создать**.
 
@@ -75,7 +75,7 @@ ms.locfileid: "91365217"
 
 На странице обзора скопируйте **ключ инструментирования**.
 
-   ![Azure][AZ04]
+   ![Копирование ключа инструментирования][AZ04]
 
 ## <a name="configure-your-downloaded-spring-boot-application-to-use-application-insights"></a>Настройка Application Insights в скачанном приложении Spring Boot
 
@@ -179,11 +179,11 @@ ms.locfileid: "91365217"
 
    Через несколько секунд вы должны увидеть эти данные на портале Azure. 
 
-   ![Azure][AZ05]
+   ![Отображение данных на портале Azure][AZ05]
 
 Щелкните плитку **Схема приложений**, чтобы просмотреть высокоуровневые компоненты и их взаимодействие друг с другом. Именно так мы рекомендуем получать общие сведения обо всем приложении. Каждая микрослужба Spring Boot распознается по имени приложения spring. Не забудьте указать его.
 
-   ![Azure][AZ08] 
+   ![Отображение схемы приложения][AZ08] 
 
 ## <a name="configure-springboot-application-to-send-log4j-logs-to-application-insights"></a>Настройка отправки журналов log4j приложения Springboot в Application Insights
 
@@ -261,7 +261,7 @@ ms.locfileid: "91365217"
 
 Через несколько секунд вы должны увидеть все журналы Spring на портале Azure. Вы можете просматривать подробные сообщения журналов и анализировать их на портале Analytics.
 
-![Azure][AZ07]
+![Сообщения журнала на портале аналитики][AZ07]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -274,7 +274,7 @@ ms.locfileid: "91365217"
 
 Дополнительные сведения об использовании приложений Spring Boot в Azure см. в следующих статьях:
 
-* [Развертывание приложения Spring Boot Application в службе приложений Azure](deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md)
+* [Развертывание приложения Spring Boot в Службе приложений Azure в Linux](deploy-spring-boot-java-app-on-linux.md)
 
 * [Запуск приложения Spring Boot в кластере Kubernetes в Службе контейнеров Azure](deploy-spring-boot-java-app-on-kubernetes.md)
 
