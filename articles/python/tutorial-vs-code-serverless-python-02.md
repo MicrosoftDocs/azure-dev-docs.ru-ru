@@ -4,12 +4,12 @@ description: 'Руководство, шаг 2: использование ра�
 ms.topic: conceptual
 ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 24e158023ba748e6137471ae4833a970a185853b
-ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
+ms.openlocfilehash: c21207e9269326ba2189da3c2b5bbbcba1b23c02
+ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91846735"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137143"
 ---
 # <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"
 
@@ -47,3 +47,5 @@ ms.locfileid: "91846735"
 
 > [!div class="nextstepaction"]
 > [Функция создана —перейти к шагу 3 >>>](tutorial-vs-code-serverless-python-03.md)
+
+[Возникли проблемы? Сообщите нам!](https://aka.ms/python-functions-qs-ms-survey)

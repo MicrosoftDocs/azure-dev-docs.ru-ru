@@ -4,12 +4,12 @@ description: 'Шаг руководства 6: расширение проект
 ms.topic: conceptual
 ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: f60bd70a8c67a3b33140b11731906e0f205e98f7
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.openlocfilehash: bbf89352bbbb93a90ac6f41bea97ba0def9bf815
+ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772877"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137103"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 
@@ -118,3 +118,5 @@ ms.locfileid: "90772877"
 
 > [!div class="nextstepaction"]
 > [Вторая функция добавлена — перейти к шагу 7 >>>](tutorial-vs-code-serverless-python-07.md)
+
+[Возникли проблемы? Сообщите нам!](https://aka.ms/python-functions-qs-ms-survey)

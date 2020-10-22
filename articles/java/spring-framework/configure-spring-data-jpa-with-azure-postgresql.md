@@ -2,18 +2,18 @@
 title: Использование JPA Spring Data с Базой данных Azure для PostgreSQL
 description: Сведения о том, как использовать JPA Spring Data с Базой данных Azure для PostgreSQL.
 documentationcenter: java
-ms.date: 06/19/2020
+ms.date: 10/12/2020
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 3a17e09f257bb4d06320fea8aaa6b423c4f2027b
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 1099b9568a66c2915b000c31c8e84e8e02b1d3d6
+ms.sourcegitcommit: 76f1a47c58810486856e0d128bd154cf7d355e65
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90830976"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92200592"
 ---
 # <a name="use-spring-data-jpa-with-azure-database-for-postgresql"></a>Использование JPA Spring Data с Базой данных Azure для PostgreSQL
 
@@ -34,8 +34,10 @@ ms.locfileid: "90830976"
 Создайте приложение, введя в командной строке следующую команду:
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,postgresql -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,postgresql -d baseDir=azure-database-workshop -d bootVersion=2.3.4.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
+> [!NOTE]
+> Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 ### <a name="configure-spring-boot-to-use-azure-database-for-postgresql"></a>Настройка Spring Boot для использования Базы данных Azure для PostgreSQL
 
@@ -70,11 +72,11 @@ spring.jpa.hibernate.ddl-auto=create-drop
 Затем добавьте код Java, который будет использовать JPA для хранения данных на сервере PostgreSQL и их извлечения из него.
 
 [!INCLUDE [spring-data-jpa-create-application.md](includes/spring-data-jpa-create-application.md)]
-
+    
 Ниже приведен снимок экрана с этими запросами cURL:
 
 [![Тестирование с помощью cURL](media/configure-spring-data-jpa-with-azure-postgresql/create-postgresql-02.png)](media/configure-spring-data-jpa-with-azure-postgresql/create-postgresql-02.png#lightbox)
-
+    
 Поздравляем! Вы создали приложение Spring Boot, которое использует JPA для сохранения данных в Базе данных Azure для PostgreSQL и их извлечения из нее.
 
 [!INCLUDE [spring-data-conclusion.md](includes/spring-data-conclusion.md)]

@@ -4,12 +4,12 @@ description: Шаг 1 руководства по настройке локал
 ms.topic: conceptual
 ms.date: 05/19/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 8d7b3d29b1bd8860d87505fd6f3b09a20702f904
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.openlocfilehash: 69f66c51a6e55eff91a7de780ebd0bd6f5500f68
+ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772769"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137223"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
@@ -80,3 +80,5 @@ ms.locfileid: "90772769"
 
 > [!div class="nextstepaction"]
 > [Вход в Azure выполнен — перейти к шагу 2 >>>](tutorial-vs-code-serverless-python-02.md)
+
+[Возникли проблемы? Сообщите нам!](https://aka.ms/python-functions-qs-ms-survey)

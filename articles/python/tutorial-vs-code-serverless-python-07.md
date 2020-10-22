@@ -4,12 +4,12 @@ description: Шаг руководства 7. Добавление в Python п�
 ms.topic: conceptual
 ms.date: 09/17/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: ad242e5c9c2258e438846a7d393163871d14db9e
-ms.sourcegitcommit: 69933dcce571b2686897b295b7822e207d944617
+ms.openlocfilehash: c260d2b8708d770b62c9f94d651a1ba630660cab
+ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90772857"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137193"
 ---
 # <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Добавление привязки к хранилищу для решения "Функции Azure" на Python
 
@@ -105,3 +105,4 @@ ms.locfileid: "90772857"
 > [!div class="nextstepaction"]
 > [Привязка хранилища добавлена — перейти к шагу 8 >>>](tutorial-vs-code-serverless-python-08.md)
 
+[Возникли проблемы? Сообщите нам!](https://aka.ms/python-functions-qs-ms-survey)
