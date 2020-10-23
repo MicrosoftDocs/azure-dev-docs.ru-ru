@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: 7b97323d2fd2e37f215f9c122f6c01ce290208a0
-  ms.sourcegitcommit: 0b1c751c5a4a837977fec1c777bca5ad15cf2fc7
+  ms.openlocfilehash: 8fa0ba6c5191c407c3501dd5b4df09a041bb4160
+  ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/01/2020
-  ms.locfileid: "91621650"
+  ms.lasthandoff: 10/22/2020
+  ms.locfileid: "92435020"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -28,9 +28,9 @@ landingContent:
     - text: Основные понятия Azure
       url: /learn/paths/azure-fundamentals/
     - text: Настройка среды разработки
-      url: configure-local-development-environment.md
+      url: core/configure-local-development-environment.md
     - text: Аутентификация в клиентской библиотеке
-      url: node-sdk-azure-authenticate.md
+      url: core/node-sdk-azure-authenticate.md
     - text: Блог по пакету SDK Azure
       url: https://devblogs.microsoft.com/azure-sdk/
 - title: Hosting
@@ -48,7 +48,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Полный стек (бессерверные API и интерфейсная часть)
-      url: node-howto-create-static-site-jamstack.md
+      url: how-to/create-static-site.md
 - title: Бессерверные функции
   linkLists:
   - linkListType: tutorial
@@ -58,7 +58,7 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Написание бессерверного кода
-      url: node-howto-write-serverless-code.md
+      url: how-to/develop-serverless-apps.md
 - title: Данные
   linkLists:
   - linkListType: quickstart
