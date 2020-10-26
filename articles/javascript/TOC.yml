@@ -1,16 +1,18 @@
 - name: Azure для разработчиков JavaScript и Node.js
   href: index.yml
   items:
+    - name: Что нового в документации?
+      href: whats-new-docs.md
     - name: Начало работы в Azure с JavaScript
       items:
         - name: Настройка среды разработки
-          href: configure-local-development-environment.md
+          href: core/configure-local-development-environment.md
         - name: Настройка субъекта-службы
-          href: node-sdk-azure-authenticate-principal.md
+          href: core/node-sdk-azure-authenticate-principal.md
         - name: Проверка подлинности в Azure
-          href: node-sdk-azure-authenticate.md
+          href: core/node-sdk-azure-authenticate.md
     - name: Краткие руководства
-      expanded: true
+      expanded: false
       items:
         - name: Размещение приложений
           items:
@@ -30,8 +32,6 @@
               href: /azure/aks/kubernetes-walkthrough?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
             - name: Виртуальные машины Linux
               href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Использование Express.js с MongoDB
-              href: tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-feedback.yml
         - name: DevOps
           items:
             - name: Azure Repos
@@ -52,8 +52,6 @@
               href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
             - name: Отладка локального приложения Node.js в VS Code
               href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
-        - name: Средства и расширения
-          href: node-azure-tools.md
         - name: Хранение данных
           items:
             - name: Хранилище BLOB-объектов
@@ -98,12 +96,12 @@
               href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
             - name: Распознавание речи
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: Ведение журнала и метрики
-          items:
-            - name: Ведение журнала с использованием пакета Azure SDK
-              href: node-sdk-logging.md
     - name: Учебники
       items:
+        - name: Отправка изображения в BLOB-объекты хранилища
+          href: tutorial/browser-file-upload.yml?preview=tutorialFeedback
+        - name: Использование Express.js с MongoDB
+          href: tutorial/web-app-mongodb.yml?preview=tutorialFeedback
         - name: Развертывание Функций Azure с помощью VS Code
           items:
             - name: Введение и предварительные требования
@@ -128,10 +126,6 @@
               href: tutorial-vscode-azure-app-service-node-04.md
             - name: Очистка ресурсов
               href: tutorial-vscode-azure-app-service-node-05.md
-        - name: Отправка изображения в BLOB-объекты хранилища
-          href: tutorial-visualstudiocode-browser-file-upload-feedback.yml?preview=tutorialFeedback
-        - name: Использование Express.js с MongoDB
-          href: tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-feedback.yml?tabs=bash&preview=tutorialFeedback
         - name: Развертывание Deno в Службе приложений с помощью VS Code
           items:
             - name: Введение и предварительные требования
@@ -192,26 +186,28 @@
               href: tutorial-vscode-static-website-node-06.md
     - name: Learn
       href: learn-azure-javascript.md
+    - name: Инструменты Azure
+      href: node-azure-tools.md
     - name: Руководства
       items:
         - name: Сквозной Node. js с VS Code
-          href: node-howto-e2e.md
+          href: how-to/develop-nodejs-on-azure.md
         - name: Развертывание веб-приложения
-          href: node-howto-deploy-web-app.md
+          href: how-to/deploy-web-app.md
         - name: Развертывание контейнеров
-          href: node-howto-deploy-containers.md
+          href: how-to/deploy-containers.md
         - name: Развертывание путем непрерывной поставки
           href: /azure/devops/pipelines/languages/javascript?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
         - name: Интеграция с базами данных
-          href: node-howto-integrate-databases.md
+          href: how-to/integrate-database.md
         - name: Написание бессерверного кода
-          href: node-howto-write-serverless-code.md
+          href: how-to/develop-serverless-apps.md
         - name: Создание статического сайта (JAMstack)
-          href: node-howto-create-static-site-jamstack.md
-        - name: Автоматизация мониторинга
-          href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+          href: how-to/create-static-site.md
         - name: Создание REST API
           href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
+        - name: Ведение журнала и метрики
+          href: how-to/node-sdk-logging.md
     - name: Примеры
       items:
         - name: Веб-приложения и бессерверные приложения
