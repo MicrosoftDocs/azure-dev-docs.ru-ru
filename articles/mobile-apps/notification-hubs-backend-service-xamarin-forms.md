@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: f173f8431cc7bed0ae56bf14cfc6efcf37dcf230
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: 308e727f57ed086899d4fb5906235cb5a17bda16
+ms.sourcegitcommit: ced8331ba36b28e6e2eacd23a64b39ddc7ffe6ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493278"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92337190"
 ---
 # <a name="tutorial-send-push-notifications-to-xamarinforms-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по отправке push-уведомлений в приложения Xamarin.Forms с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -42,8 +42,9 @@ ms.locfileid: "91493278"
 
 Для работы вам потребуется следующее:
 
-* [подписка Azure](https://portal.azure.com), где можно создавать ресурсы и управлять ими;
-* компьютер Mac с установленной средой [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/) (или ПК, на котором работает [Visual Studio 2019](https://visualstudio.microsoft.com/vs) с рабочей нагрузкой **Разработка мобильных приложений на .NET**).
+* [подписка Azure](https://azure.microsoft.com/free/dotnet), где можно создавать ресурсы и управлять ими;
+* компьютер Mac с установленной средой [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/) или ПК, на котором работает [Visual Studio 2019](https://visualstudio.microsoft.com/vs).
+* Пользователи [Visual Studio 2019](https://visualstudio.microsoft.com/vs) также должны установить такие рабочие нагрузки: **Разработка мобильных приложений на .NET** и **ASP.NET и разработка веб-приложений**.
 * возможность запускать приложение на **Android** (физические или эмулированные устройства) или **iOS** (только физические устройства).
 
 Для Android необходимо иметь следующее:
@@ -62,12 +63,13 @@ ms.locfileid: "91493278"
 Вам не потребуется наличие опыта для выполнения действий, которые описаны в этом примере демонстрации общих концепций. Но знакомство со следующими аспектами может оказаться полезным.
 
 * [Портал разработчиков Azure](https://developer.apple.com)
-* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
+* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1) и [веб-API](https://dotnet.microsoft.com/apps/aspnet/apis)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
 * [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started)
 * [Xamarin](https://dotnet.microsoft.com/apps/xamarin) и [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
 
-Здесь приводятся действия для [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/), но весь процесс можно выполнить и с помощью [Visual Studio 2019](https://visualstudio.microsoft.com/vs).
+> [!IMPORTANT]
+> Следующие инструкции относятся к [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/mac/). Можно выполнить эти инструкции и в [Visual Studio 2019](https://visualstudio.microsoft.com/vs), но, возможно, потребуется согласовать некоторые различия, например описания пользовательского интерфейса и рабочих процессов, имена шаблонов, конфигурации среды и т. д.
 
 ## <a name="set-up-push-notification-services-and-azure-notification-hub"></a>Настройка служб push-уведомлений и Центров уведомлений Azure
 

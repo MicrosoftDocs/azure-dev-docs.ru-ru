@@ -4,17 +4,19 @@ description: В этом учебнике описан процесс разве
 author: edburns
 ms.author: edburns
 ms.topic: tutorial
-ms.date: 08/05/2020
-ms.openlocfilehash: 166e6f90218eb519242da0d89ae6146a2d589863
-ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
+ms.date: 10/15/2020
+ms.openlocfilehash: 7a4f130e82338dea7c4fd344cfbedb2ed7f88c67
+ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88057563"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92137093"
 ---
 # <a name="tutorial-migrate-a-weblogic-server-cluster-to-azure-with-azure-application-gateway-as-a-load-balancer"></a>Руководство по переносу кластера WebLogic Server в Azure с помощью Шлюза приложений Azure в качестве подсистемы балансировки нагрузки
 
 В этом учебнике описан процесс развертывания WebLogic Server (WLS) с помощью Шлюза приложений Azure.  В нем рассматриваются конкретные шаги по созданию Key Vault, хранению в нем SSL-сертификата и использованию этого сертификата для завершения SSL-запросов.  Хотя все эти элементы хорошо задокументированы сами по себе, в этом учебнике описывается конкретный способ объединения всех этих элементов для создания простого, но мощного решения балансировки нагрузки для WLS в Azure.
+
+<!-- Diagram source at https://github.com/wls-eng/arm-oraclelinux-wls/blob/master/src/main/resources/weblogic-app-gateway-key-vault.vsdx -->
 
 :::image type="content" border="false" source="media/migrate-weblogic-with-app-gateway/weblogic-app-gateway-key-vault.png" alt-text="Схема, на которой показана связь между WLS, Шлюзом приложений и Key Vault.":::
 
@@ -144,7 +146,7 @@ ms.locfileid: "88057563"
 
 Чтобы создать кластер WLS и Шлюз приложений, выполните приведенные ниже действия.
 
-1. Выполните следующие действия по подготовке кластера WebLogic Server, как описано [в документации по Oracle](https://aka.ms/arm-oraclelinux-wls-cluster-oracle-docs), но вернитесь на эту страницу, когда дойдете до колонки **Azure Application Gateway** (Шлюз приложений Azure), показанной здесь.
+1. Подготовьте кластер WebLogic Server к работе по инструкциям из [документации по Oracle](https://aka.ms/arm-oraclelinux-wls-cluster-oracle-docs), используя [предложение для кластера WebLogic Server на портале Azure](https://portal.azure.com/#create/oracle.20191007-arm-oraclelinux-wls-cluster20191007-arm-oraclelinux-wls-cluster), но вернитесь на эту страницу, когда дойдете до колонки **Azure Application Gateway** (Шлюз приложений Azure), показанной здесь.
 
    :::image type="content" source="media/migrate-weblogic-with-app-gateway/weblogic-app-gateway-blade.png" alt-text="Схема, на которой показана связь между WLS, Шлюзом приложений и Key Vault.":::
 

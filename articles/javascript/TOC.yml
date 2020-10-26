@@ -128,6 +128,8 @@
               href: tutorial-vscode-azure-app-service-node-04.md
             - name: Очистка ресурсов
               href: tutorial-vscode-azure-app-service-node-05.md
+        - name: Отправка изображения в BLOB-объекты хранилища
+          href: tutorial-visualstudiocode-browser-file-upload-feedback.yml?preview=tutorialFeedback
         - name: Использование Express.js с MongoDB
           href: tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-feedback.yml?tabs=bash&preview=tutorialFeedback
         - name: Развертывание Deno в Службе приложений с помощью VS Code
