@@ -1,0 +1,46 @@
+### YamlMime:Tutorial
+title: Развертывание приложения MongoDB на платформе Node.js в Службе приложений с помощью Visual Studio Code
+metadata:
+  title: Развертывание приложения MongoDB на платформе Node.js в Службе приложений с помощью Visual Studio Code
+  description: В этом руководстве вы будете работать с приложением Node.js с базой данных MongoDB, используя нативный API MongoDB. Разверните приложение Node.js в Службе приложений Azure (в Linux), а затем проверьте работу этого облачного приложения.
+  audience: Developer
+  level: Beginner
+  displayType: one-column
+  ms.date: 10/13/2020
+  ms.topic: tutorial
+  ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
+  ms.openlocfilehash: 826d4a2ffb4a36d22cb48398fb2bf3b3d1073890
+  ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 10/22/2020
+  ms.locfileid: "92437325"
+items:
+- durationInMinutes: 2
+  content: >
+    [!INCLUDE [Tutorial introduction](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-00.md)]
+- title: Подготовка к работе с этим руководством
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Prepare to use this tutorial](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-01.md)]
+- title: Запуск сайта в локальной среде
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Run site locally](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-02.md)]
+- title: Развертывание сайта в Azure
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Deploy site to Azure](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-03.md)]
+- title: Подключение локальной базы данных
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Connect local database](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-04.md)]
+- title: Подключение удаленной базы данных
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Connect remote database](../includes/tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-05.md)]
+- title: Очистка ресурсов
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Clean up resources](../includes/tutorial-visualstudiocode-app-service-mongodb/clean-up-resources.md)]
+- content: '[!INCLUDE [Completed tutorial](../includes/tutorial-visualstudiocode-app-service-mongodb/completed.md)]'
