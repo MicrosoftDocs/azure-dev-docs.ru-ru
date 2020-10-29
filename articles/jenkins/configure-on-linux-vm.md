@@ -4,13 +4,13 @@ description: Узнайте, как установить Jenkins на вирту
 keywords: Jenkins, Azure, DevOps, портал, Linux, виртуальная машина
 ms.topic: quickstart
 ms.date: 08/21/2020
-ms.custom: devx-track-jenkins
-ms.openlocfilehash: 7e7c8de6353a29af949231709675a4d2785405c3
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.custom: devx-track-jenkins, devx-track-azurecli
+ms.openlocfilehash: 6fc5eafbec8917b517b38d7a02c3149512675ac9
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831370"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689130"
 ---
 # <a name="quickstart-configure-jenkins-using-azure-cli"></a>Краткое руководство. Настройка Jenkins с помощью Azure CLI
 
@@ -39,7 +39,7 @@ ms.locfileid: "90831370"
 
 1. Войдите на [портал Azure](https://portal.azure.com).
 
-1. Откройте [Azure Cloud Shell](/azure/cloud-shell/overview) и, если это еще не сделано, перейдите на **Bash**.
+1. Откройте [Azure Cloud Shell](/azure/cloud-shell/overview) и, если это еще не сделано, перейдите на **Bash** .
 
 1. Создайте файл с именем `cloud-init-jenkins.txt`.
 
@@ -60,7 +60,7 @@ ms.locfileid: "90831370"
       - service jenkins restart
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
+1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
 
 1. Создайте группу ресурсов, используя команду [az group create](/cli/azure/group#az-group-create). Возможно, потребуется заменить заполнитель `--location` соответствующим значением для вашей среды.
 
@@ -137,7 +137,7 @@ ms.locfileid: "90831370"
 
 1. Используя IP-адрес, откройте следующий URL-адрес в браузере: `http://<ip_address>:8080`
 
-1. Введите ранее полученный пароль и выберите **Продолжить**.
+1. Введите ранее полученный пароль и выберите **Продолжить** .
 
     ![Начальная страница для разблокировки Jenkins](./media/configure-on-linux-vm/unlock-jenkins.png)
 
@@ -145,15 +145,15 @@ ms.locfileid: "90831370"
 
     ![Выбор варианта установки выбранных подключаемых модулей](./media/configure-on-linux-vm/select-plugins.png)
 
-1. В поле фильтра в верхней части страницы введите `github`. Выберите подключаемый модуль GitHub, а затем — **Установить**.
+1. В поле фильтра в верхней части страницы введите `github`. Выберите подключаемый модуль GitHub, а затем — **Установить** .
 
     ![Установка подключаемых модулей GitHub](./media/configure-on-linux-vm/install-github-plugin.png)
 
-1. Введите сведения для первого администратора и выберите **Сохранить и продолжить**.
+1. Введите сведения для первого администратора и выберите **Сохранить и продолжить** .
 
     ![Ввод сведений для первого администратора](./media/configure-on-linux-vm/create-first-user.png)
 
-1. На странице **Конфигурация экземпляра** выберите **Сохранить и завершить**.
+1. На странице **Конфигурация экземпляра** выберите **Сохранить и завершить** .
 
     ![Страница подтверждения для конфигурации экземпляра](./media/configure-on-linux-vm/instance-configuration.png)
 
@@ -167,7 +167,7 @@ ms.locfileid: "90831370"
 
     ![Домашняя страница консоли Jenkins](./media/configure-on-linux-vm/jenkins-home-page.png)
 
-1. Введите имя задания `mySampleApp`, выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК**.
+1. Введите имя задания `mySampleApp`, выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК** .
 
     ![Создание задания](./media/configure-on-linux-vm/new-job.png)
 
@@ -183,7 +183,7 @@ ms.locfileid: "90831370"
 
     ![Выбор параметра сценария Gradle](./media/configure-on-linux-vm/invoke-gradle-script-option.png)
 
-1. Выберите **Use Gradle Wrapper** (Использовать программу-оболочку Gradle), затем введите значение `complete` для параметра **Wrapper location** (Расположение программы-оболочки) и `build` для параметра **Задачи**.
+1. Выберите **Use Gradle Wrapper** (Использовать программу-оболочку Gradle), затем введите значение `complete` для параметра **Wrapper location** (Расположение программы-оболочки) и `build` для параметра **Задачи** .
 
     ![Параметры сценария Gradle](./media/configure-on-linux-vm/gradle-script-options.png)
 
@@ -191,7 +191,7 @@ ms.locfileid: "90831370"
 
     ![Дополнительные параметры сценария Gradle](./media/configure-on-linux-vm/root-build-script.png)
 
-1. Прокрутите к нижней части страницы и выберите **Сохранить**.
+1. Прокрутите к нижней части страницы и выберите **Сохранить** .
 
 ## <a name="build-the-sample-java-app"></a>Сборка примера приложения Java
 

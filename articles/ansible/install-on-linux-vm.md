@@ -4,13 +4,13 @@ description: В этом кратком руководстве вы узнает
 keywords: ansible, azure, devops, bash, cloudshell, сборник схем, azure cli
 ms.topic: quickstart
 ms.date: 09/30/2020
-ms.custom: devx-track-ansible,devx-track-cli
-ms.openlocfilehash: aba725cee4b61aeae98ed8d0eb89b3090241ff49
-ms.sourcegitcommit: 0b1c751c5a4a837977fec1c777bca5ad15cf2fc7
+ms.custom: devx-track-ansible,devx-track-cli, devx-track-azurecli
+ms.openlocfilehash: 7103c40c0b95ae07c60fcccff03ea60e9667a331
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91621630"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688956"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cli"></a>Краткое руководство. Настройка Ansible с помощью Azure CLI
 
@@ -45,7 +45,7 @@ ms.locfileid: "91621630"
 
 1. Войдите на [портал Azure](https://portal.azure.com).
 
-1. Откройте [Azure Cloud Shell](/azure/cloud-shell/overview) и, если это еще не сделано, перейдите на **Bash**.
+1. Откройте [Azure Cloud Shell](/azure/cloud-shell/overview) и, если это еще не сделано, перейдите на **Bash** .
 
 1. Создайте ключ SSH с помощью [ssh-keygen](https://www.ssh.com/ssh/keygen/).
 

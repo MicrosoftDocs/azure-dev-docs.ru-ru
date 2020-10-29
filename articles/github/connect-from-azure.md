@@ -6,13 +6,13 @@ ms.author: ushan
 ms.topic: reference
 ms.service: azure
 ms.date: 08/31/2020
-ms.custom: github-actions-azure
-ms.openlocfilehash: 4900097ea8d3635c2030f73eab1c63fb46323bc9
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.custom: github-actions-azure, devx-track-azurecli
+ms.openlocfilehash: 926bd35fe7c0fb7d7a043955e0fd340950a658db
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493125"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689210"
 ---
 # <a name="use-github-actions-to-connect-to-azure"></a>Применение GitHub Actions для подключения к Azure
 
@@ -61,11 +61,11 @@ Azure CLI настраивает среду выполнения действи�
     }
     ```
 
-1. Откройте репозиторий GitHub и перейдите в раздел **Параметры**.
+1. Откройте репозиторий GitHub и перейдите в раздел **Параметры** .
 
     :::image type="content" source="media/github-repo-settings.png" alt-text="Выбор раздела &quot;Параметры&quot; в области навигации":::
 
-1. Выберите **Секреты**, а затем **Создать секрет**.
+1. Выберите **Секреты** , а затем **Создать секрет** .
 
     :::image type="content" source="media/select-secrets.png" alt-text="Выбор раздела &quot;Параметры&quot; в области навигации":::
 
@@ -73,7 +73,7 @@ Azure CLI настраивает среду выполнения действи�
 
     :::image type="content" source="media/azure-secret-add.png" alt-text="Выбор раздела &quot;Параметры&quot; в области навигации":::
 
-1. Сохраните секрет, выбрав действие **Добавить секрет**.
+1. Сохраните секрет, выбрав действие **Добавить секрет** .
 
 ## <a name="use-the-azure-login-action"></a>Использование действия входа в Azure
 

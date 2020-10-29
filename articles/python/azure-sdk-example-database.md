@@ -3,13 +3,13 @@ title: Подготовка базы данных Azure MySQL с помощью 
 description: Использование библиотек управления в библиотеках Azure SDK для Python, чтобы подготавливать базы данных Azure MySQL, PostgresSQL или MariaDB.
 ms.date: 10/05/2020
 ms.topic: conceptual
-ms.custom: devx-track-python
-ms.openlocfilehash: bf205e133f093be654c88e5245eb0a4524f71502
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.custom: devx-track-python, devx-track-azurecli
+ms.openlocfilehash: 873b854ac2702ac62484a8ed37a5367084eb4b00
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010301"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689018"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-database"></a>Пример Использование библиотек Azure для подготовки базы данных
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ```
 
 > [!NOTE]
-> В Windows попытка установить библиотеку mysql в 32-разрядную библиотеку Python приведет к ошибке из-за файла *mysql.h*. В этом случае установите 64-разрядную версию Python и повторите попытку.
+> В Windows попытка установить библиотеку mysql в 32-разрядную библиотеку Python приведет к ошибке из-за файла *mysql.h* . В этом случае установите 64-разрядную версию Python и повторите попытку.
 
 ## <a name="3-write-code-to-provision-the-database"></a>3: Написание кода для подготовки базы данных
 

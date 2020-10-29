@@ -6,13 +6,13 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.custom: devx-track-java
-ms.openlocfilehash: 5ef1c3cb94064d26ca4081b8bcd1cdebd344a46a
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: a8e0614547fa7bfca3a8d66af8a1c1d4240fe161
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010189"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689177"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>Развертывание приложения Spring в Службе приложений с использованием MySQL
 
@@ -182,13 +182,13 @@ set REGION=<region>
 
 Maven будет использовать эти значения для создания ресурсов Azure с предоставленными вами именами. С помощью переменных среды можно хранить секреты учетной записи отдельно от файлов проекта.
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml* , чтобы настроить Maven для развертывания в Azure. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.11.0</version>
+    <version>1.12.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -370,7 +370,7 @@ show databases;
 
 Теперь нужно добавить сведения о подключении к версии MySQL приложения и выполнить развертывание в Службе приложений.
 
-Обновите файл *pom.xml*, чтобы включить MySQL в действующую конфигурацию. Удалите элемент `<activation>` из профиля HSQLDB и поместите его в профиль MySQL, как показано ниже. В оставшейся части фрагмента кода показана существующая конфигурация. Обратите внимание, как настроенные ранее переменные среды используются Maven для настройки доступа к MySQL.
+Обновите файл *pom.xml* , чтобы включить MySQL в действующую конфигурацию. Удалите элемент `<activation>` из профиля HSQLDB и поместите его в профиль MySQL, как показано ниже. В оставшейся части фрагмента кода показана существующая конфигурация. Обратите внимание, как настроенные ранее переменные среды используются Maven для настройки доступа к MySQL.
 
 ```xml
 <profile>
@@ -390,13 +390,13 @@ show databases;
 </profile>
 ```
 
-Затем обновите файл *pom.xml*, чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
+Затем обновите файл *pom.xml* , чтобы настроить Maven для развертывания в Azure и использования MySQL. Добавьте следующий код XML после добавленного ранее элемента `<plugin>`. При необходимости измените `1.11.0` на текущую версию [подключаемого модуля Maven для Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme).
 
 ```xml
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.11.0</version>
+    <version>1.12.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>

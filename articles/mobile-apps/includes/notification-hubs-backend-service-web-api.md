@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: 3103fd6c75dbaeed3b5a0dd23d7cd68b6394ee76
-ms.sourcegitcommit: ced8331ba36b28e6e2eacd23a64b39ddc7ffe6ab
+ms.openlocfilehash: 7a7128a475b428243f3c7280fc154d1d4c8fe8a6
+ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92337191"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92438022"
 ---
 ### <a name="create-a-web-project"></a>Создание веб-проекта
 
@@ -518,6 +518,10 @@ ASP.NET Core поддерживает шаблон разработки прог
 1. В **Startup.cs** обновите метод **ConfigureServices** , чтобы добавить **NotificationHubsService** в качестве отдельной реализации **INotificationService** .
 
     ```csharp
+    
+    using PushDemoApi.Models;
+    using PushDemoApi.Services;
+
     public void ConfigureServices(IServiceCollection services)
     {
         ...

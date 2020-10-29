@@ -3,13 +3,13 @@ title: Внесение изменений в код приложения и е�
 description: Руководство, часть 6. Внесение изменений и повторное развертывание с помощью Azure CLI
 ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-js
-ms.openlocfilehash: 1ceec642f0e8eab517e8fee464ac604f760c9229
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.custom: devx-track-js, devx-track-azurecli
+ms.openlocfilehash: a087bb948c33df43e0cc25afce0f308c6d97fbd7
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364757"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689118"
 ---
 # <a name="part-6-make-changes-and-redeploy"></a>Часть 6. Внесение изменений и повторное развертывание
 

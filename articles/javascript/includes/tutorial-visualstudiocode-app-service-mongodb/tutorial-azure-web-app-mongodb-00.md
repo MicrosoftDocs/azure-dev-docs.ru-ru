@@ -4,12 +4,12 @@ description: include file tutorial-azure-web-app-mongodb-00.md
 ms.date: 10/13/2020
 ms.topic: include
 ms.custom: devx-track-javascript
-ms.openlocfilehash: c0d904935992b54b63f45f76a022947375414c55
-ms.sourcegitcommit: 8a2a7df568c69fff2080ffab248409040efda1ac
+ms.openlocfilehash: 9903ca1ae761cb2e16a7f72fcc4c0942f7fa5991
+ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92183913"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92437322"
 ---
 В этом руководстве вы будете работать с приложением Node.js с базой данных MongoDB, используя нативный API MongoDB. Разверните приложение Node.js в Службе приложений Azure (в Linux), а затем проверьте работу этого облачного приложения. 
 
@@ -43,7 +43,7 @@ ms.locfileid: "92183913"
 
 ## <a name="limited-time-to-work-on-the-tutorial"></a>У вас мало времени на работу с этим руководством?
 
-В этом руководстве показано, как создать ресурс Azure для Cosmos DB, в котором Azure размещает базы данных MongoDB. На создание ресурса может потребоваться до 20 минут. Если у вас мало времени, вы можете [прямо сейчас запустить этот процесс](../../tutorial-visualstudiocode-app-service-mongodb/tutorial-azure-web-app-mongodb-feedback.yml?tutorial-step=5) и ресурс будет готов к тому моменту, когда он вам понадобится. 
+В этом руководстве показано, как создать ресурс Azure для Cosmos DB, в котором Azure размещает базы данных MongoDB. На создание ресурса может потребоваться до 20 минут. Если у вас мало времени, вы можете [прямо сейчас запустить этот процесс](../../tutorial/web-app-mongodb.yml?tutorial-step=5) и ресурс будет готов к тому моменту, когда он вам понадобится. 
 
 ## <a name="want-to-know-more"></a>Хотите получить дополнительные сведения? 
 

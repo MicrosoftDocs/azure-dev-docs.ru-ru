@@ -4,13 +4,13 @@ description: Сведения о развертывании в службе Azur
 keywords: jenkins, azure, devops, kubernetes, k8s, aks, blue green deployment, continuous delivery, cd
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.custom: devx-track-jenkins
-ms.openlocfilehash: 6a33227f7a5a0aa3e82e48d821e9f37bdfeadd6e
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.custom: devx-track-jenkins, devx-track-azurecli
+ms.openlocfilehash: 1ddf85a5ad1a9415d4143873f674b7104a4bd4d8
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90832050"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688663"
 ---
 # <a name="tutorial-deploy-to-azure-kubernetes-service-aks-using-the-bluegreen-deployment-pattern"></a>Руководство по развертыванию в службе Azure Kubernetes (AKS) с использованием "сине-зеленого" шаблона развертывания
 
@@ -50,11 +50,11 @@ ms.locfileid: "90832050"
 
     ![Снимок экрана с именем учетной записи GitHub и заметкой](./media/deploy-to-aks-using-blue-green-deployment-pattern/github-sample-msft-forked.png)
 
-1. Выберите **Clone or download**(Клонировать или скачать).
+1. Выберите **Clone or download** (Клонировать или скачать).
 
     ![Снимок экрана с командой клонирования или скачивания репозитория в GitHub](./media/deploy-to-aks-using-blue-green-deployment-pattern/github-sample-clone.png)
 
-1. В окне **Clone with HTTPS** (Клонирование с использованием HTTPS) щелкните значок **копирования**.
+1. В окне **Clone with HTTPS** (Клонирование с использованием HTTPS) щелкните значок **копирования** .
 
     ![Снимок экрана с параметром копирования URL-адреса клона в буфер обмена в GitHub](./media/deploy-to-aks-using-blue-green-deployment-pattern/github-sample-copy.png)
 
@@ -112,7 +112,7 @@ ms.locfileid: "90832050"
 Вы можете настроить сине-зеленое развертывание в AKS вручную или с помощью сценария установки, ранее предоставленного в примере клонирования. В этом разделе вы узнаете, как использовать оба этих способа.
 
 #### <a name="set-up-the-kubernetes-cluster-via-the-sample-setup-script"></a>Настройка кластера Kubernetes с помощью примера сценария установки
-1. Измените файл **deploy/aks/setup/setup.sh**, заменив следующие местозаполнители соответствующими значениями для своей среды: 
+1. Измените файл **deploy/aks/setup/setup.sh** , заменив следующие местозаполнители соответствующими значениями для своей среды: 
 
    - **&lt;название группы ресурсов>**
    - **&lt;имя кластера kubernetes>**
@@ -134,9 +134,9 @@ ms.locfileid: "90832050"
     az aks get-credentials -g <your-resource-group-name> -n <your-kubernetes-cluster-name> --admin
     ```
 
-1. Перейдите в каталог **deploy/aks/setup**. 
+1. Перейдите в каталог **deploy/aks/setup** . 
 
-1. Выполните команду **kubectl**, чтобы настроить службы для общедоступной конечной точки и двух тестовых конечных точек.
+1. Выполните команду **kubectl** , чтобы настроить службы для общедоступной конечной точки и двух тестовых конечных точек.
 
     ```bash
     kubectl apply -f  service-green.yml
@@ -212,14 +212,14 @@ ms.locfileid: "90832050"
    
 1. Установите подключаемые модули Jenkins, выполнив на панели мониторинга Jenkins следующие действия:
 
-    1. Выберите **Управление Jenkins > Управление подключаемыми модулями > Доступно**.
+    1. Выберите **Управление Jenkins > Управление подключаемыми модулями > Доступно** .
     1. Выполните поиск и установите подключаемый модуль службы контейнеров Azure.
 
-1. Добавьте учетные данные для управления ресурсами в Azure. Если у вас еще нет подключаемого модуля, установите подключаемый модуль **учетных данных Azure**.
+1. Добавьте учетные данные для управления ресурсами в Azure. Если у вас еще нет подключаемого модуля, установите подключаемый модуль **учетных данных Azure** .
 
-1. Добавьте учетные данные субъекта-службы Azure в качестве типа **субъекта-службы Microsoft Azure**.
+1. Добавьте учетные данные субъекта-службы Azure в качестве типа **субъекта-службы Microsoft Azure** .
 
-1. Добавьте имя пользователя и пароль реестра Docker в Azure (согласно данным, полученным в разделе "Создание экземпляра Реестра контейнеров") в качестве типа **имени пользователя с паролем**.
+1. Добавьте имя пользователя и пароль реестра Docker в Azure (согласно данным, полученным в разделе "Создание экземпляра Реестра контейнеров") в качестве типа **имени пользователя с паролем** .
 
 ## <a name="edit-the-jenkinsfile"></a>Изменение Jenkinsfile
 

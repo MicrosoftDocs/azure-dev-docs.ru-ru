@@ -8,13 +8,13 @@ ms.date: 10/06/2020
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.custom: mvc, devx-track-java
-ms.openlocfilehash: cecd6b593d1805b7394a9fe73317e6faa8b689a5
-ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
+ms.custom: mvc, devx-track-java, devx-track-azurecli
+ms.openlocfilehash: d902219a7dd5f59abc54343ff3aca60f4b7f46e4
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91846485"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689193"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Развертывание приложения Spring Boot Application в Службе Azure Kubernetes
 
@@ -78,7 +78,7 @@ ms.locfileid: "91846485"
    curl http://localhost:8080
    ```
 
-1. Должно появиться следующее сообщение: **Hello Docker World**.
+1. Должно появиться следующее сообщение: **Hello Docker World** .
 
    ![Локальный просмотр образца приложения][SB01]
 
@@ -127,7 +127,7 @@ ms.locfileid: "91846485"
    code pom.xml
    ```
 
-1. Обновите коллекцию `<properties>` в файле *pom.xml*, добавив имя для своего реестра в Реестре контейнеров Azure и последнюю версию [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin).
+1. Обновите коллекцию `<properties>` в файле *pom.xml* , добавив имя для своего реестра в Реестре контейнеров Azure и последнюю версию [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin).
 
    ```xml
    <properties>
@@ -138,7 +138,7 @@ ms.locfileid: "91846485"
    </properties>
    ```
 
-1. Обновите коллекцию `<plugins>` в файле *pom.xml*, чтобы элемент `<plugin>` содержал запись `jib-maven-plugin`, как показано в следующем примере. Обратите внимание, что мы используем базовый образ из Реестра контейнеров Майкрософт (MCR): `mcr.microsoft.com/java/jdk:8-zulu-alpine`, который содержит официально поддерживаемый пакет JDK для Azure. Другие базовые образы MCR с официально поддерживаемыми пакетами JDK см. в статьях [Java SE JDK](https://hub.docker.com/_/microsoft-java-jdk), [Java SE JRE](https://hub.docker.com/_/microsoft-java-jre), [Java SE Headless JRE](https://hub.docker.com/_/microsoft-java-jre-headless) и [Java SE JDK и Maven](https://hub.docker.com/_/microsoft-java-maven).
+1. Обновите коллекцию `<plugins>` в файле *pom.xml* , чтобы элемент `<plugin>` содержал запись `jib-maven-plugin`, как показано в следующем примере. Обратите внимание, что мы используем базовый образ из Реестра контейнеров Майкрософт (MCR): `mcr.microsoft.com/java/jdk:8-zulu-alpine`, который содержит официально поддерживаемый пакет JDK для Azure. Другие базовые образы MCR с официально поддерживаемыми пакетами JDK см. в статьях [Java SE JDK](https://hub.docker.com/_/microsoft-java-jdk), [Java SE JRE](https://hub.docker.com/_/microsoft-java-jre), [Java SE Headless JRE](https://hub.docker.com/_/microsoft-java-jre-headless) и [Java SE JDK и Maven](https://hub.docker.com/_/microsoft-java-maven).
 
    ```xml
    <plugin>
@@ -167,7 +167,7 @@ ms.locfileid: "91846485"
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Создание в Службе контейнеров Azure кластера Kubernetes с помощью Azure CLI
 
-1. Создайте кластер Kubernetes в Службе Azure Kubernetes. Следующая команда отвечает за создание кластера *kubernetes* в группе ресурсов *wingtiptoys-kubernetes* с именем кластера *wingtiptoys-akscluster*, присоединенным реестром службы "Реестр контейнеров Azure" (ACR) `wingtiptoysregistry` и префиксом DNS *wingtiptoys-kubernetes*:
+1. Создайте кластер Kubernetes в Службе Azure Kubernetes. Следующая команда отвечает за создание кластера *kubernetes* в группе ресурсов *wingtiptoys-kubernetes* с именем кластера *wingtiptoys-akscluster* , присоединенным реестром службы "Реестр контейнеров Azure" (ACR) `wingtiptoysregistry` и префиксом DNS *wingtiptoys-kubernetes* :
 
    ```azurecli
    az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \
@@ -244,7 +244,7 @@ ms.locfileid: "91846485"
    ```
 
 > [!IMPORTANT]
-> Если кластер AKS использует RBAC, необходимо создать *ClusterRoleBinding*(связи кластерных ролей) прежде чем правильно подключиться к панели мониторинга. По умолчанию панель мониторинга Kubernetes развертывается с минимальными правами доступа на чтение и отображает сообщения об ошибках доступа RBAC. Сейчас панель мониторинга Kubernetes не поддерживает пользовательские учетные данные для определения уровня доступа. Вместо этого она использует роли, предоставленные учетной записи службы. Администратор кластера может предоставить дополнительный доступ к учетной записи службы *kubernetes-dashboard*, однако это может послужить вектором для эскалации привилегий. Вы также можете интегрировать аутентификацию Azure Active Directory, чтобы предоставить более детальный уровень доступа.
+> Если кластер AKS использует RBAC, необходимо создать *ClusterRoleBinding* (связи кластерных ролей) прежде чем правильно подключиться к панели мониторинга. По умолчанию панель мониторинга Kubernetes развертывается с минимальными правами доступа на чтение и отображает сообщения об ошибках доступа RBAC. Сейчас панель мониторинга Kubernetes не поддерживает пользовательские учетные данные для определения уровня доступа. Вместо этого она использует роли, предоставленные учетной записи службы. Администратор кластера может предоставить дополнительный доступ к учетной записи службы *kubernetes-dashboard* , однако это может послужить вектором для эскалации привилегий. Вы также можете интегрировать аутентификацию Azure Active Directory, чтобы предоставить более детальный уровень доступа.
 >
 > Чтобы создать привязку, используйте команду [kubectl create clusterrolebinding]. В приведенном ниже примере показано, как создать пример привязки. Но этот пример привязки не предусматривает использование дополнительных компонентов проверки подлинности и может привести к небезопасному использованию. Панель мониторинга Kubernetes доступна для любого пользователя, имеющего доступ к URL-адресу. Не предоставляйте публичный доступ к панели мониторинга Kubernetes.
 >
@@ -254,7 +254,7 @@ ms.locfileid: "91846485"
 >
 > Дополнительные сведения об использовании разных методов проверки подлинности см. в вики-статье о панели мониторинга Kubernetes: [dashboard-authentication].
 
-1. Когда в браузере откроется веб-сайт для настройки Kubernetes, щелкните ссылку, чтобы **развернуть контейнерное приложение**:
+1. Когда в браузере откроется веб-сайт для настройки Kubernetes, щелкните ссылку, чтобы **развернуть контейнерное приложение** :
 
    ![Веб-сайт настройки Kubernetes с сообщением о том, что нет данных для отображения][KB01]
 
@@ -262,13 +262,13 @@ ms.locfileid: "91846485"
 
    а. Выберите **Create an App** (Создать приложение).
 
-   b. Укажите имя приложения Spring Boot в поле **Имя приложения** (например, *gs-spring-boot-docker*).
+   b. Укажите имя приложения Spring Boot в поле **Имя приложения** (например, *gs-spring-boot-docker* ).
 
-   c. Укажите сервер входа и образ контейнера, заданные ранее, в поле **Образ контейнера** (например, *wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest*).
+   c. Укажите сервер входа и образ контейнера, заданные ранее, в поле **Образ контейнера** (например, *wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest* ).
 
-   d. Для параметра **Служба** выберите значение **Внешняя**.
+   d. Для параметра **Служба** выберите значение **Внешняя** .
 
-   д) Укажите внешний и внутренний порты в текстовых полях **Порт** и **Целевой порт**.
+   д) Укажите внешний и внутренний порты в текстовых полях **Порт** и **Целевой порт** .
 
    ![Веб-сайт конфигурации Kubernetes: страница "Создание приложения"][KB02]
 
@@ -276,11 +276,11 @@ ms.locfileid: "91846485"
 
    ![Развертывание Kubernetes][KB05]
 
-1. После развертывания приложение Spring Boot отобразится в списке **Службы**.
+1. После развертывания приложение Spring Boot отобразится в списке **Службы** .
 
    ![Веб-сайт Kubernetes: список служб][KB06]
 
-1. Щелкнув ссылку для **внешних конечных точек**, можно просмотреть сведения о выполнении приложения Spring Boot в Azure.
+1. Щелкнув ссылку для **внешних конечных точек** , можно просмотреть сведения о выполнении приложения Spring Boot в Azure.
 
    ![Веб-сайт Kubernetes: список служб с выделенными внешними конечными точками][KB07]
 

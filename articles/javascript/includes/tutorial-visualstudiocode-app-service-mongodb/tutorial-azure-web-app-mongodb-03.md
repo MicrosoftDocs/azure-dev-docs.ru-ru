@@ -4,12 +4,12 @@ description: include file tutorial-azure-web-app-mongodb-03.md
 ms.date: 10/13/2020
 ms.topic: include
 ms.custom: devx-track-javascript
-ms.openlocfilehash: adea87271b1332f77ab254530410787d1a9baa3c
-ms.sourcegitcommit: 8a2a7df568c69fff2080ffab248409040efda1ac
+ms.openlocfilehash: 9d6fb0beaa19503541196c72ecbdae52a642648b
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92183934"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92755852"
 ---
 В этом разделе руководства показано, как развернуть пример приложения в Azure. Затем вы сможете просмотреть удаленно запущенное приложение в браузере. 
 
@@ -55,6 +55,6 @@ ms.locfileid: "92183934"
 Начальная версия веб-службы настроена на работу через порт 8080 и является общедоступной. Вы можете изменить эти параметры для своего веб-сайта.
 * [Параметры приложения](/azure/app-service/configure-common)
 * [Аутентификация](/azure/app-service/configure-authentication-provider-microsoft)
-* [Ограничение доступа в зависимости от сети](/azure/azure/app-service/app-service-ip-restrictions)
+* [Ограничение доступа в зависимости от сети](/azure/app-service/app-service-ip-restrictions)
 
 Если вы используете это расширение Службы приложений для развертывания веб-сайта в облаке Azure, вам будет полезно получить сведения о [настройке такого развертывания.](https://github.com/microsoft/vscode-azureappservice/wiki/Configuring-Zip-Deployment#additional-zip-deploy-configuration-settings)

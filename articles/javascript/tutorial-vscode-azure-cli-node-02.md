@@ -3,13 +3,13 @@ title: Создание приложения Node.js для развертыва
 description: Руководство, часть 2. Создание кода приложения с помощью Azure CLI
 ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-js
-ms.openlocfilehash: 6d11f21dfda82a5881e177908c5f16c948df78cf
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.custom: devx-track-js, devx-track-azurecli
+ms.openlocfilehash: 89e979dabca91e47083f48e42543453facc57130
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365197"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689141"
 ---
 # <a name="create-the-app-code-using-express"></a>Создание кода приложения с помощью Express
 
@@ -17,7 +17,7 @@ ms.locfileid: "91365197"
 
 На этом этапе вы создадите простое приложение Node.js с помощью [Express](https://www.expressjs.com), используя [генератор Express](https://expressjs.com/en/starter/generator.html).
 
-1. Используйте приведенную ниже команду, чтобы запустить генератор Express и сформировать шаблон нового приложения Express с именем myExpressApp. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
+1. Используйте приведенную ниже команду, чтобы запустить генератор Express и сформировать шаблон нового приложения Express с именем myExpressApp. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore* .
 
     ```bash
     npx express-generator myExpressApp --view pug –git

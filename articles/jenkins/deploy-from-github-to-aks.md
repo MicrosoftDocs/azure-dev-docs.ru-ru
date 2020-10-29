@@ -4,13 +4,13 @@ description: Узнайте, как настроить Jenkins для обесп
 keywords: Jenkins, Azure, DevOps, AKS, Служба Azure Kubernetes, GitHub
 ms.topic: article
 ms.date: 01/09/2019
-ms.custom: devx-track-jenkins
-ms.openlocfilehash: c73e5c567f237c6f859b52230742ae74b87326f5
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.custom: devx-track-jenkins, devx-track-azurecli
+ms.openlocfilehash: 5d72a9bd05683f50375204db9cc95b012db6dfa3
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88241006"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688645"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе Azure Kubernetes с помощью Jenkins
 
@@ -35,7 +35,7 @@ ms.locfileid: "88241006"
 
 - [Реестр службы "Реестр контейнеров Azure" (ACR)](/azure/container-registry/container-registry-get-started-azure-cli), имя сервера ACR для входа и кластер AKS, настроенный для [проверки подлинности в реестре ACR](/azure/aks/cluster-container-registry-integration).
 
-- Установленная и настроенная версия Azure CLI 2.0.46 или более поздняя. Чтобы узнать версию, выполните команду  `az --version`. Если вам необходимо выполнить установку или обновление, см. статью  [Установка Azure CLI](/cli/azure/install-azure-cli).
+- Установленная и настроенная версия Azure CLI 2.0.46 или более поздняя. Чтобы узнать версию, выполните команду `az --version`. Если вам необходимо выполнить установку или обновление, см. статью [Установка Azure CLI 2.0](/cli/azure/install-azure-cli).
 
 - [Установленное средство Docker](https://docs.docker.com/install/) в системе разработки.
 
@@ -81,7 +81,7 @@ redis                        latest     a1b99da73d05        7 days ago          
 tiangolo/uwsgi-nginx-flask   flask      788ca94b2313        9 months ago        694MB
 ```
 
-Прежде чем отправить образ контейнера *azure-vote-front* в ACR, получите данные о сервере входа ACR с помощью команды [az acr list](/cli/azure/acr#az-acr-list). В следующем примере возвращается адрес сервера входа ACR для реестра в группе ресурсов с именем *myResourceGroup*:
+Прежде чем отправить образ контейнера *azure-vote-front* в ACR, получите данные о сервере входа ACR с помощью команды [az acr list](/cli/azure/acr#az-acr-list). В следующем примере возвращается адрес сервера входа ACR для реестра в группе ресурсов с именем *myResourceGroup* :
 
 ```azurecli
 az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
@@ -115,7 +115,7 @@ containers:
 kubectl apply -f azure-vote-all-in-one-redis.yaml
 ```
 
-Будет создана служба балансировки нагрузки Kubernetes, которая открывает доступ к приложению через Интернет. Это может занять несколько минут. Отслеживать, как выполняется развертывание подсистемы балансировки нагрузки, можно с применением команды [kubectl get service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) с аргументом `--watch`. Как только *ВНЕШНИЙ IP-АДРЕС* изменится с состояния *ожидания* на *IP-адрес*, используйте команду `Control + C`, чтобы остановить процесс отслеживания kubectl.
+Будет создана служба балансировки нагрузки Kubernetes, которая открывает доступ к приложению через Интернет. Это может занять несколько минут. Отслеживать, как выполняется развертывание подсистемы балансировки нагрузки, можно с применением команды [kubectl get service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) с аргументом `--watch`. Как только *ВНЕШНИЙ IP-АДРЕС* изменится с состояния *ожидания* на *IP-адрес* , используйте команду `Control + C`, чтобы остановить процесс отслеживания kubectl.
 
 ```console
 $ kubectl get service azure-vote-front --watch
@@ -154,8 +154,8 @@ Enter the following to Unlock Jenkins:
 Откройте в веб-браузере отображенный URL-адрес и введите ключ разблокировки. Следуйте указаниям на экране, чтобы завершить настройку Jenkins:
 
 - Выберите **Install suggested plugins** (Установить предлагаемые подключаемые модули).
-- Создайте первого администратора. Введите имя пользователя, например *azureuser*, а затем укажите надежный пароль. Наконец введите полное имя и адрес электронной почты.
-- Выберите **Сохранить и завершить**.
+- Создайте первого администратора. Введите имя пользователя, например *azureuser* , а затем укажите надежный пароль. Наконец введите полное имя и адрес электронной почты.
+- Выберите **Сохранить и завершить** .
 - Когда настройка Jenkins будет завершена, щелкните **Start using Jenkins** (Начать работу с Jenkins).
     - Если веб-браузере отображает пустую страницу при запуске Jenkins, перезапустите службу Jenkins. Чтобы перезапустить службу, установите SSH-подключение к общедоступному IP-адресу экземпляра Jenkins и введите `sudo service jenkins restart`. После перезапуска службы обновите веб-браузер.
 - Войдите в Jenkins с именем пользователя и паролем, созданными в процессе установки.
@@ -191,7 +191,7 @@ $ az ad sp create-for-rbac --skip-assignment
 }
 ```
 
-Запишите значения параметров *appId* и *password*, показанные в выходных данных. Эти значения используются в следующих шагах для настройки ресурса учетных данных в Jenkins.
+Запишите значения параметров *appId* и *password* , показанные в выходных данных. Эти значения используются в следующих шагах для настройки ресурса учетных данных в Jenkins.
 
 Получите идентификатор ресурса для реестра ACR с помощью команды [az acr show](/cli/azure/acr#az-acr-show) и сохраните его как переменную. Укажите имя группы ресурсов и имя ACR.
 
@@ -199,7 +199,7 @@ $ az ad sp create-for-rbac --skip-assignment
 ACR_ID=$(az acr show --resource-group myResourceGroup --name <acrLoginServer> --query "id" --output tsv)
 ```
 
-Теперь создайте назначение ролей, чтобы назначить субъекту-службе права *Contributor* (Участник) в реестре ACR. В следующем примере укажите собственный *идентификатор приложения*, показанный в выходных данных предыдущей команды для создания субъекта-службы:
+Теперь создайте назначение ролей, чтобы назначить субъекту-службе права *Contributor* (Участник) в реестре ACR. В следующем примере укажите собственный *идентификатор приложения* , показанный в выходных данных предыдущей команды для создания субъекта-службы:
 
 ```azurecli
 az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role Contributor --scope $ACR_ID
@@ -215,7 +215,7 @@ az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role
 
 - **Username** (Имя пользователя) — значение параметра *appId* субъекта-службы, созданного для проверки подлинности в реестре ACR.
 - **Password** (Пароль) — значение параметра *password* субъекта-службы, созданного для проверки подлинности в реестре ACR.
-- **ID** (Идентификатор) — идентификатор учетных данных, например *acr-credentials*.
+- **ID** (Идентификатор) — идентификатор учетных данных, например *acr-credentials* .
 
 По завершении форма учетных данных будет выглядеть примерно так:
 
@@ -227,9 +227,9 @@ az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role
 
 На домашней странице портала Jenkins выберите **New item** (Создать элемент) с левой стороны:
 
-1. Введите *azure-vote* в качестве имени задания. Выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК**.
-1. В разделе **General** (Общие) выберите проект **GitHub** и введите URL-адрес вилки репозитория, например *https:\//github.com/\<your-github-account\>/azure-voting-app-redis*.
-1. В разделе **Source code management** (Управление исходным кодом) выберите **Git** и введите URL-адрес *GIT-файла* вилки репозитория, например *https:\//github.com/\<your-github-account\>/azure-voting-app-redis.git*.
+1. Введите *azure-vote* в качестве имени задания. Выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК** .
+1. В разделе **General** (Общие) выберите проект **GitHub** и введите URL-адрес вилки репозитория, например *https:\//github.com/\<your-github-account\>/azure-voting-app-redis* .
+1. В разделе **Source code management** (Управление исходным кодом) выберите **Git** и введите URL-адрес *GIT-файла* вилки репозитория, например *https:\//github.com/\<your-github-account\>/azure-voting-app-redis.git* .
 
 1. В разделе **Build Triggers** (Создание триггеров) выберите **GitHub hook trigger for GITScm polling** (Обработчик триггера GitHub для опроса GITScm).
 1. В разделе **Build Environment** (Среда сборки) выберите **Use secret texts or files** (Использовать секретные тексты или файлы).
@@ -278,7 +278,7 @@ az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role
 
 1. Перейдите к вилке репозитория GitHub в веб-браузере.
 1. Щелкните **Settings** (Параметры), а затем выберите **Webhooks** (Веб-перехватчики).
-1. Выберите **Add webhook** (Добавить веб-перехватчик). В поле *Payload URL* (URL-адрес полезных данных) введите `http://<publicIp:8080>/github-webhook/`, где `<publicIp>` — IP-адрес сервера Jenkins. Убедитесь, что адрес содержит завершающую косую черту (/). Оставьте другие значения по умолчанию для типа содержимого и триггера событий *принудительной отправки*.
+1. Выберите **Add webhook** (Добавить веб-перехватчик). В поле *Payload URL* (URL-адрес полезных данных) введите `http://<publicIp:8080>/github-webhook/`, где `<publicIp>` — IP-адрес сервера Jenkins. Убедитесь, что адрес содержит завершающую косую черту (/). Оставьте другие значения по умолчанию для типа содержимого и триггера событий *принудительной отправки* .
 1. Выберите **Add webhook** (Добавить веб-перехватчик).
 
     ![Создание веб-перехватчика GitHub для Jenkins](media/deploy-from-github-to-aks/webhook.png)
@@ -293,7 +293,7 @@ az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role
 1. Этот новый образ контейнера отправляется в Реестр контейнеров Azure.
 1. Ваше приложение, развернутое в службе Azure Kubernetes, обновляется последним образом контейнера из реестра службы "Реестр контейнеров Azure".
 
-На компьютере разработки откройте клонированное приложении с помощью редактора кода. В каталоге */azure-vote/azure-vote* откройте файл **config_file.cfg**. Обновите значения для голосования в этом файле, указав что-нибудь иное вместо кошек и собак, как показано в следующем примере:
+На компьютере разработки откройте клонированное приложении с помощью редактора кода. В каталоге */azure-vote/azure-vote* откройте файл **config_file.cfg** . Обновите значения для голосования в этом файле, указав что-нибудь иное вместо кошек и собак, как показано в следующем примере:
 
 ```
 # UI Configurations

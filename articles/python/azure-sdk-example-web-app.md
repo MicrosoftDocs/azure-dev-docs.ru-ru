@@ -3,13 +3,13 @@ title: Подготовка и развертывание веб-приложе�
 description: Узнайте, как с помощью библиотек управления из библиотек Azure SDK для Python подготовить веб-приложение, а затем развернуть код приложения из репозитория GitHub.
 ms.date: 10/05/2020
 ms.topic: conceptual
-ms.custom: devx-track-python
-ms.openlocfilehash: 3312b55927e7a72d4ee1e0fee3658c1b2f5a513d
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.custom: devx-track-python, devx-track-azurecli
+ms.openlocfilehash: ac678bef07fb660ca3ad094d56455e3b85db9f19
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010310"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688985"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-and-deploy-a-web-app"></a>Пример использования библиотек Azure для подготовки и развертывания веб-приложения
 

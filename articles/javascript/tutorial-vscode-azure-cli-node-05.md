@@ -3,13 +3,13 @@ title: Потоковая передача журналов из Службы п
 description: Руководство, часть 5. Просмотр журналов с помощью Azure CLI
 ms.topic: tutorial
 ms.date: 09/24/2019
-ms.custom: devx-track-js
-ms.openlocfilehash: 0cb28cc7bafd7d0d713fc980c72a7a41474d5060
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.custom: devx-track-js, devx-track-azurecli
+ms.openlocfilehash: f8da719269e157a2ab498834f00e4a360120b8a9
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365147"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688607"
 ---
 # <a name="stream-logs-from-app-service"></a>Потоковая передача журналов из Службы приложений
 
@@ -37,7 +37,7 @@ ms.locfileid: "91365147"
     GET / 304 2.435 ms - -
     </pre>
 
-1. Нажмите клавиши **CTRL**+**C**, чтобы завершить сеанс ведения журнала.
+1. Нажмите клавиши **CTRL**+**C** , чтобы завершить сеанс ведения журнала.
 
 > [!div class="nextstepaction"]
 > [Журналы отображаются](tutorial-vscode-azure-cli-node-06.md) [Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment&step=tailing-logs)

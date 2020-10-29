@@ -5,13 +5,13 @@ author: mnriem
 ms.author: manriem
 ms.topic: conceptual
 ms.date: 4/10/2020
-ms.custom: devx-track-java
-ms.openlocfilehash: 4d3da50042074b724f614b718ceb0edc7fb83077
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: 77ad38a4fb1290e392ee933a04aaf802a910e577
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831710"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689046"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-kubernetes-service"></a>Перенос приложений Spring Boot в Службу Azure Kubernetes
 
@@ -49,7 +49,7 @@ ms.locfileid: "90831710"
 
 ### <a name="review-your-database-properties"></a>Проверка свойств базы данных
 
-Если приложение использует базу данных, проверьте ее свойства в файле *application.properties*, чтобы приложение Spring Boot сохранило доступ к базе данных после переноса в AKS. Если база данных расположена в локальной среде, придется либо перенести ее в облако, либо настроить подключение к локальной базе данных.
+Если приложение использует базу данных, проверьте ее свойства в файле *application.properties* , чтобы приложение Spring Boot сохранило доступ к базе данных после переноса в AKS. Если база данных расположена в локальной среде, придется либо перенести ее в облако, либо настроить подключение к локальной базе данных.
 
 ### <a name="identify-log-aggregation-solutions"></a>Определение решений по объединению журналов
 
@@ -65,7 +65,7 @@ ms.locfileid: "90831710"
 
 ### <a name="inventory-external-resources"></a>Проверка внешних ресурсов
 
-Определите внешние ресурсы, в том числе источники данных, брокеры сообщений JMS и URL-адреса других служб. В приложениях Spring Boot файл с конфигурацией этих ресурсов обычно размещается в каталоге *src/main/directory* и называется *application.properties* или *application.yml*. Кроме того, проверьте наличие параметров конфигурации в переменных среды в рабочем развертывании.
+Определите внешние ресурсы, в том числе источники данных, брокеры сообщений JMS и URL-адреса других служб. В приложениях Spring Boot файл с конфигурацией этих ресурсов обычно размещается в каталоге *src/main/directory* и называется *application.properties* или *application.yml* . Кроме того, проверьте наличие параметров конфигурации в переменных среды в рабочем развертывании.
 
 [!INCLUDE [inventory-databases-spring-boot](includes/inventory-databases-spring-boot.md)]
 
@@ -187,7 +187,7 @@ docker push ${MY_ACR}.azurecr.io/${MY_APP_NAME}
 
 Более подробные сведения о создании и хранении образов контейнеров в Azure см. в модуле [Создание и хранение образов контейнеров с помощью службы "Реестр контейнеров Azure"](/learn/modules/build-and-store-container-images/).
 
-Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете включить в развертывание настраиваемое хранилище ключей, которое добавляется в виртуальную машину Java при запуске. Оно будет добавляться автоматически, если вы разместите файл хранилища ключей в каталог */opt/spring-boot/mycert.crt*. Для этого файл можно добавить непосредственно в Dockerfile или применить поставщик Azure Key Vault для драйвера CSI хранилища секретов, как упоминалось ранее.
+Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете включить в развертывание настраиваемое хранилище ключей, которое добавляется в виртуальную машину Java при запуске. Оно будет добавляться автоматически, если вы разместите файл хранилища ключей в каталог */opt/spring-boot/mycert.crt* . Для этого файл можно добавить непосредственно в Dockerfile или применить поставщик Azure Key Vault для драйвера CSI хранилища секретов, как упоминалось ранее.
 
 Если вы использовали наш [GitHub-репозиторий для быстрого начала работы с контейнерами Spring Boot](https://github.com/Azure/spring-boot-container-quickstart), можете также включить Application Insights, указав переменную среды `APPLICATIONINSIGHTS_CONNECTION_STRING` в файле развертывания Kubernetes со следующим значением: `InstrumentationKey=00000000-0000-0000-0000-000000000000`. Дополнительные сведения см. в статье [Мониторинг приложений Java без написания кода (Azure Monitor Application Insights)](/azure/azure-monitor/app/java-in-process-agent).
 

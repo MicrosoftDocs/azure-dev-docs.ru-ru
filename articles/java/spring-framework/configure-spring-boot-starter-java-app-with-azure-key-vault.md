@@ -8,13 +8,13 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: identity
-ms.custom: devx-track-java
-ms.openlocfilehash: e06d09d4f44366ba995ecaa401df901dc6270c6d
-ms.sourcegitcommit: f80537193d3e22eb24cce4a0a5464a996d1e63eb
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: c6a81f5fb08985626909fe499584e67351a70ad0
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91409976"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92688844"
 ---
 # <a name="tutorial-reading-a-secret-from-azure-key-vault-in-a-spring-boot-application"></a>Руководство по Считывание секрета из Azure Key Vault в приложении Spring Boot
 
@@ -238,11 +238,11 @@ az ad sp create-for-rbac --name contososp
 1. Выберите параметры, как показано на рисунке ниже.
    1. **Project (Проект)** : `Maven Project`
    1. **Language (Язык)** : `Java`
-   1. **Spring Boot**: `2.3.3`
+   1. **Spring Boot** : `2.3.3`
    1. **Group (Группа)** : `com.contoso` (Здесь можно указать любое допустимое имя пакета Java.)
    1. **Artifact (Артефакт)** : *keyvault* (Здесь можно указать любое допустимое имя класса Java.)
    1. **Packaging (Формат пакета)** : `Jar`
-   1. **Java**. `11` (Можно выбрать 8, но этот учебник проверялся с версией 11.)
+   1. **Java** . `11` (Можно выбрать 8, но этот учебник проверялся с версией 11.)
 1. Щелкните **Add Dependencies...** (Добавить зависимости).
 1. В этом текстовом поле введите `Spring Web` и нажмите клавиши CTRL+ВВОД.
 1. В этом текстовом поле введите `Azure Key Vault` и нажмите клавишу ВВОД.  Теперь экран будет выглядеть следующим образом.
@@ -252,7 +252,7 @@ az ad sp create-for-rbac --name contososp
 
 Выполните эти шаги, чтобы изучить приложение и запустить его в локальной среде.
 
-1. Распакуйте архив *keyvault.zip*.  Макет этого файла будут выглядеть следующим образом.  В этом учебнике мы не используем папку *test* и ее содержимое.
+1. Распакуйте архив *keyvault.zip* .  Макет этого файла будут выглядеть следующим образом.  В этом учебнике мы не используем папку *test* и ее содержимое.
 
    ```bash
    ├── HELP.md
@@ -261,15 +261,15 @@ az ad sp create-for-rbac --name contososp
    ├── pom.xml
    └── src
        ├── main
-       │   ├── java
-       │   │   └── com
-       │   │       └── contoso
-       │   │           └── keyvault
-       │   │               └── KeyvaultApplication.java
-       │   └── resources
-       │       ├── application.properties
-       │       ├── static
-       │       └── templates
+       │   ├── java
+       │   │   └── com
+       │   │       └── contoso
+       │   │           └── keyvault
+       │   │               └── KeyvaultApplication.java
+       │   └── resources
+       │       ├── application.properties
+       │       ├── static
+       │       └── templates
    ```
 
 1. Откройте файл *KeyvaultApplication.java* в текстовом редакторе.  Измените этот файл так, чтобы он выглядел следующим образом.
@@ -306,7 +306,7 @@ az ad sp create-for-rbac --name contososp
    }
    ```
 
-1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml*, введите команду `mvn spring-boot:run`.  
+1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml* , введите команду `mvn spring-boot:run`.  
 1. Сообщение **Completed initialization** (Инициализация завершена) в выходных данных этой команды означает, что сервер готов к работе.  В другом окне оболочки введите эту команду.
 
    ```bash
@@ -323,7 +323,7 @@ az ad sp create-for-rbac --name contososp
 
 Следующие шаги демонстрируют необходимые изменения, которые нужно внести в приложение Spring Boot `KeyvaultApplication`.
 
-Так же, как Key Vault позволяет хранить секреты отдельно от кода приложения, конфигурация Spring позволяет хранить конфигурацию отдельно от кода.  Простейший пример конфигурации Spring представлен в файле *application.properties*.  В проекте Maven этот файл расположен по адресу *src/main/resources/application.properties*.  Spring Initializr для удобства размещает в этом расположении файл нулевой длины.
+Так же, как Key Vault позволяет хранить секреты отдельно от кода приложения, конфигурация Spring позволяет хранить конфигурацию отдельно от кода.  Простейший пример конфигурации Spring представлен в файле *application.properties* .  В проекте Maven этот файл расположен по адресу *src/main/resources/application.properties* .  Spring Initializr для удобства размещает в этом расположении файл нулевой длины.
 
 Выполните следующие шаги для добавления конфигурации в этот файл.
 
@@ -369,7 +369,7 @@ az ad sp create-for-rbac --name contososp
 
    Интеграция с Key Vault предоставляет метку Spring `PropertySource`, заполненную значениями для Key Vault.  Некоторые подробности реализации доступны в [справочной документации](https://aka.ms/azure-spring-boot-starter-keyvault-secrets).
 
-1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml*, введите команду `mvn clean package spring-boot:run`.  
+1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml* , введите команду `mvn clean package spring-boot:run`.  
 1. Сообщение **initialization completed** (Инициализация завершена) в выходных данных этой команды означает, что сервер готов к работе.  В другом окне оболочки введите эту команду.
 
    ```bash
@@ -391,29 +391,29 @@ az ad sp create-for-rbac --name contososp
 
 Выполните эти шаги, чтобы подготовить POM к развертыванию `KeyvaultApplication` в Службе приложений Azure.
 
-1. В каталоге *keyvault* верхнего уровня откройте файл *pom.xml*.
+1. В каталоге *keyvault* верхнего уровня откройте файл *pom.xml* .
 1. В разделе `<build><plugins>` добавьте `azure-webapp-maven-plugin`, включив следующий код XML.
 
    ```xml
     <plugin>
      <groupId>com.microsoft.azure</groupId>
      <artifactId>azure-webapp-maven-plugin</artifactId>
-     <version>1.11.0</version>
+     <version>1.12.0</version>
     </plugin>
    ```
 
    > [!NOTE]
    > Не обращайте внимание на форматирование.  В ходе этого процесса `azure-webapp-maven-plugin` изменит все форматирование POM.
 
-1. Сохраните и закройте файл *pom.xml*.
-1. В командной строке вызовите целевой объект `config` из только что добавленного подключаемого модуля.  Подключаемый модуль maven предложит вам несколько вопросов и на основе полученных ответов внесет некоторые изменения в файл *pom.xml*.  Дальше нужно еще немного подправить этот POM.
+1. Сохраните и закройте файл *pom.xml* .
+1. В командной строке вызовите целевой объект `config` из только что добавленного подключаемого модуля.  Подключаемый модуль maven предложит вам несколько вопросов и на основе полученных ответов внесет некоторые изменения в файл *pom.xml* .  Дальше нужно еще немного подправить этот POM.
 
    ```bash
    mvn azure-webapp:config
    ```
 
 1. Для `Subscription` убедитесь, что выбран тот же идентификатор подписки, что и у созданного экземпляра Key Vault.
-1. Для `Web App` можно указать существующее веб-приложение или выбрать `<create>`, чтобы создать новое. Если указать существующее веб-приложение, будет немедленно выполнен переход к последнему шагу **подтверждения**.
+1. Для `Web App` можно указать существующее веб-приложение или выбрать `<create>`, чтобы создать новое. Если указать существующее веб-приложение, будет немедленно выполнен переход к последнему шагу **подтверждения** .
 1. Для `OS` необходимо выбрать `linux`.
 1. Для `javaVersion` нужно выбрать ту же версию Java, которую вы указали в Spring Initializr.  Выше мы выбрали `11`, так что здесь выберите 11.
 1. Для остальных вопросов сохраните значения по умолчанию.
@@ -421,7 +421,7 @@ az ad sp create-for-rbac --name contososp
 
 Выполните следующие шаги, чтобы внести необходимые изменения в POM.
 
-1. В каталоге *keyvault* верхнего уровня откройте файл *pom.xml*.
+1. В каталоге *keyvault* верхнего уровня откройте файл *pom.xml* .
 1. Найдите запись `azure-webapp-maven-plugin` в разделе <plugins>.
 1. Измените значения `<resourceGroup>`, `<appName>` и `<region>`.  
    1. Для `<resourceGroup>` укажите то же значение, которое вы выбрали при создании Key Vault.
@@ -439,7 +439,7 @@ az ad sp create-for-rbac --name contososp
      <plugin> 
        <groupId>com.microsoft.azure</groupId>  
        <artifactId>azure-webapp-maven-plugin</artifactId>  
-       <version>1.11.0</version>  
+       <version>1.12.0</version>  
        <configuration>
          <schemaVersion>V2</schemaVersion>
          *<subscriptionId>********-****-****-****-************</subscriptionId>
@@ -449,8 +449,8 @@ az ad sp create-for-rbac --name contososp
          *<region>eastus</region>
          <runtime>
            <os>linux</os>
-           <javaVersion>java11</javaVersion>
-           <webContainer>java11</webContainer>
+           <javaVersion>java 11</javaVersion>
+           <webContainer>Java SE</webContainer>
          </runtime>
          *<!-- Begin of App Settings  -->
          *<appSettings>
@@ -608,7 +608,7 @@ Azure Spring Cloud представляет собой полностью упр
    | runtime-version | Версия среды выполнения Java.  **Это значение должно совпадать с тем, которое вы ранее выбрали в Spring Initializr.** |
    | служба | Имя существующей службы. |
 
-   Чтобы понять различия между *службой* и *приложением*, изучите статью [Общие сведения о приложении и развертывании в Azure Spring Cloud](/azure/spring-cloud/spring-cloud-concept-understand-app-and-deployment).
+   Чтобы понять различия между *службой* и *приложением* , изучите статью [Общие сведения о приложении и развертывании в Azure Spring Cloud](/azure/spring-cloud/spring-cloud-concept-understand-app-and-deployment).
 
 1. Получите управляемое удостоверение для ресурса Azure.  Примените его для того, чтобы настроить в существующем хранилище Key Vault доступ из вашего приложения.
 
@@ -638,7 +638,7 @@ Azure Spring Cloud представляет собой полностью упр
 
 ## <a name="summary"></a>Итоги
 
-Вы создали веб-приложение Java с помощью **Spring Initializr**.  Вы создали хранилище Azure Key Vault для хранения конфиденциальной информации, а затем настроили в приложении получение информации из этого хранилища.  Проверив приложение в локальной среде, вы развернули его в Службе приложений Azure и в Azure Spring Cloud.
+Вы создали веб-приложение Java с помощью **Spring Initializr** .  Вы создали хранилище Azure Key Vault для хранения конфиденциальной информации, а затем настроили в приложении получение информации из этого хранилища.  Проверив приложение в локальной среде, вы развернули его в Службе приложений Azure и в Azure Spring Cloud.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
