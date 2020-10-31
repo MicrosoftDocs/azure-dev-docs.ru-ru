@@ -11,91 +11,6 @@
           href: core/node-sdk-azure-authenticate-principal.md
         - name: Проверка подлинности в Azure
           href: core/node-sdk-azure-authenticate.md
-    - name: Краткие руководства
-      expanded: false
-      items:
-        - name: Размещение приложений
-          items:
-            - name: Статические веб-приложения Azure
-              href: /azure/static-web-apps/getting-started
-            - name: Создание статических сайтов с помощью службы хранилища
-              href: tutorial-vscode-static-website-node-01.md
-            - name: API-интерфейсы и веб-приложения Node.js
-              href: tutorial-vscode-azure-app-service-node-01.md
-            - name: API-интерфейсы Deno
-              href: tutorial-visual-studio-code-azure-app-service-deno-01.md
-            - name: Бессерверные приложения
-              href: tutorial-vscode-serverless-node-01.md
-            - name: Docker
-              href: tutorial-vscode-docker-node-01.md
-            - name: Kubernetes
-              href: /azure/aks/kubernetes-walkthrough?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Виртуальные машины Linux
-              href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: DevOps
-          items:
-            - name: Azure Repos
-              href: /azure/devops/repos/get-started/index?view=azure-devops&toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: CI/CD с использованием Azure Pipelines
-              href: /azure/devops/pipelines/languages/javascript?view=azure-devops&toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: CI/CD с использованием Azure DevOps Projects
-              href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Использование Application Insights с Azure Monitor
-              href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Использование Log Analytics с Azure Monitor
-              href: /azure/azure-monitor/learn/quick-collect-linux-computer?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Действия GitHub
-              href: 'https://azure.microsoft.com/resources/videos/azure-friday-deploy-to-azure-using-github-actions'
-        - name: Отладка и диагностика
-          items:
-            - name: Удаленная отладка для Службы приложений Azure
-              href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
-            - name: Отладка локального приложения Node.js в VS Code
-              href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
-        - name: Хранение данных
-          items:
-            - name: Хранилище BLOB-объектов
-              href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: База данных SQL
-              href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Cosmos DB
-              href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: кэш Redis;
-              href: /azure/azure-cache-for-redis/cache-nodejs-get-started?toc=/azure/developer/javascript/toc.json&bc=/
-            - name: PostgreSQL
-              href: /azure/postgresql/connect-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: MySQL
-              href: /azure/mysql/connect-nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: Безопасность и проверка подлинности
-          items:
-            - name: Azure Active Directory
-              href: /azure/active-directory/develop/quickstart-v1-nodejs-webapi?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Azure AD B2C
-              href: /azure/active-directory-b2c/active-directory-b2c-tutorials-spa?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Key Vault
-              href: /azure/key-vault/quick-create-cli?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: Обмен сообщениями и интеграция
-          items:
-            - name: Сетка событий Azure
-              href: /azure/event-grid/custom-event-quickstart?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Служебная шина
-              href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Хранилище очередей
-              href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: Интернет вещей
-          items:
-            - name: Центр Интернета вещей
-              href: /azure/iot-hub/quickstart-control-device-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Потоковая передача больших данных
-              href: /azure/iot-hub/quickstart-send-telemetry-node?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-        - name: Cognitive Services
-          items:
-            - name: Анализ текста
-              href: /azure/cognitive-services/text-analytics/quickstarts/nodejs?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: API Компьютерного зрения
-              href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
-            - name: Распознавание речи
-              href: /azure/cognitive-services/speech-service/get-started?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
     - name: Учебники
       items:
         - name: Отправка изображения в BLOB-объекты хранилища
@@ -196,16 +111,12 @@
           href: how-to/deploy-web-app.md
         - name: Развертывание контейнеров
           href: how-to/deploy-containers.md
-        - name: Развертывание путем непрерывной поставки
-          href: /azure/devops/pipelines/languages/javascript?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
         - name: Интеграция с базами данных
           href: how-to/integrate-database.md
         - name: Написание бессерверного кода
           href: how-to/develop-serverless-apps.md
         - name: Создание статического сайта (JAMstack)
           href: how-to/create-static-site.md
-        - name: Создание REST API
-          href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/developer/javascript/toc.json&bc=/azure/developer/breadcrumb/toc.json
         - name: Ведение журнала и метрики
           href: how-to/node-sdk-logging.md
     - name: Примеры
