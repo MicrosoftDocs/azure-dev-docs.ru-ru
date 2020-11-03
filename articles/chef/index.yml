@@ -1,6 +1,6 @@
 ### YamlMime:Landing
 title: Документация по Chef Software в Azure
-summary: Узнайте, как использовать программные продукты Chef для развертывания и администрирования ресурсов Azure.
+summary: '(28 октября 2020 года) Документация по использованию Chef в Azure теперь доступна на веб-сайте Chef Software: https://docs.chef.io/azure_portal'
 metadata:
   title: Документация по Chef Software в Azure
   description: Узнайте, как использовать программные продукты Chef для развертывания и администрирования ресурсов Azure.
@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: TomArcherMsft
   ms.author: tarcher
-  ms.date: 09/17/2019
-  ms.openlocfilehash: a969cf384592ad92bd5a2cf1280db725f723a0f3
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.date: 10/28/2020
+  ms.openlocfilehash: 04cd239211c2b576708b1bde536c4e7c200e019c
+  ms.sourcegitcommit: 3c904d8d89d0cb4f13209cde3425c5307b83237c
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "80893183"
+  ms.lasthandoff: 10/29/2020
+  ms.locfileid: "93024138"
 landingContent:
 - title: Сведения о программном обеспечении Chef в Azure
   linkLists:
