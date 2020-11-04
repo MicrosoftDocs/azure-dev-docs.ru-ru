@@ -4,13 +4,13 @@ description: Из этой статьи вы узнаете, как исполь
 keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kubernetes
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.custom: devx-track-jenkins
-ms.openlocfilehash: 39a730507df89186b8934d4ded7d2ff92c07b420
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.custom: devx-track-jenkins, devx-track-azurecli
+ms.openlocfilehash: b5de1c470b5b47184b1c8fe33c31e6958e0a45e9
+ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831380"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689108"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
@@ -38,7 +38,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 * [Установленное средство Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) версии 2.0.43 или выше.
 
-* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из  [этого краткого руководства](/azure/jenkins/install-jenkins-solution-template). 
+* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из [этого краткого руководства](/azure/jenkins/install-jenkins-solution-template). 
 
 * На сервере Jenkins нужно установить Helm и kubectl, а также предоставить учетной записи Jenkins доступ к ним, как описано далее в этом руководстве.
 
@@ -118,7 +118,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     }
     ```
 
-4. Щелкните **Вид** и **Терминал**, чтобы открыть интегрированный терминал в VS Code.
+4. Щелкните **Вид** и **Терминал** , чтобы открыть интегрированный терминал в VS Code.
 
 5. Выполните команду `azds prep`, чтобы подготовить приложение к запуску в пространстве разработки. Эта команда должна выполняться из `dev-spaces/samples/java/getting-started/webfrontend`, чтобы правильно подготовить приложение.
 
@@ -147,7 +147,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     ```
     Перейдите по этому URL-адресу в браузере, чтобы открыть веб-приложение. По мере выполнения контейнера в окно терминала передаются выходные данные `stdout` и `stderr`.
 
-8. Теперь настройте и разверните *mywebapi*:
+8. Теперь настройте и разверните *mywebapi* :
 
     1. Перейдите в каталог `dev-spaces/samples/java/getting-started/mywebapi`.
 
@@ -203,7 +203,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 ### <a name="add-credentials-to-jenkins"></a>Добавление учетных данных в Jenkins
 
-1. Серверу Jenkins требуется субъект-служба Azure для аутентификации и доступа к ресурсам Azure. Сведения о создании субъекта-службы см. в  [этом разделе](deploy-from-github-to-azure-app-service.md#create-service-principal)  руководства по развертыванию в Службе приложений Azure. Не забудьте сохранить копию выходных данных команды `create-for-rbac`, так как эти сведения вам потребуются для выполнения следующего шага. Результат должен выглядеть следующим образом.
+1. Серверу Jenkins требуется субъект-служба Azure для аутентификации и доступа к ресурсам Azure. Сведения о создании субъекта-службы см. в [этом разделе](deploy-from-github-to-azure-app-service.md#create-service-principal) руководства по развертыванию в Службе приложений Azure. Не забудьте сохранить копию выходных данных команды `create-for-rbac`, так как эти сведения вам потребуются для выполнения следующего шага. Результат должен выглядеть следующим образом.
 
     ```json
     {
@@ -221,7 +221,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
     ![Добавление учетных данных субъекта-службы в Jenkins](media/azure-dev-spaces-and-aks/add-service-principal-credentials.png)
 
-    Поле **Description** (Описание) заполнять необязательно. Подробные сведения см. в [разделе о добавлении субъекта-службы в Jenkins](deploy-from-github-to-azure-app-service.md#add-service-principal-to-jenkins)  руководства по развертыванию в Службе приложений Azure. 
+    Поле **Description** (Описание) заполнять необязательно. Подробные сведения см. в [разделе о добавлении субъекта-службы в Jenkins](deploy-from-github-to-azure-app-service.md#add-service-principal-to-jenkins) руководства по развертыванию в Службе приложений Azure. 
 
 
 
@@ -267,7 +267,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 ![Поток конвейера Jenkins](media/azure-dev-spaces-and-aks/jenkins-pipeline-flow.png)
 
-1. Скачайте измененную версию проекта *mywebapi* по адресу [https://github.com/azure-devops/mywebapi](https://github.com/azure-devops/mywebapi). Этот проект содержит несколько файлов, которые потребуются для создания конвейера, в том числе *Jenkinsfile*, *Dockerfiles* и чарт Helm.
+1. Скачайте измененную версию проекта *mywebapi* по адресу [https://github.com/azure-devops/mywebapi](https://github.com/azure-devops/mywebapi). Этот проект содержит несколько файлов, которые потребуются для создания конвейера, в том числе *Jenkinsfile* , *Dockerfiles* и чарт Helm.
 
 2. Войдите в Jenkins. В меню слева выберите **Add Item** (Добавить элемент).
 
@@ -345,7 +345,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 2. Войдите в Jenkins выберите имя конвейера, а затем щелкните **Build Now** (Собрать сейчас). 
 
-    Можно также настроить *веб-перехватчик*, который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
+    Можно также настроить *веб-перехватчик* , который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
 
 3. Сравните изменения с текущей общедоступной версией.
 
@@ -359,7 +359,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 При отправке запроса на вытягивание Jenkins создает дочернее пространство разработки на основе общего пространства разработки команды разработчиков и выполняет в этом дочернем пространстве код из запроса на вытягивание. URL-адрес дочернего пространства разработки имеет вид `http://$env.azdsprefix.<test_endpoint>`. 
 
-Значение для **$env.azdsprefix** присваивается во время выполнения конвейера подключаемым модулем Azure Dev Spaces с помощью **devSpacesCreate**:
+Значение для **$env.azdsprefix** присваивается во время выполнения конвейера подключаемым модулем Azure Dev Spaces с помощью **devSpacesCreate** :
 
 ```Groovy
 stage('create dev space') {
