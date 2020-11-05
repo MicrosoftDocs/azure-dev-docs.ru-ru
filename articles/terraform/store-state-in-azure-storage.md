@@ -4,12 +4,12 @@ description: Узнайте, как сохранить сведения о со�
 ms.topic: tutorial
 ms.date: 11/07/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: a59ba1d24fc59f36e237f5be9a75981b9ae8f8ae
-ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+ms.openlocfilehash: d3d2ab0ff605883926260928d3e7174a5c526781
+ms.sourcegitcommit: 5541f993c01ce356e1b0eaa8f95aea9051c3c21e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91401744"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93278419"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>Руководство по Хранение состояния Terraform в службе хранилища Azure
 
@@ -43,7 +43,7 @@ az group create --name $RESOURCE_GROUP_NAME --location eastus
 az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS --encryption-services blob
 
 # Get storage account key
-ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP_NAME --account-name $STORAGE_ACCOUNT_NAME --query [0].value -o tsv)
+ACCOUNT_KEY=$(az storage account keys list --resource-group $RESOURCE_GROUP_NAME --account-name $STORAGE_ACCOUNT_NAME --query '[0].value' -o tsv)
 
 # Create blob container
 az storage container create --name $CONTAINER_NAME --account-name $STORAGE_ACCOUNT_NAME --account-key $ACCOUNT_KEY
@@ -59,10 +59,10 @@ echo "access_key: $ACCOUNT_KEY"
 
 Серверный компонент состояния Terraform настраивается при выполнении команды `terraform init`. Для настройки серверного компонента состояния необходимы следующие данные:
 
-- **storage_account_name**: имя учетной записи хранения Azure.
-- **container_name**: имя контейнера больших двоичных объектов.
+- **storage_account_name** : имя учетной записи хранения Azure.
+- **container_name** : имя контейнера больших двоичных объектов.
 - **key:** имя файла хранилища состояния, который необходимо создать.
-- **access_key**: ключ доступа к хранилищу.
+- **access_key** : ключ доступа к хранилищу.
 
 Каждое из этих значений можно указать в файле конфигурации Terraform или в командной строке. Для значения `access_key` рекомендуется использовать переменную среды. Это предотвращает запись ключа на диск.
 

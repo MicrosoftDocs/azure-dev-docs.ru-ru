@@ -2,18 +2,18 @@
 title: Использование JPA Spring Data с Базой данных SQL Azure
 description: Сведения о том, как использовать JPA Spring Data с базой данных SQL Azure.
 documentationcenter: java
-ms.date: 06/19/2020
+ms.date: 10/14/2020
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: e00c4e6c35756094c3c40e0194edff0b8ebd1b89
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: ae162061e62c8cab6db79a9fe044f709e2c7aff9
+ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831970"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93192486"
 ---
 # <a name="use-spring-data-jpa-with-azure-sql-database"></a>Использование JPA Spring Data с Базой данных SQL Azure
 
@@ -36,6 +36,9 @@ ms.locfileid: "90831970"
 ```bash
 curl https://start.spring.io/starter.tgz -d dependencies=web,data-jpa,sqlserver -d baseDir=azure-database-workshop -d bootVersion=2.3.1.RELEASE -d javaVersion=8 | tar -xzvf -
 ```
+
+> [!NOTE]
+> Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 ### <a name="configure-spring-boot-to-use-azure-sql-database"></a>Настройка Spring Boot для использования Базы данных SQL Azure
 

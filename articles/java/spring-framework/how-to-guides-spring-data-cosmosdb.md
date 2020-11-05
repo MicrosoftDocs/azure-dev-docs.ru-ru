@@ -6,12 +6,12 @@ ms.author: kuthapar
 ms.topic: conceptual
 ms.date: 1/9/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: f2fb9a1af0634e0cecb3b6d990ae423b31da6210
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: cf565e233e505cc1d55a8d05883026e710f1e506
+ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90829990"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93192396"
 ---
 # <a name="spring-data-azure-cosmos-db-developers-guide"></a>Руководство для разработчиков Spring Data Azure Cosmos DB
 
@@ -121,7 +121,7 @@ class AddressService {
     @Autowired
     AddressRepository repository;
 
-    final Address newAddress = new Address("12345", "city");
+    final Address newAddress = new Address("12345", "Seattle");
 
     // There's no need to specify a partition key in the save operation.
     repository.save(updatedAddress);
