@@ -3,18 +3,18 @@ title: Руководство по настройке динамических �
 description: Узнайте, как управлять динамическими списками Azure с помощью Ansible
 keywords: ansible, azure, разработка и операции, bash, cloudshell, динамические списки
 ms.topic: tutorial
-ms.date: 10/23/2019
+ms.date: 10/30/2020
 ms.custom: devx-track-ansible, devx-track-azurecli
-ms.openlocfilehash: 42ac7ef120a2bb364197509d8c36bb7e1a300242
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: dd9a6f2b76c6d653eba9542d3b5dfdda4cb75ba5
+ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688620"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93192356"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
-Ansible можно использовать для извлечения информации из различных источников (включая облачные источники, такие как Azure) в *динамический список* . 
+Ansible можно использовать для извлечения информации из различных источников (включая облачные источники, такие как Azure) в *динамический список*. 
 
 [!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
@@ -42,23 +42,23 @@ Ansible можно использовать для извлечения инфо
     > [!IMPORTANT]
     > Имя группы ресурсов Azure, создаваемой на этом этапе, должно содержать только строчные символы. В противном случае создание динамического списка завершится ошибкой.
 
-    ```azurecli-interactive
+    ```azurecli
     az group create --resource-group ansible-inventory-test-rg --location eastus
     ```
 
 1. Создайте две виртуальные машины Linux в Azure одним из следующих способов:
 
-    - **Скрипт playbook Ansible** . В статье [Создание базовой виртуальной машины в Azure с помощью Ansible](./vm-configure.md) показано, как создать виртуальную машину с помощью скрипта playbook Ansible. При использовании скрипта playbook для определения одной или нескольких виртуальных машин убедитесь, что вместо пароля используется SSH-подключение.
+    - **Скрипт playbook Ansible**. В статье [Создание базовой виртуальной машины в Azure с помощью Ansible](./vm-configure.md) показано, как создать виртуальную машину с помощью скрипта playbook Ansible. При использовании скрипта playbook для определения одной или нескольких виртуальных машин убедитесь, что вместо пароля используется SSH-подключение.
 
-    - **Azure CLI** . Выполните каждую из следующих команд в Cloud Shell, чтобы создать две виртуальные машины:
+    - **Azure CLI**. Выполните каждую из следующих команд в Cloud Shell, чтобы создать две виртуальные машины:
 
-        ```azurecli-interactive
+        ```azurecli
         az vm create --resource-group ansible-inventory-test-rg \
                      --name ansible-inventory-test-vm1 \
                      --image UbuntuLTS --generate-ssh-keys
         ```
 
-        ```azurecli-interactive
+        ```azurecli
         az vm create --resource-group ansible-inventory-test-rg \
                      --name ansible-inventory-test-vm2 \
                      --image UbuntuLTS --generate-ssh-keys
@@ -71,14 +71,14 @@ Ansible можно использовать для извлечения инфо
 ### <a name="using-ansible-version--28"></a>Использование версий Ansible, предшествующих версии 2.8
 Выполните приведенную ниже команду [az resource tag](/cli/azure/resource#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `nginx`:
 
-```azurecli-interactive
+```azurecli
 az resource tag --tags nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
 ```
 
 ### <a name="using-ansible-version--28"></a>Если вы используете Ansible версии 2.8 и выше
 Выполните приведенную ниже команду [az resource tag](/cli/azure/resource#az-resource-tag), чтобы добавить тег для виртуальной машины `ansible-inventory-test-vm1` с ключом `Ansible=nginx`:
 
-```azurecli-interactive
+```azurecli
 az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionID>/resourceGroups/ansible-inventory-test-rg/providers/Microsoft.Compute/virtualMachines/ansible-inventory-test-vm1
 ```
 
@@ -92,36 +92,23 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
 
 1. Получите скрипт `azure_rm.py`, используя команду `wget` GNU:
 
-    ```python
-    wget https://raw.githubusercontent.com/ansible-collections/community.general/main/scripts/inventory/azure_rm.py
+    ```bash
+    wget https://raw.githubusercontent.com/ansible-collections/azure/dev/plugins/inventory/azure_rm.py
     ```
 
 1. Измените разрешения на доступ к скрипту `azure_rm.py`, используя команду `chmod`: В следующей команде используется параметр `+x`, чтобы разрешить выполнение указанного файла (`azure_rm.py`):
 
-    ```python
+    ```bash
     chmod +x azure_rm.py
     ```
 
-1. Подключитесь к своей группе ресурсов, используя [команду Ansible](https://docs.ansible.com/ansible/2.4/ansible.html): 
+1. Подключитесь к своей группе ресурсов, используя [команду Ansible](https://docs.ansible.com/ansible/2.4/ansible.html):
 
-    ```python
-    ansible -i azure_rm.py ansible-inventory-test-rg -m ping 
+    ```bash
+    ansible -i azure_rm.py ansible-inventory-test-rg -m ping
     ```
 
-1. Когда подключение будет установлено, отобразятся результаты, аналогичные приведенным ниже выходным данным:
-
-    ```output
-    ansible-inventory-test-vm1 | SUCCESS => {
-        "changed": false,
-        "failed": false,
-        "ping": "pong"
-    }
-    ansible-inventory-test-vm2 | SUCCESS => {
-        "changed": false,
-        "failed": false,
-        "ping": "pong"
-    }
-    ```
+1. После подключения отобразятся результаты создания виртуальных машин.
 
 ### <a name="ansible-version--28"></a>Использование Ansible 2.8 и более поздних версий
 
@@ -146,7 +133,7 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
     ansible all -m ping -i ./myazure_rm.yml
     ```
 
-1. При выполнении предыдущей команды может произойти приведенная ниже ошибка.
+1. При выполнении предыдущей команды может возникнуть ошибка. Эта ошибка может указывать на проблему с подключением к узлу из-за 
 
     ```output
     Failed to connect to the host via ssh: Host key verification failed.
@@ -278,7 +265,7 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
 
 1. Извлеките IP-адрес виртуальной машины `ansible-inventory-test-vm1`, используя команду [az vm list-ip-addresses](/cli/azure/vm#az-vm-list-ip-addresses). Возвращаемое значение (IP-адрес виртуальной машины) затем используется как параметр команды SSH, при помощи которого устанавливается подключение к виртуальной машине.
 
-    ```azurecli-interactive
+    ```azurecli
     ssh `az vm list-ip-addresses \
     -n ansible-inventory-test-vm1 \
     --query [0].virtualMachine.network.publicIpAddresses[0].ipAddress -o tsv`

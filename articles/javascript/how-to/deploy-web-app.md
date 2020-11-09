@@ -1,34 +1,65 @@
 ---
-title: Развертывание веб-приложений Node.js в Azure
-description: Начало работы со службой приложений Azure и другие варианты размещения для веб-приложений, включая прогрессивные веб-приложения (PWA)
+title: Развертывание приложений JavaScript в Azure
+description: Варианты размещения и сценарии развертывания включают несколько служб и средств для Azure. Опубликуйте приложение и передайте его в Azure.
 ms.topic: how-to
-ms.date: 08/20/2019
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
-ms.openlocfilehash: ee2d9a58baa306309df28f1a4bf6515481fccf3e
-ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
+ms.date: 10/28/2020
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, contperfq2
+ms.openlocfilehash: 93c9fa67e7fd928640478650d23207d48dd07531
+ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92437274"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93192516"
 ---
-# <a name="deploy-nodejs-web-apps-to-azure-app-service"></a>Развертывание веб-приложений Node.js в Службе приложений Azure
+# <a name="deploy-and-host-your-nodejs-apps-on-azure"></a>Развертывание и размещение приложений Node.js в Azure
 
-В Azure существует несколько вариантов развертывания и размещения веб-приложений:
+Варианты размещения и сценарии развертывания включают несколько служб и средств для Azure. В Azure предусмотрено несколько вариантов для размещения приложений, а также множество средств для перемещения приложения из локального или облачного репозитория в Azure. 
 
-- Лучшим вариантом размещения для веб-приложений является Служба приложений Azure, предложение "платформа как услуга" (PaaS). Для начала работы воспользуйтесь одним из следующих ресурсов:
+## <a name="choose-a-hosting-provider-from-azure"></a>Выбор поставщика услуг размещения в Azure
 
-  - [Создание веб-приложений Node.js в Azure](/azure/app-service/app-service-web-get-started-nodejs)
-  - [Try Azure App Service — Create an Express app from a template](https://code.visualstudio.com/tryappservice/?utm_source=msftdocs&utm_medium=microsoft&utm_campaign=tryappservice) (Пробная версия службы приложений Azure. Создание приложения Express на основе шаблона)
-  - [Размещение веб-приложения с помощью Службы приложений Azure. Модуль "Изучение"](/learn/modules/host-a-web-app-with-azure-app-service/index)
-  - [Разработка приложения на основе Node.js и MongoDB в Azure](/azure/app-service/app-service-web-tutorial-nodejs-mongodb-app)
-  - [Примеры Службы приложений](/samples/browse/?languages=javascript%2Cnodejs&products=azure-app-service)
+Существует множество решений размещения клиента, сервера или приложения для выполнения фоновой задачи в Azure. Чтобы сделать правильный выбор, используйте следующую таблицу. В большинстве случаев мы рекомендуем использовать [службу приложений Azure](/azure/app-service/overview.md). 
 
-- Вы можете создавать собственные контейнеры и развертывать их в Azure с помощью Реестра контейнеров Azure и службы Azure Kubernetes. Дополнительные сведения см. в статье [Как развертывать контейнеры Node.js в Azure](deploy-containers.md).
+| Служба | Рекомендовано для |
+|--|--|
+|[Служба приложений](/azure/app-service/overview.md) - **рекомендуется**|Размещение приложения из кода или контейнера. Это позволяет управлять веб-сервером, не отвлекаясь на управление базовой средой.|
+|[Статические веб-приложения](/azure/static-web-apps/)|Размещение статического клиентского приложения (например, Angular, Vue, React). При необходимости можно добавить конечные точки бессерверных функций для размещения приложения с полным стеком. Эта простая служба абстрагирует большую часть веб-сервера, позволяя сосредоточиться на важных функциях для клиентского приложения. |
+|[Функции](/azure/azure-functions/)|Размещение конечных точек бессерверных приложений.|
+|[Хранилище](/azure/storage/blobs/storage-blob-static-website-how-to.md?tabs=azure-portal)|В службе хранилища Azure можно также размещать статическое веб-приложение. Это может оказаться полезным, если необходимо обеспечить тесную интеграцию между надежным хранилищем и клиентским приложением.|
+|[Экземпляры контейнеров](/azure/container-instances/)|Быстрая настройка одного контейнера.|
+|[Служба Kubernetes](/azure/aks/)|Оркестрация нескольких контейнеров.|
+|[Виртуальные машины](/azure/virtual-machines) (VM)|Полный контроль над виртуальной машиной Windows или Linux. [Найдите дистрибутив, рекомендованный для Linux](/azure/virtual-machines/linux/endorsed-distros?toc=/azure/virtual-machines/linux/toc.json), или [узнайте, как найти](/azure/virtual-machines/linux/cli-ps-findimage.md) образы виртуальных машин Linux в Azure Marketplace.|
+|[Сеть доставки содержимого](/azure/cdn/) (CDN)|Вы можете кэшировать статические объекты из хранилища BLOB-объектов Azure, веб-приложения или любого общедоступного веб-сервера с помощью ближайшего сервера точек подключения. Azure CDN также позволяет ускорить передачу динамического содержимого, которое невозможно кэшировать, используя разные способы оптимизации сети и маршрутизации.|
 
-- Если вы предпочитаете работать в основном с бессерверным кодом, ознакомьтесь со сведениями о том, [Как записывать бессерверный код Node.js в Azure](develop-serverless-apps.md).
+Полный обзор различных вариантов размещения см. в разделе [Дерево принятия решений для вычислительных служб Azure](/azure/architecture/guide/technology-choices/compute-decision-tree), а также модуль [Основные облачные службы — варианты вычислений Azure](/learn/modules/intro-to-azure-compute.md) на Microsoft Learn.
 
-- Дополнительные сведения о создании сайта JAMstack (статического) см. в статье [Как создавать веб-приложения JAMstack (статический сайт) с помощью Azure](create-static-site.md).
+## <a name="choose-your-deployment-process-for-azure"></a>Выбор процесса развертывания для Azure
 
-- Если вы хотите управлять инфраструктурой, можно просто использовать виртуальную машину. Чтобы приступить к работе, следуйте указаниям в статье [Развертывание веб-сайта с виртуальными машинами Azure](/learn/paths/deploy-a-website-with-azure-virtual-machines/) на Microsoft Learn.
+После выбора службы для размещения приложения выберите процесс и средство развертывания. Развертывание клиентских и серверных приложений в службах Azure — это перемещение файла или набора файлов в Azure, которые будут обрабатываться через конечную точку HTTP. 
 
-Полный обзор различных вариантов размещения см. в разделе [Дерево принятия решений для вычислительных служб Azure](/azure/architecture/guide/technology-choices/compute-decision-tree), а также модуль [Основные облачные службы — варианты вычислений Azure](/learn/modules/intro-to-azure-compute/) на Microsoft Learn.
+В следующей таблице перечислены распространенные методы для перемещения файлов в облако Azure.
+
+| Метод | Сведения |
+|--|--|
+|[GitHub Actions](/azure/app-service/deploy-github-actions.md?tabs=applevel)|Используется для автоматических или активируемых непрерывных развертываний.|
+|[Расширения Visual Studio Code](https://marketplace.visualstudio.com/search?term=azure&target=VSCode&category=All%20categories&sortBy=Relevance)|Используется для ручных, тестовых или редко выполняющихся развертываний. Требуется расширение для службы, установленной локально.|
+|[Azure CLI](../tutorial-vscode-azure-cli-node-04.md)|Используется для ручных или редко выполняющихся развертываний. Требуется расширение для службы, установленной локально.|
+
+В зависимости от конкретной службы могут существовать другие методы развертывания. Например, служба приложений Azure поддерживает широкий спектр методов развертывания:
+* [Из ZIP-файла](/azure/app-service/deploy-zip.md).
+* [С помощью протокола FTP](/azure/app-service/deploy-ftp.md).
+* [Dropbox или OneDrive](/app-service/deploy-content-sync.md).
+* [Локальный репозиторий Git](/azure/app-service/deploy-local-git.md)
+
+## <a name="verify-your-deployment-with-your-http-endpoint"></a>Проверка развертывания с помощью конечной точки HTTP
+
+Чтобы проверить развертывание, получите доступ к конечной точке HTTP. Конечная точка HTTP отображается во всех службах на странице **Обзор** . 
+
+### <a name="view-http-endpoint-in-azure-portal"></a>Просмотр сведений о конечной точки HTTP на портале Azure
+
+Просмотрите сведения о конечной точке HTTP на странице обзора службы портала Azure. 
+
+:::image type="content" source="../media/howto-deploy/azure-portal-hosting-url.png" alt-text="Просмотр сведений о конечной точки HTTP на странице обзора службы портала Azure":::
+
+## <a name="next-steps"></a>Следующие шаги
+
+* [Развертывание с помощью контейнеров](deploy-containers.md)

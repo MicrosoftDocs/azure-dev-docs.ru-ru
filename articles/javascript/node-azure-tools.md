@@ -2,16 +2,16 @@
 title: Средства Azure для разработчиков JavaScript
 description: Установка отдельных средств для разработки приложений Node.js и JavaScript в Azure
 ms.topic: reference
-ms.date: 11/07/2017
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, devx-track-azurecli
-ms.openlocfilehash: fbfc22eb0c9455900b6fe511b52f443289815931
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.date: 10/30/2020
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
+ms.openlocfilehash: 80b42337f6acccda4a6d85b64908107cb4230195
+ms.sourcegitcommit: 5c7f5fef798413b1a304cc9ee31c8518b73f27eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689160"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93066263"
 ---
-# <a name="azure-tools-for-javascript-developers"></a>Средства Azure для разработчиков JavaScript
+# <a name="tools-for-javascript-developers"></a>Средства для разработчиков JavaScript
 Рекомендуется использовать следующие средства для разработки на JavaScript в Azure.
 
 ## <a name="azure-cli"></a>Azure CLI
@@ -22,6 +22,19 @@ Azure CLI оптимизирован для управления ресурса�
 > [!div class="nextstepaction"]
 > [Установите Azure CLI 2.0](/cli/azure/install-az-cli2)
 
+> [!div class="nextstepaction"]
+> [Использование контейнера Azure CLI 2.0](/cli/azure/run-azure-cli-docker)
+
+## <a name="typescript"></a>TypeScript
+
+Между [TypeScript](https://www.typescriptlang.org/) и JavaScript есть определенная связь. TypeScript предоставляет все функции JavaScript и дополнительный уровень поверх. Это — система типов TypeScript.
+
+Это означает, что существующий рабочий код JavaScript также является кодом TypeScript. Основным преимуществом TypeScript является выделение кода, который может вести себя непредвиденным образом, что снижает вероятность возникновения ошибок.
+
+> [!div class="nextstepaction"]
+> [Установка TypeScript](https://www.typescriptlang.org/download)
+
+
 ## <a name="visual-studio-code"></a>Visual Studio Code
 Изменение и отладка приложений JavaScript в любой ОС.
 
@@ -30,7 +43,7 @@ Azure CLI оптимизирован для управления ресурса�
 > [!div class="nextstepaction"]
 > [Скачать Visual Studio Code](https://code.visualstudio.com)
 
-### <a name="azure-extensions"></a>Расширения Azure
+## <a name="visual-studio-code-extensions"></a>Расширения Visual Studio Code
 Используйте следующие бесплатные расширения для взаимодействия со службами Azure непосредственно в Visual Studio Code.
 
 | Инструмент | Description  |

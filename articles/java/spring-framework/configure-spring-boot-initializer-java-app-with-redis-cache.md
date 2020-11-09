@@ -3,17 +3,17 @@ title: Создание приложения Spring Boot Initializer с испо
 description: Настройка приложения Spring Boot, созданного с помощью Spring Initializr, для использования в облаке кэша Redis для Azure.
 services: redis-cache
 documentationcenter: java
-ms.date: 10/06/2020
+ms.date: 10/13/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
 ms.custom: devx-track-java
-ms.openlocfilehash: cd8dd2a841a1ccf43f18374f34963c23f1369658
-ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
+ms.openlocfilehash: 7d8ee875339adb741fbddeba6d4328eb22cd3e46
+ms.sourcegitcommit: 5c7f5fef798413b1a304cc9ee31c8518b73f27eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91846605"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93066280"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Настройка приложения Spring Boot Initializr для использования в облаке кэша Redis для Azure
 
@@ -31,7 +31,7 @@ ms.locfileid: "91846605"
 
 1. Перейдите по адресу <https://start.spring.io/>.
 
-1. Укажите, что требуется создать проект **Maven** на **Java**, введите имя **группы** и **артефакта** для приложения.
+1. Укажите, что вы хотите создать проект **Maven** на **Java** , выберите Java версии **8** и введите имена **группы** и **артефакта** для своего приложения.
 
 1. Добавьте зависимости в разделе **Spring Web** и установите флажок **Web** (Веб), затем прокрутите вниз до раздела **NoSQL** и установите флажок **Spring Data Reactive Redis**. 
 1. Прокрутите страницу вниз и нажмите соответствующую кнопку, чтобы **создать проект**.
@@ -55,14 +55,14 @@ ms.locfileid: "91846605"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните **+Создать**.
 
-1. Выберите **База данных**, а затем — **Кэш Redis**.
+1. Выберите **База данных** , а затем — **Кэш Redis**.
 
    ![Выбор Кэша Redis на портале Azure][AZ02]
 
 1. На странице **Новый кэш Redis** укажите следующие сведения:
 
    * Введите **DNS-имя** для кэша.
-   * Укажите **подписку**, **группу ресурсов**, **расположение** и **ценовую категорию**.
+   * Укажите **подписку** , **группу ресурсов** , **расположение** и **ценовую категорию**.
    * Для работы с этим руководством установите флажок **Разблокировать порт 6379 (без шифрования SSL)** .
 
    > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "91846605"
    > С кэшами Redis можно использовать протокол SSL, но при этом вам потребуется другой клиент Redis, например Jedis. См. подробнее об [использовании кэша Redis для Azure с Java][Redis Cache with Java].
    >
 
-   Указав эти параметры, щелкните **Создать**, чтобы создать кэш.
+   Указав эти параметры, щелкните **Создать** , чтобы создать кэш.
 
    ![Создание кэша на портале Azure][AZ03]
 

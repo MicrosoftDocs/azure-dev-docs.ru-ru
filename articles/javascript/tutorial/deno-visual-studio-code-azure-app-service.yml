@@ -1,0 +1,38 @@
+### YamlMime:Tutorial
+title: Развертывание приложений Deno в Службе приложений Azure с помощью Azure CLI
+metadata:
+  title: Развертывание приложений Deno в Службе приложений Azure с помощью Azure CLI
+  description: В этом руководстве объясняется, как развернуть приложение Deno в Службе приложений Azure (в Linux или Windows) с помощью Azure CLI.
+  audience: Developer
+  level: Beginner
+  displayType: one-column
+  ms.date: 10/13/2020
+  ms.topic: tutorial
+  ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
+  ms.openlocfilehash: 71caf561f5bbff42ffe066c3f89eb168595e7086
+  ms.sourcegitcommit: 5541f993c01ce356e1b0eaa8f95aea9051c3c21e
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "93278697"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [Tutorial introduction](../includes/tutorial-deno/introduction.md)]
+- title: Настройка среды
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Tutorial introduction](../includes/tutorial-deno/configure-your-environment.md)]
+- title: Создание локального приложения Deno
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Test local Deno apps](../includes/tutorial-deno/create-local-deno-app.md)]
+- title: Развертывание приложения Deno в Azure
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Deploy Deno apps to Azure](../includes/tutorial-deno/deploy-to-azure.md)]
+- title: Очистка
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [Clean up](../includes/tutorial-deno/cleanup.md)]
+- content: '[!INCLUDE [Completed tutorial](../includes/tutorial-deno/completed.md)]'

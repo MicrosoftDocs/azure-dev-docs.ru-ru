@@ -3,14 +3,14 @@ title: Руководство по Развертывание приложени
 description: Узнайте, как подготовить веб-приложение и базу данных PostgreSQL в Azure, а также развернуть код приложения из GitHub.
 ms.devlang: python
 ms.topic: tutorial
-ms.date: 10/09/2020
+ms.date: 11/02/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: 333cda811133e9ce4e83730b038a7d84b40b7fa1
-ms.sourcegitcommit: ca7b58f60dd02709977b35175b43be582b868b03
+ms.openlocfilehash: 503a899150edc3f8dc22d7e0361a4888590ab61c
+ms.sourcegitcommit: 10d4133c8abb3e7473dcdf6418ebadd3e08275f7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92629938"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93284530"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
@@ -38,8 +38,7 @@ ms.locfileid: "92629938"
 **(Необязательно) Сведения о примере.** Пример djangoapp содержит управляемое данными приложение Django для опросов, которое вы можете [создать](https://docs.djangoproject.com/en/2.1/intro/tutorial01/), как описано в документации по Django. В примере поддерживается [контрольный список развертывания Django](https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/) для запуска в производственной среде, например в Службе приложений Azure. (Такие изменения предназначены для работы в любой производственной среде, а не только в Azure.)
 
 - Параметры для работы в производственной среде хранятся в файле *azuresite/production.py*. Сведения о разработке хранятся в файле *azuresite/settings.py*.
-
-- Приложение использует параметры для работы в производственной среде, если для переменной среды `DJANGO_ENV` задано значение production. Для работы с руководством эта переменная среды создается позже вместе с другими переменными, используемыми для настройки базы данных PostgreSQL.
+- Приложение использует параметры рабочей среде, если для задана переменная среды `WEBSITE_HOSTNAME`. Служба приложений Azure автоматически присваивает этой переменной URL-адрес веб-приложения, например `msdocs-django.azurewebsites.net`.
 
 [Возникли проблемы? Сообщите нам!](https://aka.ms/DjangoPortalTutorialHelp)
 
@@ -149,7 +148,6 @@ ms.locfileid: "92629938"
 
     | Имя параметра | Значение |
     | --- | --- |
-    | DJANGO_ENV | `production` (Это значение указывает приложению использовать производственную конфигурацию, как описано ранее в [обзоре примера](#fork-the-sample-repository).) |
     | DBHOST | Имя сервера базы данных из предыдущего раздела; то есть `<server-name>` часть URL-адреса сервера, которая предшествует `.postgres.database.azure.com`. (Код в *azuresite/production.py* автоматически формирует полный URL-адрес.) |
     | DBNAME | `pollsdb` |
     | DBUSER | Имя пользователя администратора, используемое при подготовке базы данных. (В примере кода автоматически добавляется часть `@<server-name>`; см. *azuresite/production.py*.) |
