@@ -1,0 +1,32 @@
+### YamlMime:Landing
+title: Лаборатории — возможности разработки
+summary: >
+  Изучите возможности Azure с помощью кратких руководств, инструкций, примеров кодов и других ресурсов.
+metadata:
+  title: Лаборатории — возможности разработки
+  description: '...'
+  author: diberry
+  ms.author: diberry
+  ms.date: 09/21/2020
+  ms.topic: landing-page
+  ms.collection: collection
+  ms.technology: azure
+  ms.service: multiple
+  robots: noindex
+  ms.openlocfilehash: 30decb3bc113d9bd56ebdba4e91a262d43e13086
+  ms.sourcegitcommit: 5f64710b2b0822e789c7f15acba5a3a257c033f9
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 11/05/2020
+  ms.locfileid: "93405363"
+landingContent:
+- title: Лаборатория — руководство
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Python и Flask — приложение с одной страницей
+      url: quickstart-python-flask.md
+    - text: Python и Flask — несколько страниц
+      url: quickstart-python-flask-multipage.yml?preview=tutorialFeedback
+    - text: Python и Flask — свернутое приложение с одной страницей
+      url: quickstart-python-flask-minimized.md

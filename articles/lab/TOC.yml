@@ -1,0 +1,11 @@
+- name: "Лаборатории\_— возможности разработки"
+  href: index.yml
+  items:
+    - name: "Лаборатории\_— формат руководства"
+      items:
+        - name: "Python и Flask\_— приложение с одной страницей"
+          href: quickstart-python-flask.md
+        - name: "Python и Flask\_— несколько страниц"
+          href: quickstart-python-flask-multipage.yml?preview=tutorialFeedback
+        - name: "Python и Flask\_— свернутое приложение с одной страницей"
+          href: quickstart-python-flask-minimized.md
