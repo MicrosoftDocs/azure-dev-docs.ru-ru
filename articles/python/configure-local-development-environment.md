@@ -4,12 +4,12 @@ description: Сведения о настройке локальной сред�
 ms.date: 05/29/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: 8f18d579259e1510c0aac0f7d66bb219cb327d1b
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: b9e3c36199cfe9fa94fa518587b6065f4d9ef9b0
+ms.sourcegitcommit: 12f80b1e0fe08db707c198271d0c399c3aba343a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688580"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94515155"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Настройка локальной среды разработки Python для Azure
 
@@ -212,14 +212,14 @@ Azure CLI обычно поддерживает вход в разные сеа�
 
     # <a name="cmd"></a>[cmd](#tab/cmd)
 
-    ```bash
+    ```cmd
     .venv\scripts\activate
     ```
 
     # <a name="bash"></a>[bash](#tab/bash)
 
     ```bash
-    source .venv/scripts/activate
+    source .venv/bin/activate
     ```
 
     ---

@@ -13,12 +13,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java
-ms.openlocfilehash: 6506aae7aacf26d08bcb6c47ef947dfb8f6cef46
-ms.sourcegitcommit: d5dabc6dde727ed167a9dc8a4eaaf21025b3efa8
+ms.openlocfilehash: 992ce6dfd32de9fc20016542b11f2792bf0a8e9b
+ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91947519"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93405853"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-intellij"></a>Создание веб-приложения Hello World для Службы приложений Azure с помощью IntelliJ
 
@@ -39,13 +39,13 @@ ms.locfileid: "91947519"
 
 Следующие шаги описывают процесс входа в Azure в среде разработки IntelliJ.
 
-1. Если вы еще не установили подключаемый модуль, см. статью [Установка Azure Toolkit for IntelliJ](installation.md).
+1. Если вы еще не установили подключаемый модуль, см. статью [Установка Azure Toolkit for IntelliJ](./index.yml).
 
-1. Чтобы войти в учетную запись Azure, перейдите к левой боковой панели **Azure Explorer**, а затем щелкните значок **входа в Azure**. Кроме того, можно открыть раздел **Средства**, развернуть пункт **Azure** и щелкнуть значок **входа в Azure**.
+1. Чтобы войти в учетную запись Azure, перейдите к левой боковой панели **Azure Explorer** , а затем щелкните значок **входа в Azure**. Кроме того, можно открыть раздел **Средства** , развернуть пункт **Azure** и щелкнуть значок **входа в Azure**.
 
    :::image type="content" source="media/sign-in-instructions/I01.png" alt-text="Вход в Azure из IntelliJ."::: 
 
-1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход) ([другие варианты входа](sign-in-instructions.md)).
+1. В окне **Azure Sign In** (Вход в Azure) выберите **Device Login** (Имя пользователя устройства) и щелкните **Sign in** (Вход) ( [другие варианты входа](sign-in-instructions.md)).
 
 1. В диалоговом окне **Azure Device Login** (Вход на устройство Azure) щелкните **Copy&Open** (Копировать и открыть).
 
@@ -59,19 +59,19 @@ ms.locfileid: "91947519"
 
 1. В меню **File** (Файл) разверните пункт **New** (Создать), а затем щелкните **Проект** (Project).
 
-1. В диалоговом окне **New Project** (Новый проект) выберите **Maven** и убедитесь, что установлен флажок **Create from Archetype** (Создать из архетипа). В списке вариантов выберите **maven-archetype-webapp**, а затем щелкните **Далее**.
+1. В диалоговом окне **New Project** (Новый проект) выберите **Maven** и убедитесь, что установлен флажок **Create from Archetype** (Создать из архетипа). В списке вариантов выберите **maven-archetype-webapp** , а затем щелкните **Далее**.
 
-   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Вход в Azure из IntelliJ."::: 
+   :::image type="content" source="media/create-hello-world-web-app/maven-archetype-webapp.png" alt-text="Выбор варианта maven-archetype-webapp."::: 
 
 1. Раскройте список **Artifact Coordinates** (Координаты артефакта), чтобы просмотреть все поля ввода и указать приведенные ниже сведения о новом веб-приложении, а затем щелкните **Далее**.
 
    * **Name** (Имя). Название вашего веб-приложения. Это значение автоматически помещается в поле **ArtifactId** для веб-приложения.
-   * **GroupId** (Идентификатор группы). Имя группы артефактов. Как правило, это домен компании (например, *com.microsoft.azure*).
+   * **GroupId** (Идентификатор группы). Имя группы артефактов. Как правило, это домен компании (например, *com.microsoft.azure* ).
    * **Версия.** Мы сохраним здесь версию по умолчанию *1.0-SNAPSHOT*.
 
 1. Настройте любые параметры Maven или примите значения по умолчанию и щелкните **Готово**.
 
-1. Перейдите к проекту на вкладке **Project** (Проект) слева и откройте файл **src/main/webapp/index.jsp**. Замените его содержимое следующим кодом и **сохраните изменения**:
+1. Перейдите к проекту на вкладке **Project** (Проект) слева и откройте файл **src/main/webapp/index.jsp**. Замените его содержимое следующим кодом и **сохраните изменения** :
 
    ```html
    <html>
@@ -80,7 +80,7 @@ ms.locfileid: "91947519"
     </body>
    </html>
    ```
-   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Вход в Azure из IntelliJ.":::
+   :::image type="content" source="media/create-hello-world-web-app/open-index-page.png" alt-text="Открытие файла index.jsp.":::
 
 ## <a name="deploying-web-app-to-azure"></a>Развертывание веб-приложения в Azure
 
@@ -90,12 +90,12 @@ ms.locfileid: "91947519"
 
    a. Щелкните **No available webapp, click to create a new one** (Нет доступных веб-приложений, щелкните для создания нового), чтобы создать веб-приложение. Также можно выбрать действие **Create New WebApp** (Создать веб-приложение) из раскрывающегося списка веб-приложений, если в подписке есть существующие веб-приложения.
 
-      :::image type="content" source="media/create-hello-world-web-app/deploy-to-azure-webapps.png" alt-text="Вход в Azure из IntelliJ.":::
+      :::image type="content" source="media/create-hello-world-web-app/deploy-to-azure-webapps.png" alt-text="Диалоговое окно развертывания в Azure.":::
 
-   Во всплывающем окне **Create WebApp** (Создание веб-приложения) укажите следующие сведения и щелкните **ОК**: 
+   Во всплывающем окне **Create WebApp** (Создание веб-приложения) укажите следующие сведения и щелкните **ОК** : 
 
       * **Name** (Имя). Строка доменного имени для веб-приложения.
-      * **Подписка**: Определяет подписку Azure, которую нужно использовать для нового веб-приложения.
+      * **Подписка** : Определяет подписку Azure, которую нужно использовать для нового веб-приложения.
       * **Platform**. Выберите *Linux*.
       * **Веб-контейнер.** Выберите *TOMCAT 9.0-jre8* или другую подходящую версию.
       * **Группа ресурсов**. Определяет группу ресурсов для веб-приложения. Вы можете выбрать существующую группу ресурсов, связанную с учетной записью Azure, или создать новую.
@@ -107,7 +107,7 @@ ms.locfileid: "91947519"
 
 1. Перейти к своему веб-приложению можно с помощью ссылки, предоставленной в сообщении о состоянии.
 
-   :::image type="content" source="media/create-hello-world-web-app/browse-web-app.png" alt-text="Вход в Azure из IntelliJ.":::
+   :::image type="content" source="media/create-hello-world-web-app/browse-web-app.png" alt-text="Просмотр веб-приложения.":::
 
 ## <a name="managing-deploy-configurations"></a>Управление конфигурациями развертывания
 
@@ -116,9 +116,9 @@ ms.locfileid: "91947519"
 
 1. Перед началом развертывания веб-приложения вы можете изменить предложенные по умолчанию параметры, щелкнув раскрывающееся меню веб-приложения и выбрав **Edit Configurations** (Изменить конфигурации).
 
-   :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Вход в Azure из IntelliJ.":::.
+   :::image type="content" source="media/create-hello-world-web-app/edit-configuration-menu.png" alt-text="Пункт меню &quot;Изменить конфигурацию&quot;":::.
 
-1. В диалоговом окне **Run/Debug Configurations** (Конфигурации выполнения и отладки) можно изменить любые параметры по умолчанию. Нажмите кнопку **ОК**, чтобы сохранить настройки.
+1. В диалоговом окне **Run/Debug Configurations** (Конфигурации выполнения и отладки) можно изменить любые параметры по умолчанию. Нажмите кнопку **ОК** , чтобы сохранить настройки.
 
 ## <a name="cleaning-up-resources"></a>Освобождение ресурсов
 

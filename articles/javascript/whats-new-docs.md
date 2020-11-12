@@ -3,12 +3,12 @@ title: 'Новые возможности JavaScript '
 description: Обновления документации по JavaScript за октябрь 2020 года
 ms.topic: conceptual
 ms.date: 10/28/2020
-ms.openlocfilehash: ba92f04d60fb49181ee5741225073270ec45c0f5
-ms.sourcegitcommit: 3c904d8d89d0cb4f13209cde3425c5307b83237c
+ms.openlocfilehash: 1b95a18d3ea8cb5947dfd5525326d69460c3a00b
+ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "93024088"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93405953"
 ---
 # <a name="javascript-docs-whats-new-for-october-2020"></a>Документация по JavaScript: обновления за октябрь 2020 года
 
@@ -22,8 +22,8 @@ ms.locfileid: "93024088"
 
 |Имя|Примечания|
 |---------------------------------------|--|
-|[Руководство. Отправка изображения в Хранилище BLOB-объектов](/azure/developer/javascript/tutorial/browser-file-upload?preview=tutorialFeedback)|В этом руководстве **приложение React** используется для передачи файла в BLOB-объект **службы хранилища Azure**. Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.|
-|[Руководство. Развертывание приложения MongoDB на платформе Node.js в Службе приложений с помощью Visual Studio Code](/azure/developer/javascript/tutorial/web-app-mongodb?preview=tutorialFeedback)|В этом руководстве приложение Node.js **Express** используется с базой данных **MongoDB** и нативным API MongoDB. Разверните приложение Node.js в Службе приложений Azure (в Linux), а затем проверьте работу этого облачного приложения. Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.|
+|[Руководство. Отправка изображения в Хранилище BLOB-объектов](./tutorial/browser-file-upload.yml?preview=tutorialFeedback)|В этом руководстве **приложение React** используется для передачи файла в BLOB-объект **службы хранилища Azure**. Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.|
+|[Руководство. Развертывание приложения MongoDB на платформе Node.js в Службе приложений с помощью Visual Studio Code](./tutorial/web-app-mongodb.yml?preview=tutorialFeedback)|В этом руководстве приложение Node.js **Express** используется с базой данных **MongoDB** и нативным API MongoDB. Разверните приложение Node.js в Службе приложений Azure (в Linux), а затем проверьте работу этого облачного приложения. Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.|
 
 ### <a name="whats-updated"></a>Обновления
 
@@ -34,4 +34,4 @@ ms.locfileid: "93024088"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-* [Настройка среды разработки](/azure/developer/javascript/core/configure-local-development-environment)
+* [Настройка среды разработки](./core/configure-local-development-environment.md)
