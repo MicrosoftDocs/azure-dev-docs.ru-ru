@@ -10,12 +10,12 @@ metadata:
   ms.author: ushan
   ms.date: 05/05/2020
   ms.custom: github-actions-azure
-  ms.openlocfilehash: 2e25fcbe07742d0fbca64565dea8dadc50939949
-  ms.sourcegitcommit: 3d3ee59f73c966da7df65bada49e059d02e74b91
+  ms.openlocfilehash: f2dddbae2eac63fdab7e5956ebcda6003e3c2028
+  ms.sourcegitcommit: 2540e91f7b6aa077158e25a0b718737abff904d4
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/28/2020
-  ms.locfileid: "92898713"
+  ms.lasthandoff: 11/10/2020
+  ms.locfileid: "94432785"
 landingContent:
 - title: GitHub Actions для Azure
   linkLists:
@@ -47,3 +47,9 @@ landingContent:
     links:
     - text: Подключение к GitHub из Azure и других служб
       url: connect-from-azure.md
+- title: Управление политиками Azure с помощью GitHub
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Управление политиками Azure в качестве кода с помощью GitHub
+      url: manage-azure-policy.md
