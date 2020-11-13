@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019, devx-track-java, devx-track-azurecli
-ms.openlocfilehash: a2dbb6a83837e716f48304a8013ba198280e9624
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: a6022875af3a15f7140e4db7fcc669d47f55b3d2
+ms.sourcegitcommit: dee8dc9ce6c255c53913e27813dc3659ff238a01
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689184"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94379004"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
@@ -25,22 +25,17 @@ ms.locfileid: "92689184"
 
 - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 - [Azure Cloud Shell](/azure/cloud-shell/quickstart) или [Azure CLI 2.0](/cli/azure/install-az-cli2).
-- [Java 8](https://www.azul.com/downloads/zulu/) (в составе Azure Cloud Shell)
+- [Java 8](https://docs.microsoft.com/azure/developer/java/fundamentals/java-jdk-long-term-support) (в составе Azure Cloud Shell)
 - [Maven 3](https://maven.apache.org/download.cgi) (в составе Azure Cloud Shell)
 
 ## <a name="set-up-authentication"></a>Настройка проверки подлинности
 
 Чтобы выполнить пример кода из этого руководства, предоставьте приложению Java в вашей подписке Azure разрешения на чтение и создание. Создайте субъект-службу и настройте приложение для выполнения со связанными учетными данными. Субъект-служба помогает создать неинтерактивную учетную запись, связанную с вашим идентификатором. Этой учетной записи предоставляются только разрешения, необходимые для запуска приложения.
 
-[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные. Вместо `MY_SECURE_PASSWORD` в аргументе пароля нужно указать [безопасный пароль](/azure/active-directory/active-directory-passwords-policy). Пароль должен содержать 8–16 символов и соответствовать хотя бы трем из четырех следующих критериев:
-
-* наличие строчных букв;
-* наличие прописных букв;
-* наличие цифр;
-* наличие одного из следующих символов: @ # $ % ^ & * - _ ! + = [ ] { } | \ : ' , . ? / ` ~ " ( ) ;
+[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные.
 
 ```azurecli-interactive
-az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
+az ad sp create-for-rbac --name AzureJavaTest
 ```
 
 Вы получите ответ в следующем формате:
@@ -50,7 +45,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
   "appId": "a487e0c1-82af-47d9-9a0b-af184eb87646d",
   "displayName": "AzureJavaTest",
   "name": "http://AzureJavaTest",
-  "password": password,
+  "password": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
   "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
 }
 ```
@@ -61,7 +56,7 @@ az ad sp create-for-rbac --name AzureJavaTest --password "MY_SECURE_PASSWORD"
 # sample management library properties file
 subscription=ssssssss-ssss-ssss-ssss-ssssssssssss
 client=cccccccc-cccc-cccc-cccc-cccccccccccc
-key=kkkkkkkkkkkkkkkk
+key=aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
 tenant=tttttttt-tttt-tttt-tttt-tttttttttttt
 managementURI=https\://management.core.windows.net/
 baseURL=https\://management.azure.com/
@@ -90,7 +85,7 @@ export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
 setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
 ```
 
-## <a name="tooling"></a>Инструменты
+## <a name="tooling"></a>Инструментарий
 
 ### <a name="create-a-new-maven-project"></a>Создание нового проекта Maven
 
@@ -110,14 +105,9 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ```XML
 <dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure</artifactId>
-    <version>1.3.0</version>
-</dependency>
-<dependency>
-    <groupId>com.microsoft.azure</groupId>
-    <artifactId>azure-storage</artifactId>
-    <version>5.0.0</version>
+      <groupId>com.azure</groupId>
+      <artifactId>azure-storage-blob</artifactId>
+      <version>12.8.0</version>
 </dependency>
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
@@ -144,11 +134,11 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Установка Azure Toolkit for IntelliJ
 
-[Набор средств Azure](../toolkit-for-intellij/installation.md) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
+[Набор средств Azure](../toolkit-for-intellij/index.yml) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
 
-- В меню **Файл** выберите **Параметры** .
+- В меню **Файл** выберите **Параметры**.
 
-- Выберите **Обзор репозиториев...** найдите "Azure" и установите **набор средств Azure для Intellij** .
+- Выберите **Обзор репозиториев...** найдите "Azure" и установите **набор средств Azure для Intellij**.
 
 - Перезапустите Intellij.
 
@@ -164,7 +154,7 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ## <a name="create-a-linux-virtual-machine"></a>Создание виртуальной машины Linux
 
-Создайте файл с именем `AzureApp.java` в каталоге проекта `src/main/java/com/fabirkam` и вставьте следующий блок кода. Обновите переменные `userName` и `sshKey`, указав реальные значения для своего компьютера. Код создает виртуальную машину Linux с именем `testLinuxVM` в группе ресурсов `sampleResourceGroup`, которая выполняется в регионе Azure "Восточная часть США".
+Создайте файл с именем `AzureApp.java` в каталоге проекта `src/main/java/com/fabrikam` и вставьте следующий блок кода. Обновите переменные `userName` и `sshKey`, указав реальные значения для своего компьютера. Код создает виртуальную машину Linux с именем `testLinuxVM` в группе ресурсов `sampleResourceGroup`, которая выполняется в регионе Azure "Восточная часть США".
 
 ```java
 package com.fabrikam;
@@ -184,14 +174,19 @@ import com.microsoft.azure.management.resources.fluentcore.utils.SdkContext;
 
 import com.microsoft.rest.LogLevel;
 
-import com.microsoft.azure.storage.*;
-import com.microsoft.azure.storage.blob.*;
+import com.azure.storage.blob.BlobClient;
+import com.azure.storage.blob.BlobContainerClient;
+import com.azure.storage.blob.BlobServiceClient;
+import com.azure.storage.blob.BlobServiceClientBuilder;
+import com.azure.storage.blob.models.PublicAccessType;
+import com.azure.storage.common.StorageSharedKeyCredential;
 
-import java.io.File;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
 
 public class AzureApp {
 
@@ -406,26 +401,32 @@ public static void main(String[] args) {
 
         // create a storage container to hold the file
         List<StorageAccountKey> keys = storage.getKeys();
-        final String storageConnection = "DefaultEndpointsProtocol=https;"
-                + "AccountName=" + storage.name()
-                + ";AccountKey=" + keys.get(0).value()
-                + ";EndpointSuffix=core.windows.net";
+        PublicEndpoints endpoints = storage.endPoints();
+        String accountName = storage.name();
+        String accountKey = keys.get(0).value();
+        String endpoint = endpoints.primary().blob();
 
-        CloudStorageAccount account = CloudStorageAccount.parse(storageConnection);
-        CloudBlobClient serviceClient = account.createCloudBlobClient();
+        StorageSharedKeyCredential credential = new StorageSharedKeyCredential(accountName, accountKey);
 
-        // Container name must be lower case.
-        CloudBlobContainer container = serviceClient.getContainerReference("helloazure");
-        container.createIfNotExists();
+        BlobServiceClient storageClient =new BlobServiceClientBuilder()
+                                    .endpoint(endpoint)
+                                    .credential(credential)
+                                    .buildClient();
+
+        // Container name must be lower case
+        BlobContainerClient blobContainerClient = storageClient.getBlobContainerClient("helloazure");
+        blobContainerClient.create();
 
         // Make the container public
-        BlobContainerPermissions containerPermissions = new BlobContainerPermissions();
-        containerPermissions.setPublicAccess(BlobContainerPublicAccessType.CONTAINER);
-        container.uploadPermissions(containerPermissions);
+        blobContainerClient.setAccessPolicy(PublicAccessType.CONTAINER, null);
 
         // write a blob to the container
-        CloudBlockBlob blob = container.getBlockBlobReference("helloazure.txt");
-        blob.uploadText("hello Azure");
+        String fileName = "helloazure.txt";
+        String textNew = "Hello Azure";
+
+        BlobClient blobClient = blobContainerClient.getBlobClient(fileName);
+        InputStream is = new ByteArrayInputStream(textNew.getBytes());
+        blobClient.upload(is, textNew.length());
 
     } catch (Exception e) {
         System.out.println(e.getMessage());
