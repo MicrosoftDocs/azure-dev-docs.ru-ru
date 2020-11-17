@@ -4,12 +4,12 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: tutorial
 ms.date: 09/24/2019
 ms.custom: devx-track-js, devx-track-azurecli
-ms.openlocfilehash: a23a09cfdd36cd67b8fc09a1cb3bac266c2db813
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 2ff59026c3f250f3ef83982f799633094a5cd9f7
+ms.sourcegitcommit: 12f80b1e0fe08db707c198271d0c399c3aba343a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688677"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "94515185"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 
@@ -20,25 +20,15 @@ ms.locfileid: "92688677"
 - [Подписка Azure](#azure-subscription).
 - [Node.js и npm 6.x или более поздней версии](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 - [Git](https://git-scm.com/downloads), для которого с помощью команды `git --version` отображается номер версии.
-- [Интерфейс командной строки Azure](/cli/azure/install-azure-cli).
-
-Кроме того, вы можете использовать [расширение Azure CLI для Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli). Она поддерживает раскраску кода, дополнение ввода IntelliSense и фрагменты кода при работе со скриптами Azure CLI.
-
-Вторая альтернатива — [Azure Cloud Shell](/azure/cloud-shell/overview). Эту службу можно использовать из Visual Studio Code с помощью [расширения для учетных записей Azure](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account).
+[!INCLUDE [Azure CLI](~/../azure-docs/includes/azure-cli-prepare-your-environment-no-header.md)]
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 
 Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-node-git&mktingSource=vscode-tutorial-node-git) и получите бесплатную учетную запись с кредитами Azure на сумму 200 долл. США, которые позволят проверить любое сочетание служб.
 
-### <a name="sign-in-to-the-azure-cli"></a>Вход в Azure CLI
+### <a name="sign-in-to-azure-with-azure-cli"></a>Вход в Azure с помощью Azure CLI
 
-После установки Azure CLI выполните следующую команду в окне терминала или командной строки:
-
-```azurecli
-az login
-```
-
-Эта команда позволяет открыть окно браузера, в котором вам будет предложено войти в Azure. После успешного входа в окне терминала отобразятся выходные данные в формате JSON со сведениями о подписке.
+[!INCLUDE [Sign in ](../azure-cli/includes/interactive-login.md)]
 
 ## <a name="check-npm-version"></a>Проверка версии npm
 

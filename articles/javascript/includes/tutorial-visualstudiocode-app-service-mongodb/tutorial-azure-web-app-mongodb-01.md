@@ -4,12 +4,12 @@ description: include file tutorial-azure-web-app-mongodb-01.md
 ms.date: 10/13/2020
 ms.topic: include
 ms.custom: devx-track-javascript
-ms.openlocfilehash: a8c9fcca1b7374ae5122cfabb3fcbfc6ba8cdd07
-ms.sourcegitcommit: 8a2a7df568c69fff2080ffab248409040efda1ac
+ms.openlocfilehash: 61bb61d147e01061dcf58701132feddd09c53b59
+ms.sourcegitcommit: 801682d3fc9651bf95d44e58574d5a4564be6feb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92183910"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94341100"
 ---
 В этом разделе руководства вам потребуется подписка Azure и все программное обеспечение для работы с этим руководством.
 
@@ -19,7 +19,7 @@ ms.locfileid: "92183910"
 
 ## <a name="install-software"></a>Установка ПО
 
-- Установите на локальный компьютер [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов Node.js).
+- Установите на локальный компьютер [Node.js 8.x или выше и npm](https://nodejs.org/en/download) (диспетчер пакетов Node.js).
 - [Docker.](https://docs.docker.com/get-docker/) Docker используется для предоставления локальной базы данных MongoDB без установки MongoDB. 
     - Если для получения локальной базы данных MongoDB необходимо использовать Docker, вам также потребуются указанные ниже компоненты.
         -  [Контейнеры разработки](https://code.visualstudio.com/docs/remote/containers) Visual Studio предоставляют несколько общих контейнеров для разработки JavaScript. 

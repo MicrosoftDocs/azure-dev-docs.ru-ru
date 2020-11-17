@@ -17,6 +17,22 @@
           href: tutorial/browser-file-upload.yml?preview=tutorialFeedback
         - name: Использование Express.js с MongoDB
           href: tutorial/web-app-mongodb.yml?preview=tutorialFeedback
+        - name: Развертывание приложения на виртуальной машине Linux
+          items:
+            - name: 1. Введение и предварительные требования
+              href: tutorial/nodejs-virtual-machine-vm/introduction.md
+            - name: 2. Создание ресурса Application Insights
+              href: tutorial/nodejs-virtual-machine-vm/create-azure-monitoring-application-insights-web-resource.md
+            - name: 3. Создание виртуальной машины
+              href: tutorial/nodejs-virtual-machine-vm/create-linux-virtual-machine-azure-cli.md
+            - name: 4. Подключение к виртуальной машине Linux
+              href: tutorial/nodejs-virtual-machine-vm/connect-linux-virtual-machine-ssh.md
+            - name: 5. Добавление ведения журнала в облаке в приложение
+              href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-nodejs-expressjs-code.md
+            - name: 6. Просмотр журналов
+              href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-logs.md
+            - name: 7. Очистка ресурсов
+              href: tutorial/nodejs-virtual-machine-vm/clean-up-resources.md
         - name: Создание и развертывание бессерверных функций
           items:
             - name: 1. Введение и предварительные требования
