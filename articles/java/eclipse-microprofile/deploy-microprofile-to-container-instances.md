@@ -10,13 +10,13 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.custom: devx-track-java
-ms.openlocfilehash: fa17a1e9758a7b8cc7782658d736fe5c55fdb099
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: 72bb601c87e66c6ad95d046154fa6f6db4e5169d
+ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831520"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94872835"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Развертывание приложения MicroProfile в облаке с помощью Docker и Azure
 

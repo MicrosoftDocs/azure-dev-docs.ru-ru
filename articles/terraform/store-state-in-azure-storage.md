@@ -3,13 +3,13 @@ title: Руководство. Хранение состояния Terraform в 
 description: Узнайте, как сохранить сведения о состоянии Terraform в Службе хранилища Azure.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.custom: devx-track-terraform
-ms.openlocfilehash: 33a49a9c6b8f62dd5f9a47f7171ba1cd3c55195b
-ms.sourcegitcommit: 801682d3fc9651bf95d44e58574d5a4564be6feb
+ms.custom: devx-track-terraform, devx-track-azurecli
+ms.openlocfilehash: 7f1c200a96efa16d65a8f94bc3bc70a236f969a7
+ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94333792"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94872885"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>Руководство по Хранение состояния Terraform в службе хранилища Azure
 
@@ -59,10 +59,10 @@ echo "access_key: $ACCOUNT_KEY"
 
 Серверный компонент состояния Terraform настраивается при выполнении команды `terraform init`. Для настройки серверного компонента состояния необходимы следующие данные:
 
-- **storage_account_name** : имя учетной записи хранения Azure.
-- **container_name** : имя контейнера больших двоичных объектов.
+- **storage_account_name**: имя учетной записи хранения Azure.
+- **container_name**: имя контейнера больших двоичных объектов.
 - **key:** имя файла хранилища состояния, который необходимо создать.
-- **access_key** : ключ доступа к хранилищу.
+- **access_key**: ключ доступа к хранилищу.
 
 Каждое из этих значений можно указать в файле конфигурации Terraform или в командной строке. Для значения `access_key` рекомендуется использовать переменную среды. Это предотвращает запись ключа на диск.
 

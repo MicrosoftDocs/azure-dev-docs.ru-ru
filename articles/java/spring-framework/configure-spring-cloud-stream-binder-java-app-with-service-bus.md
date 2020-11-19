@@ -7,12 +7,12 @@ ms.author: seal
 ms.date: 10/10/2020
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 0df477d203031fecac389660b93e93f00d8e262a
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.openlocfilehash: e4958d65e06a77181a00a7dc4d221e02f4f6b188
+ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010005"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94601256"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Использование Spring Cloud Azure Stream Binder для служебной шины Azure
 
@@ -40,7 +40,7 @@ Azure предоставляет платформу асинхронного о�
 
 1. Если у вас нет настроенной очереди или раздела служебной шины, используйте портал Azure, чтобы [создать очередь служебной шины](/azure/service-bus-messaging/service-bus-quickstart-portal) или [создать раздел служебной шины](/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). Убедитесь, что пространство имен соответствует требованиям, указанным на предыдущем шаге. Кроме того, запишите строку подключения в пространстве имен так, как это требуется для тестового приложения этого руководства.
 
-1. Если у вас нет приложения Spring Boot, **создайте проект** Maven[ с использованием Spring Initializr](https://start.spring.io/). Не забудьте выбрать **Проект Maven**, а затем в разделе **Зависимости** добавить зависимость **Интернет** и выбрать для Java версию **8**.
+1. Если у вас нет приложения Spring Boot, **создайте проект** Maven [ с использованием Spring Initializr](https://start.spring.io/). Не забудьте выбрать **Проект Maven**, а затем в разделе **Зависимости** добавить зависимость **Интернет** и выбрать для Java версию **8**.
 
     > [!NOTE]
     > Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
@@ -63,32 +63,29 @@ Azure предоставляет платформу асинхронного о�
 
     ```xml
     <dependency>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>spring-cloud-azure-servicebus-queue-stream-binder</artifactId>
-        <version>1.1.0.RC5</version>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>azure-spring-cloud-stream-binder-servicebus-queue</artifactId>
+        <version>2.0.0-beta.1</version> <!-- {x-version-update;com.azure.spring:azure-spring-cloud-stream-binder-servicebus-queue;current} -->
     </dependency>
     ```
-
-    ![Измените файл pom.xml для очереди служебной шины.](media/configure-spring-cloud-stream-binder-java-app-with-service-bus/add-stream-binder-starter-pom-file-dependency-for-service-bus-queue.png)
 
     **Раздел служебной шины**
 
     ```xml
     <dependency>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>spring-cloud-azure-servicebus-topic-stream-binder</artifactId>
-        <version>1.1.0.RC5</version>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>azure-spring-cloud-stream-binder-servicebus-topic</artifactId>
+        <version>2.0.0-beta.1</version> <!-- {x-version-update;com.azure.spring:azure-spring-cloud-stream-binder-servicebus-topic;current} -->
     </dependency>
     ```
 
-    ![Измените файл pom.xml для раздела служебной шины.](media/configure-spring-cloud-stream-binder-java-app-with-service-bus/add-stream-binder-starter-pom-file-dependency-for-service-bus-topic.png)
 
 1. Сохраните и закройте файл *pom.xml*.
 
 ## <a name="configure-the-app-for-your-service-bus"></a>Настройка приложения для служебной шины
 
-Настроить приложение можно на основе строки подключения или файла учетных данных. В этом руководстве используется строка подключения. Дополнительные сведения об использовании файлов учетных данных см. в разделе [Spring Cloud Azure Stream Binder for Service Bus queue Code Sample](https://github.com/microsoft/spring-cloud-azure/tree/release/1.1.0.RC4/spring-cloud-azure-samples/servicebus-queue-binder-sample#credential-file-based-usage
-) (Spring Cloud Azure Stream Binder для примера кода очереди служебной шины) и в разделе [Spring Cloud Azure Stream Binder for Service Bus topic Code Sample](https://github.com/microsoft/spring-cloud-azure/tree/release/1.1.0.RC4/spring-cloud-azure-samples/servicebus-topic-binder-sample#credential-file-based-usage) (Spring Cloud Azure Stream Binder для примера кода раздела служебной шины).
+Настроить приложение можно на основе строки подключения или файла учетных данных. В этом руководстве используется строка подключения. Дополнительные сведения об использовании файлов учетных данных см. в разделе [Spring Cloud Azure Stream Binder for Service Bus queue Code Sample](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-cloud-sample-servicebus-queue-binder
+) (Spring Cloud Azure Stream Binder для примера кода очереди служебной шины) и в разделе [Spring Cloud Azure Stream Binder for Service Bus topic Code Sample](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-cloud-stream-binder-servicebus-topic) (Spring Cloud Azure Stream Binder для примера кода раздела служебной шины).
 
 1. Найдите файл *application.properties* в каталоге *resources*, например:
 

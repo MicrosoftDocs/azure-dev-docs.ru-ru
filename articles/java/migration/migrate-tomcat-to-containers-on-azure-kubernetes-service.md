@@ -5,13 +5,13 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.custom: devx-track-java
-ms.openlocfilehash: 29e446c28cb6935ffe0eeb51fa3a4b21c93e78a4
-ms.sourcegitcommit: 95fdc444c424f4a7d7d53437837e9532a0b897e9
+ms.custom: devx-track-java, devx-track-azurecli
+ms.openlocfilehash: 7311aba602ec2fd482d11e2a8a37751f0d742eae
+ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88662965"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94872875"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes
 

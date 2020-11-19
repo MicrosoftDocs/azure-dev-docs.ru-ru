@@ -4,12 +4,12 @@ description: include file azure-sign-in.md
 ms.date: 10/13/2020
 ms.topic: include
 ms.custom: devx-track-javascript
-ms.openlocfilehash: 9dd9e0d37a9e961584285133bf0b61b8ffbf0db2
-ms.sourcegitcommit: 5f64710b2b0822e789c7f15acba5a3a257c033f9
+ms.openlocfilehash: 16cc5ec9273d4de45af49a1bce1b7bbb36f013b7
+ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93405252"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94885448"
 ---
 Клонируйте пример репозитория, выполнив указанную ниже команду, и перейдите к папке. ([Установите Git](https://git-scm.com/downloads), если у вас его еще нет.)
 
@@ -23,4 +23,4 @@ git clone https://github.com/Azure-Samples/python-docs-hello-world
 cd python-docs-hello-world
 ```
 
-Пример содержит код для определенной платформы, который Служба приложений Azure распознает при запуске приложения. Дополнительные сведения см. в разделе [Процесс запуска контейнера](/app-service/configure-language-python#container-startup-process).
+Пример содержит код для определенной платформы, который Служба приложений Azure распознает при запуске приложения. Дополнительные сведения см. в разделе [Процесс запуска контейнера](/azure/app-service/configure-language-python#container-startup-process).
