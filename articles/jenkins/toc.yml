@@ -1,6 +1,6 @@
 - name: Jenkins в Azure
   href: index.yml
-- name: Общие сведения
+- name: Обзор
   items:
     - name: Jenkins в Azure
       href: overview.md
@@ -31,14 +31,10 @@
               maintainContext: true
             - name: Развертывание в AKS с использованием шаблона Blue-Green
               href: deploy-to-aks-using-blue-green-deployment-pattern.md
-            - name: CI/CD в Azure Dev Spaces
-              href: azure-dev-spaces-and-aks.md
         - name: Служба приложений
           items:
             - name: Создание ресурсов Azure в задании конвейера
               href: deploy-to-azure-app-service-using-azure-cli.md
-            - name: Развертывание приложения из GitHub в Службе приложений
-              href: deploy-from-github-to-azure-app-service.md
         - name: Использование Jenkins с Azure DevOps
           href: deploy-to-linux-vm-using-azure-devops-services.md
           maintainContext: true
@@ -53,10 +49,6 @@
         - name: CI/CD в Service Fabric
           href: deploy-to-service-fabric-cluster.md
           maintainContext: true
-- name: Практическое руководство
-  items:
-    - name: Использование подключаемого модуля Службы приложений
-      href: deploy-to-azure-app-service-using-plugin.md
 - name: Примеры
   items:
     - name: Примеры заданий и скриптов
