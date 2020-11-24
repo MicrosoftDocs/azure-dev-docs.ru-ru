@@ -1,15 +1,15 @@
 ---
 title: Проверка подлинности приложений Python с помощью служб Azure
 description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
-ms.date: 10/05/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 8122db43c979bcf55d5aa3d1f4f5fa9aa0c200dd
-ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
+ms.openlocfilehash: 7c609c7e218be1fd5e7c259a5aa7c5bec3e507d2
+ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93405904"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94601366"
 ---
 # <a name="how-to-authenticate-and-authorize-python-apps-on-azure"></a>Как аутентифицировать и авторизовать приложения Python в Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "93405904"
 
 - При **аутентификации** проверяется удостоверение приложения с помощью Azure Active Directory.
 
-- При **авторизации** определяется, какие операции может выполнять аутентифицированное приложение с тем или иным ресурсом. Разрешенные операции определяют **роли** , которые назначены удостоверению приложения для этого ресурса. В некоторых случаях (например, при использовании Azure Key Vault) авторизация также определяется дополнительными **политиками доступа** , назначенными удостоверению приложения.
+- При **авторизации** определяется, какие операции может выполнять аутентифицированное приложение с тем или иным ресурсом. Разрешенные операции определяют **роли**, которые назначены удостоверению приложения для этого ресурса. В некоторых случаях (например, при использовании Azure Key Vault) авторизация также определяется дополнительными **политиками доступа**, назначенными удостоверению приложения.
 
 В этой статье подробно описываются аутентификация и авторизация:
 
@@ -146,7 +146,7 @@ retrieved_secret = secret_client.get_secret("secret-name-01")
 
 ### <a name="using-defaultazurecredential-with-sdk-management-libraries"></a>Использование метода DefaultAzureCredential с библиотеками управления пакета SDK
 
-`DefaultAzureCredential` работает с версиями библиотек управления пакета Azure SDK (в имени которых содержится mgmt), которые приведены в таблице [Библиотеки, использующие azure.core](azure-sdk-library-package-index.md#libraries-using-azurecore). Кроме того, страницы PyPI для обновленных библиотек содержат строку Credential system has been completely revamped (Система учетных данных полностью обновлена), указывающую на наличие изменений.
+`DefaultAzureCredential` работает с более новыми версиями библиотек управления пакета Azure SDK, то есть с библиотеками управления ресурсами из списка [Библиотеки, использующие azure.core](azure-sdk-library-package-index.md#libraries-using-azurecore), которые имеют mgmt в имени. Кроме того, страницы PyPI для обновленных библиотек обычно содержат строку Credential system has been completely revamped (Система учетных данных полностью обновлена), указывающую на наличие изменений.
 
 Например, можно использовать `DefaultAzureCredential` с azure-mgmt-resource версии 15.0.0 и выше:
 
@@ -160,6 +160,8 @@ subscription_client = SubscriptionClient(credential)
 sub_list = subscription_client.subscriptions.list()
 print(list(sub_list))
 ```
+
+Если библиотека не была обновлена, код с использованием `DefaultAzureCredential` выдаст сообщение object has no attribute "signed-session" (Объект не имеет атрибута signed-session), как описано в следующем разделе.
 
 ### <a name="defaultazurecredential-object-has-no-attribute-signed-session"></a>DefaultAzureCredential object has no attribute signed_session (Объект DefaultAzureCredential не имеет атрибута signed_session).
 
@@ -225,7 +227,7 @@ print(list(sub_list))
     > [!TIP]
     > Как указано в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development), для непосредственного создания этого формата JSON можно использовать команду [az ad sp create-for-rbac](/cli/azure/ad/sp#az-ad-sp-create-for-rbac) c параметром `--sdk-auth`.
 
-1. Сохраните файл с именем, например *credentials.json* , в безопасном расположении, к которому код может получить доступ. Чтобы защитить учетные данные, обязательно исключите этот файл из системы управления версиями и не предоставляйте его другим разработчикам. То есть идентификатор арендатора, идентификатор клиента и секрет клиента субъекта-службы всегда должны быть изолированны на рабочей станции разработки.
+1. Сохраните файл с именем, например *credentials.json*, в безопасном расположении, к которому код может получить доступ. Чтобы защитить учетные данные, обязательно исключите этот файл из системы управления версиями и не предоставляйте его другим разработчикам. То есть идентификатор арендатора, идентификатор клиента и секрет клиента субъекта-службы всегда должны быть изолированны на рабочей станции разработки.
 
 1. Создайте переменную среды `AZURE_AUTH_LOCATION`, указав путь к файлу JSON в качестве значения:
 
@@ -303,6 +305,37 @@ print(subscription.subscription_id)
 
 ### <a name="authenticate-with-token-credentials"></a>Аутентификация с использованием учетных данных токена
 
+Вы можете выполнить аутентификацию с помощью библиотек Azure, используя явные идентификаторы подписки, арендатора и клиента вместе с секретом клиента.
+
+При использовании более новых библиотек пакета SDK на основе azure.core применяйте [объект `ClientSecretCredential` из библиотеки azure.identity](#using-clientsecretcredential-azureidentity). При использовании старых библиотек пакета SDK применяйте [`ServicePrincipalCredentials` из библиотеки azure.common](#using-serviceprincipalcredentials-azurecommon).
+
+Чтобы перенести существующий код, который использует `ServicePrincipalCredentials`, в новую версию библиотеки, замените использование этого класса на `ClientSecretCredential`, как показано в следующих разделах. Обратите внимание на незначительные изменения в именах параметров между двумя конструкторами: `tenant` становится `tenant_id`, а `secret` — `client_secret`.
+
+#### <a name="using-clientsecretcredential-azureidentity"></a>Использование ClientSecretCredential (azure.identity)
+
+```python
+import os
+from azure.mgmt.resource import SubscriptionClient
+from azure.identity import ClientSecretCredential
+
+# Retrieve the IDs and secret to use with ClientSecretCredential
+subscription_id = os.environ["AZURE_SUBSCRIPTION_ID"]
+tenant_id = os.environ["AZURE_TENANT_ID"]
+client_id = os.environ["AZURE_CLIENT_ID"]
+client_secret = os.environ["AZURE_CLIENT_SECRET"]
+
+credential = ClientSecretCredential(tenant_id=tenant_id, client_id=client_id, client_secret=client_secret)
+
+subscription_client = SubscriptionClient(credential)
+
+subscription = next(subscription_client.subscriptions.list())
+print(subscription.subscription_id)
+```
+
+В этом методе, который снова используется с новыми библиотеками на основе azure.core, вы создадите объект [`ClientSecretCredential`](/python/api/azure-identity/azure.identity.clientsecretcredential) с использованием учетных данных, полученных из защищенного хранилища, например Azure Key Vault или переменных среды. В предыдущем коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development).
+
+#### <a name="using-serviceprincipalcredentials-azurecommon"></a>Использование ServicePrincipalCredentials (azure.common)
+
 ```python
 import os
 from azure.mgmt.resource import SubscriptionClient
@@ -322,9 +355,11 @@ subscription = next(subscription_client.subscriptions.list())
 print(subscription.subscription_id)
 ```
 
-В этом методе вы создаете объект [`ServicePrincipalCredentials`](/python/api/msrestazure/msrestazure.azure_active_directory.serviceprincipalcredentials) с использованием учетных данных, полученных из защищенного хранилища, например Azure Key Vault или переменных среды. В предыдущем коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development).
+В этом методе, который используется со старыми библиотеками не на основе azure.core, вы создадите объект [`ServicePrincipalCredentials`](/python/api/msrestazure/msrestazure.azure_active_directory.serviceprincipalcredentials) с использованием учетных данных, полученных из защищенного хранилища, например Azure Key Vault или переменных среды. В предыдущем коде предполагается, что вы создали переменные среды, описанные в разделе [Создание субъекта-службы для разработки](configure-local-development-environment.md#create-a-service-principal-and-environment-variables-for-development).
 
-С помощью этого метода вместо общедоступного облака Azure вы можете использовать [национальное облако Azure](/azure/active-directory/develop/authentication-national-cloud), указав для клиентского объекта аргумент `base_url`:
+#### <a name="use-an-azure-sovereign-national-cloud"></a>Использование национального облака Azure
+
+С помощью одного из таких методов с учетными данными токена вы можете использовать [национальное облако Azure](/azure/active-directory/develop/authentication-national-cloud) вместо общедоступного облака Azure, указав для клиентского объекта аргумент `base_url`:
 
 ```python
 from msrestazure.azure_cloud import AZURE_CHINA_CLOUD

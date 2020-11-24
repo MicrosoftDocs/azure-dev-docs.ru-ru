@@ -1,15 +1,15 @@
 ---
 title: Схемы использования библиотек Azure для Python
 description: Общие сведения об использовании библиотек Azure SDK для Python
-ms.date: 09/21/2020
+ms.date: 11/12/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: ae51bee0aea2717c09242f8928a617bf8211f372
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: 6f1a2c07bbda4ebe409722d2381e046ee45f7902
+ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764779"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94601396"
 ---
 # <a name="azure-libraries-for-python-usage-patterns"></a>Библиотеки Azure для схем использования Python
 
@@ -37,9 +37,11 @@ pip install azure-storage-blob
 
 ## <a name="asynchronous-operations"></a>Асинхронные операции
 
-Многие операции, которые вызываются через объекты клиента и клиента управления (например, [`WebSiteManagementClient.web_apps.create_or_update`](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.operations.webappsoperations#create-or-update-resource-group-name--name--site-envelope--custom-headers-none--raw-false--polling-true----operation-config-)), возвращают объект с типом `AzureOperationPoller[<type>]`, где `<type>` зависит от конкретной операции.
+Многие операции, которые вызываются через объекты клиента и клиента управления (например, [`ComputeManagementClient.virtual_machines.begin_create_or_update`](/python/api/azure-mgmt-compute/azure.mgmt.compute.v2020_06_01.operations.virtualmachinesoperations#begin-create-or-update-resource-group-name--vm-name--parameters----kwargs-) и [`WebSiteManagementClient.web_apps.create_or_update`](/python/api/azure-mgmt-web/azure.mgmt.web.v2019_08_01.operations.webappsoperations#create-or-update-resource-group-name--name--site-envelope--custom-headers-none--raw-false--polling-true----operation-config-)), возвращают объект с типом `AzureOperationPoller[<type>]`, где `<type>` зависит от конкретной операции.
 
-Тип возвращаемого значения [`AzureOperationPoller`](/python/api/msrestazure/msrestazure.azure_operation.azureoperationpoller) означает, что операция является асинхронной. Соответственно, вам нужно вызвать метод `result` этого модуля опроса, чтобы дождаться фактического результата операции.
+Оба метода являются асинхронными. Отличия в именах методов обусловлены различиями в версиях. В более старых библиотеках, которые не основаны на azure.core, обычно используются такие имена: `create_or_update`. В библиотеках на базе azure.core в имена методов добавляется префикс `begin_`, чтобы указать на их асинхронность. Миграция старого кода в более новую библиотеку на базе azure.core обычно предусматривает добавление префикса `begin_` в имена методов, так как большинство сигнатур методов остаются неизменными.
+
+В любом случае, тип возвращаемого значения [`AzureOperationPoller`](/python/api/msrestazure/msrestazure.azure_operation.azureoperationpoller) несомненно указывает на то, что операция является асинхронной. Соответственно, вам нужно вызвать метод `result` этого модуля опроса, чтобы дождаться завершения операции и получить результат.
 
 Следующий код взят из примера [ Подготовка и развертывание веб-приложения](azure-sdk-example-web-app.md), где показано, как использовать модуль опроса, чтобы дождаться результата.
 

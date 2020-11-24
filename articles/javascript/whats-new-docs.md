@@ -2,17 +2,28 @@
 title: 'Новые возможности JavaScript '
 description: Обновления документации по JavaScript за октябрь 2020 года
 ms.topic: conceptual
-ms.date: 10/28/2020
-ms.openlocfilehash: 1b95a18d3ea8cb5947dfd5525326d69460c3a00b
-ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
+ms.date: 11/13/2020
+ms.openlocfilehash: dba173f640205bbd43ce0f9e11387eba02c7a20e
+ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93405953"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "94601276"
 ---
 # <a name="javascript-docs-whats-new-for-october-2020"></a>Документация по JavaScript: обновления за октябрь 2020 года
 
 Узнайте о новом и обновленном содержимом для разработчиков JavaScript и TypeScript.
+
+
+## <a name="2020-november"></a>Ноябрь 2020 года
+
+Узнайте об обновлениях документации по JavaScript за ноябрь 2020 года. В этой статье перечислены основные изменения, внесенные в документацию в течение этого периода.
+
+### <a name="whats-new"></a>Новые возможности
+
+|Имя|Примечания|
+|---------------------------------------|--|
+|[Учебник. Развертывание приложения на виртуальной машине Linux](./tutorial/nodejs-virtual-machine-vm/introduction.md)|В этом руководстве описано, как создать виртуальную машину Linux для приложения Express.js. Виртуальная машина настраивается с помощью файла конфигурации cloud-init и содержит NGINX и репозиторий GitHub для приложения Express.js. После запуска виртуальной машины можно подключиться к ней по протоколу SSH. Также можно изменить веб-приложение, включив ведение журнала трассировки, и просмотреть общедоступное серверное приложение Express.js в веб-браузере.|
 
 ## <a name="2020-october"></a>Октябрь 2020 года
 

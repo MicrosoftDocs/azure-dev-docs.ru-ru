@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: identity
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 9636ae27950f0ffabf6c9a433c802b3101447dab
-ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
+ms.openlocfilehash: 10efa527f60d2dae15f84ca2c34862e5c899fa65
+ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93192406"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94560277"
 ---
 # <a name="tutorial-reading-a-secret-from-azure-key-vault-in-a-spring-boot-application"></a>Руководство по Считывание секрета из Azure Key Vault в приложении Spring Boot
 
@@ -238,7 +238,7 @@ az ad sp create-for-rbac --name contososp
 1. Выберите параметры, как показано на рисунке ниже.
    1. **Project (Проект)** : `Maven Project`
    1. **Language (Язык)** : `Java`
-   1. **Spring Boot** : `2.3.3`
+   1. **Spring Boot**: `2.3.3`
    1. **Group (Группа)** : `com.contoso` (Здесь можно указать любое допустимое имя пакета Java.)
    1. **Artifact (Артефакт)** : *keyvault* (Здесь можно указать любое допустимое имя класса Java.)
    1. **Packaging (Формат пакета)** : `Jar`
@@ -306,7 +306,7 @@ az ad sp create-for-rbac --name contososp
    }
    ```
 
-1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml* , введите команду `mvn spring-boot:run`.  
+1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml*, введите команду `mvn spring-boot:run`.  
 1. Сообщение **Completed initialization** (Инициализация завершена) в выходных данных этой команды означает, что сервер готов к работе.  В другом окне оболочки введите эту команду.
 
    ```bash
@@ -369,7 +369,7 @@ az ad sp create-for-rbac --name contososp
 
    Интеграция с Key Vault предоставляет метку Spring `PropertySource`, заполненную значениями для Key Vault.  Некоторые подробности реализации доступны в [справочной документации](https://aka.ms/azure-spring-boot-starter-keyvault-secrets).
 
-1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml* , введите команду `mvn clean package spring-boot:run`.  
+1. В каталоге *keyvault* верхнего уровня, где расположен файл *pom.xml*, введите команду `mvn clean package spring-boot:run`.  
 1. Сообщение **initialization completed** (Инициализация завершена) в выходных данных этой команды означает, что сервер готов к работе.  В другом окне оболочки введите эту команду.
 
    ```bash
@@ -608,7 +608,7 @@ Azure Spring Cloud представляет собой полностью упр
    | runtime-version | Версия среды выполнения Java.  **Это значение должно совпадать с тем, которое вы ранее выбрали в Spring Initializr.** |
    | служба | Имя существующей службы. |
 
-   Чтобы понять различия между *службой* и *приложением* , изучите статью [Общие сведения о приложении и развертывании в Azure Spring Cloud](/azure/spring-cloud/spring-cloud-concept-understand-app-and-deployment).
+   Чтобы понять различия между *службой* и *приложением*, изучите статью [Общие сведения о приложении и развертывании в Azure Spring Cloud](/azure/spring-cloud/spring-cloud-concept-understand-app-and-deployment).
 
 1. Получите управляемое удостоверение для ресурса Azure.  Примените его для того, чтобы настроить в существующем хранилище Key Vault доступ из вашего приложения.
 
@@ -646,7 +646,7 @@ Azure Spring Cloud представляет собой полностью упр
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
+Дополнительные сведения о Spring и Azure см. в следующей статье в центре документации об использовании Spring в Azure.
 
 > [!div class="nextstepaction"]
-> [Настройка Application Insights в инициализаторе Spring Boot](configure-spring-boot-java-applicationinsights.md)
+> [Использование Spring Boot Starter для служебных шин Azure JMS](configure-spring-boot-starter-java-app-with-azure-service-bus.md)

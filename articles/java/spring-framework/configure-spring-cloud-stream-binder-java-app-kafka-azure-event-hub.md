@@ -3,16 +3,16 @@ title: Использование начального приложения Spri
 description: Как настроить приложение, созданное с помощью Spring Boot Initializer, для использования Apache Kafka в Центрах событий Azure.
 services: event-hubs
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 10/13/2018
 ms.service: event-hubs
 ms.topic: article
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 452119b467d3b92e7b8deec3b0e22d2d1d18ee9e
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 53a50a7a32ff9e555f821d69688cc566fb7a3c62
+ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689205"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94560425"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
 
@@ -26,10 +26,9 @@ ms.locfileid: "92689205"
 * Поддерживаемая версия Java Development Kit (JDK). Дополнительные сведения о версиях JDK, доступных для разработки в Azure, см. в статье <https://aka.ms/azure-jdks>.
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
 
-> [!IMPORTANT]
->
-> Для выполнения операций, описанных в этой статье, требуется Spring Boot 2.0 или более поздней версии.
->
+> [!NOTE]
+> * Для выполнения операций, описанных в этой статье, требуется Spring Boot 2.0 или более поздней версии.
+> * Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Создание концентратора событий на портале Azure
 
@@ -37,25 +36,26 @@ ms.locfileid: "92689205"
 
 1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и выполните вход.
 
-1. Щелкните **+Создать ресурс** , **Интернет вещей** и выполните поиск по запросу *Центры событий**.
+1. Выберите **Создать ресурс** и **Поиск по Marketplace**, а затем выполните поиск по фразе *Центры событий*.
 
-1. Нажмите кнопку **Создать** .
+1. Выберите **Создать**.
 
    ![Создание пространства имен концентратора событий Azure][IMG01]
 
 1. На странице **Создание пространства имен** введите такую информацию:
 
-   * Уникальное **имя** , которое станет частью URI для пространства имен концентратора событий. Например, если вы зададите **wingtiptoys** в качестве **имени** , URI примет вид *wingtiptoys.servicebus.windows.net* .
-   * Ценовая категория.
-   * Отметьте **Включить Kafka** для пространства имен.
    * Выберите **подписку** для пространства имен.
    * Укажите, следует ли создать новую **группу ресурсов** для пространства имен или использовать существующую.
+   * Уникальное **имя пространства имен**, которое станет частью URI для пространства имен концентратора событий. Например, если в поле **Имя** вы укажете *wingtiptoys-space*, URI примет вид `wingtiptoys-space.servicebus.windows.net`.
    * Укажите **расположение** для пространства имен Центров событий.
+   * Укажите **ценовую категорию**, что ограничит сценарии использования.
    * Можно также указать **единицы пропускной способности** для пространства имен.
 
    ![Создание пространства имен для концентратора событий Azure][IMG02]
 
-1. Указав эти параметры, щелкните **Создать** , чтобы создать пространство имен.
+1. Указав перечисленные выше параметры, щелкните **Просмотр и создание**.
+
+1. Проверьте спецификацию и щелкните **Создать**, чтобы создать пространство имен.
 
 ### <a name="create-an-azure-event-hub-in-your-namespace"></a>Создание концентратора событий Azure в пространстве имен
 
@@ -63,11 +63,11 @@ ms.locfileid: "92689205"
 
 1. Перейдите к пространству имен, созданному на предыдущем шаге.
 
-1. Щелкните **+Концентратор событий** в строке меню сверху.
+1. Выберите **Концентратор событий** в строке меню вверху.
 
 1. Присвойте имя концентратору событий.
 
-1. Нажмите кнопку **Создать** .
+1. Выберите **Создать**.
 
    ![Создание концентратора событий][IMG05]
 
@@ -77,7 +77,7 @@ ms.locfileid: "92689205"
 
 1. Задайте такие параметры:
 
-   * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java** .
+   * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.
    * Выберите версию **Spring Boot** не ниже версии 2.0.
    * Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
    * Добавьте зависимость **Web** (Веб).
@@ -85,9 +85,8 @@ ms.locfileid: "92689205"
       ![Основные параметры Spring Initializr][SI01]
 
    > [!NOTE]
-   >
-   > Spring Initializr использует имена **Group** (Группы) и **Artifact** (Артефакта) для создания имени пакета, как например *com.wingtiptoys.kafka* .
-   >
+   > 1. Spring Initializr использует имена **Group** (Группы) и **Artifact** (Артефакта) для создания имени пакета, как например *com.wingtiptoys.kafka*.
+   > 2. Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 1. Указав эти параметры, щелкните **Generate Project** (Создать проект).
 
@@ -99,30 +98,23 @@ ms.locfileid: "92689205"
 
 1. Найдите файл *pom.xml* в корневой папке приложения, например так:
 
-   `C:\SpringBoot\kafka\pom.xml`
+   *C:\SpringBoot\kafka\pom.xml*
 
-   -или-
+   - или -
 
-   `/users/example/home/kafka/pom.xml`
+   */users/example/home/kafka/pom.xml*
 
-1. Откройте файл *pom.xml* в текстовом редакторе и добавьте начальное приложение Spring Cloud Kafka Stream и начальное приложение концентратора событий Azure в список `<dependencies>`:
+1. Откройте файл *pom.xml* в текстовом редакторе и добавьте starter-пакеты Kafka для Центров событий в список `<dependencies>`:
 
    ```xml
    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-stream-kafka</artifactId>
-      <version>2.0.1.RELEASE</version>
-   </dependency>
-   <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-starter-eventhub</artifactId>
-      <version>1.0.0.M2</version>
+     <groupId>com.microsoft.azure</groupId>
+     <artifactId>spring-cloud-starter-azure-eventhubs-kafka</artifactId>
+     <version>1.2.8</version>
    </dependency>
    ```
 
-   ![Редактирование файла pom.xml][SI03]
-
-1. Сохраните и закройте файл *pom.xml* .
+1. Сохраните и закройте файл *pom.xml*.
 
 ## <a name="create-an-azure-credential-file"></a>Создание файла учетных данных Azure
 
@@ -130,14 +122,14 @@ ms.locfileid: "92689205"
 
 1. Перейдите к каталогу *resources* приложения Spring Boot, например так:
 
-   ```shell
-   cd C:\SpringBoot\eventhub\src\main\resources
+   ```cmd
+   cd C:\SpringBoot\kafka\src\main\resources
    ```
 
    -или-
 
-   ```shell
-   cd /users/example/home/eventhub/src/main/resources
+   ```bash
+   cd /users/example/home/kafka/src/main/resources
    ```
 
 1. Вход в учетную запись Azure:
@@ -203,11 +195,11 @@ ms.locfileid: "92689205"
 
 1. Найдите файл *application.properties* в каталоге *resources* приложения, например так:
 
-   `C:\SpringBoot\eventhub\src\main\resources\application.properties`
+   *C:\SpringBoot\kafka\src\main\resources\application.properties*
 
-   -или-
+   - или -
 
-   `/users/example/home/eventhub/src/main/resources/application.properties`
+   */users/example/home/kafka/src/main/resources/application.properties*
 
 2. Откройте файл *application.properties* в текстовом редакторе, добавьте следующие строки и замените примеры значений соответствующими параметрами концентратора событий:
 
@@ -223,7 +215,7 @@ ms.locfileid: "92689205"
    ```
    Где:
 
-   |                       Поле                       |                                                                                   Description                                                                                    |
+   |                       Поле                       |                                                                                   Описание                                                                                    |
    |---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `spring.cloud.azure.credential-file-path`     |                                                    Определяет файл учетных данных Azure, который был создан ранее в этом примере.                                                    |
    |        `spring.cloud.azure.resource-group`        |                                                      Определяет группу ресурсов Azure, которая содержит концентратор событий Azure.                                                      |
@@ -234,7 +226,7 @@ ms.locfileid: "92689205"
    | `spring.cloud.stream.bindings.output.destination` |                               Определяет назначение исходящих данных для концентратора событий Azure, которое в этом примере совпадает с назначением входящих данных.                               |
 
 
-3. Сохраните и закройте файл *application.properties* .
+3. Сохраните и закройте файл *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Добавление примера кода для реализации базовых функций концентратора событий
 
@@ -244,11 +236,11 @@ ms.locfileid: "92689205"
 
 1. Найдите файл основного приложения Java в каталоге пакета приложения, например:
 
-   `C:\SpringBoot\kafka\src\main\java\com\wingtiptoys\kafka\KafkaApplication.java`
+   *C:\SpringBoot\kafka\src\main\java\com\wingtiptoys\kafka\EventhubApplication.java*
+   
+   - или -
 
-   -или-
-
-   `/users/example/home/kafka/src/main/java/com/wingtiptoys/kafka/KafkaApplication.java`
+   */users/example/home/kafka/src/main/java/com/wingtiptoys/kafka/EventhubApplication.java*
 
 1. Откройте файл основного приложения Java в текстовом редакторе и добавьте в него следующие строки:
 
@@ -259,9 +251,9 @@ ms.locfileid: "92689205"
    import org.springframework.boot.autoconfigure.SpringBootApplication;
 
    @SpringBootApplication
-   public class KafkaApplication {
+   public class EventhubApplication {
       public static void main(String[] args) {
-         SpringApplication.run(KafkaApplication.class, args);
+         SpringApplication.run(EventhubApplication.class, args);
       }
    }
    ```
@@ -271,7 +263,7 @@ ms.locfileid: "92689205"
 
 ### <a name="create-a-new-class-for-the-source-connector"></a>Создание класса для соединителя источника
 
-1. В каталоге пакета вашего приложения создайте файл Java с именем *KafkaSource.java* , а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
+1. В каталоге пакета вашего приложения создайте файл Java с именем *KafkaSource.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
    ```java
    package com.wingtiptoys.kafka;
@@ -299,11 +291,11 @@ ms.locfileid: "92689205"
    }
    ```
 
-1. Сохраните и закройте файл *KafkaSource.java* .
+1. Сохраните и закройте файл *KafkaSource.java*.
 
 ### <a name="create-a-new-class-for-the-sink-connector"></a>Создание класса для соединителя приемника
 
-1. В каталоге пакета вашего приложения создайте файл Java с именем *KafkaSink.java* , а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
+1. В каталоге пакета вашего приложения создайте файл Java с именем *KafkaSink.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
    ```java
    package com.wingtiptoys.kafka;
@@ -325,42 +317,47 @@ ms.locfileid: "92689205"
    }
    ```
 
-1. Сохраните и закройте файл *KafkaSink.java* .
+1. Сохраните и закройте файл *KafkaSink.java*.
 
 ## <a name="build-and-test-your-application"></a>Сборка и тестирование приложения
 
-1. Откройте командную строку и перейдите из каталога в папку с файлом *pom.xml* , например:
+1. Откройте командную строку и перейдите из каталога в папку с файлом *pom.xml*, например:
 
-   `cd C:\SpringBoot\kafka`
-
+   ```cmd
+   cd C:\SpringBoot\kafka
+   ```
+   
    -или-
 
-   `cd /users/example/home/kafka`
-
+   ```bash
+   cd /users/example/home/kafka
+   ```
+   
 1. Создайте приложение Spring Boot с помощью Maven и запустите его, например, следующим образом:
 
    ```shell
-   mvn clean package
+   mvn clean package -Dmaven.test.skip=true
    mvn spring-boot:run
    ```
 
-1. После запуска приложения можно использовать средство *curl* , чтобы протестировать приложение, например:
+1. После запуска приложения можно использовать средство *curl*, чтобы протестировать приложение, например:
 
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
    В журналах приложения должна появиться запись "hello". Пример:
 
-   ```shell
-   [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka version : 1.0.2
-   [http-nio-8080-exec-2] INFO org.apache.kafka.common.utils.AppInfoParser - Kafka commitId : 2a121f7b1d402825
-   [wingtiptoyshub.container-0-C-1] INFO com.wingtiptoys.kafka.KafkaSink - New message received: hello
+   ```output
+   2020-10-12 16:56:19.827  INFO 13272 --- [nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.5.1
+   2020-10-12 16:56:19.828  INFO 13272 --- [nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 0efa8fb0f4c73d92
+   2020-10-12 16:56:19.830  INFO 13272 --- [nio-8080-exec-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1602492979827
+   2020-10-12 16:56:22.277  INFO 13272 --- [container-0-C-1] com.wingtiptoys.kafka.KafkaSink          : New message received: hello
    ```
 
 
 > [!NOTE]
 > 
-> Для тестирования можно изменить файл *KafkaSource.java* , добавив в него простую HTML-форму, как в следующем примере:
+> Для тестирования можно изменить файл *KafkaSource.java*, добавив в него простую HTML-форму, как в следующем примере:
 > 
 > ```java
 > package com.wingtiptoys.kafka;
@@ -407,6 +404,10 @@ ms.locfileid: "92689205"
 > ![Ответ приложения в веб-браузере][TB02]
 > 
 
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+Если они больше не нужны, используйте [портал Azure](https://portal.azure.com/), чтобы удалить ресурсы, созданные в этой статье во избежание непредвиденных расходов.
+
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о Spring и Azure см. в центре документации об использовании Spring в Azure.
@@ -444,16 +445,9 @@ ms.locfileid: "92689205"
 
 [IMG01]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-01.png
 [IMG02]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-02.png
-[IMG03]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-03.png
-[IMG04]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-04.png
 [IMG05]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-05.png
-[IMG06]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-06.png
-[IMG07]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-07.png
-[IMG08]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-kafka-event-hub-08.png
 
 [SI01]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-project-01.png
-[SI02]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-project-02.png
-[SI03]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/create-project-03.png
 
 [TB01]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/test-browser-01.png
 [TB02]: media/configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub/test-browser-02.png
