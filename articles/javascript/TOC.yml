@@ -13,6 +13,20 @@
           href: core/node-sdk-azure-authenticate.md
     - name: Учебники
       items:
+        - name: Создание статического веб-приложения
+          items:
+            - name: 1. Введение и предварительные требования
+              href: tutorial/static-web-app/introduction.md
+            - name: 2. Скачивание и запуск приложения локально
+              href: tutorial/static-web-app/run-the-react-cognitive-services-image-analyzer-app-locally.md
+            - name: 3. Создание ресурса Компьютерного зрения
+              href: tutorial/static-web-app/create-computer-vision-resource-use-in-code.md
+            - name: 4. Создание и развертывание статического веб-приложения
+              href: tutorial/static-web-app/create-static-web-app-visual-studio-code-extension.md
+            - name: 5. Проверка кода ресурса React для Компьютерного зрения
+              href: tutorial/static-web-app/add-computer-vision-react-app.md
+            - name: 6. Очистка ресурсов
+              href: tutorial/static-web-app/clean-up-resources.md
         - name: Отправка изображения в BLOB-объекты хранилища
           href: tutorial/browser-file-upload.yml?preview=tutorialFeedback
         - name: Использование Express.js с MongoDB
@@ -93,7 +107,7 @@
               href: tutorial-vscode-azure-cli-node-06.md
             - name: Очистка ресурсов
               href: tutorial-vscode-azure-cli-node-07.md
-        - name: Создание статического веб-сайта с использованием VS Code
+        - name: Создание статического веб-сайта из службы хранилища Azure
           items:
             - name: Введение и предварительные требования
               href: tutorial-vscode-static-website-node-01.md
