@@ -5,14 +5,16 @@ keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
 ms.date: 08/19/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: d081861eac98495d125a1a5eb5dd9700fb7783a8
-ms.sourcegitcommit: 800c5e05ad3c0b899295d381964dd3d47436ff90
+ms.openlocfilehash: 4918b548fb98f27fffaa8d836ec125cc325da79d
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88614544"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "96035472"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Руководство по масштабированию развертываний Jenkins с помощью агентов виртуальных машин Azure
+
+[!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
 В этом руководстве описывается, как с помощью [подключаемого модуля агентов виртуальных машин Azure](https://plugins.jenkins.io/azure-vm-agents) для Jenkins добавить емкость для виртуальных машин Linux в Azure.
 

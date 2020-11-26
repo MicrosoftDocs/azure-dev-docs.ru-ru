@@ -5,14 +5,16 @@ keywords: Jenkins, Azure, DevOps, конвейер, CI/CD, Docker
 ms.topic: tutorial
 ms.date: 03/27/2017
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: eb4c12fe249b485941221d382ab0090f7aa88227
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: debcd94b885813a8f1a1640d4eb46e75b36c4d6c
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689058"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "96035462"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>Руководство по созданию конвейера Jenkins с помощью GitHub и Docker
+
+[!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
 Чтобы автоматизировать этапы создания и тестирования приложения, вы можете использовать конвейер непрерывной интеграции и развертывания (CI/CD). В этом учебнике мы создадим конвейер CI/CD на виртуальной машине Azure, включая следующие задачи:
 
@@ -58,13 +60,13 @@ runcmd:
   - service jenkins restart
 ```
 
-Прежде чем создать виртуальную машину, выполните команду [az group create](/cli/azure/group), чтобы создать группу ресурсов. В следующем примере создается группа ресурсов с именем *myResourceGroupJenkins* в расположении *eastus* .
+Прежде чем создать виртуальную машину, выполните команду [az group create](/cli/azure/group), чтобы создать группу ресурсов. В следующем примере создается группа ресурсов с именем *myResourceGroupJenkins* в расположении *eastus*.
 
 ```azurecli-interactive 
 az group create --name myResourceGroupJenkins --location eastus
 ```
 
-Теперь создайте виртуальную машину командой [az vm create](/cli/azure/vm). Используйте параметр `--custom-data`, чтобы передать файл конфигурации cloud-init. Укажите полный путь к конфигурации *cloud-init-jenkins.txt* , если этот файл сохранен вне текущего рабочего каталога.
+Теперь создайте виртуальную машину командой [az vm create](/cli/azure/vm). Используйте параметр `--custom-data`, чтобы передать файл конфигурации cloud-init. Укажите полный путь к конфигурации *cloud-init-jenkins.txt*, если этот файл сохранен вне текущего рабочего каталога.
 
 ```azurecli-interactive 
 az vm create --resource-group myResourceGroupJenkins \
@@ -124,9 +126,9 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Теперь откройте браузер и перейдите к `http://<publicIps>:8080`. Выполните начальную настройку Jenkins следующим образом:
 
 - Щелкните **Select plugins to install** (Выбрать подключаемые модули для установки).
-- Выполните поиск по слову *GitHub* в текстовом поле вверху. Установите флажок для *GitHub* , а затем выберите **Установить** .
-- Создайте первого администратора. Введите имя пользователя, например **admin** , а затем укажите безопасный пароль. Наконец введите полное имя и адрес электронной почты.
-- Выберите **Сохранить и завершить** .
+- Выполните поиск по слову *GitHub* в текстовом поле вверху. Установите флажок для *GitHub*, а затем выберите **Установить**.
+- Создайте первого администратора. Введите имя пользователя, например **admin**, а затем укажите безопасный пароль. Наконец введите полное имя и адрес электронной почты.
+- Выберите **Сохранить и завершить**.
 - Когда настройка Jenkins будет завершена, щелкните **Start using Jenkins** (Начать работу с Jenkins).
   - Если веб-браузере отображает пустую страницу при запуске Jenkins, перезапустите службу Jenkins. В сеансе SSH введите `sudo service jenkins restart`, а затем обновите веб-браузера.
 - При необходимости войдите в Jenkins, введя созданные имя пользователя и пароль.
@@ -138,9 +140,9 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 Создание объекта webhook в созданном разветвлении
 
 - Щелкните **Settings** (Параметры), а затем выберите **Webhooks** (Веб-перехватчики).
-- Нажмите кнопку **Add webhook** (Добавить веб-перехватчик) и в поле фильтра введите *Jenkins* .
+- Нажмите кнопку **Add webhook** (Добавить веб-перехватчик) и в поле фильтра введите *Jenkins*.
 - В поле **URL-адреса полезных данных** введите `http://<publicIps>:8080/github-webhook/`. Убедитесь, что адрес содержит завершающую косую черту (/).
-- В поле **типа содержимого** выберите *application/x-www-form-urlencoded* .
+- В поле **типа содержимого** выберите *application/x-www-form-urlencoded*.
 - Для параметра **Which events would you like to trigger this webhook?** (Какие события должен активировать этот веб-перехватчик?) выберите *Just the push event* (Только событие отправки).
 - Установите флажок **Active** (Активно).
 - Щелкните **Add webhook** (Добавить веб-перехватчик).
@@ -153,7 +155,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 На веб-сайте Jenkins щелкните **Create new jobs** (Создание заданий) на домашней странице.
 
-- Введите *HelloWorld* в качестве имени задания. Выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК** .
+- Введите *HelloWorld* в качестве имени задания. Выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК**.
 - В разделе **Общие** выберите проект **GitHub** и введите URL-адрес вилки репозитория, например `https://github.com/cynthn/nodejs-docs-hello-world`.
 - В разделе **Управление исходным кодом** выберите **Git** и введите URL-адрес *GIT-файла* вилки репозитория, например `https://github.com/cynthn/nodejs-docs-hello-world.git`.
 - В разделе **Build Triggers** (Создание триггеров) выберите **GitHub hook trigger for GITScm polling** (Обработчик триггера Github для опроса GITScm).
@@ -164,7 +166,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ## <a name="test-github-integration"></a>Тестирование интеграции GitHub
 Для проверки интеграции GitHub с Jenkins зафиксируйте изменение в разветвлении. 
 
-Вернитесь к веб-интерфейсу пользователя GitHub, выберите разветвление репозитория и щелкните файл **index.js** . Щелкните значок карандаша и измените этот файл так, чтобы строка 6 выглядела следующим образом.
+Вернитесь к веб-интерфейсу пользователя GitHub, выберите разветвление репозитория и щелкните файл **index.js**. Щелкните значок карандаша и измените этот файл так, чтобы строка 6 выглядела следующим образом.
 
 ```javascript
 response.end("Hello World!");
@@ -178,7 +180,7 @@ response.end("Hello World!");
 ## <a name="define-docker-build-image"></a>Определение образа сборки Docker
 Чтобы увидеть, как приложение Node.js выполняется в зависимости от фиксаций GitHub, мы создадим образ Docker для выполнения приложения. Образ строится на основе файла Dockerfile, определяющего конфигурацию контейнера, в котором выполняется приложение. 
 
-Измените путь SSH-подключения к виртуальной машине, задав каталог рабочей области Jenkins, имя которого соответствует заданию, созданному на предыдущем шаге. В текущем примере это будет *HelloWorld* .
+Измените путь SSH-подключения к виртуальной машине, задав каталог рабочей области Jenkins, имя которого соответствует заданию, созданному на предыдущем шаге. В текущем примере это будет *HelloWorld*.
 
 ```bash
 cd /var/lib/jenkins/workspace/HelloWorld

@@ -3,14 +3,14 @@ title: Руководство. Развертывание в Службе при
 description: Сведения об использовании Azure CLI для развертывания веб-приложения Java в Azure в конвейере Jenkins
 keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
-ms.date: 08/08/2020
+ms.date: 11/10/2020
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 4a6fde1eb8830c897c438fa89e7da6fe93b5a3a8
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 88db3702221b8e18acff71514fcddc9ff7e875b0
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831340"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983643"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 
@@ -82,7 +82,7 @@ az appservice plan create \
 
 ### <a name="create-an-azure-web-app"></a>Создание веб-приложения Azure
 
- С помощью команды CLI [az webapp create](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create) создайте определение веб-приложения в плане службы приложений `myAppServicePlan`. Определение веб-приложения предоставляет URL-адрес для доступа к приложению и настраивает несколько параметров для развертывания кода в Azure. 
+ С помощью команды CLI [az webapp create](/cli/azure/webapp#az-webapp-create) создайте определение веб-приложения в плане службы приложений `myAppServicePlan`. Определение веб-приложения предоставляет URL-адрес для доступа к приложению и настраивает несколько параметров для развертывания кода в Azure. 
 
 ```azurecli-interactive
 az webapp create \

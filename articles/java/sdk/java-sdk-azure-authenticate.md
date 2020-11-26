@@ -2,18 +2,19 @@
 title: Проверка подлинности с использованием библиотек управления Azure для Java
 description: Проверка подлинности с помощью субъекта-службы в библиотеках управления Azure для Java
 keywords: Azure, Java, SDK, API, Maven, Gradle, authentication, active directory, service principal
-author: rloutlaw
+author: bmitchell287
+ms.author: brendm
 ms.date: 04/16/2017
 ms.topic: article
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019, devx-track-java
-ms.openlocfilehash: b7cf132dfe82e8c93f8b0eae0fd27dddd1de77fd
-ms.sourcegitcommit: 44016b81a15b1625c464e6a7b2bfb55938df20b6
+ms.openlocfilehash: d4266c0089a371dd87711bfb692b5db32d9fc881
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86379558"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983943"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Проверка подлинности с использованием библиотек Azure для Java
 

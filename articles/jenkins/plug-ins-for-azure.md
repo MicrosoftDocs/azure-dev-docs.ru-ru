@@ -5,14 +5,16 @@ keywords: Jenkins, подключаемые модули, Azure, DevOps
 ms.date: 04/25/2020
 ms.topic: article
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: a8738ad8a66f85467527051f383975890fb5dcd2
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d5f470c7355314b488d811f03f175379ad211c96
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240616"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "96035452"
 ---
 # <a name="jenkins-plug-ins-for-azure"></a>Подключаемые модули Jenkins для Azure
+
+[!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
 Ко многим службам и функциям Azure можно получить доступ через подключаемые модули Jenkins. Эти службы поддерживают ряд возможностей в отношении непрерывной интеграции и непрерывного развертывания (CI/CD) для среды DevOps. Щелкните любой подключаемый модуль Jenkins, чтобы узнать о нем больше.
 

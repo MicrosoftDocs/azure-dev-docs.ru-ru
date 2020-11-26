@@ -3,14 +3,14 @@ title: Общие сведения о Jenkins и Azure
 description: Размещение сборки Jenkins и развертывание сервера автоматизации в Azure, а также использование вычислительных ресурсов и ресурсов службы хранилища Azure для расширения конвейеров непрерывной интеграции и непрерывного развертывания (CI/CD).
 keywords: jenkins, azure, devops, overview
 ms.topic: overview
-ms.date: 08/08/2020
+ms.date: 11/10/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 43e38bd609f00257859c5976dc0b4e0fa4ae9e8f
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: d7de868651c50b7c3e39f1a0286ddd3ebf740b21
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240636"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983563"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins
 
@@ -37,5 +37,4 @@ ms.locfileid: "88240636"
 
  Доступны подключаемые модули для развертывания в следующих службах и средах.
 
-- [Служба приложений Azure в Linux](/azure/app-service/containers/app-service-linux-intro). Чтобы приступить к работе, ознакомьтесь с этим [руководством](deploy-from-github-to-azure-app-service.md).
-- [Служба приложений Azure](/azure/app-service/overview). Чтобы приступить к работе, ознакомьтесь с этим [практическим руководством](deploy-to-azure-app-service-using-plugin.md).
+- [Служба приложений Azure в Linux](/azure/app-service/containers/app-service-linux-intro). Чтобы приступить к работе, ознакомьтесь с этим [руководством](deploy-to-azure-app-service-using-azure-cli.md).
