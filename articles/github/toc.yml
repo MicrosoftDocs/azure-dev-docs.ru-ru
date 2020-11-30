@@ -12,6 +12,8 @@
           href: deploy-to-azure.md
         - name: Развертывание баз данных в Azure
           href: database-actions-deploy.md
+        - name: Использование подстановки переменных
+          href: github-variable-substitution.md
         - name: Управление Политикой Azure
           href: manage-azure-policy.md
     - name: Azure DevOps и GitHub
