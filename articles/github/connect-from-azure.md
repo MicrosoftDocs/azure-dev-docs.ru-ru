@@ -5,22 +5,25 @@ author: N-Usha
 ms.author: ushan
 ms.topic: reference
 ms.service: azure
-ms.date: 08/31/2020
+ms.date: 11/17/2020
 ms.custom: github-actions-azure, devx-track-azurecli
-ms.openlocfilehash: d03f8631d985b97a46a711620c847475171f9438
-ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
+ms.openlocfilehash: 5462d7ca3618869232296a9a6739ebe5adcefdb1
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93405753"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983633"
 ---
 # <a name="use-github-actions-to-connect-to-azure"></a>Применение GitHub Actions для подключения к Azure
 
 Узнайте, как выполнять [вход в Azure](https://github.com/Azure/login) через [Azure PowerShell](https://github.com/Azure/PowerShell) или [Azure CLI](https://github.com/Azure/CLI) для взаимодействия с ресурсами Azure.
 
-Чтобы использовать Azure PowerShell или Azure CLI в рабочем процессе GitHub Actions, вам нужно выполнить действие [входа в Azure](https://github.com/marketplace/actions/azure-login). Действие входа в Azure позволяет выполнять команды в рабочем процессе в контексте [субъекта-службы Azure AD](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
+Чтобы использовать Azure PowerShell или Azure CLI в рабочем процессе GitHub Actions, вам нужно выполнить действие [входа в Azure](https://github.com/marketplace/actions/azure-login).
+Действие входа в Azure позволяет выполнять команды в рабочем процессе в контексте [субъекта-службы Azure AD](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).
 
-Настроив действие входа, вы сможете применить его в Azure CLI или Azure PowerShell. По умолчанию действие выполняет вход с помощью Azure CLI, подготавливая среду выполнения действий GitHub для Azure CLI. Свойство enable-AzPSSession действия входа в Azure позволяет использовать Azure PowerShell.  Оно обеспечивает настройку среды выполнения действий GitHub с модулем Azure PowerShell.
+Настроив действие входа, вы сможете применить его в Azure CLI или Azure PowerShell.
+
+По умолчанию действие выполняет вход с помощью Azure CLI, подготавливая среду выполнения действий GitHub для Azure CLI. Вы можете использовать Azure PowerShell со свойством `enable-AzPSSession` действия входа в Azure. Оно обеспечивает настройку среды выполнения действий GitHub с модулем Azure PowerShell.
 
 ## <a name="create-a-service-principal-and-add-it-to-github-secret"></a>Создание субъекта-службы и его добавление в секрет GitHub
 
@@ -39,7 +42,7 @@ ms.locfileid: "93405753"
         --identifier-uris http://localhost/$appName
     ```
 
-1. [Создайте субъект-службу](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest) для приложения на портале Azure. 
+1. [Создайте субъект-службу](/cli/azure/create-an-azure-service-principal-azure-cli?view=azure-cli-latest&preserve-view=true) для приложения на портале Azure. 
 
     ```azurecli-interactive
         az ad sp create-for-rbac --name "myApp" --role contributor \

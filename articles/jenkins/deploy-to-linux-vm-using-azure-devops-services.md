@@ -1,16 +1,16 @@
 ---
 title: Развертывание виртуальной машины Linux с помощью Jenkins и Azure DevOps Services
-description: Узнайте, как упростить непрерывную интеграцию и непрерывное развертывание (CI/CD) для развертывания приложений на виртуальных машинах Linux с помощью Jenkins и Azure DevOps Services.
+description: Узнайте, как упростить непрерывную интеграцию и непрерывное развертывание (CI/CD) для развертывания приложений на виртуальных машинах Linux с помощью Jenkins и Azure DevOps Services
 keywords: Jenkins, Azure, DevOps, виртуальная машина, CI/CD, Azure DevOps Services
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 3eedcc72a7c272f1cacf97b9071e750aab5a446e
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: e1c5c9b06cff7419ac98b08553d143c7449746b8
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831330"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983653"
 ---
 # <a name="tutorial-deploy-to-linux-virtual-machine-using-jenkins-and-azure-devops-services"></a>Руководство по Развертывание виртуальной машины Linux с помощью Jenkins и Azure DevOps Services
 
@@ -18,7 +18,7 @@ ms.locfileid: "90831330"
 
 В этом руководстве для создания веб-приложения Node.js используется Jenkins. Затем вы развернете его с помощью DevOps
 
-в [группе развертывания](/azure/devops/pipelines/release/deployment-groups/index?view=vsts), состоящей из виртуальных машин Linux. Вы узнаете, как выполнять следующие задачи:
+в [группе развертывания](/azure/devops/pipelines/release/deployment-groups/index), состоящей из виртуальных машин Linux. Вы узнаете, как выполнять следующие задачи:
 
 > [!div class="checklist"]
 > * Получение примера приложения.
@@ -38,7 +38,7 @@ ms.locfileid: "90831330"
   Вы можете получить [бесплатную организацию Azure DevOps Services](https://go.microsoft.com/fwlink/?LinkId=307137&clcid=0x409&wt.mc_id=o~msft~vscom~home-vsts-hero~27308&campaign=o~msft~vscom~home-vsts-hero~27308).
 
   > [!NOTE]
-  > Дополнительные сведения см. в статье [о подключении к Azure DevOps Services](/azure/devops/organizations/projects/connect-to-projects?view=vsts).
+  > Дополнительные сведения см. в статье [о подключении к Azure DevOps Services](/azure/devops/organizations/projects/connect-to-projects).
 
 *  Для целевого развертывания понадобится виртуальная машина Linux.  Для получения дополнительной информации см. статью [Создание виртуальных машин Linux и управление ими с помощью Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm).
 
@@ -90,7 +90,7 @@ ms.locfileid: "90831330"
  
 1.  Создайте личный маркер доступа в организации Azure DevOps Services, если у вас его нет. Эти данные требуются Jenkins для доступа к организации Azure DevOps Services. Убедитесь, что данные маркера безопасности для будущих шагов хранятся в этом разделе.
   
-    Чтобы узнать, как создать такой маркер, прочтите статью [Authenticate access with personal access tokens for Azure DevOps Services and TFS](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts) (Аутентификация доступа с помощью личных маркеров доступа для Azure DevOps и TFS).
+    Чтобы узнать, как создать такой маркер, прочтите статью [Authenticate access with personal access tokens for Azure DevOps Services and TFS](/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate) (Аутентификация доступа с помощью личных маркеров доступа для Azure DevOps и TFS).
 2. На вкладке **Post-build Actions** (Действия после сборки) выберите **Add post-build action** (Добавить действие после сборки). Выберите **Archive the artifacts** (Архивировать артефакты).
 3. Для **Files to archive** (Файлы для архивации) введите `**/*`, чтобы включить в архив все файлы.
 4. Чтобы создать другое действие, выберите **Add post-build action** (Добавить действие после сборки).

@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, app service
 ms.topic: tutorial
 ms.date: 08/10/2020
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 30b916cadc2c15f1226ab06f6925a87f6be4b3a7
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 560697c580d942395aea077dd8a2133dc51d5b7e
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688681"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983793"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-app-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе приложений Azure с помощью Jenkins
 
@@ -128,7 +128,7 @@ az ad sp create-for-rbac
 **Примечания**
 
 - После успешного выполнения `az ad sp create-for-rbac` отображает несколько значений. Значения `name`, `password` и `tenant` используются на следующем шаге.
-- По умолчанию субъект-служба создает с ролью **Участник** , которая имеет полные разрешения на чтение учетной записи Azure и записи в нее. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
+- По умолчанию субъект-служба создает с ролью **Участник**, которая имеет полные разрешения на чтение учетной записи Azure и записи в нее. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
 - Пароль невозможно извлечь, если он утерян. Следовательно, пароль нужно хранить в надежном месте. Если вы забыли пароль, потребуется [сбросить учетные данные субъекта-службы](/cli/azure/create-an-azure-service-principal-azure-cli#reset-credentials).
 
 
@@ -148,13 +148,13 @@ az ad sp create-for-rbac
 
    | Property (Свойство) | Значение | Описание | 
    |----------|-------|-------------| 
-   | **Идентификатор подписки** | <*yourAzureSubscription-ID*> | Значение идентификатора GUID для подписки Azure. <p>**Совет** . Если вы не знаете идентификатор своей подписки Azure, выполните следующую команду Azure CLI из командной строки или Cloud Shell, а затем используйте значение GUID `id`: <p>`az account list` | 
+   | **Идентификатор подписки** | <*yourAzureSubscription-ID*> | Значение идентификатора GUID для подписки Azure. <p>**Совет**. Если вы не знаете идентификатор своей подписки Azure, выполните следующую команду Azure CLI из командной строки или Cloud Shell, а затем используйте значение GUID `id`: <p>`az account list` | 
    | **Идентификатор клиента** | <*yourAzureServicePrincipal-ID*> | Значение GUID `appId`, ранее созданное для субъекта-службы Azure. | 
    | **Секрет клиента** | <*yourSecurePassword*> | Значение `password` или секрет, который вы указали для субъекта-службы Azure. | 
    | **Идентификатор клиента** | <*yourAzureActiveDirectoryTenant-ID*> | Значение GUID `tenant` для клиента Azure Active Directory. | 
    | **Идентификатор** | <*yourAzureServicePrincipalName*> | Значение `displayName` для субъекта-службы Azure. | 
 
-1. Чтобы проверить, работает ли субъект-служба, выберите **Verify Service Principal** (Проверить субъект-службу). Закончив, нажмите кнопку **OK** .
+1. Чтобы проверить, работает ли субъект-служба, выберите **Verify Service Principal** (Проверить субъект-службу). Закончив, нажмите кнопку **OK**.
 
 Теперь создайте конвейер Jenkins для сборки и развертывания приложения.
 
@@ -184,7 +184,7 @@ az ad sp create-for-rbac
 
       ![Подготовка среды для запуска и указание переменных среды](media/deploy-from-github-to-azure-app-service/prepare-environment-for-jenkins-run.png)
 
-1. Когда все будет готово, нажмите кнопку **Сохранить** .
+1. Когда все будет готово, нажмите кнопку **Сохранить**.
 
 Теперь создайте скрипты сборки и развертывания для Jenkins.
 
@@ -257,7 +257,7 @@ az ad sp create-for-rbac
 
    ![Указание конвейера Jenkins в скрипте](media/deploy-from-github-to-azure-app-service/set-up-jenkins-github.png)
 
-1. Когда все будет готово, нажмите кнопку **Сохранить** .
+1. Когда все будет готово, нажмите кнопку **Сохранить**.
 
 Теперь выполните сборку и разверните приложение в Службе приложений Azure. 
 
@@ -273,11 +273,11 @@ az ad sp create-for-rbac
 
    Дополнительные сведения об этих командах Azure CLI см. в соответствующих статьях:
 
-   * [**`az group create`**](/cli/azure/group?view=azure-cli-latest#az-group-create)
+   * [**`az group create`**](/cli/azure/group#az-group-create)
 
-   * [**`az appservice plan create`**](/cli/azure/appservice/plan?view=azure-cli-latest#az-appservice-plan-create)
+   * [**`az appservice plan create`**](/cli/azure/appservice/plan#az-appservice-plan-create)
 
-   * [**`az webapp create`**](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
+   * [**`az webapp create`**](/cli/azure/webapp#az-webapp-create)
 
 1. В Jenkins выберите задание конвейера и щелкните **Build Now** (Начать сборку).
 
@@ -303,7 +303,7 @@ az ad sp create-for-rbac
 
 1. Когда сборка будет завершена и Jenkins выполнит повторное развертывание в Azure, обновите приложение, в котором теперь отображаются обновления.
 
-   ![Просмотр развернутого приложения в Azure](media/deploy-from-github-to-azure-app-service/greetings-edited.png)
+   ![Просмотр обновленного приложения в Azure](media/deploy-from-github-to-azure-app-service/greetings-edited.png)
 
 ## <a name="troubleshooting-the-jenkins-plug-in"></a>Устранение неполадок подключаемого модуля Jenkins
 

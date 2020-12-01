@@ -5,14 +5,16 @@ keywords: jenkins, azure, devops, java, azure functions
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: fa63ebf5a41a3c515f92b0c551ee63d683b665c7
-ms.sourcegitcommit: 16ce1d00586dfa9c351b889ca7f469145a02fad6
+ms.openlocfilehash: 7258e3d20262e214bbe9461564210c0d84fe2e89
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88240935"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "96035390"
 ---
 # <a name="tutorial-deploy-to-azure-functions-using-jenkins"></a>Руководство по развертыванию в Функциях Azure с помощью Jenkins
+
+[!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
 [Функции Azure](/azure/azure-functions/) — это независимая от сервера служба вычислений. С помощью Функций Azure вы можете выполнить код по требованию, не запуская операции по подготовке инфраструктуры или управлению ею. В этом руководстве описано, как развернуть функцию Java в Функциях Azure с помощью подключаемого модуля для Функций Azure.
 
@@ -21,12 +23,13 @@ ms.locfileid: "88240935"
 - **Подписка Azure**: Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio), прежде чем начинать работу.
 - **Сервер Jenkins**. Если у вас не установлен сервер Jenkins, см. статью о [создании сервера Jenkins в Azure](./configure-on-linux-vm.md).
 
-  > [!TIP]
-  > Используемый в этом руководстве исходный код расположен в [репозитории GitHub для Visual Studio China](https://github.com/VSChina/odd-or-even-function/blob/master/src/main/java/com/microsoft/azure/Function.java).
+## <a name="view-the-source-code"></a>Просмотр исходного кода
+
+Используемый в этом руководстве исходный код расположен в [репозитории GitHub для Visual Studio China](https://github.com/VSChina/odd-or-even-function/blob/master/src/main/java/com/microsoft/azure/Function.java).
 
 ## <a name="create-a-java-function"></a>Создание функции Java
 
-Чтобы создать функцию Java с помощью стека среды выполнения Java, используйте [портал Azure](https://portal.azure.com) или [Azure CLI](/cli/azure/?view=azure-cli-latest).
+Чтобы создать функцию Java с помощью стека среды выполнения Java, используйте [портал Azure](https://portal.azure.com) или [Azure CLI](/cli/azure/).
 
 Ниже объясняется, как создать функцию Java с помощью Azure CLI:
 

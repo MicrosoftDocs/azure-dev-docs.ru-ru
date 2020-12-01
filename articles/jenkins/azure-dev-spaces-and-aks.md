@@ -5,18 +5,18 @@ keywords: Jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Служба Azure Kube
 ms.topic: tutorial
 ms.date: 10/23/2019
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: b5de1c470b5b47184b1c8fe33c31e6958e0a45e9
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 3652d0bc1dc418c4037296fdacc3a56384b592c3
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689108"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983713"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>Руководство по использованию Azure Dev Spaces со Службой Azure Kubernetes
 
 Azure Dev Spaces позволяет тестировать и итеративно разрабатывать приложение микрослужб, выполняемое в Службе Azure Kubernetes (AKS), без необходимости реплицировать или имитировать зависимости. Подключаемый модуль Azure Dev Spaces для Jenkins помогает использовать Azure Dev Spaces в конвейере непрерывной интеграции и непрерывной доставки (CI/CD).
 
-В этом руководстве используется Реестр контейнеров Azure (ACR). ACR хранит образы, а задача ACR компилирует артефакты Docker и Helm. Применение ACR и задачи ACR для создания артефактов позволяет избавиться от установки дополнительного программного обеспечения, например Docker, на сервере Jenkins. 
+В этом руководстве используется Реестр контейнеров Azure (ACR). ACR хранит образы, а задача ACR компилирует артефакты Docker и Helm. Применение ACR и задачи ACR для создания артефактов позволяет избавиться от установки дополнительного программного обеспечения, например Docker, на сервере Jenkins.
 
 При работе с этим руководством вы выполните следующие задачи:
 
@@ -36,9 +36,9 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 * Установленная платформа [Visual Studio Code](https://code.visualstudio.com/download) с расширением [Azure Dev Spaces](https://marketplace.visualstudio.com/items?itemName=azuredevspaces.azds).
 
-* [Установленное средство Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) версии 2.0.43 или выше.
+* [Установленное средство Azure CLI](/cli/azure/install-azure-cli) версии 2.0.43 или выше.
 
-* Главный узел Jenkins. Если у вас еще нет главного узла Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из [этого краткого руководства](/azure/jenkins/install-jenkins-solution-template). 
+* Сервер Jenkins. Если у вас еще нет Jenkins, разверните [Jenkins](https://azuremarketplace.microsoft.com/marketplace/apps/bitnami.production-jenkins) в Azure, выполнив инструкции из [этого краткого руководства](/azure/jenkins/install-jenkins-solution-template). 
 
 * На сервере Jenkins нужно установить Helm и kubectl, а также предоставить учетной записи Jenkins доступ к ним, как описано далее в этом руководстве.
 
@@ -118,7 +118,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     }
     ```
 
-4. Щелкните **Вид** и **Терминал** , чтобы открыть интегрированный терминал в VS Code.
+4. Щелкните **Вид** и **Терминал**, чтобы открыть интегрированный терминал в VS Code.
 
 5. Выполните команду `azds prep`, чтобы подготовить приложение к запуску в пространстве разработки. Эта команда должна выполняться из `dev-spaces/samples/java/getting-started/webfrontend`, чтобы правильно подготовить приложение.
 
@@ -147,7 +147,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
     ```
     Перейдите по этому URL-адресу в браузере, чтобы открыть веб-приложение. По мере выполнения контейнера в окно терминала передаются выходные данные `stdout` и `stderr`.
 
-8. Теперь настройте и разверните *mywebapi* :
+8. Теперь настройте и разверните *mywebapi*:
 
     1. Перейдите в каталог `dev-spaces/samples/java/getting-started/mywebapi`.
 
@@ -267,7 +267,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 ![Поток конвейера Jenkins](media/azure-dev-spaces-and-aks/jenkins-pipeline-flow.png)
 
-1. Скачайте измененную версию проекта *mywebapi* по адресу [https://github.com/azure-devops/mywebapi](https://github.com/azure-devops/mywebapi). Этот проект содержит несколько файлов, которые потребуются для создания конвейера, в том числе *Jenkinsfile* , *Dockerfiles* и чарт Helm.
+1. Скачайте измененную версию проекта *mywebapi* по адресу [https://github.com/azure-devops/mywebapi](https://github.com/azure-devops/mywebapi). Этот проект содержит несколько файлов, которые потребуются для создания конвейера, в том числе *Jenkinsfile*, *Dockerfiles* и чарт Helm.
 
 2. Войдите в Jenkins. В меню слева выберите **Add Item** (Добавить элемент).
 
@@ -345,7 +345,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 2. Войдите в Jenkins выберите имя конвейера, а затем щелкните **Build Now** (Собрать сейчас). 
 
-    Можно также настроить *веб-перехватчик* , который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
+    Можно также настроить *веб-перехватчик*, который будет автоматически запускать конвейер Jenkins. При вводе запроса на вытягивание GitHub отправляет в Jenkins запрос POST, который запускает конвейер. Дополнительные сведения о настройке веб-перехватчика см. в разделе о [подключении Jenkins к GitHub](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github).
 
 3. Сравните изменения с текущей общедоступной версией.
 
@@ -359,7 +359,7 @@ Azure Dev Spaces позволяет тестировать и итеративн
 
 При отправке запроса на вытягивание Jenkins создает дочернее пространство разработки на основе общего пространства разработки команды разработчиков и выполняет в этом дочернем пространстве код из запроса на вытягивание. URL-адрес дочернего пространства разработки имеет вид `http://$env.azdsprefix.<test_endpoint>`. 
 
-Значение для **$env.azdsprefix** присваивается во время выполнения конвейера подключаемым модулем Azure Dev Spaces с помощью **devSpacesCreate** :
+Значение для **$env.azdsprefix** присваивается во время выполнения конвейера подключаемым модулем Azure Dev Spaces с помощью **devSpacesCreate**:
 
 ```Groovy
 stage('create dev space') {

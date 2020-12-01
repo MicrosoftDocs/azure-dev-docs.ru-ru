@@ -3,12 +3,12 @@ title: 'Новые возможности JavaScript '
 description: Обновления документации по JavaScript за октябрь 2020 года
 ms.topic: conceptual
 ms.date: 11/13/2020
-ms.openlocfilehash: dba173f640205bbd43ce0f9e11387eba02c7a20e
-ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
+ms.openlocfilehash: db784cead94e66fd69232abd782039891ab7e63e
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94601276"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983673"
 ---
 # <a name="javascript-docs-whats-new-for-october-2020"></a>Документация по JavaScript: обновления за октябрь 2020 года
 
@@ -23,7 +23,14 @@ ms.locfileid: "94601276"
 
 |Имя|Примечания|
 |---------------------------------------|--|
+|[Учебник. Создание и развертывание статического веб-приложения React в Azure](./tutorial/static-web-app/introduction.md)|В этом руководстве описано создание и развертывание клиентского приложения React в виде статического веб-приложения Azure с помощью действия GitHub.<br>create-react-app позволяет анализировать изображения с помощью Компьютерного зрения Cognitive Services. Действие GitHub начинает выполняться при принудительной отправке в указанную удаленную ветвь, создании клиента React (create-react-app) и перемещении результирующих файлов в ресурс статического веб-приложения Azure.|
 |[Учебник. Развертывание приложения на виртуальной машине Linux](./tutorial/nodejs-virtual-machine-vm/introduction.md)|В этом руководстве описано, как создать виртуальную машину Linux для приложения Express.js. Виртуальная машина настраивается с помощью файла конфигурации cloud-init и содержит NGINX и репозиторий GitHub для приложения Express.js. После запуска виртуальной машины можно подключиться к ней по протоколу SSH. Также можно изменить веб-приложение, включив ведение журнала трассировки, и просмотреть общедоступное серверное приложение Express.js в веб-браузере.|
+
+### <a name="whats-updated"></a>Обновления
+
+|Имя|Примечания|
+|---------------------------------------|--|
+|[Learn](learn-azure-javascript.md)|Новые модули и сертификация для JavaScript.|
 
 ## <a name="2020-october"></a>Октябрь 2020 года
 

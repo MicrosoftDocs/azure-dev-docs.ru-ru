@@ -2,22 +2,23 @@
 title: Начало работы с пакетом Azure SDK для Java
 description: Сведения о создании, подключении и использовании облачных ресурсов Azure в приложениях Java.
 keywords: Azure, Java, SDK, API, authenticate, get-started
-author: rloutlaw
-ms.date: 04/16/2017
+author: bmitchell287
+ms.author: brendm
+ms.date: 11/20/2020
 ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019, devx-track-java, devx-track-azurecli
-ms.openlocfilehash: a6022875af3a15f7140e4db7fcc669d47f55b3d2
-ms.sourcegitcommit: dee8dc9ce6c255c53913e27813dc3659ff238a01
+ms.openlocfilehash: 5b569d07a7686b73bbed7983ea3343b8a36d7bfc
+ms.sourcegitcommit: 29930f1593563c5e968b86117945c3452bdefac1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94379004"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "96035430"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
-В этом руководстве описано, как настроить среду разработки и использовать библиотеки Azure для Java. Вы создадите ресурсы Azure и подключитесь к ним для выполнения таких базовых задач, как передача файла или развертывание веб-приложения. Когда все будет готово, вы будете готовы приступить к использованию служб Azure в приложениях Java.
+В этой статье показано, как настроить среду разработки в Azure для разработки на Java. Вы создадите ресурсы Azure и подключитесь к ним для выполнения таких базовых задач, как передача файла или развертывание веб-приложения. Когда все будет готово, вы сможете использовать службы Azure в приложениях Java.
 
 [!INCLUDE [chrome-note](includes/chrome-note.md)]
 
@@ -25,14 +26,14 @@ ms.locfileid: "94379004"
 
 - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 - [Azure Cloud Shell](/azure/cloud-shell/quickstart) или [Azure CLI 2.0](/cli/azure/install-az-cli2).
-- [Java 8](https://docs.microsoft.com/azure/developer/java/fundamentals/java-jdk-long-term-support) (в составе Azure Cloud Shell)
-- [Maven 3](https://maven.apache.org/download.cgi) (в составе Azure Cloud Shell)
+- [Java 8](https://docs.microsoft.com/azure/developer/java/fundamentals/java-jdk-long-term-support) в составе Azure Cloud Shell.
+- [Maven 3](https://maven.apache.org/download.cgi) в составе Azure Cloud Shell.
 
 ## <a name="set-up-authentication"></a>Настройка проверки подлинности
 
 Чтобы выполнить пример кода из этого руководства, предоставьте приложению Java в вашей подписке Azure разрешения на чтение и создание. Создайте субъект-службу и настройте приложение для выполнения со связанными учетными данными. Субъект-служба помогает создать неинтерактивную учетную запись, связанную с вашим идентификатором. Этой учетной записи предоставляются только разрешения, необходимые для запуска приложения.
 
-[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные.
+[Создайте субъект-службу с помощью Azure CLI 2.0](/cli/azure/create-an-azure-service-principal-azure-cli) и запишите выходные данные:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --name AzureJavaTest
@@ -50,49 +51,23 @@ az ad sp create-for-rbac --name AzureJavaTest
 }
 ```
 
-Затем скопируйте следующий код в текстовый файл в системе:
+Теперь настройте переменные среды:
 
-```text
-# sample management library properties file
-subscription=ssssssss-ssss-ssss-ssss-ssssssssssss
-client=cccccccc-cccc-cccc-cccc-cccccccccccc
-key=aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
-tenant=tttttttt-tttt-tttt-tttt-tttttttttttt
-managementURI=https\://management.core.windows.net/
-baseURL=https\://management.azure.com/
-authURL=https\://login.windows.net/
-graphURL=https\://graph.windows.net/
-```
+- `AZURE_SUBSCRIPTION_ID`: используйте значение *id* из выходных данных `az account show` в Azure CLI 2.0.
+- `AZURE_CLIENT_ID`: используйте значение *appId* из выходных данных субъекта-службы.
+- `AZURE_CLIENT_SECRET`: используйте значение *password* из выходных данных субъекта-службы.
+- `AZURE_TENANT_ID`: используйте значение *tenant* из выходных данных субъекта-службы.
 
-Замените первые четыре значения следующим кодом:
-
-- subscription — используйте значение *id* из `az account show` в Azure CLI 2.0.
-- client — используйте значение *appId* из выходных данных субъекта-службы.
-- key — используйте значение *password* из выходных данных субъекта-службы.
-- tenant — используйте значение *tenant* из выходных данных субъекта-службы.
-
-Сохраните этот файл в безопасном расположении в вашей системе, доступном для кода. Вы можете использовать этот файл для будущего кода, поэтому рекомендуется сохранить его где-либо за пределами используемого в этой статье приложения.
-
-Задайте переменную среды `AZURE_AUTH_LOCATION` и укажите полный путь к файлу аутентификации в оболочке.
-
-```bash
-export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
-```
-
-Если вы работаете в среде Windows, добавьте переменную в свойства системы. Откройте окно PowerShell с правами администратора. Замените вторую переменную путем к файлу и введите следующую команду:
-
-```powershell
-setx AZURE_AUTH_LOCATION "C:\<fullpath>\azureauth.properties" /m
-```
+Сведения о дополнительных вариантах проверки подлинности см. в документации по [удостоверению Azure](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/identity/azure-identity#azure-identity-client-library-for-java).
 
 ## <a name="tooling"></a>Инструментарий
 
 ### <a name="create-a-new-maven-project"></a>Создание нового проекта Maven
 
 > [!NOTE]
-> В этом руководстве пример кода создается и запускается с помощью средства сборки Maven. Но с библиотеками Azure для Java можно использовать и другие инструменты, например Gradle.
+> В рамках этой статьи для сборки и запуска примера кода используется средство сборки Maven. Для работы с библиотеками Azure для Java есть и другие средства сборки, например Gradle.
 
-Создание проекта Maven из командной строки в новом каталоге на компьютере:
+Создайте проект Maven из командной строки в новом каталоге на локальном компьютере.
 
 ```shell
 mkdir java-azure-test
@@ -101,22 +76,38 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-При этом в папке `testAzureApp` создается базовый проект Maven. Добавьте следующие записи в проект `pom.xml`, чтобы импортировать библиотеки, используемые в примере кода в этом руководстве.
+На этом этапе создается базовый проект Maven в папке `testAzureApp`. Добавьте следующие записи в проект `pom.xml`, чтобы импортировать библиотеки, используемые в примере кода в этом руководстве.
 
 ```XML
 <dependency>
-      <groupId>com.azure</groupId>
-      <artifactId>azure-storage-blob</artifactId>
-      <version>12.8.0</version>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-identity</artifactId>
+    <version>1.2.0</version>
+</dependency>
+<dependency>
+    <groupId>com.azure.resourcemanager</groupId>
+    <artifactId>azure-resourcemanager</artifactId>
+    <version>2.0.0</version>
+</dependency>
+<dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-storage-blob</artifactId>
+    <version>12.8.0</version>
 </dependency>
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.2.1.jre8</version>
 </dependency>
+<!-- Only for SQL sample as it's still in preview -->
+<dependency>
+    <groupId>com.azure.resourcemanager</groupId>
+    <artifactId>azure-resourcemanager-sql</artifactId>
+    <version>2.0.0-beta.5</version>
+</dependency>
 ```
 
-Добавьте запись `build` в элемент верхнего уровня `project`, чтобы использовать [maven-exec-plugin](https://www.mojohaus.org/exec-maven-plugin/) для выполнения примеров:
+Добавьте запись `build` в элемент верхнего уровня `project`, чтобы использовать [maven-exec-plugin](https://www.mojohaus.org/exec-maven-plugin/) для выполнения примеров.
 
 ```XML
 <build>
@@ -134,59 +125,38 @@ mvn archetype:generate -DgroupId=com.fabrikam -DartifactId=AzureApp \
 
 ### <a name="install-the-azure-toolkit-for-intellij"></a>Установка Azure Toolkit for IntelliJ
 
-[Набор средств Azure](../toolkit-for-intellij/index.yml) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
+[Набор средств Azure](../toolkit-for-intellij/index.yml) нужен, только если вы намерены развертывать веб-приложения или API программными средствами. Сейчас он не используется для других видов разработки. Ниже приведены инструкции по установке. Краткое руководство см. в документации по [Azure Toolkit for IntelliJ](../toolkit-for-intellij/create-hello-world-web-app.md).
 
-- В меню **Файл** выберите **Параметры**.
-
-- Выберите **Обзор репозиториев...** найдите "Azure" и установите **набор средств Azure для Intellij**.
-
-- Перезапустите Intellij.
+1. В меню **Файл** выберите элемент **Параметры**.
+1. Выберите элемент **Обзор репозиториев**, выполните поиск по строке **Azure** и установите **Azure Toolkit for IntelliJ**.
+1. Перезапустите Intellij.
 
 ### <a name="install-the-azure-toolkit-for-eclipse"></a>Установка набора средств Azure для Eclipse
 
-[Набор средств Azure](../toolkit-for-eclipse/index.yml) требуется, если вы развертываете веб-приложения и API-интерфейсы программными средствами. Сейчас этот набор не используется для разработки других типов. Ниже приведены общие сведения о действиях по установке. Подробные сведения см. в [кратком руководстве по Azure Toolkit for Eclipse](../toolkit-for-eclipse/create-hello-world-web-app.md).
+[Набор средств Azure](../toolkit-for-eclipse/index.yml) нужен, только если вы намерены развертывать веб-приложения или API программными средствами. Сейчас он не используется для других видов разработки. Ниже приведены инструкции по установке. Краткое руководство см. в документации по [Azure Toolkit for Eclipse](../toolkit-for-eclipse/create-hello-world-web-app.md).
 
-- В меню **Help** (Справка) выберите пункт **Install New Software** (Установка нового программного обеспечения).
-
-- В поле **Work with:** (Работа с:) введите `http://dl.microsoft.com/eclipse/` и нажмите клавишу ВВОД.
-
-- Затем установите флажок рядом с пунктом **Azure toolkit for Java** (Набор средств Azure для Java) и снимите флажок рядом с пунктом **Contact all update sites during install to find required software** (Проверить все сайты обновления во время установки для поиска требуемого ПО). Затем нажмите кнопку "Далее".
+1. В меню **Help** (Справка) выберите пункт **Install New Software** (Установка нового программного обеспечения).
+1. В поле **Work with** (Совместная работа с) выберите `http://dl.microsoft.com/eclipse/` и нажмите **ВВОД**.
+1. Установите флажок **Azure toolkit for Java** (Набор средств Azure для Java). Снимите флажок **Contact all update sites during install to find required software** (Опрашивать при установке все сайты обновления для поиска необходимого программного обеспечения). Выберите **Далее**.
 
 ## <a name="create-a-linux-virtual-machine"></a>Создание виртуальной машины Linux
 
-Создайте файл с именем `AzureApp.java` в каталоге проекта `src/main/java/com/fabrikam` и вставьте следующий блок кода. Обновите переменные `userName` и `sshKey`, указав реальные значения для своего компьютера. Код создает виртуальную машину Linux с именем `testLinuxVM` в группе ресурсов `sampleResourceGroup`, которая выполняется в регионе Azure "Восточная часть США".
+Создайте файл с именем `AzureApp.java` в каталоге проекта `src/main/java/com/fabrikam` и вставьте в него приведенный ниже блок кода. Обновите переменные `userName` и `sshKey`, указав реальные значения для своего компьютера. Этот код позволяет создать виртуальную машину Linux с именем `testLinuxVM` в группе ресурсов `sampleResourceGroup`, которая выполняется в регионе Azure "Восточная часть США".
 
 ```java
 package com.fabrikam;
 
-import com.microsoft.azure.management.Azure;
-import com.microsoft.azure.management.compute.VirtualMachine;
-import com.microsoft.azure.management.compute.KnownLinuxVirtualMachineImage;
-import com.microsoft.azure.management.compute.VirtualMachineSizeTypes;
-import com.microsoft.azure.management.appservice.WebApp;
-import com.microsoft.azure.management.storage.StorageAccount;
-import com.microsoft.azure.management.storage.SkuName;
-import com.microsoft.azure.management.storage.StorageAccountKey;
-import com.microsoft.azure.management.sql.SqlDatabase;
-import com.microsoft.azure.management.sql.SqlServer;
-import com.microsoft.azure.management.resources.fluentcore.arm.Region;
-import com.microsoft.azure.management.resources.fluentcore.utils.SdkContext;
-
-import com.microsoft.rest.LogLevel;
-
-import com.azure.storage.blob.BlobClient;
-import com.azure.storage.blob.BlobContainerClient;
-import com.azure.storage.blob.BlobServiceClient;
-import com.azure.storage.blob.BlobServiceClientBuilder;
-import com.azure.storage.blob.models.PublicAccessType;
-import com.azure.storage.common.StorageSharedKeyCredential;
-
-import java.io.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.List;
+import com.azure.core.credential.TokenCredential;
+import com.azure.core.http.policy.HttpLogDetailLevel;
+import com.azure.core.management.AzureEnvironment;
+import com.azure.core.management.Region;
+import com.azure.core.management.profile.AzureProfile;
+import com.azure.identity.AzureAuthorityHosts;
+import com.azure.identity.EnvironmentCredentialBuilder;
+import com.azure.resourcemanager.AzureResourceManager;
+import com.azure.resourcemanager.compute.models.KnownLinuxVirtualMachineImage;
+import com.azure.resourcemanager.compute.models.VirtualMachine;
+import com.azure.resourcemanager.compute.models.VirtualMachineSizeTypes;
 
 public class AzureApp {
 
@@ -196,17 +166,21 @@ public class AzureApp {
         final String sshKey = "YOUR_PUBLIC_SSH_KEY";
 
         try {
+            TokenCredential credential = new EnvironmentCredentialBuilder()
+                    .authorityHost(AzureAuthorityHosts.AZURE_PUBLIC_CLOUD)
+                    .build();
 
-            // use the properties file with the service principal information to authenticate
-            // change the name of the environment variable if you used a different name in the previous step
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
-            Azure azure = Azure.configure()
-                    .withLogLevel(LogLevel.BASIC)
-                    .authenticate(credFile)
+            // If you do not set the tenant ID and subscription ID via environment variables,
+            // change to create the Azure profile with tenantId, subscriptionId, and Azure environment.
+            AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+
+            AzureResourceManager azureResourceManager = AzureResourceManager.configure()
+                    .withLogLevel(HttpLogDetailLevel.BASIC)
+                    .authenticate(credential, profile)
                     .withDefaultSubscription();
 
-            // create a Ubuntu virtual machine in a new resource group
-            VirtualMachine linuxVM = azure.virtualMachines().define("testLinuxVM")
+            // Create an Ubuntu virtual machine in a new resource group.
+            VirtualMachine linuxVM = azureResourceManager.virtualMachines().define("testLinuxVM")
                     .withRegion(Region.US_EAST)
                     .withNewResourceGroup("sampleVmResourceGroup")
                     .withNewPrimaryNetwork("10.0.0.0/24")
@@ -227,19 +201,19 @@ public class AzureApp {
 }
 ```
 
-Запустите пример из командной строки:
+Запустите этот пример из командной строки.
 
 ```shell
 mvn compile exec:java
 ```
 
-В консоли отображаются некоторые запросы и ответы REST по мере того, как пакет SDK выполняет базовые вызовы Azure REST API, чтобы настроить виртуальную машину и ее ресурсы. Когда программа завершит работу, проверьте виртуальную машину в подписке с помощью Azure CLI 2.0:
+В консоли будут появляться запросы и ответы REST, по мере того как пакет SDK выполняет базовые вызовы к REST API Azure для настройки виртуальной машины и ее ресурсов. Когда эта программа завершит работу, проверьте наличие виртуальной машины в подписке с помощью Azure CLI 2.0.
 
 ```azurecli-interactive
 az vm list --resource-group sampleVmResourceGroup
 ```
 
-Проверив, что код работает, используйте CLI, чтобы удалить виртуальную машину и ее ресурсы.
+Убедившись, что код выполнил свою работу, с помощью CLI удалите виртуальную машину и ее ресурсы.
 
 ```azurecli-interactive
 az group delete --name sampleVmResourceGroup
@@ -247,21 +221,28 @@ az group delete --name sampleVmResourceGroup
 
 ## <a name="deploy-a-web-app-from-a-github-repo"></a>Развертывание веб-приложения из репозитория GitHub
 
-Перед выполнением кода замените основной метод в `AzureApp.java` одним из указанных ниже, задав для переменной `appName` уникальное значение. Этот код развертывает веб-приложение из ветви `master` в общедоступном репозитории GitHub в новое [веб-приложение службы приложений Azure](/azure/app-service-web/app-service-web-overview) ценовой категории "Бесплатный".
+Замените в `AzureApp.java` метод main на следующий код. Перед выполнением кода присвойте переменной `appName` уникальное значение. Этот код развертывает веб-приложение из ветви `master` в общедоступном репозитории GitHub в новое [веб-приложение службы приложений Azure](/azure/app-service-web/app-service-web-overview) ценовой категории "Бесплатный".
 
 ```java
     public static void main(String[] args) {
         try {
 
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
             final String appName = "YOUR_APP_NAME";
 
-            Azure azure = Azure.configure()
-                    .withLogLevel(LogLevel.BASIC)
-                    .authenticate(credFile)
+            TokenCredential credential = new EnvironmentCredentialBuilder()
+                    .authorityHost(AzureAuthorityHosts.AZURE_PUBLIC_CLOUD)
+                    .build();
+
+            // If you do not set the tenant ID and subscription ID via environment variables,
+            // change to create the Azure profile with tenantId, subscriptionId, and Azure environment.
+            AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+            
+            AzureResourceManager azureResourceManager = AzureResourceManager.configure()
+                    .withLogLevel(HttpLogDetailLevel.BASIC)
+                    .authenticate(credential, profile)
                     .withDefaultSubscription();
 
-            WebApp app = azure.webApps().define(appName)
+            WebApp app = azureResourceManager.webApps().define(appName)
                     .withRegion(Region.US_WEST2)
                     .withNewResourceGroup("sampleWebResourceGroup")
                     .withNewWindowsPlan(PricingTier.FREE_F1)
@@ -279,19 +260,19 @@ az group delete --name sampleVmResourceGroup
     }
 ```
 
-Перед использованием Maven выполните следующий код:
+Выполните этот код перед началом работы с Maven.
 
 ```shell
 mvn clean compile exec:java
 ```
 
-Откройте браузер и укажите приложение в CLI:
+С помощью CLI откройте в браузере адрес приложения.
 
 ```azurecli-interactive
 az appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME
 ```
 
-Проверив развертывание, удалите веб-приложение и план из подписки.
+Завершив развертывание, удалите веб-приложение и план из подписки.
 
 ```azurecli-interactive
 az group delete --name sampleWebResourceGroup
@@ -299,37 +280,45 @@ az group delete --name sampleWebResourceGroup
 
 ## <a name="connect-to-an-azure-sql-database"></a>Подключение к базе данных SQL Azure
 
-Замените текущий основной метод в `AzureApp.java` кодом ниже, задав реальное значение для переменной `dbPassword`.
-Этот код создает новую базу данных SQL с правилом брандмауэра, разрешающим удаленный доступ, и подключается к ней с помощью драйвера JBDC базы данных SQL.
+Замените в `AzureApp.java` существующий код метода main приведенным ниже кодом. Укажите реальные значения для переменных.
+Этот код позволяет создать базу данных SQL с правилом брандмауэра, которое разрешает удаленный доступ. Затем этот код подключается к ней с использованием драйвера JDBC Базы данных SQL.
 
 ```java
     public static void main(String args[])
     {
-        // create the db using the management libraries
+        // Create the db using the management libraries.
         try {
-            final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
-            Azure azure = Azure.configure()
-                    .withLogLevel(LogLevel.BASIC)
-                    .authenticate(credFile)
-                    .withDefaultSubscription();
+            TokenCredential credential = new EnvironmentCredentialBuilder()
+                    .authorityHost(AzureAuthorityHosts.AZURE_PUBLIC_CLOUD)
+                    .build();
 
-            final String adminUser = SdkContext.randomResourceName("db",8);
-            final String sqlServerName = SdkContext.randomResourceName("sql",10);
-            final String sqlDbName = SdkContext.randomResourceName("dbname",8);
+            // If you do not set the tenant ID and subscription ID via environment variables,
+            // change to create the Azure profile with tenantId, subscriptionId, and Azure environment.
+            AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+
+            SqlServerManager sqlServerManager = SqlServerManager.configure()
+                    .withLogLevel(HttpLogDetailLevel.BASIC)
+                    .authenticate(credential, profile);
+
+            final String adminUser = "YOUR_USERNAME_HERE";
+            final String sqlServerName = "YOUR_SERVER_NAME_HERE";
+            final String sqlDbName = "YOUR_DB_NAME_HERE";
             final String dbPassword = "YOUR_PASSWORD_HERE";
+            final String firewallRuleName = "YOUR_RULE_NAME_HERE";
 
-
-            SqlServer sampleSQLServer = azure.sqlServers().define(sqlServerName)
-                            .withRegion(Region.US_EAST)
-                            .withNewResourceGroup("sampleSqlResourceGroup")
-                            .withAdministratorLogin(adminUser)
-                            .withAdministratorPassword(dbPassword)
-                            .withNewFirewallRule("0.0.0.0","255.255.255.255")
-                            .create();
+            SqlServer sampleSQLServer = sqlServerManager.sqlServers().define(sqlServerName)
+                    .withRegion(Region.US_EAST)
+                    .withNewResourceGroup("sampleSqlResourceGroup")
+                    .withAdministratorLogin(adminUser)
+                    .withAdministratorPassword(dbPassword)
+                    .defineFirewallRule(firewallRuleName)
+                        .withIpAddressRange("0.0.0.0","255.255.255.255")
+                        .attach()
+                    .create();
 
             SqlDatabase sampleSQLDb = sampleSQLServer.databases().define(sqlDbName).create();
 
-            // assemble the connection string to the database
+            // Assemble the connection string to the database.
             final String domain = sampleSQLServer.fullyQualifiedDomainName();
             String url = "jdbc:sqlserver://"+ domain + ":1433;" +
                     "database=" + sqlDbName +";" +
@@ -337,7 +326,7 @@ az group delete --name sampleWebResourceGroup
                     "password=" + dbPassword + ";" +
                     "encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
 
-            // connect to the database, create a table and insert a entry into it
+            // Connect to the database, create a table, and insert an entry into it.
             Connection conn = DriverManager.getConnection(url);
 
             String createTable = "CREATE TABLE CLOUD ( name varchar(255), code int);";
@@ -363,13 +352,13 @@ az group delete --name sampleWebResourceGroup
     }
 ```
 
-Запустите пример из командной строки:
+Запустите этот пример из командной строки.
 
 ```shell
 mvn clean compile exec:java
 ```
 
-Затем удалите ресурсы с помощью CLI:
+Теперь удалите ресурсы с помощью CLI.
 
 ```azurecli-interactive
 az group delete --name sampleSqlResourceGroup
@@ -377,66 +366,69 @@ az group delete --name sampleSqlResourceGroup
 
 ## <a name="write-a-blob-into-a-new-storage-account"></a>Запись большого двоичного объекта в новую учетную запись хранения
 
-Замените текущий основной метод в `AzureApp.java` следующим кодом. Этот код создает [учетную запись хранения Azure](/azure/storage/common/storage-introduction), а затем использует библиотеки хранилища Azure для Java, чтобы создать текстовый файл в облаке.
+Замените в `AzureApp.java` существующий код метода main приведенным ниже кодом. Этот код позволяет [создать учетную запись хранения Azure](/azure/storage/common/storage-introduction). Затем с помощью библиотек службы хранилища Azure для Java в облаке создается текстовый файл.
 
 ```java
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    try {
+        try {
+            TokenCredential tokenCredential = new EnvironmentCredentialBuilder()
+                    .authorityHost(AzureAuthorityHosts.AZURE_PUBLIC_CLOUD)
+                    .build();
 
-        // use the properties file with the service principal information to authenticate
-        // change the name of the environment variable if you used a different name in the previous step
-        final File credFile = new File(System.getenv("AZURE_AUTH_LOCATION"));
-        Azure azure = Azure.configure()
-                .withLogLevel(LogLevel.BASIC)
-                .authenticate(credFile)
-                .withDefaultSubscription();
+            // If you do not set the tenant ID and subscription ID via environment variables,
+            // change to create the Azure profile with tenantId, subscriptionId, and Azure environment.
+            AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 
-        // create a new storage account
-        String storageAccountName = SdkContext.randomResourceName("st",8);
-        StorageAccount storage = azure.storageAccounts().define(storageAccountName)
+            AzureResourceManager azureResourceManager = AzureResourceManager.configure()
+                    .withLogLevel(HttpLogDetailLevel.BASIC)
+                    .authenticate(tokenCredential, profile)
+                    .withDefaultSubscription();
+
+            // Create a new storage account.
+            String storageAccountName = "YOUR_STORAGE_ACCOUNT_NAME_HERE";
+            StorageAccount storage = azureResourceManager.storageAccounts().define(storageAccountName)
                     .withRegion(Region.US_WEST2)
                     .withNewResourceGroup("sampleStorageResourceGroup")
                     .create();
 
-        // create a storage container to hold the file
-        List<StorageAccountKey> keys = storage.getKeys();
-        PublicEndpoints endpoints = storage.endPoints();
-        String accountName = storage.name();
-        String accountKey = keys.get(0).value();
-        String endpoint = endpoints.primary().blob();
+            // Create a storage container to hold the file.
+            List<StorageAccountKey> keys = storage.getKeys();
+            PublicEndpoints endpoints = storage.endPoints();
+            String accountName = storage.name();
+            String accountKey = keys.get(0).value();
+            String endpoint = endpoints.primary().blob();
 
-        StorageSharedKeyCredential credential = new StorageSharedKeyCredential(accountName, accountKey);
+            StorageSharedKeyCredential credential = new StorageSharedKeyCredential(accountName, accountKey);
 
-        BlobServiceClient storageClient =new BlobServiceClientBuilder()
-                                    .endpoint(endpoint)
-                                    .credential(credential)
-                                    .buildClient();
+            BlobServiceClient storageClient =new BlobServiceClientBuilder()
+                    .endpoint(endpoint)
+                    .credential(credential)
+                    .buildClient();
 
-        // Container name must be lower case
-        BlobContainerClient blobContainerClient = storageClient.getBlobContainerClient("helloazure");
-        blobContainerClient.create();
+            // Container name must be lowercase.
+            BlobContainerClient blobContainerClient = storageClient.getBlobContainerClient("helloazure");
+            blobContainerClient.create();
 
-        // Make the container public
-        blobContainerClient.setAccessPolicy(PublicAccessType.CONTAINER, null);
+            // Make the container public.
+            blobContainerClient.setAccessPolicy(PublicAccessType.CONTAINER, null);
 
-        // write a blob to the container
-        String fileName = "helloazure.txt";
-        String textNew = "Hello Azure";
+            // Write a blob to the container.
+            String fileName = "helloazure.txt";
+            String textNew = "Hello Azure";
 
-        BlobClient blobClient = blobContainerClient.getBlobClient(fileName);
-        InputStream is = new ByteArrayInputStream(textNew.getBytes());
-        blobClient.upload(is, textNew.length());
+            BlobClient blobClient = blobContainerClient.getBlobClient(fileName);
+            InputStream is = new ByteArrayInputStream(textNew.getBytes());
+            blobClient.upload(is, textNew.length());
 
-    } catch (Exception e) {
-        System.out.println(e.getMessage());
-        e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
-    }
-}
 ```
 
-Запустите пример из командной строки:
+Запустите этот пример из командной строки.
 
 ```shell
 mvn clean compile exec:java
@@ -444,7 +436,7 @@ mvn clean compile exec:java
 
 Перейти к файлу `helloazure.txt` в вашей учетной записи хранения можно с помощью портала Azure или [обозревателя хранилищ Azure](/azure/vs-azure-tools-storage-explorer-blobs).
 
-Удалите учетную запись хранилища с помощью CLI:
+Удалите учетную запись хранилища с помощью CLI.
 
 ```azurecli-interactive
 az group delete --name sampleStorageResourceGroup
@@ -452,7 +444,7 @@ az group delete --name sampleStorageResourceGroup
 
 ## <a name="explore-more-samples"></a>Другие примеры
 
-Дополнительные сведения о том, как использовать библиотеки управления Azure для Java, чтобы управлять ресурсами и автоматизировать задачи, см. в наших примерах кода для [виртуальных машин](java-sdk-azure-virtual-machine-samples.md), [веб-приложений](java-sdk-azure-web-apps-samples.md) и [базы данных SQL](java-sdk-azure-sql-database-samples.md).
+Дополнительные сведения о том, как с применением библиотеки управления Azure для Java управлять ресурсами и автоматизировать задачи, см. в наших примерах кода для [виртуальных машин](java-sdk-azure-virtual-machine-samples.md), [веб-приложений](java-sdk-azure-web-apps-samples.md) и [Базы данных SQL](java-sdk-azure-sql-database-samples.md).
 
 ## <a name="reference-and-release-notes"></a>Ссылки и заметки о выпуске
 

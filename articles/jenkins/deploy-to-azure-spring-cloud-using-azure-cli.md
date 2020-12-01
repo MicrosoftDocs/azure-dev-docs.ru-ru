@@ -3,14 +3,14 @@ title: Развертывание приложений в Azure Spring Cloud с 
 description: Узнайте, как развертывать микрослужбы в службе Azure Spring Cloud с помощью Azure CLI в конвейере непрерывной интеграции и развертывания
 keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
-ms.date: 09/01/2020
+ms.date: 11/10/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: 7b8eaf783e909e9291dc7b0e6781bf4e8cb0d4c3
-ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
+ms.openlocfilehash: e0b98f31ac7f7b079f655c4cb795fe7b38af4508
+ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91586139"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "94983973"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
@@ -26,9 +26,7 @@ ms.locfileid: "91586139"
 ## <a name="prerequisites"></a>Предварительные требования
 
 [!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
-
 - **Jenkins**: [установите Jenkins на виртуальной машине Linux.](configure-on-linux-vm.md)
-
 - **Учетная запись GitHub**. Если у вас нет учетной записи GitHub, [создайте бесплатную учетную запись](https://github.com/), прежде чем начинать работу.
 
 ## <a name="provision-a-service-instance-and-launch-a-java-spring-application"></a>Подготовка экземпляра службы и запуск приложения Java Spring
@@ -36,10 +34,11 @@ ms.locfileid: "91586139"
 В качестве примера приложения для службы Майкрософт мы используем [Piggy Metrics](https://github.com/Azure-Samples/piggymetrics), для которого выполняем те же инструкции, что и в рамках [краткого руководства по запуску приложения Java Spring с помощью Azure CLI](/azure/spring-cloud/spring-cloud-quickstart-launch-app-cli), для инициализации экземпляра службы и настройки приложений. Если вы уже сделали это, можете пропустить следующий раздел. Если нет, выполните команды Azure CLI, указанные далее. В [кратком руководстве по запуску приложения Java Spring с помощью Azure CLI](/azure/spring-cloud/spring-cloud-quickstart-launch-app-cli) вы найдете дополнительные сведения на эту тему.
 
 Локальный компьютер должен соответствовать тем же предварительным требованиям, что и сервер сборки Jenkins. Чтобы выполнять сборку и развертывание приложений микрослужб, убедитесь, что установлены следующие компоненты:
-    * [Git](https://git-scm.com/);
-    * [JDK 8](/java/azure/jdk/?view=azure-java-stable);
-    * [Maven 3.0 или более поздней версии](https://maven.apache.org/download.cgi);
-    * [установленное средство Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) версии 2.0.67 или выше.
+
+* [Git](https://git-scm.com/);
+* [JDK 8](/java/azure/jdk);
+* [Maven 3.0 или более поздней версии](https://maven.apache.org/download.cgi);
+* [установленное средство Azure CLI](/cli/azure/install-azure-cli) версии 2.0.67 или выше.
 
 1. Установите расширение Azure Spring Cloud.
 
@@ -130,7 +129,7 @@ ms.locfileid: "91586139"
 
 ### <a name="add-your-azure-service-principal-credential-in-jenkins-credential-store"></a>Добавление учетных данных субъекта-службы Azure в хранилище учетных данных Jenkins
 
-1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в  [этом разделе](deploy-from-github-to-azure-app-service.md#create-service-principal) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
+1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в разделе [Создание субъекта-службы](deploy-from-github-to-azure-app-service.md#create-service-principal) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
 
     ```
     {
@@ -234,7 +233,7 @@ ms.locfileid: "91586139"
 
 1. Введите URL-адрес GitHub для своей вилки репозитория: **https://github.com/&lt ;идентификатор в GitHub&gt; /piggymetrics.git**
 
-1. Убедитесь, что для параметра **Branch Specifier (black for 'any')** (Описатель ветви) указано значение * **/Azure**.
+1. Убедитесь, что для параметра **Branch Specifier (black for 'any')** (Описатель ветви) указано значение **_/Azure_*.
 
 1. Для параметра **Script path** (Путь к скрипту) сохраните значение **Jenkinsfile**.
 

@@ -4,12 +4,12 @@ description: Руководство по Docker, часть 2. Использо
 ms.topic: tutorial
 ms.date: 09/20/2019
 ms.custom: devx-track-js
-ms.openlocfilehash: eb029d8e4dc2e6eddc68e0ee9112324b38e84ffe
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.openlocfilehash: 975ea12307a6b6488ba331e1075cea2ea4850dbb
+ms.sourcegitcommit: 6c112c184273d9df7b59de3caadc83c471532696
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365137"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95783004"
 ---
 # <a name="use-a-container-registry"></a>Использование Реестра контейнеров
 
@@ -21,7 +21,7 @@ ms.locfileid: "91365137"
 
 ## <a name="create-an-azure-container-registry"></a>Создание реестра контейнеров Azure.
 
-1. В Visual Studio Code нажмите клавишу **F1**, чтобы открыть палитру команд.
+1. В Visual Studio Code нажмите клавиши **F1** или **CTRL+SHIFT+P**, чтобы открыть палитру команд.
 
 1. В поле поиска введите **реестр**. В списке результатов выберите **Реестр контейнеров Azure: создать реестр**.
 
