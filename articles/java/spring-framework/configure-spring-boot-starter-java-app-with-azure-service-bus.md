@@ -7,12 +7,12 @@ ms.author: seal
 ms.date: 10/13/2019
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 4d035ae35c8e1e8a4db886f7b5743b143de1992c
-ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
+ms.openlocfilehash: c1b8baa716fbe24efbf635bc5f8a17833590137a
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94560292"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442139"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Использование Spring Boot Starter для служебных шин Azure JMS
 
@@ -44,8 +44,6 @@ Spring Boot Starter для служебной шины Azure JMS обеспеч�
 
 1. Если у вас нет приложения Spring Boot, **создайте проект** Maven [ с использованием Spring Initializr](https://start.spring.io/). Не забудьте выбрать **Проект Maven** и, в разделе **Зависимости**, добавить зависимость **Интернет**.
 
-   > [!NOTE]
-   > Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 ## <a name="use-the-azure-service-bus-jms-starter"></a>Использование JMS starter служебной шины Azure
 

@@ -7,12 +7,12 @@ ms.date: 10/13/2018
 ms.service: event-hubs
 ms.topic: article
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 53a50a7a32ff9e555f821d69688cc566fb7a3c62
-ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
+ms.openlocfilehash: 75ca8b04bd935e71b51c8d0c71eb189f89f2a512
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94560425"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442088"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-apache-kafka-with-azure-event-hubs"></a>Использование начального приложения Spring Boot для Apache Kafka в Центрах событий Azure
 
@@ -28,7 +28,6 @@ ms.locfileid: "94560425"
 
 > [!NOTE]
 > * Для выполнения операций, описанных в этой статье, требуется Spring Boot 2.0 или более поздней версии.
-> * Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Создание концентратора событий на портале Azure
 
@@ -86,7 +85,6 @@ ms.locfileid: "94560425"
 
    > [!NOTE]
    > 1. Spring Initializr использует имена **Group** (Группы) и **Artifact** (Артефакта) для создания имени пакета, как например *com.wingtiptoys.kafka*.
-   > 2. Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 1. Указав эти параметры, щелкните **Generate Project** (Создать проект).
 

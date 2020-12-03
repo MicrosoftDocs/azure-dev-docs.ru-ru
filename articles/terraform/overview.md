@@ -4,12 +4,12 @@ description: Узнайте, как использовать Terraform для р
 ms.topic: overview
 ms.date: 10/26/2019
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 0b38c7c2d518087f7a49c0d7e4f462d7da7eaf76
-ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+ms.openlocfilehash: 883242a09129bbc864185786ccf99888e7d3d842
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91401754"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442161"
 ---
 # <a name="terraform-with-azure"></a>Terraform с Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "91401754"
 
 В этой статье описываются преимущества использования Terraform при управлении инфраструктурой Azure.
 
-## <a name="automate-infrastructure-management"></a>Автоматизация управления инфраструктурой
+## <a name="automate-infrastructure-management"></a>Автоматизация управления инфраструктурой:
 
 Файлы конфигурации на основе шаблона Terraform позволяют определить, подготовить и настроить ресурсы Azure повторяемым и предсказуемым образом. Автоматизация инфраструктуры имеет несколько преимуществ:
 
