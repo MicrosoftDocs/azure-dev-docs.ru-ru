@@ -8,45 +8,49 @@ metadata:
   ms.topic: landing-page
   author: N-Usha
   ms.author: ushan
-  ms.date: 05/05/2020
+  ms.date: 11/24/2020
   ms.custom: github-actions-azure
-  ms.openlocfilehash: f2dddbae2eac63fdab7e5956ebcda6003e3c2028
-  ms.sourcegitcommit: 2540e91f7b6aa077158e25a0b718737abff904d4
+  ms.openlocfilehash: 5dd30cbc8737ecd644f235d0494052cbf6f2b4e1
+  ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/10/2020
-  ms.locfileid: "94432785"
+  ms.lasthandoff: 12/01/2020
+  ms.locfileid: "96442128"
 landingContent:
 - title: GitHub Actions для Azure
   linkLists:
   - linkListType: get-started
     links:
-    - text: Развертывание в Azure с помощью GitHub Actions
+    - text: Что такое GitHub Actions для Azure?
       url: github-actions.md
 - title: Развертывание в Azure
   linkLists:
-  - linkListType: how-to-guide
+  - linkListType: deploy
     links:
     - text: Развертывание приложений из GitHub в Azure
       url: deploy-to-azure.md
+    - text: Развертывание баз данных из GitHub в Azure
+      url: database-actions-deploy.md
+- title: Средства для взаимодействия с GitHub Actions
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Аутентификация из Azure в GitHub
+      url: connect-from-azure.md
+    - text: Использование подстановки переменных
+      url: github-variable-substitution.md
 - title: Visual Studio и Visual Studio Code
   linkLists:
   - linkListType: deploy
     links:
     - text: Развертывание приложений из GitHub с помощью Visual Studio или Visual Studio Code
       url: deploy-with-visual-studio.md
-- title: Интеграция Azure DevOps с GitHub
+- title: Интеграция Azure Pipelines с GitHub
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Работа с Azure DevOps и GitHub
       url: integrate-azure-devops.md
-- title: Подключение из Azure к GitHub
-  linkLists:
-  - linkListType: get-started
-    links:
-    - text: Подключение к GitHub из Azure и других служб
-      url: connect-from-azure.md
 - title: Управление политиками Azure с помощью GitHub
   linkLists:
   - linkListType: get-started
