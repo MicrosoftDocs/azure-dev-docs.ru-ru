@@ -1,23 +1,21 @@
 ---
-title: Шаг 4. Локальная отладка кода Python в Функциях Azure с помощью VS Code
-description: 'Руководство, шаг 4: локальный запуск отладчика VS Code для проверки кода Python.'
+title: Шаг 4. Локальная отладка бессерверного кода Python в Функциях Azure с помощью VS Code
+description: Шаг 4 учебника. Локальный запуск отладчика VS Code для проверки бессерверного кода Python.
 ms.topic: conceptual
-ms.date: 09/17/2020
+ms.date: 11/30/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 622453ab5de1eeeee547cf95687e2585813b7b31
-ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+ms.openlocfilehash: ecd93f7b551525576123e57ed9efe55b335d4dd4
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92137083"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96441739"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Локальная отладка кода Python в решении "Функции Azure"
 
 [Предыдущий шаг: изучение файлов кода](tutorial-vs-code-serverless-python-03.md)
 
-Вы можете выполнять отладку кода Python для Функций Azure локально в Visual Studio Code.
-
-1. Когда вы создаете проект Функций, расширение Visual Studio Code дополнительно создает в `.vscode/launch.json` одну конфигурацию запуска с именем **Attach to Python functions** (Вложение к функциям на Python). Наличие этой конфигурации означает, что осталось лишь нажать клавишу F5 или открыть обозреватель отладки, чтобы запустить проект.
+1. Когда вы создаете проект Функций, расширение Функций Azure дополнительно создает в `.vscode/launch.json` конфигурацию запуска с именем **Attach to Python Functions** (Вложение к функциям на Python). Наличие этой конфигурации означает, что осталось лишь нажать клавишу F5 или открыть обозреватель отладки, чтобы запустить проект.
 
     ![Настройка обозревателя отладки для запуска проекта Python](media/tutorial-vs-code-serverless-python/configuration-to-start-a-python-project-for-debugging.png)
 
@@ -36,7 +34,7 @@ ms.locfileid: "92137083"
     > [!TIP]
     > Если вы не можете получить доступ к URL-адресу и процессы выполняются за корпоративным прокси-сервером (вероятнее всего, с заданными переменными среды `HTTP_PROXY` и `HTTPS_PROXY`), задайте для переменной среды с именем `NO_PROXY` значение `localhost,127.0.0.1` и повторите попытку.
 
-1. Теперь попробуйте добавить параметр name, например со значением `http://localhost:7071/api/HttpExample?name=Visual%20Studio%20Code`. В окне браузера должно отобразиться сообщение "Hello Visual Studio Code!", что подтверждает выполнение этого пути кода.
+1. Теперь попробуйте добавить параметр name, например со значением `http://localhost:7071/api/HttpExample?name=Visual%20Studio%20Code`. В окне браузера должно отобразиться сообщение "Hello Visual Studio Code. This HTTP triggered function executed successfully.", что подтверждает выполнение этого пути кода.
 
 1. Чтобы передать значение name в формате JSON в тексте запроса, примените инструмент curl и передайте ему встроенный текст JSON:
 
@@ -69,7 +67,7 @@ ms.locfileid: "92137083"
 
     (Краткое пошаговое руководство по базовым возможностям отладки см. в [учебнике для Visual Studio Code по настройке и запуску отладчика](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger).)
 
-1. Когда вы будете полностью удовлетворены результатами локального тестирования функции, закройте отладчик (с помощью команды меню **Отладка** > **Остановить отладку** или команды **Отключить** на панели инструментов отладки).
+1. Когда вы будете полностью удовлетворены результатами локального тестирования функции, закройте отладчик (с помощью команды меню **Выполнить** > **Остановить отладку** или команды **Отключить** на панели инструментов отладки).
 
 > [!NOTE]
 > Если возникает ошибка, информирующая о том, что не удалось проверить подключение AzureWebJobsStorage, указанное в файле local.settings.json, это значит, что файл *local.settings.json* в проекте содержит строку `"AzureWebJobsStorage": "UseDevelopmentStorage=true"`. Эта строка указывает, что отладчик должен использовать эмулятор хранения Azure локально, но он не установлен. В этом случае вы можете [установить эмулятор хранения Azure](/azure/storage/common/storage-use-emulator#get-the-storage-emulator), а затем [запустить и инициализировать его](/azure/storage/common/storage-use-emulator#start-and-initialize-the-storage-emulator), а также перезапустить отладчик.

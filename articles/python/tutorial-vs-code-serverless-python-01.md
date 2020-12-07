@@ -1,39 +1,43 @@
 ---
 title: Руководство по Создание и развертывание бессерверных функций Azure на Python с помощью VS Code
-description: Шаг 1 руководства по настройке локальной среды для Функций Azure.
+description: Шаг 1 учебника. Настройка локальной среды для бессерверных Функций Azure.
 ms.topic: conceptual
-ms.date: 05/19/2020
+ms.date: 11/30/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 69f66c51a6e55eff91a7de780ebd0bd6f5500f68
-ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+ms.openlocfilehash: a7eea7fd73f13f9ca2f93cf3184c5ab7a1889614
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92137223"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96442242"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>Руководство по Создание и развертывание бессерверных функций Azure на языке Python с помощью Visual Studio Code
 
-В этой статье объясняется, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как подключить (создать привязку) к хранилищу.
+Из этой статьи вы узнаете, как с помощью Visual Studio Code и расширения Функций Azure создать бессерверную конечную точку HTTP с поддержкой Python, а также как добавить подключение (привязку) к хранилищу. Расширение "Функции Azure" для Visual Studio Code значительно упрощает процесс использования функций, автоматически обрабатывая многие вопросы конфигурации.
 
-Функции Azure выполняют код в бессерверной среде без необходимости создавать виртуальную машину или публиковать веб-приложение. Расширение "Функции Azure" для Visual Studio Code значительно упрощает процесс использования функций, автоматически обрабатывая многие вопросы конфигурации.
+Бессерверная среда Функций Azure предполагает, что Azure предоставляет конечные точки и общедоступные URL-адреса приложения без необходимости подготавливать виртуальную машину, публиковать веб-приложение или иным образом управлять серверами и ресурсами. Azure эффективно управляет всеми этими ресурсами, что значительно сокращает расходы на размещение приложения. Дополнительные сведения см. в статье [Общие сведения о Функциях Azure](/azure/azure-functions/functions-overview).
 
 Если на любом из шагов этого руководства возникнут проблемы, сообщите нам об этом. Используйте кнопку обратной связи **Эта страница**, которую можно найти в конце каждой статьи.
 
-Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=9bMsdBYy-D0&feature=youtu.be&ocid=AID3006292" target="_blank">Создание Функций Azure с помощью VS Code</a> (YouTube.com). Вам также может быть интересен более длинный доклад: <a href="https://www.youtube.com/watch?v=PV7iy6FPjAY&feature=youtu.be&t=13&ocid=AID3006292" target="_blank">Простая обработка данных с помощью Функций Azure</a> (YouTube.com). 
+Демонстрационное видео с виртуальной конференции PyCon 2020: <a href="https://www.youtube.com/watch?v=9bMsdBYy-D0&feature=youtu.be&ocid=AID3006292" target="_blank">Создание Функций Azure с помощью VS Code</a> (YouTube.com). Вам также может быть интересен более длинный доклад: <a href="https://www.youtube.com/watch?v=PV7iy6FPjAY&feature=youtu.be&t=13&ocid=AID3006292" target="_blank">Простая обработка данных с помощью Функций Azure</a> (YouTube.com).
 
 ## <a name="configure-your-environment"></a>Настройка среды
 
-- [Подписка Azure](#azure-subscription).
-- [Основные инструменты службы "Функции Azure"](#azure-functions-core-tools).
-- [Visual Studio Code с расширением "Функции Azure"](#visual-studio-code-python-and-the-azure-functions-extension).
+- Если у вас нет учетной записи Azure с активной подпиской, [создайте учетную запись бесплатно](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension).
 
-### <a name="azure-subscription"></a>Подписка Azure.
+- Выполните инструкции в следующих разделах:
 
-Если у вас нет подписки Azure, [зарегистрируйтесь прямо сейчас](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension) и получите 30-дневную бесплатную учетную запись с деньгами на счете Azure в размере 200 долл. США, которые позволят проверить любое сочетание служб.
+  - [Установка основных инструментов Функций Azure.](#azure-functions-core-tools)
 
+  - [Установка Python и Visual Studio Code с расширением "Функции Azure".](#visual-studio-code-python-and-the-azure-functions-extension)
+
+  - [Вход в Azure](#sign-in-to-azure)
+
+  - [Проверка окружения](#verify-your-environment)
+ 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-Установите Azure Functions Core Tools, следуя [соответствующим инструкциям](/azure/azure-functions/functions-run-local#v2) для своей операционной системы. Игнорируйте комментарии в статье о диспетчере пакетов Chocolately. Они не нужны для работы с этим руководством.
+Следуйте инструкциям по [работе с Azure Functions Core Tools](/azure/azure-functions/functions-run-local#v2) для вашей операционной системы. Игнорируйте комментарии в статье о диспетчере пакетов Chocolately. Они не нужны для работы с этим руководством.
 
 При установке Node.js используйте параметры по умолчанию и *не* выбирайте параметр для автоматической установки необходимых средств.  Кроме того, обязательно используйте параметр `-g` с командами `npm install`, чтобы средства Core Tools были доступны для последующих команд.
 

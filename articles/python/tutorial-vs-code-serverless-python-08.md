@@ -1,21 +1,21 @@
 ---
-title: Шаг 8. Очистка ресурсов, используемых с кодом Python, в Функциях Azure
-description: 'Шаг руководства 8: очистка ресурсов Azure, позволяющая избежать постоянных расходов.'
+title: Шаг 8. Очистка ресурсов, используемых с бессерверным кодом Python, в Функциях Azure
+description: Шаг учебника 8. Очистка ресурсов Azure, позволяющая избежать постоянных расходов.
 ms.topic: conceptual
-ms.date: 09/17/2020
+ms.date: 11/30/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: ec97faa440dcfb79240b0805e44de7d3d3447bad
-ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+ms.openlocfilehash: af1ce614671d3da67725ca358a018026c76ccb5c
+ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92137213"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96441726"
 ---
 # <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Очистка ресурсов Azure для Функций Azure
 
 [Предыдущий шаг: добавление привязки к хранилищу](tutorial-vs-code-serverless-python-07.md)
 
-В этой статье показано, как удалить ресурсы Azure, созданные при работе с этим руководством. Приложение-функция Azure, созданная с помощью Visual Studio Code, включает ресурсы, за использование которых может взиматься минимальная плата. См. сведения на странице с [ценами на Функции](https://azure.microsoft.com/pricing/details/functions/).
+Приложение Функций Azure, созданное с помощью Visual Studio Code в ходе работы с этим учебником, включает ресурсы, за использование которых может взиматься минимальная плата. См. сведения на странице с [ценами на Функции](https://azure.microsoft.com/pricing/details/functions/).
 
 Лучший способ очистки — удалить группу ресурсов, содержащую все ресурсы, используемые в этом руководстве. К ресурсам относятся приложение-функция, учетная запись хранения и резервный план службы приложений.
 
