@@ -32,7 +32,7 @@
         - name: Добавление кнопки входа
           href: tutorial/single-page-application-azure-login-button-sdk-msal.md
         - name: Использование Express.js с MongoDB
-          href: tutorial/web-app-mongodb.yml?preview=tutorialFeedback
+          href: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
         - name: Развертывание приложения на виртуальной машине Linux
           items:
             - name: 1. Введение и предварительные требования
