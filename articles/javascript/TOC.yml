@@ -29,6 +29,8 @@
               href: tutorial/static-web-app/clean-up-resources.md
         - name: Отправка изображения в BLOB-объекты хранилища
           href: tutorial/browser-file-upload.yml?preview=tutorialFeedback
+        - name: Добавление кнопки входа
+          href: tutorial/single-page-application-azure-login-button-sdk-msal.md
         - name: Использование Express.js с MongoDB
           href: tutorial/web-app-mongodb.yml?preview=tutorialFeedback
         - name: Развертывание приложения на виртуальной машине Linux
