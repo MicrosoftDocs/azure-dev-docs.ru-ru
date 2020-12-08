@@ -28,7 +28,7 @@
             - name: 6. Очистка ресурсов
               href: tutorial/static-web-app/clean-up-resources.md
         - name: Отправка изображения в BLOB-объекты хранилища
-          href: tutorial/browser-file-upload.yml?preview=tutorialFeedback
+          href: tutorial/browser-file-upload-azure-storage-blob.md
         - name: Добавление кнопки входа
           href: tutorial/single-page-application-azure-login-button-sdk-msal.md
         - name: Использование Express.js с MongoDB
@@ -74,7 +74,7 @@
             - name: Очистка ресурсов
               href: tutorial-vscode-azure-app-service-node-05.md
         - name: Развертывание Deno в Службе приложений
-          href: tutorial/deno-visual-studio-code-azure-app-service.yml?&preview=tutorialFeedback
+          href: tutorial/deploy-deno-app-azure-app-service-azure-cli.md
         - name: Развертывание контейнеров с помощью VS Code
           items:
             - name: Введение и предварительные требования
