@@ -1,15 +1,15 @@
 ---
 title: Индекс пакетов для библиотек Azure SDK для Python
 description: Список имен пакетов, а также ссылок на PyPI, документацию и исходный код для всех библиотек в пакете Azure SDK для Python.
-ms.date: 09/10/2020
+ms.date: 12/08/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: c7a0e4d1d36ec685e46f134483443812f7d202c0
-ms.sourcegitcommit: 5205d15c697bbfd4ecb3f45b5de093f709d11979
+ms.openlocfilehash: f573c677da465ca77f0539871fc50cd66ffd4995
+ms.sourcegitcommit: 1901759f41adfac3c3f2ff135bcf72206543b639
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90026405"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933333"
 ---
 # <a name="azure-libraries-package-index"></a>Индекс пакетов библиотек Azure
 
