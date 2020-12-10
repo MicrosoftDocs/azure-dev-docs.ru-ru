@@ -4,12 +4,12 @@ description: Локальное создание и развертывание �
 ms.topic: tutorial
 ms.date: 11/13/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 5d70e14a9a5247f99c8b6e033af0a225b27da30b
-ms.sourcegitcommit: 291768a67862336267c67819e913c16710e3875e
+ms.openlocfilehash: 1a034d2746fae453019325d01f20c7073a6ce9a3
+ms.sourcegitcommit: 09b4a2dbe13601fdf16fcc4082a5075b46ad3459
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95820682"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559259"
 ---
 # <a name="1-build-and-deploy-a-static-web-app-to-azure"></a>1. Создание и развертывание статического веб-приложения в Azure
 
@@ -36,7 +36,7 @@ ms.locfileid: "95820682"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- [Установите Azure CLI](/cli/azure/install-azure-cli) или используйте [Azure Cloud Shell](https://shell.azure.com.).
+- [Установите Azure CLI](/cli/azure/install-azure-cli) или используйте [Azure Cloud Shell](https://shell.azure.com).
 - Установите на локальный компьютер [Node.js и npm](https://nodejs.org/en/download).
 - Установите на локальный компьютер [Visual Studio Code](https://code.visualstudio.com/). 
     - [Статические веб-приложения Azure (предварительная версия)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) для развертывания приложения React в статическое веб-приложение Azure.

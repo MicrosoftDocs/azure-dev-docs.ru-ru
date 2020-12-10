@@ -3,13 +3,13 @@ title: Шаг 6. Добавление второй бессерверной фу
 description: Шаг учебника 6. Расширение проекта Функций Azure путем добавления второй бессерверной функции.
 ms.topic: conceptual
 ms.date: 11/30/2020
-ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 18cc5b138a46e4194c82bd0339c1566e20107347
-ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
+ms.custom: devx-track-python, seo-python-october2019, contperfq2
+ms.openlocfilehash: ac1aafc1ccaafd893a66e8d4ac0a8ee247c12dc3
+ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96441707"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96759411"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6\. Добавление второй функции на Python в решении "Функции Azure"
 

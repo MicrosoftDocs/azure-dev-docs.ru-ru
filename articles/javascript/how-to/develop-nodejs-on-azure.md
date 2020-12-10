@@ -4,12 +4,12 @@ description: Полное руководство, в котором объясн
 ms.topic: how-to
 ms.date: 06/25/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, devx-track-azurecli
-ms.openlocfilehash: 7ecaa972bb00fa7c07461e3679996332e7f33451
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.openlocfilehash: de07137ca6fd21aaf3d5dfe33bf6d599a745555d
+ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872895"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857822"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Разработка и развертывание контейнерного приложения Node.js с помощью Visual Studio Code и Azure
 
@@ -77,8 +77,6 @@ ms.locfileid: "94872895"
 1. Нажмите клавиши **CTRL**+**P**.
 
 1. Введите `.js`, чтобы отобразить файлы JavaScript/JSON рядом с родительской папкой каждого файла. 
-
-    ![Отображение всех файлов .js* в Visual Studio Code](../media/node-howto-e2e/visual-studio-code-javascript-json-file-list.png)
 
 1. Выберите файл *server.js*, который является скриптом запуска приложения.
 

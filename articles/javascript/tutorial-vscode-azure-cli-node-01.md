@@ -4,12 +4,12 @@ description: Руководство, часть 1. Общие сведения 
 ms.topic: tutorial
 ms.date: 09/24/2019
 ms.custom: devx-track-js, devx-track-azurecli
-ms.openlocfilehash: fab8d3af108fb5b81f8360ec84320da5e4ca5c15
-ms.sourcegitcommit: 291768a67862336267c67819e913c16710e3875e
+ms.openlocfilehash: 6e16b4baacf845648f021d1bb7cbbd9080e29804
+ms.sourcegitcommit: 09b4a2dbe13601fdf16fcc4082a5075b46ad3459
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/24/2020
-ms.locfileid: "95820665"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559288"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Развертывание в Службе приложений Azure с помощью Azure CLI
 
@@ -20,7 +20,7 @@ ms.locfileid: "95820665"
 - [Подписка Azure](#azure-subscription).
 - [Node.js и npm 6.x или более поздней версии](https://nodejs.org/en/download) (диспетчер пакетов для Node.js).
 - [Git](https://git-scm.com/downloads), для которого с помощью команды `git --version` отображается номер версии.
-- [Установите Azure CLI](/cli/azure/install-azure-cli) или используйте [Azure Cloud Shell](https://shell.azure.com.).
+- [Установите Azure CLI](/cli/azure/install-azure-cli) или используйте [Azure Cloud Shell](https://shell.azure.com).
 
 ### <a name="azure-subscription"></a>Подписка Azure.
 

@@ -7,12 +7,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 3e73fda380f2743f6a3d4b2fb726ee62173b8563
-ms.sourcegitcommit: 418e446e6ada5d50df283401df4f6b6370a356b9
+ms.openlocfilehash: 89df7fe719cd8c8301c729bb33cb1d3632a80b0d
+ms.sourcegitcommit: 09b4a2dbe13601fdf16fcc4082a5075b46ad3459
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96035372"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96559276"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Начальные приложения Spring Boot для Azure
 
@@ -21,10 +21,6 @@ ms.locfileid: "96035372"
 >[!div class="mx-imgBorder"]
 ![Настройка starters Azure Spring Boot с помощью Initializr][configure-azure-spring-boot-starters-with-initializr]
 
-> [!NOTE]
->
-> Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
-> 
 
 Сейчас для Azure доступны следующие начальные приложения Spring Boot:
 

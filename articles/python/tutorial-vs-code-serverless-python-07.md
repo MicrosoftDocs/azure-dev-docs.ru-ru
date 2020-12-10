@@ -3,13 +3,13 @@ title: Шаг 7. Добавление привязки к хранилищу д�
 description: Шаг учебника 7. Добавление в бессерверный код Python привязки для сохранения сообщений в службе хранилища Azure.
 ms.topic: conceptual
 ms.date: 11/30/2020
-ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: aa0913f35915a4d4a97b1d0183976614509b704d
-ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
+ms.custom: devx-track-python, seo-python-october2019, contperfq2
+ms.openlocfilehash: 2c7bcc2ea5fde76961a84c5a2193d46b694720e1
+ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442177"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96759271"
 ---
 # <a name="7-add-a-storage-binding-for-azure-functions-in-python"></a>7: Добавление привязки к хранилищу для решения "Функции Azure" на Python
 
