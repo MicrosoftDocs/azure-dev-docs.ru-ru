@@ -5,6 +5,8 @@
       href: whats-new-docs.md
     - name: Начало работы в Azure с JavaScript
       items:
+        - name: Средства Azure для разработчиков JavaScript
+          href: node-azure-tools.md
         - name: Настройка среды разработки
           href: core/configure-local-development-environment.md
         - name: Настройка субъекта-службы
@@ -13,120 +15,120 @@
           href: core/node-sdk-azure-authenticate.md
     - name: Учебники
       items:
-        - name: Создание статического веб-приложения
+        - name: Развертывание и размещение
           items:
-            - name: 1. Введение и предварительные требования
-              href: tutorial/static-web-app/introduction.md
-            - name: 2. Скачивание и запуск приложения локально
-              href: tutorial/static-web-app/run-the-react-cognitive-services-image-analyzer-app-locally.md
-            - name: 3. Создание ресурса Компьютерного зрения
-              href: tutorial/static-web-app/create-computer-vision-resource-use-in-code.md
-            - name: 4. Создание и развертывание статического веб-приложения
-              href: tutorial/static-web-app/create-static-web-app-visual-studio-code-extension.md
-            - name: 5. Проверка кода ресурса React для Компьютерного зрения
-              href: tutorial/static-web-app/add-computer-vision-react-app.md
-            - name: 6. Очистка ресурсов
-              href: tutorial/static-web-app/clean-up-resources.md
-        - name: Отправка изображения в BLOB-объекты хранилища
-          href: tutorial/browser-file-upload-azure-storage-blob.md
-        - name: Добавление кнопки входа
-          href: tutorial/single-page-application-azure-login-button-sdk-msal.md
-        - name: Использование Express.js с MongoDB
-          href: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
-        - name: Развертывание приложения на виртуальной машине Linux
-          items:
-            - name: 1. Введение и предварительные требования
-              href: tutorial/nodejs-virtual-machine-vm/introduction.md
-            - name: 2. Создание ресурса Application Insights
-              href: tutorial/nodejs-virtual-machine-vm/create-azure-monitoring-application-insights-web-resource.md
-            - name: 3. Создание виртуальной машины
-              href: tutorial/nodejs-virtual-machine-vm/create-linux-virtual-machine-azure-cli.md
-            - name: 4. Подключение к виртуальной машине Linux
-              href: tutorial/nodejs-virtual-machine-vm/connect-linux-virtual-machine-ssh.md
-            - name: 5. Добавление ведения журнала в облаке в приложение
-              href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-nodejs-expressjs-code.md
-            - name: 6. Просмотр журналов
-              href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-logs.md
-            - name: 7. Очистка ресурсов
-              href: tutorial/nodejs-virtual-machine-vm/clean-up-resources.md
-        - name: Создание и развертывание бессерверных функций
-          items:
-            - name: 1. Введение и предварительные требования
-              href: tutorial/tutorial-vscode-serverless-node-install.md
-            - name: 2. Создание приложения в службе "Функции"
-              href: tutorial/tutorial-vscode-serverless-node-create-local.md
-            - name: 3. Локальное тестирование функции
-              href: tutorial/tutorial-vscode-serverless-node-test-local.md
-            - name: 4. Развертывание приложения в решении "Функции"
-              href: tutorial/tutorial-vscode-serverless-node-deploy-hosting.md
-            - name: 5. Очистка ресурсов
-              href: tutorial/tutorial-vscode-serverless-node-remove-resource.md
-        - name: Развертывание Node.js в Службе приложений с помощью VS Code
-          items:
-            - name: Введение и предварительные требования
-              href: tutorial-vscode-azure-app-service-node-01.md
-            - name: Создайте приложение
-              href: tutorial-vscode-azure-app-service-node-02.md
-            - name: Развертывание веб-сайта
-              href: tutorial-vscode-azure-app-service-node-03.md
-            - name: Журналы потоковой передачи
-              href: tutorial-vscode-azure-app-service-node-04.md
-            - name: Очистка ресурсов
-              href: tutorial-vscode-azure-app-service-node-05.md
-        - name: Развертывание Deno в Службе приложений
-          href: tutorial/deploy-deno-app-azure-app-service-azure-cli.md
-        - name: Развертывание контейнеров с помощью VS Code
-          items:
-            - name: Введение и предварительные требования
-              href: tutorial-vscode-docker-node-01.md
-            - name: Использование Реестра контейнеров
-              href: tutorial-vscode-docker-node-02.md
-            - name: Создание локального приложения Node.js
-              href: tutorial-vscode-docker-node-03.md
-            - name: Создание образа приложения
-              href: tutorial-vscode-docker-node-04.md
-            - name: Развертывание образа приложения
-              href: tutorial-vscode-docker-node-05.md
-            - name: Внесение изменений и повторное развертывание
-              href: tutorial-vscode-docker-node-06.md
-            - name: Журналы потоковой передачи
-              href: tutorial-vscode-docker-node-07.md
-            - name: Очистка ресурсов
-              href: tutorial-vscode-docker-node-08.md
-        - name: "Развертывание в Службе приложений с помощью Azure\_CLI"
-          items:
-            - name: Введение и предварительные требования
-              href: tutorial-vscode-azure-cli-node-01.md
-            - name: Создайте приложение
-              href: tutorial-vscode-azure-cli-node-02.md
-            - name: Создание службы приложений
-              href: tutorial-vscode-azure-cli-node-03.md
-            - name: Развертывание приложения
-              href: tutorial-vscode-azure-cli-node-04.md
-            - name: Журналы потоковой передачи
-              href: tutorial-vscode-azure-cli-node-05.md
-            - name: Внесение изменений и повторное развертывание
-              href: tutorial-vscode-azure-cli-node-06.md
-            - name: Очистка ресурсов
-              href: tutorial-vscode-azure-cli-node-07.md
-        - name: Создание статического веб-сайта из службы хранилища Azure
-          items:
-            - name: Введение и предварительные требования
-              href: tutorial-vscode-static-website-node-01.md
-            - name: Создание кода приложения
-              href: tutorial-vscode-static-website-node-02.md
-            - name: Создание учетной записи хранения
-              href: tutorial-vscode-static-website-node-03.md
-            - name: Развертывание в службе хранилища Azure
-              href: tutorial-vscode-static-website-node-04.md
-            - name: Внесение изменений и повторное развертывание
-              href: tutorial-vscode-static-website-node-05.md
-            - name: Очистка ресурсов
-              href: tutorial-vscode-static-website-node-06.md
+            - name: 'Клиентское приложение: Cognitive Services'
+              items:
+                - name: 1. Введение и предварительные требования
+                  href: tutorial/static-web-app/introduction.md
+                - name: 2. Скачивание и запуск приложения локально
+                  href: tutorial/static-web-app/run-the-react-cognitive-services-image-analyzer-app-locally.md
+                - name: 3. Создание ресурса Компьютерного зрения
+                  href: tutorial/static-web-app/create-computer-vision-resource-use-in-code.md
+                - name: 4. Создание и развертывание статического веб-приложения
+                  href: tutorial/static-web-app/create-static-web-app-visual-studio-code-extension.md
+                - name: 5. Проверка кода ресурса React для Компьютерного зрения
+                  href: tutorial/static-web-app/add-computer-vision-react-app.md
+                - name: 6. Очистка ресурсов
+                  href: tutorial/static-web-app/clean-up-resources.md
+            - name: 'Клиентское приложение: отправка в хранилище'
+              href: tutorial/browser-file-upload-azure-storage-blob.md
+            - name: 'Клиентское приложение: Добавление кнопки входа'
+              href: tutorial/single-page-application-azure-login-button-sdk-msal.md
+            - name: 'Клиентское приложение: размещение из службы хранилища Azure'
+              items:
+                - name: Введение и предварительные требования
+                  href: tutorial-vscode-static-website-node-01.md
+                - name: Создание кода приложения
+                  href: tutorial-vscode-static-website-node-02.md
+                - name: Создание учетной записи хранения
+                  href: tutorial-vscode-static-website-node-03.md
+                - name: Развертывание в службе хранилища Azure
+                  href: tutorial-vscode-static-website-node-04.md
+                - name: Внесение изменений и повторное развертывание
+                  href: tutorial-vscode-static-website-node-05.md
+                - name: Очистка ресурсов
+                  href: tutorial-vscode-static-website-node-06.md
+            - name: Бессерверные решения. Создание и развертывание
+              items:
+                - name: 1. Введение и предварительные требования
+                  href: tutorial/tutorial-vscode-serverless-node-install.md
+                - name: 2. Создание приложения в службе "Функции"
+                  href: tutorial/tutorial-vscode-serverless-node-create-local.md
+                - name: 3. Локальное тестирование функции
+                  href: tutorial/tutorial-vscode-serverless-node-test-local.md
+                - name: 4. Развертывание приложения в решении "Функции"
+                  href: tutorial/tutorial-vscode-serverless-node-deploy-hosting.md
+                - name: 5. Очистка ресурсов
+                  href: tutorial/tutorial-vscode-serverless-node-remove-resource.md
+            - name: 'Сервер:  Express.js или MongoDB'
+              href: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
+            - name: 'Сервер:  развертывание Express.js с помощью VS Code'
+              items:
+                - name: Введение и предварительные требования
+                  href: tutorial-vscode-azure-app-service-node-01.md
+                - name: Создайте приложение
+                  href: tutorial-vscode-azure-app-service-node-02.md
+                - name: Развертывание веб-сайта
+                  href: tutorial-vscode-azure-app-service-node-03.md
+                - name: Журналы потоковой передачи
+                  href: tutorial-vscode-azure-app-service-node-04.md
+                - name: Очистка ресурсов
+                  href: tutorial-vscode-azure-app-service-node-05.md
+            - name: 'Сервер:  развертывание с помощью Azure CLI'
+              items:
+                - name: Введение и предварительные требования
+                  href: tutorial-vscode-azure-cli-node-01.md
+                - name: Создайте приложение
+                  href: tutorial-vscode-azure-cli-node-02.md
+                - name: Создание службы приложений
+                  href: tutorial-vscode-azure-cli-node-03.md
+                - name: Развертывание приложения
+                  href: tutorial-vscode-azure-cli-node-04.md
+                - name: Журналы потоковой передачи
+                  href: tutorial-vscode-azure-cli-node-05.md
+                - name: Внесение изменений и повторное развертывание
+                  href: tutorial-vscode-azure-cli-node-06.md
+                - name: Очистка ресурсов
+                  href: tutorial-vscode-azure-cli-node-07.md
+            - name: 'Сервер:  Развертывание Deno с помощью Azure CLI'
+              href: tutorial/deploy-deno-app-azure-app-service-azure-cli.md
+            - name: 'Контейнер: развертывание Express.js с помощью VS Code'
+              items:
+                - name: Введение и предварительные требования
+                  href: tutorial-vscode-docker-node-01.md
+                - name: Использование Реестра контейнеров
+                  href: tutorial-vscode-docker-node-02.md
+                - name: Создание локального приложения Node.js
+                  href: tutorial-vscode-docker-node-03.md
+                - name: Создание образа приложения
+                  href: tutorial-vscode-docker-node-04.md
+                - name: Развертывание образа приложения
+                  href: tutorial-vscode-docker-node-05.md
+                - name: Внесение изменений и повторное развертывание
+                  href: tutorial-vscode-docker-node-06.md
+                - name: Журналы потоковой передачи
+                  href: tutorial-vscode-docker-node-07.md
+                - name: Очистка ресурсов
+                  href: tutorial-vscode-docker-node-08.md
+            - name: 'ВМ: развертывание контейнера и ведение журнала'
+              items:
+                - name: 1. Введение и предварительные требования
+                  href: tutorial/nodejs-virtual-machine-vm/introduction.md
+                - name: 2. Создание ресурса Application Insights
+                  href: tutorial/nodejs-virtual-machine-vm/create-azure-monitoring-application-insights-web-resource.md
+                - name: 3. Создание виртуальной машины
+                  href: tutorial/nodejs-virtual-machine-vm/create-linux-virtual-machine-azure-cli.md
+                - name: 4. Подключение к виртуальной машине Linux
+                  href: tutorial/nodejs-virtual-machine-vm/connect-linux-virtual-machine-ssh.md
+                - name: 5. Добавление ведения журнала в облаке в приложение
+                  href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-nodejs-expressjs-code.md
+                - name: 6. Просмотр журналов
+                  href: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-logs.md
+                - name: 7. Очистка ресурсов
+                  href: tutorial/nodejs-virtual-machine-vm/clean-up-resources.md
     - name: Learn
       href: learn-azure-javascript.md
-    - name: Инструменты Azure
-      href: node-azure-tools.md
     - name: Руководства
       items:
         - name: Сквозной Node. js с VS Code

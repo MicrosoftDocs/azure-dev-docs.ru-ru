@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: e98e1fb3e6640eb25dd5f7b69da8342028024455
-  ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+  ms.openlocfilehash: 244a4fd10fc0c3968354ec565c2f95c117ee2d8a
+  ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/07/2020
-  ms.locfileid: "96759421"
+  ms.lasthandoff: 12/08/2020
+  ms.locfileid: "96857872"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -33,34 +33,36 @@ landingContent:
       url: core/node-sdk-azure-authenticate.md
     - text: Блог по пакету SDK Azure
       url: https://devblogs.microsoft.com/azure-sdk/
-- title: Hosting
+- title: Развертывание и размещение
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Интерфейсные приложения
+    - text: 'Статическое веб-приложение: React и Cognitive Services'
       url: tutorial/static-web-app/introduction.md
-    - text: Использование Node.js со Службой приложений
+    - text: 'Служба приложений: отправка изображений в BLOB-объекты хранилища с помощью React'
+      url: tutorial/browser-file-upload-azure-storage-blob.md
+    - text: 'Служба приложений: Express.js'
       url: tutorial-vscode-azure-app-service-node-01.md
-    - text: Использование Deno со Службой приложений
-      url: tutorial/deploy-deno-app-azure-app-service-azure-cli.md
-    - text: Развертывание приложения на виртуальной машине Linux
-      url: tutorial/nodejs-virtual-machine-vm/introduction.md
-    - text: Контейнеры
+    - text: 'Служба приложений: Использование Express.js с MongoDB'
+      url: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
+    - text: 'Служба приложений: контейнер Express.js'
       url: tutorial-vscode-docker-node-01.md
-  - linkListType: how-to-guide
-    links:
-    - text: Полный стек (бессерверные API и интерфейсная часть)
-      url: how-to/create-static-site.md
-- title: Бессерверные функции
+    - text: 'Функции Azure: бессерверный триггер HTTP'
+      url: tutorial/tutorial-vscode-serverless-node-install.md
+    - text: 'Виртуальная машина Azure: контейнеры Express.js и NGINX'
+      url: tutorial/nodejs-virtual-machine-vm/introduction.md
+- title: Руководства по клиентской библиотеке Azure SDK
   linkLists:
   - linkListType: tutorial
     links:
-    - text: Разработка и развертывание
-      url: tutorial/tutorial-vscode-serverless-node-install.md
-  - linkListType: how-to-guide
-    links:
-    - text: Написание бессерверного кода
-      url: how-to/develop-serverless-apps.md
+    - text: 'Статическое веб-приложение: анализ изображения с помощью API "Компьютерное зрение"'
+      url: /tutorial/static-web-app/add-computer-vision-react-app.md#add-computer-vision-code-as-separate-module
+    - text: 'Статическое веб-приложение: отправка файла в BLOB-объект хранилища'
+      url: tutorial/browser-file-upload-azure-storage-blob.md#upload-button-functionality
+    - text: 'Статическое веб-приложение: кнопка входа и кнопка выхода'
+      url: tutorial/single-page-application-azure-login-button-sdk-msal.md#5-add-login-and-logoff-buttons
+    - text: Express.js. Добавление журнала Application Insights
+      url: tutorial/nodejs-virtual-machine-vm/azure-monitor-application-insights-nodejs-expressjs-code.md#edit-indexjs-for-logging-with-azure-monitor-application-insights
 - title: Данные
   linkLists:
   - linkListType: quickstart
