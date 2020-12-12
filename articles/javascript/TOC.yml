@@ -5,6 +5,8 @@
       href: whats-new-docs.md
     - name: Начало работы в Azure с JavaScript
       items:
+        - name: Установка Node.js
+          href: core/install-nodejs-develop-azure-sdk-project.md
         - name: Средства Azure для разработчиков JavaScript
           href: node-azure-tools.md
         - name: Настройка среды разработки
@@ -64,17 +66,7 @@
             - name: 'Сервер:  Express.js или MongoDB'
               href: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
             - name: 'Сервер:  развертывание Express.js с помощью VS Code'
-              items:
-                - name: Введение и предварительные требования
-                  href: tutorial-vscode-azure-app-service-node-01.md
-                - name: Создайте приложение
-                  href: tutorial-vscode-azure-app-service-node-02.md
-                - name: Развертывание веб-сайта
-                  href: tutorial-vscode-azure-app-service-node-03.md
-                - name: Журналы потоковой передачи
-                  href: tutorial-vscode-azure-app-service-node-04.md
-                - name: Очистка ресурсов
-                  href: tutorial-vscode-azure-app-service-node-05.md
+              href: tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md
             - name: 'Сервер:  развертывание с помощью Azure CLI'
               items:
                 - name: Введение и предварительные требования
@@ -131,6 +123,8 @@
       href: learn-azure-javascript.md
     - name: Руководства
       items:
+        - name: Настройка приложения
+          href: how-to/configure-web-app-settings.md
         - name: Сквозной Node. js с VS Code
           href: how-to/develop-nodejs-on-azure.md
         - name: Развертывание веб-приложения
@@ -146,31 +140,7 @@
         - name: Ведение журнала и метрики
           href: how-to/node-sdk-logging.md
     - name: Примеры
-      items:
-        - name: Веб-приложения и бессерверные приложения
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-functions%252cazure-app-service%252cazure-logic-apps
-        - name: Базы данных
-          items:
-            - name: Cosmos DB
-              href: /samples/browse/?languages=javascript%252cnodejs&products=azure-cosmos-db
-            - name: База данных SQL
-              href: /samples/browse/?languages=javascript%252cnodejs&products=azure-sql-database
-            - name: MongoDB
-              href: /samples/browse/?languages=javascript%252cnodejs&term=Mongo%2bDB
-        - name: Память
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-storage
-        - name: Идентификация и безопасность
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-active-directory%252cazure-key-vault
-        - name: Интернет вещей
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-iot-hub%252cazure-iot-edge%252cazure-iot-central
-        - name: Микрослужбы
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-event-grid
-        - name: Искусственный интеллект и Cognitive Services
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-cognitive-services
-        - name: Поиск
-          href: /samples/browse/?languages=javascript%252cnodejs&products=azure-search
-        - name: Все примеры
-          href: /samples/browse/?languages=javascript%252cnodejs
+      href: 'https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs%2Ctypescript'
     - name: Пакеты npm
       href: azure-sdk-library-package-index.md
     - name: Документация по пакетам npm
