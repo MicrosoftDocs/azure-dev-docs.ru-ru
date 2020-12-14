@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: 244a4fd10fc0c3968354ec565c2f95c117ee2d8a
-  ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
+  ms.openlocfilehash: 4ccacf678ce2774e7d0ae5fe0965114c22e8e407
+  ms.sourcegitcommit: c1ef7aa8ed2e88e98b190e42cffde52cf301958d
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/08/2020
-  ms.locfileid: "96857872"
+  ms.lasthandoff: 12/10/2020
+  ms.locfileid: "97034515"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: 'Служба приложений: отправка изображений в BLOB-объекты хранилища с помощью React'
       url: tutorial/browser-file-upload-azure-storage-blob.md
     - text: 'Служба приложений: Express.js'
-      url: tutorial-vscode-azure-app-service-node-01.md
+      url: tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md
     - text: 'Служба приложений: Использование Express.js с MongoDB'
       url: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
     - text: 'Служба приложений: контейнер Express.js'
