@@ -1,16 +1,64 @@
 ---
-ms.openlocfilehash: 7e218020969b87095106441144f0cdd27f07aac7
-ms.sourcegitcommit: 4031b0e5d158d8b4e7fd1575c062142b5b775c93
+ms.openlocfilehash: 7d669a92b4e08f6f8207f10f2b33a49b1685d324
+ms.sourcegitcommit: 1901759f41adfac3c3f2ff135bcf72206543b639
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96356299"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96933367"
 ---
 | Имя | Пакет | Docs | Источник |
 | ---- | ------- | ---- | ------ |
+| Детектор аномалий | npm [3.0.0-preview.1](https://www.npmjs.com/package/@azure/ai-anomaly-detector/v/3.0.0-preview.1) | [docs](/javascript/api/overview/azure/ai-anomaly-detector-readme-pre/) | GitHub [3.0.0-preview.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-anomaly-detector_3.0.0-preview.1/sdk/anomalydetector/ai-anomaly-detector/) |
+| Конфигурация приложений | npm [1.1.0](https://www.npmjs.com/package/@azure/app-configuration/v/1.1.0) | [docs](/javascript/api/overview/azure/app-configuration-readme/) | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/app-configuration_1.1.0/sdk/appconfiguration/app-configuration/) |
+| Когнитивный поиск | npm [11.0.3](https://www.npmjs.com/package/@azure/search-documents/v/11.0.3)<br>npm [11.1.0-beta.2](https://www.npmjs.com/package/@azure/search-documents/v/11.1.0-beta.2) | [docs](/javascript/api/overview/azure/search-documents-readme/) | GitHub [11.0.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/search-documents_11.0.3/sdk/search/search-documents/)<br>GitHub [11.1.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/search-documents_11.1.0-beta.2/sdk/search/search-documents/) |
+| Общение — администрирование | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/communication-administration/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/communication-administration-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-administration_1.0.0-beta.3/sdk/communication/communication-administration/) |
+| Общение — чат | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/communication-chat/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/communication-chat-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-chat_1.0.0-beta.3/sdk/communication/communication-chat/) |
+| Общение — общее | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/communication-common/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/communication-common-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-common_1.0.0-beta.3/sdk/communication/communication-common/) |
+| Общение — SMS | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/communication-sms/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/communication-sms-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/communication-sms_1.0.0-beta.3/sdk/communication/communication-sms/) |
+| Основные сведения | npm [1.2.0](https://www.npmjs.com/package/@azure/core-http/v/1.2.0) | [docs](/javascript/api/overview/azure/core-http-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/core-http_1.2.0/sdk/core/core-http/) |
+| Основные функции — AMQP | npm [2.0.0](https://www.npmjs.com/package/@azure/core-amqp/v/2.0.0) | [docs](/javascript/api/overview/azure/core-amqp-readme/) | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/core-amqp_2.0.0/sdk/core/core-amqp/) |
+| Cosmos DB | npm [3.9.3](https://www.npmjs.com/package/@azure/cosmos/v/3.9.3) | [docs](/javascript/api/overview/azure/cosmos-readme/) | GitHub [3.9.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/cosmos_3.9.3/sdk/cosmosdb/cosmos/) |
+| Digital Twins — основные функции | npm [1.0.0](https://www.npmjs.com/package/@azure/digital-twins-core/v/1.0.0) | [docs](/javascript/api/overview/azure/digital-twins-core-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/digital-twins-core_1.0.0/sdk/digitaltwins/digital-twins-core/) |
+| Сетка событий Azure | npm [2.0.0](https://www.npmjs.com/package/@azure/eventgrid/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/eventgrid/v/3.0.0-beta.2) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/eventgrid/eventgrid) |
+| Центры событий | npm [5.3.1](https://www.npmjs.com/package/@azure/event-hubs/v/5.3.1) | [docs](/javascript/api/overview/azure/event-hubs-readme/) | GitHub [5.3.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/event-hubs_5.3.1/sdk/eventhub/event-hubs/) |
+| Центры событий — хранилище контрольных точек Хранилища BLOB-объектов Azure | npm [1.0.1](https://www.npmjs.com/package/@azure/eventhubs-checkpointstore-blob/v/1.0.1) | [docs](/javascript/api/overview/azure/eventhubs-checkpointstore-blob-readme/) | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/eventhubs-checkpointstore-blob_1.0.1/sdk/eventhub/eventhubs-checkpointstore-blob/) |
+| Центры событий: реестр схемы | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry_1.0.0-beta.1/sdk/schemaregistry/schema-registry/) |
+| Центры событий: реестр схемы, Avro | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry-avro/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-avro-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry-avro_1.0.0-beta.1/sdk/schemaregistry/schema-registry-avro/) |
+| Распознаватель документов | npm [3.0.0](https://www.npmjs.com/package/@azure/ai-form-recognizer/v/3.0.0)<br>npm [3.1.0-beta.1](https://www.npmjs.com/package/@azure/ai-form-recognizer/v/3.1.0-beta.1) | [docs](/javascript/api/overview/azure/ai-form-recognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_3.0.0/sdk/formrecognizer/ai-form-recognizer/)<br>GitHub [3.1.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_3.1.0-beta.1/sdk/formrecognizer/ai-form-recognizer/) |
+| Идентификация | npm [1.2.0](https://www.npmjs.com/package/@azure/identity/v/1.2.0) | [docs](/javascript/api/overview/azure/identity-readme/) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/identity_1.2.0/sdk/identity/identity/) |
+| Key Vault — администрирование | npm [4.0.0-beta.1](https://www.npmjs.com/package/@azure/keyvault-admin/v/4.0.0-beta.1) | [docs](/javascript/api/overview/azure/keyvault-admin-readme-pre/) | GitHub [4.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-admin_4.0.0-beta.1/sdk/keyvault/keyvault-admin/) |
+| Key Vault — сертификаты | npm [4.1.0](https://www.npmjs.com/package/@azure/keyvault-certificates/v/4.1.0)<br>npm [4.2.0-beta.1](https://www.npmjs.com/package/@azure/keyvault-certificates/v/4.2.0-beta.1) | [docs](/javascript/api/overview/azure/keyvault-certificates-readme/) | GitHub [4.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-certificates_4.1.0/sdk/keyvault/keyvault-certificates/)<br>GitHub [4.2.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-certificates_4.2.0-beta.1/sdk/keyvault/keyvault-certificates/) |
+| Key Vault — ключи | npm [4.1.0](https://www.npmjs.com/package/@azure/keyvault-keys/v/4.1.0)<br>npm [4.2.0-beta.2](https://www.npmjs.com/package/@azure/keyvault-keys/v/4.2.0-beta.2) | [docs](/javascript/api/overview/azure/keyvault-keys-readme/) | GitHub [4.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-keys_4.1.0/sdk/keyvault/keyvault-keys/)<br>GitHub [4.2.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-keys_4.2.0-beta.2/sdk/keyvault/keyvault-keys/) |
+| Key Vault — секреты | npm [4.1.0](https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.1.0)<br>npm [4.2.0-beta.1](https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.2.0-beta.1) | [docs](/javascript/api/overview/azure/keyvault-secrets-readme/) | GitHub [4.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-secrets_4.1.0/sdk/keyvault/keyvault-secrets/)<br>GitHub [4.2.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/keyvault-secrets_4.2.0-beta.1/sdk/keyvault/keyvault-secrets/) |
+| Помощник по метрикам | npm [1.0.0-beta.2](https://www.npmjs.com/package/@azure/ai-metrics-advisor/v/1.0.0-beta.2) | [docs](/javascript/api/overview/azure/ai-metrics-advisor-readme-pre/) | GitHub [1.0.0-beta.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-metrics-advisor_1.0.0-beta.2/sdk/metricsadvisor/ai-metrics-advisor/) |
+| Служебная шина | npm [7.0.0](https://www.npmjs.com/package/@azure/service-bus/v/7.0.0) | [docs](/javascript/api/overview/azure/service-bus-readme/) | GitHub [7.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/service-bus_7.0.0/sdk/servicebus/service-bus/) |
+| Хранилище — BLOB-объекты | npm [12.3.0](https://www.npmjs.com/package/@azure/storage-blob/v/12.3.0) | [docs](/javascript/api/overview/azure/storage-blob-readme/) | GitHub [12.3.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-blob_12.3.0/sdk/storage/storage-blob/) |
+| Служба хранилища — веб-канал изменений в Хранилище BLOB-объектов | npm [12.0.0-preview.2](https://www.npmjs.com/package/@azure/storage-blob-changefeed/v/12.0.0-preview.2) | [docs](/javascript/api/overview/azure/storage-blob-changefeed-readme-pre/) | GitHub [12.0.0-preview.2](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-blob-changefeed_12.0.0-preview.2/sdk/storage/storage-blob-changefeed/) |
+| Хранилище — Data Lake для файлов | npm [12.2.0](https://www.npmjs.com/package/@azure/storage-file-datalake/v/12.2.0) | [docs](/javascript/api/overview/azure/storage-file-datalake-readme/) | GitHub [12.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-datalake_12.2.0/sdk/storage/storage-file-datalake/) |
+| Хранилище — общие папки | npm [12.3.0](https://www.npmjs.com/package/@azure/storage-file-share/v/12.3.0) | [docs](/javascript/api/overview/azure/storage-file-share-readme/) | GitHub [12.3.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-file-share_12.3.0/sdk/storage/storage-file-share/) |
+| Служба хранилища — очереди | npm [12.2.0](https://www.npmjs.com/package/@azure/storage-queue/v/12.2.0) | [docs](/javascript/api/overview/azure/storage-queue-readme/) | GitHub [12.2.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/storage-queue_12.2.0/sdk/storage/storage-queue/) |
+| Таблицы | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/data-tables/v/1.0.0-beta.3) | [docs](/javascript/api/overview/azure/data-tables-readme-pre/) | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/data-tables_1.0.0-beta.3/sdk/tables/data-tables/) |
+| Анализ текста | npm [5.0.1](https://www.npmjs.com/package/@azure/ai-text-analytics/v/5.0.1)<br>npm [5.1.0-beta.3](https://www.npmjs.com/package/@azure/ai-text-analytics/v/5.1.0-beta.3) | [docs](/javascript/api/overview/azure/ai-text-analytics-readme/) | GitHub [5.0.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-text-analytics_5.0.1/sdk/textanalytics/ai-text-analytics/)<br>GitHub [5.1.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-text-analytics_5.1.0-beta.3/sdk/textanalytics/ai-text-analytics/) |
+| @azure/arm-appservice-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-appservice-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-authorization-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-authorization-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-commerce-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-commerce-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-compute-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-compute-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-databoxedge-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-databoxedge-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-dns-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-dns-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-eventhub-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-eventhub-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-iothub-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-iothub-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-keyvault-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-keyvault-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-locks-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-locks-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-monitor-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-monitor-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-network-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-network-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-policy-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-policy-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-resources-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-resources-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-servicefabric | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-servicefabric/v/1.0.0) |  |  |
+| @azure/arm-storage-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-storage-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
+| @azure/arm-subscriptions-profile-2020-09-01-hybrid | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-subscriptions-profile-2020-09-01-hybrid/v/1.0.0) |  |  |
 | Abort-Controller | npm [1.0.1](https://www.npmjs.com/package/@azure/abort-controller/v/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/abort-controller_1.0.1/sdk/core/abort-controller/) |
 | Стандартные функции AMQP | npm [1.0.0-preview.17](https://www.npmjs.com/package/@azure/amqp-common/v/1.0.0-preview.17) |  | GitHub [1.0.0-preview.17](https://github.com/Azure/azure-sdk-for-js/tree/@azure/amqp-common_1.0.0-preview.17/sdk/core/amqp-common/) |
-| Детектор аномалий | npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/ai-anomaly-detector/v/3.0.0-beta.2) | [docs](/javascript/api/overview/azure/ai-anomaly-detector-readme-pre/) |  |
+| Детектор аномалий | npm [3.0.0-preview.1](https://www.npmjs.com/package/@azure/ai-anomaly-detector/v/3.0.0-preview.1) | [docs](/javascript/api/overview/azure/ai-anomaly-detector-readme-pre/) | GitHub [3.0.0-preview.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-anomaly-detector_3.0.0-preview.1/sdk/anomalydetector/ai-anomaly-detector/) |
 | Детектор аномалий | npm [2.1.0](https://www.npmjs.com/package/@azure/cognitiveservices-anomalydetector/v/2.1.0) |  | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-anomalydetector) |
 | Конфигурация приложений | npm [1.1.0](https://www.npmjs.com/package/@azure/app-configuration/v/1.1.0) | [docs](/javascript/api/overview/azure/app-configuration-readme/) | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/app-configuration_1.1.0/sdk/appconfiguration/app-configuration/) |
 | Запрос Application Insights | npm [1.1.0](https://www.npmjs.com/package/@azure/applicationinsights-query/v/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/applicationinsights/applicationinsights-query) |
@@ -27,11 +75,12 @@ ms.locfileid: "96356299"
 | AutoRest — генератор кода Java для Функций | npm [0.0.2-Preview](https://www.npmjs.com/package/@autorest/azure-functions-java/v/0.0.2-Preview) |  |  |
 | AutoRest — генератор кода Python для Функций | npm [0.1.0-preview](https://www.npmjs.com/package/@autorest/azure-functions-python/v/0.1.0-preview) |  |  |
 | AutoRest — генератор кода TypeScript для Функций | npm [0.0.1-preview](https://www.npmjs.com/package/@autorest/azure-functions-typescript/v/0.0.1-preview) |  |  |
+| AutoRest: Go | npm [4.0.0-preview.9](https://www.npmjs.com/package/@autorest/go/v/4.0.0-preview.9) |  |  |
 | AutoRest — Modeler Four | npm [4.1.60](https://www.npmjs.com/package/@autorest/modelerfour/v/4.1.60) |  | GitHub [4.1.60](https://github.com/Azure/autorest.modelerfour) |
 | AutoRest — Power Shell | npm [3.0.406](https://www.npmjs.com/package/@autorest/powershell/v/3.0.406) |  | GitHub [3.0.406](https://github.com/Azure/autorest.powershell) |
 | AutoRest — Python | npm [5.5.0](https://www.npmjs.com/package/@autorest/python/v/5.5.0) |  | GitHub [5.5.0](https://github.com/Azure/autorest.python/tree/v5.1.0-preview.7) |
 | AutoRest — Remodeler | npm [2.1.27](https://www.npmjs.com/package/@autorest/remodeler/v/2.1.27) |  | GitHub [2.1.27](https://github.com/Azure/autorest.remodeler) |
-| AutoRest — тестирование | npm [0.1.74](https://www.npmjs.com/package/@autorest/test/v/0.1.74) |  | GitHub [0.1.74](https://github.com/Azure/autorest.test) |
+| AutoRest — тестирование | npm [0.1.76](https://www.npmjs.com/package/@autorest/test/v/0.1.76) |  | GitHub [0.1.76](https://github.com/Azure/autorest.test) |
 | AutoRest — сервер тестирования | npm [3.0.27](https://www.npmjs.com/package/@autorest/test-server/v/3.0.27) |  |  |
 | Автозаполнение | npm [2.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-autosuggest/v/2.0.1) |  | GitHub [2.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-autosuggest) |
 | Avocado | npm [0.7.2](https://www.npmjs.com/package/@azure/avocado/v/0.7.2) |  | GitHub [0.7.2](https://github.com/Azure/avocado) |
@@ -56,8 +105,8 @@ ms.locfileid: "96356299"
 | Соединители — Amazon Simple Queue Service | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-amazonsqs/v/0.0.1-alpha) |  |  |
 | Соединители — Apache Impala | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-apacheimpala/v/0.0.1-alpha) |  |  |
 | Соединители — Appfigures | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-appfigures/v/0.0.1-alpha) |  |  |
-| Соединители — Applicability Statement 2 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-as2/v/0.0.1-alpha) |  |  |
-| Соединители — Appointment Scheduling 10to8 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-appointmentscheduling10to8/v/0.0.1-alpha) |  |  |
+| Соединители — Applicability Statement 2 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-as2/v/0.0.1-alpha) |  |  |
+| Соединители — Appointment Scheduling 10to8 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-appointmentscheduling10to8/v/0.0.1-alpha) |  |  |
 | Соединители — Appsforops Timeline | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-appsforopstimeline/v/0.0.1-alpha) |  |  |
 | Соединители — AtBot Admin | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-atbotadmin/v/0.0.1-alpha) |  |  |
 | Соединители — AtBot Logic | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-atbotlogic/v/0.0.1-alpha) |  |  |
@@ -126,8 +175,8 @@ ms.locfileid: "96356299"
 | Соединители — Dynamics 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365/v/0.0.1-alpha) |  |  |
 | Соединители — Dynamics 365 Customer Insights | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365customerinsights/v/0.0.1-alpha) |  |  |
 | Соединители — Dynamics 365 Customer Voice | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365customervoice/v/0.0.1-alpha) |  |  |
-| Соединители — Dynamics 365 for Fin & Ops | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365forfinops/v/0.0.1-alpha) |  |  |
-| Соединители — Dynamics 365 Sales Insights | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365salesinsights/v/0.0.1-alpha) |  |  |
+| Соединители — Dynamics 365 for Fin & Ops | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365forfinops/v/0.0.1-alpha) |  |  |
+| Соединители — Dynamics 365 Sales Insights | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamics365salesinsights/v/0.0.1-alpha) |  |  |
 | Соединители — Dynamics NAV | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-dynamicsnav/v/0.0.1-alpha) |  |  |
 | Соединители — Easy Redmine | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-easyredmine/v/0.0.1-alpha) |  |  |
 | Соединители — Easyvista Self Help | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-easyvistaselfhelp/v/0.0.1-alpha) |  |  |
@@ -172,9 +221,9 @@ ms.locfileid: "96356299"
 | Соединители — HelloSign | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-hellosign/v/0.0.1-alpha) |  |  |
 | Соединители — HipChat | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-hipchat/v/0.0.1-alpha) |  |  |
 | Соединители — HotProfile | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-hotprofile/v/0.0.1-alpha) |  |  |
-| Соединители — HouseRater QA | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-houseraterqa/v/0.0.1-alpha) |  |  |
-| Соединители — HTTP с Azure AD | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-httpwithazuread/v/0.0.1-alpha) |  |  |
-| Соединители — IBM 3270 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-ibm3270/v/0.0.1-alpha) |  |  |
+| Соединители — HouseRater QA | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-houseraterqa/v/0.0.1-alpha) |  |  |
+| Соединители — HTTP с Azure AD | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-httpwithazuread/v/0.0.1-alpha) |  |  |
+| Соединители — IBM 3270 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-ibm3270/v/0.0.1-alpha) |  |  |
 | Соединители — Imprezian360-CRM | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-imprezian360crm/v/0.0.1-alpha) |  |  |
 | Соединители — IN-D KYC India | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-indkycindia/v/0.0.1-alpha) |  |  |
 | Соединители — Industrial App Store | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-industrialappstore/v/0.0.1-alpha) |  |  |
@@ -188,7 +237,7 @@ ms.locfileid: "96356299"
 | Соединители — Integrable PDF | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-integrablepdf/v/0.0.1-alpha) |  |  |
 | Соединители — Intercom | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-intercom/v/0.0.1-alpha) |  |  |
 | Соединители — JIRA | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-jira/v/0.0.1-alpha) |  |  |
-| Соединители — JungleMail 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-junglemail365/v/0.0.1-alpha) |  |  |
+| Соединители — JungleMail 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-junglemail365/v/0.0.1-alpha) |  |  |
 | Соединители — Kintone | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-kintone/v/0.0.1-alpha) |  |  |
 | Соединители — KnowledgeLake | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-knowledgelake/v/0.0.1-alpha) |  |  |
 | Соединители — Kusto | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-kusto/v/0.0.1-alpha) |  |  |
@@ -231,7 +280,7 @@ ms.locfileid: "96356299"
 | Соединители — Notiivy Browser Notifications | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-notiivybrowsernotifications/v/0.0.1-alpha) |  |  |
 | Соединители — группы Office 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365groups/v/0.0.1-alpha) |  |  |
 | Соединители — почта групп Office 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365groupsmail/v/0.0.1-alpha) |  |  |
-| Соединители — Office 365 Outlook | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365outlook/v/0.0.1-alpha) |  |  |
+| Соединители — Office 365 Outlook | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365outlook/v/0.0.1-alpha) |  |  |
 | Соединители — пользователи Office 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365users/v/0.0.1-alpha) |  |  |
 | Соединители — видео Office 365 | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-office365video/v/0.0.1-alpha) |  |  |
 | Соединители — OneDrive | npm [0.0.1-alpha](https://www.npmjs.com/package/@azure/connectors-onedrive/v/0.0.1-alpha) |  |  |
@@ -356,15 +405,17 @@ ms.locfileid: "96356299"
 | Ресурс прогнозирования службы "Пользовательское визуальное распознавание" | npm [5.1.2](https://www.npmjs.com/package/@azure/cognitiveservices-customvision-prediction/v/5.1.2) |  | GitHub [5.1.2](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-customvision-prediction) |
 | Ресурс обучения службы "Пользовательское визуальное распознавание" | npm [5.2.0](https://www.npmjs.com/package/@azure/cognitiveservices-customvision-training/v/5.2.0) |  | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-customvision-training) |
 | Digital Twins | npm [1.0.0-preview.1](https://www.npmjs.com/package/@azure/digital-twins/v/1.0.0-preview.1) | [docs](/javascript/api/overview/azure/digital-twins-readme-pre/) |  |
-| Digital Twins — основные функции | npm [1.0.0](https://www.npmjs.com/package/@azure/digital-twins-core/v/1.0.0) | [docs](/javascript/api/overview/azure/digital-twins-core-readme/) |  |
+| Digital Twins — основные функции | npm [1.0.0](https://www.npmjs.com/package/@azure/digital-twins-core/v/1.0.0) | [docs](/javascript/api/overview/azure/digital-twins-core-readme/) | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/digital-twins-core_1.0.0/sdk/digitaltwins/digital-twins-core/) |
 | Поиск сущностей | npm [3.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-entitysearch/v/3.0.1) |  | GitHub [3.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-entitysearch) |
-| Пакет Azure SDK подключаемого модуля Eslint | npm [2.0.1](https://www.npmjs.com/package/@azure/eslint-plugin-azure-sdk/v/2.0.1) |  |  |
-| Сетка событий Azure | npm [2.0.0](https://www.npmjs.com/package/@azure/eventgrid/v/2.0.0)<br>npm [3.0.0-beta.1](https://www.npmjs.com/package/@azure/eventgrid/v/3.0.0-beta.1) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/eventgrid/eventgrid) |
+| Пакет Azure SDK подключаемого модуля ESLint | npm [2.0.1](https://www.npmjs.com/package/@azure/eslint-plugin-azure-sdk/v/2.0.1) |  |  |
+| Сетка событий Azure | npm [2.0.0](https://www.npmjs.com/package/@azure/eventgrid/v/2.0.0)<br>npm [3.0.0-beta.2](https://www.npmjs.com/package/@azure/eventgrid/v/3.0.0-beta.2) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/eventgrid/eventgrid) |
 | Центры событий | npm [5.3.1](https://www.npmjs.com/package/@azure/event-hubs/v/5.3.1) | [docs](/javascript/api/overview/azure/event-hubs-readme/) | GitHub [5.3.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/event-hubs_5.3.1/sdk/eventhub/event-hubs/) |
 | Центры событий — хранилище контрольных точек Хранилища BLOB-объектов Azure | npm [1.0.1](https://www.npmjs.com/package/@azure/eventhubs-checkpointstore-blob/v/1.0.1) | [docs](/javascript/api/overview/azure/eventhubs-checkpointstore-blob-readme/) | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/eventhubs-checkpointstore-blob_1.0.1/sdk/eventhub/eventhubs-checkpointstore-blob/) |
 | Центры событий — обработчик событий | npm [2.1.1](https://www.npmjs.com/package/@azure/event-processor-host/v/2.1.1) |  | GitHub [2.1.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/event-processor-host_2.1.1/sdk/eventhub/event-processor-host/) |
+| Центры событий: реестр схемы | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry_1.0.0-beta.1/sdk/schemaregistry/schema-registry/) |
+| Центры событий: реестр схемы, Avro | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry-avro/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-avro-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry-avro_1.0.0-beta.1/sdk/schemaregistry/schema-registry-avro/) |
 | Распознавание лиц | npm [4.1.0](https://www.npmjs.com/package/@azure/cognitiveservices-face/v/4.1.0) |  | GitHub [4.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-face) |
-| Распознаватель документов | npm [3.0.0](https://www.npmjs.com/package/@azure/ai-form-recognizer/v/3.0.0) | [docs](/javascript/api/overview/azure/ai-form-recognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_3.0.0/sdk/formrecognizer/ai-form-recognizer/) |
+| Распознаватель документов | npm [3.0.0](https://www.npmjs.com/package/@azure/ai-form-recognizer/v/3.0.0)<br>npm [3.1.0-beta.1](https://www.npmjs.com/package/@azure/ai-form-recognizer/v/3.1.0-beta.1) | [docs](/javascript/api/overview/azure/ai-form-recognizer-readme/) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_3.0.0/sdk/formrecognizer/ai-form-recognizer/)<br>GitHub [3.1.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-form-recognizer_3.1.0-beta.1/sdk/formrecognizer/ai-form-recognizer/) |
 | Распознаватель документов | npm [2.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-formrecognizer/v/2.0.1) |  | GitHub [2.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-formrecognizer) |
 | Пакет SDK REST API для Git | npm [0.3.3](https://www.npmjs.com/package/git-rest-api-sdk/v/0.3.3) |  | GitHub [0.3.3](https://github.com/azure/git-rest-api) |
 | График | npm [5.0.1](https://www.npmjs.com/package/@azure/graph/v/5.0.1) |  | GitHub [5.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/graphrbac/graph) |
@@ -417,8 +468,6 @@ ms.locfileid: "96356299"
 | QnA Maker | npm [3.2.0](https://www.npmjs.com/package/@azure/cognitiveservices-qnamaker/v/3.2.0) |  | GitHub [3.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-qnamaker) |
 | Среда выполнения QnA Maker | npm [1.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-qnamaker-runtime/v/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-qnamaker-runtime) |
 | Скрипты спецификаций RestAPI | npm [0.14.0](https://www.npmjs.com/package/@azure/rest-api-specs-scripts/v/0.14.0) |  | GitHub [0.14.0](https://github.com/Azure/rest-api-specs-scripts) |
-| Реестр схемы | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry_1.0.0-beta.1/sdk/schemaregistry/schema-registry/) |
-| Сериализатор Avro для реестра схемы | npm [1.0.0-beta.1](https://www.npmjs.com/package/@azure/schema-registry-avro/v/1.0.0-beta.1) | [docs](/javascript/api/overview/azure/schema-registry-avro-readme-pre/) | GitHub [1.0.0-beta.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/schema-registry-avro_1.0.0-beta.1/sdk/schemaregistry/schema-registry-avro/) |
 | Поиск | npm [11.0.0-preview.1](https://www.npmjs.com/package/@azure/search/v/11.0.0-preview.1) |  |  |
 | Служебная шина | npm [7.0.0](https://www.npmjs.com/package/@azure/service-bus/v/7.0.0) | [docs](/javascript/api/overview/azure/service-bus-readme/) | GitHub [7.0.0](https://github.com/Azure/azure-sdk-for-js/tree/@azure/service-bus_7.0.0/sdk/servicebus/service-bus/) |
 | Service Fabric | npm [5.0.0](https://www.npmjs.com/package/@azure/servicefabric/v/5.0.0) | [docs](/javascript/api/overview/azure/service-fabric) |  |
@@ -460,6 +509,7 @@ ms.locfileid: "96356299"
 | Инструменты — Oai2 To Oai3 | npm [4.0.269](https://www.npmjs.com/package/@azure-tools/oai2-to-oai3/v/4.0.269) |  | GitHub [4.0.269](https://github.com/Azure/perks/tree/master/oai2-to-oai3) |
 | Инструменты — сравнение объектов | npm [3.0.251](https://www.npmjs.com/package/@azure-tools/object-comparison/v/3.0.251) |  | GitHub [3.0.251](https://github.com/Azure/perks/tree/master/object-comparison) |
 | Инструменты — OpenAPI | npm [3.0.260](https://www.npmjs.com/package/@azure-tools/openapi/v/3.0.260) |  | GitHub [3.0.260](https://github.com/Azure/perks/tree/master/openapi) |
+| Средства: общие средства OpenAPI | npm [1.2.2](https://www.npmjs.com/package/@azure-tools/openapi-tools-common/v/1.2.2) |  |  |
 | Инструменты — сопоставитель с исходным кодом | npm [0.1.234](https://www.npmjs.com/package/@azure-tools/sourcemap/v/0.1.234) |  | GitHub [0.1.234](https://github.com/Azure/adl/tree/master/adl/sourcemap) |
 | Инструменты — задачи | npm [3.0.252](https://www.npmjs.com/package/@azure-tools/tasks/v/3.0.252) |  | GitHub [3.0.252](https://github.com/Azure/perks/tree/master/tasks) |
 | Инструменты — URI | npm [3.0.254](https://www.npmjs.com/package/@azure-tools/uri/v/3.0.254) |  | GitHub [3.0.254](https://github.com/Azure/perks/tree/master/uri) |
@@ -474,16 +524,16 @@ ms.locfileid: "96356299"
 | Управление ресурсами — платформа приложений | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-appplatform/v/1.0.0) |  |  |
 | Управление ресурсами — Служба приложений | npm [6.1.0](https://www.npmjs.com/package/@azure/arm-appservice/v/6.1.0) | [docs](/javascript/api/overview/azure/appservice) | GitHub [6.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/appservice/arm-appservice) |
 | Управление ресурсами — Application Insights | npm [3.0.0](https://www.npmjs.com/package/@azure/arm-appinsights/v/3.0.0) |  | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/applicationinsights/arm-appinsights) |
-| Управление ресурсами — стандарт кодирования аудио и видео | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-avs/v/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/avs/arm-avs) |
+| Управление ресурсами — аттестация | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-attestation/v/1.0.0) |  |  |
 | Управление ресурсами — авторизация | npm [8.3.3](https://www.npmjs.com/package/@azure/arm-authorization/v/8.3.3) | [docs](/javascript/api/overview/azure/authorization) | GitHub [8.3.3](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/authorization/arm-authorization) |
 | Управление ресурсами — служба автоматизации | npm [10.0.0](https://www.npmjs.com/package/@azure/arm-automation/v/10.0.0) | [docs](/javascript/api/overview/azure/automation) | GitHub [10.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/automation/arm-automation) |
 | Управление ресурсами — Azure Stack | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-azurestack/v/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/azurestack/arm-azurestack) |
 | Управление ресурсами — Azure Stack HCI | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-azurestackhci/v/1.0.0) |  |  |
+| Управление ресурсами: Решение Azure VMware | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-avs/v/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/avs/arm-avs) |
 | Управление ресурсами — пакетная служба | npm [5.0.0](https://www.npmjs.com/package/@azure/arm-batch/v/5.0.0) |  | GitHub [5.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/batch/arm-batch) |
 | Управление ресурсами — Batch AI | npm [2.1.0](https://www.npmjs.com/package/@azure/arm-batchai/v/2.1.0) | [docs](/javascript/api/overview/azure/batchai) | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/batchai/arm-batchai) |
 | Управление ресурсами — выставление счетов | npm [3.0.0](https://www.npmjs.com/package/@azure/arm-billing/v/3.0.0) | [docs](/javascript/api/overview/azure/billing) | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/billing/arm-billing) |
 | Управление ресурсами — Служба Bot | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-botservice/v/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/botservice/arm-botservice) |
-| Управление ресурсами — CDN | npm [5.2.0](https://www.npmjs.com/package/@azure/arm-cdn/v/5.2.0) | [docs](/javascript/api/overview/azure/cdn) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cdn/arm-cdn) |
 | Управление ресурсами — Cognitive Services | npm [5.2.0](https://www.npmjs.com/package/@azure/arm-cognitiveservices/v/5.2.0) | [docs](/javascript/api/overview/azure/cognitive-services) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/arm-cognitiveservices) |
 | Управление ресурсами — торговля | npm [2.1.1](https://www.npmjs.com/package/@azure/arm-commerce/v/2.1.1) | [docs](/javascript/api/overview/azure/commerce) | GitHub [2.1.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/commerce/arm-commerce) |
 | Управление ресурсами — планы обязательств | npm [1.2.0](https://www.npmjs.com/package/@azure/arm-commitmentplans/v/1.2.0) |  | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/machinelearning/arm-commitmentplans) |
@@ -492,10 +542,12 @@ ms.locfileid: "96356299"
 | Управление ресурсами — потребление | npm [6.3.0](https://www.npmjs.com/package/@azure/arm-consumption/v/6.3.0) |  | GitHub [6.3.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/consumption/arm-consumption) |
 | Управление ресурсами — экземпляр контейнера | npm [6.0.0](https://www.npmjs.com/package/@azure/arm-containerinstance/v/6.0.0) |  | GitHub [6.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/containerinstance/arm-containerinstance) |
 | Управление ресурсами — Реестр контейнеров | npm [8.0.0](https://www.npmjs.com/package/@azure/arm-containerregistry/v/8.0.0) | [docs](/javascript/api/overview/azure/container-registry) | GitHub [8.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/containerregistry/arm-containerregistry) |
-| Управление ресурсами — служба контейнеров | npm [11.2.0](https://www.npmjs.com/package/@azure/arm-containerservice/v/11.2.0) | [docs](/javascript/api/overview/azure/container-service) | GitHub [11.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/containerservice/arm-containerservice) |
+| Управление ресурсами — служба контейнеров | npm [12.0.0](https://www.npmjs.com/package/@azure/arm-containerservice/v/12.0.0) | [docs](/javascript/api/overview/azure/container-service) | GitHub [12.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/containerservice/arm-containerservice) |
+| Управление ресурсами — сеть доставки содержимого | npm [5.2.0](https://www.npmjs.com/package/@azure/arm-cdn/v/5.2.0) | [docs](/javascript/api/overview/azure/cdn) | GitHub [5.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cdn/arm-cdn) |
 | Управление ресурсами — Cosmos DB | npm [9.1.0](https://www.npmjs.com/package/@azure/arm-cosmosdb/v/9.1.0) | [docs](/javascript/api/overview/azure/cosmos-db) | GitHub [9.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cosmosdb/arm-cosmosdb) |
 | Управление ресурсами — Customer Insights | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-customerinsights/v/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/customer-insights/arm-customerinsights) |
 | Управление ресурсами — Data Box | npm [4.0.0](https://www.npmjs.com/package/@azure/arm-databox/v/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/databox/arm-databox) |
+| Управление ресурсами — Data Box Edge | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-databoxedge/v/1.0.0) |  |  |
 | Управление ресурсами — Каталог данных | npm [1.1.0](https://www.npmjs.com/package/@azure/arm-datacatalog/v/1.1.0) |  | GitHub [1.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/datacatalog/arm-datacatalog) |
 | Управление ресурсами — Фабрика данных | npm [7.4.0](https://www.npmjs.com/package/@azure/arm-datafactory/v/7.4.0) |  | GitHub [7.4.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/datafactory/arm-datafactory) |
 | Управление ресурсами — перенос данных | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-datamigration/v/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/datamigration/arm-datamigration) |
@@ -514,6 +566,7 @@ ms.locfileid: "96356299"
 | Управление ресурсами — Frontdoor | npm [4.0.0](https://www.npmjs.com/package/@azure/arm-frontdoor/v/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/frontdoor/arm-frontdoor) |
 | Управление ресурсами — HANA в Azure | npm [3.0.0](https://www.npmjs.com/package/@azure/arm-hanaonazure/v/3.0.0) |  | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/hanaonazure/arm-hanaonazure) |
 | Управление ресурсами — HDInsight | npm [0.20.0](https://www.npmjs.com/package/@azure/arm-hdinsight/v/0.20.0) | [docs](/javascript/api/overview/azure/hdinsight) | GitHub [0.20.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/hdinsight/arm-hdinsight) |
+| Управление ресурсами: API-интерфейсы в отрасли здравоохранения | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-healthcareapis/v/1.0.0) |  |  |
 | Управление ресурсами — гибридные вычисления | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-hybridcompute/v/2.0.0) |  |  |
 | Управление ресурсами — IoT Central | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-iotcentral/v/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/iotcentral/arm-iotcentral) |
 | Управление ресурсами — Центр Интернета вещей | npm [4.0.0](https://www.npmjs.com/package/@azure/arm-iothub/v/4.0.0) | [docs](/javascript/api/overview/azure/iot-hub) | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/iothub/arm-iothub) |
@@ -547,7 +600,7 @@ ms.locfileid: "96356299"
 | Управление ресурсами — операции | npm [2.1.0](https://www.npmjs.com/package/@azure/arm-operations/v/2.1.0) |  | GitHub [2.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/operationsmanagement/arm-operations) |
 | Управление ресурсами — пиринг | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-peering/v/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/peering/arm-peering) |
 | Управление ресурсами — политика | npm [3.1.0](https://www.npmjs.com/package/@azure/arm-policy/v/3.1.0) |  | GitHub [3.1.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/policy/arm-policy) |
-| Управление ресурсами — анализ политик | npm [3.2.0](https://www.npmjs.com/package/@azure/arm-policyinsights/v/3.2.0) |  | GitHub [3.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/policyinsights/arm-policyinsights) |
+| Управление ресурсами — анализ политик | npm [4.0.0](https://www.npmjs.com/package/@azure/arm-policyinsights/v/4.0.0) |  | GitHub [4.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/policyinsights/arm-policyinsights) |
 | Управление ресурсами — PostgreSQL | npm [4.4.0](https://www.npmjs.com/package/@azure/arm-postgresql/v/4.4.0) |  | GitHub [4.4.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/postgresql/arm-postgresql) |
 | Управление ресурсами — Power BI, категория "Выделенный" | npm [2.0.0](https://www.npmjs.com/package/@azure/arm-powerbidedicated/v/2.0.0) |  | GitHub [2.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/powerbidedicated/arm-powerbidedicated) |
 | Управление ресурсами — Power BI Embedded | npm [1.2.0](https://www.npmjs.com/package/@azure/arm-powerbiembedded/v/1.2.0) | [docs](/javascript/api/overview/azure/powerbi-embedded) | GitHub [1.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/powerbiembedded/arm-powerbiembedded) |
@@ -580,14 +633,9 @@ ms.locfileid: "96356299"
 | Управление ресурсами — подписки | npm [3.0.0](https://www.npmjs.com/package/@azure/arm-subscriptions/v/3.0.0) |  | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/subscription/arm-subscriptions) |
 | Управление ресурсами — поддержка | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-support/v/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/support/arm-support) |
 | Управление ресурсами — Synapse | npm [3.0.0](https://www.npmjs.com/package/@azure/arm-synapse/v/3.0.0) |  | GitHub [3.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/synapse/arm-synapse) |
-| Управление ресурсами — аналитика временных рядов | npm [1.2.1](https://www.npmjs.com/package/@azure/arm-timeseriesinsights/v/1.2.1) |  | GitHub [1.2.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/timeseriesinsights/arm-timeseriesinsights) |
+| Управление ресурсами — Аналитика временных рядов | npm [1.2.1](https://www.npmjs.com/package/@azure/arm-timeseriesinsights/v/1.2.1) |  | GitHub [1.2.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/timeseriesinsights/arm-timeseriesinsights) |
 | Управление ресурсами — Диспетчер трафика | npm [5.0.0](https://www.npmjs.com/package/@azure/arm-trafficmanager/v/5.0.0) | [docs](/javascript/api/overview/azure/traffic-manager) | GitHub [5.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/trafficmanager/arm-trafficmanager) |
 | Управление ресурсами — Visual Studio | npm [2.2.0](https://www.npmjs.com/package/@azure/arm-visualstudio/v/2.2.0) |  | GitHub [2.2.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/visualstudio/arm-visualstudio) |
 | Управление ресурсами — VMware CloudSimple | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-vmwarecloudsimple/v/1.0.0) |  | GitHub [1.0.0](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/vmwarecloudsimple/arm-vmwarecloudsimple) |
 | Управление ресурсами — веб-службы | npm [0.1.1](https://www.npmjs.com/package/@azure/arm-webservices/v/0.1.1) |  | GitHub [0.1.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/machinelearning/arm-webservices) |
 | Управление ресурсами — рабочие пространства | npm [0.1.1](https://www.npmjs.com/package/@azure/arm-workspaces/v/0.1.1) |  | GitHub [0.1.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/machinelearning/arm-workspaces) |
-| @autorest/go | npm [4.0.0-preview.7](https://www.npmjs.com/package/@autorest/go/v/4.0.0-preview.7) |  |  |
-| @azure/arm-attestation | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-attestation/v/1.0.0) |  |  |
-| @azure/arm-databoxedge | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-databoxedge/v/1.0.0) |  |  |
-| @azure/arm-healthcareapis | npm [1.0.0](https://www.npmjs.com/package/@azure/arm-healthcareapis/v/1.0.0) |  |  |
-| @azure-tools/openapi-tools-common | npm [1.2.2](https://www.npmjs.com/package/@azure-tools/openapi-tools-common/v/1.2.2) |  |  |
