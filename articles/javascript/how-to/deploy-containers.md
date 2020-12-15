@@ -1,23 +1,50 @@
 ---
 title: Развертывание контейнеров Node.js в Azure
-description: Развертывание веб-приложений Node.js в Azure с помощью контейнера Docker
+description: Развертывание приложений Node.js в Azure с помощью контейнеров Docker
 ms.topic: how-to
-ms.date: 08/20/2019
+ms.date: 12/07/2020
 ms.custom: seo-javascript-september2019, devx-track-js
-ms.openlocfilehash: 4aa19f805c0e8960d9666ca6e711b981cf14e0a6
-ms.sourcegitcommit: c3a1c9051b89870f6bfdb3176463564963b97ba4
+ms.openlocfilehash: 6bf8acb66a708433966bdfe90cc358a56d2d3b42
+ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92437269"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857812"
 ---
-# <a name="use-azure-to-deploy-scale-and-manage-nodejs-containers"></a>Использование Azure для развертывания, масштабирования и администрирования контейнеров Node.js
+# <a name="deploy-nodejs-container-to-azure"></a>Развертывание контейнеров Node.js в Azure 
 
-Azure предоставляет надежную службу контейнеров, позволяющую легко развертывать, масштабировать приложения Node.js, основанные на контейнере, а также управлять ими.
+Создание приложения с помощью контейнеров является распространенным шаблоном для обеспечения масштабируемости. Azure предоставляет несколько вариантов развертывания контейнеров.
 
-Чтобы приступить к работе, выполните простое пошаговое руководство [Deploy to Azure using Docker and Visual Studio Code](../tutorial-vscode-docker-node-01.md) (Развертывание в Azure с помощью Docker и Visual Studio Code). Использование Visual Studio Code упрощает отправку изображений в реестр контейнеров (например, Реестр контейнеров Azure), а затем развертывание этого контейнера в Службе приложений Azure.
+## <a name="host-your-container-app-on-azure"></a>Размещение приложения контейнера в Azure
 
-Вы также можете выполнить следующие модули Microsoft Learn:
+Указанные ниже варианты размещения позволяют развертывать контейнерные приложения.
+
+| Служба | Рекомендовано для |
+|--|--|
+|[Службы приложений](/azure/app-service/quickstart-custom-container?pivots=container-linux)|Развертывание и запуск пользовательского контейнера в службе приложений Azure.|
+|[Экземпляры контейнеров](/azure/container-instances/)|Быстрая настройка одного контейнера.|
+|[Реестр контейнеров](/azure/container-registry/)|Создание и хранение пользовательских или частных образов контейнеров, а также управление ими.|
+|[Служба Kubernetes](/azure/aks/)|Оркестрация нескольких контейнеров.|
+|[Виртуальные машины](/azure/virtual-machines) (VM)|Полный контроль над виртуальной машиной Windows или Linux. [Найдите дистрибутив, рекомендованный для Linux](/azure/virtual-machines/linux/endorsed-distros?toc=/azure/virtual-machines/linux/toc.json), или [узнайте, как найти](/azure/virtual-machines/linux/cli-ps-findimage) образы виртуальных машин Linux в Azure Marketplace.|
+
+## <a name="build-containerize-and-deploy-app-to-azure"></a>Сборка, контейнеризация и развертывание приложения в Azure
+
+Чтобы приступить к работе, ознакомьтесь со сведениями из [этого учебника](develop-nodejs-on-azure.md), чтобы узнать, как выполнять следующие действия:
+
+* Скачивание образца кода
+* Запуск приложения Node.js
+* Отладка приложения в Visual Studio Code.
+* Контейнеризация приложения Node.js MEAN.
+* Развертывание приложения с помощью команд Azure CLI.
+* Создание сервера MongoDB в ресурсе CosmosDB.
+* Добавление образа контейнера в частный реестр контейнеров.
+* Добавление личного доменного имени в веб-приложение.
+* Масштабирование веб-приложения до большего размера.
+* Создание и удаление группы ресурсов для всех ресурсов.
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+Модули Microsoft Learn:
 
 - [Запуск контейнеров Docker с помощью службы "Экземпляры контейнеров Azure"](/learn/modules/run-docker-with-azure-container-instances/)
 

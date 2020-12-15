@@ -4,12 +4,12 @@ description: Сведения о создании локального (бесс
 ms.topic: tutorial
 ms.date: 11/05/2020
 ms.custom: devx-track-js, contperfq2
-ms.openlocfilehash: d7d39018ab9645755c6c9bfe414f7507e9d091c7
-ms.sourcegitcommit: 12f80b1e0fe08db707c198271d0c399c3aba343a
+ms.openlocfilehash: 3c5d747245314029a12b1c502c066324efd70dc8
+ms.sourcegitcommit: 550b165d0b910f4ea9652d8401dd4fc93f057f05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94515195"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96605934"
 ---
 # <a name="2-create-the-local-functions-app-with-the-visual-studio-code-_functions_-extension"></a>2. Создание локального приложения Функций с помощью расширения _Функций_ для Visual Studio Code
 

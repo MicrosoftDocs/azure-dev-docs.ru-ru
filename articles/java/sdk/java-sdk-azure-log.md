@@ -8,18 +8,18 @@ ms.date: 03/25/2020
 ms.topic: article
 ms.service: multiple
 ms.custom: devx-track-java
-ms.openlocfilehash: 5bb7f711eae230a08893d2f94c242a06af809f88
-ms.sourcegitcommit: cf23d382eee2431a3958b1c87c897b270587bde0
+ms.openlocfilehash: 927f20601ded9a0ea6b2793ef1b0c8e1b5e6ac19
+ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87400622"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96857772"
 ---
 # <a name="configure-logging-with-the-azure-sdk-for-java"></a>Настройка ведения журнала с пакетом Azure SDK для Java
 
 В этой статье приводятся примеры настройки ведения журналов для [пакета SDK для Azure](https://azure.microsoft.com/downloads/) для Java. Дополнительные сведения о параметрах конфигурации, таких как настройка уровней ведения журнала или пользовательское ведение журналов по классам, см. в документации выбранной платформы ведения журналов.
 
-Пакет Azure SDK для клиентских библиотек Java использует [Simple Logging Facade for Java](https://www.slf4j.org/) (SLF4J). SLF4J позволяет использовать предпочтительную платформу ведения журналов, которая вызывается во время развертывания приложения.
+Пакет Azure SDK для клиентских библиотек Java использует [Simple Logging Facade for Java](https://www.slf4j.org/) (SLF4J). SLF4J позволяет использовать предпочтительную платформу ведения журналов, которая вызывается во время развертывания приложения. Если построитель клиента позволяет настроить [HttpLogOptions](/java/api/com.azure.core.http.policy.httplogoptions?view=azure-java-stable), для вывода журналов нужно также указать [HttpLogDetailLevel](/java/api/com.azure.core.http.policy.httplogdetaillevel?view=azure-java-stable) и все допустимые заголовки и параметры запроса.
 
 > [!NOTE]
 > Эта статья применима к последним версиям клиентских библиотек пакета Azure SDK. Чтобы узнать, поддерживается ли библиотека, обратитесь к списку [последних выпусков Azure SDK](https://azure.github.io/azure-sdk/releases/latest/java.html). Если приложение использует более раннюю версию клиентских библиотек пакета Azure SDK, ознакомьтесь с конкретными инструкциями в соответствующей документации службы.
@@ -249,6 +249,20 @@ logging.config=classpath:logback.xml
 |INFORMATIONAL|"info", "information", "informational"  |
 |WARNING     |"warn", "warning"       |
 |ошибка    |"err", "error"  |
+
+## <a name="setting-an-httplogdetaillevel"></a>Настройка HttpLogDetailLevel
+Независимо от используемого механизма ведения журнала, если построитель позволяет настроить [HttpLogOptions](/java/api/com.azure.core.http.policy.httplogoptions?view=azure-java-stable), эти параметры необходимо дополнительно настроить для вывода журналов. Необходимо указать [HttpLogDetailLevel](/java/api/com.azure.core.http.policy.httplogdetaillevel?view=azure-java-stable), чтобы определить, какие сведения следует регистрировать.  По умолчанию это значение равно `NONE`, поэтому если оно не указано, журналы не будут выводиться даже при правильной настройке платформы ведения журналов или резервного журнала. В целях безопасности заголовки и параметры запросов по умолчанию редактируются, поэтому для параметров журналов также необходимо задать `Set<String>`, чтобы указать, какие заголовки и параметры запросов можно использовать для печати. Эти значения можно настроить, как показано ниже. Для ведения журнала настроена печать содержимого текста и значений заголовков. Все значения заголовков редактируются, за исключением значений для указанных пользователем метаданных, соответствующих ключу `"foo"`. Также редактируются все параметры запросов, кроме параметра запроса маркера SAS `"sv"`, указывающего подписанную версию любого маркера SAS, который может присутствовать. 
+
+```
+new BlobClientBuilder().endpoint(<endpoint>)
+            .httpLogOptions(new HttpLogOptions()
+                .setLogLevel(HttpLogDetailLevel.BODY_AND_HEADERS)
+                .setAllowedHeaderNames(Set.of("x-ms-meta-foo"))
+                .setAllowedQueryParamNames(Set.of("sv")))
+            .buildClient();
+```
+> [!NOTE]
+> В этом примере используется построитель клиентов службы хранилища, но этот принцип применяется к любому построителю, принимающему `HttpLogOptions`. Кроме того, этот пример не отображает полную конфигурацию клиента и предназначен только для иллюстрации настройки ведения журнала. Дополнительные сведения о настройке клиентов см. в документации по соответствующим построителям.
 
 ## <a name="next-steps"></a>Следующие шаги
 
