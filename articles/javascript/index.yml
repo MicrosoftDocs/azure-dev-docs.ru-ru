@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: 8c624baedef4ff4131691cb9f36dd58e30b39022
-  ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+  ms.openlocfilehash: c0e7382b6c04c20d65f41c1a5a41922a4b658de4
+  ms.sourcegitcommit: f723980ade4cbc13548a5d8ac3f3fa681b8a2dbd
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/15/2020
-  ms.locfileid: "97522241"
+  ms.lasthandoff: 12/16/2020
+  ms.locfileid: "97601075"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -46,7 +46,7 @@ landingContent:
     - text: 'Служба приложений: Использование Express.js с MongoDB'
       url: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
     - text: 'Служба приложений: контейнер Express.js'
-      url: tutorial-vscode-docker-node-01.md
+      url: tutorial/tutorial-vscode-docker-node/tutorial-vscode-docker-node-01.md
     - text: 'Функции Azure: бессерверный триггер HTTP'
       url: tutorial/tutorial-vscode-serverless-node-install.md
     - text: 'Виртуальная машина Azure: контейнеры Express.js и NGINX'

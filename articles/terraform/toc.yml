@@ -49,6 +49,10 @@
           href: create-vm-scaleset-network-disks-hcl.md
         - name: Масштабируемый набор виртуальных машин из образа Packer
           href: create-vm-scaleset-network-disks-using-packer-hcl.md
+    - name: Безопасность
+      items:
+        - name: Аттестация Azure
+          href: create-attestation-provider.md
 - name: Учебники
   items:
     - name: Сети
