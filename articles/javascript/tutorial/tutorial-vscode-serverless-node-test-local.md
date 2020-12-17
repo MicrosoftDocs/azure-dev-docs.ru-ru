@@ -3,13 +3,13 @@ title: Локальное выполнение приложения Функци
 description: Локально выполните проект Функций Azure перед развертыванием в Azure. Установите точку останова непосредственно перед тем, как бессерверная функция возвращает ответ.
 ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-js, contperfq2
-ms.openlocfilehash: 031c7a3d2d7ec6cf9c1afadf1d77d67d826853fd
-ms.sourcegitcommit: 801682d3fc9651bf95d44e58574d5a4564be6feb
+ms.custom: devx-track-js, contperf-fy21q2
+ms.openlocfilehash: f345e27074c2070c2f8d8939ed09f8b4301a1966
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94338549"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522346"
 ---
 # <a name="3-test-the-function-locally"></a>3. Локальное тестирование функции
 

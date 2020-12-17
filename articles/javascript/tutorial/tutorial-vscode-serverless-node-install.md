@@ -3,13 +3,13 @@ title: Создание и развертывание функций JavaScript
 description: В рамках этого руководства вы создадите бессерверное приложение в Visual Studio Code с использованием расширений и JavaScript, а затем развернете приложение в облаке Azure для размещения с общедоступной конечной точкой HTTP.
 ms.topic: tutorial
 ms.date: 11/05/2020
-ms.custom: devx-track-js, contperfq2
-ms.openlocfilehash: ead5dffddff84a8c00f5087796e68c3d379b929d
-ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+ms.custom: devx-track-js, contperf-fy21q2
+ms.openlocfilehash: dba446d20b8300ea97b5186b2d4cc3a3006e8811
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96759321"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522358"
 ---
 # <a name="1-create-and-deploy-azure-functions-from-visual-studio-code"></a>1. Создание и развертывание Функций Azure с помощью Visual Studio
 

@@ -4,12 +4,12 @@ description: Узнайте, как создать виртуальную маш
 ms.topic: tutorial
 ms.date: 11/13/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 835a452e87fed88ac83085c882a5a40461bd2dd0
-ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
+ms.openlocfilehash: 674bf37acda9fcd9f6df7b84602600ad65ada3d9
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94623232"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522119"
 ---
 # <a name="1-create-linux-virtual-machine-with-expressjs-app-using-azure-cli"></a>1. Создание виртуальной машины Linux на основе приложения Express.js с помощью Azure CLI
 
@@ -37,8 +37,9 @@ ms.locfileid: "94623232"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* Установленный инструмент [Azure CLI](/cli/azure/install-azure-cli) для выполнения команд Azure CLI.
-* Протокол SSH для подключения к виртуальной машине: Используйте современный терминал, например оболочку Bash, с поддержкой протокола SSH.
+- Протокол SSH для подключения к виртуальной машине: Используйте современный терминал, например оболочку Bash, с поддержкой протокола SSH.
+[!INCLUDE [Azure CLI](../../../includes/azure-cli-prepare-your-environment-no-header.md)]
+
 
 ## <a name="next-step"></a>Следующий шаг
 

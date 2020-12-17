@@ -3,13 +3,13 @@ title: Разработка бессерверного кода Node.js с по�
 description: Функции Azure предоставляют инфраструктуру бессерверного кода, которая позволяет создавать быстро реагирующие конечные точки HTTP по запросу.
 ms.topic: how-to
 ms.date: 10/27/2020
-ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, contperfq2
-ms.openlocfilehash: eb33717761d492051737b0c4ec86a93a6e2b6256
-ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
+ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, contperf-fy21q2
+ms.openlocfilehash: b90837cdb144e433a7d776e571291ff09610a845
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93192546"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522299"
 ---
 # <a name="use-azure-functions-to-develop-nodejs-serverless-code"></a>Использование Функций Azure для разработки бессерверного кода Node.js в Azure
 

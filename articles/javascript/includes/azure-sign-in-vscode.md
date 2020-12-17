@@ -1,17 +1,17 @@
 ---
 ms.custom: devx-track-js
 ms.topic: include
-ms.date: 010/16/2020
-ms.openlocfilehash: fb1c04fe82b67076ca38ef353daf7260544a5881
-ms.sourcegitcommit: 801682d3fc9651bf95d44e58574d5a4564be6feb
+ms.date: 10/16/2020
+ms.openlocfilehash: 624ba9739549b260018e05450598d17460f2e5d8
+ms.sourcegitcommit: c1ef7aa8ed2e88e98b190e42cffde52cf301958d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94338504"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97096357"
 ---
 Если вы уже используете расширения служб Azure, вы уже вошли в систему и можете пропустить этот шаг. Если вы не используете расширения служб Azure, продолжайте работу с этим разделом, чтобы войти в Azure.
 
-Установив расширение служб Azure в Visual Studio Code, войдите в свою учетную запись Azure. Для этого перейдите в обозреватель **Azure** , щелкните **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).
+Установив расширение служб Azure в Visual Studio Code, войдите в свою учетную запись Azure. Для этого перейдите в обозреватель **Azure**, щелкните **Войти в Azure** и следуйте инструкциям. (Если вы установили несколько расширений Azure, выберите одно для области, в которой работаете, например Службы приложений, Функций и т. д.).
 
 ![Вход в Azure с помощью VS Code](../media/deploy-azure/azure-sign-in.png)
 

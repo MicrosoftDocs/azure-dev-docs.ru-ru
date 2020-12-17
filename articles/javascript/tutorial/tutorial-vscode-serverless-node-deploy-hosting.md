@@ -3,13 +3,13 @@ title: Развертывание приложения Функций в обл�
 description: Сведения о том, как использовать расширение Visual Studio Code для Функций Azure, чтобы развернуть приложение Функций в облаке Azure. С помощью браузера убедитесь, что приложение Функций общедоступно.
 ms.topic: tutorial
 ms.date: 09/23/2019
-ms.custom: devx-track-js, contperfq2
-ms.openlocfilehash: 4d000d1f8f8b8cf05f6387fb698d4bf2e2e9cdc5
-ms.sourcegitcommit: 801682d3fc9651bf95d44e58574d5a4564be6feb
+ms.custom: devx-track-js, contperf-fy21q2
+ms.openlocfilehash: bbe5dbf30da67c66e3cb150aa590b657ccc4ea10
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "94338550"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522225"
 ---
 # <a name="4-deploy-the-functions-app-to-azure-cloud"></a>4. Развертывание приложения Функций в облаке Azure
 

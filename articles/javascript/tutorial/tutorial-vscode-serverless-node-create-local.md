@@ -3,13 +3,13 @@ title: Создание приложения Функций Azure в Visual Stud
 description: Сведения о создании локального (бессерверного) приложения Функций Azure с функцией, которая использует триггер HTTP. Приложение Функций Azure может содержать несколько функций с разными триггерами. В частности, HTTP-триггер обрабатывает входящий трафик HTTP.
 ms.topic: tutorial
 ms.date: 11/05/2020
-ms.custom: devx-track-js, contperfq2
-ms.openlocfilehash: 3c5d747245314029a12b1c502c066324efd70dc8
-ms.sourcegitcommit: 550b165d0b910f4ea9652d8401dd4fc93f057f05
+ms.custom: devx-track-js, contperf-fy21q2
+ms.openlocfilehash: b1e357bc3329c2dc19fdf4988b22182576575cf5
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96605934"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522086"
 ---
 # <a name="2-create-the-local-functions-app-with-the-visual-studio-code-_functions_-extension"></a>2. Создание локального приложения Функций с помощью расширения _Функций_ для Visual Studio Code
 

@@ -4,12 +4,12 @@ description: Узнайте, как использовать проверку п
 ms.topic: how-to
 ms.date: 11/05/2020
 ms.custom: devx-track-js, devx-track-azurecli
-ms.openlocfilehash: e837ca7f83f115a9d7c2bbe34e46d884a02dffe0
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.openlocfilehash: dc9b82ad8e664beeeedaa0002f76457bb01793e3
+ms.sourcegitcommit: c1ef7aa8ed2e88e98b190e42cffde52cf301958d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872775"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97034505"
 ---
 # <a name="create-an-azure-service-principal-for-nodejs"></a>Создание субъекта-службы Azure для Node.js
 
@@ -23,8 +23,6 @@ ms.locfileid: "94872775"
 
 - Портал Azure
 - Azure CLI 2.0
-
-[!INCLUDE [chrome-note](../includes/chrome-note.md)]
 
 ## <a name="create-a-service-principal-using-the-azure-cli-20"></a>Создание субъекта-службы с помощью Azure CLI 2.0
 
