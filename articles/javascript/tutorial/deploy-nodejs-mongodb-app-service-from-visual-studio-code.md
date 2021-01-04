@@ -4,12 +4,12 @@ description: В этом руководстве вы будете работат
 ms.topic: tutorial
 ms.date: 12/03/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
-ms.openlocfilehash: 8c40801607e11a4b929f0bb76926122d26217805
-ms.sourcegitcommit: 550b165d0b910f4ea9652d8401dd4fc93f057f05
+ms.openlocfilehash: 1ddbe6a463f877e86a0c46da1ffb17c6a3094c0a
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96610976"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522402"
 ---
 # <a name="deploy-expressjs-mongodb-app-to-app-service-from-visual-studio-code"></a>Развертывание приложения MongoDB на платформе Express.js в Службе приложений с помощью Visual Studio Code
 
@@ -151,6 +151,7 @@ ms.locfileid: "96610976"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Продолжите изучение Службы приложений и CosmosDB:
+* [Узнайте, как настроить параметры своего приложения](../how-to/configure-web-app-settings.md)
 * [Настройка приложения Node.js для Службы приложений Azure](/azure/app-service/configure-language-nodejs?pivots=platform-linux)
 * [Подключение по SSH](/azure/app-service/configure-linux-open-ssh-session)
 * [Перенос данных в CosmosDB](/azure/dms/tutorial-mongodb-cosmos-db?toc=/azure/cosmos-db/toc.json?toc=/azure/cosmos-db/toc.json)

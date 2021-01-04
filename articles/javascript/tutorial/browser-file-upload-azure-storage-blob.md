@@ -1,21 +1,21 @@
 ---
 title: Отправка образа в Хранилище BLOB-объектов с помощью VSCode — Служба приложений/CosmosDB
-description: Используйте приложение React для передачи файла в BLOB-объекты службы хранилища Azure. В этом руководстве рассматривается использование локальных и удаленных сред с расширениями Visual Studio Code.
+description: Используйте приложение React или TypeScript для передачи файла в BLOB-объекты службы хранилища Azure. В этом руководстве рассматривается использование локальных и удаленных сред с расширениями Visual Studio Code.
 ms.topic: tutorial
 ms.date: 11/13/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript, azure-sdk-storage-blob-typescript-version-12.2.1
-ms.openlocfilehash: 514c4cf3c5d54c30451759958b1cef5e465c5c8e
-ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+ms.openlocfilehash: 2e38e7e293f87dc9fa8cafc69a0780a10d31d730
+ms.sourcegitcommit: 525c4b41d85aae9c3026a070b07e00c2241ea716
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772623"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97393903"
 ---
 # <a name="upload-an-image-to-an-azure-storage-blob"></a>Отправка образа в Azure Storage Blob
 
 Используйте приложение React на стороне клиента, чтобы передать файл образа в Azure Storage Blob с помощью пакета npm службы хранилища Azure. 
 
-Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.
+Вся работа по программированию на TypeScript уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.
 
 * [Исходный код](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob)
 
@@ -23,7 +23,7 @@ ms.locfileid: "96772623"
 
 В этом руководстве представлено несколько **основных задач Azure** для разработчиков JavaScript:
 
-* запуск приложения React на локальном компьютере с помощью Visual Studio Code;
+* запуск приложения React или TypeScript на локальном компьютере с помощью Visual Studio Code;
 * создание ресурса хранилища и его настройка для отправки файлов;
     * Настройка CORS
     * создание маркера подписанного URL-адреса (SAS);
@@ -188,7 +188,7 @@ const sasToken = process.env.storagesastoken || "";
 
 ## <a name="upload-button-functionality"></a>Функция кнопки отправки
 
-Файл `src/app` создается автоматически при создании приложения с помощью create-react-app. Мы изменили этот файл, включив в него описание кнопки выбора файла и кнопки отправки, а также вспомогательный код для поддержки этой возможности. 
+Файл TypeScript `src/App.tsx` создается автоматически при создании приложения с помощью create-react-app. Мы изменили этот файл, включив в него описание кнопки выбора файла и кнопки отправки, а также вспомогательный код для поддержки этой возможности. 
 
 Здесь выделен код, который подключается к коду хранилища BLOB-объектов Azure. Вызов `uploadFileToBlob` возвращает в виде неструктурированного списка все BLOB-объекты (файлы) в указанном контейнере. Этот список отображается с помощью функции `DisplayImagesFromContainer`.
 
@@ -202,7 +202,7 @@ const sasToken = process.env.storagesastoken || "";
 
 ### <a name="dependencies-and-variables"></a>Зависимости и переменные
 
-Файл `uploadToBlob.ts` загружает зависимости и извлекает необходимые переменные из переменных среды или жестко запрограммированных строк.
+Файл TypeScript `uploadToBlob.ts` загружает зависимости и извлекает необходимые переменные из переменных среды или жестко заданных строк.
 
 | Переменная | Описание |
 |--|--|

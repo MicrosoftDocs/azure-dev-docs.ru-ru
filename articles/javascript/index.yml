@@ -7,26 +7,28 @@ metadata:
   description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js, используя наши руководства, средства и справочник по пакету SDK.
   author: diberry
   ms.author: diberry
-  ms.date: 09/21/2020
+  ms.date: 012/16/2020
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: c0e7382b6c04c20d65f41c1a5a41922a4b658de4
-  ms.sourcegitcommit: f723980ade4cbc13548a5d8ac3f3fa681b8a2dbd
+  ms.openlocfilehash: 55e5b258ccafc2fc9e93f8a27efbc5b543b6450d
+  ms.sourcegitcommit: 1dfcc022a3098b1a1505e9458eada35f527ef070
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/16/2020
-  ms.locfileid: "97601075"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "97636393"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
   - linkListType: get-started
     links:
-    - text: Основные понятия Azure
-      url: /learn/paths/azure-fundamentals/
+    - text: Что такое Azure?
+      url: core/what-is-azure-for-javascript-development.md
+    - text: Установка Node.js
+      url: core/install-nodejs-develop-azure-sdk-project.md
     - text: Настройка среды разработки
       url: core/configure-local-development-environment.md
     - text: Аутентификация в клиентской библиотеке
@@ -89,16 +91,16 @@ landingContent:
       url: /azure/cognitive-services/translator/quickstart-translator?pivots=programming-language-javascript
     - text: Определение объектов на изображении
       url: tutorial/static-web-app/introduction.md
-- title: Безопасность, обмен сообщениями и журналы
+- title: Схемы обучения и модули
   linkLists:
-  - linkListType: quickstart
+  - linkListType: learn
     links:
-    - text: Проверка подлинности
-      url: /azure/active-directory/develop/quickstart-v2-javascript
-    - text: Очереди сообщений
-      url: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues-new-package
-    - text: Ведение журналов и аналитика
-      url: /azure/azure-monitor/learn/nodejs-quick-start
+    - text: Основные понятия Azure
+      url: /learn/modules/intro-to-azure-fundamentals/
+    - text: Создание приложений JavaScript с помощью Node.js
+      url: /learn/paths/build-javascript-applications-nodejs/
+    - text: Служба статических веб-приложений Azure
+      url: /learn/paths/azure-static-web-apps/
 - title: Использование клиентских библиотек Azure (пакет SDK)
   linkLists:
   - linkListType: get-started

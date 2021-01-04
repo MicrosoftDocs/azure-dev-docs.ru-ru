@@ -4,12 +4,12 @@ description: В этом руководстве объясняется, как �
 ms.topic: tutorial
 ms.date: 10/13/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
-ms.openlocfilehash: ba2e0a42b6d2dedd2192629562a8415a0d6d7167
-ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+ms.openlocfilehash: 16cb388a9a61b0141f04364dc1489607565156a3
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96772627"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522390"
 ---
 # <a name="deploy-deno-apps-to-azure-app-service-from-the-azure-cli"></a>Развертывание приложений Deno в Службе приложений Azure с помощью Azure CLI
 
@@ -21,14 +21,9 @@ ms.locfileid: "96772627"
 
 - Учетная запись Azure с активной подпиской. [Создать бесплатно](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-deno&mktingSource=vscode-tutorial-appservice-deno)
 - Установка [Visual Studio Code](https://code.visualstudio.com/)
-- Установка [Deno](https://deno.land/#installation).
-- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) можно использовать в среде Bash.
+- Установка [Deno](https://deno.land/#installation)
+[!INCLUDE [Azure CLI](../../includes/azure-cli-prepare-your-environment-no-header.md)].
 
-   [![Внедрение запуска](https://shell.azure.com/images/launchcloudshell.png "Запуск Azure Cloud Shell")](https://shell.azure.com)   
-- При необходимости [установите](/cli/azure/install-azure-cli) Azure CLI, чтобы выполнять справочные команды CLI.
-   - Если вы используете локальную установку, выполните вход с помощью команды Azure CLI [az login](/cli/azure/reference-index#az-login).  Чтобы выполнить аутентификацию, следуйте инструкциям в окне терминала.  Сведения о дополнительных возможностях, доступных при входе, см. в статье [Вход с помощью Azure CLI](/cli/azure/authenticate-azure-cli).
-  - Если появится запрос, установите расширения Azure CLI при первом использовании.  Дополнительные сведения о расширениях см. в статье [Использование расширений с Azure CLI](/cli/azure/azure-cli-extensions-overview).
-  - Выполните команду [az version](/cli/azure/reference-index?#az_version), чтобы узнать установленную версию и зависимые библиотеки. Чтобы обновиться до последней версии, выполните команду [az upgrade](/cli/azure/reference-index?#az_upgrade).
 
 ## <a name="2-sign-in-to-azure-cli"></a>2. Вход в Azure CLI
 
@@ -162,6 +157,7 @@ az group delete deno-quickstart
 ## <a name="next-steps"></a>Дальнейшие действия
 
 См. также:
+* [Узнайте, как настроить параметры своего приложения](../how-to/configure-web-app-settings.md)
 * [Развертывание в Службе приложений](../tutorial-vscode-azure-app-service-node-01.md) с помощью расширений Visual Studio Code
 * [Развертывание в виртуальной машине](./nodejs-virtual-machine-vm/introduction.md)
 * [Развертывание функции Deno](https://github.com/anthonychu/azure-functions-deno-worker) в качестве [настраиваемого обработчика](/azure/azure-functions/functions-custom-handlers)

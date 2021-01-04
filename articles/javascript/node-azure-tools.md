@@ -4,12 +4,12 @@ description: Установка отдельных средств для раз�
 ms.topic: reference
 ms.date: 12/07/2020
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js
-ms.openlocfilehash: 714d096e4afde345bffa2582026f28fa2126a38c
-ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
+ms.openlocfilehash: 20ec85ccd29c2993241d0ae6c4f004bd7ff251a3
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857800"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522260"
 ---
 # <a name="tools-for-javascript-developers-on-azure"></a>Средства Azure для разработчиков JavaScript 
 
@@ -26,9 +26,9 @@ Azure CLI оптимизирован для управления ресурса�
 
 Azure CLI предоставляет указанные ниже сценарии использования.
 
-* [Локальная установка](/cli/azure/install-az-cli2).
-* [Веб-оболочка](https://shell.azure.com/).
-* [Контейнер](/cli/azure/run-azure-cli-docker)
+* [Локальная установка Azure CLI](/cli/azure/install-az-cli2)
+* [Azure Cloud Shell](https://shell.azure.com/)
+* [Контейнер Docker](/cli/azure/run-azure-cli-docker)
 
 При использовании портала Azure доступ к Azure CLI можно получить в верхней панели навигации.
 

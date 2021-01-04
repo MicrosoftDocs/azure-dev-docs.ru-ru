@@ -4,12 +4,12 @@ description: Обзор функций и возможностей библио�
 ms.date: 09/19/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 276230cf5e5999f7d188d138e3b4e7361c3e4114
-ms.sourcegitcommit: b70a38d46616f5e519d5b9c1a1eaf3fe0ecb9605
+ms.openlocfilehash: d610099b3b877f0916079ca2000a5268f3f08c2a
+ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94932388"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97522000"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Использование библиотек Azure (пакет SDK) для Python
 
@@ -75,6 +75,8 @@ ms.locfileid: "94932388"
 - [Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
 
 Дополнительные сведения о работе с каждой библиотекой управления см. в файле *README.md* или *README.rst*, расположенном в папке проекта библиотеки в [репозитории GitHub](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk) пакета SDK. Дополнительные фрагменты кода также можно найти в [справочной документации](/python/api) и в разделе с [примерами для Azure](/samples/browse/?languages=python&term=Getting%20started%20-%20Managing).
+
+### <a name="migrating-from-older-management-libraries"></a>Миграция из более ранних версий библиотек управления
 
 Если выполняется перенос кода из более ранних версий библиотек управления, см. следующие сведения:
 
