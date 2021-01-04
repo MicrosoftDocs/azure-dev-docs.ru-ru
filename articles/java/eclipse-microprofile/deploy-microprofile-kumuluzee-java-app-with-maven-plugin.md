@@ -7,16 +7,16 @@ ms.date: 06/10/2020
 ms.service: app-service
 ms.topic: article
 ms.custom: ''
-ms.openlocfilehash: bafc670e22838e7fe28965f993be9fa7aa343f12
-ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
+ms.openlocfilehash: fee8a9b121914e3360b19726b6069a6778cfea41
+ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91846635"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97754180"
 ---
 # <a name="deploy-a-kumuluzee-web-app-to-azure-app-service-with-maven"></a>Развертывание веб-приложения KumuluzEE в Службе приложений Azure с помощью Maven
 
-В этом кратком руководстве показано, как использовать [подключаемый модуль Maven для веб-приложений Службы приложений Azure](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme), чтобы развернуть приложение KumuluzEE в [Службе приложений Azure в Linux](/azure/app-service/containers/). Развертывание Java SE является предпочтительным по сравнению с [Tomcat и файлами WAR](/azure/app-service/containers/quickstart-java), если вам нужно объединить зависимости, среду выполнения и файлы конфигурации приложения в единый развертываемый артефакт.
+В этом кратком руководстве показано, как использовать [подключаемый модуль Maven для веб-приложений Службы приложений Azure](https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md), чтобы развернуть приложение KumuluzEE в [Службе приложений Azure в Linux](/azure/app-service/containers/). Развертывание Java SE является предпочтительным по сравнению с [Tomcat и файлами WAR](/azure/app-service/containers/quickstart-java), если вам нужно объединить зависимости, среду выполнения и файлы конфигурации приложения в единый развертываемый артефакт.
 
 Если у вас еще нет подписки Azure, [создайте бесплатную учетную запись Azure](https://azure.microsoft.com/free/?WT.mc_id=A261C142F), прежде чем начинать работу.
 
@@ -306,7 +306,7 @@ az login
 [Working with Azure DevOps and Java]: /azure/devops/
 [Maven]: http://maven.apache.org/
 [MSDN subscriber benefits]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
-[Подключаемый модуль Maven для веб-приложений Azure]: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+[Подключаемый модуль Maven для веб-приложений Azure]: https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md
 
 [Java Development Kit (JDK)]: ../fundamentals/java-jdk-long-term-support.md
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7d669a92b4e08f6f8207f10f2b33a49b1685d324
-ms.sourcegitcommit: 1901759f41adfac3c3f2ff135bcf72206543b639
+ms.openlocfilehash: 42d27a5bce063f82638fc48f3f269ec734a3042f
+ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933367"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97758236"
 ---
 | Имя | Пакет | Docs | Источник |
 | ---- | ------- | ---- | ------ |
@@ -70,7 +70,7 @@ ms.locfileid: "96933367"
 | AutoRest — стандартные функции CLI | npm [0.5.8](https://www.npmjs.com/package/@autorest/clicommon/v/0.5.8) |  | GitHub [0.5.8](https://github.com/Azure/autorest.clicommon/tree/0.4.12) |
 | AutoRest — модель кода | npm [3.0.137](https://www.npmjs.com/package/@azure/autorest.codemodel-v3/v/3.0.137) |  |  |
 | AutoRest — сравнение | npm [0.3.1](https://www.npmjs.com/package/@autorest/compare/v/0.3.1) |  | GitHub [0.3.1](https://github.com/Azure/autorest.compare) |
-| AutoRest — основные функции | npm [3.0.6320](https://www.npmjs.com/package/@autorest/core/v/3.0.6320) |  | GitHub [3.0.6320](https://github.com/Azure/autorest/tree/master/core) |
+| AutoRest — основные функции | npm [3.0.6320](https://www.npmjs.com/package/@autorest/core/v/3.0.6320) |  | GitHub [3.0.6320](https://github.com/Azure/autorest/tree/master/packages/extensions/core) |
 | AutoRest — генератор кода C# для Функций | npm [0.2.0-preview-dev.321054549](https://www.npmjs.com/package/@autorest/azure-functions-csharp/v/0.2.0-preview-dev.321054549) |  |  |
 | AutoRest — генератор кода Java для Функций | npm [0.0.2-Preview](https://www.npmjs.com/package/@autorest/azure-functions-java/v/0.0.2-Preview) |  |  |
 | AutoRest — генератор кода Python для Функций | npm [0.1.0-preview](https://www.npmjs.com/package/@autorest/azure-functions-python/v/0.1.0-preview) |  |  |

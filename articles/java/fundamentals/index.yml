@@ -6,12 +6,12 @@ metadata:
   description: Средства, IDE и поддерживаемые пакеты JDK для разработки Java в Azure
   ms.date: 04/03/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 7417675f8808d6dd479aea1853a89db77a189cd5
-  ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+  ms.openlocfilehash: 5c9b16a6431733875145d071484ae65aee5999fb
+  ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/21/2020
-  ms.locfileid: "90831510"
+  ms.lasthandoff: 12/23/2020
+  ms.locfileid: "97754010"
 landingContent:
 - title: Средства для разработчиков облачных приложений Java
   linkLists:
@@ -44,11 +44,11 @@ landingContent:
   - linkListType: overview
     links:
     - text: Служба приложений Azure
-      url: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+      url: https://github.com/microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md
     - text: Функции Azure
-      url: /java/api/overview/azure/maven/azure-functions-maven-plugin/readme
+      url: https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Functions
     - text: Azure Spring Cloud
-      url: /java/api/overview/azure/maven/azure-spring-cloud-maven-plugin/readme
+      url: https://github.com/microsoft/azure-maven-plugins/wiki/Azure-Spring-Cloud
 - title: Ведение журнала
   linkLists:
   - linkListType: overview
