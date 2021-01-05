@@ -27,15 +27,17 @@
               items:
                 - name: 1. Введение и предварительные требования
                   href: tutorial/static-web-app/introduction.md
-                - name: 2. Скачивание и запуск приложения локально
+                - name: 2. Архитектура приложения
+                  href: tutorial/static-web-app/application-architecture.md
+                - name: 3. Скачивание и запуск приложения локально
                   href: tutorial/static-web-app/run-the-react-cognitive-services-image-analyzer-app-locally.md
-                - name: 3. Создание ресурса Компьютерного зрения
+                - name: 4. Создание ресурса Компьютерного зрения
                   href: tutorial/static-web-app/create-computer-vision-resource-use-in-code.md
-                - name: 4. Создание и развертывание статического веб-приложения
+                - name: 5. Создание и развертывание статического веб-приложения
                   href: tutorial/static-web-app/create-static-web-app-visual-studio-code-extension.md
-                - name: 5. Проверка кода ресурса React для Компьютерного зрения
+                - name: 6. Проверка кода ресурса React для Компьютерного зрения
                   href: tutorial/static-web-app/add-computer-vision-react-app.md
-                - name: 6. Очистка ресурсов
+                - name: 7. Очистка ресурсов
                   href: tutorial/static-web-app/clean-up-resources.md
             - name: 'Клиентское приложение: отправка в хранилище'
               href: tutorial/browser-file-upload-azure-storage-blob.md
@@ -131,6 +133,8 @@
       items:
         - name: Настройка приложения
           href: how-to/configure-web-app-settings.md
+        - name: Стандартные задачи JavaScript
+          href: how-to/common-javascript-tasks.md
         - name: Сквозной Node. js с VS Code
           href: how-to/develop-nodejs-on-azure.md
         - name: Развертывание веб-приложения
