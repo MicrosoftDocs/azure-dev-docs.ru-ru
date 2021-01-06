@@ -1,19 +1,24 @@
 ---
 title: Код на React с использованием Компьютерного зрения
-description: Этот пример содержит весь код, необходимый для подключения Компьютерного зрения к приложению React. В этом разделе руководства _рассматривается_ процесс и код для такого подключения.
+description: В этом разделе руководства _рассматривается_ процесс и код для такого подключения. Для работы с этим руководством вам не придется выполнять этот процесс.
 ms.topic: tutorial
-ms.date: 11/13/2020
+ms.date: 12/17/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 44999c92ef2a938327a379d0d4993b000466fb3f
-ms.sourcegitcommit: 525c4b41d85aae9c3026a070b07e00c2241ea716
+ms.openlocfilehash: 84140472c4bb57e208cc0e2c0665e72680664a2f
+ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97394068"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97687483"
 ---
-# <a name="5-review-how-to-add-computer-vision-to-the-react-app"></a>5. Обзорные сведения о том, как добавить Компьютерное зрение в приложение React
+# <a name="6-review-how-to-add-computer-vision-to-the-react-app"></a>6. Обзорные сведения о том, как добавить Компьютерное зрение в приложение React
 
 Этот пример содержит весь код TypeScript, необходимый для подключения Компьютерного зрения к приложению React. В этом разделе руководства _рассматривается_ процесс и код для такого подключения. Для работы с этим руководством вам не придется выполнять этот процесс. 
+
+* [Образец кода](https://github.com/Azure-Samples/js-e2e-client-cognitive-services)
+* Службы Azure
+    * [Статическое веб-приложение](https://docs.microsoft.com/azure/static-web-apps)
+    * [Компьютерное зрение в Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
 
 ## <a name="add-computer-vision-to-local-react-app"></a>Добавление Компьютерного зрения в локальное приложение React
 
@@ -25,9 +30,9 @@ npm install @azure/cognitiveservices-computervision
 
 ## <a name="add-computer-vision-code-as-separate-module"></a>Добавление кода Компьютерного зрения в отдельный модуль
 
-Код Компьютерного зрения размещается в отдельном файле с именем `./src/VisualAI.js`. Здесь выделена функция main этого модуля. 
+Код Компьютерного зрения размещается в отдельном файле с именем `./src/azure-cognitiveservices-computervision.js`. Здесь выделена функция main этого модуля. 
 
-:::code language="javascript" source="~/../js-e2e-client-cognitive-services/src/VisualAI.js" highlight="55-75" :::
+:::code language="javascript" source="~/../js-e2e-client-cognitive-services/src/azure-cognitiveservices-computervision.js" highlight="55-75" :::
 
 ## <a name="add-catalog-of-images-as-separate-module"></a>Добавление каталога изображений в отдельный модуль
 

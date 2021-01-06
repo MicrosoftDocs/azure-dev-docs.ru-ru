@@ -4,12 +4,12 @@ description: Сведения о комплексном тестировании
 ms.topic: tutorial
 ms.date: 07/31/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: b760908bf1950751b93ba1787f444ca37ee8bf83
-ms.sourcegitcommit: e20f6c150bfb0f76cd99c269fcef1dc5ee1ab647
+ms.openlocfilehash: a70352f5ff6826dc7d07537cf773e76b6d1a6f49
+ms.sourcegitcommit: 485a88d1671a66df34493545488ab34e434f40d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91401714"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97809762"
 ---
 # <a name="tutorial-setup-end-to-end-terratest-testing-on-terraform-projects"></a>Руководство по настройке комплексного тестирования Terratest в проектах Terraform
 
@@ -56,7 +56,7 @@ ms.locfileid: "91401714"
 
 Если вы уже [скачали пример](#prerequisites), конфигурацию Terraform для этого сценария можно найти в файле `src/main.tf`. Этот файл содержит все необходимое для развертывания инфраструктуры Azure, представленной на предыдущем рисунке.
 
-Если вы еще не работали с созданием виртуальных машин, см. статью [Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform](create-linux-virtual-machine-with-infrastructure.md).
+Если вы еще не знаете, как создать виртуальные машины, см. статью [Создание виртуальной машины Linux с инфраструктурой в Azure с помощью Terraform](create-linux-virtual-machine-with-infrastructure.md).
 
 > [!CAUTION]
 > Приведенный в этой статье пример сценария предназначен только для иллюстрации. Мы намеренно сохранили в нем все простым, чтобы уделить больше внимания процессам комплексного тестирования. Мы не рекомендуем использовать рабочие виртуальные машины с открытым портом SSH на общедоступном IP-адресе.

@@ -2,14 +2,14 @@
 title: Отправка образа в Хранилище BLOB-объектов с помощью VSCode — Служба приложений/CosmosDB
 description: Используйте приложение React или TypeScript для передачи файла в BLOB-объекты службы хранилища Azure. В этом руководстве рассматривается использование локальных и удаленных сред с расширениями Visual Studio Code.
 ms.topic: tutorial
-ms.date: 11/13/2020
+ms.date: 12/17/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript, azure-sdk-storage-blob-typescript-version-12.2.1
-ms.openlocfilehash: 2e38e7e293f87dc9fa8cafc69a0780a10d31d730
-ms.sourcegitcommit: 525c4b41d85aae9c3026a070b07e00c2241ea716
+ms.openlocfilehash: 1f66ba54aa6cfccdda96a51bb610350a10fb7eef
+ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97393903"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97689523"
 ---
 # <a name="upload-an-image-to-an-azure-storage-blob"></a>Отправка образа в Azure Storage Blob
 
@@ -17,14 +17,14 @@ ms.locfileid: "97393903"
 
 Вся работа по программированию на TypeScript уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.
 
-* [Исходный код](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob)
+* [**Образец кода**](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob)
 
 ## <a name="application-architecture-and-functionality"></a>Архитектура и функциональные возможности приложения
 
-В этом руководстве представлено несколько **основных задач Azure** для разработчиков JavaScript:
+В этом руководстве представлено несколько основных задач Azure для разработчиков JavaScript:
 
 * запуск приложения React или TypeScript на локальном компьютере с помощью Visual Studio Code;
-* создание ресурса хранилища и его настройка для отправки файлов;
+* создание ресурса **Azure Storage Blob** и его настройка для отправки файлов;
     * Настройка CORS
     * создание маркера подписанного URL-адреса (SAS);
 * настройка кода для клиентской библиотеки Azure SDK для проверки подлинности в службе с помощью маркера SAS.
@@ -32,24 +32,26 @@ ms.locfileid: "97393903"
 Наш [пример приложения React, который размещен на сайте GitHub](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob), состоит из следующих элементов:
 
 * **приложение React**, размещенное на порту 3000;
-* скрипт клиентской библиотеки Azure SDK для отправки в большие двоичные объекты хранилища.
+* **скрипт клиентской библиотеки Azure SDK** для отправки данных в большие двоичные объекты хранилища.
 
 :::image type="content" source="../media/tutorial-browser-file-upload/browser-react-app-azure-storage-resource-image-uploaded-displayed.png" alt-text="Простое приложение React, подключенное к BLOB-объектам службы хранилища Azure.":::
 
 ## <a name="1-set-up-development-environment"></a>1. Настройка среды разработки
 
 - Учетная запись Azure с активной подпиской. [Создайте бесплатно](https://azure.microsoft.com/free/).
-- Установите на локальный компьютер [Node.js и npm](https://nodejs.org/en/download) (диспетчер пакетов Node.js).
+- [Node.js 10 и npm ](https://nodejs.org/en/download), диспетчер пакетов Node.js, установленный на локальном компьютере.
 - Установите на локальный компьютер [Visual Studio Code](https://code.visualstudio.com/). 
 - Расширения Visual Studio Code:
     - [Служба хранилища Azure](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage) — используется для просмотра ресурса хранилища.
 
 ## <a name="2-clone-and-run-the-initial-react-app"></a>2. Клонирование и запуск начальной версии приложения React
 
-Клонируйте приложение, установите зависимости и запустите приложение. Веб-приложение начальной версии попытается подключиться к службе хранилища Azure, если оно настроено в коде, или вернет сообщение `Storage is not configured`, если хранилище недоступно. 
-
 1. Откройте Visual Studio Code.
-1. Клонируйте репозиторий GitHub, щелкнув значок Git и выбрав действие **Клонировать репозиторий**. Чтобы выполнить это, вам нужно войти в GitHub. Укажите URL-адрес репозитория `https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob`, а затем выберите на локальном компьютере папку, в которую будет скопирован пример. При появлении запроса откройте клонированный репозиторий. 
+1. Клонируйте репозиторий GitHub, щелкнув значок Git и выбрав действие **Клонировать репозиторий**. Для этого вам нужно войти в GitHub. Укажите URL-адрес репозитория: 
+
+    `https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob`
+
+1. Выберите на локальном компьютере папку, в которую будет скопирован пример. При появлении запроса откройте клонированный репозиторий. 
 
     :::image type="content" source="../media/tutorial-browser-file-upload/vscode-git-clone-repository.png" alt-text="Клонируйте репозиторий GitHub, щелкнув значок Git и выбрав действие &quot;Клонировать репозиторий&quot;.":::
 
@@ -83,11 +85,11 @@ ms.locfileid: "97393903"
 
     :::image type="content" source="../media/tutorial-browser-file-upload/visualstudiocode-storage-extension-create-resource.png" alt-text="Перейдите к расширению службы хранилища Azure. Щелкните правой кнопкой мыши подписку и выберите команду &quot;Создание учетной записи хранения...&quot;.":::
 
-1. Выполните инструкции из следующей таблицы, чтобы разобраться в применении значений разных свойств.
+1. Следуйте инструкциям в следующей таблице, чтобы понять, как создать ресурс хранилища.
 
     |Свойство|Значение|
     |--|--|
-    |Введите глобально уникальное имя для нового веб-приложения.| Введите значение для ресурса службы хранилища, например `fileuploadyourname`. Замените строку `yourname` именем или уникальным идентификатором в нижнем регистре. Это уникальное имя также добавляется в URL-адрес для доступа к этому ресурсу в браузере. Используйте только буквы и цифры, не более 24 символов. Это **имя учетной записи** потребуется в дальнейшем.|
+    |Введите глобально уникальное имя для нового веб-приложения.| Введите значение для ресурса службы хранилища, например `fileuploaddemo`.<br><br> Это уникальное имя является **именем ресурса**, который используется в следующем разделе. Оно может включать только символы и цифры, а его длина не должна превышать 24 символа. Это **имя учетной записи** потребуется в дальнейшем.|
 
 1. Когда завершится процесс создания приложения, появится уведомление со сведениями о новом ресурсе. 
 
@@ -95,10 +97,10 @@ ms.locfileid: "97393903"
 
 ## <a name="4-set-storage-account-name-in-code-file"></a>4. Задание имени учетной записи хранения в файле кода
 
-В файле `src/uploadToBlob.ts` присвойте имя ресурса параметру `storageAccountName`, добавив имя ключа к хранилищу данных в пустую строку. Сохраните остальную часть кода неизменной. 
+Задайте имя ресурса из предыдущего шага в `src/azure-storage-blob.ts`. 
 
 ```typescript
-const storageAccountName = process.env.storageresourcename || ""; 
+const storageAccountName = process.env.storageresourcename || "fileuploaddemo"; 
 ```
 
 ## <a name="5-generate-your-shared-access-signature-sas-token"></a>5. Создание маркера подписанного URL-адреса (SAS) 
@@ -115,7 +117,7 @@ const storageAccountName = process.env.storageresourcename || "";
     |Допустимые типы ресурсов|Служба, контейнер, объект|
     |Допустимые разрешения|Чтение, запись, удаление, перечисление, добавление, создание|
     |Возможность удаления версий|Флажок установлен|
-    |Дата и время начала и окончания срока действия|Подтвердите дату и время начала действия, а дату и время окончания установите на сутки вперед. Этот маркер SAS будет действителен только в течение 24 часов.|
+    |Дата и время начала и окончания срока действия|Подтвердите дату и время начала действия, а дату и время окончания **установите через сутки**. Этот маркер SAS будет действителен только в течение 24 часов.|
     |Только HTTPS|Выбрано|
     |Предпочтительный уровень маршрутизации|Basic|
     |Ключ подписывания|Выбран key1|
@@ -126,15 +128,11 @@ const storageAccountName = process.env.storageresourcename || "";
 
 ## <a name="set-sas-token-in-code-file"></a>Настройка маркера SAS в файле кода
 
-Значение маркера SAS является частью строки запроса и добавляется в URL-адрес при обращении к облачному ресурсу.
+Маркер SAS используется при выполнении запросов к облачному ресурсу.
 
-Формат этого маркера зависит от того, какой инструмент вы использовали для его создания: 
-* **Портал Azure**: Если маркер SAS создается на портале, первым символом строки маркера будет `?`.
-* **Azure CLI.** Если маркер SAS создается с помощью Azure CLI, возвращаемое значение не будет содержать `?` в качестве первого символа строки маркера. 
+1. Если маркер начинается с вопросительного знака, удалите `?`. Файл кода подставляет `?` автоматически, поэтому его не нужно включать в маркер.
 
-1. Удалите `?`, если это первый символ маркера. Файл кода подставляет `?` автоматически, поэтому его не нужно включать в маркер.
-
-1. В файле `src/uploadToBlob.ts` присвойте маркер SAS в качестве значения параметра sasToken, добавив маркер SAS в пустую строку. Сохраните остальную часть кода неизменной. 
+1. В файле `src/azure-storage-blob.ts` присвойте маркер SAS в качестве значения параметра sasToken, добавив маркер SAS в пустую строку. Сохраните остальную часть кода неизменной. 
 
 ```typescript
 // remove `?` if it is first character of token
@@ -162,21 +160,25 @@ const sasToken = process.env.storagesastoken || "";
 
 ## <a name="7-run-project-locally-to-verify-connection-to-storage-account"></a>7. Запуск проекта в локальной среде для проверки подключения к учетной записи хранения
 
-Итак, маркер SAS и имя учетной записи хранения настроены в файле `src/uploadToBlob.ts`, и теперь все готово к запуску приложения.
+Итак, маркер SAS и имя учетной записи хранения настроены в файле `src/azure-storage-blob.ts`, и теперь все готово к запуску приложения.
 
-1. В терминале Visual Studio Code введите следующую команду:
+1. Если приложение не работает, запустите его еще раз:
 
     ```javascript
     npm start
     ```
 
-1. Когда в окне терминала отобразится URL-адрес (например `http://localhost:3000`), значит приложение готово к работе. Откройте любой браузер и введите в адресной строке этот URL-адрес. Должен открыться веб-сайт, подключенный к хранилищу больших двоичных объектов Azure, с кнопками для выбора и отправки файла. 
+1. Откройте следующий URL-адрес в браузере:
+
+    `http://localhost:3000` 
 
     :::image type="content" source="../media/tutorial-browser-file-upload/browser-react-app-azure-storage-resource-configured-upload-button-displayed.png" alt-text="Веб-сайт React, подключенный к хранилищу больших двоичных объектов Azure, с кнопками для выбора и отправки файла.":::
 
-1. Выберите для отправки изображение из папки `images`. Для этого теста хорошо подойдет визуальный объект `spring-flowers.jpg`. Нажмите кнопку **Upload!** (Отправить). . 
+1. Выберите для отправки изображение из папки `images` и нажмите кнопку **Отправить!** . . 
 
-    Клиентский код интерфейса React вызывает `src/uploadToBlob.ts` для проверки подлинности в Azure, а затем создает контейнер службы хранилища (если он не существует) и отправляет в него файл. 
+    Клиентский код интерфейса React вызывает `src/azure-storage-blob.ts` для проверки подлинности в Azure, а затем создает контейнер службы хранилища (если он не существует) и отправляет в него файл. 
+
+    Вы выполнили инструкции из этого руководства. В остальных разделах описывается приложение и приводятся советы по устранению проблем.
 
 ## <a name="troubleshoot-local-connection-to-storage-account"></a>Устранение неполадок локального подключения к учетной записи хранения
 
@@ -202,7 +204,7 @@ const sasToken = process.env.storagesastoken || "";
 
 ### <a name="dependencies-and-variables"></a>Зависимости и переменные
 
-Файл TypeScript `uploadToBlob.ts` загружает зависимости и извлекает необходимые переменные из переменных среды или жестко заданных строк.
+Файл TypeScript `azure-storage-blob.ts` загружает зависимости и извлекает необходимые переменные из переменных среды или жестко заданных строк.
 
 | Переменная | Описание |
 |--|--|
@@ -210,7 +212,7 @@ const sasToken = process.env.storagesastoken || "";
 |`container`|Имя контейнера в хранилище BLOB-объектов. Этот элемент является эквивалентом папки или каталога в обычной файловой системе.|
 |`storageAccountName`|Имя ресурса.|
 
-:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/uploadToBlob.ts" highlight="2,5,16" id="snippet_package":::
+:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/azure-storage-blob.ts" highlight="2,5,16" id="snippet_package":::
 
 ### <a name="security-for-azure-credentials"></a>Безопасность учетных данных Azure
 
@@ -220,19 +222,19 @@ const sasToken = process.env.storagesastoken || "";
 
 Функция `uploadFileToBlob` является основной функцией в этом файле. Она создает объект клиента для службы хранилища, затем создает клиент для объекта контейнера, отправляет файл и получает список всех BLOB-объектов, сохраненных в контейнере. 
 
-:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/uploadToBlob.ts" highlight="5,6,7" id="snippet_uploadFileToBlob":::
+:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/azure-storage-blob.ts" highlight="5,6,7" id="snippet_uploadFileToBlob":::
 
 ### <a name="upload-file-to-blob"></a>Отправка файла в BLOB-объект
 
 Функция `createBlobInContainer` передает файл в контейнер с помощью метода `uploadBrowserData` из клиентской библиотеки. Вместе с запросом нужно передавать тип содержимого, если вы планируете использовать функциональные возможности браузера, которые зависят от типа файла, например для отображения изображений. 
 
-:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/uploadToBlob.ts" highlight="10" id="snippet_createBlobInContainer":::
+:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/azure-storage-blob.ts" highlight="10" id="snippet_createBlobInContainer":::
 
 ### <a name="get-list-of-blobs"></a>Получение списка BLOB-объектов
 
 Функция `getBlobsInContainer` возвращает список URL-адресов всех BLOB-объектов, сохраненных в контейнере. Эти URL-адреса будут включены в параметр `src` тега изображения в HTML-коде следующим образом: `<img src={item} alt={item} height="200" />`. 
 
-:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/uploadToBlob.ts" highlight="10" id="snippet_getBlobsInContainer":::
+:::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/azure-storage-blob.ts" highlight="10" id="snippet_getBlobsInContainer":::
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 

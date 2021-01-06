@@ -2,16 +2,16 @@
 title: Создание ресурса Компьютерного зрения
 description: Создайте ресурс Компьютерного зрения Cognitive Services и сохраните его в переменные среды.
 ms.topic: tutorial
-ms.date: 11/13/2020
+ms.date: 12/16/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 4ac324171f47ab8795169c5dd453d1e6451e8906
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.openlocfilehash: 338a3040381768e5987e84676339e8ee46c49fc7
+ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94993506"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97687475"
 ---
-# <a name="3-create-computer-vision-resource-and-use-in-code"></a>3. Создание ресурса Компьютерного зрения и его применение в коде
+# <a name="4-create-computer-vision-resource-and-use-in-code"></a>4. Создание ресурса Компьютерного зрения и его применение в коде
 
 На этом этапе вы создадите ресурс Компьютерного зрения Cognitive Services и сохраните его в переменных среды. 
 
@@ -108,13 +108,15 @@ ms.locfileid: "94993506"
 
 ## <a name="run-react-app-with-computervision-resource"></a>Запуск приложения React с ресурсом Компьютерного зрения
 
-Наше приложение React отслеживает изменения, а также выполняет повторную сборку и запуск приложения. Внесите любые изменения в код, чтобы активировать процесс повторной сборки.
+1. Запустите приложение повторно в командной строке:
 
-1. Например, **добавьте пустую строку** в `./src/VisualAi.js` сразу после первой пустой строки (строка 4). Будет выполнена повторная сборка локально запущенного веб-сайта.
+    ```bash
+    npm start
+    ```
 
     :::image type="content" source="../../media/static-web-app/browser-screenshot-react-computervision-app-start-up.png" alt-text="Снимок части экрана: браузер с примером приложения React для Компьютерного зрения Cognitive Services во время ожидания ввода URL-адреса и нажатия клавиши ENTER.":::
 
-1. Оставьте текстовое поле пустым и **нажмите кнопку Analyze (Анализ)** . 
+1. Оставьте текстовое поле пустым, чтобы выбрать изображение из каталога по умолчанию, и нажмите кнопку **Анализ**. 
 
     :::image type="content" source="../../media/static-web-app/browser-screenshot-react-computervision-app-image-analysis-result.png" alt-text="Снимок части экрана: браузер с примером приложения React для Компьютерного зрения Cognitive Services при возврате результата анализа.":::
 

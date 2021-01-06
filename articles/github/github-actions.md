@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.service: azure
 ms.date: 10/30/2020
 ms.custom: github-actions-azure
-ms.openlocfilehash: bbb87890f4db4b744ae4b2794c86e86a18c0e352
-ms.sourcegitcommit: 12f80b1e0fe08db707c198271d0c399c3aba343a
+ms.openlocfilehash: c952410231ae57b0d127e1b6fb05e03f88403640
+ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94515125"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97754070"
 ---
 # <a name="what-is-github-actions-for-azure"></a>Что такое GitHub Actions для Azure
 
@@ -25,6 +25,10 @@ ms.locfileid: "94515125"
 С помощью GitHub Actions для Azure вы можете создавать рабочие процессы в репозитории для сборки, тестирования, упаковки, выпуска и развертывания в Azure. Компонент GitHub Actions для Azure поддерживает службы Azure, в том числе Службу приложений Azure, Функции Azure и Azure Key Vault.
 
 GitHub Actions также обеспечивает поддержку разных инструментов, таких как шаблоны Azure Resource Manager, Azure CLI и Политика Azure.
+
+Посмотрите это видео с конференции GitHub Universe 2020, чтобы узнать больше о непрерывной поставке с помощью GitHub Actions.  
+
+> [!VIDEO https://www.youtube.com/embed/36hY0-O4STg]
 
 ## <a name="why-should-i-use-github-actions-for-azure"></a>Преимущества GitHub Actions для Azure
 

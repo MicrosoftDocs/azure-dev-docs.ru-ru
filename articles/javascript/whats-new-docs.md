@@ -2,13 +2,13 @@
 title: 'Новые возможности JavaScript '
 description: Обновления документации по JavaScript за октябрь 2020 года
 ms.topic: conceptual
-ms.date: 11/13/2020
-ms.openlocfilehash: f54af7f5f89b38cc32191fc2acd4f32e386c29fb
-ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+ms.date: 12/18/2020
+ms.openlocfilehash: ccc38a8dae86527650342e16e30da9fa7f28c0a7
+ms.sourcegitcommit: 28bed3dead87528796bdd76f3e94e66f4bd5e197
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96759291"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97710391"
 ---
 # <a name="javascript-docs-whats-new-for-october-2020"></a>Документация по JavaScript: обновления за октябрь 2020 года
 
@@ -21,6 +21,21 @@ ms.locfileid: "96759291"
 |Имя|Примечания|
 |---------------------------------------|--|
 |[Учебник. Добавление кнопки входа в статическое веб-приложение React для проверки подлинности Майкрософт](./tutorial/single-page-application-azure-login-button-sdk-msal.md)|Проверка подлинности Azure, описанная в этом учебнике, выполняется с помощью кнопки входа и выхода, которая предоставляет доступ к учетной записи пользователя. Разработайте приложение с помощью клиентского пакета SDK Azure, `@azure/msal-browser`, чтобы управлять взаимодействием пользователя в одностраничном приложении (SPA).|
+|[Что такое Azure для разработчиков JavaScript?](core/what-is-azure-for-javascript-development.md)|Основные понятия Azure для эффективной работы разработчиков JavaScript.|
+|[Установка Node.js](core/install-nodejs-develop-azure-sdk-project.md)|Установка и администрирование Node.js для распространенных сценариев разработки в Azure|
+|[Настройка веб-приложений в Azure](how-to/configure-web-app-settings.md)|Узнайте, как задать общие конфигурации для веб-приложения.|
+|[Идентификация, проверка подлинности и пользователи](concepts/identity-authentication-users.md)|Эта статья посвящена основным понятиям, представление о которых обычно нужно иметь разработчику JavaScript.|
+|[Распространенные задачи для разработчиков JavaScript](how-to/common-javascript-tasks.md)|Здесь вы можете найти примеры текущих задач.|
+|[Автоматизация задач с помощью Azure CLI](core/automate-tasks-with-azure-cli.md)|Автоматизация задач Azure — это частое требование для непрерывного развертывания в средах размещения. Azure CLI является рекомендуемым вариантом для разработчиков JavaScript, управляющих задачами и выполняющих развертывание из любого расположения.|
+
+### <a name="whats-new-in-learn"></a>Новые возможности в Learn
+
+
+|Имя|
+|---------------------------------------|
+|Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2") — [Learn](https://docs.microsoft.com/learn/paths/optimize-basketball-games-with-machine-learning/)|
+|Создание простого веб-сайта на основе HTML, CSS и JavaScript — [Learn](https://docs.microsoft.com/learn/modules/build-simple-website/)|
+|Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js. - [Learn](https://docs.microsoft.com/learn/modules/build-api-azure-functions)|
 
 ## <a name="2020-november"></a>Ноябрь 2020 года
 

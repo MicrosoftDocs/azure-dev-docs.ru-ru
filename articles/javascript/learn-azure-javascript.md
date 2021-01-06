@@ -2,14 +2,14 @@
 title: Изучение разработки в Azure с помощью JavaScript
 description: Используйте платформу Microsoft Learn для расширения своих знаний о разработке для Azure с помощью JavaScript.
 ms.topic: reference
-ms.date: 11/20/2020
+ms.date: 12/16/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: dd09feba608e9483597a60554f7c53e88565ffab
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.openlocfilehash: b126894943bf409439b965a631d07029281438f7
+ms.sourcegitcommit: 1dfcc022a3098b1a1505e9458eada35f527ef070
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983963"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97636539"
 ---
 # <a name="learn-to-develop-with-azure-and-javascript"></a>Изучение разработки в Azure с помощью JavaScript 
 
@@ -28,14 +28,33 @@ ms.locfileid: "94983963"
 
 С помощью приведенных ниже модулей Microsoft Learn вы узнаете, как использовать JavaScript с Azure:
 
+### <a name="static-web-apps"></a>Статические веб-приложения
+
+* [Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2")](https://docs.microsoft.com/learn/paths/optimize-basketball-games-with-machine-learning/)
 * [Публикация JavaScript-приложения Angular, React, Svelte или Vue с помощью службы статических веб-приложений Azure](/learn/modules/publish-app-service-static-web-app-api/)
-* [Рефакторинг API-интерфейсов Node.js и Express в бессерверные API с помощью Функций Azure](/learn/modules/shift-nodejs-express-apis-serverless/)
 * [Создание и публикация статического веб-приложения с помощью Gatsby и Статических веб-приложений Azure](/learn/modules/create-deploy-static-webapp-gatsby-app-service/)
-* [Автоматизация развертываний Node.js с помощью Azure Pipelines](/learn/modules/deploy-nodejs/)
-* [Создание приложения Node.js для Azure Cosmos DB в Visual Studio Code](/learn/modules/build-node-cosmos-app-vscode/)
-* [Создание и запуск веб-приложения на основе стека MEAN на виртуальной машине Linux в Azure](/learn/modules/build-a-web-app-with-mean-on-a-linux-vm/)
-* [Создание рабочих процессов непрерывной интеграции (CI) с помощью GitHub Actions](/learn/modules/github-actions-ci/)
+* [Создание простого веб-сайта с помощью HTML, CSS и JavaScript](https://docs.microsoft.com/learn/modules/build-simple-website/)
+
+### <a name="serverless-apis"></a>Бессерверные API
+
 * [Создание бессерверных API с помощью Функций Azure](/learn/modules/build-api-azure-functions/)
+* [Рефакторинг API-интерфейсов Node.js и Express в бессерверные API с помощью Функций Azure](/learn/modules/shift-nodejs-express-apis-serverless/)
+* [Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js.](https://docs.microsoft.com/learn/modules/build-api-azure-functions)
+
+### <a name="devops-cicd"></a>DevOps (CI/CD)
+
+* [Создание рабочих процессов непрерывной интеграции (CI) с помощью GitHub Actions](/learn/modules/github-actions-ci/)
+* [Автоматизация развертываний Node.js с помощью Azure Pipelines](/learn/modules/deploy-nodejs/)
+
+### <a name="data-apps"></a>Приложения данных
+
+* [Создание приложения Node.js для Azure Cosmos DB в Visual Studio Code](/learn/modules/build-node-cosmos-app-vscode/)
+
+### <a name="virtual-machines"></a>Виртуальные машины
+* [Создание и запуск веб-приложения на основе стека MEAN на виртуальной машине Linux в Azure](/learn/modules/build-a-web-app-with-mean-on-a-linux-vm/)
+
+
+
 
 Также доступны [дополнительные ресурсы Learn](/search/?category=Learn&terms=JavaScript).
 
@@ -59,6 +78,10 @@ ms.locfileid: "94983963"
 
 * [MTA: введение в программирование на JavaScript](/learn/certifications/mta-introduction-to-programming-using-javascript)
 * [MCSA: веб-приложения](/learn/certifications/mcsa-web-applications-certification)
+
+## <a name="rss-feed"></a>RSS-канал
+
+* [Новые выпуски](https://aka.ms/mslearn-rss)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

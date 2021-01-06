@@ -2,37 +2,22 @@
 title: Введение и предварительные требования
 description: Локальное создание и развертывание клиентского приложения React или TypeScript в виде статического веб-приложения Azure с помощью действия GitHub.
 ms.topic: tutorial
-ms.date: 11/13/2020
+ms.date: 12/17/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: dd35ca0925b014d2fddeb064c8cbdbdea703697b
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: dfd5803fe79a0a000173d2d4e3fe52b3c4f029c5
+ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522350"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97687448"
 ---
 # <a name="1-build-and-deploy-a-static-web-app-to-azure"></a>1. Создание и развертывание статического веб-приложения в Azure
 
-В этом руководстве описано локальное создание и развертывание клиентского приложения React или TypeScript в виде статического веб-приложения Azure с помощью действия GitHub. 
+В этом руководстве описано локальное создание и развертывание клиентского приложения React или TypeScript в виде статического веб-приложения Azure с помощью действия GitHub. Приложение React позволяет анализировать изображения с помощью Компьютерного зрения Cognitive Services.
 
-Приложение React (create-react-app) реализует следующие возможности: 
-* отображение сообщений о том, что для Компьютерного зрения Cognitive Services не найдены ключ или конечная точка Azure;
-* анализ изображения с помощью Компьютерного зрения Cognitive Services:
-    * получение изображения для анализа по общедоступному URL-адресу или из коллекции;
-    * по завершении анализа:
-        * Отображение изображения
-        * отображение результатов от Компьютерного зрения в формате JSON. 
-
-При отправке данных в определенную ветвь действие GitHub выполняет следующие задачи:
-* встраивает в сборку секреты GitHub, содержащие ключ и конечную точку для Компьютерного зрения;
-* компилирует клиент React (create-react-app);
-* перемещает полученные файлы в ресурс статического веб-приложения Azure.
+* [**Образец кода**](https://github.com/Azure-Samples/js-e2e-client-cognitive-services)
 
 [!INCLUDE [Create or use existing Azure Subscription ](../../includes/environment-subscription-h2.md)]
-
-## <a name="what-is-an-azure-static-web-app"></a>Что такое статическое веб-приложение Azure?
-
-При создании статических веб-приложений вы можете настроить в Azure несколько разных параметров в зависимости от требуемой функциональности и степени контроля. В этом руководстве рассматривается самый простой вариант службы, в котором большинство параметров уже выбраны за вас, чтобы вы могли сосредоточиться на коде интерфейса, не отвлекаясь на среду размещения.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -52,4 +37,4 @@ ms.locfileid: "97522350"
 ## <a name="next-step"></a>Следующий шаг
 
 > [!div class="nextstepaction"]
-> [Локальное скачивание и запуск приложения React для анализа изображений в Cognitive Services](run-the-react-cognitive-services-image-analyzer-app-locally.md) 
+> [Сведения об архитектуре клиентского приложения и процессе развертывания с помощью действия GitHub](./application-architecture.md) 
