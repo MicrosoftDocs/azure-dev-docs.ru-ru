@@ -4,12 +4,12 @@ description: В этой части приводятся общие сведен
 ms.date: 08/24/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: e2a43f7e204ba3f077beea7cc878076111f71313
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: 62514474e2eb4517669029058526a39d3a4f3442
+ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764737"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952436"
 ---
 # <a name="part-4-example-main-application-implementation"></a>Часть 4. Пример реализации основного приложения
 
@@ -17,9 +17,9 @@ ms.locfileid: "91764737"
 
 В нашем сценарии основное приложение — это простое приложение Flask, которое развертывается в Службе приложений Azure. Приложение предоставляет общедоступную конечную точку API с именем */api/v1/getcode*, которая генерирует кодовую комбинацию для других задач, выполняемых приложением, например двухфакторной проверки подлинности для пользователей.
 
-Чтобы проверить работу конечной точки, перейдите в браузере по адресу [https://msdocs-main-app-example.azurewebsites.net/api/v1/getcode](https://msdocs-main-app-example.azurewebsites.net/api/v1/getcode) или выполните по нему запрос в cURL.
+Чтобы проверить работу конечной точки, перейдите в браузере по адресу [https://msdocs-example-main-app.azurewebsites.net/api/v1/getcode](https://msdocs-example-main-app.azurewebsites.net/api/v1/getcode) или выполните по нему запрос в cURL.
 
-Кроме того, основное приложение предоставляет простую домашнюю страницу, на которой отображается ссылка на конечную точку API. Работу этой части приложения можно проверить по адресу [https://msdocs-main-app-example.azurewebsites.net](https://msdocs-main-app-example.azurewebsites.net).
+Кроме того, основное приложение предоставляет простую домашнюю страницу, на которой отображается ссылка на конечную точку API. Работу этой части приложения можно проверить по адресу [https://msdocs-example-main-app.azurewebsites.net](https://msdocs-example-main-app.azurewebsites.net).
 
 Скрипт подготовки примера отвечает за следующие действия:
 

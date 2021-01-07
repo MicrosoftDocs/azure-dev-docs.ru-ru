@@ -7,12 +7,12 @@ ms.topic: tutorial
 ms.date: 11/05/2019
 ms.author: judubois
 ms.custom: devx-track-java
-ms.openlocfilehash: 89dc2a40e39a417d33e59b22f28202c61f036c79
-ms.sourcegitcommit: 39f3f69e3be39e30df28421a30747f6711c37a7b
+ms.openlocfilehash: 88dc420b594a50f3a82462552427c2d838e3a2ce
+ms.sourcegitcommit: 84f64dec74b4b041b8830a4e7489e22f0e943440
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2020
-ms.locfileid: "90831490"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97864277"
 ---
 # <a name="tutorial-getting-started-with-monitoring-and-logging-using-logzio-for-java-apps-running-on-azure"></a>Руководство по началу работы с функциями мониторинга и ведения журналов с использованием Logz.io для приложений Java, работающих в Azure
 
@@ -173,7 +173,7 @@ Connected. Tailing...
 
 Чтобы просмотреть развернутые ресурсы, можно посетить определенную группу ресурсов.
 
-Чтобы узнать, как настроить logzio-azure-serverless для резервного копирования данных в хранилище BLOB-объектов Azure, см. статью [Ship Azure activity logs](https://docs.logz.io/shipping/log-sources/azure-activity-logs.html) (Отправка журналов действий Azure).
+Чтобы узнать, как настроить logzio-azure-serverless для резервного копирования данных в хранилище BLOB-объектов Azure, см. статью [Ship Azure activity logs](https://docs.logz.io/shipping/log-sources/azure-diagnostic-logs.html) (Отправка журналов действий Azure).
 
 ### <a name="stream-azure-logs-and-metrics-to-logzio"></a>Потоковая передача журналов и метрик Azure в Logz.io
 
@@ -181,7 +181,7 @@ Connected. Tailing...
 
 1. В строке поиска введите "Диагностика", а затем выберите **Параметры диагностики**.
 
-2. Выберите ресурс из списка ресурсов, а затем нажмите **Добавить параметр диагностики**, чтобы открыть панель**Параметры диагностики** для этого ресурса.
+2. Выберите ресурс из списка ресурсов, а затем нажмите **Добавить параметр диагностики**, чтобы открыть панель **Параметры диагностики** для этого ресурса.
 
     ![Панель параметров диагностики](media/java-get-started-with-logzio/diagnostics-settings.png)
 

@@ -3,13 +3,13 @@ title: Шаг 2. Создание бессерверной функции Pytho
 description: Шаг 2 руководства. Добавление бессерверной функции Python с помощью расширения Функций Azure для VS Code.
 ms.topic: conceptual
 ms.date: 11/30/2020
-ms.custom: devx-track-python, seo-python-october2019, contperfq2
-ms.openlocfilehash: ac9bf8f90399a5ad2421689104fd5a6d9772c462
-ms.sourcegitcommit: 0cda024089784b92c1db3a4506c1dccd6bfe6339
+ms.custom: devx-track-python, seo-python-october2019, contperf-fy21q2
+ms.openlocfilehash: 97650e7d0f0676921ca70cf65db56b83bd4c0240
+ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2020
-ms.locfileid: "96759311"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97911484"
 ---
 # <a name="2-create-a-python-function-for-azure-functions"></a>2: Создание функции на Python в решении "Функции Azure"
 

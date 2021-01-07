@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: d3c472b66ffc622fb3ff3e5d149a902f99fcd6f1
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: faacb54f9e8a16cf4ef5b39aed0a3e42a4b3f255
+ms.sourcegitcommit: 84f64dec74b4b041b8830a4e7489e22f0e943440
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493276"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97866132"
 ---
 ### <a name="validate-package-name-and-permissions"></a>Проверка имени пакета и разрешений
 
@@ -80,7 +80,7 @@ ms.locfileid: "91493276"
                 if (!NotificationsSupported)
                     throw new Exception(GetPlayServicesError());
 
-                if (string.isNullOrWhitespace(Token))
+                if (string.IsNullOrWhitespace(Token))
                     throw new Exception("Unable to resolve token for FCM");
 
                 var installation = new DeviceInstallation

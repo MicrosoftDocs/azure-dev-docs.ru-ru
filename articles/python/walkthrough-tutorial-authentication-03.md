@@ -4,12 +4,12 @@ description: В этой части рассматривается пример 
 ms.date: 08/24/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 7c0098988265fef5b6b0f5e4a654f54c9bed4594
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: ce6fbefc52c36bcd5e002cf1e6c8ca7ca4814062
+ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764497"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952446"
 ---
 # <a name="part-3-example-third-party-api-implementation"></a>Часть 3. Пример реализации стороннего API
 
@@ -17,7 +17,7 @@ ms.locfileid: "91764497"
 
 В нашем примере сценария общедоступная конечная точка основного приложения использует сторонний API, защищенный ключом доступа. В этом разделе показана реализация стороннего API с помощью Функций Azure. Но API можно реализовать и по-другому и развернуть на другом облачном сервере или веб-узле. Главное здесь то, что конечная точка защищена определенным ключом доступа, который должен присутствовать во всех клиентских запросах. Таким образом, любое приложение, вызывающее этот API, должно безопасно управлять этим ключом.
 
-Для наглядности мы развернем API в конечной точке `https://msdocs-api-example.azurewebsites.net/api/RandomNumber`. Для его вызова необходимо предоставить ключ доступа `d0c5atM1cr0s0ft` либо в параметре URL-адреса `?code=`, либо в свойстве `'x-functions-key'` заголовка HTTP. Например, перейдите по этому URL-адресу в браузере или выполните по нему запрос в cURL: [https://msdocs-api-example.azurewebsites.net/api/RandomNumber?code=d0c5atM1cr0s0ft](https://msdocs-api-example.azurewebsites.net/api/RandomNumber?code=d0c5atM1cr0s0ft).
+Для наглядности мы развернем API в конечной точке `https://msdocs-example-api.azurewebsites.net/api/RandomNumber`. Для его вызова необходимо предоставить ключ доступа `d0c5atM1cr0s0ft` либо в параметре URL-адреса `?code=`, либо в свойстве `'x-functions-key'` заголовка HTTP. Например, перейдите по этому URL-адресу в браузере или выполните по нему запрос в cURL: [https://msdocs-example-api.azurewebsites.net/api/RandomNumber?code=d0c5atM1cr0s0ft](https://msdocs-example-api.azurewebsites.net/api/RandomNumber?code=d0c5atM1cr0s0ft).
 
 Если ключ доступа действителен, конечная точка возвращает ответ JSON, содержащий одно свойство "value". Его значением является число от 1 до 999, например `{"value": 959}`.
 

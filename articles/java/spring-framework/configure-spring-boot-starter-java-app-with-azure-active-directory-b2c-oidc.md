@@ -12,12 +12,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: aa2d60f969895acbcb56f74e909993ceb9b0d7d5
-ms.sourcegitcommit: 5c7f5fef798413b1a304cc9ee31c8518b73f27eb
+ms.openlocfilehash: 55b5926ade03280419d03d317df04f5d984ec46b
+ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93066330"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97911454"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>Руководство. Защита приложения Java с использованием starter Spring Boot для Azure Active Directory B2C
 
@@ -53,8 +53,6 @@ ms.locfileid: "93066330"
 
    ![Заполнение значений для создания проекта](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/fill-in-the-values-to-generate-the-project.png)
 
-    > [!NOTE]
-    > Spring Initializr использует Java 11 в качестве версии по умолчанию. Для использования starter Spring Boot, описанных в этом разделе, необходимо выбрать Java 8.
 
 
 3. Щелкните элемент **Generate Project** (Создать проект), затем скачайте проект в папку на локальном компьютере. Переместите скачанный файл в каталог, имя которого совпадает с именем проекта, и распакуйте этот файл. Макет файла должен быть похож на представленный ниже пример, но с указанным вами значением для параметра **Group** (Группа) вместо указанного здесь `yourProject`.
@@ -240,7 +238,7 @@ ms.locfileid: "93066330"
 
 7. Сохраните и закройте файл *application.yml*.
 
-8. Создайте папку с именем *controller* в *src/main/java/<yourGroupId>/<yourGroupId>* , заменив `<yourGroupId>` значением, которое вы указали в поле **Group** (Группа).
+8. Создайте папку с именем *controller* в *src/main/java/\<yourGroupId\>/\<yourGroupId\>* , заменив `<yourGroupId>` значением, которое вы указали в поле **Group** (Группа).
 
 9. Создайте файл Java с именем *WebController.java* в папке *controller* и откройте его в текстовом редакторе.
 
@@ -292,7 +290,7 @@ ms.locfileid: "93066330"
 
     Так как каждый метод в контроллере вызывает `initializeModel()`, а этот метод вызывает `model.addAllAttributes(user.getAttributes());`, любая HTML-страница в *src/main/resources/templates* может получить доступ к любому из этих атрибутов, таким как `${name}`, `${grant_type}`или `${auth_time}`. Значения, возвращаемые из `user.getAttributes()`, фактически являются утверждениями `id_token` для проверки подлинности. Полный список доступных утверждений приведен в статье [Маркеры идентификаторов платформы удостоверений Майкрософт](/azure/active-directory/develop/id-tokens#payload-claims).
 
-11. Создайте папку с именем *security* в *src/main/java/<yourGroupId>/<yourGroupId>* , заменив `yourGroupId` значением, которое вы указали в поле **Group** (Группа).
+11. Создайте папку с именем *security* в *src/main/java/\<yourGroupId\>/\<yourGroupId\>* , заменив `yourGroupId` значением, которое вы указали в поле **Group** (Группа).
 
 12. Создайте файл Java с именем *WebSecurityConfiguration.java* в папке *security* и откройте его в текстовом редакторе.
 

@@ -4,12 +4,12 @@ ms.author: miparker
 ms.date: 07/27/2020
 ms.service: mobile-services
 ms.topic: include
-ms.openlocfilehash: 7be758e9f1116f933fbb415e6cff7a1c73ffee9f
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: 4dba0dcf6fe960b80e445f865644997669ce9b36
+ms.sourcegitcommit: 84f64dec74b4b041b8830a4e7489e22f0e943440
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493277"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97866006"
 ---
 ### <a name="configure-infoplist-and-entitlementsplist"></a>Настройка Info.plist и Entitlements.plist
 
@@ -65,7 +65,7 @@ ms.locfileid: "91493277"
                 if (!NotificationsSupported)
                     throw new Exception(GetNotificationsSupportError());
 
-                if (string.isNullOrWhitespace(Token))
+                if (string.IsNullOrWhitespace(Token))
                     throw new Exception("Unable to resolve token for APNS");
 
                 var installation = new DeviceInstallation
