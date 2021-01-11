@@ -4,12 +4,12 @@ description: 'Руководство, шаг 2: настройка прилож�
 ms.topic: conceptual
 ms.date: 11/20/2020
 ms.custom: devx-track-python, seo-python-october2019
-ms.openlocfilehash: 7197f8afc28bd62e7247c3955c888199ee69c509
-ms.sourcegitcommit: 09b4a2dbe13601fdf16fcc4082a5075b46ad3459
+ms.openlocfilehash: 78efb3fdfa7d7d4ac8699726c2be6b17d27ea875
+ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96559198"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97911394"
 ---
 # <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Подготовка приложения к развертыванию в Службе приложений Azure
 
@@ -57,7 +57,7 @@ ms.locfileid: "96559198"
         return "Hello Flask, on Azure App Service for Linux"
     ```
 
-1. Создайте файл *requirements.txt* со следующим содержимым.
+1. В той же папке создайте файл *requirements.txt* со следующим содержимым:
 
     ```text
     Flask
@@ -65,21 +65,33 @@ ms.locfileid: "96559198"
 
 1. Откройте терминал, выполнив команду меню **Терминал** > **Новый терминал**.
 
-1. В терминале создайте и активируйте виртуальную среду с именем `.venv`. 
+1. В окне терминала перейдите в папку, содержащую файл *hello.py*. Все остальные команды терминала выполняются в этой папке.
 
-    # <a name="macoslinux"></a>[macOS/Linux](#tab/linux)
+1. Создайте и активируйте виртуальную среду с именем `.venv`:
+
+    # <a name="cmd"></a>[cmd](#tab/cmd)
+
+    ```cmd
+    :: Assumes Windows
+    py -3 -m venv .venv
+    .venv\scripts\activate
+    ```
+
+    # <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+    ```ps
+    # Assumes Windows
+    py -3 -m venv .venv
+    .venv\scripts\activate
+    ```
+
+    # <a name="bash"></a>[bash](#tab/bash)
 
     ```bash
+    # Assumes macOS/Linux
     sudo apt-get install python3-venv    # If needed
     python3 -m venv .venv
     source .venv/bin/activate
-    ```
-
-    # <a name="windows"></a>[Windows](#tab/windows)
-
-    ```cmd
-    py -3 -m venv .venv
-    .venv\scripts\activate
     ```
 
     ---

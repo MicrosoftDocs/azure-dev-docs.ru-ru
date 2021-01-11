@@ -2,14 +2,14 @@
 title: Создание виртуальной машины Linux.
 description: Узнайте, как с помощью Azure CLI создать и настроить виртуальную машину. На этом этапе работы с руководством у вас должно быть открыто окно терминала, и вы должны были выполнить вход в облако Azure с Azure CLI в подписке, для которой будет создана виртуальная машина.
 ms.topic: tutorial
-ms.date: 11/13/2020
+ms.date: 01/05/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: d2da4cac2a93ad953ada9cd98de679abba034908
-ms.sourcegitcommit: a2a51e0c6530eb5794a2fe667cf4c9a60b2a7470
+ms.openlocfilehash: a618c9584775a7c384f05ef01a563943c48f2b3a
+ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94625033"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952506"
 ---
 # <a name="3-create-linux-virtual-machine-using-azure-cli"></a>3. Создание виртуальной машины Linux с помощью Azure CLI
 
@@ -33,30 +33,34 @@ ms.locfileid: "94625033"
 
 ## <a name="create-a-virtual-machine-resource"></a>Создание ресурса виртуальной машины 
 
-1. Введите [команду Azure CLI](/cli/azure/vm?view=azure-cli-latest#az_vm_create) в терминале, чтобы создать ресурс Azure для виртуальной машины Linux. Эта команда создает виртуальную машину из файла cloud-init, а также SSH-ключи. Выполняющаяся команда отображает расположение с ключами. 
+Введите [команду Azure CLI](/cli/azure/vm?view=azure-cli-latest#az_vm_create) в терминале, чтобы создать ресурс Azure для виртуальной машины Linux. Эта команда создает виртуальную машину из файла cloud-init, а также SSH-ключи. Выполняющаяся команда отображает расположение с ключами. 
 
-    ```azurecli
-    az vm create \
-      --resource-group rg-demo-vm-eastus \
-      --name demo-vm \
-      --location eastus \
-      --image UbuntuLTS \
-      --admin-username azureuser \
-      --generate-ssh-keys \
-      --custom-data cloud-init-github.txt
-    ```
+```azurecli
+az vm create \
+  --resource-group rg-demo-vm-eastus \
+  --name demo-vm \
+  --location eastus \
+  --image UbuntuLTS \
+  --admin-username azureuser \
+  --generate-ssh-keys \
+  --custom-data cloud-init-github.txt
+```
 
-    Это может занять несколько минут. После завершения процесса Azure CLI выводит сведения о новом ресурсе. Сохраните значение `publicIpAddress`, так как оно понадобится для просмотра веб-приложения в браузере и подключения к виртуальной машине. 
+Это может занять несколько минут. После завершения процесса Azure CLI выводит сведения о новом ресурсе. Сохраните значение `publicIpAddress`, так как оно понадобится для просмотра веб-приложения в браузере и подключения к виртуальной машине. 
      
 
-1. После создания виртуальная машина _не_ имеет открытых портов. Откройте порт 80 с помощью следующей [команды Azure CLI](/cli/azure/vm?view=azure-cli-latest#az_vm_open_port), чтобы сделать веб-приложение общедоступным:
+## <a name="open-port-for-virtual-machine"></a>Открытие порта для виртуальной машины
 
-    ```azurecli
-    az vm open-port \
-      --port 80 \
-      --resource-group rg-demo-vm-eastus \
-      --name demo-vm
-    ```
+После создания виртуальная машина _не_ имеет открытых портов. Откройте порт 80 с помощью следующей [команды Azure CLI](/cli/azure/vm?view=azure-cli-latest#az_vm_open_port), чтобы сделать веб-приложение общедоступным:
+
+```azurecli
+az vm open-port \
+  --port 80 \
+  --resource-group rg-demo-vm-eastus \
+  --name demo-vm
+```
+
+## <a name="browse-to-web-site"></a>Переход к веб-сайту
 
 1. Используйте общедоступный IP-адрес в веб-браузере, чтобы убедиться, что виртуальная машина доступна и работает. Измените URL-адрес, чтобы он использовал значение из `publicIpAddress`.
 

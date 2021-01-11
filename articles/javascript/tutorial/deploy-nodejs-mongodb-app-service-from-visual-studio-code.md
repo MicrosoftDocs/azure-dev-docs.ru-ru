@@ -4,18 +4,20 @@ description: В этом руководстве вы будете работат
 ms.topic: tutorial
 ms.date: 12/03/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
-ms.openlocfilehash: 1ddbe6a463f877e86a0c46da1ffb17c6a3094c0a
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: 6c295c305f2882c4a97a34ffa288738112ee9600
+ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522402"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97911504"
 ---
 # <a name="deploy-expressjs-mongodb-app-to-app-service-from-visual-studio-code"></a>Развертывание приложения MongoDB на платформе Express.js в Службе приложений с помощью Visual Studio Code
 
 Разверните приложение Express.js, которое подключается к MongoDB, в Службе приложений Azure (в Linux) и CosmosDB. 
 
 Вся работа по программированию уже сделана заранее, и это руководство полностью посвящено эффективному использованию локальных и удаленных сред Azure в Visual Studio Code с расширениями Azure.
+
+* **[Образец кода](https://github.com/Azure-Samples/js-e2e-express-mongo)**
 
 ## <a name="top-tasks"></a>Основные задачи
 

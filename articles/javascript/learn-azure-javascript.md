@@ -2,14 +2,14 @@
 title: Изучение разработки в Azure с помощью JavaScript
 description: Используйте платформу Microsoft Learn для расширения своих знаний о разработке для Azure с помощью JavaScript.
 ms.topic: reference
-ms.date: 12/16/2020
+ms.date: 01/05/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: b126894943bf409439b965a631d07029281438f7
-ms.sourcegitcommit: 1dfcc022a3098b1a1505e9458eada35f527ef070
+ms.openlocfilehash: 3b37f31d9df4c152874f4c913fbc59a369636640
+ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97636539"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952476"
 ---
 # <a name="learn-to-develop-with-azure-and-javascript"></a>Изучение разработки в Azure с помощью JavaScript 
 
@@ -23,6 +23,13 @@ ms.locfileid: "97636539"
 * [Создание веб-API с помощью Node.js и Express](/learn/modules/build-web-api-nodejs-express/) 
 * [Работа с файлами и каталогами в приложении Node.js](/learn/modules/nodejs-files/)
 * [Отладка приложений Node.js в интерактивном режиме с помощью встроенного отладчика и отладчика Visual Studio Code](/learn/modules/debug-nodejs/)
+
+## <a name="getting-started"></a>Начало работы
+
+* [JavaScript для начинающих](https://techcommunity.microsoft.com/t5/apps-on-azure/learn-javascript-with-this-series-of-videos-for-beginners/ba-p/1764635)
+* [Веб-разработка для начинающих](https://github.com/microsoft/Web-Dev-For-Beginners)
+* [Трехмерные приложения с Babylon.js](https://techcommunity.microsoft.com/t5/apps-on-azure/a-first-introduction-to-building-3d-applications-with-javascript/ba-p/1877650)
+* [Node.js для начинающих](https://techcommunity.microsoft.com/t5/apps-on-azure/learn-node-js-with-this-series-of-short-videos-for-beginners/ba-p/1771830)
 
 ## <a name="javascript-on-azure"></a>JavaScript в Azure
 

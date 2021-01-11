@@ -1,18 +1,27 @@
 ---
-title: 'Новые возможности JavaScript '
-description: Обновления документации по JavaScript за октябрь 2020 года
+title: Документация по новым возможностям JavaScript
+description: Документация по новым возможностям JavaScript в Центре разработчиков
 ms.topic: conceptual
-ms.date: 12/18/2020
-ms.openlocfilehash: ccc38a8dae86527650342e16e30da9fa7f28c0a7
-ms.sourcegitcommit: 28bed3dead87528796bdd76f3e94e66f4bd5e197
+ms.date: 01/05/2021
+ms.openlocfilehash: 507c52491784a508535ae07f4a9b2755fa68cc1b
+ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97710391"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97952456"
 ---
-# <a name="javascript-docs-whats-new-for-october-2020"></a>Документация по JavaScript: обновления за октябрь 2020 года
+# <a name="javascript-docs-whats-new"></a>Документация по JavaScript: Новые возможности
 
 Узнайте о новом и обновленном содержимом для разработчиков JavaScript и TypeScript.
+
+## <a name="2021-january"></a>Январь 2021 г
+
+### <a name="whats-updated"></a>Обновления
+
+|Имя|Примечания|
+|---------------------------------------|--|
+|[**Для начинающих**](learn-azure-javascript.md#getting-started)|Различные коллекции онлайн-материалов для начала работы с JavaScript, Node.js, веб-разработкой и другими направлениями для разработчиков на JavaScript.|
+|[Распространенные задачи для разработчиков JavaScript](how-to/common-javascript-tasks.md)|Здесь вы можете найти примеры текущих задач.|
 
 ## <a name="2020-december"></a>Декабрь 2020 г.
 
