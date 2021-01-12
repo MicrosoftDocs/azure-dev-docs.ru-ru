@@ -15,7 +15,6 @@
       items:
         - name: Масштабирование с помощью службы "Экземпляры контейнеров Azure"
           href: azure-container-instances-as-jenkins-build-agent.md
-          maintainContext: true
         - name: Масштабирование с помощью агентов виртуальных машин Azure
           href: scale-deployments-using-vm-agents.md
     - name: Реализация CI/CD
@@ -28,27 +27,20 @@
           items:
             - name: CI/CD в Kubernetes
               href: deploy-from-github-to-aks.md
-              maintainContext: true
-            - name: Развертывание в AKS с использованием шаблона Blue-Green
-              href: deploy-to-aks-using-blue-green-deployment-pattern.md
         - name: Служба приложений
           items:
             - name: Создание ресурсов Azure в задании конвейера
               href: deploy-to-azure-app-service-using-azure-cli.md
         - name: Использование Jenkins с Azure DevOps
           href: deploy-to-linux-vm-using-azure-devops-services.md
-          maintainContext: true
         - name: Развертывание в Функции Azure
           href: deploy-to-azure-functions.md
         - name: Публикация в службе хранилища Azure
           href: azure-storage-blobs-as-build-artifact-repository.md
-          maintainContext: true
         - name: CI/CD в виртуальные машины Linux
           href: pipeline-with-github-and-docker.md
-          maintainContext: true
         - name: CI/CD в Service Fabric
           href: deploy-to-service-fabric-cluster.md
-          maintainContext: true
 - name: Примеры
   items:
     - name: Примеры заданий и скриптов
