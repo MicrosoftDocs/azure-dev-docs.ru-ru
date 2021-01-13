@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 60dd384e68045a7a975eb8e55477c084342fdde9
-ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
+ms.openlocfilehash: ddcf61e2d19738e7a7ade5fd4ee9578ed112a308
+ms.sourcegitcommit: 75a1f26aaff48a89631805df4b4a0c006de6a271
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97956534"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98147522"
 ---
 | Имя | Пакет | Docs | Источник |
 | ---- | ------- | ---- | ------ |
@@ -497,11 +497,11 @@ ms.locfileid: "97956534"
 | Таблицы | npm [1.0.0-beta.3](https://www.npmjs.com/package/@azure/data-tables/v/1.0.0-beta.3) |  | GitHub [1.0.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/data-tables_1.0.0-beta.3/sdk/tables/data-tables/) |
 | Анализ текста | npm [5.0.1](https://www.npmjs.com/package/@azure/ai-text-analytics/v/5.0.1)<br>npm [5.1.0-beta.3](https://www.npmjs.com/package/@azure/ai-text-analytics/v/5.1.0-beta.3) | [docs](/javascript/api/overview/azure/ai-text-analytics-readme/) | GitHub [5.0.1](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-text-analytics_5.0.1/sdk/textanalytics/ai-text-analytics/)<br>GitHub [5.1.0-beta.3](https://github.com/Azure/azure-sdk-for-js/tree/@azure/ai-text-analytics_5.1.0-beta.3/sdk/textanalytics/ai-text-analytics/) |
 | Анализ текста | npm [4.0.0](https://www.npmjs.com/package/@azure/cognitiveservices-textanalytics/v/4.0.0) |  |  |
-| Инструменты — ADL | npm [0.1.229](https://www.npmjs.com/package/@azure-tools/adl/v/0.1.229) |  | GitHub [0.1.229](https://github.com/Azure/adl/tree/master/adl) |
-| Инструменты — основные функции ADL | npm [0.1.499](https://www.npmjs.com/package/@azure-tools/adl.core/v/0.1.499) |  | GitHub [0.1.499](https://github.com/Azure/adl/tree/master/adl/core) |
-| Инструменты — правила ADL для Azure | npm [0.1.208](https://www.npmjs.com/package/@azure-tools/adl.rules.azure/v/0.1.208) |  | GitHub [0.1.208](https://github.com/Azure/adl/tree/master/adl) |
-| Инструменты — типы ADL для ARM | npm [0.1.205](https://www.npmjs.com/package/@azure-tools/adl.types.arm/v/0.1.205) |  | GitHub [0.1.205](https://github.com/Azure/adl/tree/master/adl) |
-| Инструменты — типы ADL для основных функций | npm [0.1.211](https://www.npmjs.com/package/@azure-tools/adl.types.core/v/0.1.211) |  | GitHub [0.1.211](https://github.com/Azure/adl/tree/master/adl) |
+| Инструменты — ADL | npm [0.1.229](https://www.npmjs.com/package/@azure-tools/adl/v/0.1.229) |  | GitHub [0.1.229](https://github.com/Azure/adl/tree/master/.archive/adl) |
+| Инструменты — основные функции ADL | npm [0.1.499](https://www.npmjs.com/package/@azure-tools/adl.core/v/0.1.499) |  | GitHub [0.1.499](https://github.com/Azure/adl/tree/master/.archive/adl/core) |
+| Инструменты — правила ADL для Azure | npm [0.1.208](https://www.npmjs.com/package/@azure-tools/adl.rules.azure/v/0.1.208) |  | GitHub [0.1.208](https://github.com/Azure/adl/tree/master/.archive/adl) |
+| Инструменты — типы ADL для ARM | npm [0.1.205](https://www.npmjs.com/package/@azure-tools/adl.types.arm/v/0.1.205) |  | GitHub [0.1.205](https://github.com/Azure/adl/tree/master/.archive/adl) |
+| Инструменты — типы ADL для основных функций | npm [0.1.211](https://www.npmjs.com/package/@azure-tools/adl.types.core/v/0.1.211) |  | GitHub [0.1.211](https://github.com/Azure/adl/tree/master/.archive/adl) |
 | Инструменты — асинхронный ввод-вывод | npm [3.0.252](https://www.npmjs.com/package/@azure-tools/async-io/v/3.0.252) |  | GitHub [3.0.252](https://github.com/Azure/perks/tree/master/async-io) |
 | Инструменты — база расширения Autorest | npm [3.1.266](https://www.npmjs.com/package/@azure-tools/autorest-extension-base/v/3.1.266) |  | GitHub [3.1.266](https://github.com/Azure/perks/tree/master/autorest-extension-base) |
 | Инструменты — Azcopy для Darwin | npm [10.5.0](https://www.npmjs.com/package/@azure-tools/azcopy-darwin/v/10.5.0) |  | GitHub [10.5.0](https://github.com/Azure/azure-storage-azcopy) |
@@ -522,7 +522,7 @@ ms.locfileid: "97956534"
 | Инструменты — сравнение объектов | npm [3.0.251](https://www.npmjs.com/package/@azure-tools/object-comparison/v/3.0.251) |  | GitHub [3.0.251](https://github.com/Azure/perks/tree/master/object-comparison) |
 | Инструменты — OpenAPI | npm [3.0.260](https://www.npmjs.com/package/@azure-tools/openapi/v/3.0.260) |  | GitHub [3.0.260](https://github.com/Azure/perks/tree/master/openapi) |
 | Средства: общие средства OpenAPI | npm [1.2.2](https://www.npmjs.com/package/@azure-tools/openapi-tools-common/v/1.2.2) |  |  |
-| Инструменты — сопоставитель с исходным кодом | npm [0.1.234](https://www.npmjs.com/package/@azure-tools/sourcemap/v/0.1.234) |  | GitHub [0.1.234](https://github.com/Azure/adl/tree/master/adl/sourcemap) |
+| Инструменты — сопоставитель с исходным кодом | npm [0.1.234](https://www.npmjs.com/package/@azure-tools/sourcemap/v/0.1.234) |  | GitHub [0.1.234](https://github.com/Azure/adl/tree/master/.archive/adl/sourcemap) |
 | Инструменты — задачи | npm [3.0.252](https://www.npmjs.com/package/@azure-tools/tasks/v/3.0.252) |  | GitHub [3.0.252](https://github.com/Azure/perks/tree/master/tasks) |
 | Инструменты — URI | npm [3.0.254](https://www.npmjs.com/package/@azure-tools/uri/v/3.0.254) |  | GitHub [3.0.254](https://github.com/Azure/perks/tree/master/uri) |
 | Перевод текстов | npm [1.0.1](https://www.npmjs.com/package/@azure/cognitiveservices-translatortext/v/1.0.1) |  | GitHub [1.0.1](https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/cognitiveservices/cognitiveservices-translatortext) |
