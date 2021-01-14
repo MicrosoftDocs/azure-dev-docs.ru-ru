@@ -4,16 +4,18 @@ description: Узнайте, как создать виртуальную маш
 ms.topic: tutorial
 ms.date: 11/13/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 674bf37acda9fcd9f6df7b84602600ad65ada3d9
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: c68a8442862eb03291f80609bb9767fb1c9b1b6b
+ms.sourcegitcommit: ed31f841fa9680335658df6708f107e170d47ff0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522119"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97974551"
 ---
 # <a name="1-create-linux-virtual-machine-with-expressjs-app-using-azure-cli"></a>1. Создание виртуальной машины Linux на основе приложения Express.js с помощью Azure CLI
 
 В этом руководстве описано, как создать виртуальную машину Linux для приложения Express.js. Виртуальная машина настраивается с помощью файла конфигурации cloud-init и содержит NGINX и репозиторий GitHub для приложения Express.js. После запуска виртуальной машины можно подключиться к ней по протоколу SSH. Также можно изменить веб-приложение, включив ведение журнала трассировки, и просмотреть общедоступное серверное приложение Express.js в веб-браузере.
+
+* [**Образец кода**](https://github.com/Azure-Samples/js-e2e-vm)
 
 Учебник включает в себя следующие разделы:
 
