@@ -2,14 +2,14 @@
 title: Развертывание приложений JavaScript в Azure
 description: Варианты размещения и сценарии развертывания включают несколько служб и средств для Azure. Опубликуйте приложение и передайте его в Azure.
 ms.topic: how-to
-ms.date: 12/09/2020
+ms.date: 01/12/2021
 ms.custom: seo-javascript-september2019, seo-javascript-october2019, devx-track-js, contperf-fy21q2
-ms.openlocfilehash: e2020d90260af4fbab8d6a37ef475eddb7754b90
-ms.sourcegitcommit: 1dfcc022a3098b1a1505e9458eada35f527ef070
+ms.openlocfilehash: c1ca1f3dcf99ce96c52eec7ebccee9860608b273
+ms.sourcegitcommit: 657f43a5048cd17b080b40b5090d575c8d7f5eaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97636529"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98173214"
 ---
 # <a name="deploy-and-host-your-nodejs-apps-on-azure"></a>Развертывание и размещение приложений Node.js в Azure
 
@@ -67,6 +67,14 @@ ms.locfileid: "97636529"
 * [cURL](/azure/app-service/deploy-zip#with-curl)
 * [SSH](/azure/app-service/configure-linux-open-ssh-session)
 
+Вы можете повторно развернуть приложение в Службе приложений с помощью любого из [предоставленных методов](#deploy-your-web-app-to-azure), даже если вы не использовали этот метод для первоначального развертывания. При переключении методов может возникнуть определенная конфигурация перед повторным развертыванием. 
+
+### <a name="deploy-or-redeploy-to-app-service-with-visual-studio-code"></a>Развертывание или повторное развертывание в Службе приложений с помощью Visual Studio Code
+
+Чтобы развернуть или повторно развернуть приложение Службы приложений с помощью Visual Studio Code, щелкните правой кнопкой мыши Службу приложений в списке служб в расширении Службы приложений, а затем выберите **Развернуть в веб-приложении**. 
+
+:::image type="content" source="../media/azure-app-service-vscode-extensions/deploy-or-redeploy-app-service.png" alt-text="Развертывание или повторное развертывание в Службе приложений с помощью Visual Studio Code":::
+
 ## <a name="verify-your-deployment-with-your-http-endpoint"></a>Проверка развертывания с помощью конечной точки HTTP
 
 Чтобы проверить развертывание, получите доступ к конечной точке HTTP. Конечная точка HTTP отображается во всех службах на странице **Обзор** . 
@@ -80,3 +88,4 @@ ms.locfileid: "97636529"
 ## <a name="next-steps"></a>Следующие шаги
 
 * [Развертывание с помощью контейнеров](deploy-containers.md)
+* [Дополнительные руководства по развертыванию с использованием Visual Studio Code](https://code.visualstudio.com/docs/azure/deployment)

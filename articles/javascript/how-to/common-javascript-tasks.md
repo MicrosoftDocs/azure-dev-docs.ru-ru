@@ -2,14 +2,14 @@
 title: Популярные задачи Azure для разработчиков JavaScript
 description: Здесь вы можете найти примеры текущих задач.
 ms.topic: reference
-ms.date: 01/05/2021
+ms.date: 01/06/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 2f19a660a60e91601dc31b829bb8fbc82f04b37d
-ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
+ms.openlocfilehash: 4c17b95cb5acc9f04227c8ccc9ea91d6d8aa1829
+ms.sourcegitcommit: ed31f841fa9680335658df6708f107e170d47ff0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952486"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97974571"
 ---
 # <a name="common-top-tasks-for-javascript-developers"></a>Распространенные задачи для разработчиков JavaScript
 
@@ -197,10 +197,13 @@ ms.locfileid: "97952486"
 
 |Имя | Описание|
 |--|--|
-|Создание и развертывание статического веб-приложения в Azure|Локальное создание и развертывание клиентского приложения React или TypeScript в виде статического веб-приложения Azure с помощью действия GitHub.<br>[Учебник](../tutorial/static-web-app/introduction.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-client-cognitive-services)|
-|Отправка файла в BLOB-объекты службы хранилища|Этот пример проекта представляет собой клиентское приложение платформы TypeScript React (create-react-app) с HTML-формой для выбора файла для отправки в BLOB-объекты службы хранилища Azure.<br>[Учебник](../tutorial/browser-file-upload-azure-storage-blob.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob)|
-|Добавление кнопки входа в клиентское приложение|Одностраничное приложение, созданное с помощью инструкций из этого учебника, представляет собой приложение React (create-react-app), которое позволяет выполнить указанные ниже задачи.<br>* Вход в систему, поддерживаемый корпорацией Майкрософт, например Office 365 или Outlook.com.<br>* Выход из приложения.<br>[Учебник](../tutorial/single-page-application-azure-login-button-sdk-msal.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-client-azure-login-button)|
-|Приложение CosmosDB (MongoDB)/Express.js, развернутое в Службе приложений|В этом учебнике показано, как загрузить и локально запустить проект с помощью VSCode и с использованием расширений, а также как удаленно запускать код в Службе приложений. Учебник включает инструкции по созданию ресурса CosmosDB для API Mongo, получение сведений о подключении и его настройку в параметре конфигурации службы приложений для подключения к облачной базе данных.<br>[Учебник](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md#get-cosmosdb-connection-string) - [Пример кода](https://github.com/Azure-Samples/js-e2e-express-mongo)|
+|Приложение React — использование Cognitive Services|Локальное создание и развертывание клиентского приложения React или TypeScript в виде статического веб-приложения Azure с помощью действия GitHub.<br>[Учебник](../tutorial/static-web-app/introduction.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-client-cognitive-services)|
+|Приложение React — передача файла в Azure Storage Blob|Этот пример проекта представляет собой клиентское приложение платформы TypeScript React (create-react-app) с HTML-формой для выбора файла для отправки в BLOB-объекты службы хранилища Azure.<br>[Учебник](../tutorial/browser-file-upload-azure-storage-blob.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-browser-file-upload-storage-blob)|
+|Приложение React — использование кнопки входа|Одностраничное приложение, созданное с помощью инструкций из этого учебника, представляет собой приложение React (create-react-app), которое позволяет выполнить указанные ниже задачи.<br>* Вход в систему, поддерживаемый корпорацией Майкрософт, например Office 365 или Outlook.com.<br>* Выход из приложения.<br>[Учебник](../tutorial/single-page-application-azure-login-button-sdk-msal.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-client-azure-login-button)|
+|Приложение Express.js — использование базы данных MongoDB|В этом учебнике показано, как загрузить и локально запустить проект с помощью VSCode и с использованием расширений, а также как удаленно запускать код в Службе приложений. Учебник включает инструкции по созданию ресурса CosmosDB для API Mongo, получение сведений о подключении и его настройку в параметре конфигурации службы приложений для подключения к облачной базе данных.<br>[Учебник](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-express-mongo)|
+|Приложение Express.js — развертывание на виртуальной машине с помощью файла cloud-init|Создайте виртуальную машину Linux для приложения Express.js. Виртуальная машина настраивается с помощью файла конфигурации cloud-init и содержит NGINX и репозиторий GitHub для приложения Express.js. После запуска виртуальной машины можно подключиться к ней по протоколу SSH. Также можно изменить веб-приложение, включив ведение журнала трассировки, и просмотреть общедоступное серверное приложение Express.js в веб-браузере.<br>[Учебник](../tutorial/nodejs-virtual-machine-vm/introduction.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-express-mongo)|
+
+Используйте [обозреватель примеров Azure](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs%2Ctypescript), чтобы найти дополнительные примеры, соответствующие вашему варианту использования. 
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

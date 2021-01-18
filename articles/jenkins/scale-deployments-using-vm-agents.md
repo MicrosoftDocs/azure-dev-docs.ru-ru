@@ -1,142 +1,170 @@
 ---
-title: Руководство. Масштабирование развертываний Jenkins с помощью агентов виртуальных машин Azure
-description: Узнайте, как увеличить емкость конвейеров Jenkins с помощью виртуальных машин Azure с подключаемым модулем Jenkins для агентов виртуальных машин Azure.
+title: Руководство. Масштабирование развертываний Jenkins с помощью виртуальной машины, запущенной в Azure
+description: Узнайте, как увеличить емкость конвейеров Jenkins с помощью виртуальных машин Azure.
 keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
-ms.date: 08/19/2020
-ms.custom: devx-track-jenkins
-ms.openlocfilehash: 4918b548fb98f27fffaa8d836ec125cc325da79d
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.date: 01/08/2021
+ms.custom: devx-track-jenkins,devx-track-jenkins
+ms.openlocfilehash: c498a43d5a8d57a75a5592de279b79a75b8e6360
+ms.sourcegitcommit: 347bfa3b6c34579c567d1324efc63c1d6672a75b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "96035472"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98109096"
 ---
-# <a name="tutorial-scale-jenkins-deployments-with-azure-vm-agents"></a>Руководство по масштабированию развертываний Jenkins с помощью агентов виртуальных машин Azure
+# <a name="tutorial-scale-jenkins-deployments-with-vm-running-in-azure"></a>Руководство по Масштабирование развертываний Jenkins с помощью виртуальной машины, запущенной в Azure
 
 [!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
-В этом руководстве описывается, как с помощью [подключаемого модуля агентов виртуальных машин Azure](https://plugins.jenkins.io/azure-vm-agents) для Jenkins добавить емкость для виртуальных машин Linux в Azure.
+В этом руководстве показано, как создать виртуальные машины Linux в Azure и добавить виртуальную машину в качестве рабочего узла в Jenkins.
 
 Выполняя данное руководство, вы сделаете следующее:
 
 > [!div class="checklist"]
-> * устанавливать подключаемый модуль агентов виртуальных машин Azure;
-> * настраивать подключаемый модуль для создания ресурсов в подписке Azure;
-> * устанавливать вычислительные ресурсы, доступные для каждого агента;
-> * настраивать операционную систему и инструменты на каждом агенте;
+> * создадите компьютер агента;
+> * добавите агент в Jenkins;
 > * создавать универсальное задание Jenkins;
 > * запускать задание в агенте виртуальной машины Azure.
-
-> [!VIDEO https://channel9.msdn.com/Shows/Azure-Friday/Continuous-Integration-with-Jenkins-Using-Azure-VM-Agents/player]
 
 ## <a name="prerequisites"></a>Обязательные условия
 
 - **Установка Jenkins.** Если у вас нет доступа к установленному экземпляру Jenkins, [настройте его с помощью Azure CLI](configure-on-linux-vm.md).
 
-## <a name="install-azure-vm-agents-plugin"></a>Установка подключаемого модуля агентов виртуальных машин
+## <a name="configure-agent-virtual-machine"></a>Настройка виртуальной машины агента
 
-1. На панели мониторинга Jenkins выберите **Manage Jenkins** (Управление Jenkins), а затем — **Manage Plugins** (Управление подключаемыми модулями).
+1. Используйте [az group create](/cli/azure/group?#az_group_create), чтобы создать группу ресурсов Azure.
 
-1. Перейдите на вкладку **Available** (Доступно), а затем найдите **Azure VM Agents** (Агенты виртуальных машин Azure). Установите флажок рядом с записью для подключаемого модуля, а затем в нижней части панели мониторинга выберите **Install without restart** (Установить без перезагрузки).
+    ```azurecli
+    az group create --name <resource_group> --location <location>
+    ```
 
-## <a name="configure-the-azure-vm-agents-plugin"></a>Настройка подключаемого модуля агентов виртуальных машин Azure
+1. Используйте [az vm create](/cli/azure/vm#az_vm_create), чтобы создать виртуальную машину.
 
-1. На панели мониторинга Jenkins выберите **Manage Jenkins** (Управление Jenkins), а затем — **Configure System** (Настройка системы).
+    ```azurecli
+    az vm create --resource-group <resource-group> --name <vm_name> --image UbuntuLTS --admin-username azureuser --admin-password "<password>"
+    ```
 
-1. Прокрутите до нижней части страницы и найдите раздел **Cloud** (Облако) с раскрывающимся списком **Add new cloud** (Добавление нового облака) и выберите **Microsoft Azure VM Agents** (Агенты виртуальных машин Microsoft Azure).
+    **Примечания**
 
-1. Выберите имеющийся субъект-службу в раскрывающемся списке **Add** (Добавить) в разделе **Azure Credentials** (Учетные данные Azure). Если его в списке нет, выполните действия ниже, чтобы [создать субъект-службу](/cli/azure/create-an-azure-service-principal-azure-cli?toc=%2fazure%2fazure-resource-manager) для учетной записи Azure и добавить его в конфигурацию Jenkins.
+    - Кроме того, вы можете передать ключ SSH с помощью следующей команды: `--ssh-key-value <ssh_path>`.
 
-    а. Щелкните **Add** (Добавить) рядом с разделом **Azure Credentials** (Учетные данные Azure) и выберите **Jenkins**.
-    b. В диалоговом окне **добавления учетных данных** выберите **субъект-службу Microsoft Azure** в раскрывающемся списке **Kind** (Вид).
-    c. Создайте субъект-службу Active Directory с помощью Azure CLI или [Cloud Shell](/azure/cloud-shell/overview).
+1. Установите JDK.  
+
+    #### <a name="linux"></a>[Linux](#tab/linux)
     
-    ```azurecli-interactive
-    az ad sp create-for-rbac --name jenkins_sp --password secure_password
-    ```
+    1. Войдите на виртуальную машину с помощью средства SSH.
+    
+        ```bash
+        ssh username@123.123.123.123
+        ```
+        
+    1. Установите JDK, используя apt. Также возможна установка с помощью других диспетчеров пакетов, например yum или pacman.
+    
+        ```bash
+        sudo apt-get install -y default-jdk
+        ```
+    
+    1. После установки выполните `java -version`, чтобы проверить окружение Java. Выходные данные будут содержать номера версий, связанные с разными частями JDK.
+    
+    #### <a name="windows"></a>[Windows](#tab/windows)
+    
+    1. Войдите на виртуальную машину с помощью средства SSH или путем подключения к удаленному рабочему столу.
+    
+    1. [Скачайте JDK](https://www.oracle.com/java/technologies/javase-downloads.html) для своей среды.
+    
+    1. Установите JDK.
+    
+## <a name="configure-jenkins-url"></a>Настройка URL-адреса Jenkins
 
-    ```json
-    {
-        "appId": "BBBBBBBB-BBBB-BBBB-BBBB-BBBBBBBBBBB",
-        "displayName": "jenkins_sp",
-        "name": "http://jenkins_sp",
-        "password": "secure_password",
-        "tenant": "CCCCCCCC-CCCC-CCCC-CCCCCCCCCCC"
-    }
-    ```
-    d. Введите учетные данные из субъекта-службы в диалоговом окне **добавления учетных данных**. Если вы не знаете идентификатор подписки Azure, выполните следующий запрос в интерфейсе командной строки:
-     
-     ```azurecli-interactive
-     az account list
-     ```
+При использовании JNLP необходимо настроить URL-адрес Jenkins.
 
-     ```json
-        {
-            "cloudName": "AzureCloud",
-            "id": "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA",
-            "isDefault": true,
-            "name": "Visual Studio Enterprise",
-            "state": "Enabled",
-            "tenantId": "CCCCCCCC-CCCC-CCCC-CCCC-CCCCCCCCCCC",
-            "user": {
-            "name": "raisa@fabrikam.com",
-            "type": "user"
-            }
-     ```
+1. В меню выберите пункт **Manage Jenkins** (Управление Jenkins).
 
-    Готовый субъект-служба должен использовать поле `id` для **идентификатора подписки**, значение `appId` для **идентификатора клиента**, `password` для **секрета клиента** и `tenant` для **идентификатора клиента**. Щелкните **Add** (Добавить), чтобы добавить субъект-службу, а затем настроить подключаемый модуль для использования созданных учетных данных.
+1. В разделе **System Configuration** (Конфигурация системы) выберите элемент **Configure System** (Настройка системы).
 
-    ![Настройка субъекта-службы Azure](./media/scale-deployments-using-vm-agents/new-service-principal.png)
+1. Убедитесь, что для параметра **Jenkins URL** (URL-адрес Jenkins) задан HTTP-адрес установки Jenkins: `http://<your_host>.<your_domain>:8080/`.
 
-1. В разделе **Resource Group Name** (Имя группы ресурсов) с параметром **Create new** (Создать) введите `myJenkinsAgentGroup`.
-1. Выберите **Verify configuration** (Проверить конфигурацию), чтобы подключиться к Azure и проверить параметры профиля.
-1. Выберите **Apply** (Применить), чтобы обновить конфигурацию подключаемого модуля.
+1. Щелкните **Сохранить**.
 
-## <a name="configure-agent-resources"></a>Настройка ресурсов агента
+## <a name="add-agent-to-jenkins"></a>Добавление агента в Jenkins
 
-Настройте шаблон для определения агента виртуальных машин Azure. Этот шаблон определяет вычислительные ресурсы, созданные каждым агентом.
+1. В меню выберите пункт **Manage Jenkins** (Управление Jenkins).
 
-1. Выберите **Add** (Добавить) рядом с параметром **Add Azure Virtual Machine Template** (Добавить шаблон виртуальной машины Azure).
-1. В поле **Name** (Имя) введите `defaulttemplate`.
-1. В поле **Label** (Метка) введите `ubuntu`.
-1. Выберите нужный [регион Azure](https://azure.microsoft.com/regions/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) в поле со списком.
-1. Выберите [размер виртуальной машины](/azure/virtual-machines/linux/sizes) в раскрывающемся списке в разделе **Virtual Machine Size** (Размер виртуальной машины). В этом руководстве используется размер общего назначения `Standard_DS1_v2`.   
-1. Для параметра **Retention time** (Время хранения) задайте значение `60`. Этот параметр определяет время ожидания (в минутах) Jenkins перед его освобождением от неактивных агентов. Укажите 0, если не хотите, чтобы неактивные агенты удалялись автоматически.
+1. В разделе **System Configuration** (Конфигурация системы) выберите элемент **Manage Nodes and Clouds** (Управление узлами и облаками).
 
-   ![Общая конфигурация виртуальной машины](./media/scale-deployments-using-vm-agents/general-config.png)
+1. В меню выберите пункт **New Node** (Новый узел).
 
-## <a name="configure-agent-operating-system-and-tools"></a>Настройка операционной системы и инструментов агента
+1. Введите значение в поле **Node Name** (Имя узла).
 
-В разделе **настройки образа** подключаемого модуля выберите **Ubuntu 16.04 LTS**. Установите флажки рядом с пунктами **Install Git (Latest)** (Установить Git (последняя версия)), **Install Maven (V3.5.0)** (Установить Maven (V3.5.0)) и **Install Docker** (Установить Docker), чтобы установить эти инструменты на созданных агентах.
+1. Выберите элемент **Permanent Agent** (Постоянный агент).
 
-![Настройка ОС и инструментов виртуальной машины](./media/scale-deployments-using-vm-agents/jenkins-os-config.png)
+1. Нажмите кнопку **ОК**.
 
-Выберите **Add** (Добавить) рядом с параметром **Admin Credentials** (Учетные данные администратора), а затем щелкните **Jenkins**. Введите имя пользователя и пароль, используемые для входа в агенты. Убедитесь, что они соответствуют [политике имен пользователей и паролей](/azure/virtual-machines/linux/faq#what-are-the-username-requirements-when-creating-a-vm) административных учетных записей на виртуальных машинах Azure.
+1. Укажите значения для следующих полей:
 
-Выберите **Verify Template** (Проверка шаблона), чтобы проверить конфигурацию, а затем щелкните **Save** (Сохранить), чтобы сохранить изменения и вернуться на панель мониторинга Jenkins.
+    - **Name** (Имя). Укажите уникальное имя, идентифицирующее агент в новой установке Jenkins. Это значение может отличаться от имени узла агента. Но вы можете сделать эти два значения одинаковыми. В качестве значения имени можно использовать любой специальный символ из следующего списка: `?*/\%!@#$^&|<>[]:;`.
+
+    - **Удаленный корневой каталог.** У агента должен быть каталог, выделенный для Jenkins. Укажите путь к этому каталогу в агенте. Лучше использовать абсолютный путь, например `/home/azureuser/work` или `c:\jenkins`. Он должен быть локальным для компьютера агента. Этот путь может быть невидимым для главного сервера. Если используется относительный путь, например ./jenkins-agent, путь будет относительным для рабочего каталога, предоставленного методом запуска.
+
+    - **Метки.** Метки используются для группирования семантически связанных агентов в одну логическую группу. Например, можно определить метку `UBUNTU` для всех агентов, работающих под управлением такого дистрибутива Linux, как Ubuntu.
+
+    - **Метод запуска.** Есть два варианта запуска удаленного узла Jenkins: **запуск агентов с помощью SSH** и **запуск агента с помощью команды на главном сервере**:
+
+        - **Запуск агентов с помощью SSH.** Укажите значения для следующих полей:
+
+            - **Узел**: Общедоступный IP-адрес виртуальной машины или доменное имя. Например, `123.123.123.123` или `example.com`
+
+            - **Учетные данные**: Выберите учетные данные, которые будут использоваться для входа в удаленный узел. Кроме того, вы можете нажать кнопку **Add** (Добавить), чтобы определить новые учетные данные, а затем выбрать эти новые учетные данные после создания.
+
+            - **Стратегия проверки ключей узла.** Управляет тем, как Jenkins проверяет ключ SSH, представленный удаленным узлом, при подключении.
+
+            ![Пример конфигурации узла для указания метода запуска агентов с помощью SSH.](./media/scale-deployments-using-vm-agents/ssh2.png)
+
+        - **Запуск агента с помощью команды на главном сервере.**
+
+            - Скачайте `agent.jar` из `https://<your_jenkins_host_name>/jnlpJars/agent.jar`. Например, `https://localhost:8443/jnlpJars/agent.jar`.
+
+            - Отправьте `agent.jar` на виртуальную машину.
+
+            - Запустите Jenkins с помощью команды `ssh <node_host> java -jar <remote_agentjar_path>`. Например, `ssh azureuser@99.99.999.9 java -jar /home/azureuser/agent.jar`.
+
+            ![Пример конфигурации узла для указания метода запуска агентов с помощью команды на главном сервере.](./media/scale-deployments-using-vm-agents/config.png)
+
+1. Щелкните **Сохранить**.
+
+После определения конфигураций Jenkins добавляет виртуальную машину в качестве нового рабочего узла.
+
+![Пример виртуальной машины, используемой в качестве нового рабочего узла](./media/scale-deployments-using-vm-agents/commandstart.png)
 
 ## <a name="create-a-job-in-jenkins"></a>Создание задания в Jenkins
 
-1. На панели мониторинга Jenkins щелкните элемент **New Item**(Создать элемент). 
-1. В поле имени введите `demoproject1`, выберите **Freestyle project** (Универсальный проект) и нажмите кнопку **ОК**.
-1. На вкладке **General** (Общие) выберите **Restrict where project can be run** (Ограничения для запуска проекта) и введите для **выражения метки** значение `ubuntu`. Появится сообщение, подтверждающее обработку метки конфигурацией облака, созданной на предыдущем шаге. 
-   ![Настройка задания](./media/scale-deployments-using-vm-agents/job-config.png)
+1. В меню выберите пункт **New Item** (Новый элемент).
+
+1. В поле имени введите `demoproject1`.
+
+1. Выберите **Freestyle project** (Универсальный проект).
+
+1. Щелкните **ОК**.
+
+1. На вкладке **General** (Общие) выберите **Restrict where project can be run** (Ограничения для запуска проекта) и введите для **выражения метки** значение `ubuntu`. Появится сообщение, подтверждающее обработку метки конфигурацией облака, созданной на предыдущем шаге.
+
+   ![Настройка нового задания Jenkins](./media/scale-deployments-using-vm-agents/job-config.png)
+
 1. На вкладке **Source Code Management** (Управление исходным кодом) выберите **Git** и добавьте следующий URL-адрес в поле **Repository URL** (URL-адрес репозитория): `https://github.com/spring-projects/spring-petclinic.git`.
+
 1. На вкладке **Build** (Сборка) выберите **Add build step** (Добавить шаг сборки), а затем — **Invoke top-level Maven targets** (Вызов целевых объектов Maven верхнего уровня). В поле **Goals** (Цели) введите `package`.
-1. Чтобы сохранить определение задания, выберите **Save** (Сохранить).
+
+1. Щелкните **Сохранить**.
 
 ## <a name="build-the-new-job-on-an-azure-vm-agent"></a>Сборка задания в агенте виртуальной машины Azure
 
-1. Вернитесь на панель мониторинга Jenkins.
-1. Выберите задание, созданное на предыдущем шаге, и щелкните **Build now** (Построить сейчас). Новая сборка поставлена в очередь, но не запускается до создания агента виртуальной машины в подписке Azure.
+1. Выберите задание, созданное на предыдущем шаге.
+
+1. Выберите **Build now** (Собрать). Новая сборка поставлена в очередь, но она не будет запущена до создания агента виртуальной машины в подписке Azure.
+
 1. По завершении сборки перейдите к окну **Console output** (Вывод на консоль). Вы увидите, что сборка выполнена в агенте Azure удаленно.
 
-![Вывод на консоль](./media/scale-deployments-using-vm-agents/console-output.png)
-
-## <a name="troubleshooting-the-jenkins-plugin"></a>Устранение неполадок подключаемого модуля Jenkins
-
-Если вы столкнулись с ошибками, которые касаются подключаемых модулей Jenkins, сообщите о проблеме конкретного компонента в [JENKS JIRA](https://issues.jenkins-ci.org/).
+    ![Вывод на консоль](./media/scale-deployments-using-vm-agents/console-output.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

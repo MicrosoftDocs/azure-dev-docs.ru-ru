@@ -2,14 +2,14 @@
 title: Развертывание приложений Node.js в Службе приложений Azure с помощью Visual Studio Code
 description: Разверните приложение Node.js (Express.js) в Службе приложений Azure с помощью расширения Службы приложений для Visual Studio Code.
 ms.topic: tutorial
-ms.date: 12/09/2020
+ms.date: 01/11/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 9b6b91cffa50c3c1a2beb3dc2c800db20877b9af
-ms.sourcegitcommit: f723980ade4cbc13548a5d8ac3f3fa681b8a2dbd
+ms.openlocfilehash: 2c019cc9ae13b81ecde934faee6d7d7a9fadf07a
+ms.sourcegitcommit: 657f43a5048cd17b080b40b5090d575c8d7f5eaf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97601035"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98173254"
 ---
 # <a name="deploy-nodejs-to-azure-app-service-using-visual-studio-code"></a>РазвертываниеNode.js в Службе приложений Azure с помощью Visual Studio Code
 
@@ -42,41 +42,11 @@ ms.locfileid: "97601035"
 
 ## <a name="3-create-a-local-expressjs-app"></a>3. Создание локального приложения Express.js
 
-Создайте простое приложение Node.js с помощью генератора приложений Express.js. 
-
-1. В окне терминала или командной строки перейдите в расположение, в котором нужно создать папку приложения.
-
-1. Выполните приведенную ниже команду, чтобы с помощью генератора Express создать приложение Express с именем *expressApp1*. В параметрах `--view pug --git` указано, что генератор должен использовать обработчик шаблонов [pug](https://pugjs.org/api/getting-started.html) (ранее известный под именем Jade) и создать файл с расширением *.gitignore*.
-
-    ```bash
-    npx express-generator expressApp1 -–git --view pug 
-    ```
-
-1. Перейдите в папку приложения:
-
-    ```bash
-    cd expressApp1
-    ```
-
-1. Установите зависимости приложения:
-
-    ```bash
-    npm install
-    ```
+[!INCLUDE [Create a local Express.js app](../includes/create-node-app.md)]
 
 ## <a name="4-run-your-local-expressjs-app"></a>4. Запуск локального приложения Express.js
 
-1. Запустите сервер:
-
-    ```bash
-    npm start
-    ```
-
-1. Протестируйте приложение, перейдя по ссылке `http://localhost:3000` в браузере. Сайт должен выглядеть следующим образом:
-
-    ![Выполнение приложения Express](../media/deploy-azure/express.png)
-
-1. Нажмите клавиши **CTRL**+**C** в терминале, чтобы остановить работу сервера.
+[!INCLUDE [Run your local Express.js app](../includes/run-node-app.md)]
 
 ## <a name="5-initialize-git-in-visual-studio-code-for-current-app"></a>5. Инициализация Git в Visual Studio Code для текущего приложения
 
@@ -169,7 +139,11 @@ ms.locfileid: "97601035"
 
 1. Несколько раз обновите веб-страницу в браузере и убедитесь, что отображаются дополнительные выходные данные журнала.
 
-## <a name="8-clean-up-resources"></a>8. Очистка ресурсов
+## <a name="8-make-changes-and-redeploy"></a>8. Внесение изменений и повторное развертывание
+
+Внесите несколько изменений и [повторно разверните](../how-to/deploy-web-app.md#deploy-or-redeploy-to-app-service-with-visual-studio-code) приложение с помощью расширения Службы приложений. 
+
+## <a name="9-clean-up-resources"></a>9. Очистка ресурсов
 
 Если нужно очистить ресурсы, щелкните правой кнопкой мыши Службу приложений в расширении Службы приложений Visual Studio Code, а затем выберите элемент **Удалить**.
 

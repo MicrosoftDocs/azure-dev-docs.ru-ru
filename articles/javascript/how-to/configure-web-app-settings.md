@@ -2,14 +2,14 @@
 title: Параметры конфигурации размещения веб-приложений
 description: Узнайте, как задать общие конфигурации для веб-приложения.
 ms.topic: conceptual
-ms.date: 12/08/2020
+ms.date: 01/11/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 29c79317d5ccd2f65db6c23e28a852164c74b743
-ms.sourcegitcommit: 525c4b41d85aae9c3026a070b07e00c2241ea716
+ms.openlocfilehash: c31d77f6b4dd61bd45bd84b6cfe1e5d14cadb586
+ms.sourcegitcommit: a7b77d07ec6e181c2d40c00ff6e5ef3866980172
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97394047"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98069080"
 ---
 # <a name="hosting-web-apps-on-azure"></a>Размещение веб-приложений в Azure
 
@@ -65,6 +65,61 @@ ms.locfileid: "97394047"
 ## <a name="configure-port-forwarding"></a>Настройка перенаправления портов
 
 Необходимо [сопоставлять номер порта приложения](/azure/app-service/configure-language-nodejs?pivots=platform-windows#get-port-number), если он не является портом по умолчанию (`8080`). Это позволяет службе приложений перенаправлять запросы в правильный порт. 
+
+## <a name="configure-browser-for-cors-to-connect-with-server"></a>Настройка браузера для подключения CORS к серверу
+
+Если вам нужно подключиться к собственному серверу и при этом игнорировать защиту CORS во время выполнения и отладки на локальном клиенте, рекомендуется настроить этот параметр в файле отладки Visual Studio Code (`launch.json`), чтобы передать параметры в браузер для отключения защиты. 
+
+Так как этот файл обязательно используется для запуска сеанса отладки, вы можете выполнить запись после изменений в систему управления версиями. 
+
+### <a name="configure-edge-browser-to-disable-cors-for-debugging"></a>Настройка браузера Edge для отключения CORS для отладки
+
+В следующем файле `launch.json` настраивается параметр **браузера Edge**, чтобы отключить защиту CORS для сеанса отладки: `--disable-web-security`. 
+
+```json
+{
+    // Debug client, with requests to server, w/o 
+    // changes to client or server
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Edge against localhost",
+            "request": "launch",
+            "type": "pwa-msedge",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--disable-web-security"
+            ],
+        },
+    ]
+}
+```
+
+### <a name="configure-chrome-browser-to-disable-cors-for-debugging"></a>Настройка браузера Chrome для отключения CORS для отладки
+
+Следующий файл `launch.json` настраивает параметр **браузера Chrome**, чтобы отключить защиту CORS для сеанса отладки: `--disable-web-security`. 
+
+```json
+{
+    // Debug client, with requests to server, w/o 
+    // changes to client or server
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "runtimeArgs": [
+                "--disable-web-security"
+            ],
+        }
+    ]
+}
+```
+
 
 ## <a name="configure-certificates"></a>Настройка сертификатов
 
