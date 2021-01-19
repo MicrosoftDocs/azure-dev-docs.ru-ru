@@ -4,12 +4,12 @@ description: Список имен пакетов, а также ссылок н
 ms.date: 12/08/2020
 ms.topic: reference
 ms.custom: devx-track-js
-ms.openlocfilehash: 2acf99ad9ee1ced7d84579b79602b56a1f17bd26
-ms.sourcegitcommit: 1901759f41adfac3c3f2ff135bcf72206543b639
+ms.openlocfilehash: 476cad12727e06fd20b507263be66527824b4089
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933363"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561220"
 ---
 # <a name="azure-libraries-packages-for-javascript"></a>Пакеты библиотек Azure для JavaScript
 
@@ -30,4 +30,4 @@ ms.locfileid: "96933363"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Найдите [справочную документацию](/javascript/api/overview/azure/?view=azure-node-latest) по всем пакетам NPM Azure.
+Найдите [справочную документацию](/javascript/api/overview/azure/) по всем пакетам NPM Azure.

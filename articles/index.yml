@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: 749fa6b63fc46f4bdd0061f09802c3c9b3d93a6b
-  ms.sourcegitcommit: c1ef7aa8ed2e88e98b190e42cffde52cf301958d
+  ms.openlocfilehash: 251978c321c029d947c5eef7a2764f9b2da0560a
+  ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/10/2020
-  ms.locfileid: "97034565"
+  ms.lasthandoff: 01/18/2021
+  ms.locfileid: "98561270"
 productDirectory:
   items:
   - title: Python
@@ -36,13 +36,13 @@ productDirectory:
   - title: JavaScript
     imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
     links:
-    - url: ./javascript/tutorial-vscode-static-website-node-01.md?tabs=bash
+    - url: ./javascript/tutorial/tutorial-vscode-static-website-node/tutorial-vscode-static-website-node-01.md?tabs=bash
       text: Разработка статического веб-сайта
     - url: ./javascript/tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md
       text: Развертывание в Службе приложений Azure
     - url: ./javascript/tutorial/tutorial-vscode-serverless-node-install.md?tabs=bash
       text: Развертывание бессерверного приложения
-    - url: ./javascript/tutorial-vscode-docker-node-01.md?tabs=bash
+    - url: ./javascript/tutorial/tutorial-vscode-docker-node/tutorial-vscode-docker-node-01.md?tabs=bash
       text: Развертывание контейнеров Docker
     - url: /azure/cosmos-db/create-mongodb-nodejs?bc=%252fazure%252fdeveloper%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fdeveloper%252fjavascript%252ftoc.json
       text: Перенос приложения MongoDB в Azure Cosmos DB
@@ -96,15 +96,15 @@ productDirectory:
   - title: Azure CLI
     imageSrc: https://docs.microsoft.com/media/logos/logo_CLIgeneric.svg
     links:
-    - url: /cli/azure/get-started-with-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/get-started-with-azure-cli
       text: Начало работы
-    - url: /cli/azure/install-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/install-azure-cli
       text: Установка
-    - url: /cli/azure/authenticate-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/authenticate-azure-cli
       text: Вход
-    - url: /cli/azure/query-azure-cli?view=azure-cli-latest
+    - url: /cli/azure/query-azure-cli
       text: Выполнение запроса для получения выходных данных команды CLI
-    - url: /cli/azure/azure-cli-vm-tutorial?view=azure-cli-latest
+    - url: /cli/azure/azure-cli-vm-tutorial
       text: Создание виртуальной машины
     - url: /cli/azure/
       text: Узнайте больше в Центре разработчиков Azure CLI
