@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, virtual machine, agents
 ms.topic: tutorial
 ms.date: 01/08/2021
 ms.custom: devx-track-jenkins,devx-track-jenkins
-ms.openlocfilehash: c498a43d5a8d57a75a5592de279b79a75b8e6360
-ms.sourcegitcommit: 347bfa3b6c34579c567d1324efc63c1d6672a75b
+ms.openlocfilehash: 599fe9875d1f9ffd107cca80f9445bba18100f42
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98109096"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561040"
 ---
 # <a name="tutorial-scale-jenkins-deployments-with-vm-running-in-azure"></a>Руководство по Масштабирование развертываний Jenkins с помощью виртуальной машины, запущенной в Azure
 
@@ -169,4 +169,4 @@ ms.locfileid: "98109096"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
-> [Развертывание в службе приложений Azure с использованием подключаемого модуля Jenkins](deploy-from-github-to-azure-app-service.md)
+> [Развертывание в службе приложений Azure с использованием подключаемого модуля Jenkins](./deploy-to-azure-app-service-using-azure-cli.md)

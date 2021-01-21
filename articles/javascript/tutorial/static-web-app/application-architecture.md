@@ -4,12 +4,12 @@ description: В этом разделе учебника описывается 
 ms.topic: tutorial
 ms.date: 12/17/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: 12d156591393607f4cb40094fa00dda1a0f947fd
-ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
+ms.openlocfilehash: b8949b355ec30775dfacf5ea77db53edb595578c
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97690808"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561650"
 ---
 # <a name="2-application-architecture-for-static-web-app-with-computer-vision"></a>2. Архитектура приложения для статического веб-приложения с Компьютерным зрением
 
@@ -22,7 +22,7 @@ ms.locfileid: "97690808"
 ## <a name="client-application-architecture"></a>Архитектура клиентского приложения
 
 Приложение React (create-react-app) реализует следующие возможности: 
-* отображение сообщения, если ключ и конечная точка Azure для [**Компьютерного зрения**](https://docs.microsoft.com/azure/cognitive-services/computer-vision/) Cognitive Services не найдены;
+* отображение сообщения, если ключ и конечная точка Azure для [**Компьютерного зрения**](/azure/cognitive-services/computer-vision/) Cognitive Services не найдены;
 * анализ изображения с помощью Компьютерного зрения Cognitive Services:
     * получение изображения для анализа по общедоступному URL-адресу или из коллекции;
     * по завершении анализа:
@@ -36,7 +36,7 @@ ms.locfileid: "97690808"
 При отправке данных в определенную ветвь действие GitHub выполняет следующие задачи:
 * встраивает в сборку секреты GitHub, содержащие ключ и конечную точку для Компьютерного зрения;
 * компилирует клиент React (create-react-app);
-* перемещает полученные файлы в ресурс [**статического веб-приложения**](https://docs.microsoft.com/azure/static-web-apps) Azure.
+* перемещает полученные файлы в ресурс [**статического веб-приложения**](/azure/static-web-apps) Azure.
 
 > [!div class="nextstepaction"]
-> [Локальное скачивание и запуск приложения React для анализа изображений в Cognitive Services](run-the-react-cognitive-services-image-analyzer-app-locally.md) 
+> [Локальное скачивание и запуск приложения React для анализа изображений в Cognitive Services](run-the-react-cognitive-services-image-analyzer-app-locally.md)

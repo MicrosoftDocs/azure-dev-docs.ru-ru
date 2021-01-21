@@ -6,18 +6,18 @@ ms.author: anfeldma
 ms.topic: conceptual
 ms.date: 11/23/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 725754dc55198c38e6a9148ed0e37b83bf8a294e
-ms.sourcegitcommit: 525c4b41d85aae9c3026a070b07e00c2241ea716
+ms.openlocfilehash: ebec3cdc6a1f16534132a333b4c6119c5e6208bd
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97394011"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561820"
 ---
 # <a name="spring-data-azure-cosmos-db-developers-guide"></a>Руководство для разработчиков Spring Data Azure Cosmos DB
 
 В этой статье описаны возможности [Spring Data Azure Cosmos DB](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/cosmos/azure-spring-data-cosmos) при использовании API SQL, а также распространенные проблемы, рекомендации по их устранению и действия диагностики.
 
-[Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction) — это глобально распределенная служба базы данных, с помощью которой разработчики могут работать с данными, используя разные стандартные API-интерфейсы. Пакет SDK для Spring Data Azure Cosmos DB основан на платформе [Spring Data](https://spring.io/projects/spring-data). Он обеспечивает интеграцию с Azure Cosmos DB с использованием API SQL. Дополнительные сведения о поддержке других API-интерфейсов см. в следующих статьях:
+[Azure Cosmos DB](/azure/cosmos-db/introduction) — это глобально распределенная служба базы данных, с помощью которой разработчики могут работать с данными, используя разные стандартные API-интерфейсы. Пакет SDK для Spring Data Azure Cosmos DB основан на платформе [Spring Data](https://spring.io/projects/spring-data). Он обеспечивает интеграцию с Azure Cosmos DB с использованием API SQL. Дополнительные сведения о поддержке других API-интерфейсов см. в следующих статьях:
 
 - [Как использовать API MongoDB Spring Data с Azure Cosmos DB](./configure-spring-data-mongodb-with-cosmos-db.md)
 - [Как использовать API Apache Cassandra Spring Data с Azure Cosmos DB](./configure-spring-data-apache-cassandra-with-cosmos-db.md)
@@ -97,7 +97,7 @@ String[] includePaths; // The included paths for indexing.
 String[] excludePaths; // The excluded paths for indexing.
 ```
 
-Пакет SDK поддерживает секционирование. Дополнительные сведения см. в статье [Секционирование и горизонтальное масштабирование в Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview). Чтобы указать поле доменного класса в качестве поля ключа секции, добавьте к нему заметку `@PartitionKey`. Затем при выполнении операций CRUD указывайте значение секции.
+Пакет SDK поддерживает секционирование. Дополнительные сведения см. в статье [Секционирование и горизонтальное масштабирование в Azure Cosmos DB](/azure/cosmos-db/partitioning-overview). Чтобы указать поле доменного класса в качестве поля ключа секции, добавьте к нему заметку `@PartitionKey`. Затем при выполнении операций CRUD указывайте значение секции.
 
 В приведенном ниже примере показано, как использовать заметку `@PartitionKey` при выполнении операций CRUD.
 

@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 7311aba602ec2fd482d11e2a8a37751f0d742eae
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.openlocfilehash: 329f7f5413f813944b45658a4c5cc8da2936fc4a
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872875"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98626049"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Перенос приложений Tomcat в контейнеры в Службе Azure Kubernetes
 
@@ -111,7 +111,7 @@ ms.locfileid: "94872875"
 
 Создайте реестр контейнеров и кластер Azure Kubernetes, субъект-служба которого имеет роль читателя в реестре. Не забудьте [выбрать соответствующую модель сети](/azure/aks/operator-best-practices-network#choose-the-appropriate-network-model) в соответствии с требованиями к сети кластера.
 
-```bash
+```azurecli
 az group create -g $resourceGroup -l eastus
 az acr create -g $resourceGroup -n $acrName --sku Standard
 az aks create -g $resourceGroup -n $aksName --attach-acr $acrName --network-plugin azure
@@ -169,7 +169,7 @@ az aks create -g $resourceGroup -n $aksName --attach-acr $acrName --network-plug
 
 Самый простой способ создать и передать образ в Реестр контейнеров Azure (ACR) для использования в AKS — с помощью команды `az acr build`. Для выполнения этой команды устанавливать Docker на компьютере не нужно. Например, если у вас есть соответствующий файл Dockerfile и пакет приложения *petclinic.war* в текущем каталоге, вы можете создать образ контейнера в ACR, выполнив один шаг.
 
-```bash
+```azurecli
 az acr build -t "${acrName}.azurecr.io/petclinic:{{.Run.ID}}" -r $acrName --build-arg APP_FILE=petclinic.war --build-arg=prod.server.xml .
 ```
 

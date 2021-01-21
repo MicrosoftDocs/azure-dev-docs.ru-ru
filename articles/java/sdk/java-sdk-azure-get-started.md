@@ -9,12 +9,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019, devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 7c34254cbe45fdb6e60f9f1a30ab409f72c2aee4
-ms.sourcegitcommit: c1ef7aa8ed2e88e98b190e42cffde52cf301958d
+ms.openlocfilehash: f96b8f122967c1b742fb97a0ce5d096885904f59
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97034545"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561840"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Начало работы с разработкой в облаке с помощью Java в Azure
 
@@ -24,7 +24,7 @@ ms.locfileid: "97034545"
 
 - Учетная запись Azure. Если у вас ее нет, [получите бесплатную пробную версию](https://azure.microsoft.com/free/).
 - [Azure Cloud Shell](/azure/cloud-shell/quickstart) или [Azure CLI 2.0](/cli/azure/install-az-cli2).
-- [Java 8](https://docs.microsoft.com/azure/developer/java/fundamentals/java-jdk-long-term-support) в составе Azure Cloud Shell.
+- [Java 8](../fundamentals/java-jdk-long-term-support.md) в составе Azure Cloud Shell.
 - [Maven 3](https://maven.apache.org/download.cgi) в составе Azure Cloud Shell.
 
 ## <a name="set-up-authentication"></a>Настройка проверки подлинности

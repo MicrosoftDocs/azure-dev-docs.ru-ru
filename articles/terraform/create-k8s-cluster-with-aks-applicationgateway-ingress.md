@@ -5,12 +5,12 @@ keywords: Azure DevOps, Terraform, Шлюз приложений, входящи
 ms.topic: how-to
 ms.date: 10/30/2020
 ms.custom: devx-track-terraform
-ms.openlocfilehash: fe4f7b06388a7a26f61067e4a67e6b310e2a1958
-ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
+ms.openlocfilehash: 1613145e4b72cf2e30ab95e8e85b72ed19c38c80
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93192556"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98626025"
 ---
 # <a name="create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>Создание контроллера входящего трафика Шлюза приложений в Службе Azure Kubernetes
 
@@ -37,7 +37,7 @@ ms.locfileid: "93192556"
 
 - **Субъект-служба Azure.** Следуйте указаниям, приведенным в разделе **Создание субъекта-службы** статьи [Создание субъекта-службы Azure с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli). Запишите значения для `appId`, `displayName` и `password`.
 
-- **Получите идентификатор объекта субъекта-службы** : Выполните следующую команду в Cloud Shell: `az ad sp list --display-name <displayName>`.
+- **Получите идентификатор объекта субъекта-службы**: Выполните следующую команду в Cloud Shell: `az ad sp list --display-name <displayName>`.
 
 ## <a name="create-the-directory-structure"></a>Создание структуры каталога
 
@@ -90,7 +90,7 @@ ms.locfileid: "93192556"
     }
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
+1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
 
 ## <a name="define-input-variables"></a>Определение входных переменных
 
@@ -233,7 +233,7 @@ ms.locfileid: "93192556"
     }
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
+1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
 
 ## <a name="define-the-resources"></a>Определение ресурсов
 
@@ -468,13 +468,17 @@ ms.locfileid: "93192556"
         service_cidr       = var.aks_service_cidr
       }
 
+      role_based_access_control {
+        enabled = var.aks_enable_rbac
+      }
+
       depends_on = [azurerm_virtual_network.test, azurerm_application_gateway.network]
       tags       = var.tags
     }
 
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
+1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
 
 Код, представленный в этом разделе, задает имя кластера (name), расположение (location) и имя группы ресурсов (resource_group_name). Задается значение `dns_prefix`, которое составляет часть полного доменного имени (FQDN), используемого для доступа к кластеру.
 
@@ -532,13 +536,13 @@ ms.locfileid: "93192556"
     }
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
+1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
 
 ## <a name="configure-azure-storage-to-store-terraform-state"></a>Настройка хранилища Azure для хранения данных о состоянии Terraform
 
 Terraform отслеживает состояние локально через файл `terraform.tfstate`. Эта схема хорошо работает в среде с одним пользователем. Но в более практичной многопользовательской среде необходимо отслеживать состояние на сервере с использованием [хранилища Azure](/azure/storage/). В этом разделе описано, как получать необходимые сведения об учетной записи хранения и создавать контейнер хранилища. Затем сведения о состоянии Terraform сохраняются в этом контейнере.
 
-1. На портале Azure в разделе **Службы Azure** выберите **Учетные записи хранения**. (Если параметр **Учетные записи хранения** не отображается на главной странице, выберите **Другие службы** , найдите и выберите его.)
+1. На портале Azure в разделе **Службы Azure** выберите **Учетные записи хранения**. (Если параметр **Учетные записи хранения** не отображается на главной странице, выберите **Другие службы**, найдите и выберите его.)
 
 1. На странице **Учетные записи хранения** выберите имя учетной записи хранения, в которой будет сохраняться состояние Terraform. Например, можно использовать учетную запись хранения, созданную при открытии Cloud Shell в первый раз.  Имя учетной записи хранения, созданной с помощью Cloud Shell, обычно начинается с `cs`, после чего следует случайная строка из цифр и букв. 
 
@@ -592,7 +596,7 @@ Terraform отслеживает состояние локально через 
         
     ```
 
-1. Сохраните файл ( **&lt;Ctrl>S** ) и закройте редактор ( **&lt;Ctrl>Q** ).
+1. Сохраните файл ( **&lt;Ctrl>S**) и закройте редактор ( **&lt;Ctrl>Q**).
 
 1. Выполните команду `terraform plan`, чтобы создать план Terraform, определяющий элементы инфраструктуры. 
 
@@ -657,7 +661,7 @@ Terraform отслеживает состояние локально через 
     kubectl get nodes
     ```
 
-    Должны отобразиться сведения о рабочих узлах. У всех узлов должно быть состояние **Готово** , как показано на следующем рисунке:
+    Должны отобразиться сведения о рабочих узлах. У всех узлов должно быть состояние **Готово**, как показано на следующем рисунке:
 
     ![Средство kubectl позволяет проверить работоспособность кластера Kubernetes](./media/terraform-k8s-cluster-appgw-with-tf-aks/kubectl-get-nodes.png)
 
@@ -671,13 +675,13 @@ Terraform отслеживает состояние локально через 
   - компонент [Контроллер управляемых удостоверений (MIC)](https://github.com/Azure/aad-pod-identity#managed-identity-controllermic);
   - компонент [Node Managed Identity (NMI)](https://github.com/Azure/aad-pod-identity#node-managed-identitynmi).
 
-Если доступ RBAC **включен** , выполните следующую команду, чтобы установить идентификатор Pod Azure AD в кластере:
+Если доступ RBAC **включен**, выполните следующую команду, чтобы установить идентификатор Pod Azure AD в кластере:
 
 ```bash
 kubectl create -f https://raw.githubusercontent.com/Azure/aad-pod-identity/master/deploy/infra/deployment-rbac.yaml
 ```
 
-Если доступ RBAC **отключен** , выполните следующую команду, чтобы установить идентификатор Pod Azure AD в кластере:
+Если доступ RBAC **отключен**, выполните следующую команду, чтобы установить идентификатор Pod Azure AD в кластере:
 
 ```bash
 kubectl create -f https://raw.githubusercontent.com/Azure/aad-pod-identity/master/deploy/infra/deployment.yaml
@@ -687,7 +691,7 @@ kubectl create -f https://raw.githubusercontent.com/Azure/aad-pod-identity/maste
 
 В этом разделе код использует [Helm](/azure/aks/kubernetes-helm) (диспетчер пакетов Kubernetes) для установки пакета `application-gateway-kubernetes-ingress`:
 
-1. Если доступ RBAC **включен** , выполните следующий набор команд, чтобы установить и настроить Helm:
+1. Если доступ RBAC **включен**, выполните следующий набор команд, чтобы установить и настроить Helm:
 
     ```bash
     kubectl create serviceaccount --namespace kube-system tiller-sa
@@ -695,7 +699,7 @@ kubectl create -f https://raw.githubusercontent.com/Azure/aad-pod-identity/maste
     helm init --tiller-namespace kube-system --service-account tiller-sa
     ```
 
-1. Если доступ RBAC **отключен** , выполните следующую команду, чтобы установить и настроить Helm:
+1. Если доступ RBAC **отключен**, выполните следующую команду, чтобы установить и настроить Helm:
 
     ```bash
     helm init

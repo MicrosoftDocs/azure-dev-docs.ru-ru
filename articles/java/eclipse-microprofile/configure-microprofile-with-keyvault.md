@@ -11,12 +11,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 82b37db48c1ae0013972ae2c1522eac7c149fd1e
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.openlocfilehash: a2f39a13012a2ec1422ddf1f620ddd3e8f6e482d
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872815"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625945"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Настройка MicroProfile для использования с Azure Key Vault
 
@@ -55,7 +55,7 @@ public class DemoClass {
 
 1. Сначала создадим субъект-службу Azure. Это позволит нам получить идентификатор клиента и ключ, необходимые для доступа к Azure Key Vault:
 
-```bash
+```azurecli
 az login
 az account set --subscription <subscription_id>
 
@@ -78,7 +78,7 @@ az ad sp create-for-rbac --name <service_principal_name>
 
 После создания субъекта-службы мы дополнительно можем создать группу ресурсов (можно пропустить этот шаг, если у вас уже есть группа ресурсов, которую вы планируете использовать). Чтобы получить список расположений групп ресурсов, можно выполнить команду `az account list-locations`. Затем вы можете использовать значение `name` из этого списка, чтобы указать, где нужно создать группу ресурсов.
 
-```bash
+```azurecli
 # For this tutorial, the author chose to use `westus`
 # and `jg-test` for the resource group name.
 az group create -l <resource_group_location> -n <resource_group_name>
@@ -86,7 +86,7 @@ az group create -l <resource_group_location> -n <resource_group_name>
 
 Теперь мы создадим ресурс Azure Key Vault. Обратите внимание, что имя хранилища ключей Azure Key Vault будет позднее использоваться для доступа к этому хранилищу. Поэтому выберите имя, которое легко запомнить.
 
-```bash
+```azurecli
 az keyvault create --name <your_keyvault_name>            \
                    --resource-group <your_resource_group> \
                    --location <location>                  \
@@ -98,7 +98,7 @@ az keyvault create --name <your_keyvault_name>            \
 
 Нам также нужно предоставить созданному ранее субъекту-службе соответствующие разрешения, чтобы он мог осуществлять доступ к секретам Azure Key Vault. Обратите внимание, что значение "appID" здесь — это значение `appId`, полученное при создании субъекта-службы ранее (т. е. `5292398e-XXXX-40ce-XXXX-d49fXXXX9e79`, но вам нужно использовать свое значение, полученное при выполнении соответствующей команды).
 
-```bash
+```azurecli
 az keyvault set-policy --name <your_keyvault_name>   \
                        --secret-permission get list  \
                        --spn <your_sp_appId_created_in_step1>
@@ -106,7 +106,7 @@ az keyvault set-policy --name <your_keyvault_name>   \
 
 На этом этапе мы можем отправить секрет в Azure Key Vault. Используем имя ключа `demo-key` и его значение `demo-value`:
 
-```bash
+```azurecli
 az keyvault secret set --name demo-key      \
                        --value demo-value   \
                        --vault-name <your_keyvault_name>  

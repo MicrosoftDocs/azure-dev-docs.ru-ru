@@ -4,12 +4,12 @@ description: Узнайте, как задать общие конфигурац
 ms.topic: conceptual
 ms.date: 01/11/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: c31d77f6b4dd61bd45bd84b6cfe1e5d14cadb586
-ms.sourcegitcommit: a7b77d07ec6e181c2d40c00ff6e5ef3866980172
+ms.openlocfilehash: ec183d08460b932cec1dea8d301f2877d7bc9ece
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98069080"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561700"
 ---
 # <a name="hosting-web-apps-on-azure"></a>Размещение веб-приложений в Azure
 
@@ -165,4 +165,4 @@ ms.locfileid: "98069080"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-* Сведения по выполнению многих из этих шагов см. в статье о потоке разработки [комплексного приложения Node.js](/azure/developer/javascript/how-to/develop-nodejs-on-azure). 
+* Сведения по выполнению многих из этих шагов см. в статье о потоке разработки [комплексного приложения Node.js](./develop-nodejs-on-azure.md).

@@ -11,12 +11,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 72bb601c87e66c6ad95d046154fa6f6db4e5169d
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.openlocfilehash: 4aa168ddb38937ee8aeba0269c9dc3e50484717f
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872835"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98626033"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Развертывание приложения MicroProfile в облаке с помощью Docker и Azure
 
@@ -81,15 +81,15 @@ Hello, Azure!
 
 #### <a name="set-up-azure-cli"></a>Настройка Azure CLI
 
-Убедитесь, что у вас есть подписка на Azure, установлен [Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest) и вы выполнили проверку подлинности в своей учетной записи.
+Убедитесь, что у вас есть подписка на Azure, установлен [Azure CLI](/cli/azure/install-azure-cli) и вы выполнили проверку подлинности в своей учетной записи.
 
-```bash
+```azurecli
 az login
 ```
 
 #### <a name="create-a-resource-group"></a>Создание группы ресурсов
 
-```bash
+```azurecli
 export ARG=microprofileRG
 export ADCL=eastus
 az group create --name $ARG --location $ADCL
@@ -99,7 +99,7 @@ az group create --name $ARG --location $ADCL
 
 С помощью этой команды должен быть создан глобально уникальный реестр контейнеров с использованием базового имени и случайного числа.
 
-```bash
+```azurecli
 export RANDINT=`date +"%m%d%y$RANDOM"`
 export ACR=mydockerrepo$RANDINT
 az acr create --name $ACR -g $ARG --sku Basic --admin-enabled
@@ -116,7 +116,7 @@ az acr create --name $ACR -g $ARG --sku Basic --admin-enabled
 
 Поэтому мы выполним сборку образа с помощью службы [Служба "Сборка Реестра контейнеров Azure"]:
 
-```bash
+```azurecli
 export IMG_NAME="mympapp:latest"
 az acr build -r $ACR -t $IMG_NAME -g $ARG .
 ...
@@ -128,7 +128,7 @@ Build ID: aa1 was successful after 1m2.674577892s
 
 Теперь, когда образ доступен в ACR, отправим его в службу ACI и создадим там экземпляр контейнера. Но сначала нужно убедиться, что мы можем выполнить проверку подлинности в ACR:
 
-```bash
+```azurecli
 export ACR_REPO=`az acr show --name $ACR -g $ARG --query loginServer -o tsv`
 export ACR_PASS=`az acr credential show --name $ACR -g $ARG --query "passwords[0].value" -o tsv`
 export ACI_INSTANCE=myapp`date +"%m%d%y$RANDOM"`

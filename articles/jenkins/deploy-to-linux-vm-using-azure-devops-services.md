@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, виртуальная машина, CI/CD, Az
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: e1c5c9b06cff7419ac98b08553d143c7449746b8
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.openlocfilehash: 66890b5284179f3417295f477b8dc576258c2367
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983653"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98626017"
 ---
 # <a name="tutorial-deploy-to-linux-virtual-machine-using-jenkins-and-azure-devops-services"></a>Руководство по Развертывание виртуальной машины Linux с помощью Jenkins и Azure DevOps Services
 
@@ -30,12 +30,10 @@ ms.locfileid: "94983653"
 > * Создайте конвейер выпуска в Azure Pipelines.
 > * Выполнение развертывания вручную и с помощью непрерывной интеграции.
 
-## <a name="before-you-begin"></a>Перед началом
+## <a name="prerequisites"></a>Предварительные требования
 
-* Вам нужен доступ к серверу Jenkins. Если вы еще не создали сервер Jenkins, см. сведения в статье [Создание сервера Jenkins на виртуальной машине Azure под управлением Linux на портале Azure](/azure/jenkins/install-jenkins-solution-template). 
-
-* Войдите в вашу организацию Azure DevOps Services (**https://{имя_организации}.visualstudio.com**). 
-  Вы можете получить [бесплатную организацию Azure DevOps Services](https://go.microsoft.com/fwlink/?LinkId=307137&clcid=0x409&wt.mc_id=o~msft~vscom~home-vsts-hero~27308&campaign=o~msft~vscom~home-vsts-hero~27308).
+- **Подписка Azure**: Если у вас еще нет подписки Azure, создайте [бесплатную учетную запись Azure](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio), прежде чем начинать работу.
+- **Сервер Jenkins**. Если он у вас не установлен, [создайте сервер Jenkins в Azure](./configure-on-linux-vm.md).
 
   > [!NOTE]
   > Дополнительные сведения см. в статье [о подключении к Azure DevOps Services](/azure/devops/organizations/projects/connect-to-projects).

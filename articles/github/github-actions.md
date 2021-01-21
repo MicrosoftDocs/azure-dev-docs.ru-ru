@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.service: azure
 ms.date: 10/30/2020
 ms.custom: github-actions-azure
-ms.openlocfilehash: c952410231ae57b0d127e1b6fb05e03f88403640
-ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
+ms.openlocfilehash: b5b3192d1d65515dc3741be80bbab018f9cf5f09
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97754070"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561740"
 ---
 # <a name="what-is-github-actions-for-azure"></a>Что такое GitHub Actions для Azure
 
@@ -47,7 +47,7 @@ GitHub Actions также обеспечивает поддержку разны
 
 ## <a name="how-do-i-connect-github-actions-and-azure"></a>Подключение GitHub Actions к Azure
 
-В зависимости от действия вы будете использовать субъект-службу или профиль публикации для подключения к Azure из GitHub. Субъект-служба задействуется каждый раз при использовании действия [входа в Azure](https://github.com/marketplace/actions/azure-login). [Действия Службы приложений Azure](https://github.com/marketplace/actions/azure-webapp) поддерживают использование профиля публикации или субъекта-службы. Дополнительные сведения о субъектах-службах см. в статье [Объекты приложения и субъекта-службы в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).  
+В зависимости от действия вы будете использовать субъект-службу или профиль публикации для подключения к Azure из GitHub. Субъект-служба задействуется каждый раз при использовании действия [входа в Azure](https://github.com/marketplace/actions/azure-login). [Действия Службы приложений Azure](https://github.com/marketplace/actions/azure-webapp) поддерживают использование профиля публикации или субъекта-службы. Дополнительные сведения о субъектах-службах см. в статье [Объекты приложения и субъекта-службы в Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object).  
 
 Вы можете использовать действие входа в Azure в сочетании с действиями [Azure CLI](https://github.com/marketplace/actions/azure-cli-action) и [Azure PowerShell](https://github.com/marketplace/actions/azure-powershell-action). Действие входа в Azure также работает с большинством других действий GitHub для Azure, в том числе с [развертыванием в веб-приложениях](https://github.com/marketplace/actions/azure-webapp) и [получением доступа к секретам в хранилище ключей](https://github.com/marketplace/actions/azure-key-vault-get-secrets).
 
@@ -91,7 +91,7 @@ GitHub Actions также обеспечивает поддержку разны
 ## <a name="next-steps"></a>Next Steps
 
 > [!div class="nextstepaction"]
-> [Схема обучения. Автоматизация рабочего процесса с помощью GitHub Actions](https://docs.microsoft.com/learn/modules/github-actions-automate-tasks/)
+> [Схема обучения. Автоматизация рабочего процесса с помощью GitHub Actions](/learn/modules/github-actions-automate-tasks/)
 
 > [!div class="nextstepaction"]
 > [Учебное задание по непрерывной поставке для Azure](https://lab.github.com/githubtraining/github-actions:-continuous-delivery-with-azure)

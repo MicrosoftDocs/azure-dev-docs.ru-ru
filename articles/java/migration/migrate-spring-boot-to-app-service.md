@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.custom: devx-track-java
-ms.openlocfilehash: a8e9f883e76f3c79a9b5470c18907276d9262d03
-ms.sourcegitcommit: bfaeacc2fb68f861a9403585d744e51a8f99829c
+ms.openlocfilehash: 047b4a07c56e29d51ae4234bd2aefcb1936d8059
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90682153"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561780"
 ---
 # <a name="migrate-spring-boot-applications-to-azure-app-service"></a>Перенос приложений Spring Boot в Службу приложений Azure
 
@@ -120,7 +120,7 @@ spring.jms.servicebus.idle-timeout=10000
 Если вы не можете использовать подключаемый модуль Maven, вам нужно будет подготовить веб-приложение с помощью других механизмов, например:
 
 * [Портал Azure](https://portal.azure.com/#create/Microsoft.WebSite)
-* [Azure CLI](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
+* [Azure CLI](/cli/azure/webapp#az-webapp-create)
 * [Azure PowerShell](/powershell/module/az.websites/new-azwebapp)
 
 Создав веб-приложение, разверните его, используя один из [доступных механизмов развертывания](/azure/app-service/deploy-ftp). Если это возможно, приложение нужно передать в файл */home/site/wwwroot/app.jar*. Если вы не хотите переименовывать JAR-файл в *app.jar*, отправьте скрипт оболочки с командой для выполнения JAR-файла. Затем вставьте полный путь к этому скрипту в текстовое поле [Файл запуска](/azure/app-service/containers/app-service-linux-faq#built-in-images) в разделе конфигурации на портале. Скрипт запуска выполняется не в том каталоге, в который он помещен. Поэтому всегда используйте абсолютные пути для создания ссылок на файлы в скрипте запуска (например, `java -jar /home/myapp/myapp.jar`).
@@ -168,6 +168,6 @@ spring.jms.servicebus.idle-timeout=10000
 
 * Для предоставления надежных развертываний с нулевым временем простоя вы можете [использовать слоты развертывания](/azure/app-service/deploy-staging-slots).
 
-* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
+* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
 
 * Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

@@ -4,12 +4,12 @@ description: Узнайте, как создать группу ресурсов
 ms.topic: tutorial
 ms.date: 11/13/2020
 ms.custom: devx-track-js
-ms.openlocfilehash: b401953c0e1c972efa0f5d90817f461b858cf04b
-ms.sourcegitcommit: a2a51e0c6530eb5794a2fe667cf4c9a60b2a7470
+ms.openlocfilehash: 0b1b634756a5188cbd9233274205005f62b25026
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94625043"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561050"
 ---
 # <a name="2-create-application-insights-resource-for-web-pages"></a>2. Создание ресурса Application Insights для веб-страниц
 
@@ -19,7 +19,7 @@ ms.locfileid: "94625043"
 
 В этом руководстве используется несколько ресурсов Azure. Создание группы ресурсов позволяет вам с легкостью находить ресурсы и удалять их, когда они больше не нужны.
 
-1. В терминале или оболочке Bash введите [команду Azure CLI для создания группы ресурсов Azure](/cli/azure/group?view=azure-cli-latest#az_group_create) с именем `rg-demo-vm-eastus`:
+1. В терминале или оболочке Bash введите [команду Azure CLI для создания группы ресурсов Azure](/cli/azure/group#az_group_create) с именем `rg-demo-vm-eastus`:
 
     ```azurecli
     az group create \
@@ -35,7 +35,7 @@ ms.locfileid: "94625043"
     az extension add -n application-insights
     ```
 
-1. Выполните следующую команду, чтобы [создать ресурс мониторинга](/cli/azure/ext/application-insights/monitor/app-insights/component?view=azure-cli-latest#ext_application_insights_az_monitor_app_insights_component_create):
+1. Выполните следующую команду, чтобы [создать ресурс мониторинга](/cli/azure/ext/application-insights/monitor/app-insights/component#ext_application_insights_az_monitor_app_insights_component_create):
 
 
     ```azurecli

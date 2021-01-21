@@ -6,12 +6,12 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 7a8de3191551be1557b68cab55b6d91afcf41feb
-ms.sourcegitcommit: 4036ac08edd7fc6edf8d11527444061b0e4531ef
+ms.openlocfilehash: e109d8f32e6ffbf42f155f0292a292bff237d6bf
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062003"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561770"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Перенос приложений Tomcat в Tomcat в Службе приложений Azure
 
@@ -162,7 +162,7 @@ ${CATALINA_HOME}/bin/version.sh
 Если вы не можете использовать подключаемый модуль Maven, вам нужно будет подготовить веб-приложение с помощью других механизмов, например:
 
 * [Портал Azure](https://portal.azure.com/#create/Microsoft.WebSite)
-* [Azure CLI](/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
+* [Azure CLI](/cli/azure/webapp#az-webapp-create)
 * [Azure PowerShell](/powershell/module/az.websites/new-azwebapp)
 
 Создав веб-приложение, разверните его, используя один из [доступных механизмов развертывания](/azure/app-service/deploy-zip).
@@ -216,6 +216,6 @@ ${CATALINA_HOME}/bin/version.sh
 
 * Для предоставления надежных развертываний с нулевым временем простоя вы можете [использовать слоты развертывания](/azure/app-service/deploy-staging-slots).
 
-* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
+* Разработайте и реализуйте стратегию DevOps. Чтобы обеспечить надежность и ускорить разработку, вы можете [автоматизировать развертывание и тестирование с помощью Azure Pipelines](/azure/devops/pipelines/ecosystems/java-webapp). Если используются слоты развертывания, можно [автоматизировать развертывание в слоте](/azure/devops/pipelines/targets/webapp?tabs=yaml#deploy-to-a-slot) с последующим переключением слотов.
 
 * Разработайте и реализуйте стратегии обеспечения непрерывности бизнес-процессов и аварийного восстановления. Для критически важных приложений вы можете использовать [архитектуру развертывания с несколькими регионами](/azure/architecture/reference-architectures/app-service-web-app/multi-region).

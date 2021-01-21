@@ -7,12 +7,12 @@ ms.date: 10/06/2020
 ms.service: cosmos-db
 ms.topic: article
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: d3343940cd35767aa6887244d8ae9d7cca221646
-ms.sourcegitcommit: 723441eda0eb4ff893123201a9e029b7becf5ecc
+ms.openlocfilehash: d07447301dc721d8fd9179e0830f49143387e819
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91846525"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98626041"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Использование Spring и Cosmos DB со Службой приложений в Linux
 
@@ -29,7 +29,7 @@ ms.locfileid: "91846525"
 Чтобы выполнить действия, описанные в этой статье, необходимо иметь следующие компоненты:
 
 - Чтобы развернуть веб-приложение Java в облаке, требуется подписка Azure. Если у вас нет подписки Azure, вы можете активировать [преимущества для подписчиков MSDN](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/) или зарегистрироваться для получения [бесплатной учетной записи Azure](https://azure.microsoft.com/pricing/free-trial/).
-- [Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest)
+- [Azure CLI 2.0](/cli/azure/install-azure-cli)
 - [JDK Java 8](../fundamentals/java-jdk-install.md)
 - [Maven 3](http://maven.apache.org/)
 
@@ -39,12 +39,14 @@ ms.locfileid: "91846525"
 1. Клонируйте приложение Spring Todo и скопируйте содержимое папки **.prep** для инициализации проекта:
 
     Для Bash:
+
     ```bash
     git clone --recurse-submodules https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2.git
     yes | cp -rf .prep/* .
     ```
 
     Для Windows:
+
     ```cmd
     git clone --recurse-submodules https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2.git
     cd e2e-java-experience-in-app-service-linux-part-2
@@ -63,19 +65,19 @@ ms.locfileid: "91846525"
 
 1. Войдите в Azure CLI, а затем задайте идентификатор подписки.
 
-    ```bash
+    ```azurecli
     az login
     ```
 
 2. При необходимости задайте идентификатор подписки.
 
-    ```bash
+    ```azurecli
     az account set -s <your-subscription-id>
     ```
 
 3. Создайте группу ресурсов Azure и запишите ее имя для дальнейшего использования.
 
-    ```bash
+    ```azurecli
     az group create -n <your-azure-group-name> \
     -l <your-resource-group-region>
     ```
@@ -83,7 +85,7 @@ ms.locfileid: "91846525"
 4. Создайте Cosmos DB и укажите тип GlobalDocumentDB.
 В имени Cosmos DB нужно использовать только строчные буквы. Обязательно запомните значение поля `documentEndpoint` в ответе. Оно потребуется позже.
 
-    ```bash
+    ```azurecli
     az cosmosdb create --kind GlobalDocumentDB \
         -g <your-azure-group-name> \
         -n <your-azure-COSMOS-DB-name-in-lower-case-letters>
@@ -91,7 +93,7 @@ ms.locfileid: "91846525"
 
 5. Получите ключи Azure Cosmos DB и запишите значение `primaryMasterKey` для дальнейшего использования.
 
-    ```bash
+    ```azurecli
     az cosmosdb keys list -g <your-azure-group-name> -n <your-azure-COSMOSDB-name>
     ```
 
@@ -113,6 +115,7 @@ export REGION=<put-your-REGION-here>
 ```
 
 Для Windows (командная строка):
+
 ```cmd
 set COSMOSDB_URI=<put-your-COSMOS-DB-documentEndpoint-URI-here>
 set COSMOSDB_KEY=<put-your-COSMOS-DB-primaryMasterKey-here>
@@ -240,14 +243,14 @@ bash-3.2$ mvn azure-webapp:deploy
 
 1. Настройте журналы для развернутого веб-приложения Java в Службе приложений Azure в Linux:
 
-    ```bash
+    ```azurecli
     az webapp log config --name ${WEBAPP_NAME} \
      --resource-group ${RESOURCEGROUP_NAME} \
      --web-server-logging filesystem
     ```
 2. Откройте потоковую передачу удаленных журналов веб-приложения Java из локального компьютера:
 
-    ```bash
+    ```azurecli
     az webapp log tail --name ${WEBAPP_NAME} \
      --resource-group ${RESOURCEGROUP_NAME}
      ```
@@ -294,7 +297,7 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
 
 1. Выполните горизонтальное увеличение масштаба веб-приложения Java с помощью Azure CLI:
 
-    ```bash
+    ```azurecli
     az appservice plan update --number-of-workers 2 \
       --name ${WEBAPP_PLAN_NAME} \
       --resource-group ${RESOURCEGROUP_NAME}
