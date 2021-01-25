@@ -5,19 +5,19 @@ keywords: ansible, azure, devops, solution template, virtual machine, managed id
 ms.topic: quickstart
 ms.date: 04/30/2019
 ms.custom: devx-track-ansible
-ms.openlocfilehash: cae15f8a69151b7692edde3c8fb36a9818a0e305
-ms.sourcegitcommit: 2f832baf90c208a8a69e66badef5f126d23bbaaf
+ms.openlocfilehash: 1cad21fb3cebe9675032fa399aefb7ca329d9733
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88725188"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561760"
 ---
 # <a name="quickstart-deploy-the-ansible-solution-template-for-azure-to-centos"></a>Краткое руководство. Развертывание шаблона решения Ansible для Azure в CentOS
 
 Шаблон решения Ansible для Azure позволяет настроить экземпляр Ansible на виртуальной машине CentOS вместе с Ansible и набором средств для работы с Azure. Вот эти средства:
 
 - **Модули Ansible для Azure** — [набор модулей](./module-version-matrix.md), которые позволяют создавать инфраструктуру и управлять ею в Azure. По умолчанию развертывается последняя версия модулей. Тем не менее во время развертывания шаблона решения можно указать номер версии, который подходит для вашей среды.
-- **Интерфейс командной строки Azure (CLI) 2.0** — [это](/cli/azure/?view=azure-cli-latest) кроссплатформенный интерфейс командной строки для управления ресурсами Azure. 
+- **Интерфейс командной строки Azure (CLI) 2.0** — [это](/cli/azure/) кроссплатформенный интерфейс командной строки для управления ресурсами Azure. 
 - **Управляемые удостоверения для ресурсов Azure** — [они](/azure/active-directory/managed-identities-azure-resources/overview) решают проблему безопасности хранения облачных учетных данных приложения.
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -79,7 +79,7 @@ ms.locfileid: "88725188"
 
 1. Выберите значок **Уведомления** в верхней части страницы портала, чтобы отследить ход выполнения развертывания Ansible. Когда развертывание будет завершено, выберите **Перейти к группе ресурсов**. 
 
-     ![Вкладка сводки для Ansible на портале Azure](./media/solution-template-deploy/portal-ansible-setup-complete.png)
+     ![Уведомление портала Azure для развертывания Ansible](./media/solution-template-deploy/portal-ansible-setup-complete.png)
 
 1. На странице группы ресурсов получите IP-адрес узла Ansible и войдите для управления ресурсами Azure с помощью Ansible.
 

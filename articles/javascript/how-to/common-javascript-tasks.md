@@ -4,14 +4,14 @@ description: Здесь вы можете найти примеры текущи
 ms.topic: reference
 ms.date: 01/06/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 4c17b95cb5acc9f04227c8ccc9ea91d6d8aa1829
-ms.sourcegitcommit: ed31f841fa9680335658df6708f107e170d47ff0
+ms.openlocfilehash: 3a4c319d5258fccd1c1153591ccefddf87098343
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97974571"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625977"
 ---
-# <a name="common-top-tasks-for-javascript-developers"></a>Распространенные задачи для разработчиков JavaScript
+# <a name="top-tasks-for-javascript-developers"></a>Распространенные задачи для разработчиков JavaScript
 
 Здесь вы можете найти пример текущей задачи. Если вы не можете найти задачу, оставьте отзыв с запросом задачи. 
 
@@ -87,11 +87,8 @@ ms.locfileid: "97974571"
 |Создание локального приложения Express.js|[Bash](../tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md?tabs=bash#3-create-a-local-expressjs-app)|
 |Создание ресурса приложения — включает развертывание приложения Express.js, журналы потоковых данных|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md#create-web-app-resource-and-deploy-expressjs-app)|
 |Создание ресурса приложения — включает развертывание приложения Express.js, настройку параметров приложения, запуск установки npm, переход на развернутый веб-сайт в браузере|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md?tabs=bash#6-create-app-service-resource-in-visual-studio-code)|
-|Создание плана ресурсов приложения|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md#create-app-service-plan)|
 |Создание ресурса приложения|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md)|
-|настройка развертывания|[Azure CLI](../tutorial/deploy-deno-app-azure-app-service-azure-cli.md#5-configure-the-azure-app-service-webapp)
-|Развертывание приложения|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-04.md)|
-|Просмотр приложения в браузере|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md#browse-web-app)|
+|Создание приложения, развертывание, браузерное приложение, просмотр журналов|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md)|
 |Удаление ресурса приложения|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md#clean-up-resources)<br>[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-07.md)|
 |Удаленные журналы потоковой передачи|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md?tabs=bash#7-stream-remote-service-logs-in-visual-studio-code)<br>[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-05.md)|
 
@@ -203,7 +200,7 @@ ms.locfileid: "97974571"
 |Приложение Express.js — использование базы данных MongoDB|В этом учебнике показано, как загрузить и локально запустить проект с помощью VSCode и с использованием расширений, а также как удаленно запускать код в Службе приложений. Учебник включает инструкции по созданию ресурса CosmosDB для API Mongo, получение сведений о подключении и его настройку в параметре конфигурации службы приложений для подключения к облачной базе данных.<br>[Учебник](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-express-mongo)|
 |Приложение Express.js — развертывание на виртуальной машине с помощью файла cloud-init|Создайте виртуальную машину Linux для приложения Express.js. Виртуальная машина настраивается с помощью файла конфигурации cloud-init и содержит NGINX и репозиторий GitHub для приложения Express.js. После запуска виртуальной машины можно подключиться к ней по протоколу SSH. Также можно изменить веб-приложение, включив ведение журнала трассировки, и просмотреть общедоступное серверное приложение Express.js в веб-браузере.<br>[Учебник](../tutorial/nodejs-virtual-machine-vm/introduction.md) - [Пример кода](https://github.com/Azure-Samples/js-e2e-express-mongo)|
 
-Используйте [обозреватель примеров Azure](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs%2Ctypescript), чтобы найти дополнительные примеры, соответствующие вашему варианту использования. 
+Используйте [обозреватель примеров Azure](/samples/browse/?languages=javascript%2cnodejs%2ctypescript), чтобы найти дополнительные примеры, соответствующие вашему варианту использования. 
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

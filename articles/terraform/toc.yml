@@ -21,6 +21,10 @@
       items:
         - name: Слоты развертывания поставщика Azure и Terraform
           href: provision-infrastructure-using-azure-deployment-slots.md
+    - name: Сети
+      items:
+        - name: Настройка Наблюдателя за сетями Azure
+          href: create-network-watcher-nsg-flow-logs.md
     - name: Контейнеры
       items:
         - name: Создание кластера Kubernetes с помощью AKS

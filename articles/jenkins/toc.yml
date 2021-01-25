@@ -47,7 +47,7 @@
       href: 'https://github.com/azure/jenkins'
 - name: Ресурсы
   items:
-    - name: Подключаемые модули Jenkins для Azure
+    - name: Подключаемый модуль Jenkins для Azure
       href: plug-ins-for-azure.md
     - name: Стратегия развития Azure
       href: 'https://azure.microsoft.com/roadmap/'

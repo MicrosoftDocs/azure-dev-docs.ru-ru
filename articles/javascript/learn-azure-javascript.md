@@ -2,14 +2,14 @@
 title: Изучение разработки в Azure с помощью JavaScript
 description: Используйте платформу Microsoft Learn для расширения своих знаний о разработке для Azure с помощью JavaScript.
 ms.topic: reference
-ms.date: 01/05/2021
+ms.date: 01/14/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 3b37f31d9df4c152874f4c913fbc59a369636640
-ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
+ms.openlocfilehash: 7fd0fd26b1b0133faf8cf21bd7b29afdbd37f5aa
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952476"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561680"
 ---
 # <a name="learn-to-develop-with-azure-and-javascript"></a>Изучение разработки в Azure с помощью JavaScript 
 
@@ -24,10 +24,15 @@ ms.locfileid: "97952476"
 * [Работа с файлами и каталогами в приложении Node.js](/learn/modules/nodejs-files/)
 * [Отладка приложений Node.js в интерактивном режиме с помощью встроенного отладчика и отладчика Visual Studio Code](/learn/modules/debug-nodejs/)
 
+## <a name="typescript"></a>TypeScript
+
+* [Тестовая площадка](https://www.typescriptlang.org/play)
+
 ## <a name="getting-started"></a>Начало работы
 
 * [JavaScript для начинающих](https://techcommunity.microsoft.com/t5/apps-on-azure/learn-javascript-with-this-series-of-videos-for-beginners/ba-p/1764635)
 * [Веб-разработка для начинающих](https://github.com/microsoft/Web-Dev-For-Beginners)
+* [React — предварительная версия](https://github.com/geektrainer/learn-react)
 * [Трехмерные приложения с Babylon.js](https://techcommunity.microsoft.com/t5/apps-on-azure/a-first-introduction-to-building-3d-applications-with-javascript/ba-p/1877650)
 * [Node.js для начинающих](https://techcommunity.microsoft.com/t5/apps-on-azure/learn-node-js-with-this-series-of-short-videos-for-beginners/ba-p/1771830)
 
@@ -37,16 +42,16 @@ ms.locfileid: "97952476"
 
 ### <a name="static-web-apps"></a>Статические веб-приложения
 
-* [Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2")](https://docs.microsoft.com/learn/paths/optimize-basketball-games-with-machine-learning/)
+* [Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2")](/learn/paths/optimize-basketball-games-with-machine-learning/)
 * [Публикация JavaScript-приложения Angular, React, Svelte или Vue с помощью службы статических веб-приложений Azure](/learn/modules/publish-app-service-static-web-app-api/)
 * [Создание и публикация статического веб-приложения с помощью Gatsby и Статических веб-приложений Azure](/learn/modules/create-deploy-static-webapp-gatsby-app-service/)
-* [Создание простого веб-сайта с помощью HTML, CSS и JavaScript](https://docs.microsoft.com/learn/modules/build-simple-website/)
+* [Создание простого веб-сайта с помощью HTML, CSS и JavaScript](/learn/modules/build-simple-website/)
 
 ### <a name="serverless-apis"></a>Бессерверные API
 
 * [Создание бессерверных API с помощью Функций Azure](/learn/modules/build-api-azure-functions/)
 * [Рефакторинг API-интерфейсов Node.js и Express в бессерверные API с помощью Функций Azure](/learn/modules/shift-nodejs-express-apis-serverless/)
-* [Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js.](https://docs.microsoft.com/learn/modules/build-api-azure-functions)
+* [Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js.](/learn/modules/build-api-azure-functions)
 
 ### <a name="devops-cicd"></a>DevOps (CI/CD)
 

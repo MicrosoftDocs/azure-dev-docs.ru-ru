@@ -1,15 +1,15 @@
 ---
 title: Проверка подлинности приложений Python с помощью служб Azure
 description: Как получить необходимые объекты учетных данных для аутентификации приложения Python с помощью служб Azure и с использованием библиотек Azure
-ms.date: 11/12/2020
+ms.date: 01/19/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 7c609c7e218be1fd5e7c259a5aa7c5bec3e507d2
-ms.sourcegitcommit: 6514a061ba5b8003ce29d67c81a9f0795c3e3e09
+ms.openlocfilehash: 51b7a074bef81999f17f3a5fa51d243e64a33f3c
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94601366"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625969"
 ---
 # <a name="how-to-authenticate-and-authorize-python-apps-on-azure"></a>Как аутентифицировать и авторизовать приложения Python в Azure
 
@@ -34,7 +34,7 @@ ms.locfileid: "94601366"
 
 ### <a name="identity-when-running-the-app-on-azure"></a>Удостоверение при запуске приложения в Azure
 
-Если приложение запущено в облаке (например, в рабочей среде), то скорее всего оно использует **назначаемое системой управляемое удостоверение**. При использовании [управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) вы указываете имя приложения, когда назначаете роли и разрешения для ресурсов. Azure автоматически управляет базовым субъектом-службой и аутентифицирует приложение для доступа к этим ресурсам Azure. В результате вам не нужно напрямую управлять субъектом-службой. Кроме того, коду приложения не требуется обрабатывать маркеры доступа, секреты или строки подключения для ресурсов Azure, что снижает риск утечки или компрометации подобной информации.
+Если приложение запущено в облаке (например, в рабочей среде), скорее всего, оно использует **назначаемое системой управляемое удостоверение** (прежнее название — MSI). При использовании [управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) вы указываете имя приложения, когда назначаете роли и разрешения для ресурсов. Azure автоматически управляет базовым субъектом-службой и аутентифицирует приложение для доступа к этим ресурсам Azure. В результате вам не нужно напрямую управлять субъектом-службой. Кроме того, коду приложения не требуется обрабатывать маркеры доступа, секреты или строки подключения для ресурсов Azure, что снижает риск утечки или компрометации подобной информации.
 
 Настройка управляемого удостоверения зависит от службы, используемой для размещения вашего приложения. Ссылки на инструкции для каждой службы приведены в статье [Службы с поддержкой управляемых удостоверений для ресурсов Azure](/azure/active-directory/managed-identities-azure-resources/services-support-managed-identities). Например, для веб-приложений, развернутых в Службе приложений Azure, вы включаете его управляемое удостоверение с помощью параметра **Удостоверение** > **Назначено системой** на портале Azure или с помощью команды `az webapp identity assign` в Azure CLI.
 
@@ -79,7 +79,7 @@ vault_url = os.environ["KEY_VAULT_URL"]
 
 
 # Acquire a credential object for the app identity. When running in the cloud,
-# DefaultAzureCredential uses the app's managed identity or user-assigned service principal.
+# DefaultAzureCredential uses the app's managed identity (MSI) or user-assigned service principal.
 # When run locally, DefaultAzureCredential relies on environment variables named
 # AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, and AZURE_TENANT_ID.
 
@@ -116,7 +116,9 @@ retrieved_secret = secret_client.get_secret("secret-name-01")
 
 ## <a name="authenticate-with-defaultazurecredential"></a>Проверка подлинности с помощью метода DefaultAzureCredential
 
-Для большинства приложений класс [`DefaultAzureCredential`](/python/api/azure-identity/azure.identity.defaultazurecredential) из библиотеки [`azure-identity`](/python/api/azure-identity/azure.identity) обеспечивает самые простые и рекомендуемые средства аутентификации. `DefaultAzureCredential` автоматически использует управляемое удостоверение приложения в облаке и автоматически загружает локальный субъект-службу из переменных среды при локальном запуске.
+Для большинства приложений класс [`DefaultAzureCredential`](/python/api/azure-identity/azure.identity.defaultazurecredential) из библиотеки [`azure-identity`](/python/api/azure-identity/azure.identity) обеспечивает самые простые и рекомендуемые средства аутентификации.
+
+`DefaultAzureCredential` автоматически использует управляемое удостоверение приложения (MSI) в облаке и автоматически загружает локальный субъект-службу из переменных среды при локальном запуске (см. раздел [Настройка аутентификации](configure-local-development-environment.md#configure-authentication)).
 
 ```python
 import os
@@ -138,7 +140,7 @@ retrieved_secret = secret_client.get_secret("secret-name-01")
 
 Приведенный выше код использует объект `DefaultAzureCredential` при доступе к Azure Key Vault, где URL-адрес Key Vault доступен в переменной среды `KEY_VAULT_URL`. Код явно реализует стандартный шаблон использования библиотеки: он получает объект учетных данных, создает соответствующий клиентский объект для ресурса Azure, а затем пытается выполнить операцию с этим ресурсом с помощью данного клиентского объекта. Опять же, аутентификация и авторизация не происходят до выполнения последнего шага.
 
-Когда код развертывается и выполняется в Azure, метод `DefaultAzureCredential` автоматически использует назначаемое системой управляемое удостоверение, которое вы можете включить для приложения в любой службе, в которой оно размещено. Разрешения для определенных ресурсов, таких как служба хранилища Azure или Azure Key Vault, назначаются этому удостоверению с помощью портала Azure или Azure CLI. В подобных случаях это удостоверение, управляемое Azure, повышает безопасность, так как вы никогда не сталкиваетесь с явной субъектом-службой в коде.
+Когда код развертывается и выполняется в Azure, метод `DefaultAzureCredential` автоматически использует назначаемое системой управляемое удостоверение (MSI), которое вы можете включить для приложения в любой службе, в которой оно размещено. Разрешения для определенных ресурсов, таких как служба хранилища Azure или Azure Key Vault, назначаются этому удостоверению с помощью портала Azure или Azure CLI. В подобных случаях это удостоверение, управляемое Azure, повышает безопасность, так как вы никогда не сталкиваетесь с явной субъектом-службой в коде.
 
 При локальном запуске кода метод `DefaultAzureCredential` автоматически использует субъект-службу, описанную в переменных среды с именами `AZURE_TENANT_ID`, `AZURE_CLIENT_ID` и `AZURE_CLIENT_SECRET`. Затем при вызове конечной точки API клиентский объект (безопасно) включает эти значения в заголовок HTTP-запроса. При запуске в локальной или облачной среде не требуется вносить изменения в код. Дополнительные сведения о создании субъекта-службы и настройке переменных среды см. в разделе [Настройка проверки подлинности](configure-local-development-environment.md#configure-authentication).
 
