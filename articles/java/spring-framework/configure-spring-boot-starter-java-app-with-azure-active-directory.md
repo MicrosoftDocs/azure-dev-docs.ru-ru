@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 57afae188dab9ad09adf344fbc360d4cf85aa0f0
-ms.sourcegitcommit: 0d2ea78f18430c845a32e0d2311427ab81033465
+ms.openlocfilehash: 3f4070fa18c9d5d5db7df5d877b490ff0103b0b2
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97754190"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561461"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 
@@ -41,7 +41,7 @@ ms.locfileid: "97754190"
 1. Перейдите по адресу <https://start.spring.io/>.
 
 1. Укажите, что требуется создать проект **Maven** на **Java**, введите имя **группы** и **артефакта** для приложения.
-1. Добавьте **зависимости** для **Spring Web**, **Azure Active Directory** и **Spring Security**.
+1. Добавьте **зависимости** для **Spring Web**, **Azure Active Directory** и **OAuth2 Client**.
 1. Внизу страницы нажмите кнопку **СОЗДАТЬ**.
    
    >[!div class="mx-imgBorder"]
@@ -59,7 +59,10 @@ ms.locfileid: "97754190"
 1. Щелкните **Создать ресурс**, а затем выберите **Удостоверение** и **Azure Active Directory**.
    
    >[!div class="mx-imgBorder"]
-   >![Создание экземпляра Azure Active Directory][create-directory-01]
+   >![Создание экземпляра Azure Active Directory — шаг 1][create-directory-00]
+
+   >[!div class="mx-imgBorder"]
+   >![Создание экземпляра Azure Active Directory — шаг 2][create-directory-01]
 
 1. Укажите **имя организации** и **первоначальное доменное имя**. Скопируйте полный URL-адрес вашего каталога. Он вам понадобится, чтобы добавить учетные записи пользователей, как описывается далее в этом руководстве.
  (Например, `azuresampledirectory.onmicrosoft.com`.) 
@@ -135,14 +138,6 @@ ms.locfileid: "97754190"
    >[!div class="mx-imgBorder"]
    >![Добавление нового URL-адреса ответа][create-app-registration-10]
 
-1. На главной странице регистрации приложения щелкните **Манифест**, задайте значение `true` для параметров `oauth2AllowIdTokenImplicitFlow` и `oauth2AllowImplicitFlow`, а затем нажмите кнопку **Сохранить**.
-   
-   >[!div class="mx-imgBorder"]
-   >![Настройка манифеста приложения][create-app-registration-11]
-
-   > [!NOTE]
-   > Дополнительные сведения о параметрах `oauth2AllowIdTokenImplicitFlow` и `oauth2AllowImplicitFlow` и других параметрах приложения см. в статье [Манифест приложения Azure Active Directory][AAD app manifest].
-
 ### <a name="add-a-user-account-to-your-directory-and-add-that-account-to-a-group"></a>Добавление учетной записи пользователя в каталог и в группу
 
 1. На странице **Обзор** своего экземпляра службы Active Directory щелкните **Пользователи** и **Новый пользователь**.
@@ -162,7 +157,7 @@ ms.locfileid: "97754190"
 
 1. На странице **Обзор** своего экземпляра службы Active Directory выберите **Группы** и **Создать группу**, чтобы создать группу, которая будет использоваться для авторизации в приложении.
 
-1. Выберите **Нет выбранных участников**. (В рамках этого руководства мы создадим группу с именем *Users*.)  Найдите пользователя, созданного на предыдущем шаге.  Чтобы добавить пользователя в группу, нажмите кнопку **Выбрать**.  Затем нажмите кнопку **Создать**, чтобы создать группу.
+1. Выберите **Нет выбранных участников**. (В этом руководстве показано, как создать группу с именем *group1*.)  Найдите пользователя, созданного на предыдущем шаге.  Чтобы добавить пользователя в группу, нажмите кнопку **Выбрать**.  Затем нажмите кнопку **Создать**, чтобы создать группу.
 
    >[!div class="mx-imgBorder"]
    >![Выбор пользователя для группы][create-user-03]
@@ -176,39 +171,19 @@ ms.locfileid: "97754190"
 
 1. Распакуйте архив с файлами проекта, который вы создали и скачали в каталог ранее в рамках этого руководства.
 
-1. Перейдите в родительскую папку проекта и откройте файл проекта Maven `pom.xml` в текстовом редакторе.
-
-1. Добавьте зависимости для защиты с помощью Spring OAuth2 в `pom.xml`:
-
-   ```xml
-   <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-oauth2-client</artifactId>
-   </dependency>
-   <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-oauth2-jose</artifactId>
-   </dependency>
-   ```
-
-1. Сохраните и закройте файл *pom.xml*.
-
 1. В папке *src/main/resources* проекта откройте файл *application.properties* в текстовом редакторе.
 
 1. Задайте параметры для регистрации вашего приложения, используя созданные ранее значения. Например:
 
-   ```yaml
+   ```properties
    # Specifies your Active Directory ID:
    azure.activedirectory.tenant-id=22222222-2222-2222-2222-222222222222
-
    # Specifies your App Registration's Application ID:
-   spring.security.oauth2.client.registration.azure.client-id=11111111-1111-1111-1111-1111111111111111
-
+   azure.activedirectory.client-id=11111111-1111-1111-1111-1111111111111111
    # Specifies your App Registration's secret key:
-   spring.security.oauth2.client.registration.azure.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
-
+   azure.activedirectory.client-secret=AbCdEfGhIjKlMnOpQrStUvWxYz==
    # Specifies the list of Active Directory groups to use for authorization:
-   azure.activedirectory.user-group.allowed-groups=Users
+   azure.activedirectory.user-group.allowed-groups=group1
    ```
 
    Где:
@@ -216,8 +191,8 @@ ms.locfileid: "97754190"
    | Параметр | Описание |
    |---|---|
    | `azure.activedirectory.tenant-id` | Содержит **идентификатор каталога** Active Directory, который вы скопировали ранее. |
-   | `spring.security.oauth2.client.registration.azure.client-id` | Содержит **идентификатор приложения**, полученный после регистрации приложения. |
-   | `spring.security.oauth2.client.registration.azure.client-secret` | Содержит **значение** ключа, полученное после регистрации приложения. |
+   | `azure.activedirectory.client-id` | Содержит **идентификатор приложения**, полученный после регистрации приложения. |
+   | `azure.activedirectory.client-secret` | Содержит **значение** ключа, полученное после регистрации приложения. |
    | `azure.activedirectory.user-group.allowed-groups` | Содержит список групп Active Directory, используемых для авторизации. |
 
    > [!NOTE]
@@ -234,21 +209,26 @@ ms.locfileid: "97754190"
    ```java
    package com.wingtiptoys.security;
 
-   import org.springframework.web.bind.annotation.RequestMapping;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.ResponseBody;
    import org.springframework.web.bind.annotation.RestController;
-   import org.springframework.beans.factory.annotation.Autowired;
    import org.springframework.security.access.prepost.PreAuthorize;
-   import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
-   import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-   import org.springframework.ui.Model;
-
+   
    @RestController
    public class HelloController {
-      @Autowired
-      @PreAuthorize("hasRole('Users')")
-      @RequestMapping("/")
-      public String helloWorld() {
-         return "Hello World!";
+   
+      @GetMapping("group1")
+      @ResponseBody
+      @PreAuthorize("hasRole('ROLE_group1')")
+      public String group1() {
+         return "Hello Group 1 Users!";
+      }
+    
+      @GetMapping("group2")
+      @ResponseBody
+      @PreAuthorize("hasRole('ROLE_group2')")
+      public String group2() {
+         return "Hello Group 2 Users!";
       }
    }
    ```
@@ -260,18 +240,18 @@ ms.locfileid: "97754190"
    >
    > ``` java
    > public class HelloController {
-   >    @Autowired
-   >    @PreAuthorize("hasRole('Users')")
+   >
+   >    @PreAuthorize("hasRole('ROLE_Users')")
    >    @RequestMapping("/")
    >    public String helloWorld() {
    >       return "Hello Users!";
    >    }
-   >    @PreAuthorize("hasRole('Group1')")
+   >    @PreAuthorize("hasRole('ROLE_group1')")
    >    @RequestMapping("/Group1")
    >    public String groupOne() {
    >       return "Hello Group 1 Users!";
    >    }
-   >    @PreAuthorize("hasRole('Group2')")
+   >    @PreAuthorize("hasRole('ROLE_group2')")
    >    @RequestMapping("/Group2")
    >    public String groupTwo() {
    >       return "Hello Group 2 Users!";
@@ -279,40 +259,25 @@ ms.locfileid: "97754190"
    > }
    > ```
 
-1. Создайте папку с именем *security* в папке с исходным кодом Java для приложения, например: *src/main/java/com/wingtiptoys/security/security*.
+1. Откройте класс приложения в текстовом редакторе.
 
-1. Создайте файл Java с именем *WebSecurityConfig.java* в папке *security* и откройте его в текстовом редакторе.
-
-1. Вставьте следующий код, а затем сохраните и закройте файл:
+1. Добавьте `@EnableWebSecurity` и `@EnableGlobalMethodSecurity(prePostEnabled = true)` в класс приложения, как показано в следующем примере, а затем сохраните и закройте файл:
 
     ```java
-    package com.wingtiptoys.security;
+    package com.wingtiptoys;
 
-    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
     import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
-    import org.springframework.security.config.annotation.web.builders.HttpSecurity;
     import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-    import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-    import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
-    import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
-    import org.springframework.security.oauth2.core.oidc.user.OidcUser;
-
+    
     @EnableWebSecurity
     @EnableGlobalMethodSecurity(prePostEnabled = true)
-    public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-        @Autowired
-        private OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService;
-
-        @Override
-        protected void configure(HttpSecurity http) throws Exception {
-            http
-                .authorizeRequests()
-                .anyRequest().authenticated()
-                .and()
-                .oauth2Login()
-                .userInfoEndpoint()
-                .oidcUserService(oidcUserService);
-        }
+    @SpringBootApplication
+    public class SpringBootSampleActiveDirectoryApplication {   
+        public static void main(String[] args) {
+            SpringApplication.run(SpringBootSampleActiveDirectoryApplication.class, args);
+        }   
     }
     ```
 
@@ -330,7 +295,7 @@ ms.locfileid: "97754190"
    >[!div class="mx-imgBorder"]
    >![Сборка приложения][build-application]
 
-1. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу http:<span></span>//localhost:8080. Должен появиться запрос на ввод имени пользователя и пароля.
+1. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу <http://localhost:8080/group1> и введите имя пользователя и пароль.
    
    >[!div class="mx-imgBorder"]
    ![Вход в приложение][application-login]
@@ -341,14 +306,16 @@ ms.locfileid: "97754190"
    >[!div class="mx-imgBorder"]
    >![Изменение пароля][update-password]
 
-1. Войдя в приложение, вы увидите сообщение контроллера "Hello World".
+1. Выполнив вход, вы увидите пример текста Hello Group 1 Users! из контроллера.
 
    >[!div class="mx-imgBorder"]
-   >![Успешный вход в приложение][hello-world]
+   >![Authorized_group1][hello-group1]
 
    > [!NOTE]
    > Пользователи с неавторизованными учетными записями получат сообщение **HTTP 403 — не авторизовано**.
 
+   >[!div class="mx-imgBorder"]
+   >![UnAuthorized_group2][Unauthorized-group2]
 ## <a name="summary"></a>Сводка
 
 В этом руководстве вы создали веб-приложение Java с использованием начального приложения Spring Boot для Azure Active Directory, настроили нового клиента Azure AD, зарегистрировали в нем созданное приложение, а затем настроили это приложение для использования аннотаций и классов Spring с целью защиты веб-приложения.
@@ -381,6 +348,7 @@ ms.locfileid: "97754190"
 
 [create-spring-app-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-spring-app-01.png
 
+[create-directory-00]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-00.png
 [create-directory-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-01.png
 [create-directory-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-02.png
 [create-directory-03]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-directory-03.png
@@ -396,7 +364,6 @@ ms.locfileid: "97754190"
 [create-app-registration-08]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-08.png
 [create-app-registration-09]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-09.png
 [create-app-registration-10]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-10.png
-[create-app-registration-11]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-11.png
 
 [create-user-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-user-01.png
 [create-user-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-user-02.png
@@ -405,5 +372,6 @@ ms.locfileid: "97754190"
 
 [application-login]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/application-login.png
 [build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
-[hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png
+[hello-group1]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-group1.png
 [update-password]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/update-password.png
+[Unauthorized-group2]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/unauthorized-group2.png

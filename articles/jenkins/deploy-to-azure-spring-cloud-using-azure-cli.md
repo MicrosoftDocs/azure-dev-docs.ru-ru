@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, azure spring cloud, azure cli
 ms.topic: tutorial
 ms.date: 11/10/2020
 ms.custom: devx-track-jenkins,devx-track-azurecli
-ms.openlocfilehash: e0b98f31ac7f7b079f655c4cb795fe7b38af4508
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.openlocfilehash: ef078589506af95fc05bfd7a85f48757f3cb0242
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983973"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625993"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>Руководство по Развертывание приложений в Azure Spring Cloud с помощью Jenkins и Azure CLI
 
@@ -129,7 +129,7 @@ ms.locfileid: "94983973"
 
 ### <a name="add-your-azure-service-principal-credential-in-jenkins-credential-store"></a>Добавление учетных данных субъекта-службы Azure в хранилище учетных данных Jenkins
 
-1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в разделе [Создание субъекта-службы](deploy-from-github-to-azure-app-service.md#create-service-principal) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
+1. Для развертывания в Azure вам нужен субъект-служба Azure. Дополнительные сведения см. в разделе [Создание субъекта-службы](./deploy-to-azure-app-service-using-azure-cli.md#add-azure-service-principal-to-a-jenkins-credential) руководства по развертыванию в Службе приложений Azure. Результат `az ad sp create-for-rbac` должен выглядеть следующим образом:
 
     ```
     {
@@ -161,7 +161,7 @@ ms.locfileid: "94983973"
 
 Этот пример конвейера использует Maven для сборки и Az CLI для развертывания в экземпляре службы. При установке Jenkins создается учетная запись администратора с именем *jenkins*. Убедитесь, что у пользователя *jenkins* есть права на выполнение расширения spring-cloud.
 
-1. Установите SSH-подключение к главному узлу Jenkins.
+1. Установите SSH-подключение к контроллеру Jenkins.
 
 1. Установите Maven.
 

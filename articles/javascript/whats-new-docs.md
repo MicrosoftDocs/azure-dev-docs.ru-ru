@@ -3,12 +3,12 @@ title: Документация по новым возможностям JavaScr
 description: Документация по новым возможностям JavaScript в Центре разработчиков
 ms.topic: conceptual
 ms.date: 01/05/2021
-ms.openlocfilehash: 507c52491784a508535ae07f4a9b2755fa68cc1b
-ms.sourcegitcommit: 075f39972e390e79ed09a3fcfdbfc776727e08fc
+ms.openlocfilehash: 71f4db11833d0c5346ee6204c94ecd943bb4f126
+ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952456"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98625905"
 ---
 # <a name="javascript-docs-whats-new"></a>Документация по JavaScript: Новые возможности
 
@@ -42,9 +42,9 @@ ms.locfileid: "97952456"
 
 |Имя|
 |---------------------------------------|
-|Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2") — [Learn](https://docs.microsoft.com/learn/paths/optimize-basketball-games-with-machine-learning/)|
-|Создание простого веб-сайта на основе HTML, CSS и JavaScript — [Learn](https://docs.microsoft.com/learn/modules/build-simple-website/)|
-|Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js. - [Learn](https://docs.microsoft.com/learn/modules/build-api-azure-functions)|
+|Статическое веб-приложение, JavaScript, CodeTour: Использование статистических данных о баскетболе для оптимизации игры с помощью Visual Studio Code (на основе "Космического джема 2") — [Learn](/learn/paths/optimize-basketball-games-with-machine-learning/)|
+|Создание простого веб-сайта на основе HTML, CSS и JavaScript — [Learn](/learn/modules/build-simple-website/)|
+|Используйте Visual Studio Code для создания панели мониторинга на основе JavaScript и Vue.js с бессерверным API на базе Функций Azure и Node.js. - [Learn](/learn/modules/build-api-azure-functions)|
 
 ## <a name="2020-november"></a>Ноябрь 2020 года
 

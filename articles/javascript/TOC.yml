@@ -139,7 +139,7 @@
       items:
         - name: Настройка приложения
           href: how-to/configure-web-app-settings.md
-        - name: Стандартные задачи JavaScript
+        - name: Задачи для разработчиков JavaScript
           href: how-to/common-javascript-tasks.md
         - name: Сквозной Node. js с VS Code
           href: how-to/develop-nodejs-on-azure.md

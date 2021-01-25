@@ -7,19 +7,19 @@ metadata:
   description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js, используя наши руководства, средства и справочник по пакету SDK.
   author: diberry
   ms.author: diberry
-  ms.date: 012/16/2020
+  ms.date: 01/20/2021
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: 2f33f80ebca72a642d089b10d3d7657fe293ddd5
-  ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+  ms.openlocfilehash: e58700140b1f014a3ff393d66e17f3a4f38e44d3
+  ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/18/2021
-  ms.locfileid: "98561120"
+  ms.lasthandoff: 01/21/2021
+  ms.locfileid: "98625897"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -35,6 +35,8 @@ landingContent:
       url: core/node-sdk-azure-authenticate.md
     - text: Блог по пакету SDK Azure
       url: https://devblogs.microsoft.com/azure-sdk/
+    - text: Распространенные задачи для разработчиков JavaScript
+      url: how-to/common-javascript-tasks.md
 - title: Развертывание и размещение
   linkLists:
   - linkListType: tutorial

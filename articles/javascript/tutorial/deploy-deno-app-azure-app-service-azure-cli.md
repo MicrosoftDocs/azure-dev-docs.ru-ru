@@ -4,12 +4,12 @@ description: В этом руководстве объясняется, как �
 ms.topic: tutorial
 ms.date: 10/13/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript
-ms.openlocfilehash: 16cb388a9a61b0141f04364dc1489607565156a3
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: f1f8c93954d2e4cbb8f5bd525a518aae03ec9667
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522390"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561080"
 ---
 # <a name="deploy-deno-apps-to-azure-app-service-from-the-azure-cli"></a>Развертывание приложений Deno в Службе приложений Azure с помощью Azure CLI
 
@@ -95,7 +95,7 @@ ms.locfileid: "97522390"
 
     В этом экземпляре Службы приложений выполняется образ Docker `anthonychu/azure-webapps-deno:1.0.2`, который предоставляет базовую функциональность для выполнения любого кода Deno. Для завершения этого процесса может понадобиться несколько секунд.
 
-## <a name="5-configure-the-azure-app-service-webapp"></a>5. Настройка веб-приложения Службы приложений Azure
+## <a name="5-configure-app-service-deno-container"></a>5. Настройка контейнера Deno Службы приложений
 
 1. Сообщите веб-приложению, где получить образ контейнера Docker для экспериментального имени образа Deno:
 
@@ -158,6 +158,6 @@ az group delete deno-quickstart
 
 См. также:
 * [Узнайте, как настроить параметры своего приложения](../how-to/configure-web-app-settings.md)
-* [Развертывание в Службе приложений](../tutorial-vscode-azure-app-service-node-01.md) с помощью расширений Visual Studio Code
+* [Развертывание в Службе приложений](./deploy-nodejs-azure-app-service-with-visual-studio-code.md) с помощью расширений Visual Studio Code
 * [Развертывание в виртуальной машине](./nodejs-virtual-machine-vm/introduction.md)
 * [Развертывание функции Deno](https://github.com/anthonychu/azure-functions-deno-worker) в качестве [настраиваемого обработчика](/azure/azure-functions/functions-custom-handlers)

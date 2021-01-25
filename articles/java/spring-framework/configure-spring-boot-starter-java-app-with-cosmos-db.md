@@ -11,18 +11,18 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.custom: devx-track-java
-ms.openlocfilehash: fdc0892298c18e3be5db1b97b1ad5fe77ac6a537
-ms.sourcegitcommit: 76f1a47c58810486856e0d128bd154cf7d355e65
+ms.openlocfilehash: 10f85c7d1208ff77f2c85ec14e77ced450d5fcc8
+ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92200630"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98561309"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Использование начального приложения Spring Boot с API SQL Azure Cosmos DB
 
-Azure Cosmos DB — это глобально распределенная служба баз данных, предоставляющая разработчикам возможность работать с данными с помощью разных стандартных API, например SQL, MongoDB, Graph и табличных API. Начальное приложение Spring Boot от Майкрософт позволяет разработчикам использовать приложения Spring Boot, которые легко интегрируются с Azure Cosmos DB с помощью API SQL.
+Azure Cosmos DB — это глобально распределенная служба баз данных, позволяющая разработчикам работать с данными с помощью разных стандартных API, например SQL, MongoDB, Graph и API таблиц. Начальное приложение Spring Boot от Майкрософт позволяет разработчикам использовать приложения Spring Boot, которые легко интегрируются с Azure Cosmos DB с помощью API SQL.
 
-В этой статье описано, как создать Azure Cosmos DB на портале Azure и пользовательское приложение Spring Boot с помощью **[Spring Initializr]** , а затем добавить [Начальное приложение Spring Boot CosmosDB для Azure] в пользовательское приложение для хранения и получения данных в Azure Cosmos DB с помощью Spring Data и API SQL Cosmos DB.
+В этой статье описано, как создать Azure Cosmos DB на портале Azure и пользовательское приложение Spring Boot с помощью **[Spring Initializr]** , а затем добавить [Azure Spring Boot Starter для Azure Cosmos DB] в пользовательское приложение для хранения и получения данных в Azure Cosmos DB с помощью Spring Data и API SQL Cosmos DB.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -31,31 +31,31 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 ## <a name="create-an-azure-cosmos-db-by-using-the-azure-portal"></a>Создание Azure Cosmos DB с помощью портала Azure
 
-1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните **Создать ресурс** .
+1. Перейдите на портал Azure по адресу <https://portal.azure.com/> и щелкните **Создать ресурс**.
 
-1. Щелкните **Базы данных** и **Azure Cosmos DB** .
+1. Выберите **Базы данных**, а затем — **Azure Cosmos DB**.
 
     ![Выбор Azure Cosmos DB на портале Azure][AZ02]
 
 1. На странице **Azure Cosmos DB** введите следующие сведения.
 
-    * Выберите **подписку** , которую нужно использовать для базы данных.
+    * Выберите **подписку**, которую нужно использовать для базы данных.
     * Укажите, следует ли создать **группу ресурсов** для базы данных, или выберите имеющуюся группу ресурсов.
-    * Введите уникальное **имя учетной записи** , которое будет использоваться в качестве URI для базы данных, например: *wingtiptoysdata* .
+    * Введите уникальное **имя учетной записи**, которое будет использоваться в качестве URI для базы данных, Например, *contosoaccount*.
     * Выберите **Core (SQL)** для API.
     * Укажите **расположение** для базы данных.
 
-    Указав эти параметры, щелкните **Просмотреть и создать** , чтобы проверить спецификации. Затем щелкните **Создать** .
+    Указав эти параметры, щелкните **Просмотреть и создать**, чтобы проверить спецификации. Затем щелкните **Создать**.
 
     ![Выберите "Просмотр и создание", чтобы продолжить.][AZ03]
 
-1. При создании база данных указывается на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB** . Вы можете выбрать свою базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
+1. Созданная база данных отображается на **панели мониторинга** Azure, а также на страницах **Все ресурсы** и **Azure Cosmos DB**. Вы можете выбрать базу данных в любом из этих расположений, чтобы открыть страницу свойств кэша.
 
 1. Когда откроется страница свойств базы данных, щелкните **Ключи** и скопируйте URI и ключи доступа для базы данных. Эти значения будут использоваться в приложении Spring Boot.
 
     ![Скопируйте URI и ключи доступа в разделе "Ключи".][AZ05]
 
-## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Создание простого приложения Spring Boot с помощью Spring Initializr
+## <a name="create-a-spring-boot-application-with-the-spring-initializr"></a>Создание приложения Spring Boot с помощью Spring Initializr
 
 Выполните описанные ниже действия, чтобы создать проект приложения Spring Boot с использованием поддержки Azure. В качестве альтернативы можно использовать пример [azure-spring-boot-sample-cosmosdb](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-samples/azure-spring-boot-sample-cosmos), размещенный в репозитории [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java). В таком случае вы можете сразу перейти к разделу [Создание и тестирование приложения](#build-and-test-your-app).
 
@@ -63,17 +63,18 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 1. Задайте такие параметры:
 
-   * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java** .
-   * Укажите версию **Spring Boot** .
+   * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.
+   * Укажите версию **Spring Boot**.
    * Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
-   * Выберите версию Java  **8** .
-   * Добавьте в зависимости **Службу поддержки Azure** .
+   * Выберите версию Java **11**.
+   * Добавьте в зависимости **Службу поддержки Azure**.
 
    >[!div class="mx-imgBorder"]
    >![Основные параметры Spring Initializr][SI01]
 
    > [!NOTE]
-   > Spring Initializr использует имена **группы** и **артефакта** , чтобы создать имя пакета, например *com.example.wingtiptoysdata* .
+   > 1. Spring Initializr использует имена **группы** и **артефакта**, чтобы создать имя пакета, например *com.example.wingtiptoysdata*.
+   > 1. Версия Spring Boot может быть выше версии, поддерживаемой Службой поддержки Azure. Когда проект будет автоматически создан, вы можете вручную изменить версию Spring Boot на самую новую версию, поддерживаемую в Azure (см. [здесь][azure-spring-boot-version-matrix]).
 
 1. Указав перечисленные выше параметры, щелкните **GENERATE** (Создать).
 
@@ -95,9 +96,9 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     ```xml
     <dependency>
-        <groupId>com.microsoft.azure</groupId>
-        <artifactId>azure-cosmosdb-spring-boot-starter</artifactId>
-        <version>2.3.3</version>
+        <groupId>com.azure.spring</groupId>
+        <artifactId>azure-spring-boot-starter-cosmos</artifactId>
+        <version>3.0.0</version>
     </dependency>
     ```
 
@@ -105,16 +106,16 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     ```xml
     <properties>
-       <java.version>1.8</java.version>
-       <azure.version>2.2.0</azure.version>
+        <java.version>11</java.version>
+        <azure.version>3.0.0</azure.version>
     </properties>
     ```
 
-1. Сохраните и закройте файл *pom.xml* .
+1. Сохраните и закройте файл *pom.xml*.
 
 ## <a name="configure-your-spring-boot-application-to-use-your-azure-cosmos-db"></a>Настройка приложения Spring Boot для использования с Azure Cosmos DB
 
-1. Найдите файл *application.properties* в каталоге *resources* , например:
+1. Найдите файл *application.properties* в каталоге *resources*, например:
 
     `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.properties`
 
@@ -124,18 +125,19 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 1. Откройте файл *application.properties* в текстовом редакторе, добавьте указанные ниже строки в файл и замените примеры значений на соответствующие свойства для базы данных:
 
-    ```text
+    ```properties
     # Specify the DNS URI of your Azure Cosmos DB.
-    azure.cosmosdb.uri=https://wingtiptoys.documents.azure.com:443/
-
+    azure.cosmos.uri=https://contosoaccount.documents.azure.com:443/
+    
     # Specify the access key for your database.
-    azure.cosmosdb.key=57686f6120447564652c20426f6220526f636b73==
-
-    # Specify the name of your database.
-    azure.cosmosdb.database=wingtiptoysdata
+    azure.cosmos.key=replace-your-access-key-here
+    
+    # Specify the name of your database. 
+    azure.cosmos.database=contosoaccount
+    azure.cosmos.populateQueryMetrics=true
     ```
 
-1. Сохраните и закройте файл *application.properties* .
+1. Сохраните и закройте файл *application.properties*.
 
 ## <a name="add-sample-code-to-implement-basic-database-functionality"></a>Добавление примера кода для реализации базовых возможностей базы данных
 
@@ -149,64 +151,63 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     ```java
     package com.example.wingtiptoysdata;
-
-    import com.microsoft.azure.spring.data.cosmosdb.core.mapping.Document;
-    import com.microsoft.azure.spring.data.cosmosdb.core.mapping.PartitionKey;
+    
+    import com.azure.spring.data.cosmos.core.mapping.Container;
+    import com.azure.spring.data.cosmos.core.mapping.PartitionKey;
     import org.springframework.data.annotation.Id;
-
-    @Document(collection = "mycollection")
+    
+    @Container(containerName = "mycollection")
     public class User {
-
         @Id
         private String id;
         private String firstName;
-
         @PartitionKey
         private String lastName;
         private String address;
-
+    
+        public User() {
+    
+        }
+    
         public User(String id, String firstName, String lastName, String address) {
             this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;
             this.address = address;
         }
-
-        public User() {
-        }
-
+    
         public String getId() {
             return id;
         }
-
+    
         public void setId(String id) {
             this.id = id;
         }
-
+    
         public String getFirstName() {
             return firstName;
         }
-
+    
         public void setFirstName(String firstName) {
             this.firstName = firstName;
         }
-
+    
         public String getLastName() {
             return lastName;
         }
-
+    
         public void setLastName(String lastName) {
             this.lastName = lastName;
         }
-
+    
         public String getAddress() {
             return address;
         }
-
+    
         public void setAddress(String address) {
             this.address = address;
         }
-
+    
         @Override
         public String toString() {
             return String.format("%s %s, %s", firstName, lastName, address);
@@ -214,7 +215,7 @@ Azure Cosmos DB — это глобально распределенная сл�
     }
     ```
 
-1. Сохраните и закройте файл *User.java* .
+1. Сохраните и закройте файл *User.java*.
 
 ### <a name="define-a-data-repository-interface"></a>Определение интерфейса хранилища данных
 
@@ -224,11 +225,11 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     ```java
     package com.example.wingtiptoysdata;
-
-    import com.microsoft.azure.spring.data.cosmosdb.repository.ReactiveCosmosRepository;
+    
+    import com.azure.spring.data.cosmos.repository.ReactiveCosmosRepository;
     import org.springframework.stereotype.Repository;
     import reactor.core.publisher.Flux;
-
+    
     @Repository
     public interface UserRepository extends ReactiveCosmosRepository<User, String> {
         Flux<User> findByFirstName(String firstName);
@@ -237,7 +238,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     Интерфейс `ReactiveCosmosRepository` заменяет интерфейс `DocumentDbRepository` из предыдущей версии начального приложения. Новый интерфейс предоставляет синхронные и реактивные API для базовых операций сохранения, удаления и поиска.
 
-1. Сохраните и закройте файл *UserRepository.java* .
+1. Сохраните и закройте файл *UserRepository.java*.
 
 ### <a name="modify-the-main-application-class"></a>Изменение класса основного приложения
 
@@ -253,77 +254,63 @@ Azure Cosmos DB — это глобально распределенная сл�
 
     ```java
     package com.example.wingtiptoysdata;
-
+    
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    
     import org.slf4j.Logger;
     import org.slf4j.LoggerFactory;
     import org.springframework.beans.factory.annotation.Autowired;
     import org.springframework.boot.CommandLineRunner;
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
     import org.springframework.util.Assert;
     import reactor.core.publisher.Flux;
     import reactor.core.publisher.Mono;
-
-    import javax.annotation.PostConstruct;
-    import javax.annotation.PreDestroy;
+    
     import java.util.Optional;
-
+    
     @SpringBootApplication
     public class WingtiptoysdataApplication implements CommandLineRunner {
-
+    
         private static final Logger LOGGER = LoggerFactory.getLogger(WingtiptoysdataApplication.class);
-
+    
         @Autowired
         private UserRepository repository;
-
+    
         public static void main(String[] args) {
             SpringApplication.run(WingtiptoysdataApplication.class, args);
         }
-
-        public void run(String... var1) throws Exception {
-            final User testUser = new User("1", "Tasha", "Calderon", "4567 Main St Buffalo, NY 98052");
-
-            LOGGER.info("Saving user: {}", testUser);
-
-            // Save the User class to Azure CosmosDB database.
+    
+        public void run(String... var1) {
+            this.repository.deleteAll().block();
+            LOGGER.info("Deleted all data in container.");
+    
+            final User testUser = new User("testId", "testFirstName", "testLastName", "test address line one");
+    
+            // Save the User class to Azure Cosmos DB database.
             final Mono<User> saveUserMono = repository.save(testUser);
-
+    
             final Flux<User> firstNameUserFlux = repository.findByFirstName("testFirstName");
-
+    
             //  Nothing happens until we subscribe to these Monos.
             //  findById will not return the user as user is not present.
             final Mono<User> findByIdMono = repository.findById(testUser.getId());
             final User findByIdUser = findByIdMono.block();
             Assert.isNull(findByIdUser, "User must be null");
-
+    
             final User savedUser = saveUserMono.block();
             Assert.state(savedUser != null, "Saved user must not be null");
             Assert.state(savedUser.getFirstName().equals(testUser.getFirstName()), "Saved user first name doesn't match");
-
-            LOGGER.info("Saved user");
-
+    
             firstNameUserFlux.collectList().block();
-
+    
             final Optional<User> optionalUserResult = repository.findById(testUser.getId()).blockOptional();
             Assert.isTrue(optionalUserResult.isPresent(), "Cannot find user.");
-
+    
             final User result = optionalUserResult.get();
             Assert.state(result.getFirstName().equals(testUser.getFirstName()), "query result firstName doesn't match!");
             Assert.state(result.getLastName().equals(testUser.getLastName()), "query result lastName doesn't match!");
-
-            LOGGER.info("Found user by findById : {}", result);
-        }
-
-        @PostConstruct
-        public void setup() {
-            LOGGER.info("Clear the database");
-            this.repository.deleteAll().block();
-        }
-
-        @PreDestroy
-        public void cleanup() {
-            LOGGER.info("Cleaning up users");
-            this.repository.deleteAll().block();
+    
+            LOGGER.info("findOne in User collection get result: {}", result.toString());
         }
     }
     ```
@@ -332,7 +319,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 ## <a name="build-and-test-your-app"></a>Создание и тестирование приложения
 
-1. Откройте командную строку и перейдите к папке с файлом *pom.xml* , например:
+1. Откройте командную строку и перейдите к папке с файлом *pom.xml*, например:
 
     `cd C:\SpringBoot\wingtiptoysdata`
 
@@ -343,65 +330,26 @@ Azure Cosmos DB — это глобально распределенная сл�
 1. Выполните сборку приложения и запустите его с помощью следующей команды:
 
     ```console
-    mvnw clean test
+    mvnw clean
     ```
 
     Эта команда позволяет автоматически запустить приложение как часть этапа тестирования. Кроме того, можно использовать следующую команду:
 
     ```console
-    mvnw clean spring-boot:run
+    mvnw spring-boot:run
     ```
 
     После определенных выходных данных сборки и тестирования в окне консоли отобразится примерно такое сообщение:
 
     ```console
-      .   ____          _            __ _ _
-     /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-    ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-     \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-      '  |____| .__|_| |_|_| |_\__, | / / / /
-     =========|_|==============|___/=/_/_/_/
-     :: Spring Boot ::            (v2.2.0.RC1)
-    >
-    > 2019-10-04 15:19:06.817  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplicationTests    : Starting WingtiptoysdataApplicationTests on devmachine03 with PID 30013 (started by <user> in /d/source/repos/wingtiptoysdata)
-    > 2019-10-04 15:19:06.818  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplicationTests    : No active profile set, falling back to default profiles: default
-    > 2019-10-04 15:19:08.329  INFO 30013 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-    > 2019-10-04 15:19:09.720  INFO 30013 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1369ms. Found 1 repository interfaces.
-    > 2019-10-04 15:19:09.734  INFO 30013 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-    > 2019-10-04 15:19:09.748  INFO 30013 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 repository interfaces.
-
-    ... (omitting Cosmos DB connection output) ...
-
-    > 2019-10-04 15:19:46.584  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplicationTests    : Started WingtiptoysdataApplicationTests in 40.702 seconds (JVM running for 44.647)
-    > 2019-10-04 15:19:46.587  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplication         : Saving user: Tasha Calderon, 4567 Main St Buffalo, NY 98052
-    > 2019-10-04 15:19:47.122  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplication         : Saved user
-    > 2019-10-04 15:19:47.289  INFO 30013 --- [           main] c.e.w.WingtiptoysdataApplication         : Found user by findById : Tasha Calderon, 4567 Main St Buffalo, NY 98052
-    > [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 44.003 s - in com.example.wingtiptoysdata.WingtiptoysdataApplicationTests
-    > 2019-10-04 15:19:48.124  INFO 30013 --- [extShutdownHook] c.a.d.c.internal.RxDocumentClientImpl    : Shutting down ...
-    > 2019-10-04 15:19:48.194  INFO 30013 --- [extShutdownHook] c.a.d.c.internal.RxDocumentClientImpl    : Shutting down ...
-    > 2019-10-04 15:19:48.200  INFO 30013 --- [extShutdownHook] c.e.w.WingtiptoysdataApplication         : Cleaning up users
-    > [INFO]
-    > [INFO] Results:
-    > [INFO]
-    > [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-    > [INFO]
-    > [INFO]
-    > [INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ wingtiptoysdata ---
-    > [INFO] Building jar: /d/source/repos/wingtiptoysdata/target/wingtiptoysdata-0.0.1-SNAPSHOT.jar
-    > [INFO]
-    > [INFO] --- spring-boot-maven-plugin:2.2.0.RC1:repackage (repackage) @ wingtiptoysdata ---
-    > [INFO] Replacing main artifact with repackaged archive
-    > [INFO] ------------------------------------------------------------------------
-    > [INFO] BUILD SUCCESS
-    > [INFO] ------------------------------------------------------------------------
-    > [INFO] Total time:  02:18 min
-    > [INFO] Finished at: 2019-10-04T15:20:05-07:00
-    > [INFO] ------------------------------------------------------------------------
+    INFO 1365 --- [           main] c.e.w.WingtiptoysdataApplication         : Deleted all data in container.
+    
+    ... (omitting connection and diagnostics output) ...
+    
+    INFO 1365 --- [           main] c.e.w.WingtiptoysdataApplication         : findOne in User collection get result: testFirstName testLastName, test address line one
     ```
 
-    ![Успешные результаты приложения][JV02]
-
-    Сообщения `Saved user` и `Found user` указывают на то, что данные были успешно сохранены в Cosmos DB и затем снова извлечены.
+    Приведенные выше сообщения указывают на то, что данные были успешно сохранены в Cosmos DB и затем снова извлечены.
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
@@ -414,7 +362,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 > [!div class="nextstepaction"]
 > [Spring в Azure](./index.yml)
 
-### <a name="additional-resources"></a>Дополнительные ресурсы
+### <a name="more-resources"></a>Дополнительные ресурсы
 
 Дополнительные сведения об использовании Azure PowerShell и Java см. в следующих статьях:
 
@@ -426,7 +374,7 @@ Azure Cosmos DB — это глобально распределенная сл�
 
 Дополнительные сведения об использовании приложений Spring Boot в Azure см. в следующих статьях:
 
-* [Начальное приложение Spring Boot CosmosDB для Azure]
+* [Использование Azure Spring Boot Starter в Azure Cosmos DB]
 
 * [Развертывание приложения Spring Boot в Службе приложений Azure в Linux](deploy-spring-boot-java-app-on-linux.md)
 
@@ -442,22 +390,18 @@ Azure Cosmos DB — это глобально распределенная сл�
 [Azure для разработчиков Java]: ../index.yml
 [Build a SQL API app with Java]: /azure/cosmos-db/create-sql-api-java
 [Spring Data для API SQL для Azure Cosmos DB]: https://azure.microsoft.com/blog/spring-data-azure-cosmos-db-nosql-data-access-on-azure/
-[Начальное приложение Spring Boot CosmosDB для Azure]: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-starter-cosmos
+[Использование Azure Spring Boot Starter в Azure Cosmos DB]: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-starter-cosmos
 [бесплатной учетной записи Azure]: https://azure.microsoft.com/pricing/free-trial/
 [Working with Azure DevOps and Java]: https://azure.microsoft.com/services/devops/java/ (Работа с Azure DevOps и Java)
 [Преимущества для подписчиков MSDN]: https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/
 [Spring Boot]: http://projects.spring.io/spring-boot/
 [Spring Initializr]: https://start.spring.io/
 [Spring Framework]: https://spring.io/
+[azure-spring-boot-version-matrix]: https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring#azure-spring-boot
 
 <!-- IMG List -->
-
-[AZ01]: media/configure-spring-boot-starter-java-app-with-cosmos-db/AZ01.png
 [AZ02]: media/configure-spring-boot-starter-java-app-with-cosmos-db/AZ02.png
 [AZ03]: media/configure-spring-boot-starter-java-app-with-cosmos-db/AZ03.png
-[AZ04]: media/configure-spring-boot-starter-java-app-with-cosmos-db/AZ04.png
 [AZ05]: media/configure-spring-boot-starter-java-app-with-cosmos-db/AZ05.png
 
 [SI01]: media/configure-spring-boot-starter-java-app-with-cosmos-db/SI01.png
-
-[JV02]: media/configure-spring-boot-starter-java-app-with-cosmos-db/JV02.png
