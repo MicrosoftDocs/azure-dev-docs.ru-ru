@@ -73,6 +73,8 @@
           items:
             - name: Использование Express.js с VS Code
               href: tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md
+            - name: Преобразование текста в речь с помощью Cognitive Services
+              href: tutorial/convert-text-to-speech-cognitive-services.md
             - name: Использование Express.js с базой данных MongoDB (Cosmos)
               href: tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md
             - name: 'Создание с помощью Azure CLI, развертывание с помощью Git'
