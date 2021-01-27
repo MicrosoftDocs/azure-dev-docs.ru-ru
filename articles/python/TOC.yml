@@ -13,25 +13,9 @@
     - name: Создание функции
       items:
         - name: Использование Visual Studio Code
-          items:
-            - name: "1.\_Настройка среды"
-              href: tutorial-vs-code-serverless-python-01.md
-            - name: "2.\_Создание функции на Python"
-              href: tutorial-vs-code-serverless-python-02.md
-            - name: "3.\_Проверка файлов кода"
-              href: tutorial-vs-code-serverless-python-03.md
-            - name: "4.\_Отладка в локальной среде"
-              href: tutorial-vs-code-serverless-python-04.md
-            - name: "5.\_Развертывание в Azure"
-              href: tutorial-vs-code-serverless-python-05.md
-            - name: "6.\_Добавление второй функции"
-              href: tutorial-vs-code-serverless-python-06.md
-            - name: "7.\_Добавление привязки к хранилищу"
-              href: tutorial-vs-code-serverless-python-07.md
-            - name: "8.\_Очистка ресурсов"
-              href: tutorial-vs-code-serverless-python-08.md
+          href: /azure/azure-functions/create-first-function-vs-code-python
         - name: Использование Azure CLI
-          href: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
+          href: /azure/azure-functions/create-first-function-cli-python?tabs=azure-cli%2Cbash%2Cbrowser
     - name: Подключение к службе хранилища Azure
       items:
         - name: Использование Visual Studio Code
