@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, overview, cloud provision, configuration manag
 ms.topic: overview
 ms.date: 08/13/2020
 ms.custom: devx-track-ansible
-ms.openlocfilehash: 9eb90921a0d44e138c331eb716700feb85e8aa9d
-ms.sourcegitcommit: 717e32b68fc5f4c986f16b2790f4211967c0524b
+ms.openlocfilehash: 9943dd0dbdd1b352d245bc471538e1a05d464c99
+ms.sourcegitcommit: 8eb1c379b2bbc2acdd82fc9d24d8ed948e5a6847
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91586105"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811102"
 ---
 # <a name="using-ansible-with-azure"></a>Использование Ansible с Azure
 
@@ -38,7 +38,7 @@ Ansible позволяет автоматизировать собственны
 
 ## <a name="manage-deployments-with-dynamic-inventory"></a>Управление развертываниями с помощью динамического списка
 
-С помощью [динамического списка](https://docs.ansible.com/ansible/intro_dynamic_inventory.html) в Ansible можно извлекать список из ресурсов Azure. Вы можете обозначить тегами существующие развертывания Azure и управлять этими отмеченными развертываниями с помощью Ansible.
+С помощью [динамического списка](https://docs.ansible.com/ansible/latest/user_guide/intro_dynamic_inventory.html) в Ansible можно извлекать список из ресурсов Azure. Вы можете обозначить тегами существующие развертывания Azure и управлять этими отмеченными развертываниями с помощью Ansible.
 
 ## <a name="additional-azure-marketplace-options"></a>Дополнительные параметры Azure Marketplace
 

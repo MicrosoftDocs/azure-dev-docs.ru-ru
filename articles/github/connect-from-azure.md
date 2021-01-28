@@ -7,12 +7,12 @@ ms.topic: reference
 ms.service: azure
 ms.date: 11/17/2020
 ms.custom: github-actions-azure, devx-track-azurecli
-ms.openlocfilehash: d835fb755a2acecba3e7ad173ef9d6c036d59546
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 6310254e450c7e0fc648459ddad2c08b1bba555b
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561750"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759519"
 ---
 # <a name="use-github-actions-to-connect-to-azure"></a>Применение GitHub Actions для подключения к Azure
 
@@ -80,7 +80,7 @@ ms.locfileid: "98561750"
 
 Примените секрет субъекта-службы вместе с [действием входа в Azure](https://github.com/Azure/login) для аутентификации в Azure.
 
-В этом рабочем процессе вы выполните аутентификацию с помощью действия входа в Azure с применением сохраненных в `secrets.AZURE_CREDENTIALS` сведений о субъекте-службе. Затем вы выполните действие Azure CLI. Дополнительные сведения о ссылках на секреты GitHub в файле рабочего процесса см. в статье об [использовании зашифрованных секретов в рабочем процессе](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#using-encrypted-secrets-in-a-workflow) на портале GitHub Docs.
+В этом рабочем процессе вы выполните аутентификацию с помощью действия входа в Azure с применением сохраненных в `secrets.AZURE_CREDENTIALS` сведений о субъекте-службе. Затем вы выполните действие Azure CLI. Дополнительные сведения о ссылках на секреты GitHub в файле рабочего процесса см. в статье об [использовании зашифрованных секретов в рабочем процессе](https://docs.github.com/en/actions/reference/encrypted-secrets#using-encrypted-secrets-in-a-workflow) на портале GitHub Docs.
 
 Получив работающее действие входа в Azure, вы сможете использовать действия [Azure PowerShell](https://github.com/Azure/PowerShell) или [Azure CLI](https://github.com/Azure/CLI). Вы также сможете использовать другие действия Azure, например [развертывание веб-приложения Azure](https://github.com/Azure/webapps-deploy) и [функции Azure](https://github.com/Azure/functions-action).
 

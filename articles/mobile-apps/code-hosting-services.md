@@ -7,12 +7,12 @@ ms.service: mobile-services
 ms.topic: article
 ms.date: 06/08/2020
 ms.author: masoucou
-ms.openlocfilehash: 0ab44652d4a635d5ff04928b76883a76fe3a62fa
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: 7a97aa687c80b4b49a566df2f5552bf919a0ec9e
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493115"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699752"
 ---
 # <a name="cloud-hosted-source-code-management-services"></a>Службы управления исходным кодом, размещенные в облаке
 
@@ -63,7 +63,7 @@ ms.locfileid: "91493115"
 
 ## <a name="azure-devops"></a>Azure DevOps
 
-[Azure DevOps](https://azure.microsoft.com/services/devops/) поддерживает [Azure Repos](https://azure.microsoft.com/services/devops/repos/) и [систему управления версиями Team Foundation (TFVC)](/azure/devops/repos/tfvc/index?view=azure-devops) как средства управления исходным кодом. Вы получите неограниченное количество бесплатных частных репозиториев с возможностями совместной проверки кода, расширенного управления файлами, поиска по коду и с политиками ветвления. Все это поможет обеспечить высокое качество кода. Azure Repos отлично подходит для небольших проектов и крупных организаций, которым требуются встроенная поддержка Azure Active Directory и расширенные политики.
+[Azure DevOps](https://azure.microsoft.com/services/devops/) поддерживает [Azure Repos](https://azure.microsoft.com/services/devops/repos/) и [систему управления версиями Team Foundation (TFVC)](/azure/devops/repos/tfvc/index) как средства управления исходным кодом. Вы получите неограниченное количество бесплатных частных репозиториев с возможностями совместной проверки кода, расширенного управления файлами, поиска по коду и с политиками ветвления. Все это поможет обеспечить высокое качество кода. Azure Repos отлично подходит для небольших проектов и крупных организаций, которым требуются встроенная поддержка Azure Active Directory и расширенные политики.
 
 ### <a name="azure-devops-features"></a>Возможности Azure DevOps
 
@@ -84,4 +84,4 @@ ms.locfileid: "91493115"
 ### <a name="azure-devops-references"></a>Справочники по Azure DevOps
 
 - [Начало работы с Azure Repos](https://azure.microsoft.com/services/devops/repos/) 
-- [Документация по Azure Repos](/azure/devops/repos/?view=azure-devops)
+- [Документация по Azure Repos](/azure/devops/repos)

@@ -1,15 +1,15 @@
 ---
 title: Установка пакетов библиотеки Azure SDK для Python
 description: Инструкции по установке, удалению и проверке пакета Azure SDK или библиотек Python с помощью pip. Эта статься содержит сведения об установке конкретных версий и предварительных версий пакетов.
-ms.date: 05/26/2020
+ms.date: 01/22/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 310a4327029f808a5e09136aa77956ed8810f5b2
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: 109631849b94f79530c93a8984813c424968f199
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983376"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759555"
 ---
 # <a name="how-to-install-azure-library-packages-for-python"></a>Описание установки пакетов библиотеки Azure для Python
 
@@ -78,4 +78,3 @@ pip uninstall azure-storage-blob
 ```
 
 Чтобы удалить библиотеку, используйте команду `pip uninstall <library>`.
-

@@ -4,12 +4,12 @@ description: Аутентификация с помощью субъекта-с�
 ms.topic: how-to
 ms.date: 01/04/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 413357533d5ddf8e41bc2e33d929074df4f2ac12
-ms.sourcegitcommit: 84f64dec74b4b041b8830a4e7489e22f0e943440
+ms.openlocfilehash: b0e39b14e8f96c58e1e5fb4f2bbf12f07180db8b
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97864259"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699912"
 ---
 # <a name="authenticate-with-the-azure-management-modules-for-javascript"></a>Проверка подлинности с использованием модулей управления Azure для JavaScript
 
@@ -120,4 +120,4 @@ billingManagementClient.enrollmentAccounts.list().then((enrollmentList) => {
 ## <a name="next-steps"></a>Дальнейшие действия   
 
 * [Пакеты npm Azure](../azure-sdk-library-package-index.md)
-* [Документация по пакетам npm Azure](/javascript/api/overview/azure/?view=azure-node-latest)
+* [Документация по пакетам npm Azure](/javascript/api/overview/azure/)

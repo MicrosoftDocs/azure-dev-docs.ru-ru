@@ -5,12 +5,12 @@ keywords: ansible, azure, devops, bash, cloudshell, сборник схем, azu
 ms.topic: quickstart
 ms.date: 09/30/2020
 ms.custom: devx-track-ansible, devx-track-azurecli
-ms.openlocfilehash: b01cf6925f19ae6dc561358546f9ee3b945cad4f
-ms.sourcegitcommit: 5c7f5fef798413b1a304cc9ee31c8518b73f27eb
+ms.openlocfilehash: a16e9affb6153d1defea2f5233a62f78d3b85ae8
+ms.sourcegitcommit: 8eb1c379b2bbc2acdd82fc9d24d8ed948e5a6847
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93066253"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811133"
 ---
 # <a name="quickstart-configure-ansible-using-azure-cli"></a>Краткое руководство. Настройка Ansible с помощью Azure CLI
 
@@ -132,7 +132,7 @@ ssh -i <ssh_private_key_filename> azureuser@<vm_ip_address>
 
 В этом разделе вы создадите файл локальных учетных данных для предоставления учетных данных Ansible.
 
-Дополнительные сведения об определении учетных данных Ansible см. в разделе [Providing Credentials to Azure Modules](https://docs.ansible.com/ansible/guide_azure.html#providing-credentials-to-azure-modules) (Предоставление учетных данных для модулей Azure).
+Дополнительные сведения об определении учетных данных Ansible см. в разделе [Providing Credentials to Azure Modules](https://docs.ansible.com/ansible/latest/scenario_guides/guide_azure.html) (Предоставление учетных данных для модулей Azure).
 
 1. После успешного подключения к виртуальной машине узла создайте и откройте файл с именем `credentials`.
 

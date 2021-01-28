@@ -7,12 +7,12 @@ ms.service: mobile-services
 ms.topic: article
 ms.date: 06/08/2020
 ms.author: masoucou
-ms.openlocfilehash: 19b83e0dcc161c87e5a70eb6f8d4bbac29858c7b
-ms.sourcegitcommit: f02ff55cef47581303a217cf1d310879cd722237
+ms.openlocfilehash: 82ce8246b916549d2207a10d96de89ad26cde49c
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84632466"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699892"
 ---
 # <a name="automate-the-lifecycle-of-your-apps-with-continuous-build-and-integration"></a>Автоматизация жизненного цикла приложений с помощью непрерывной сборки и интеграции
 
@@ -68,8 +68,8 @@ ms.locfileid: "84632466"
 
 ### <a name="azure-pipelines-references"></a>Справочники по Azure Pipelines
 
-- [Начало работы с Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops)
+- [Начало работы с Azure Pipelines](/azure/devops/pipelines/get-started/pipelines-get-started)
 - [Начало работы с Azure DevOps](https://app.vsaex.visualstudio.com/signup/)
-- [Краткие руководства](/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=tfs-2018-2)
+- [Краткие руководства](/azure/devops/pipelines/create-first-pipeline?tabs=tfs-2018-2)
 
 Чтобы помочь вам выбрать подходящую службу для сборки приложения, см. статью со сравнением [сборки через Центр приложений и Azure Pipelines](/appcenter/build/choose-between-services).

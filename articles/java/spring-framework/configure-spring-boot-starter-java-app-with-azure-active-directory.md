@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
 ms.custom: devx-track-java
-ms.openlocfilehash: 3f4070fa18c9d5d5db7df5d877b490ff0103b0b2
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 3d4262d7009004d177b38bf9f4cb3fb8c9b02259
+ms.sourcegitcommit: 8eb1c379b2bbc2acdd82fc9d24d8ed948e5a6847
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561461"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811135"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>Руководство по Защита приложения Java с использованием начального приложения Spring Boot для Azure Active Directory
 
@@ -295,7 +295,7 @@ ms.locfileid: "98561461"
    >[!div class="mx-imgBorder"]
    >![Сборка приложения][build-application]
 
-1. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу <http://localhost:8080/group1> и введите имя пользователя и пароль.
+1. Скомпилировав и запустив приложение с помощью Maven, перейдите в веб-браузере по адресу `http://localhost:8080/group1` и введите имя пользователя и пароль.
    
    >[!div class="mx-imgBorder"]
    ![Вход в приложение][application-login]

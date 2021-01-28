@@ -5,22 +5,22 @@ author: juliakm
 ms.author: jukullam
 ms.topic: conceptual
 ms.service: azure
-ms.date: 11/18/2020
+ms.date: 01/25/2021
 ms.custom: github-actions-azure
-ms.openlocfilehash: 0e3f3b11980c987ef4f7a288380b9517ad88d777
-ms.sourcegitcommit: 418e446e6ada5d50df283401df4f6b6370a356b9
+ms.openlocfilehash: e2a82fbcbe48269339dc672d46aca4cc3601ae12
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96120554"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759493"
 ---
 # <a name="use-variable-substitution-with-github-actions"></a>Использование подстановки переменных в GitHub Actions
 
 Узнайте, как использовать [действие подстановки переменных](https://github.com/marketplace/actions/variable-substitution) для замены значений в файлах конфигураций и параметров форматов XML, JSON и YAML.
 
-Подстановка переменных позволяет вставлять в файлы из репозитория переменные значения, например [секреты GitHub](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets), во время выполнения рабочего процесса. Например, так можно вставить в JSON-файл имя входа и пароль для API во время выполнения рабочего процесса.
+Подстановка переменных позволяет вставлять в файлы из репозитория переменные значения, например [секреты GitHub](https://docs.github.com/en/actions/reference/encrypted-secrets), во время выполнения рабочего процесса. Например, так можно вставить в JSON-файл имя входа и пароль для API во время выполнения рабочего процесса.
 
-Подстановку переменных можно выполнить только для ключей, заранее определенных в иерархии объектов. С помощью подстановки переменных нельзя создать новые ключи. Кроме того, для подстановки можно использовать только переменные, которые определены как [переменные среды](https://docs.github.com/en/free-pro-team@latest/actions/reference/environment-variables) в самом рабочем процессе или в уже доступных системных переменных.
+Подстановку переменных можно выполнить только для ключей, заранее определенных в иерархии объектов. С помощью подстановки переменных нельзя создать новые ключи. Кроме того, для подстановки можно использовать только переменные, которые определены как [переменные среды](https://docs.github.com/en/actions/reference/environment-variables) в самом рабочем процессе или в уже доступных системных переменных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

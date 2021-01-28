@@ -6,12 +6,12 @@ ms.author: edburns
 ms.topic: conceptual
 ms.date: 1/27/2020
 ms.custom: devx-track-java
-ms.openlocfilehash: 3b6d9847cc72f246587a36b74173521736a6cc9a
-ms.sourcegitcommit: b923aee828cd4b309ef92fe1f8d8b3092b2ffc5a
+ms.openlocfilehash: 58ed07c18fdb8492cf7f2c19883f3cf0288d9cc1
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88052269"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699982"
 ---
 # <a name="migrate-weblogic-server-applications-to-azure-virtual-machines"></a>Миграция приложений WebLogic в Виртуальные машины Azure
 
@@ -159,7 +159,7 @@ Oracle и Майкрософт совместно работают над соз
 
 * Используйте службу хранилища Azure для обслуживания статического содержимого, подключенного к виртуальным машинам. См. сведения о том, как [подключать диск данных к виртуальной машине и отключать его от нее](/azure/lab-services/devtest-lab-attach-detach-data-disk).
 
-* Разверните приложения в перенесенный кластер WebLogic с помощью Azure DevOps. См. сведения о том, как [начать работу с Azure DevOps](/azure/devops/get-started/?view=azure-devops).
+* Разверните приложения в перенесенный кластер WebLogic с помощью Azure DevOps. См. сведения о том, как [начать работу с Azure DevOps](/azure/devops/get-started).
 
 * Если вы развернули WebLogic Server со Шлюзом приложений Azure, выполнив инструкции из статьи [Учебник. Перенос кластера WebLogic Server в Azure с помощью Шлюза приложений Azure в качестве подсистемы балансировки нагрузки](migrate-weblogic-with-app-gateway.md), вам может потребоваться добавить дополнительную конфигурацию для Шлюза приложений.  Дополнительные сведения см. в статье [Обзор конфигурации Шлюза приложений](/azure/application-gateway/configuration-overview).
 

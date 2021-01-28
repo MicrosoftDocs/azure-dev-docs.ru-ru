@@ -7,20 +7,20 @@ ms.topic: conceptual
 ms.service: azure
 ms.date: 10/30/2020
 ms.custom: github-actions-azure
-ms.openlocfilehash: b5b3192d1d65515dc3741be80bbab018f9cf5f09
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 7309bd16cdecf8b148b89eb40649864590b552a6
+ms.sourcegitcommit: 8eb1c379b2bbc2acdd82fc9d24d8ed948e5a6847
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561740"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98811086"
 ---
 # <a name="what-is-github-actions-for-azure"></a>Что такое GitHub Actions для Azure
 
-Компонент [GitHub Actions](https://help.github.com/articles/about-github-actions) помогает автоматизировать рабочие процессы разработки программного обеспечения из GitHub. Вы можете развертывать рабочие процессы там же, где храните код, и вместе с другими пользователями создавать запросы на вытягивание и решать проблемы.
+Компонент [GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions) помогает автоматизировать рабочие процессы разработки программного обеспечения из GitHub. Вы можете развертывать рабочие процессы там же, где храните код, и вместе с другими пользователями создавать запросы на вытягивание и решать проблемы.
 
-В GitHub Actions [рабочим процессом](https://help.github.com/articles/about-github-actions#workflow) считается автоматизированный процесс, который вы настроили в своем репозитории GitHub. С помощью рабочего процесса вы можете выполнять сборку, тестирование, упаковку, выпуск и развертывание любого проекта в GitHub.
+В GitHub Actions [рабочим процессом](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions) считается автоматизированный процесс, который вы настроили в своем репозитории GitHub. С помощью рабочего процесса вы можете выполнять сборку, тестирование, упаковку, выпуск и развертывание любого проекта в GitHub.
 
-Каждый рабочий процесс включает отдельные [действия](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions), которые запускаются после определенного события (например, запроса на вытягивание).  Отдельные действия представлены упакованными скриптами, которые автоматизируют задачи разработки программного обеспечения.
+Каждый рабочий процесс включает отдельные [действия](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions), которые запускаются после определенного события (например, запроса на вытягивание).  Отдельные действия представлены упакованными скриптами, которые автоматизируют задачи разработки программного обеспечения.
 
 С помощью GitHub Actions для Azure вы можете создавать рабочие процессы в репозитории для сборки, тестирования, упаковки, выпуска и развертывания в Azure. Компонент GitHub Actions для Azure поддерживает службы Azure, в том числе Службу приложений Azure, Функции Azure и Azure Key Vault.
 
@@ -32,11 +32,11 @@ GitHub Actions также обеспечивает поддержку разны
 
 ## <a name="why-should-i-use-github-actions-for-azure"></a>Преимущества GitHub Actions для Azure
 
-Компонент GitHub Actions для Azure разработан Майкрософт и предназначен для использования с Azure. Вы можете ознакомиться со всеми возможностями GitHub Actions для Azure в [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions). Чтобы узнать больше об использовании действий с рабочими процессами, см. статью о [поиске и настройке действий](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/finding-and-customizing-actions).
+Компонент GitHub Actions для Azure разработан Майкрософт и предназначен для использования с Azure. Вы можете ознакомиться со всеми возможностями GitHub Actions для Azure в [GitHub Marketplace](https://github.com/marketplace?query=Azure&type=actions). Чтобы узнать больше об использовании действий с рабочими процессами, см. статью о [поиске и настройке действий](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions).
 
 ## <a name="what-is-the-difference-between-github-actions-and-azure-pipelines"></a>Различия между GitHub Actions и Azure Pipelines
 
-Как Azure Pipelines, так и GitHub Actions помогают автоматизировать рабочие процессы разработки ПО. Сведения о различиях между службами и переходе с Azure Pipelines к GitHub Actions см. [здесь](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/migrating-from-azure-pipelines-to-github-actions).
+Как Azure Pipelines, так и GitHub Actions помогают автоматизировать рабочие процессы разработки ПО. Сведения о различиях между службами и переходе с Azure Pipelines к GitHub Actions см. [здесь](https://docs.github.com/en/actions/learn-github-actions/migrating-from-azure-pipelines-to-github-actions).
 
 ## <a name="what-do-i-need-to-use-github-actions-for-azure"></a>Предварительные требования для использования GitHub Actions для Azure
 
@@ -53,7 +53,7 @@ GitHub Actions также обеспечивает поддержку разны
 
 ## <a name="what-is-included-in-a-github-actions-workflow"></a>Составляющие рабочего процесса GitHub Actions
 
-Рабочие процессы включают одно или несколько заданий. Задание состоит из шагов, представляющих собой отдельные действия. Дополнительные сведения о концепциях GitHub Actions см. в статье с [общим обзором GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions).  
+Рабочие процессы включают одно или несколько заданий. Задание состоит из шагов, представляющих собой отдельные действия. Дополнительные сведения о концепциях GitHub Actions см. в статье с [общим обзором GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions).  
 
 ## <a name="where-can-i-see-complete-workflow-examples"></a>Ресурсы с примерами рабочих процессов
 
