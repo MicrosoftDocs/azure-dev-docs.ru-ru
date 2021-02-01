@@ -143,6 +143,8 @@
           href: how-to/configure-web-app-settings.md
         - name: Задачи для разработчиков JavaScript
           href: how-to/common-javascript-tasks.md
+        - name: Клонирование репозитория GitHub для включения изменений
+          href: how-to/with-visual-studio-code/clone-github-repository.md
         - name: Сквозной Node. js с VS Code
           href: how-to/develop-nodejs-on-azure.md
         - name: Развертывание веб-приложения
