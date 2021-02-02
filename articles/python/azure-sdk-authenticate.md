@@ -4,12 +4,12 @@ description: Как получить необходимые объекты уч�
 ms.date: 01/19/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 51b7a074bef81999f17f3a5fa51d243e64a33f3c
-ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+ms.openlocfilehash: 19a69cf0379dd290893724db6527ebd30b5bab63
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98625969"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759463"
 ---
 # <a name="how-to-authenticate-and-authorize-python-apps-on-azure"></a>Как аутентифицировать и авторизовать приложения Python в Azure
 
@@ -470,3 +470,5 @@ print(subscription.subscription_id)
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
 - [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

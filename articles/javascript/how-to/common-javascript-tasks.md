@@ -2,14 +2,14 @@
 title: Популярные задачи Azure для разработчиков JavaScript
 description: Здесь вы можете найти примеры текущих задач.
 ms.topic: reference
-ms.date: 01/06/2021
+ms.date: 01/20/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 3a4c319d5258fccd1c1153591ccefddf87098343
-ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+ms.openlocfilehash: 2d7a3091529adb530af76069d9f70880a68e40d3
+ms.sourcegitcommit: 681ea211dc8e1809dd299b5cd64eebd974c073d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 01/21/2021
-ms.locfileid: "98625977"
+ms.locfileid: "98658771"
 ---
 # <a name="top-tasks-for-javascript-developers"></a>Распространенные задачи для разработчиков JavaScript
 
@@ -90,6 +90,7 @@ ms.locfileid: "98625977"
 |Создание ресурса приложения|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md)|
 |Создание приложения, развертывание, браузерное приложение, просмотр журналов|[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-03.md)|
 |Удаление ресурса приложения|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md#clean-up-resources)<br>[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-07.md)|
+|Развертывание или компоновка приложения|[Расширение Visual Studio Code](deploy-web-app.md#deploy-or-redeploy-to-app-service-with-visual-studio-code)|
 |Удаленные журналы потоковой передачи|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md?tabs=bash#7-stream-remote-service-logs-in-visual-studio-code)<br>[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-05.md)|
 
 ## <a name="cognitive-services"></a>Cognitive Services

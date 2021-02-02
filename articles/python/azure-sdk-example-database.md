@@ -4,12 +4,12 @@ description: Использование библиотек управления 
 ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: 873b854ac2702ac62484a8ed37a5367084eb4b00
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 2e63ec96c8e98e5d74f3ccadfadbdf8fd5b71e8a
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689018"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759365"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-database"></a>Пример Использование библиотек Azure для подготовки базы данных
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ```
 
 > [!NOTE]
-> В Windows попытка установить библиотеку mysql в 32-разрядную библиотеку Python приведет к ошибке из-за файла *mysql.h* . В этом случае установите 64-разрядную версию Python и повторите попытку.
+> В Windows попытка установить библиотеку mysql в 32-разрядную библиотеку Python приведет к ошибке из-за файла *mysql.h*. В этом случае установите 64-разрядную версию Python и повторите попытку.
 
 ## <a name="3-write-code-to-provision-the-database"></a>3: Написание кода для подготовки базы данных
 
@@ -279,5 +279,7 @@ az mysql db create -g PythonAzureExample-DB-rg --server PythonAzureExample-MySQL
 - [Пример. Перечисление групп ресурсов в подписке](azure-sdk-example-list-resource-groups.md)
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
 - [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
-- [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
 - [Пример. Подготовка и развертывание веб-приложения](azure-sdk-example-web-app.md)
+- [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

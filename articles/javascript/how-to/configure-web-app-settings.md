@@ -2,14 +2,14 @@
 title: Параметры конфигурации размещения веб-приложений
 description: Узнайте, как задать общие конфигурации для веб-приложения.
 ms.topic: conceptual
-ms.date: 01/11/2021
+ms.date: 01/21/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: ec183d08460b932cec1dea8d301f2877d7bc9ece
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 7b72cb2a72e1bf27630ad06451d9a6ad90dcf1ad
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561700"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699782"
 ---
 # <a name="hosting-web-apps-on-azure"></a>Размещение веб-приложений в Azure
 
@@ -64,7 +64,12 @@ ms.locfileid: "98561700"
 
 ## <a name="configure-port-forwarding"></a>Настройка перенаправления портов
 
-Необходимо [сопоставлять номер порта приложения](/azure/app-service/configure-language-nodejs?pivots=platform-windows#get-port-number), если он не является портом по умолчанию (`8080`). Это позволяет службе приложений перенаправлять запросы в правильный порт. 
+Необходимо [сопоставлять номер порта приложения](/azure/app-service/configure-language-nodejs?pivots=platform-windows#get-port-number), если он не является портом по умолчанию. Это позволяет службе приложений перенаправлять запросы в правильный порт. 
+
+```javascript
+// 3000 is an example port
+const port = process.env.PORT || 3000
+```
 
 ## <a name="configure-browser-for-cors-to-connect-with-server"></a>Настройка браузера для подключения CORS к серверу
 

@@ -3,13 +3,13 @@ title: Подготовка группы ресурсов с помощью би
 description: Узнайте, как с помощью библиотеки управления ресурсами из пакета Azure SDK для Python создать группу ресурсов, используя код на Python.
 ms.date: 11/12/2020
 ms.topic: conceptual
-ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: 65c78e480336f689096ccbd9f75420febf732f20
-ms.sourcegitcommit: dc74b60217abce66fe6cc93923e869e63ac86a8f
+ms.custom: devx-track-python
+ms.openlocfilehash: 3bda14cd52f55d25e3669662765aa8f27c3dc939
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94872845"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759434"
 ---
 # <a name="example-use-the-azure-libraries-to-provision-a-resource-group"></a>Пример использования библиотек Azure для подготовки группы ресурсов
 
@@ -148,3 +148,5 @@ az group create -n PythonAzureExample-rg -l centralus
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
 - [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

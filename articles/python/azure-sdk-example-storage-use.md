@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 08/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: f1ada9de2cdf52fac1b4219f1f9b8253d58ca881
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: ae021e47e803496d1e3a2395b923740339fe07c9
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689231"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759588"
 ---
 # <a name="example-access-azure-storage-using-the-azure-libraries-for-python"></a>Пример Доступ к службе хранилища Azure с помощью библиотек Azure для Python
 
@@ -63,7 +63,7 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
 Во [втором случае (4б ниже)](#4b-use-blob-storage-with-a-connection-string) используется строка подключения для прямого доступа к учетной записи хранения. Этот метод кажется проще. Но он имеет два существенных недостатка:
 
-- Строка подключения лишь выполняет проверку подлинности агента для подключения к учетной записи *хранения* , а не к отдельным ресурсам в этой учетной записи. В результате этого строка подключения предоставляет больше разрешений, чем может потребоваться.
+- Строка подключения лишь выполняет проверку подлинности агента для подключения к учетной записи *хранения*, а не к отдельным ресурсам в этой учетной записи. В результате этого строка подключения предоставляет больше разрешений, чем может потребоваться.
 
 - Строка подключения содержит ключ доступа в виде обычного текста, а значит создает потенциальные уязвимости, если она неправильно скомпонована или ненадежно защищена. С помощью такой строки можно получить несанкционированный доступ к ряду ресурсов в учетной записи хранения.
 
@@ -190,7 +190,7 @@ Hello there, Azure Storage. I'm a friendly file ready to be stored in a blob.
 
 ## <a name="5-verify-blob-creation"></a>5. Проверка создания большого двоичного объекта
 
-После выполнения кода для первого или второго способа на [портале Azure](https://portal.azure.com) перейдите в контейнер больших двоичных объектов и проверьте, создан ли большой двоичный объект с именем *sample-blob.txt* с таким же содержимым, как в файле *sample-source.txt* .
+После выполнения кода для первого или второго способа на [портале Azure](https://portal.azure.com) перейдите в контейнер больших двоичных объектов и проверьте, создан ли большой двоичный объект с именем *sample-blob.txt* с таким же содержимым, как в файле *sample-source.txt*.
 
 ![Портал Azure, страница контейнера больших двоичных объектов с загруженным файлом](media/azure-sdk-example-storage/portal-blob-container-file.png)
 
@@ -212,3 +212,5 @@ az group delete -n PythonAzureExample-Storage-rg  --no-wait
 - [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
 - [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

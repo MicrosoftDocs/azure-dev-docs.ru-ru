@@ -4,12 +4,12 @@ description: Сведения о том, как с помощью пакета �
 ms.topic: conceptual
 ms.date: 11/18/2020
 ms.custom: devx-track-python
-ms.openlocfilehash: fe2378bcb836dbfc52ad1d5d3e88f048d6ef117e
-ms.sourcegitcommit: b70a38d46616f5e519d5b9c1a1eaf3fe0ecb9605
+ms.openlocfilehash: b8d45f3d4b5ccd2c8a1c2850d496b9f68625ef46
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94932418"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759322"
 ---
 # <a name="use-azure-managed-disks-with-the-azure-libraries-sdk-for-python"></a>Использование управляемых дисков Azure в сочетании с библиотеками (SDK) Azure для Python
 
@@ -309,3 +309,9 @@ snapshot = async_snapshot_creation.result()
 ## <a name="see-also"></a>См. также раздел
 
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Пример. Подготовка группы ресурсов к работе](azure-sdk-example-resource-group.md)
+- [Пример. Перечисление групп ресурсов в подписке](azure-sdk-example-list-resource-groups.md)
+- [Пример. Подготовка службы хранилища Azure к работе](azure-sdk-example-storage.md)
+- [Пример. Использование службы хранилища Azure](azure-sdk-example-storage-use.md)
+- [Пример. Подготовка к работе и использование базы данных MySQL](azure-sdk-example-database.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

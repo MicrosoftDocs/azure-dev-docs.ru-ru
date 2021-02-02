@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, overview
 ms.topic: overview
 ms.date: 11/10/2020
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: d7de868651c50b7c3e39f1a0286ddd3ebf740b21
-ms.sourcegitcommit: 4dac39849ba2e48034ecc91ef578d11aab796e58
+ms.openlocfilehash: 38703bbd857c1990571f6255ab3a4d9089ad7a46
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "94983563"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699832"
 ---
 # <a name="azure-and-jenkins"></a>Azure и Jenkins
 

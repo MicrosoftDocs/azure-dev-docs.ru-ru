@@ -4,12 +4,12 @@ description: Обзор функций и возможностей библио�
 ms.date: 09/19/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: d610099b3b877f0916079ca2000a5268f3f08c2a
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: e24ecd235598d5298c5a71a317cd2415d9bfe01f
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522000"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759550"
 ---
 # <a name="use-the-azure-libraries-sdk-for-python"></a>Использование библиотек Azure (пакет SDK) для Python
 
@@ -107,6 +107,7 @@ ms.locfileid: "97522000"
 - Задавайте вопросы сообществу на сайте [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python)
 - Открытые проблемы с пакетом SDK на [GitHub](https://github.com/Azure/azure-sdk-for-python/issues)
 - Упомянуть [@AzureSDK](https://twitter.com/AzureSdk/) в Twitter
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)
 
 ## <a name="next-step"></a>Следующий шаг
 

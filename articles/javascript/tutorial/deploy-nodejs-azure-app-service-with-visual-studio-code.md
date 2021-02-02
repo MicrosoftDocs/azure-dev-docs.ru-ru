@@ -2,14 +2,14 @@
 title: Развертывание приложений Node.js в Службе приложений Azure с помощью Visual Studio Code
 description: Разверните приложение Node.js (Express.js) в Службе приложений Azure с помощью расширения Службы приложений для Visual Studio Code.
 ms.topic: tutorial
-ms.date: 01/11/2021
+ms.date: 01/20/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 2c019cc9ae13b81ecde934faee6d7d7a9fadf07a
-ms.sourcegitcommit: 657f43a5048cd17b080b40b5090d575c8d7f5eaf
+ms.openlocfilehash: 8f6ab806262bee9684cc2c37d05aa1f21695c806
+ms.sourcegitcommit: 681ea211dc8e1809dd299b5cd64eebd974c073d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98173254"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98658779"
 ---
 # <a name="deploy-nodejs-to-azure-app-service-using-visual-studio-code"></a>РазвертываниеNode.js в Службе приложений Azure с помощью Visual Studio Code
 
@@ -141,7 +141,12 @@ ms.locfileid: "98173254"
 
 ## <a name="8-make-changes-and-redeploy"></a>8. Внесение изменений и повторное развертывание
 
-Внесите несколько изменений и [повторно разверните](../how-to/deploy-web-app.md#deploy-or-redeploy-to-app-service-with-visual-studio-code) приложение с помощью расширения Службы приложений. 
+1. Внесите небольшое изменение в приложение. Измените `Welcome to Express` на `Welcome to Express with Visual Studio Code`. 
+
+1. Щелкните правой кнопкой мыши службу приложений в соответствующем списке в расширении Службы приложений, а затем выберите **Развернуть в веб-приложении**. 
+
+    :::image type="content" source="../media/deploy-azure/deploy-or-redeploy-app-service.png" alt-text="Развертывание или повторное развертывание в Службе приложений с помощью Visual Studio Code":::
+
 
 ## <a name="9-clean-up-resources"></a>9. Очистка ресурсов
 

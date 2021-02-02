@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, виртуальная машина, CI/CD, Az
 ms.topic: tutorial
 ms.date: 07/31/2018
 ms.custom: devx-track-jenkins
-ms.openlocfilehash: 66890b5284179f3417295f477b8dc576258c2367
-ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+ms.openlocfilehash: 2261db025f48ef6df5e0ad3d8518ef3fc966f13d
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98626017"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699942"
 ---
 # <a name="tutorial-deploy-to-linux-virtual-machine-using-jenkins-and-azure-devops-services"></a>Руководство по Развертывание виртуальной машины Linux с помощью Jenkins и Azure DevOps Services
 
@@ -161,9 +161,9 @@ ms.locfileid: "98626017"
 7. Зафиксируйте изменения.
 8. Через несколько минут вы увидите созданный выпуск на странице **Выпуски** для Azure DevOps. Откройте этот выпуск, чтобы увидеть, как выполняется развертывание. Поздравляем!
 
-## <a name="troubleshooting-the-jenkins-plugin"></a>Устранение неполадок подключаемого модуля Jenkins
+## <a name="troubleshooting-the-jenkins-plug-in"></a>Устранение неполадок подключаемого модуля Jenkins
 
-Если вы столкнулись с ошибками, которые касаются подключаемых модулей Jenkins, сообщите о проблеме конкретного компонента в [JENKS JIRA](https://issues.jenkins-ci.org/).
+Если вы столкнулись с ошибками, которые касаются подключаемых модулей Jenkins, сообщите о проблеме с конкретным компонентом в [Jenkins JIRA](https://issues.jenkins-ci.org/).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

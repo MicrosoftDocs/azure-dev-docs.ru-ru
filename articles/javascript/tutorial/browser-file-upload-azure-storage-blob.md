@@ -4,12 +4,12 @@ description: Используйте приложение React или TypeScript
 ms.topic: tutorial
 ms.date: 12/17/2020
 ms.custom: scenarios:getting-started, languages:JavaScript, devx-track-javascript, azure-sdk-storage-blob-typescript-version-12.2.1
-ms.openlocfilehash: 1f66ba54aa6cfccdda96a51bb610350a10fb7eef
-ms.sourcegitcommit: 1c508f5ba73a12e4baeacc88ad9a8359301acb50
+ms.openlocfilehash: 19fc63272ff579ca0bb04802b04a7d44e9114ba4
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97689523"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759563"
 ---
 # <a name="upload-an-image-to-an-azure-storage-blob"></a>Отправка образа в Azure Storage Blob
 
@@ -192,7 +192,7 @@ const sasToken = process.env.storagesastoken || "";
 
 Файл TypeScript `src/App.tsx` создается автоматически при создании приложения с помощью create-react-app. Мы изменили этот файл, включив в него описание кнопки выбора файла и кнопки отправки, а также вспомогательный код для поддержки этой возможности. 
 
-Здесь выделен код, который подключается к коду хранилища BLOB-объектов Azure. Вызов `uploadFileToBlob` возвращает в виде неструктурированного списка все BLOB-объекты (файлы) в указанном контейнере. Этот список отображается с помощью функции `DisplayImagesFromContainer`.
+Здесь выделен код, который подключается к коду Хранилища BLOB-объектов Azure. Вызов `uploadFileToBlob` возвращает в виде неструктурированного списка все BLOB-объекты (файлы) в указанном контейнере. Этот список отображается с помощью функции `DisplayImagesFromContainer`.
 
 :::code language="typescript" source="~/../js-e2e-browser-file-upload-storage-blob/src/App.tsx" highlight="3,28":::
 

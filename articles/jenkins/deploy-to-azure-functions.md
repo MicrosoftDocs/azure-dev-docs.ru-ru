@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, java, azure functions
 ms.topic: tutorial
 ms.date: 01/11/2021
 ms.custom: devx-track-jenkins,devx-track-cli
-ms.openlocfilehash: b2c616dd6d0a2a659a25527072358e8f1095e414
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 5e246b21f44de9ccb9b876827b44d01f456e60fd
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561060"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699952"
 ---
 # <a name="tutorial-deploy-to-azure-functions-using-jenkins"></a>Руководство по развертыванию в Функциях Azure с помощью Jenkins
 
@@ -84,7 +84,7 @@ ms.locfileid: "98561060"
 
     1. В меню выберите пункт **Manage Jenkins** (Управление Jenkins).
 
-    1. В разделе **System Configuration** (Конфигурация системы) выберите **Manage Plugins** (Управление подключаемыми модулями).
+    1. В разделе **System Configuration** (Конфигурация системы) выберите **Manage plug-in** (Управление подключаемым модулем).
 
     1. Откройте вкладку **Установленные**.
 

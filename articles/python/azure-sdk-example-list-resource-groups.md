@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотеки уп�
 ms.date: 10/12/2020
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 06395891ea1b8294f9eaafe7dad40bf7a335e965
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.openlocfilehash: 2867ea550ce233594d30b3de2be744d20a1e96de
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010676"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759594"
 ---
 # <a name="example-use-the-azure-libraries-to-list-resource-groups-and-resources"></a>Пример Перечисление групп ресурсов и ресурсов с помощью библиотек Azure
 
@@ -160,3 +160,5 @@ az resource list --resource group myResourceGroup --location centralus
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
 - [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

@@ -4,12 +4,12 @@ description: Узнайте, как с помощью библиотек из п
 ms.date: 10/05/2020
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: f3b27dd0a09bbf17c5797e3a5c0be9bc7d48b416
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+ms.openlocfilehash: 56d40c013456cb56e38970afb9d72933b5fa1f26
+ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92689021"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98759396"
 ---
 # <a name="example-provision-azure-storage-using-the-azure-libraries-for-python"></a>Пример Подготовка службы хранилища Azure с помощью библиотек Azure для Python
 
@@ -27,7 +27,7 @@ ms.locfileid: "92689021"
 
 ## <a name="2-install-the-needed-azure-library-packages"></a>2: Установка необходимых пакетов библиотеки Azure
 
-1. Создайте файл *requirements.txt* , в котором перечислены библиотеки управления, используемые в этом примере.
+1. Создайте файл *requirements.txt*, в котором перечислены библиотеки управления, используемые в этом примере.
 
     ```txt
     azure-mgmt-resource
@@ -157,11 +157,11 @@ python provision_blob.py
 
 ## <a name="5-verify-the-resources"></a>5: Проверка ресурсов
 
-1. На [портале Azure](https://portal.azure.com) проверьте, созданы ли группа ресурсов и учетная запись хранения. Чтобы увидеть учетную запись хранения, созданную с помощью скрипта Python, в группе ресурсов, возможно, потребуется установить флажок **Показать скрытые типы** .
+1. На [портале Azure](https://portal.azure.com) проверьте, созданы ли группа ресурсов и учетная запись хранения. Чтобы увидеть учетную запись хранения, созданную с помощью скрипта Python, в группе ресурсов, возможно, потребуется установить флажок **Показать скрытые типы**.
 
     ![Портал Azure, страница созданной группы ресурсов с учетной записью хранения](media/azure-sdk-example-storage/portal-show-hidden-types.png)
 
-1. Выберите учетную запись хранения, а затем в меню слева откройте раздел **Служба BLOB-объектов** > **Контейнеры** , чтобы проверить, создан ли контейнер bloc-container-01.
+1. Выберите учетную запись хранения, а затем в меню слева откройте раздел **Служба BLOB-объектов** > **Контейнеры**, чтобы проверить, создан ли контейнер bloc-container-01.
 
     ![Портал Azure, страница созданной учетной записи хранения с контейнером больших двоичных объектов](media/azure-sdk-example-storage/portal-show-blob-containers.png)
 
@@ -243,3 +243,5 @@ az group delete -n PythonAzureExample-Storage-rg  --no-wait
 - [Пример. Подготовка веб-приложения и развертывание кода](azure-sdk-example-web-app.md)
 - [Пример. Подготовка базы данных к работе и выполнение запросов к ней](azure-sdk-example-database.md)
 - [Пример. Подготовка виртуальной машины](azure-sdk-example-virtual-machines.md)
+- [Использование Управляемых дисков Azure с виртуальными машинами](azure-sdk-samples-managed-disks.md)
+- [Пройдите короткий опрос об Azure SDK для Python](https://microsoft.qualtrics.com/jfe/form/SV_bNFX0HECjzPWMiG?Q_CHL=docs)

@@ -5,12 +5,12 @@ keywords: Jenkins, Azure, DevOps, AKS, Служба Azure Kubernetes, GitHub
 ms.topic: article
 ms.date: 10/29/2019
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 51b0531946d4fde0e9141744e62bab35a3e1a734
-ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
+ms.openlocfilehash: 137f7cf050c9d31adc9e56a70fbb98e29342e142
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93192506"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699972"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе Azure Kubernetes с помощью Jenkins
 
@@ -81,7 +81,7 @@ redis                        latest     a1b99da73d05        7 days ago          
 tiangolo/uwsgi-nginx-flask   flask      788ca94b2313        9 months ago        694MB
 ```
 
-Прежде чем отправить образ контейнера *azure-vote-front* в ACR, получите данные о сервере входа ACR с помощью команды [az acr list](/cli/azure/acr#az-acr-list). В следующем примере возвращается адрес сервера входа ACR для реестра в группе ресурсов с именем *myResourceGroup* :
+Прежде чем отправить образ контейнера *azure-vote-front* в ACR, получите данные о сервере входа ACR с помощью команды [az acr list](/cli/azure/acr#az-acr-list). В следующем примере возвращается адрес сервера входа ACR для реестра в группе ресурсов с именем *myResourceGroup*:
 
 ```azurecli
 az acr list --resource-group myResourceGroup --query "[].{acrLoginServer:loginServer}" --output table
@@ -115,7 +115,7 @@ containers:
 kubectl apply -f azure-vote-all-in-one-redis.yaml
 ```
 
-Будет создана служба балансировки нагрузки Kubernetes, которая открывает доступ к приложению через Интернет. Это может занять несколько минут. Отслеживать, как выполняется развертывание подсистемы балансировки нагрузки, можно с применением команды [kubectl get service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) с аргументом `--watch`. Как только *ВНЕШНИЙ IP-АДРЕС* изменится с состояния *ожидания* на *IP-адрес* , используйте команду `Control + C`, чтобы остановить процесс отслеживания kubectl.
+Будет создана служба балансировки нагрузки Kubernetes, которая открывает доступ к приложению через Интернет. Это может занять несколько минут. Отслеживать, как выполняется развертывание подсистемы балансировки нагрузки, можно с применением команды [kubectl get service](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) с аргументом `--watch`. Как только *ВНЕШНИЙ IP-АДРЕС* изменится с состояния *ожидания* на *IP-адрес*, используйте команду `Control + C`, чтобы остановить процесс отслеживания kubectl.
 
 ```console
 $ kubectl get service azure-vote-front --watch
@@ -154,7 +154,7 @@ Enter the following to Unlock Jenkins:
 Откройте в веб-браузере отображенный URL-адрес и введите ключ разблокировки. Следуйте указаниям на экране, чтобы завершить настройку Jenkins:
 
 - Выберите **Install suggested plugins** (Установить предлагаемые подключаемые модули).
-- Создайте первого администратора. Введите имя пользователя, например *azureuser* , а затем укажите надежный пароль. Наконец введите полное имя и адрес электронной почты.
+- Создайте первого администратора. Введите имя пользователя, например *azureuser*, а затем укажите надежный пароль. Наконец введите полное имя и адрес электронной почты.
 - Выберите **Сохранить и завершить**.
 - Когда настройка Jenkins будет завершена, щелкните **Start using Jenkins** (Начать работу с Jenkins).
     - Если веб-браузере отображает пустую страницу при запуске Jenkins, перезапустите службу Jenkins. Чтобы перезапустить службу, установите SSH-подключение к общедоступному IP-адресу экземпляра Jenkins и введите `sudo service jenkins restart`. После перезапуска службы обновите веб-браузер.
@@ -191,7 +191,7 @@ $ az ad sp create-for-rbac --skip-assignment
 }
 ```
 
-Запишите значения параметров *appId* и *password* , показанные в выходных данных. Эти значения используются в следующих шагах для настройки ресурса учетных данных в Jenkins.
+Запишите значения параметров *appId* и *password*, показанные в выходных данных. Эти значения используются в следующих шагах для настройки ресурса учетных данных в Jenkins.
 
 Получите идентификатор ресурса для реестра ACR с помощью команды [az acr show](/cli/azure/acr#az-acr-show) и сохраните его как переменную. Укажите имя группы ресурсов и имя ACR.
 
@@ -199,7 +199,7 @@ $ az ad sp create-for-rbac --skip-assignment
 ACR_ID=$(az acr show --resource-group myResourceGroup --name <acrLoginServer> --query "id" --output tsv)
 ```
 
-Теперь создайте назначение ролей, чтобы назначить субъекту-службе права *Contributor* (Участник) в реестре ACR. В следующем примере укажите собственный *идентификатор приложения* , показанный в выходных данных предыдущей команды для создания субъекта-службы:
+Теперь создайте назначение ролей, чтобы назначить субъекту-службе права *Contributor* (Участник) в реестре ACR. В следующем примере укажите собственный *идентификатор приложения*, показанный в выходных данных предыдущей команды для создания субъекта-службы:
 
 ```azurecli
 az role assignment create --assignee 626dd8ea-042d-4043-a8df-4ef56273670f --role Contributor --scope $ACR_ID

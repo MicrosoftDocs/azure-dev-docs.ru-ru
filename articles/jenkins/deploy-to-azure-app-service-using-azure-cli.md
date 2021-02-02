@@ -5,12 +5,12 @@ keywords: jenkins, azure, devops, app service, cli
 ms.topic: tutorial
 ms.date: 01/06/2021
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 1f73da29b6b1bff2abf92383d672afd5af92abe4
-ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+ms.openlocfilehash: cc73127ad780b42a6dd82058052a9749f86f3f3c
+ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98626001"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699962"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>Руководство по Развертывание в службу приложений Azure с помощью Jenkins и Azure CLI
 
@@ -60,7 +60,7 @@ ms.locfileid: "98626001"
 
 1. Убедитесь, что [подключаемый модуль учетных данных](https://plugins.jenkins.io/credentials/) установлен.
 
-1. На панели мониторинга Jenkins выберите элементы **Credentials -> System** (Учетные данные -> Система). 
+1. На панели мониторинга Jenkins выберите элементы **Credentials -> System** (Учетные данные -> Система).
 
 1. Выберите элемент **Global credentials (unrestricted)** (Глобальные учетные данные (неограниченные)).
 
