@@ -3,6 +3,8 @@
   items:
     - name: Что нового в документации?
       href: whats-new-docs.md
+    - name: Обзоры новых возможностей от советников по разработке
+      href: whats-new-developer-advocacy.md
     - name: Начало работы в Azure с JavaScript
       items:
         - name: Что представляет собой Azure для разработчиков JavaScript?
@@ -143,10 +145,22 @@
           href: how-to/configure-web-app-settings.md
         - name: Задачи для разработчиков JavaScript
           href: how-to/common-javascript-tasks.md
-        - name: Клонирование репозитория GitHub для включения изменений
-          href: how-to/with-visual-studio-code/clone-github-repository.md
-        - name: Сквозной Node. js с VS Code
-          href: how-to/develop-nodejs-on-azure.md
+        - name: Использование Visual Studio Code
+          items:
+            - name: Установка и отладка локального проекта
+              href: how-to/with-visual-studio-code/install-run-debug-nodejs.md
+            - name: Клонирование репозитория GitHub для включения изменений
+              href: how-to/with-visual-studio-code/clone-github-repository.md
+            - name: Создание контейнера из локального проекта
+              href: how-to/with-visual-studio-code/containerize-local-project.md
+        - name: С помощью Azure CLI
+          items:
+            - name: Создание и использование реестра контейнеров
+              href: how-to/with-azure-cli/create-container-registry-resource.md
+            - name: Настройка доменного имени веб-приложения
+              href: how-to/with-azure-cli/configure-app-service-custom-domain-name.md
+            - name: "Использование ресурса Cosmos\_DB для MongoDB"
+              href: how-to/with-azure-cli/create-mongodb-cosmosdb.md
         - name: Развертывание веб-приложения
           href: how-to/deploy-web-app.md
         - name: Развертывание контейнеров

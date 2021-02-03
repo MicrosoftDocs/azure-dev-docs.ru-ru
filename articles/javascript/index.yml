@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: e58700140b1f014a3ff393d66e17f3a4f38e44d3
-  ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+  ms.openlocfilehash: dbc01af045726a3e0b5b8c788cb3415ce985ba50
+  ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/21/2021
-  ms.locfileid: "98625897"
+  ms.lasthandoff: 02/01/2021
+  ms.locfileid: "99224748"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -37,6 +37,14 @@ landingContent:
       url: https://devblogs.microsoft.com/azure-sdk/
     - text: Распространенные задачи для разработчиков JavaScript
       url: how-to/common-javascript-tasks.md
+- title: Уже работали с Azure?
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Что нового в документации?
+      url: whats-new-docs.md
+    - text: Обзоры новых возможностей от советников по разработке
+      url: whats-new-developer-advocacy.md
 - title: Развертывание и размещение
   linkLists:
   - linkListType: tutorial
