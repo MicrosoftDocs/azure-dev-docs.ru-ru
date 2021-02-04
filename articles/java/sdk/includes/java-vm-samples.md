@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe73a2c6b6f18a5e85d342f8fed7ed547b272be9
-ms.sourcegitcommit: cbcde17e91e7262a596d813243fd713ce5e97d06
+ms.openlocfilehash: 9731f0504dd654b5fdb617b7b82cbd1afc4e2414
+ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93406783"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99528578"
 ---
 | Образец  | Описание |
 |---|---|
@@ -16,8 +16,6 @@ ms.locfileid: "93406783"
 | [Создание виртуальных машин в разных регионах в параллельном режиме][5] | Создание и распределение нагрузки набора виртуальных машин в нескольких регионах Azure. |
 | **Сети виртуальных машин** || 
 | [Управление виртуальными сетями][6] | Настройка виртуальной сети с двумя подсетями и ограничение доступа к Интернету в этих подсетях. |
-| **Создание масштабируемых наборов** ||
-| [Getting Started with Compute - Manage Virtual Machine Scale Set - in .Net][7] (Начало работы с вычислительными ресурсами: управление набором масштабирования виртуальной машины — .Net) | Создание масштабируемого набора виртуальных машин, настройка подсистемы балансировки нагрузки и получение строк SSH-подключения к виртуальным машинам в масштабируемом наборе. |
 
 [1]: ../index.yml
 [2]: https://github.com/Azure-Samples/managed-disk-java-create-virtual-machine-using-custom-image/
@@ -25,4 +23,3 @@ ms.locfileid: "93406783"
 [4]: https://github.com/Azure-Samples/compute-java-manage-virtual-machines-in-parallel/
 [5]: ../index.yml
 [6]: ../index.yml
-[7]: ../java-sdk-manage-vm-scalesets.md

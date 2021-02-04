@@ -1,15 +1,15 @@
 ---
 title: Перечисление групп ресурсов и ресурсов с помощью библиотек Azure для Python
 description: Узнайте, как с помощью библиотеки управления ресурсами из пакета Azure SDK для Python перечислить группу ресурсов и ресурсы в ней.
-ms.date: 10/12/2020
+ms.date: 01/28/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 2867ea550ce233594d30b3de2be744d20a1e96de
-ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
+ms.openlocfilehash: c44698fb7fee0e7f736c51fbf11f664b8642e946
+ms.sourcegitcommit: 3843092e47691fbd32452c93d51f894a0cab31db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98759594"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99069101"
 ---
 # <a name="example-use-the-azure-libraries-to-list-resource-groups-and-resources"></a>Пример Перечисление групп ресурсов и ресурсов с помощью библиотек Azure
 
@@ -17,7 +17,7 @@ ms.locfileid: "98759594"
 
 - перечисление всех групп ресурсов в подписке Azure;
 - перечисление ресурсов в определенной группе ресурсов.
- 
+
 Все описанные в этой статье команды работают одинаково как в Bash для Linux или macOS, так и в командных оболочках для Windows, если не указано иное.
 
 [Эквивалентная команда Azure CLI](#for-reference-equivalent-azure-cli-commands) приведена далее в этой статье.
@@ -33,8 +33,8 @@ ms.locfileid: "98759594"
 Создайте файл *requirements.txt* со следующим содержимым.
 
 ```text
-azure-mgmt-resource
-azure-identity
+azure-mgmt-resource>=1.15.0
+azure-identity>=1.5.0
 ```
 
 В окне терминала или в командной строке с активированной виртуальной средой установите необходимые компоненты.

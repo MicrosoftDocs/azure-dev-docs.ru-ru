@@ -5,12 +5,12 @@ author: edburns
 ms.author: edburns
 ms.topic: tutorial
 ms.date: 08/10/2020
-ms.openlocfilehash: 277f34fecfd976135077243252bc31aace11dd61
-ms.sourcegitcommit: 4dd392ea864be52421d0239e59198bc44b0a5a16
+ms.openlocfilehash: f97d9d57b85550c1e28f58fb24a27a4da4205266
+ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91365017"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224728"
 ---
 # <a name="end-user-authorization-and-authentication-for-migrating-java-apps-on-weblogic-server-to-azure"></a>Авторизация и аутентификация пользователей для переноса приложений Java в WebLogic Server в Azure
 
@@ -198,7 +198,7 @@ az resource update --ids $AADDS_ID --set properties.domainSecuritySettings.tlsV1
 
 ### <a name="lock-down-and-secure-ldap-access-over-the-internet"></a>Блокировка и защита доступа по протоколу LDAP через Интернет
 
-При развертывании защищенного протокола LDAP на предыдущих шагах мы настроили источник как **Любой** для правила `AllowLDAPS` в группе безопасности сети.  Теперь, когда сервер администрирования WLS развернут и подключен к LDAP, получите его общедоступный IP-адрес на портале Azure.  Вернитесь к разделу [Блокировка доступа по защищенному протокол LDAP через Интернет](/azure/active-directory-domain-services/tutorial-configure-ldaps?branch=pr-en-us-778#lock-down-secure-ldap-access-over-the-internet) и измените значение **Любой** на конкретный IP-адрес для сервера администрирования WLS.
+При развертывании защищенного протокола LDAP на предыдущих шагах мы настроили источник как **Любой** для правила `AllowLDAPS` в группе безопасности сети.  Теперь, когда сервер администрирования WLS развернут и подключен к LDAP, получите его общедоступный IP-адрес на портале Azure.  Вернитесь к разделу [Блокировка доступа по защищенному протокол LDAP через Интернет](/azure/active-directory-domain-services/tutorial-configure-ldaps#lock-down-secure-ldap-access-over-the-internet) и измените значение **Любой** на конкретный IP-адрес для сервера администрирования WLS.
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 

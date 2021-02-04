@@ -4,12 +4,12 @@ description: Сведения о настройке локальной сред�
 ms.date: 01/04/2021
 ms.topic: conceptual
 ms.custom: devx-track-python, devx-track-azurecli
-ms.openlocfilehash: fcad7c614ae27c8b1b3ccf081d85292549cfcee3
-ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
+ms.openlocfilehash: 184996eca52c096602863beb1c73ae4337695829
+ms.sourcegitcommit: 3843092e47691fbd32452c93d51f894a0cab31db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97911474"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99069081"
 ---
 # <a name="configure-your-local-python-dev-environment-for-azure"></a>Настройка локальной среды разработки Python для Azure
 
@@ -53,7 +53,7 @@ ms.locfileid: "97911474"
 
 | Имя или установщик | Описание |
 | --- | --- |
-| [Расширение Docker для VS Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Добавляет поддержку Docker в VS Code, что полезно при регулярной работе с контейнерами. |
+| [Расширение Docker для VS Code](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) | Добавляет поддержку Docker в VS Code, что полезно при регулярной работе с контейнерами. |
 
 ### <a name="verify-components"></a>Проверка компонентов
 
@@ -136,7 +136,7 @@ Azure CLI обычно поддерживает вход в разные сеа�
 
 #### <a name="what-the-create-for-rbac-command-does"></a>Что делает команда create-for-rbac
 
-Команда `az ad create-for-rbac` создает субъект-службу для проверки подлинности на основе ролей (RBAC). Дополнительные сведения о субъектах-службах см. в статье [Аутентификация и авторизация приложений Python в Azure](azure-sdk-authenticate.md).
+Команда `az ad sp create-for-rbac` создает субъект-службу для проверки подлинности на основе ролей (RBAC). Дополнительные сведения о субъектах-службах см. в статье [Аутентификация и авторизация приложений Python в Azure](azure-sdk-authenticate.md).
 
 - `ad` означает Azure Active Directory; `sp` означает "субъект-служба", а `create-for-rbac` означает "создать для управления доступом на основе ролей" (основная форма авторизации Azure). См. справочник по командам [az ad sp create-for-rbac](/cli/azure/ad/sp#az-ad-sp-create-for-rbac).
 
