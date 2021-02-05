@@ -4,34 +4,46 @@ summary: Разработка в облаке с помощью Java в Azure.
 metadata:
   title: Документация по пакету SDK Azure для Java
   description: Разработка в облаке с помощью Java в Azure
-  ms.date: 04/03/2020
+  ms.date: 02/02/2021
   ms.topic: landing-page
-  ms.openlocfilehash: 2380696b801927bc842278b1b8604825feda0984
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: cde5054104f4331e48078b5854d61dca2c36f6cf
+  ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "81675150"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99511078"
 landingContent:
-- title: Azure для разработчиков облачных решений Java
+- title: Azure для разработчиков Java
   linkLists:
   - linkListType: get-started
     links:
     - text: Разработка в Azure с помощью Java
-      url: java-sdk-azure-get-started.md
+      url: get-started.md
+    - text: Использование пакета Azure SDK для Java
+      url: overview.md
   - linkListType: reference
     links:
     - text: Браузер API Java
-      url: /java/api/?view=azure-java
+      url: /java/api
   - linkListType: how-to-guide
     links:
-    - text: Добавление корневого сертификата
-      url: java-sdk-add-certificate-ca-store.md
-    - text: Authenticate
-      url: java-sdk-azure-authenticate.md
+    - text: Идентификация и аутентификация
+      url: identity.md
     - text: Настройка журнала
-      url: java-sdk-azure-log.md
+      url: logging-overview.md
+- title: Общие понятия
+  linkLists:
   - linkListType: learn
     links:
-    - text: Шаблоны и рекомендации
-      url: java-sdk-azure-concepts.md
+    - text: HTTP-клиенты и конвейер
+      url: http-client-pipeline.md
+    - text: Асинхронное программирование
+      url: async-programming.md
+    - text: Разбиение на страницы и итерация
+      url: pagination.md
+    - text: Длительные операции
+      url: lro.md
+    - text: Использование прокси-сервера
+      url: proxying.md
+    - text: Трассировка
+      url: tracing.md

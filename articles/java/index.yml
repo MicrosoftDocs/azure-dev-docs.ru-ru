@@ -7,12 +7,12 @@ metadata:
   description: Начните разрабатывать приложения для облачной среды, используя эти руководства и средства для разработчиков Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: 94ea0c2dd3b11651cc30bce84bc3b26f7f12cc7a
-  ms.sourcegitcommit: 050c898df76a1af5feffe99e392a073b8ac9c19c
+  ms.openlocfilehash: badee30def237b49cb9e46730335e730090fb66b
+  ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/16/2020
-  ms.locfileid: "92137173"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99511095"
 conceptualContent:
   items:
   - title: Краткие руководства по Azure для Java
@@ -61,10 +61,10 @@ conceptualContent:
     links:
     - text: Разработка в Azure с помощью Java
       itemType: get-started
-      url: sdk/java-sdk-azure-get-started.md
-    - text: Шаблоны и рекомендации
+      url: sdk/get-started.md
+    - text: Введение в Azure SDK для Java
       itemType: learn
-      url: sdk/java-sdk-azure-concepts.md
+      url: sdk/overview.md
     - text: Браузер API Java
       itemType: reference
       url: /java/api/?view=azure-java

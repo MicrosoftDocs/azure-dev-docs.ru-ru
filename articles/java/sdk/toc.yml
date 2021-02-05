@@ -1,35 +1,79 @@
 - name: Документация по пакету SDK Azure для Java
   href: index.yml
   items:
-    - name: Приступая к работе
-      href: java-sdk-azure-get-started.md
+    - name: Начало работы
+      href: get-started.md
     - name: Основные понятия
       expanded: true
       items:
-        - name: Шаблоны и рекомендации
-          href: java-sdk-azure-concepts.md
-    - name: Статьи с инструкциями
-      expanded: true
+        - name: Обзор
+          href: overview.md
+        - name: Общие понятия
+          expanded: false
+          items:
+            - name: HTTP-клиенты и конвейер
+              href: http-client-pipeline.md
+            - name: Асинхронное программирование
+              href: async-programming.md
+            - name: Разбиение на страницы и итерация
+              href: pagination.md
+            - name: Длительные операции
+              href: lro.md
+            - name: Использование прокси-сервера
+              href: proxying.md
+            - name: Трассировка
+              href: tracing.md
+        - name: Идентификация и аутентификация
+          expanded: false
+          items:
+            - name: Обзор
+              href: identity.md
+            - name: Аутентификация в средах разработки
+              href: identity-dev-env-auth.md
+            - name: 'Аутентификация в приложениях, размещенных в Azure'
+              href: identity-azure-hosted-auth.md
+            - name: Аутентификация с помощью субъектов-служб
+              href: identity-service-principal-auth.md
+            - name: Аутентификация с помощью учетных данных
+              href: identity-user-auth.md
+        - name: Ведение журнала
+          expanded: false
+          items:
+            - name: Обзор
+              href: logging-overview.md
+            - name: java.util.logging
+              href: logging-jul.md
+            - name: Logback
+              href: logging-logback.md
+            - name: Log4J
+              href: logging-log4j.md
+    - name: Интеграции
+      expanded: false
       items:
-        - name: Добавление корневого сертификата
-          href: java-sdk-add-certificate-ca-store.md
-        - name: Authenticate
-          href: java-sdk-azure-authenticate.md
-        - name: Настройка журнала
-          href: java-sdk-azure-log.md
+        - name: Spring
+          href: /azure/developer/java/spring-framework/spring-boot-starters-for-azure
+        - name: MicroProfile
+          href: 'https://docs.microsoft.com/azure/developer/java/eclipse-microprofile/'
+    - name: Устранение неполадок
+      expanded: false
+      items:
+        - name: проблемы с сетью.
+          href: troubleshooting-network.md
     - name: Примеры кода
       items:
         - name: Виртуальные машины
-          href: java-sdk-azure-virtual-machine-samples.md
+          href: virtual-machine-samples.md
         - name: Веб-приложения
-          href: java-sdk-azure-web-apps-samples.md
+          href: web-apps-samples.md
         - name: База данных SQL
-          href: java-sdk-azure-sql-database-samples.md
-        - name: безопасность
-          href: java-sdk-azure-security-samples.md
+          href: sql-database-samples.md
+        - name: Безопасность
+          href: security-samples.md
         - name: Контейнеры
-          href: java-sdk-azure-containers-samples.md
+          href: containers-samples.md
         - name: Все примеры для Java
           href: /samples/browse/?products=azure&languages=java
+    - name: Индекс пакетов
+      href: azure-sdk-library-package-index.md
     - name: Справочник
-      href: /java/api/?view=azure-java
+      href: /java/api

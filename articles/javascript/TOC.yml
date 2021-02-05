@@ -161,6 +161,10 @@
               href: how-to/with-azure-cli/configure-app-service-custom-domain-name.md
             - name: "Использование ресурса Cosmos\_DB для MongoDB"
               href: how-to/with-azure-cli/create-mongodb-cosmosdb.md
+        - name: С базами данных
+          items:
+            - name: MongoDB в CosmosDB
+              href: how-to/with-database/use-mongodb-as-cosmosdb.md
         - name: Развертывание веб-приложения
           href: how-to/deploy-web-app.md
         - name: Развертывание контейнеров
