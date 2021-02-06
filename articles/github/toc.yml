@@ -14,6 +14,8 @@
           href: database-actions-deploy.md
         - name: Использование подстановки переменных
           href: github-variable-substitution.md
+        - name: Использование секретов хранилища ключей
+          href: github-key-vault.md
         - name: Управление Политикой Azure
           href: manage-azure-policy.md
     - name: Azure DevOps и GitHub
