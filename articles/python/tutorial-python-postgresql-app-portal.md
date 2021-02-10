@@ -3,14 +3,14 @@ title: Руководство по Развертывание приложени
 description: Узнайте, как подготовить веб-приложение и базу данных PostgreSQL в Azure, а также развернуть код приложения из GitHub.
 ms.devlang: python
 ms.topic: tutorial
-ms.date: 01/04/2021
+ms.date: 02/02/2021
 ms.custom: devx-track-python
-ms.openlocfilehash: 65f8558aa81e839b3701669a0274419cd2143e49
-ms.sourcegitcommit: 4f9ce09cbf9663203c56f5b12ecbf70ea68090ed
+ms.openlocfilehash: e3ee95a80d833ce9e99ebc1c5a3fbc6f14166e19
+ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97911464"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99511124"
 ---
 # <a name="tutorial-deploy-a-django-web-app-with-postgresql-using-the-azure-portal"></a>Руководство по Развертывание веб-приложения Django с PostgreSQL с помощью портала Azure
 
@@ -206,6 +206,12 @@ ms.locfileid: "97911464"
     source /antenv/bin/activate
     ```
 
+1. Установите зависимости:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
 1. Перенесите базу данных:
 
     ```bash
@@ -253,6 +259,8 @@ ms.locfileid: "97911464"
 1. Перейдите в папку приложения с помощью команды `cd $APP_PATH`.
 
 1. Активируйте виртуальную среду, выполнив команду `source /antenv/bin/activate`.
+
+1. Установите требования с помощью `pip install -r requirements.txt`.
 
 1. Снова запустите миграцию с помощью команды `python manage.py migrate`.
 

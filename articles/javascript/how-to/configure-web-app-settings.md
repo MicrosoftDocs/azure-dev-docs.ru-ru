@@ -4,12 +4,12 @@ description: Узнайте, как задать общие конфигурац
 ms.topic: conceptual
 ms.date: 01/21/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 7b72cb2a72e1bf27630ad06451d9a6ad90dcf1ad
-ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
+ms.openlocfilehash: 50125f4b0b79254b5106cf60b9e156555547e052
+ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699782"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224798"
 ---
 # <a name="hosting-web-apps-on-azure"></a>Размещение веб-приложений в Azure
 
@@ -170,4 +170,4 @@ const port = process.env.PORT || 3000
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-* Сведения по выполнению многих из этих шагов см. в статье о потоке разработки [комплексного приложения Node.js](./develop-nodejs-on-azure.md).
+* [Как использовать Visual Studio Code для разработки и отладки Node.js](with-visual-studio-code/install-run-debug-nodejs.md)

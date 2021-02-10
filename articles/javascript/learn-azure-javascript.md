@@ -4,12 +4,12 @@ description: Используйте платформу Microsoft Learn для р
 ms.topic: reference
 ms.date: 01/14/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: 7fd0fd26b1b0133faf8cf21bd7b29afdbd37f5aa
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.openlocfilehash: 80c0a9d285c1701369f8c7518f42220662759d86
+ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561680"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224828"
 ---
 # <a name="learn-to-develop-with-azure-and-javascript"></a>Изучение разработки в Azure с помощью JavaScript 
 
@@ -47,6 +47,10 @@ ms.locfileid: "98561680"
 * [Создание и публикация статического веб-приложения с помощью Gatsby и Статических веб-приложений Azure](/learn/modules/create-deploy-static-webapp-gatsby-app-service/)
 * [Создание простого веб-сайта с помощью HTML, CSS и JavaScript](/learn/modules/build-simple-website/)
 
+### <a name="server-apis"></a>Серверные API
+
+* [Создание HTTP-сервера узла](/learn/modules/build-web-api-nodejs-express/)
+
 ### <a name="serverless-apis"></a>Бессерверные API
 
 * [Создание бессерверных API с помощью Функций Azure](/learn/modules/build-api-azure-functions/)
@@ -65,11 +69,7 @@ ms.locfileid: "98561680"
 ### <a name="virtual-machines"></a>Виртуальные машины
 * [Создание и запуск веб-приложения на основе стека MEAN на виртуальной машине Linux в Azure](/learn/modules/build-a-web-app-with-mean-on-a-linux-vm/)
 
-
-
-
 Также доступны [дополнительные ресурсы Learn](/search/?category=Learn&terms=JavaScript).
-
 
 ## <a name="microsoft-learning-partners"></a>Партнеры Майкрософт по обучению
 

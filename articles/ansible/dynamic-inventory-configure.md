@@ -5,12 +5,12 @@ keywords: ansible, azure, разработка и операции, bash, clouds
 ms.topic: tutorial
 ms.date: 10/30/2020
 ms.custom: devx-track-ansible, devx-track-azurecli
-ms.openlocfilehash: dd9a6f2b76c6d653eba9542d3b5dfdda4cb75ba5
-ms.sourcegitcommit: e1175aa94709b14b283645986a34a385999fb3f7
+ms.openlocfilehash: d5d3095384fb3f192f7e8cd74b2a49b41b47f239
+ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93192356"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224738"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>Руководство по настройке динамических списков ресурсов Azure с помощью Ansible
 
@@ -133,16 +133,16 @@ Ansible предоставляет сценарий Python [azure_rm.py](https:/
     ansible all -m ping -i ./myazure_rm.yml
     ```
 
-1. При выполнении предыдущей команды может возникнуть ошибка. Эта ошибка может указывать на проблему с подключением к узлу из-за 
+1. По умолчанию проверка ключа узла включена, что может привести к следующей ошибке.
 
     ```output
     Failed to connect to the host via ssh: Host key verification failed.
     ```
-    
-    Если произошла ошибка "проверки ключа узла", добавьте следующую строку в файл конфигурации Ansible. Файл конфигурации Ansible расположен здесь: `/etc/ansible/ansible.cfg` или `~/.ansible.cfg`.
+
+    Отключите проверку ключа узла, задав для переменной среды `ANSIBLE_HOST_KEY_CHECKING` значение `False`.
 
     ```bash
-    host_key_checking = False
+    export ANSIBLE_HOST_KEY_CHECKING=False
     ```
 
 1. После запуска сборника схем отобразятся результаты, как показано ниже.

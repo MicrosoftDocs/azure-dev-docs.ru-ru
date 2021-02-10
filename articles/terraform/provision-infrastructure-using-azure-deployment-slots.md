@@ -5,12 +5,12 @@ keywords: Azure DevOps, Terraform, слоты развертывания
 ms.topic: how-to
 ms.date: 01/07/2021
 ms.custom: devx-track-terraform
-ms.openlocfilehash: 0a7bb2fa3e5a0251b6a441ef8312726d93d29e07
-ms.sourcegitcommit: 347bfa3b6c34579c567d1324efc63c1d6672a75b
+ms.openlocfilehash: 5464764dbfbe7ff52b7f0b47f8f15e2c7af629ae
+ms.sourcegitcommit: 3843092e47691fbd32452c93d51f894a0cab31db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98109137"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99069111"
 ---
 # <a name="provision-infrastructure-with-azure-deployment-slots-using-terraform"></a>подготовке инфраструктуры со слотами развертывания Azure с помощью Terraform
 
@@ -195,7 +195,7 @@ ms.locfileid: "98109137"
 
 1. На вкладке **Выбор ветви** щелкните **master** (главная).
 
-    ![Выбор главной ветви](./media/provision-infrastructure-using-azure-deployment-slots/choose-branch-master.png)
+    ![Выбор ветви](./media/provision-infrastructure-using-azure-deployment-slots/choose-branch-master.png)
 
 1. На вкладке **Вариант развертывания** нажмите кнопку **ОК**.
 
@@ -203,7 +203,7 @@ ms.locfileid: "98109137"
 
 - На шаге 3 выберите ресурс **slotAppServiceSlotOne**.
 
-- На шаге 13 выберите рабочую ветвь вместо главной.
+- На шаге 13 выберите рабочую ветвь.
 
     ![Выбор рабочей ветви](./media/provision-infrastructure-using-azure-deployment-slots/choose-branch-working.png)
 

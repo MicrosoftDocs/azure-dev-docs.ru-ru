@@ -2,19 +2,36 @@
 title: Документация по новым возможностям JavaScript
 description: Документация по новым возможностям JavaScript в Центре разработчиков
 ms.topic: conceptual
-ms.date: 01/05/2021
-ms.openlocfilehash: 71f4db11833d0c5346ee6204c94ecd943bb4f126
-ms.sourcegitcommit: 0eb25e1fdafcd64118843748dc061f60e7e48332
+ms.date: 02/02/2021
+ms.openlocfilehash: 9bfb3b8b05861a50d82fc878b74e14ddd3402dae
+ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98625905"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510965"
 ---
 # <a name="javascript-docs-whats-new"></a>Документация по JavaScript: Новые возможности
 
 Узнайте о новом и обновленном содержимом для разработчиков JavaScript и TypeScript.
 
+## <a name="2021-february"></a>Февраль 2021 г.
+
+### <a name="whats-new"></a>Новые возможности
+
+|Имя|Примечания|
+|---------------------------------------|--|
+|[Использование MongoDB в Azure Cosmos DB](./how-to/with-database/use-mongodb-as-cosmosdb.md)|Для создания, перемещения или использования базы данных MongoDB в Azure требуется ресурс Cosmos DB. Узнайте, как создать ресурс и использовать свою базу данных. |
+
 ## <a name="2021-january"></a>Январь 2021 г
+
+### <a name="whats-new"></a>Новые возможности
+
+|Имя|Примечания|
+|---------------------------------------|--|
+|[Обзоры новых возможностей от советников по разработке](whats-new-developer-advocacy.md)|Блоги, видео и модули Learn|
+|[Учебник. Преобразование текста в речь](./tutorial/convert-text-to-speech-cognitive-services.md)|В этом руководстве описано, как добавить службу "Речь" из Cognitive Services в существующее приложение Express.js, чтобы реализовать в нем преобразование из текста в речь с помощью этой службы. Преобразование текста в речь позволяет выводить аудио без затрат на его генерирование вручную.|
+|Руководство по Azure CLI|* [Создание и использование реестра контейнеров](./how-to/with-azure-cli/create-container-registry-resource.md)<br>* [Настройка пользовательского доменного имени](./how-to/with-azure-cli/configure-app-service-custom-domain-name.md)<br>* [Создание и использование MongoDB в Azure с помощью Cosmos DB](./how-to/with-azure-cli/create-mongodb-cosmosdb.md) |
+|Руководство по Visual Studio Code|* [Разработка и отладка Node.js](./how-to/with-visual-studio-code/install-run-debug-nodejs.md)<br>* [Клонирование и использование репозитория GitHub](./how-to/with-visual-studio-code/clone-github-repository.md)<br>* [Создание образа контейнера из локального проекта JavaScript](./how-to/with-visual-studio-code/containerize-local-project.md)|
 
 ### <a name="whats-updated"></a>Обновления
 
@@ -22,6 +39,7 @@ ms.locfileid: "98625905"
 |---------------------------------------|--|
 |[**Для начинающих**](learn-azure-javascript.md#getting-started)|Различные коллекции онлайн-материалов для начала работы с JavaScript, Node.js, веб-разработкой и другими направлениями для разработчиков на JavaScript.|
 |[Распространенные задачи для разработчиков JavaScript](how-to/common-javascript-tasks.md)|Здесь вы можете найти примеры текущих задач.|
+|[Настройка файла запуска Visual Studio Code](./how-to/configure-web-app-settings.md#configure-browser-for-cors-to-connect-with-server)|Если вам нужно подключиться к собственному серверу и при этом игнорировать защиту CORS во время выполнения и отладки на локальном клиенте, рекомендуется настроить этот параметр в файле отладки Visual Studio Code (`launch.json`), чтобы передать параметры в браузер для отключения защиты.|
 
 ## <a name="2020-december"></a>Декабрь 2020 г.
 

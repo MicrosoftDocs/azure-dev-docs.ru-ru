@@ -1,25 +1,27 @@
 ---
 title: Настройка ведения журнала в библиотеках Azure для Python
 description: Библиотеки Azure используют стандартный модуль ведения журнала Python, который настраивается отдельно для каждой библиотеки или для каждой операции.
-ms.date: 06/04/2020
+ms.date: 02/01/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 0c08ba9c514bf9bca3c982ccf3ef3182f203e247
-ms.sourcegitcommit: 980efe813d1f86e7e00929a0a3e1de83514ad7eb
+ms.openlocfilehash: f42941ec54876fec5854a0a82cee1cbcf30506ce
+ms.sourcegitcommit: b09d3aa79113af04a245b05cec2f810e43062152
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87983319"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99476450"
 ---
 # <a name="configure-logging-in-the-azure-libraries-for-python"></a>Настройка ведения журнала в библиотеках Azure для Python
 
 Библиотеки Azure для Python, которые [основаны на странице azure.core](azure-sdk-library-package-index.md#libraries-using-azurecore), обеспечивают вывод журналов с помощью стандартной библиотеки [ведения журнала](https://docs.python.org/3/library/logging.html) Python.
 
-Вывод средства ведения журнала не включен по умолчанию. Чтобы включить ведение журнала, сделайте следующее:
+Общий процесс работы с ведением журнала выглядит следующим образом:
 
 1. Получите объект ведения журнала для нужной библиотеки и установите уровень ведения журнала.
 1. Зарегистрируйте обработчик для потока ведения журнала.
-1. Включите ведение журнала, передав параметр `logging_enable=True` в конструктор клиентского объекта или в конкретный метод.
+1. Чтобы добавить данные HTTP, передайте параметр `logging_enable=True` в конструктор клиентского объекта, конструктор объекта учетных данных или в конкретный метод.
+
+Подробные сведения приведены в остальных разделах этой статьи.
 
 Обычно, чтобы разобраться в использовании ведения журнала в библиотеках, лучше всего просто изучить исходный код пакета SDK, который доступен по адресу [github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python). Мы рекомендуем клонировать этот репозиторий на локальный компьютер, чтобы легко найти нужные данные, когда потребуется (например, при работе со следующими разделами).
 
@@ -73,7 +75,7 @@ print(f"Logger enabled for ERROR={logger.isEnabledFor(logging.ERROR)}, " \
 | logging.ERROR;             | Сбои, после которых приложение вряд ли восстановится (например, недостаточно памяти). |
 | logging.WARNING (уровень по умолчанию) | Функция не может выполнить поставленную задачу (но не в тех случаях, когда эта функция может восстановить работу самостоятельно, как, например, при повторах вызова REST API). Функции обычно заносят предупреждение в журнал при создании исключений. Уровень предупреждений автоматически включает уровень ошибок. |
 | logging.INFO              | Функция работает нормально или отменен вызов службы. Информационные события обычно содержат запросы, ответы и заголовки. Уровень информационных сообщений автоматически включает уровни ошибок и предупреждений. |
-| logging.DEBUG             | Подробные сведения, которые обычно используются для устранения неполадок. Уровень отладки — единственный уровень ведения журнала, который сохраняет в заголовках конфиденциальные сведения, например ключи учетной записи. Выходные данные уровня отладки обычно содержат трассировку стека исключений. Уровень отладки автоматически включает уровни информационных сведений, предупреждений и ошибок. |
+| logging.DEBUG             | Подробные сведения, которые могут помочь при устранении неполадок и содержат трассировку стека для исключений. Уровень отладки автоматически включает уровни информационных сведений, предупреждений и ошибок. CAUTION. Если вы также задали `logging_enable=True`, уровень отладки будет содержать конфиденциальные сведения, такие как ключи учетных записей в заголовках и другие учетные данные. Убедитесь, что эти журналы защищены, чтобы избежать нарушения безопасности. |
 | logging.NOTSET            | Ведение журнала отключено. |
 
 ### <a name="library-specific-logging-level-behavior"></a>Поведение уровней ведения журнала для конкретных библиотек
@@ -104,41 +106,58 @@ handler = logging.StreamHandler(stream=sys.stdout)
 logger.addHandler(handler)
 ```
 
-В этом примере регистрируется обработчик, который направляет выходные данные ведения журнала в stdout. Вы можете использовать и другие типы обработчиков, как описано в разделе [logging.handlers](https://docs.python.org/3/library/logging.handlers.html) в документации по Python.
+В этом примере регистрируется обработчик, который направляет выходные данные ведения журнала в stdout. Вы можете использовать и другие типы обработчиков, как описано в разделе [logging.handlers](https://docs.python.org/3/library/logging.handlers.html) в документации по Python, или стандартный метод [logging.basicConfig](https://docs.python.org/3/library/logging.html#logging.basicConfig).
 
-## <a name="enable-logging-for-a-client-object-or-operation"></a>Включение ведения журнала для клиентского объекта или операции
+## <a name="enable-http-logging-for-a-client-object-or-operation"></a>Включение ведения журнала на основе данных HTTP для клиентского объекта или операции
 
-Когда вы настроите уровень ведения журнала и зарегистрируете обработчик, нужно включить ведение журнала в библиотеке Azure для конструктора клиентского объекта или метода операции.
+По умолчанию в библиотеках Azure журналы не содержат данные HTTP. Чтобы добавить данные HTTP в выходные данные журнала (как на уровне DEBUG), необходимо явным образом передать `logging_enable=True` конструктору объекта клиента или учетных данных, или конкретному методу.
 
-### <a name="enable-logging-for-a-client-object"></a>Включение ведения журнала для клиентского объекта
+**CAUTION**. При ведении журнала на основе данных HTTP журнал может содержать конфиденциальные сведения, такие как ключи учетных записей в заголовках и другие учетные данные. Убедитесь, что эти журналы защищены, чтобы избежать нарушения безопасности.
+
+### <a name="enable-http-logging-for-a-client-object-debug-level"></a>Настройка ведения журнала на основе данных HTTP для клиентского объекта (уровень DEBUG)
 
 ```python
 from azure.storage.blob import BlobClient
 from azure.identity import DefaultAzureCredential
 
+# Enable HTTP logging on the client object when using DEBUG level
 # endpoint is the Blob storage URL.
 client = BlobClient(endpoint, DefaultAzureCredential(), logging_enable=True)
 ```
 
-При включении ведения журнала для клиентского объекта оно применяется для всех операций, которые вызываются через этот объект.
+Если вы настроите ведение журнала HTTP для клиентского объекта, оно будет применяется для всех операций, которые вызываются через этот объект.
 
-### <a name="enable-logging-for-an-operation"></a>Включение ведения журнала для операции
+### <a name="enable-http-logging-for-a-credential-object-debug-level"></a>Настройка ведения журнала на основе данных HTTP для объекта учетных данных (уровень DEBUG)
 
 ```python
 from azure.storage.blob import BlobClient
 from azure.identity import DefaultAzureCredential
 
-# Logging is not enabled on this client.
+# Enable HTTP logging on the credential object when using DEBUG level
+credential = DefaultAzureCredential(logging_enable=True)
+
+# endpoint is the Blob storage URL.
+client = BlobClient(endpoint, credential)
+```
+
+Настройка ведения журнала HTTP для объекта учетных данных позволяет создавать журналы для всех операций, вызванных через этот объект, в частности, но не для операций в клиентском объекте, не затрагивающих проверку подлинности.
+
+### <a name="enable-logging-for-an-individual-method-debug-level"></a>Настройка ведения журнала для отдельного метода (уровень DEBUG)
+
+```python
+from azure.storage.blob import BlobClient
+from azure.identity import DefaultAzureCredential
+
 # endpoint is the Blob storage URL.
 client = BlobClient(endpoint, DefaultAzureCredential())
 
-# Enable logging for only this operation
+# Enable HTTP logging for only this operation when using DEBUG level
 client.create_container("container01", logging_enable=True)
 ```
 
 ## <a name="example-logging-output"></a>Пример выходных данных журнала
 
-Следующий код мы уже видели в [примере использования учетной записи хранения](azure-sdk-example-storage-use.md), но в него добавлено ведение журнала на уровне отладки (комментарии опущены для краткости):
+Следующий код мы уже видели в [примере использования учетной записи хранения](azure-sdk-example-storage-use.md), но в него добавлено ведение журнала HTTP на уровне DEBUG (комментарии опущены для краткости):
 
 ```python
 import os, sys, logging

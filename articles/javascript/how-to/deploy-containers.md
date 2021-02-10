@@ -4,12 +4,12 @@ description: Развертывание приложений Node.js в Azure с
 ms.topic: how-to
 ms.date: 12/07/2020
 ms.custom: seo-javascript-september2019, devx-track-js
-ms.openlocfilehash: 6bf8acb66a708433966bdfe90cc358a56d2d3b42
-ms.sourcegitcommit: ae2fa266a36958c04625bb0ab212e6f2db98e026
+ms.openlocfilehash: 50c26c26fffc0c9377b661d79858dd97318bd3c2
+ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96857812"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99224788"
 ---
 # <a name="deploy-nodejs-container-to-azure"></a>Развертывание контейнеров Node.js в Azure 
 
@@ -29,18 +29,9 @@ ms.locfileid: "96857812"
 
 ## <a name="build-containerize-and-deploy-app-to-azure"></a>Сборка, контейнеризация и развертывание приложения в Azure
 
-Чтобы приступить к работе, ознакомьтесь со сведениями из [этого учебника](develop-nodejs-on-azure.md), чтобы узнать, как выполнять следующие действия:
-
-* Скачивание образца кода
-* Запуск приложения Node.js
-* Отладка приложения в Visual Studio Code.
-* Контейнеризация приложения Node.js MEAN.
-* Развертывание приложения с помощью команд Azure CLI.
-* Создание сервера MongoDB в ресурсе CosmosDB.
-* Добавление образа контейнера в частный реестр контейнеров.
-* Добавление личного доменного имени в веб-приложение.
-* Масштабирование веб-приложения до большего размера.
-* Создание и удаление группы ресурсов для всех ресурсов.
+Чтобы начать работу, выберите в списке:
+* Руководство по [Express.js](../tutorial/tutorial-vscode-docker-node/tutorial-vscode-docker-node-01.md)
+* Руководство по [Deno](../tutorial/deploy-deno-app-azure-app-service-azure-cli.md)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
