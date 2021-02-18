@@ -4,7 +4,7 @@
     - name: Подсказка
       items:
         - name: Краткое руководство по Python с подсказками
-          href: tool-tip-metric.md
+          href: tool-tip-metrics.md
     - name: "Лаборатории\_— формат руководства"
       items:
         - name: "Python и Flask\_— приложение с одной страницей"
