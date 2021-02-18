@@ -1,15 +1,15 @@
 ---
 title: Поток разработки в Azure
 description: Общие сведения о цикле разработки в облаке в Azure, включающем в себя подготовку, написание кода, тестирование, развертывание и управление.
-ms.date: 10/06/2020
+ms.date: 02/16/2021
 ms.topic: conceptual
 ms.custom: devx-track-python
-ms.openlocfilehash: 149bf0c56de95d2f1230e2bc527c64da780bd5ad
-ms.sourcegitcommit: 29b161c450479e5d264473482d31e8d3bf29c7c0
+ms.openlocfilehash: c2187f43da3159cc623e2ace671561ece2cf1758
+ms.sourcegitcommit: b882128a763f81dba83913bfff1e9cd1ec70818f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91764767"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "100642290"
 ---
 # <a name="the-azure-development-flow-provision-code-test-deploy-and-manage"></a>Поток разработки Azure: подготовка, написание кода, тестирование, развертывание и управление
 

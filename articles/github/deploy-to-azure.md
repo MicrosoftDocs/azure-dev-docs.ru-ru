@@ -7,12 +7,12 @@ ms.topic: reference
 ms.service: azure
 ms.date: 11/19/2020
 ms.custom: github-actions-azure
-ms.openlocfilehash: 0d83e0d2b0e36fea0d54f176744a797352d11085
-ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
+ms.openlocfilehash: b77386d4fe688c67d448f3f0d5835e697f90313b
+ms.sourcegitcommit: 7287dff6bf4b30c2033924702c941bf520403e07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96442154"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589410"
 ---
 # <a name="deploy-apps-from-github-to-azure"></a>Развертывание приложений из GitHub в Azure
 
@@ -35,7 +35,7 @@ ms.locfileid: "96442154"
 
 ## <a name="azure-key-vault"></a>Azure Key Vault
 
-- [Использование секретов Key Vault в рабочих процессах GitHub Actions](/azure/key-vault/secrets/quick-create-github-secret)
+- [Использование секретов Key Vault в рабочих процессах GitHub Actions](github-key-vault.md)
 
 ## <a name="azure-storage"></a>Хранилище Azure
 

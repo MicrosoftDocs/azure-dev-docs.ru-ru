@@ -5,12 +5,13 @@ keywords: azure devops terraform установка настройка cloud she
 ms.topic: quickstart
 ms.date: 09/27/2020
 ms.custom: devx-track-terraform, devx-track-azurecli
-ms.openlocfilehash: 70a7c1dc9db76c51d5923fc3b82200eca2976b2c
-ms.sourcegitcommit: 1ddcb0f24d2ae3d1f813ec0f4369865a1c6ef322
+adobe-target: true
+ms.openlocfilehash: 6befee6004b23410693f82c83f62e52318fd1c08
+ms.sourcegitcommit: b380f6e637b47e6e3822b364136853e1d342d5cd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92688911"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100395409"
 ---
 # <a name="quickstart-configure-terraform-using-azure-cloud-shell"></a>Краткое руководство. Настройка Terraform с помощью Azure Cloud Shell
  
@@ -75,7 +76,7 @@ az login
 
 Разрешения для автоматизированных средств, которые развертывают или используют службы Azure (такие как Terraform), всегда должны быть ограничены. В качестве замены входу в приложения с использованием учетной записи пользователя с полными правами Azure предлагает субъекты-службы. Но что делать, если у вас нет субъекта-службы, с которым будет выполняться вход? В этом сценарии можно войти с использованием учетных данных пользователя, а затем создать субъект-службу. После создания субъекта-службы можно использовать его данные для будущих попыток входа.
 
-Существует множество способов [создать субъект-службу с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?). В этой статье мы с помощью команды [az ad sp create-for-rbac](/cli/azure/ad/sp?#az-ad-sp-create-for-rbac) создадим субъект-службу с ролью **участника** . Роль **Участник** (по умолчанию) предоставляет полные разрешения на чтение и запись в учетной записи Azure. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
+Существует множество способов [создать субъект-службу с помощью Azure CLI](/cli/azure/create-an-azure-service-principal-azure-cli?). В этой статье мы с помощью команды [az ad sp create-for-rbac](/cli/azure/ad/sp?#az-ad-sp-create-for-rbac) создадим субъект-службу с ролью **участника**. Роль **Участник** (по умолчанию) предоставляет полные разрешения на чтение и запись в учетной записи Azure. Дополнительные сведения об управлении доступом на основе ролей см. в статье [Встроенные роли для управления доступом на основе ролей в Azure](/azure/active-directory/role-based-access-built-in-roles).
 
 Введите следующую команду, заменив `<subscription_id>` значением идентификатора учетной записи подписки, которую вы хотите использовать.
 
@@ -88,7 +89,7 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<subscrip
 - После успешного выполнения `az ad sp create-for-rbac` отображает несколько значений. Значения `name`, `password` и `tenant` используются на следующем шаге.
 - Пароль невозможно извлечь, если он утерян. Следовательно, пароль нужно хранить в надежном месте. Если вы забыли пароль, потребуется [сбросить учетные данные субъекта-службы](/cli/azure/create-an-azure-service-principal-azure-cli#reset-credentials).
 
-**Вход с помощью субъекта-службы Azure** : В следующем вызове `az login` замените заполнители реальными данными для субъекта-службы.
+**Вход с помощью субъекта-службы Azure**: В следующем вызове `az login` замените заполнители реальными данными для субъекта-службы.
 
 ```azurecli
 az login --service-principal -u <service_principal_name> -p "<service_principal_password>" --tenant "<service_principal_tenant>"

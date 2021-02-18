@@ -3,16 +3,18 @@ title: Руководство. Развертывание из GitHub в Слу�
 description: Узнайте, как настроить Jenkins для обеспечения непрерывной интеграции (CI) и непрерывного развертывания (CD) из GitHub в Службе Azure Kubernetes (AKS).
 keywords: Jenkins, Azure, DevOps, AKS, Служба Azure Kubernetes, GitHub
 ms.topic: article
-ms.date: 10/29/2019
+ms.date: 02/05/2021
 ms.custom: devx-track-jenkins, devx-track-azurecli
-ms.openlocfilehash: 137f7cf050c9d31adc9e56a70fbb98e29342e142
-ms.sourcegitcommit: 3d906f265b748fbc0a070fce252098675674c8d9
+ms.openlocfilehash: b64037f6a6113208182fa6c9f28e53005928dbab
+ms.sourcegitcommit: bccbab4883e6b6b4926fc194c35ad948b11ccc3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699972"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99822757"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>Руководство по развертыванию из GitHub в Службе Azure Kubernetes с помощью Jenkins
+
+[!INCLUDE [jenkins-integration-with-azure.md](includes/jenkins-integration-with-azure.md)]
 
 В рамках этого руководства мы развернем пример приложения из GitHub в [Службе Azure Kubernetes (AKS) на платформе Linux](/azure/aks/intro-kubernetes), настроив непрерывную интеграцию (CI) и непрерывное развертывание (CD) в Jenkins. Таким образом, когда вы решите обновить приложение, отправив фиксации в GitHub, Jenkins автоматически запустит новую сборку контейнера, поместит образы контейнеров в Реестр контейнеров Azure (ACR), а затем запустит приложение в AKS. 
 
