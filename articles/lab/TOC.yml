@@ -1,6 +1,10 @@
 - name: "Лаборатории\_— возможности разработки"
   href: index.yml
   items:
+    - name: Подсказка
+      items:
+        - name: Краткое руководство по Python с подсказками
+          href: tool-tip-metric.md
     - name: "Лаборатории\_— формат руководства"
       items:
         - name: "Python и Flask\_— приложение с одной страницей"
