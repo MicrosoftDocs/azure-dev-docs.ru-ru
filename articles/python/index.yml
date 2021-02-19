@@ -14,12 +14,12 @@ metadata:
   ms.service: multiple
   ms.devlang: python
   ms.custom: devx-track-python
-  ms.openlocfilehash: 2dbd633555e7841eb28f58813a9ba292da989dd6
-  ms.sourcegitcommit: 324da872a9dfd4c55b34739824fc6a6598f2ae12
+  ms.openlocfilehash: b242630cbc9b2e352e857704402dbac84f1564a5
+  ms.sourcegitcommit: 450cfb580f0fef7aabd38a7db17ecf7502126ce4
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/02/2020
-  ms.locfileid: "89374545"
+  ms.lasthandoff: 02/16/2021
+  ms.locfileid: "100548835"
 landingContent:
 - title: Бессерверные функции
   linkLists:
@@ -39,16 +39,32 @@ landingContent:
     links:
     - text: Использование Flask с Visual Studio Code
       url: tutorial-deploy-app-service-on-linux-01.md
-    - text: Использование Flask с командной строкой
+    - text: Использование Flask с CLI
       url: /azure/app-service/quickstart-python
     - text: Использование Django и PostgreSQL на портале Azure
       url: tutorial-python-postgresql-app-portal.md
-    - text: Использование Django и PostgreSQL с командной строкой
+    - text: Использование Django и PostgreSQL с CLI
       url: /azure/app-service/tutorial-python-postgresql-app
     - text: Использование контейнеров с Visual Studio Code
       url: tutorial-deploy-containers-01.md
     - text: Конвейер CI/CD
       url: /azure/devops/pipelines/ecosystems/python-webapp
+- title: Ваше мнение
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Сообщите нам свое мнение об этой странице
+      url: https://ux.microsoft.com/Talk/PythonDevCenterDocumentation
+- title: Данные и хранилище
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: базы данных SQL;
+      url: quickstarts-data-solutions.md#sql-databases
+    - text: Таблицы, большие двоичные объекты, файлы, NoSQL
+      url: quickstarts-data-solutions.md#tables-blobs-files-nosql
+    - text: Большие данные и аналитика
+      url: quickstarts-data-solutions.md#big-data-and-analytics
 - title: Машинное обучение
   linkLists:
   - linkListType: how-to-guide
@@ -63,16 +79,6 @@ landingContent:
       url: quickstarts-cognitive-services.md
     - text: Дополнительно...
       url: quickstarts-machine-learning.md
-- title: Данные и хранилище
-  linkLists:
-  - linkListType: deploy
-    links:
-    - text: базы данных SQL;
-      url: quickstarts-data-solutions.md#sql-databases
-    - text: Таблицы, большие двоичные объекты, файлы, NoSQL
-      url: quickstarts-data-solutions.md#tables-blobs-files-nosql
-    - text: Большие данные и аналитика
-      url: quickstarts-data-solutions.md#big-data-and-analytics
 - title: Библиотеки Azure (пакет SDK)
   linkLists:
   - linkListType: get-started
