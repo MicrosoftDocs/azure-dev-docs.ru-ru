@@ -3,17 +3,17 @@ title: Создание приложения Spring Cloud Stream Binder с по�
 description: Настройка приложения Spring Cloud Stream Binder на основе Java, созданного с помощью Spring Boot Initializr и Центров событий Azure.
 services: event-hubs
 documentationcenter: java
-ms.date: 10/13/2020
+ms.date: 02/08/2021
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.custom: devx-track-java, devx-track-azurecli
-ms.openlocfilehash: 0cc3289243c1a146cf59ecb15c5150327f49c236
-ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
+ms.openlocfilehash: d0c87ce32caddc0100b91abd800a18179ba4101e
+ms.sourcegitcommit: bccbab4883e6b6b4926fc194c35ad948b11ccc3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94560307"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99822725"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Создание приложения Spring Cloud Stream Binder с помощью Центров событий Azure
 
@@ -26,7 +26,7 @@ ms.locfileid: "94560307"
 * [Apache Maven](http://maven.apache.org/) версии 3.0 или более поздней.
 
 > [!IMPORTANT]
-> Для выполнения операций, описанных в этой статье, требуется Spring Boot 2.2 или более поздней версии.
+> Для выполнения операций, описанных в этой статье, требуется Spring Boot 2.2 или 2.3.
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Создание концентратора событий на портале Azure
 
@@ -103,7 +103,7 @@ ms.locfileid: "94560307"
 1. Задайте такие параметры:
 
    * Выберите в соответствующих полях **Maven Project** (Проект Maven) и **Java**.
-   * Выберите для **Spring Boot** версию не ниже 2.2.
+   * Укажите версию **Spring Boot** **2.3**.
    * Заполните поля **Group** (Группа) и **Artifact** (Артефакт) для приложения.
    * Выберите версию Java **8**.
    * Добавьте зависимость *Web* (Веб).
@@ -134,9 +134,9 @@ ms.locfileid: "94560307"
 
    ```xml
    <dependency>
-      <groupId>com.microsoft.azure</groupId>
-      <artifactId>spring-cloud-azure-eventhubs-stream-binder</artifactId>
-      <version>1.2.7</version>
+     <groupId>com.azure.spring</groupId>
+     <artifactId>azure-spring-cloud-stream-binder-eventhubs</artifactId>
+     <version>2.1.0</version>
    </dependency>
    ```
 
@@ -158,118 +158,65 @@ ms.locfileid: "94560307"
 
 1. Сохраните и закройте файл *pom.xml*.
 
-## <a name="create-an-azure-credential-file"></a>Создание файла учетных данных Azure
-
-1. Откройте командную строку.
-
-1. Перейдите к каталогу *resources* приложения Spring Boot, например так:
-
-   ```cmd
-   cd C:\SpringBoot\eventhubs-sample\src\main\resources
-   ```
-
-   -или-
-
-   ```bash
-   cd /users/example/home/eventhubs-sample/src/main/resources
-   ```
-
-1. Вход в учетную запись Azure:
-
-   ```azurecli
-   az login
-   ```
-
-1. Отобразите список подписок:
-
-   ```azurecli
-   az account list
-   ```
-   Azure отобразит список подписок, и вам нужно будет скопировать идентификатор GUID для подписки, которая будет использоваться, например:
-
-   ```json
-   [
-     {
-       "cloudName": "AzureCloud",
-       "id": "11111111-1111-1111-1111-111111111111",
-       "isDefault": true,
-       "name": "Converted Windows Azure MSDN - Visual Studio Ultimate",
-       "state": "Enabled",
-       "tenantId": "22222222-2222-2222-2222-222222222222",
-       "user": {
-         "name": "user@contoso.com",
-         "type": "user"
-       }
-     }
-   ]
-   ```
-   
-1. Укажите GUID подписки, которую вы собираетесь использовать в Azure, например:
-
-   ```azurecli
-   az account set -s 11111111-1111-1111-1111-111111111111
-   ```
-
-1. Создайте файл учетных данных Azure:
-
-   ```azurecli
-   az ad sp create-for-rbac --sdk-auth > my.azureauth
-   ```
-
-   Эта команда создаст файл *my.azureauth* в каталоге *resources* приблизительно с таким содержимым:
-
-   ```json
-   {
-     "clientId": "33333333-3333-3333-3333-333333333333",
-     "clientSecret": "44444444-4444-4444-4444-444444444444",
-     "subscriptionId": "11111111-1111-1111-1111-111111111111",
-     "tenantId": "22222222-2222-2222-2222-222222222222",
-     "activeDirectoryEndpointUrl": "https://login.microsoftonline.com",
-     "resourceManagerEndpointUrl": "https://management.azure.com/",
-     "activeDirectoryGraphResourceId": "https://graph.windows.net/",
-     "sqlManagementEndpointUrl": "https://management.core.windows.net:8443/",
-     "galleryEndpointUrl": "https://gallery.azure.com/",
-     "managementEndpointUrl": "https://management.core.windows.net/"
-   }
-   ```
-
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-event-hub"></a>Настройка приложения Spring Boot для использования концентратора событий Azure
 
-1. Найдите файл *application.properties* в каталоге *resources* приложения, например так:
+1. Найдите файл *application.yaml* в каталоге *resources* приложения, например:
 
-   *C:\SpringBoot\eventhubs-sample\src\main\resources\application.properties*
+   *C:\SpringBoot\eventhubs-sample\src\main\resources\application.yaml*
 
    -или-
 
-   */users/example/home/eventhubs-sample/src/main/resources/application.properties*
+   */users/example/home/eventhubs-sample/src/main/resources/application.yaml*
 
-2. Откройте файл *application.properties* в текстовом редакторе, добавьте следующие строки и замените примеры значений соответствующими параметрами концентратора событий:
+2. Откройте файл *application.yaml* в текстовом редакторе, добавьте следующие строки и замените примеры значений соответствующими свойствами центра событий:
 
    ```yaml
-   spring.cloud.azure.credential-file-path=my.azureauth
-   spring.cloud.azure.resource-group=wingtiptoysresources
-   spring.cloud.azure.region=West US
-   spring.cloud.azure.eventhub.namespace=wingtiptoysnamespace
-   spring.cloud.azure.eventhub.checkpoint-storage-account=wingtiptoysstorage
-   spring.cloud.stream.bindings.input.destination=wingtiptoyshub
-   spring.cloud.stream.bindings.input.group=$Default
-   spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
-   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
+    spring:
+      cloud:
+        azure:
+          eventhub:
+            connection-string: [eventhub-namespace-connection-string]
+            checkpoint-storage-account: wingtiptoysstorage
+            checkpoint-access-key: [checkpoint-access-key]
+            checkpoint-container: wingtiptoyscontainer
+            
+        stream:
+          bindings:
+            consume-in-0:
+              destination: wingtiptoyshub
+              group: $Default
+            supply-out-0:
+              destination: wingtiptoyshub
+   
+          eventhub:
+            bindings:
+              consume-in-0:
+                consumer:
+                  checkpoint-mode: MANUAL
+          function:
+            definition: consume;supply;
+          poller:
+            initial-delay: 0
+            fixed-delay: 1000
    ```
+
    Где:
 
    |                          Поле                           |                                                                                   Описание                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |        `spring.cloud.azure.credential-file-path`         |                                                    Определяет файл учетных данных Azure, который был создан ранее в этом примере.                                                    |
-   |           `spring.cloud.azure.resource-group`            |                                                      Определяет группу ресурсов Azure, которая содержит концентратор событий Azure.                                                      |
-   |               `spring.cloud.azure.region`                |                                           Определяет географический регион, указанный при создании концентратора событий Azure.                                            |
-   |         `spring.cloud.azure.eventhub.namespace`          |                                          Определяет уникальное имя, заданное при создании пространства имен концентратора событий Azure.                                           |
-   | `spring.cloud.azure.eventhub.checkpoint-storage-account` |                                                    Определяет учетную запись хранения Azure, которая была создана ранее в этом примере.                                                    |
-   |     `spring.cloud.stream.bindings.input.destination`     |                            Определяет назначение входящих данных концентратора событий Azure, которым в этом примере является сам концентратор, созданный ранее.                            |
-   |       `spring.cloud.stream.bindings.input.group `        | Определяет группу потребителей концентратора событий Azure, для которой можно установить значение $Default, чтобы использовать базовую группу потребителей, созданную вместе с концентратором событий Azure. |
-   |    `spring.cloud.stream.bindings.output.destination`     |                               Определяет назначение исходящих данных для концентратора событий Azure, которое в этом примере совпадает с назначением входящих данных.                               |
+   |               `spring.cloud.azure.eventhub.connection-string`                |                                        Укажите строку подключения, полученную из пространства имен Центра событий на портале Azure.                                   |
+   |               `spring.cloud.azure.function.definition`                |                                        Укажите, какой функциональный bean-компонент нужно привязать к внешним назначениям, предоставляемым привязками.                                   |
+   |               `spring.cloud.azure.poller.fixed-delay`                |                                        Укажите фиксированную задержку для модуля опроса по умолчанию в миллисекундах (по умолчанию: 1000).                                   |
+   |               `spring.cloud.azure.poller.initial-delay`                |                                       Укажите начальную задержку для периодических триггеров (по умолчанию: 0).                                   |
+   |               `spring.cloud.stream.bindings.consume-in-0.destination`                 |                            Укажите Центр событий, который использовался в этом учебнике.                         |
+   |               `spring.cloud.stream.bindings.consume-in-0.group`                    |                               Укажите группы потребителей в экземпляре Центра событий.                                |
+   |               `spring.cloud.stream.bindings.supply-out-0.destination`                |                             Укажите тот же Центр событий, который использовался в этом учебнике.                        |
+   | `spring.cloud.stream.eventhub.bindings.consume-in-0.consumer.checkpoint-mode` |                                                       Задайте имя `MANUAL`.                                                   |
+   |               `spring.cloud.stream.eventhub.checkpoint-access-key` |                                                      Укажите ключ доступа к учетной записи хранения.                                                   |
+   |               `spring.cloud.stream.eventhub.checkpoint-container` |                                                       Укажите контейнер учетной записи хранения.                                                   |
+   |               `spring.cloud.stream.eventhub.checkpoint-storage-account` |                                                 Укажите учетную запись хранения, созданную при работе с этим учебником.                                               |
 
-3. Сохраните и закройте файл *application.properties*.
+3. Сохраните и закройте файл *application.yaml*.
 
 ## <a name="add-sample-code-to-implement-basic-event-hub-functionality"></a>Добавление примера кода для реализации базовых функций концентратора событий
 
@@ -279,25 +226,48 @@ ms.locfileid: "94560307"
 
 1. Найдите файл основного приложения Java в каталоге пакета приложения, например:
 
-   *C:\SpringBoot\eventhubs-sample\src\main\java\com\wingtiptoys\eventhub\EventhubApplication.java*
+   *C:\SpringBoot\eventhubs-sample\src\main\java\com\contoso\eventhubs\sample\EventhubSampleApplication.java*
 
    -или-
 
-   */users/example/home/eventhubs-sample/src/main/java/com/wingtiptoys/eventhub/EventhubApplication.java*
+   */users/example/home/eventhubs-sample/src/main/java/com/contoso/eventhubs/sample/EventhubSampleApplication.java*
 
 1. Откройте файл основного приложения Java в текстовом редакторе и добавьте в него следующие строки:
 
    ```java
     package com.contoso.eventhubs.sample;
     
+    import com.azure.spring.integration.core.api.reactor.Checkpointer;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
     import org.springframework.boot.SpringApplication;
     import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.messaging.Message;
+    
+    import java.util.function.Consumer;
+    
+    import static com.azure.spring.integration.core.AzureHeaders.CHECKPOINTER;
     
     @SpringBootApplication
-    public class EventhubsSampleApplication {
+    public class EventhubSampleApplication {
+    
+        public static final Logger LOGGER = LoggerFactory.getLogger(EventhubSampleApplication.class);
     
         public static void main(String[] args) {
-            SpringApplication.run(EventhubsSampleApplication.class, args);
+            SpringApplication.run(EventhubSampleApplication.class, args);
+        }
+    
+        @Bean
+        public Consumer<Message<String>> consume() {
+            return message -> {
+                Checkpointer checkpointer = (Checkpointer) message.getHeaders().get(CHECKPOINTER);
+                LOGGER.info("New message received: '{}'", message);
+                checkpointer.success()
+                            .doOnSuccess(success -> LOGGER.info("Message '{}' successfully checkpointed", message))
+                            .doOnError(error -> LOGGER.error("Exception: {}", error.getMessage()))
+                            .subscribe();
+            };
         }
     
     }
@@ -305,72 +275,79 @@ ms.locfileid: "94560307"
 
 1. Сохраните и закройте файл основного приложения Java.
 
-### <a name="create-a-new-class-for-the-source-connector"></a>Создание класса для соединителя источника
+### <a name="create-a-new-configuration-class"></a>Создание класса конфигурации
 
-1. В каталоге пакета приложения создайте файл Java с именем *EventhubSource.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
+1. В каталоге пакета приложения создайте файл Java с именем *EventProducerConfiguration.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
     ```java
     package com.contoso.eventhubs.sample;
     
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.cloud.stream.annotation.EnableBinding;
-    import org.springframework.cloud.stream.messaging.Source;
-    import org.springframework.messaging.support.GenericMessage;
-    import org.springframework.web.bind.annotation.PostMapping;
-    import org.springframework.web.bind.annotation.RequestBody;
-    import org.springframework.web.bind.annotation.RestController;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
+    import org.springframework.messaging.Message;
+    import reactor.core.publisher.EmitterProcessor;
+    import reactor.core.publisher.Flux;
     
-    @EnableBinding(Source.class)
-    @RestController
-    public class EventhubSource {
+    import java.util.function.Supplier;
     
-        @Autowired
-        private Source source;
+    @Configuration
+    public class EventProducerConfiguration {
     
-        @PostMapping("/messages")
-        public String postMessage(@RequestBody String message) {
-            this.source.output().send(new GenericMessage<>(message));
-            return message;
+        private static final Logger LOGGER = LoggerFactory.getLogger(EventProducerConfiguration.class);
+    
+        @Bean
+        public EmitterProcessor<Message<String>> emitter() {
+            return EmitterProcessor.create();
+        }
+    
+        @Bean
+        public Supplier<Flux<Message<String>>> supply(EmitterProcessor<Message<String>> emitter) {
+            return () -> Flux.from(emitter)
+                             .doOnNext(m -> LOGGER.info("Manually sending message {}", m))
+                             .doOnError(t -> LOGGER.error("Error encountered", t));
         }
     }
     ```
-1. Сохраните и закройте файл *EventhubSource.java*.
+1. Сохраните и закройте файл *EventProducerConfiguration.java*.
 
-### <a name="create-a-new-class-for-the-sink-connector"></a>Создание класса для соединителя приемника
+### <a name="create-a-new-controller-class"></a>Создание класса контроллера
 
-1. В каталоге пакета приложения создайте файл Java с именем *EventhubSink.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
+1. В каталоге пакета приложения создайте файл Java с именем *EventProducerController.java*, а затем откройте этот файл в текстовом редакторе и добавьте следующие строки:
 
    ```java
    package com.contoso.eventhubs.sample;
-
-   import com.microsoft.azure.spring.integration.core.AzureHeaders;
-   import com.microsoft.azure.spring.integration.core.api.reactor.Checkpointer;
+   
    import org.slf4j.Logger;
    import org.slf4j.LoggerFactory;
-   import org.springframework.cloud.stream.annotation.EnableBinding;
-   import org.springframework.cloud.stream.annotation.StreamListener;
-   import org.springframework.cloud.stream.messaging.Sink;
-   import org.springframework.messaging.handler.annotation.Header;
-
-   @EnableBinding(Sink.class)
-   public class EventhubSink {
-
-      private static final Logger LOGGER = LoggerFactory.getLogger(EventhubSink.class);
-
-      @StreamListener(Sink.INPUT)
-      public void handleMessage(String message, @Header(AzureHeaders.CHECKPOINTER) Checkpointer checkpointer) {
-        LOGGER.info("New message received: '{}'", message);
-        checkpointer.success()
-                .doOnSuccess(s -> LOGGER.info("Message '{}' successfully checkpointed", message))
-                .doOnError((msg) -> {
-                    LOGGER.error(String.valueOf(msg));
-                })
-                .subscribe();
-      }
+   import org.springframework.beans.factory.annotation.Autowired;
+   import org.springframework.http.ResponseEntity;
+   import org.springframework.messaging.Message;
+   import org.springframework.messaging.support.MessageBuilder;
+   import org.springframework.web.bind.annotation.PostMapping;
+   import org.springframework.web.bind.annotation.RequestBody;
+   import org.springframework.web.bind.annotation.RestController;
+   import reactor.core.publisher.EmitterProcessor;
+   
+   @RestController
+   public class EventProducerController {
+   
+       public static final Logger LOGGER = LoggerFactory.getLogger(EventProducerController.class);
+   
+       @Autowired
+       private EmitterProcessor<Message<String>> emitterProcessor;
+   
+       @PostMapping("/messages")
+       public ResponseEntity<String> sendMessage(@RequestBody String message) {
+           LOGGER.info("Going to add message {} to emitter", message);
+           emitterProcessor.onNext(MessageBuilder.withPayload(message).build());
+           return ResponseEntity.ok("Sent!");
+       }
    }
    ```
 
-1. Сохраните и закройте файл *EventhubSink.java*.
+1. Сохраните и закройте файл *EventProducerController.java*.
 
 ## <a name="build-and-test-your-application"></a>Сборка и тестирование приложения
 
@@ -402,8 +379,8 @@ ms.locfileid: "94560307"
    В журналах приложения должна появиться запись "hello". Пример:
 
    ```output
-   2020-09-11 15:11:12.138  INFO 7616 --- [      elastic-4] c.contoso.eventhubs.sample.EventhubSink  : New message received: 'hello'
-   2020-09-11 15:11:12.406  INFO 7616 --- [ctor-http-nio-1] c.contoso.eventhubs.sample.EventhubSink  : Message 'hello' successfully checkpointed
+   2020-09-11 15:11:12.138  INFO 7616 --- [      elastic-4] c.contoso.eventhubs.sample.EventhubSampleApplication  : New message received: 'hello'
+   2020-09-11 15:11:12.406  INFO 7616 --- [ctor-http-nio-1] c.contoso.eventhubs.sample.EventhubSampleApplication  : Message 'hello' successfully checkpointed
    ```
 
 ## <a name="next-steps"></a>Дальнейшие действия

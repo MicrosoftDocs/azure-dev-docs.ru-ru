@@ -4,15 +4,15 @@ description: В этой статье показано, как использо�
 author: seanli1988
 manager: kyliel
 ms.author: seal
-ms.date: 10/10/2020
+ms.date: 02/04/2021
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: 170d3727b661f18252edb39396739e2791101534
-ms.sourcegitcommit: 709fa38a137b30184a7397e0bfa348822f3ea0a7
+ms.openlocfilehash: 4223927cd99e652e8fb06dd8250c39b191f36a94
+ms.sourcegitcommit: bccbab4883e6b6b4926fc194c35ad948b11ccc3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96441803"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99822707"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Использование Spring Cloud Azure Stream Binder для служебной шины Azure
 
@@ -40,7 +40,7 @@ Azure предоставляет платформу асинхронного о�
 
 1. Если у вас нет настроенной очереди или раздела служебной шины, используйте портал Azure, чтобы [создать очередь служебной шины](/azure/service-bus-messaging/service-bus-quickstart-portal) или [создать раздел служебной шины](/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). Убедитесь, что пространство имен соответствует требованиям, указанным на предыдущем шаге. Кроме того, запишите строку подключения в пространстве имен так, как это требуется для тестового приложения этого руководства.
 
-1. Если у вас нет приложения Spring Boot, **создайте проект** Maven [ с использованием Spring Initializr](https://start.spring.io/). Не забудьте выбрать **Проект Maven**, а затем в разделе **Зависимости** добавить зависимость **Интернет** и выбрать для Java версию **8**.
+1. Если у вас нет приложения Spring Boot, **создайте проект** Maven [ с использованием Spring Initializr](https://start.spring.io/). Обязательно выберите **Проект Maven**, а затем в разделе **Зависимости** добавьте зависимость **Интернет**, для **Spring Boot** выберите 2.3.8, для версии Java выберите **8**.
 
 
 ## <a name="use-the-spring-cloud-stream-binder-starter"></a>Используйте пускатель Spring Cloud Stream Binder
@@ -63,7 +63,7 @@ Azure предоставляет платформу асинхронного о�
     <dependency>
         <groupId>com.azure.spring</groupId>
         <artifactId>azure-spring-cloud-stream-binder-servicebus-queue</artifactId>
-        <version>2.0.0-beta.1</version> <!-- {x-version-update;com.azure.spring:azure-spring-cloud-stream-binder-servicebus-queue;current} -->
+        <version>2.1.0</version>
     </dependency>
     ```
 
@@ -73,7 +73,7 @@ Azure предоставляет платформу асинхронного о�
     <dependency>
         <groupId>com.azure.spring</groupId>
         <artifactId>azure-spring-cloud-stream-binder-servicebus-topic</artifactId>
-        <version>2.0.0-beta.1</version> <!-- {x-version-update;com.azure.spring:azure-spring-cloud-stream-binder-servicebus-topic;current} -->
+        <version>2.1.0</version>
     </dependency>
     ```
 
@@ -100,32 +100,71 @@ Azure предоставляет платформу асинхронного о�
     **Очередь служебной шины**
 
     ```yaml
-    spring.cloud.azure.servicebus.connection-string=<ServiceBusNamespaceConnectionString>
-    spring.cloud.stream.bindings.input.destination=examplequeue
-    spring.cloud.stream.bindings.output.destination=examplequeue
-    spring.cloud.stream.servicebus.queue.bindings.input.consumer.checkpoint-mode=MANUAL
+    spring:
+      cloud:
+        azure:
+          servicebus:
+            connection-string: <ServiceBusNamespaceConnectionString>
+        stream:
+          bindings:
+            consume-in-0:
+              destination: examplequeue
+            supply-out-0:
+              destination: examplequeue
+          servicebus:
+            queue:
+              bindings:
+                consume-in-0:
+                  consumer:
+                    checkpoint-mode: MANUAL
+          function:
+            definition: consume;supply;
+          poller:
+            fixed-delay: 1000
+            initial-delay: 0
     ```
 
     **Раздел служебной шины**
 
     ```yaml
-    spring.cloud.azure.servicebus.connection-string=<ServiceBusNamespaceConnectionString>
-    spring.cloud.stream.bindings.input.destination=exampletopic
-    spring.cloud.stream.bindings.input.group=examplesubscription
-    spring.cloud.stream.bindings.output.destination=exampletopic
-    spring.cloud.stream.servicebus.topic.bindings.input.consumer.checkpoint-mode=MANUAL
+    spring:
+      cloud:
+        azure:
+          servicebus:
+            connection-string: <ServiceBusNamespaceConnectionString>
+        stream:
+          bindings:
+            consume-in-0:
+              destination: exampletopic
+              group: examplesubscription
+            supply-out-0:
+              destination: exampletopic
+          servicebus:
+            topic:
+              bindings:
+                consume-in-0:
+                  consumer:
+                    checkpoint-mode: MANUAL
+          function:
+            definition: consume;supply;
+          poller:
+            fixed-delay: 1000
+            initial-delay: 0
     ```
 
     **<a name="fd">Описания полей</a>**
 
     |                                        Поле                                   |                                                                                   Описание                                                                                    |
     |--------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    |               `spring.cloud.azure.function.definition`                |                                        Укажите, какой функциональный bean-компонент нужно привязать к внешним назначениям, предоставляемым привязками.                                   |
+    |               `spring.cloud.azure.poller.fixed-delay`                |                                        Укажите фиксированную задержку для модуля опроса по умолчанию в миллисекундах (по умолчанию: 1000).                                   |
+    |               `spring.cloud.azure.poller.initial-delay`                |                                       Укажите начальную задержку для периодических триггеров (по умолчанию: 0).                                   |
     |               `spring.cloud.azure.servicebus.connection-string`                |                                        Укажите строку подключения, полученную из пространства имен служебной шины на портале Azure.                                   |
-    |               `spring.cloud.stream.bindings.input.destination`                 |                            Укажите очередь служебной шины или раздел служебной шины, использованные в этом руководстве.                         |
-    |                  `spring.cloud.stream.bindings.input.group`                    |                                            Если вы использовали раздел служебной шины, укажите подписку на раздел.                                |
-    |               `spring.cloud.stream.bindings.output.destination`                |                               Укажите то же значение, которое использовалось для назначения ввода.                        |
-    | `spring.cloud.stream.servicebus.queue.bindings.input.consumer.checkpoint-mode` |                                                       Задайте имя `MANUAL`.                                                   |
-    | `spring.cloud.stream.servicebus.topic.bindings.input.consumer.checkpoint-mode` |                                                       Задайте имя `MANUAL`.                                                   |
+    |               `spring.cloud.stream.bindings.consume-in-0.destination`                 |                            Укажите очередь служебной шины или раздел служебной шины, использованные в этом руководстве.                         |
+    |                  `spring.cloud.stream.bindings.consume-in-0.group`                    |                                            Если вы использовали раздел служебной шины, укажите подписку на раздел.                                |
+    |               `spring.cloud.stream.bindings.supply-out-0.destination`                |                               Укажите то же значение, которое использовалось для назначения ввода.                        |
+    | `spring.cloud.stream.servicebus.queue.bindings.consume-in-0.consumer.checkpoint-mode` |                                                       Укажите `MANUAL`.                                                   |
+    | `spring.cloud.stream.servicebus.topic.bindings.consume-in-0.consumer.checkpoint-mode` |                                                       Задайте имя `MANUAL`.                                                   |
 
 1. Сохраните и закройте файл *application.properties*.
 
@@ -148,89 +187,131 @@ Azure предоставляет платформу асинхронного о�
 1. Добавьте в него указанный ниже код.
 
     ```java
-    package com.example;
-
-    import org.springframework.boot.SpringApplication;
-    import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-    @SpringBootApplication
-    public class ServiceBusBinderApplication {
-
-        public static void main(String[] args) {
-            SpringApplication.run(ServiceBusBinderApplication.class, args);
-        }
-    }
+   package com.example;
+   
+   import com.azure.spring.integration.core.api.Checkpointer;
+   import org.slf4j.Logger;
+   import org.slf4j.LoggerFactory;
+   import org.springframework.boot.SpringApplication;
+   import org.springframework.boot.autoconfigure.SpringBootApplication;
+   import org.springframework.context.annotation.Bean;
+   import org.springframework.messaging.Message;
+   
+   import java.util.function.Consumer;
+   
+   import static com.azure.spring.integration.core.AzureHeaders.CHECKPOINTER;
+   
+   @SpringBootApplication
+   public class ServiceBusBinderApplication {
+   
+       private static final Logger LOGGER = LoggerFactory.getLogger(ServiceBusBinderApplication.class);
+   
+       public static void main(String[] args) {
+           SpringApplication.run(ServiceBusBinderApplication.class, args);
+       }
+   
+       @Bean
+       public Consumer<Message<String>> consume() {
+           return message -> {
+               Checkpointer checkpointer = (Checkpointer) message.getHeaders().get(CHECKPOINTER);
+               LOGGER.info("New message received: '{}'", message);
+               checkpointer.success().handle((r, ex) -> {
+                   if (ex == null) {
+                       LOGGER.info("Message '{}' successfully checkpointed", message);
+                   }
+                   return null;
+               });
+           };
+       }
+   }
     ```
 
 1. Сохраните файл и закройте его.
 
-### <a name="create-a-new-class-for-the-source-connector"></a>Создание класса для соединителя источника
+### <a name="create-a-new-producer-configuration-class"></a>Создание класса конфигурации производителя
 
-1. С помощью текстового редактора создайте файл Java с именем *StreamBinderSource.java* в каталоге пакета приложения.
+1. С помощью текстового редактора создайте файл Java с именем *ServiceProducerConfiguration.java* в каталоге пакета приложения.
 
 1. Добавьте в новый файл указанный ниже код:
 
     ```java
-    package com.example;
-
-    import org.springframework.beans.factory.annotation.Autowired;
-    import org.springframework.cloud.stream.annotation.EnableBinding;
-    import org.springframework.cloud.stream.messaging.Source;
-    import org.springframework.messaging.support.GenericMessage;
-    import org.springframework.web.bind.annotation.PostMapping;
-    import org.springframework.web.bind.annotation.RequestParam;
-    import org.springframework.web.bind.annotation.RestController;
-
-    @EnableBinding(Source.class)
-    @RestController
-    public class StreamBinderSource {
-
-        @Autowired
-        private Source source;
-
-        @PostMapping("/messages")
-        public String postMessage(@RequestParam String message) {
-            this.source.output().send(new GenericMessage<>(message));
-            return message;
-        }
-    }
+   package com.example;
+   
+   import org.slf4j.Logger;
+   import org.slf4j.LoggerFactory;
+   import org.springframework.context.annotation.Bean;
+   import org.springframework.context.annotation.Configuration;
+   import org.springframework.messaging.Message;
+   import reactor.core.publisher.EmitterProcessor;
+   import reactor.core.publisher.Flux;
+   
+   import java.util.function.Supplier;
+   
+   @Configuration
+   public class ServiceProducerConfiguration {
+   
+       private static final Logger LOGGER = LoggerFactory.getLogger(ServiceProducerConfiguration.class);
+   
+       @Bean
+       public EmitterProcessor<Message<String>> emitter() {
+           return EmitterProcessor.create();
+       }
+   
+       @Bean
+       public Supplier<Flux<Message<String>>> supply(EmitterProcessor<Message<String>> emitter) {
+           return () -> Flux.from(emitter)
+                            .doOnNext(m -> LOGGER.info("Manually sending message {}", m))
+                            .doOnError(t -> LOGGER.error("Error encountered", t));
+       }
+   }
     ```
 
-1. Сохраните и закройте файл *StreamBinderSources.java*.
+1. Сохраните и закройте файл *ServiceProducerConfiguration.java*.
 
-### <a name="create-a-new-class-for-the-sink-connector"></a>Создание класса для соединителя приемника
+### <a name="create-a-new-controller-class"></a>Создание класса контроллера
 
-1. С помощью текстового редактора создайте файл Java с именем *StreamBinderSink.java* в каталоге пакета приложения.
+1. С помощью текстового редактора создайте файл Java с именем *ServiceProducerController.java* в каталоге пакета приложения.
 
 1. Добавьте в новый файл следующие строки кода:
 
     ```java
-    package com.example;
-
-    import com.microsoft.azure.spring.integration.core.AzureHeaders;
-    import com.microsoft.azure.spring.integration.core.api.Checkpointer;
-    import org.springframework.cloud.stream.annotation.EnableBinding;
-    import org.springframework.cloud.stream.annotation.StreamListener;
-    import org.springframework.cloud.stream.messaging.Sink;
-    import org.springframework.messaging.handler.annotation.Header;
-
-    @EnableBinding(Sink.class)
-    public class StreamBinderSink {
-
-        @StreamListener(Sink.INPUT)
-        public void handleMessage(String message, @Header(AzureHeaders.CHECKPOINTER) Checkpointer checkpointer) {
-            System.out.println(String.format("New message received: '%s'", message));
-            checkpointer.success().handle((r, ex) -> {
-                if (ex == null) {
-                    System.out.println(String.format("Message '%s' successfully checkpointed", message));
-                }
-                return null;
-            });
-        }
-    }
+   package com.example;
+   
+   import org.slf4j.Logger;
+   import org.slf4j.LoggerFactory;
+   import org.springframework.beans.factory.annotation.Autowired;
+   import org.springframework.http.ResponseEntity;
+   import org.springframework.messaging.Message;
+   import org.springframework.messaging.support.MessageBuilder;
+   import org.springframework.web.bind.annotation.GetMapping;
+   import org.springframework.web.bind.annotation.PostMapping;
+   import org.springframework.web.bind.annotation.RequestParam;
+   import org.springframework.web.bind.annotation.RestController;
+   import reactor.core.publisher.EmitterProcessor;
+   
+   @RestController
+   public class ServiceProducerController {
+   
+       private static final Logger LOGGER = LoggerFactory.getLogger(ServiceProducerController.class);
+   
+       @Autowired
+       private EmitterProcessor<Message<String>> emitterProcessor;
+   
+       @PostMapping("/messages")
+       public ResponseEntity<String> sendMessage(@RequestParam String message) {
+           LOGGER.info("Going to add message {} to emitter", message);
+           emitterProcessor.onNext(MessageBuilder.withPayload(message).build());
+           return ResponseEntity.ok("Sent!");
+       }
+   
+       @GetMapping("/")
+       public String welcome() {
+           return "welcome";
+       }
+   }
     ```
 
-1. Сохраните и закройте файл *StreamBinderSink.java*.
+1. Сохраните и закройте файл *ServiceProducerController.java*.
 
 ## <a name="build-and-test-your-application"></a>Сборка и тестирование приложения
 

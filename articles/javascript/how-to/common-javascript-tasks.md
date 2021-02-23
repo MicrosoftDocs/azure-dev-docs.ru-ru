@@ -4,18 +4,20 @@ description: Здесь вы можете найти примеры текущи
 ms.topic: reference
 ms.date: 01/20/2021
 ms.custom: devx-track-js
-ms.openlocfilehash: cc5ca751b8d22612c63d26a46934eb5b4c057c69
-ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+ms.openlocfilehash: 9da8ede8dfbf7ffc54fce9531f4b490ae9db1942
+ms.sourcegitcommit: 7287dff6bf4b30c2033924702c941bf520403e07
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99511002"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589440"
 ---
 # <a name="top-tasks-for-javascript-developers"></a>Распространенные задачи для разработчиков JavaScript
 
 Здесь вы можете найти пример текущей задачи. Если вы не можете найти задачу, оставьте отзыв с запросом задачи. 
 
 ## <a name="app-registration"></a>Регистрация приложений
+
+[Документация по регистрации приложений](/azure/active-directory/develop/quickstart-register-app)
 
 |Задача|using|
 |--|--|
@@ -56,6 +58,8 @@ ms.locfileid: "99511002"
 
 ### <a name="static-web-apps"></a>Статические веб-приложения
 
+[Документация по службе](/azure/static-web-apps/)
+
 |Задача|using|
 |--|--|
 |Создание приложения Angular|[Bash](../tutorial/tutorial-vscode-static-website-node/tutorial-vscode-static-website-node-02.md?tabs=angular)|
@@ -71,6 +75,8 @@ ms.locfileid: "99511002"
 
 ### <a name="function-serverless-apps"></a>Приложения Функции (бессерверные)
 
+[Документация по службе](/azure/azure-functions/)
+
 |Задача|using|
 |--|--|
 |Локальное создание приложений Функций|[Расширение Visual Studio Code](../tutorial/tutorial-vscode-serverless-node-create-local.md)|
@@ -81,6 +87,8 @@ ms.locfileid: "99511002"
 |Удаление ресурса приложения-функции|[Расширение Visual Studio Code](../tutorial/tutorial-vscode-serverless-node-remove-resource.md)|
 
 ### <a name="app-service---full-stack-server-only-or-client-only-apps"></a>Служба приложений — полный стек, только серверные или только клиентские приложения
+
+[Документация по службе](/azure/app-service/)
 
 |Задача|using|
 |--|--|
@@ -99,6 +107,8 @@ ms.locfileid: "99511002"
 |Удаленные журналы потоковой передачи|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code.md?tabs=bash#7-stream-remote-service-logs-in-visual-studio-code)<br>[Azure CLI](../tutorial/tutorial-vscode-azure-cli-node/tutorial-vscode-azure-cli-node-05.md)|
 
 ## <a name="cognitive-services"></a>Cognitive Services
+
+[Документация по группе служб](/azure/cognitive-services/)
 
 |Задача|using|
 |--|--|
@@ -128,12 +138,29 @@ ms.locfileid: "99511002"
 
 ## <a name="databases"></a>Базы данных
 
+### <a name="mariadb"></a>MariaDB
+
+[Документация по службе](/azure/mariadb/)
+
+|Задача|Использование|
+|--|--|
+|Создание ресурса MariaDB|[Портал Azure](https://ms.portal.azure.com/#create/Microsoft.MariaDBServer)<br>[Azure CLI](./with-azure-cli/create-mariadb.md#create-a-mariadb-resource-with-azure-cli)<br>[@azure/arm-mariadb](https://www.npmjs.com/package/@azure/arm-mariadb)|
+|Создание базы данных MariaDB в ресурсе|[Azure CLI](./with-azure-cli/create-mariadb.md#create-a-mariadb-resource-with-azure-cli)|
+|Получение строки подключения|[Azure CLI](./with-azure-cli/create-mariadb.md#get-the-mariadb-connection-string-with-azure-cli)|
+|Использование и просмотр базы данных|CLI _mysql_ в [Azure Cloud Shell](https://shell.azure.com/)<br>[MySQL Workbench](https://www.mysql.com/products/workbench/)<br>[Расширение Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-mysql)<br>[npm mariadb](https://www.npmjs.com/package/mariadb)<br>[JavaScript](./with-database/use-mariadb.md#use-mariadb-sdk-to-connect-to-mariadb-on-azure)|
+
+### <a name="mongodb-on-cosmos-db"></a>MongoDB в Cosmos DB
+
+[Документация по службе](/azure/cosmos-db/)
+
 |Задача|using|
 |--|--|
 |Создание ресурса Cosmos DB для MongoDB|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md)<br>[Azure CLI](./with-azure-cli/create-mongodb-cosmosdb.md#create-a-cosmos-db-resource-for-mongodb)|
 |Получение строки подключения CosmosDB|[Расширение Visual Studio Code](../tutorial/deploy-nodejs-mongodb-app-service-from-visual-studio-code.md#get-cosmosdb-connection-string)<br>[Azure CLI](./with-azure-cli/create-mongodb-cosmosdb.md#get-the-mongodb-connection-string-for-your-resource)|
 |Просмотр Cosmos DB|[Обозреватель Azure Cosmos DB](https://cosmos.azure.com/)|
 |Использование API Mongoose для mongoDB в Cosmos DB|[JavaScript](./with-database/use-mongodb-as-cosmosdb.md#use-mongoose-sdk-to-connect-to-mongodb-on-azure)
+
+
 
 ## <a name="git"></a>Git
 
@@ -164,6 +191,8 @@ ms.locfileid: "99511002"
 
 ## <a name="storage"></a>Память
 
+[Документация по службе](/azure/storage/)
+
 |Задача|using|
 |--|--|
 |Создайте ресурс|[Расширение Visual Studio Code](../tutorial/browser-file-upload-azure-storage-blob.md#3-create-storage-resource-with-visual-studio-extension)|
@@ -187,6 +216,8 @@ ms.locfileid: "99511002"
 
 ## <a name="virtual-machines"></a>Виртуальные машины
 
+[Документация по службе](/azure/virtual-machines/)
+
 |Задача|using|
 |--|--|
 |Подключение к виртуальной машине по протоколу SSH.|[Bash](../tutorial/nodejs-virtual-machine-vm/connect-linux-virtual-machine-ssh.md#connect-with-ssh-and-change-web-app)|
@@ -199,6 +230,8 @@ ms.locfileid: "99511002"
 
 
 ## <a name="visual-studio-code-develop-and-debug-javascript-apps"></a>Visual Studio Code: Разработка и отладка приложений JavaScript 
+
+[Документация по средству](https://code.visualstudio.com/docs)
 
 |Задача|using|
 |--|--|

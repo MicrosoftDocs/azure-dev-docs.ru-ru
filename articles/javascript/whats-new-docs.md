@@ -2,13 +2,13 @@
 title: Документация по новым возможностям JavaScript
 description: Документация по новым возможностям JavaScript в Центре разработчиков
 ms.topic: conceptual
-ms.date: 02/02/2021
-ms.openlocfilehash: 9bfb3b8b05861a50d82fc878b74e14ddd3402dae
-ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+ms.date: 02/08/2021
+ms.openlocfilehash: 37d68d713c4b6ba51d35efb033f68fe2b2e60680
+ms.sourcegitcommit: 98a7e855206ff463c1d95f93c23dd665b26a0aa1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99510965"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100004715"
 ---
 # <a name="javascript-docs-whats-new"></a>Документация по JavaScript: Новые возможности
 
@@ -21,6 +21,9 @@ ms.locfileid: "99510965"
 |Имя|Примечания|
 |---------------------------------------|--|
 |[Использование MongoDB в Azure Cosmos DB](./how-to/with-database/use-mongodb-as-cosmosdb.md)|Для создания, перемещения или использования базы данных MongoDB в Azure требуется ресурс Cosmos DB. Узнайте, как создать ресурс и использовать свою базу данных. |
+|[Как использовать MariaDB в Azure](./how-to/with-database/use-mariadb.md)|Для создания, перемещения или использования базы данных MariaDB в Azure необходим ресурс **Базы данных Azure для MariaDB**. Узнайте, как создать ресурс и использовать свою базу данных.|
+|[Как использовать MySQL в Azure](./how-to/with-database/use-mysql-db.md)|Для создания, перемещения или использования базы данных MySQL в Azure необходим ресурс **Базы данных Azure для MySQL**. Узнайте, как создать ресурс и использовать свою базу данных.|
+|[Как использовать PostgreSQL в Azure](./how-to/with-database/use-postgresql-db.md)|Для создания, перемещения или использования базы данных PostgreSQL в Azure необходим ресурс **Базы данных Azure для сервера PostgreSQL**. Узнайте, как создать ресурс и использовать свою базу данных.|
 
 ## <a name="2021-january"></a>Январь 2021 г
 

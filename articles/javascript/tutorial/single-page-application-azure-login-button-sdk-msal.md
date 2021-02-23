@@ -2,14 +2,16 @@
 title: Руководство по добавлению кнопки входа Майкрософт для одностраничного приложения React
 description: Проверка подлинности Azure Active Directory, описанная в этом учебнике, выполняется с помощью кнопки входа и выхода, которая предоставляет доступ к учетной записи пользователя (электронной почте). Разработайте приложение TypeScript с помощью клиентского пакета SDK Azure `@azure/msal-browser`, чтобы управлять взаимодействием пользователя в одностраничном приложении (SPA).
 ms.topic: tutorial
-ms.date: 12/01/2020
+ms.date: 02/16/2020
 ms.custom: devx-track-js, "azure-sdk-javascript-@azure/msal-browser-2.7.0"
-ms.openlocfilehash: ffbc8ea2824f7bbfaef3a3ae3579537633f9455b
-ms.sourcegitcommit: 593d177cfb5f56f236ea59389e43a984da30f104
+ms.history:
+- 20210216:fix public issue 443
+ms.openlocfilehash: d5d64f1de3637c79a081e64dbf3cd632e15a3ef3
+ms.sourcegitcommit: 450cfb580f0fef7aabd38a7db17ecf7502126ce4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2021
-ms.locfileid: "98561660"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100548845"
 ---
 # <a name="add-microsoft-login-button-to-a-single-page-application-for-authentication"></a>Добавление кнопки входа Майкрософт в одностраничное приложение для выполнения проверки подлинности
 
@@ -31,7 +33,7 @@ ms.locfileid: "98561660"
 
 ## <a name="1-set-up-development-environment"></a>1. Настройка среды разработки
 
-Убедитесь, что на локальном компьютере установлены указанные ниже компоненты.
+Убедитесь, что на локальном компьютере установлено следующее программное обеспечение.
 
 - Учетная запись Azure с активной подпиской. [Создайте бесплатно](https://azure.microsoft.com/free/).
 - Установите на локальный компьютер [Node.js и npm](https://nodejs.org/en/download).
