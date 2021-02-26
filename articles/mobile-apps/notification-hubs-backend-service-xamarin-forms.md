@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: 308e727f57ed086899d4fb5906235cb5a17bda16
-ms.sourcegitcommit: ced8331ba36b28e6e2eacd23a64b39ddc7ffe6ab
+ms.openlocfilehash: d42f44226169232c18ebdd8039f0cf9ceb1018fc
+ms.sourcegitcommit: 54f976887d218aaabd94371e24809716da8cf86e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92337190"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99554326"
 ---
 # <a name="tutorial-send-push-notifications-to-xamarinforms-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по отправке push-уведомлений в приложения Xamarin.Forms с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -63,7 +63,7 @@ ms.locfileid: "92337190"
 Вам не потребуется наличие опыта для выполнения действий, которые описаны в этом примере демонстрации общих концепций. Но знакомство со следующими аспектами может оказаться полезным.
 
 * [Портал разработчиков Azure](https://developer.apple.com)
-* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1) и [веб-API](https://dotnet.microsoft.com/apps/aspnet/apis)
+* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core) и [веб-API](https://dotnet.microsoft.com/apps/aspnet/apis)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
 * [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started)
 * [Xamarin](https://dotnet.microsoft.com/apps/xamarin) и [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
@@ -120,7 +120,7 @@ ms.locfileid: "92337190"
 ## <a name="related-links"></a>Связанные ссылки
 
 * [Общие сведения о Центрах уведомлений Azure](/azure/notification-hubs/notification-hubs-push-notification-overview)
-* [Установка Visual Studio для Mac](/visualstudio/mac/installation?view=vsmac-2019)
+* [Установка Visual Studio для Mac](/visualstudio/mac/installation)
 * [Установка Xamarin в Windows](/xamarin/get-started/installation/windows)
 * [Пакет средств разработки Центров уведомлений для операций серверной части](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
 * [Пакет средств разработки для Центров уведомлений на GitHub](https://github.com/Azure/azure-notificationhubs)

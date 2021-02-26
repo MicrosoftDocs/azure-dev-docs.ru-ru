@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: alstrakh
-ms.openlocfilehash: b8846a2171c6f99a4796d288774c3b525093238a
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: ac6b1cc183cd06f8186a678e006602c57a54238e
+ms.sourcegitcommit: 54f976887d218aaabd94371e24809716da8cf86e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493250"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99554341"
 ---
 # <a name="tutorial-send-push-notifications-to-react-native-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по отправке push-уведомлений в приложения React Native с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -62,7 +62,7 @@ ms.locfileid: "91493250"
 Вам не потребуется наличие опыта для выполнения действий, которые описаны в этом примере демонстрации общих концепций. Но знакомство со следующими аспектами может оказаться полезным.
 
 * [Портал разработчиков Azure](https://developer.apple.com)
-* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
+* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
 * [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started)
 * [React Native](https://reactnative.dev/docs/getting-started).
@@ -118,7 +118,7 @@ ms.locfileid: "91493250"
 ## <a name="related-links"></a>Связанные ссылки
 
 * [Общие сведения о Центрах уведомлений Azure](/azure/notification-hubs/notification-hubs-push-notification-overview)
-* [Установка Visual Studio для Mac](/visualstudio/mac/installation?view=vsmac-2019)
+* [Установка Visual Studio для Mac](/visualstudio/mac/installation)
 * [Установка Visual Studio Code](https://code.visualstudio.com/download)
 * [Настройка среды разработки React Native](https://reactnative.dev/docs/environment-setup)
 * [Пакет средств разработки Центров уведомлений для операций серверной части](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)

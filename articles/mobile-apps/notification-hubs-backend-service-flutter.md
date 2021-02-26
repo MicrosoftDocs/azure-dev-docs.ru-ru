@@ -6,12 +6,12 @@ ms.service: mobile-services
 ms.topic: tutorial
 ms.date: 07/27/2020
 ms.author: miparker
-ms.openlocfilehash: af55486c50addd678f1527f4dff996a9b499596f
-ms.sourcegitcommit: e97cb81a245ce7dcabeac3260abc3db7c30edd79
+ms.openlocfilehash: 9ce42296a1cc1b7ad3cdb0a522880ee40f2897a9
+ms.sourcegitcommit: 54f976887d218aaabd94371e24809716da8cf86e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91493170"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99554300"
 ---
 # <a name="tutorial-send-push-notifications-to-flutter-apps-using-azure-notification-hubs-via-a-backend-service"></a>Руководство по Отправка push-уведомлений в приложения Flutter с помощью Центров уведомлений Azure и внутренней службы  
 
@@ -64,7 +64,7 @@ ms.locfileid: "91493170"
 Вам не потребуется наличие опыта для выполнения действий, которые описаны в этом примере демонстрации общих концепций. Но знакомство со следующими аспектами может оказаться полезным.
 
 * [Портал разработчика Apple](https://developer.apple.com)
-* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-3.1)
+* [ASP.NET Core](/aspnet/core/introduction-to-aspnet-core)
 * [Консоль Google Firebase](https://console.firebase.google.com/u/0/)
 * [Microsoft Azure](https://portal.azure.com) и [отправка push-уведомлений в приложения iOS с помощью Центров уведомлений Azure](/azure/notification-hubs/ios-sdk-get-started)
 * [Flutter](https://flutter.dev) и [Dart](https://dart.dev) для кросс-платформенной разработки
