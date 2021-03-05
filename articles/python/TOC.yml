@@ -50,6 +50,8 @@
           href: tutorial-python-postgresql-app-portal.md
         - name: Использование Azure CLI
           href: /azure/app-service/tutorial-python-postgresql-app
+    - name: Статические веб-сайты
+      href: how-to-create-static-sites.md
     - name: Настройка непрерывной интеграции и непрерывного развертывания.
       href: /azure/devops/pipelines/languages/python-webapp
     - name: Настройка узла Linux

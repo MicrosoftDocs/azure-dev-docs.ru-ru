@@ -7,12 +7,12 @@ metadata:
   description: Начните разрабатывать приложения для облачной среды, используя эти руководства и средства для разработчиков Java.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: badee30def237b49cb9e46730335e730090fb66b
-  ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+  ms.openlocfilehash: 7c3130d9bb7820f8ddb150fa314292b9e5688811
+  ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 02/03/2021
-  ms.locfileid: "99511095"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102118354"
 conceptualContent:
   items:
   - title: Краткие руководства по Azure для Java
@@ -117,7 +117,7 @@ conceptualContent:
     links:
     - text: Создание функции Azure
       itemType: quickstart
-      url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
+      url: /azure/azure-functions/create-first-function-vs-code-java
     - text: Создание функции Spring Cloud
       itemType: tutorial
       url: ./spring-framework/getting-started-with-spring-cloud-function-in-azure.md
