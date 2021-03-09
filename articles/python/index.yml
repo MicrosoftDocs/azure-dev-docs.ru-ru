@@ -14,19 +14,19 @@ metadata:
   ms.service: multiple
   ms.devlang: python
   ms.custom: devx-track-python
-  ms.openlocfilehash: b242630cbc9b2e352e857704402dbac84f1564a5
-  ms.sourcegitcommit: 450cfb580f0fef7aabd38a7db17ecf7502126ce4
+  ms.openlocfilehash: 831a749cb0fdea1e9c6f1e10431d5060c819ea17
+  ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 02/16/2021
-  ms.locfileid: "100548835"
+  ms.lasthandoff: 03/04/2021
+  ms.locfileid: "102118596"
 landingContent:
 - title: Бессерверные функции
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Развертывание с помощью Visual Studio Code
-      url: tutorial-vs-code-serverless-python-01.md
+      url: /azure/azure-functions/create-first-function-vs-code-python
     - text: Развертывание с использованием командной строки
       url: /azure/azure-functions/functions-create-first-azure-function-azure-cli?pivots=programming-language-python
     - text: Подключение к хранилищу с помощью Visual Studio Code
@@ -47,14 +47,10 @@ landingContent:
       url: /azure/app-service/tutorial-python-postgresql-app
     - text: Использование контейнеров с Visual Studio Code
       url: tutorial-deploy-containers-01.md
+    - text: Статические сайты, использующие службу хранилища Azure
+      url: how-to-create-static-sites.md
     - text: Конвейер CI/CD
       url: /azure/devops/pipelines/ecosystems/python-webapp
-- title: Ваше мнение
-  linkLists:
-  - linkListType: whats-new
-    links:
-    - text: Сообщите нам свое мнение об этой странице
-      url: https://ux.microsoft.com/Talk/PythonDevCenterDocumentation
 - title: Данные и хранилище
   linkLists:
   - linkListType: deploy

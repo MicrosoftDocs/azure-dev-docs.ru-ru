@@ -5,6 +5,8 @@
       href: whats-new-docs.md
     - name: Обзоры новых возможностей от советников по разработке
       href: whats-new-developer-advocacy.md
+    - name: Основные задачи для разработчиков
+      href: how-to/common-javascript-tasks.md
     - name: Начало работы в Azure с JavaScript
       items:
         - name: Что представляет собой Azure для разработчиков JavaScript?
@@ -157,23 +159,33 @@
               href: how-to/with-visual-studio-code/create-azure-database.md
         - name: С помощью Azure CLI
           items:
-            - name: Создание и использование реестра контейнеров
+            - name: Реестр контейнеров
               href: how-to/with-azure-cli/create-container-registry-resource.md
             - name: Настройка доменного имени веб-приложения
               href: how-to/with-azure-cli/configure-app-service-custom-domain-name.md
-            - name: "Использование ресурса Cosmos\_DB для MongoDB"
+            - name: "Ресурс Cosmos\_DB для Cassandra"
+              href: how-to/with-azure-cli/create-cassandra-db.md
+            - name: Кэш для Redis
+              href: how-to/with-azure-cli/create-cache-for-redis-db.md
+            - name: "Ресурс Cosmos\_DB для MongoDB"
               href: how-to/with-azure-cli/create-mongodb-cosmosdb.md
-            - name: Использование ресурса MariaDB
+            - name: Ресурс MariaDB
               href: how-to/with-azure-cli/create-mariadb.md
-            - name: Использование ресурса MySQL
+            - name: Ресурс MySQL
               href: how-to/with-azure-cli/create-mysql-db.md
-            - name: Использование ресурса PostgreSQL
+            - name: Ресурс PostgreSQL
               href: how-to/with-azure-cli/create-postgresql-server-resource.md
+            - name: API SQL в Cosmos DB
+              href: how-to/with-azure-cli/create-cosmos-sql-api-resource.md
         - name: С базами данных
           items:
             - name: Начало работы
               href: how-to/with-database/getting-started.md
-            - name: MongoDB в CosmosDB
+            - name: Кэш для Redis
+              href: how-to/with-database/use-azure-cache-for-redis-db.md
+            - name: Cassandra в Cosmos DB
+              href: how-to/with-database/use-cassandra-as-cosmos-db.md
+            - name: MongoDB в Cosmos DB
               href: how-to/with-database/use-mongodb-as-cosmosdb.md
             - name: MariaDB
               href: how-to/with-database/use-mariadb.md
@@ -181,6 +193,8 @@
               href: how-to/with-database/use-mysql-db.md
             - name: PostgreSQL
               href: how-to/with-database/use-postgresql-db.md
+            - name: API SQL в Cosmos DB
+              href: how-to/with-database/use-sql-api-as-cosmos-db.md
         - name: Развертывание веб-приложения
           href: how-to/deploy-web-app.md
         - name: Развертывание контейнеров
