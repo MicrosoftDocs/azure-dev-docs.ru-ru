@@ -6,12 +6,12 @@ ms.date: 02/02/2021
 ms.topic: conceptual
 ms.custom: devx-track-java
 ms.author: srnagar
-ms.openlocfilehash: 537c030b81913c660b873ac028a7bed90c464b67
-ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+ms.openlocfilehash: 0de76274b7f33f724c339eb0137a89d74f3e8678
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99528644"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102118476"
 ---
 # <a name="log-with-the-azure-sdk-for-java-and-log4j"></a>Создание журналов с помощью Azure SDK для Java и Log4j
 
@@ -85,4 +85,4 @@ rootLogger.appenderRef.stdout.ref = STDOUT
 
 В этой статье описано, как выполнить конфигурацию Log4j и о том, как настроить Azure SDK для Java, чтобы обеспечить использование такой конфигурации для ведения журнала этим средством. Поскольку Azure SDK для Java работает со всеми платформами ведения журналов SLF4J, ознакомьтесь с [руководством пользователя SLF4J](http://www.slf4j.org/manual.html), чтобы получить дополнительные сведения. Если вы используете Log4j, на веб-сайте этого средства также можно найти большое количество руководств по настройке. Дополнительные сведения см. в статье [Вас приветствует Log4j 2!](https://logging.apache.org/log4j/2.x/manual/index.html).
 
-После того как вы научитесь вести журнал, рассмотрите возможность изучения интеграций, предоставляемых Azure для таких платформ, как [Spring](/azure/developer/java/spring-framework/spring-boot-starters-for-azure) и [MicroProfile](/azure/developer/java/eclipse-microprofile/).
+После того как вы научитесь вести журнал, рассмотрите возможность изучения интеграций, предоставляемых Azure для таких платформ, как [Spring](../spring-framework/spring-boot-starters-for-azure.md) и [MicroProfile](../eclipse-microprofile/index.yml).

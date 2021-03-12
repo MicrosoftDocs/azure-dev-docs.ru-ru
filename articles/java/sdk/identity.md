@@ -6,12 +6,12 @@ ms.date: 02/02/2021
 ms.topic: conceptual
 ms.custom: devx-track-java
 ms.author: vigera
-ms.openlocfilehash: 2a09b4ccaf39564c1cd2547417d722472ed9017c
-ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+ms.openlocfilehash: e0349297bed9ee2e499c904483d9c3e018a6cddf
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99528671"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102118556"
 ---
 # <a name="azure-authentication-with-java-and-azure-identity"></a>Аутентификация в Azure с помощью Java и удостоверений Azure
 
@@ -20,7 +20,7 @@ ms.locfileid: "99528671"
 Библиотека удостоверений Azure сейчас поддерживает следующие возможности:
 
 * [Аутентификация Azure в средах разработки Java](identity-dev-env-auth.md) с поддержкой таких типов аутентификации:
-  * аутентификация IDEA IntelliJ с помощью данных для входа, получаемых из [Azure Toolkit for IntelliJ](/azure/developer/java/toolkit-for-intellij/);
+  * аутентификация IDEA IntelliJ с помощью данных для входа, получаемых из [Azure Toolkit for IntelliJ](../toolkit-for-intellij/index.yml);
   * аутентификация Visual Studio Code с помощью данных для входа, сохраненных в [подключаемом модуле Azure для Visual Studio Code](https://code.visualstudio.com/docs/azure/extensions);
   * аутентификация Azure CLI с помощью данных для входа, сохраненных в [Azure CLI](/cli/azure/what-is-azure-cli).
 * [Аутентификация приложений, размещенных в Azure](identity-azure-hosted-auth.md) с поддержкой таких типов аутентификации:

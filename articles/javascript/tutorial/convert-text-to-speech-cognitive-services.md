@@ -4,12 +4,12 @@ description: Используйте службу "Речь" из Cognitive Servi
 ms.topic: tutorial
 ms.date: 01/20/2021
 ms.custom: languages:JavaScript, devx-track-javascript
-ms.openlocfilehash: 911d38854856f2add28958454f7ce020c1cf2a31
-ms.sourcegitcommit: 6fbf9e489b194586887a2c11152044be5b3a2b99
+ms.openlocfilehash: 028871f55a7be2e38191efef37a65ad41ab9c3dc
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98760077"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117888"
 ---
 # <a name="expressjs-app-converts-text-to-speech-with-cognitive-services-speech"></a>Приложение Express.js преобразует текст в речь с помощью службы "Речь" из Cognitive Services
 
@@ -90,11 +90,11 @@ npm install microsoft-cognitiveservices-speech-sdk
     :::code language="javascript" source="~/../js-e2e-express-server-cognitive-services/text-to-speech/src/azure-cognitiveservices-speech.js" highlight="3,21,32" :::
 
     * Параметры — файл извлекает зависимости для использования пакета SDK, потоков, буферов и файловой системы. Функция `textToSpeech` принимает четыре аргумента. Если отправляется имя файла с локальным путем, текст преобразуется в звуковой файл. Если имя файла не отправляется, создается аудиопоток в памяти. 
-    * Метод в пакете SDK службы "Речь" — метод [synthesizer.speakTextAsync](https://docs.microsoft.com/javascript/api/microsoft-cognitiveservices-speech-sdk/speechsynthesizer#speakTextAsync_string___e__SpeechSynthesisResult_____void___e__string_____void__AudioOutputStream___PushAudioOutputStreamCallback___PathLike_) возвращает различные типы в зависимости от полученной конфигурации. 
+    * Метод в пакете SDK службы "Речь" — метод [synthesizer.speakTextAsync](/javascript/api/microsoft-cognitiveservices-speech-sdk/speechsynthesizer#speakTextAsync_string___e__SpeechSynthesisResult_____void___e__string_____void__AudioOutputStream___PushAudioOutputStreamCallback___PathLike_) возвращает различные типы в зависимости от полученной конфигурации. 
         Метод возвращает результат, который зависит от того, что должен был сделать метод:
         * Создать файл 
         * Создать поток в памяти в виде массива буферов.
-    * Формат аудио — для аудио выбран формат MP3, но существуют и [другие форматы](https://docs.microsoft.com/javascript/api/microsoft-cognitiveservices-speech-sdk/speechsynthesisoutputformat?preserve-view=true&view=azure-node-latest), а также другие [методы настройки аудио](https://docs.microsoft.com/javascript/api/microsoft-cognitiveservices-speech-sdk/audioconfig?preserve-view=true&view=azure-node-latest#methods). 
+    * Формат аудио — для аудио выбран формат MP3, но существуют и [другие форматы](/javascript/api/microsoft-cognitiveservices-speech-sdk/speechsynthesisoutputformat?preserve-view=true&view=azure-node-latest), а также другие [методы настройки аудио](/javascript/api/microsoft-cognitiveservices-speech-sdk/audioconfig?preserve-view=true&view=azure-node-latest#methods). 
 
     Локальный метод `textToSpeech` упаковывает и преобразует функцию обратного вызова пакета SDK в обещание. 
 

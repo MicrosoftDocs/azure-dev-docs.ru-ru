@@ -6,12 +6,12 @@ metadata:
   description: Spring — это платформа приложений с открытым кодом, разработанная компанией VMware. Она предлагает упрощенный модульный подход к созданию приложений Java.
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 3aaece404996f82110bc252581771a6311a6c6f1
-  ms.sourcegitcommit: 8e1d3a384ccb0e083589418d65a70b3a01afebff
+  ms.openlocfilehash: 8236e23befec1fac825f701886c88f257aa1e415
+  ms.sourcegitcommit: 3536f174735cd3bb7da7e4b266fbf43349a22b67
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 11/12/2020
-  ms.locfileid: "94560197"
+  ms.lasthandoff: 03/12/2021
+  ms.locfileid: "103193471"
 landingContent:
 - title: Руководство по началу работы
   linkLists:
@@ -25,8 +25,10 @@ landingContent:
     links:
     - text: Хранилище Azure
       url: configure-spring-boot-starter-java-app-with-azure-storage.md
-    - text: Key Vault
+    - text: Секреты Key Vault
       url: configure-spring-boot-starter-java-app-with-azure-key-vault.md
+    - text: Сертификаты Key Vault
+      url: configure-spring-boot-starter-java-app-with-azure-key-vault-certificates.md
     - text: Kafka и Центры событий
       url: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
 - title: Пошаговые инструкции

@@ -6,12 +6,12 @@ ms.date: 02/02/2021
 ms.topic: conceptual
 ms.custom: devx-track-java
 ms.author: srnagar
-ms.openlocfilehash: ca59b7dc9f861dd833788c88c18ce8b14a016e70
-ms.sourcegitcommit: 71847ee0a1fee3f3320503629d9a8c82319a1f6a
+ms.openlocfilehash: 785bb65a1a6f55314246d4c1410891717f8bbd6f
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99528638"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102118162"
 ---
 # <a name="log-with-the-azure-sdk-for-java-and-logback"></a>Создание журналов с помощью Azure SDK для Java и Logback
 
@@ -123,4 +123,4 @@ logging.config=classpath:logback.xml
 
 В этой статье описано, как выполнить конфигурацию Logback и о том, как заставить Azure SDK для Java использовать его для ведения журнала. Поскольку Azure SDK для Java работает со всеми платформами ведения журналов SLF4J, ознакомьтесь с [руководством пользователя SLF4J](http://www.slf4j.org/manual.html), чтобы получить дополнительные сведения. Если вы используете Logback, на веб-сайте этого средства также можно найти большое количество руководств по настройке. Дополнительные сведения см. в разделе[Настройка Logback](http://logback.qos.ch/manual/configuration.html) документации по Logback.
 
-После того как вы научитесь вести журнал, рассмотрите возможность изучения интеграций, предоставляемых Azure для таких платформ, как [Spring](/azure/developer/java/spring-framework/spring-boot-starters-for-azure) и [MicroProfile](/azure/developer/java/eclipse-microprofile/).
+После того как вы научитесь вести журнал, рассмотрите возможность изучения интеграций, предоставляемых Azure для таких платформ, как [Spring](../spring-framework/spring-boot-starters-for-azure.md) и [MicroProfile](../eclipse-microprofile/index.yml).

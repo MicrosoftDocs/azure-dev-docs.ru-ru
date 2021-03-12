@@ -2,14 +2,14 @@
 title: Локальное выполнение приложения Функций Azure в Visual Studio Code
 description: Локально выполните проект Функций Azure перед развертыванием в Azure. Установите точку останова непосредственно перед тем, как бессерверная функция возвращает ответ.
 ms.topic: tutorial
-ms.date: 09/23/2019
+ms.date: 03/02/2021
 ms.custom: devx-track-js, contperf-fy21q2
-ms.openlocfilehash: f345e27074c2070c2f8d8939ed09f8b4301a1966
-ms.sourcegitcommit: c8330128d5d6a71859933a890ecdf047cb950996
+ms.openlocfilehash: e16daa0f9c3db2edf2335c3f35277b1b95fcfef8
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97522346"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117828"
 ---
 # <a name="3-test-the-function-locally"></a>3. Локальное тестирование функции
 
@@ -38,10 +38,6 @@ ms.locfileid: "97522346"
     ![VS Code останавливается по точке останова](../media/functions-extension/debugging-breakpoint.png)
 
     Дополнительные сведения о точках останова и отладке в VS Code см. [здесь](https://code.visualstudio.com/docs/editor/debugging).
-
-> [!Note]
->
-> Если при выполнении этого процесса возникла ошибка с политикой, попробуйте удалить `azure-functions-core-tools@3` с npm, а затем повторно установите пакет в терминале с повышенными привилегиями.
 
 > [!div class="nextstepaction"]
 > [Приложение-функция запущена локально](tutorial-vscode-serverless-node-deploy-hosting.md)[Возникла проблема](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

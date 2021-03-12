@@ -8,12 +8,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: devx-track-java
-ms.openlocfilehash: be90cbf867cfbbb475e1a80655d2ef925069b90a
-ms.sourcegitcommit: f460914ac5843eb7392869a08e3a80af68ab227b
+ms.openlocfilehash: 57dbe81eb0ce2b8b7c8766934b765dd0f057e51b
+ms.sourcegitcommit: 576c878c338d286060010646b96f3ad0fdbcb814
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92010208"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102118319"
 ---
 # <a name="installing-the-azure-toolkit-for-eclipse"></a>Установка набора средств Azure для Eclipse
 
@@ -68,9 +68,9 @@ Azure Toolkit for Eclipse можно установить непосредств
 
 1. В меню **Help** (Справка) выберите пункт **Install New Software** (Установить новое программное обеспечение).
 
-   :::image type="content" source="media/installation/eclipse-install-software-button.png" alt-text="Окно Marketplace, меню Help (Справка)."::: 
+   :::image type="content" source="media/installation/eclipse-install-software-button.png" alt-text="Установка нового программного обеспечения, меню Help (Справка)."::: 
 
-1. В диалоговом окне **Available Software** (Доступное программное обеспечение) введите значение `http://dl.microsoft.com/eclipse/` в текстовое поле **Work with** (Работать с).
+1. В диалоговом окне **Available Software** (Доступное программное обеспечение) введите значение `http://azuredownloads.blob.core.windows.net/eclipse/` в текстовое поле **Work with** (Работать с).
 
 1. В области **Name** (Имя) установите флажок **Azure Toolkit for Java** (Набор средств Azure для Java) и снимите флажок **Contact all update sites during install to find required software** (Проверить все сайты обновления во время установки для поиска требуемого ПО). Экран должен выглядеть следующим образом:
 
