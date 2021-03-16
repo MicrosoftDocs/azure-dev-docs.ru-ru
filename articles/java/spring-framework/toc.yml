@@ -10,9 +10,11 @@
           items:
             - name: Хранилище Azure
               href: configure-spring-boot-starter-java-app-with-azure-storage.md
-            - name: Azure Key Vault
+            - name: Секреты Azure Key Vault
               href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
-            - name: Azure Service Bus
+            - name: Сертификаты Azure Key Vault
+              href: configure-spring-boot-starter-java-app-with-azure-key-vault-certificates.md
+            - name: Служебная шина Azure
               href: configure-spring-boot-starter-java-app-with-azure-service-bus.md
         - name: Spring Data
           expanded: true
