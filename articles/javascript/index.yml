@@ -7,19 +7,19 @@ metadata:
   description: Начните разработку приложений с помощью пакета Azure SDK для JavaScript в браузере или Node.js, используя наши руководства, средства и справочник по пакету SDK.
   author: diberry
   ms.author: diberry
-  ms.date: 01/20/2021
+  ms.date: 03/04/2021
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: javascript
   ms.custom: 2020Aug21Redesign, devx-track-js
-  ms.openlocfilehash: dbc01af045726a3e0b5b8c788cb3415ce985ba50
-  ms.sourcegitcommit: 3f8aa923e4626b31cc533584fe3b66940d384351
+  ms.openlocfilehash: 1fd27be9cc1037b591933e7ec93ca6b318720475
+  ms.sourcegitcommit: 7991f748720673d2dc50baaa8658348ff6cc1044
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 02/01/2021
-  ms.locfileid: "99224748"
+  ms.lasthandoff: 03/10/2021
+  ms.locfileid: "102604095"
 landingContent:
 - title: Впервые работаете с Azure?
   linkLists:
@@ -45,6 +45,8 @@ landingContent:
       url: whats-new-docs.md
     - text: Обзоры новых возможностей от советников по разработке
       url: whats-new-developer-advocacy.md
+    - text: 10 лучших документов для разработчиков JS
+      url: whats-new-docs.md#top-10
 - title: Развертывание и размещение
   linkLists:
   - linkListType: tutorial
